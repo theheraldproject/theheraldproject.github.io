@@ -1,0 +1,41 @@
+- name: Contact Tracing
+  link: /background
+  dropdown:
+    - name: Introduction
+      link: /background
+    - name: Glossary of terms
+      link: /background/glossary
+    - name: Technology Approaches
+      link: /background/approaches
+- name: Efficacy
+  link: /efficacy
+  dropdown:
+    - name: Introduction
+      link: /efficacy
+    - name: The Fair Measure Paper
+      link: /efficacy/paper
+    - name: Testing Methodology
+      link: /efficacy/method
+    - name: Test Results
+      link: /efficacy/results
+    - name: Bibliography
+      link: /efficacy/bibliography
+- name: Protocol
+  link: /protocol
+- name: Payload
+  link: /payload
+- name: Bluetooth Research
+  link: /bluetooth
+  dropdown:
+    - name: Introduction
+      link: /bluetooth
+    - name: Hardware Issues
+      link: /bluetooth/hardware
+    - name: OS Issues
+      link: /bluetooth/os
+    - name: Crowding Issues
+      link: /bluetooth/crowding
+    - name: Distance Estimation
+      link: /bluetooth/distance
+- name: Blog
+  link: /blog/
