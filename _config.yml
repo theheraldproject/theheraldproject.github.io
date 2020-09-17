@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Bluetooth Proximity Research
-email: adam@adamfowler.org
+title: VMware Squire Project
+email: adamf@vmware.com
 description: >- # this means to ignore newlines until "baseurl:"
   The home for our research in to low level mobile phone Bluetooth
   capabilities, issues, workarounds, and testing.

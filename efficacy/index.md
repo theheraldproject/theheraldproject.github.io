@@ -5,9 +5,10 @@
 layout: page
 title: Efficacy Measures
 description: How to fairly measure efficacy, and results we have generated.
+menubar: efficacy_menu
 ---
 
-# Introduction
+# Efficacy
 
 Whilst there has been much debate about privacy of Contact Tracing applications
 there has been little research on creating a general purpose fair measure of

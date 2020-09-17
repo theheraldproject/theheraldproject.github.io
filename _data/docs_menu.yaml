@@ -1,0 +1,52 @@
+- label: Introduction
+  items:
+    - name: Our documentation
+      link: /docs
+- label: About Contact Tracing
+  items:
+    - name: What is Contact Tracing?
+      link: /background
+    - name: Glossary of terms
+      link: /background/glossary
+    - name: Technology Approaches
+      link: /background/approaches
+- label: Squire Protocol
+  items:
+    - name: About our protocol
+      link: /protocol/
+    - name: Non contact tracing uses
+      link: /protocol/custom
+- label: Squire Payloads
+  items:
+    - name: About Payloads
+      link: /payload
+    - name: Squire Envelope Header 
+      link: /payload/envelope
+    - name: Squire Common CT Inner Header 
+      link: /payload/common
+    - name: Squire Simple Inner Payload 
+      link: /payload/simple
+    - name: Squire Secured Inner Payload (Draft)
+      link: /payload/secured
+    - name: Squire Beacon Payload (Draft)
+      link: /payload/beacon
+    - name: Squire-compatible Inner Payload 
+      link: /payload/inner
+    - name: Custom outer & inner payloads 
+      link: /payload/outer
+- label: Development & Integration Guide
+  items:
+    - name: How to integrate
+      link: /guide/
+- label: Bluetooth Research
+  items:
+    - name: Our Research
+      link: /bluetooth
+    - name: Hardware Issues
+      link: /bluetooth/hardware
+    - name: Operating System Issues
+      link: /bluetooth/os
+    - name: Crowding
+      link: /bluetooth/crowding
+    - name: Distance Estimation
+      link: /bluetooth/distance

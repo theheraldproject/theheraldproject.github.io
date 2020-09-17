@@ -1,7 +1,7 @@
-- label: Example Menu
+- label: Squire Protocol
   items:
-    - name: Menu item
-      link: /link/
+    - name: Our protocol
+      link: /protocol/
       items:
-        - name: Sub menu item 
-          link: /sub-menu-item/
+        - name: Non contact tracing uses
+          link: /protocol/custom

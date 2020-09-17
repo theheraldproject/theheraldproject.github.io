@@ -5,10 +5,10 @@
 layout: page
 title: Bluetooth detailed research
 description: Full background information in to the Bluetooth issues we discovered and how we worked around them.
-menubar: bluetooth_menu
+menubar: docs_menu
 ---
 
-# Introduction
+# Bluetooth Research
 
 During our research we discovered a number of low-level Bluetooth issues on mobile phones. We details those here plus the workarounds that work or do not work.
 

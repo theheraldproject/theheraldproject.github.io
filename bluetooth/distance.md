@@ -7,7 +7,7 @@ title: Bluetooth Distance Estimation
 description: Distance Estimation research
 toc: true
 toc_title: Distance Estimation
-menubar: bluetooth_menu
+menubar: docs_menu
 ---
 
 # Introduction
@@ -69,8 +69,21 @@ It should be noted that this function is only valid for these two iPhones used i
 
 We recommend an analysis is done in future study to see how many RSSI values would need to be read in quick succession to provide a reliable modal RSSI value close to a point in time in order to see if its use provides a better estimation function. It is possible, however, that research on probabilistic estimation functions has surpassed the accuracy of both the Fraunhofer and Fowler algorithms.
 
-It has been reported that Swiss scientists have developed a probabalistic distance estimation
-function which is perhaps more accurate. TODO CITATION
+### Inability to use one distance conversion formula
+
+We have found in testing that some RSSI calculations by Bluetooth chipsets use different scaling for RSSI.
+
+Some chipsets use a log(distance) approach as is shown in the above diagram for communication
+between an iPhone 7 and iPhone 7+. (in both directions)
+
+Others use an inverse distance-squared scale instead. In our testing this is true between an iPhone 6 and an iPhone X (in both directions)
+
+If using the wrong scaling curve the distance estimation will be least accurate between 1.5 and 3.5 metres in our testing, causing quite a difference
+to a risk estimation.
+
+This has two implications:-
+- The appropriate distance conversion approach cannot be determine from calibration of a phone at a single distance - it must use several distances to determine the correct regression approach
+- A log(distance) algorithm such as the Fraunhofer Institute's approach to collecting calibration data cannot be solely relied upon, an equivalent process is needed for inverse square-distance too
 
 ### The effect of movement on any RSSI processing approach
 

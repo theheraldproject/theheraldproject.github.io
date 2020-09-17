@@ -7,6 +7,7 @@ title: Contact Tracing glossary
 description: Demystifying technical terminology
 toc: true
 toc_title: Glossary
+menubar: docs_menu
 ---
 
 # Introduction

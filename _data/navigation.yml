@@ -1,13 +1,6 @@
-- name: Contact Tracing
-  link: /background
-  dropdown:
-    - name: Introduction
-      link: /background
-    - name: Glossary of terms
-      link: /background/glossary
-    - name: Technology Approaches
-      link: /background/approaches
-- name: Efficacy
+- name: Documentation
+  link: /docs
+- name: Efficacy Paper
   link: /efficacy
   dropdown:
     - name: Introduction
@@ -20,22 +13,5 @@
       link: /efficacy/results
     - name: Bibliography
       link: /efficacy/bibliography
-- name: Protocol
-  link: /protocol
-- name: Payload
-  link: /payload
-- name: Bluetooth Research
-  link: /bluetooth
-  dropdown:
-    - name: Introduction
-      link: /bluetooth
-    - name: Hardware Issues
-      link: /bluetooth/hardware
-    - name: OS Issues
-      link: /bluetooth/os
-    - name: Crowding Issues
-      link: /bluetooth/crowding
-    - name: Distance Estimation
-      link: /bluetooth/distance
 - name: Blog
   link: /blog/

@@ -7,6 +7,7 @@ title: Technological approaches
 description: Technology approaches to contact tracing
 toc: true
 toc_title: Technology Approaches
+menubar: docs_menu
 ---
 
 # Introduction

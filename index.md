@@ -3,53 +3,42 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: Bluetooth Proximity Research
-description: Bluetooth Proximity Research Home
+title: Squire Project Bluetooth Proximity Research
+description: Squire Project Bluetooth Proximity Research Home
 ---
 
 # Introduction
 
-This site details the research done during Summer 2020 on mobile phone Bluetooth low-level performance and how this pertains to local communication between mobile devices.
+Squire provides reliable Bluetooth communication and range finding across a wide range of mobile devices, allowing
+Contact Tracing and other applications to have regular and accurate information to make them highly effective.
 
-The aim of this research is to provide a much more reliable way to perform local information interchange. This has many practical benefits, but the key one we're concerned with is the enable improved Bluetooth Proximity Detection to improved Contact Tracing applications worldwide in order to help stop the spread of COVID-19.
+|Wide Phone Support|Easy to integrate|Flexible|
+|---|---|---|
+|95% of phones worldwide can use the Squire Protocol|Provide a few callbacks to the Squire API and integrate Squire to your app in minutes using your own payload|Does not restrict how people can use it, for contact tracing or any reliable Bluetooth communication|
 
-Our research has been split in several parts. We've also provided an independent introduction to mobile app based contact tracing and provide explanations of the key aspects of such a system. This aims to demystify the approach and increase public trust.
+Squire provides a solution to the following epidemiological problems:-
 
-The remainder of this page breaks down the key areas of the documentation on this site.
+![Squire epidemiological solutions](/images/SquireEstimationBenefits.png)
 
-## Blog
+## Features
+
+|<b>Detect nearby phones</b>|100% detection of phones in the foreground and background across iOS and Android devices. Squire supports the 35% (in the UK) of Android phones that cannot act as  advertisers' and so remain unseen by advertising-only based protocols.|
+|<b>Provide regular distance readings</b>|Squire performs distance estimations every few seconds, with higher frequency on modern phones. This allows for a more accurate data and risk picture over time. Maximum frequency can be configured to optimise battery use. At ~4s per reading battery use is 6-11% over 8 hours, depending on the age of the phone and its battery capacity.|
+|<b>Interoperate internationally</b>|By providing a common packet header we allow for international interoperability amongst all contact tracing applications, whether designed for centralised or decentralised contact matching and risk scoring.|
+
+## Latest blog posts
 
 The last news can be found in our [blog](./blog).
 
-## Introduction to mobile app based contact tracing
+## Documentation
 
-A [layman's introduction](./background) to contact tracing and mobile app proximity detection.
-
-## Paper: Measuring the efficacy of mobile proximity protocols
-
-A [scientific paper suggestion a fair and independent approach to measuring the efficacy of a mobile phone based contact tracing protocol](./paper), providing a direct calculation of efficacy that can be used with the Oxford Risk Model to calculate the extent to which such an approach can control the spread of a virtus in a given population.
-
-## Comparing protocols: Formal testing results
-
-A [list of results](./results) ourselves and others have calculated using our method for various existing proximity protocols used for contact tracing today.
-
-## TBD NAME: Low-level bluetooth communication protocol
-
-During our research on creating an efficacy measure we created a [Bluetooth based protocol](./protocol) implementation to test the ideas. We found a welath of issues in Bluetooth on mobile phones, identified the issues, and workaround them in order to provide a robust communication protocol. 
-
-This low level protocol is independent of any information you pass over it. You could use it for contact tracing proximity detection, but also other uses within your own applications. This low-level protocol provides reliable communications between proximite mobile devices.
-
-## TBD NAME: Privacy preserving payload that can counter hostile actors
-
-We have created a design for a [payload](./payload) that not only preserves privacy, but also provides the right levels of epidemiological insight to prevent virus spread. We show this can be done in a way that ensures security of the contact tracing system, and can be trusted by people worldwide as they go about their lives. The protocol has international interoperability built in and prevents attack from hostile groups or state actors.
-
-The protocol also supports other sample payloads. You can plug in your own for your specific application needs. See [Protocol Payloads](./protocol/payloads) for details.
-
-## Bluetooth low level engineering issues
-
-We found a lot of issues in mobile phone Bluetooth implementations and have worked around a great many of them. You can read about our [Bluetooth discoveries and workarounds here](./bluetooth).
+We have a large section on [Development & Integration](/docs).
 
 ## Thanks
 
-A lot of work has gone in to mobile app based contact tracing protocol research, design, testing and collaboration worldwide. We'd like to thank all of those in VMware Pivotal Labs and elsewhere worldwide that have assisted with various national and state governments to use mobile contact tracing to help save lives. ❤️
+A lot of work has gone in to mobile app based contact tracing protocol 
+research, design, testing and collaboration worldwide. We'd like to thank 
+all of those in VMware Pivotal Labs and elsewhere worldwide that have 
+assisted with various national and state governments to use mobile contact 
+tracing to help save lives. ❤️
 

@@ -7,7 +7,7 @@ title: Bluetooth OS issues
 description: Operating System issues
 toc: true
 toc_title: Operating System Issues
-menubar: bluetooth_menu
+menubar: docs_menu
 ---
 
 # Introduction

@@ -7,7 +7,7 @@ title: Bluetooth Hardware issues
 description: Hardware issues affecting mobile phone's hardware performance
 toc: true
 toc_title: Hardware Issues
-menubar: bluetooth_menu
+menubar: docs_menu
 ---
 
 # Introduction

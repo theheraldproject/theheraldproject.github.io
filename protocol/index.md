@@ -3,31 +3,47 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: TBD NAME protocol design
+title: Squire protocol design
 description: Our privacy preserving and secure protocol for slowing disease spread
+menubar: docs_menu
 ---
 
-# Introduction
+# The Squire Protocol
 
-Our sample protocol takes on a variety of privacy and security issues whilst allowing epidemiologists and medical authorities appropriate levels of information to allow them to react to an epidemic and control it using mobile phones.
+There are many parts to communication amongst contact tracing apps. This can be thought of as layers, starting with the foundation and building up:-
 
-Note that the Protocol is described here, but the Payload that we are recommending for COVID-19 control is specified in the [Payload](/payload) section. The Bluetooth Protocol we describes is generally useful for any application that requires high fidelity, high density, low frequency data exchange between mobile phones.
+- Mobile Operating System (OS) provided communication layer (E.g. Core Bluetooth on iOS)
+- Low-level reliable information exchange and distance estimation protocol - aka a Bluetooth Proximity protocol - such as the Squire Protocol described here
+- The application payload - Such as information to allow contact tracing exposure tokens to be shared between devices. See [payload](/payload) for details on payload options
+- The mobile application - That provides payload information, performance settings to the protocol layer
+
+![Protocol and Payload layers diagram](/images/SquireProtocolStack.png)
+
+Our Squire payloads take on a variety of privacy and security issues whilst allowing epidemiologists and medical authorities appropriate levels of information to allow them to react to an epidemic and control it using mobile phones.
+
+Note that the Protocol is described here, but the Payload that we are recommending for COVID-19 control is specified in the [Payload](/payload) section. The Bluetooth Protocol we describes is generally useful for any application that requires high fidelity, high density, small packet size, low frequency data exchange between mobile phones.
 
 ## Highlights
 
 - Supports over 96% of UK phones in use. (98% of UK people have a smartphone with Bluetooth Low Energy support.) TODO CITATION FROM OFCOM REPORTS
-- Provides 100% detection and a continuity error rate of under 1% in formal testing (See [Results](/results) ) - achieving an over 65% efficacy score TODO QUOTE EXACT FINAL SCORE FROM TESTING
- - Works around the infamous 'iOS cannot be detected in the background' OS bug in iPhones
-- Doesn't require operating systems updates in order to be used or improved
+- Provides 100% detection 
+  - Works around the infamous 'iOS cannot be detected in the background' OS bug in iPhones
+- Provides 93%+ continuity (i.e. takes a distance estimation at least once every 30 seconds)
+  - Mean time in testing in a busy (10 phones nearby) environment was under 8 seconds. Mostly under 2 seconds per reading
+- 98.5% RSSI reading accuracy within 8 metres
+- Doesn't require operating system updates in order to be used or improved
+- Low energy - Up to 2% battery use per hour
+
+See [Results](/efficacy/results) for details.
 
 ## Key Features
 
 - Works on all Android and iPhones dating back to 2010 (Supports over 96% of UK mobile phone users)
 - Supports phones and Operating Systems with known Bluetooth performance issues
-  - Especially those 16% of UK phones that do not support Advertising, and so cannot be served by other protocols (P3PT, GAEN) - via the write characteristic approach
+  - Especially those ~14% of UK phones that do not support Advertising, and so cannot be served by other protocols (E.g. GAEN) - via the write characteristic approach
 - Provides a number of approaches to workaround the 'iOS detection in the background' bug in iOS to a point where detection and continuity is superior to existing protocols
   - Allows our protocol to accurately capture the 50% of UK phones that are iPhones where other non-GAEN protocols do not
-- Provide distance estimation (RSSI) data with a mean periodicity/windowing time of 4 seconds (easily beating the measure we describe in the [measurements paper](/paper) which requires 1 reading every 30 seconds) - more regular than protocols that today bucket readings to once every 3.5 - 5 minutes (GAEN)
+- Provide distance estimation (RSSI) data with a mean periodicity/windowing time of 4-8 seconds (easily beating the measure we describe in the [measurements paper](/efficacy/paper) which requires 1 reading every 30 seconds) - more regular than protocols that today restrict readings to once every 3.5 - 5 minutes
   - Allows a much more accurate Risk Score to be calculated, preventing false positive and false negative COVID-19 exposure alerts
 - Supports a pluggable Payload system, allowing the same protocol to be used for a variety of Bluetooth applications, including Contact Tracing
   - Supports large Identity and Distance Estimation payloads (such as those using Elliptic Curve encryption for added privacy and security)
@@ -48,3 +64,6 @@ Note that the Protocol is described here, but the Payload that we are recommendi
 - Uses 'connect back' on incoming request to connect to phones that we cannot see, but who see and interact with us (avoiding 'one way detection')
 - Uses it's own internal timer implementation on Android to avoid the 'randomly long wait' issue with Android native timers
 
+## Non contact tracing uses
+
+There are a range of other uses for the low level Squire protocol. These are discussed on the [commercial uses](/protocol/custom) page.

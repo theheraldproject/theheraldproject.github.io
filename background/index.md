@@ -5,9 +5,10 @@
 layout: page
 title: What is Contact Tracing?
 description: Background to contact tracing, proximity detection, and distance estimation
+menubar: docs_menu
 ---
 
-# Introduction
+# About Contact Tracing
 
 Contact Tracing is not a new process. It is about asking an individual who has fallen ill to
 list the people and places they have been to in order to find, isolate and test other
@@ -15,12 +16,16 @@ people who may be ill before they can spread a particular illness more widely.
 
 What is new is using technology to perform Contact Tracing. A team from Cambridge first
 did this for a Flu outbreak in the mid 2000s. This used an older version of Bluetooth
-which way power hungry and so was not more widely adopted at the time.
+which was power hungry and so was not more widely adopted at the time.
 
 In 2020 many worldwide teams are developing [Bluetooth Protocols](/protocol) to 
 perform mobile app based contact tracing. This involves having an app running on your
 phone that is constantly talking to other nearby phones during the day. By swapping
 identifiers these phones maintain a virtual, and pseudoanonymous, list of your contacts.
+
+Below is a diagram showing elements of a contact tracing system beyond just the app:-
+
+![Contact Tracing System](/images/CTSystem.png)
 
 ## Benefits of mobile contact tracing
 
@@ -111,17 +116,27 @@ to self isolate and get tested.
 
 ## Centralised or Decentralised
 
-How this matching occurs depends on whether the app uses a centralised or decentralised
+There have been two terms that aim to describe contact tracing approaches. These are
+centralised and decentralised. Every contact tracing system necessarily has a central
+server to link an individual (whether identified by name or healthcare ID or not)
+back in to the health service. What "Decentralised" actually means is "Ensuring the
+health authority cannot have a full contact graph such that this information can be
+abused by another part of the State apparentus". E.g. for restricting freedom of
+movement or assembly, or law enforcement location/social tracing.
+
+How contact matching occurs depends on whether the app uses a centralised or decentralised
 approach. In a decentralised approach all matching occurs on individual phones, with
 no proximity information shared with a health authority. Many privacy advocates
 prefer this approach.
 
-The downside of the decentralised approach is as follows:-
+The downside of the pure decentralised approach is as follows:-
 - It provides no advance information to the healthcare system of a particular country
 as to the mixing and spreading of a disease prior to a person getting diagnosed
 - The data cannot be mined to determine if the 'risk alert threshold' in a particular
 country, or part of a country, is at the right level to reduce virus spread making
 it hard for countries to determine the right balance between lockdown advice and risk
+- Decentralised approaches cannot spot 'asymptomatic' individuals - people who are
+ill with the disease, and spreading it, and should be directed to a health professional
 - Decentralised approaches cannot spot 'super spreaders' prior to their own
 diagnosis as they don't provide multiple device's contact graphs to a central
 location where they can be analysed for such patterns in advance
@@ -130,8 +145,8 @@ wish to reach out to second or third order contacts in order to lock those down
 until they are tested in order to drastically cut the spread of the virus
 [Some studies (PDF, Oxford)](https://github.com/BDI-pathogens/covid-19_instant_tracing/blob/master/Report%20-%20Effective%20Configurations%20of%20a%20Digital%20Contact%20Tracing%20App.pdf) 
 have been done on this and show this can drastically cut the
-spread of a virus. This would provide a level of control before requiring
-a national lock down
+spread of a virus. Whilst wide ranging, this would provide a level of control 
+before requiring a full national lock down
 - In a decentralised system you cannot verify that a device saying they are 
 infected and have had a myriad of contacts is real, or that a contact graph
 is real. This allows hostile state actors potentially to use devices in particular
@@ -153,22 +168,33 @@ A centralised system allows all of the above problems to be countered.
 It is up to individual governments to decide which level of risk is more of
 an issue to their populations.
 
+Our suggested [Squire Secure payload](/payload/secured) strikes a middle
+ground here, providing a predictable ID and graph to the state, but with only
+one side of the contact graph shared. (When the ill person submits their data)
+This approach also counters spoofing, relay, and replay attacks and is more
+secure than the pure decentralised approach.
+
 ## What does mobile Contact Tracing comprise of?
 
-There are several steps. The key ones are as follows:-
+There are several steps. They are as follows:-
 
 - Detection - Seeing another phone running an app, and logging the owners 
 pseudononymous identifier
 - Proximity Ranging - Regularly providing distance estimations during a 
 Contact Event. The more regularly this is done, the more accurate the risk
 estimation
+- Risk exposure calculation - how much risk has been ocurred 
+(a function of distance and time)
 - Tracing - Taken an ill person's log of information and/or identifier
 and using this to calculated the risk of others' exposure to this person,
 and providing advice for them to take (E.g. isolation and testing)
 
 The first two points are generally grouped and called 'Proximity Detection'
-and are the purvue of the [Protocol](/protocol) and [Payload](/payload)
+and are the purvue of the [Squire Protocol](/protocol) and [Payload](/payload)
 of a particular Proximity Detection Protocol.
+
+Distance estimation has been out of scope of our research, but we have
+made [some distance estimation discoveries](/bluetooth/distance).
 
 The final one, Tracing, and how it occurs is determined by the mobile
 contact tracing application using the protocol that is provided to a

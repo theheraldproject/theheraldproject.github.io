@@ -5,9 +5,10 @@
 layout: page
 title: Bibliography
 description: Links to further research and reference material
+menubar: efficacy_menu
 ---
 
-# Introduction
+# Bibliography
 
 Here are the various titles and links to published material we've used as research
 and reference material in the paper and on this website.

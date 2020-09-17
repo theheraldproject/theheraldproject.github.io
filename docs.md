@@ -1,0 +1,86 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: page
+title: Squire Documentation
+description: Squire developer and integration documentation
+menubar: docs_menu
+---
+
+# Documentation
+
+Why Squire exists, how to get the code, and how to integrate Squire in to your mobile app.
+
+## Background
+
+VMware Squire is an open source Bluetooth Low Energy (BLE) based protocol licensed under the MIT license for the reliable exchange of information between a range of mobile phones.
+Squire consists of a low-level [BLE protocol](/protocol), with a choice of data [payloads](/payload). The [Squire Envelope](/payload/envelope) and
+[Squire Secured](/payload/secured) payloads are examples for contact tracing applications that provide epidemiological information, individual privacy, ensure 
+security, and allow international interoperability - even between 'centralised' and 'decentralised' contact tracing applications.
+
+This site also details our low-level [Bluetooth research findings](/bluetooth). These include issues with [distance estimation](/bluetooth/distance), Mobile phone 
+[hardware issues](/bluetooth/hardware), and [OS limitations](/bluetooth/os).
+
+The aim of this research is to provide a much more reliable way to perform local information interchange between mobile phones. 
+This has many potential applications, including [commercial use](/protocol/commercial), but the key one we're 
+concerned with is the enable more reliable Bluetooth Proximity Detection to improve 
+[Contact Tracing](/background) applications worldwide in order to help stop the spread of COVID-19.
+
+Our research has been split into several parts. We've also provided an independent introduction to mobile app 
+based [contact tracing](/background) and provide explanations of the [key terminology](background/glossary) 
+of such a system. This aims to demystify the technology and increase public trust.
+
+The remainder of this page breaks down the key areas of the documentation on this site.
+
+## Get the code or get involved
+
+To see information on integrating Squire with your own application, please see the [developer & integration guide](/guide).
+
+You can reach out to us and log general project and research data requests and issues on our [GitHub issues site](https://github.com/vmware/squire/issues).
+We are also keen to receive contributions to all of our open source repositories and research areas:-
+
+- [Squire Protocol & Payloads for iOS](https://github.com/vmware/squire-ios) (MIT licensed)
+- [Squire Protocol & Payloads for Android](https://github.com/vmware/squire-android) (MIT licensed)
+- [Squire Research & documentation website](https://github.com/vmware/squire) (this site) (CC-BY-SA licensed)
+- [Sample R analysis scripts](https://github.com/vmware/squire-analysis) for the fair efficacy formula (MIT licensed)
+- Our generic [BLE RSSI calibration and distance estimation testing tool](https://github.com/vmware/squire-calibration) (MIT licensed)
+
+This project is maintained primarily by VMware personnel and some external contributors in our spare time. We aim to respond to logged issues and emails within 24-28 hours during week days (Monday-Friday) in the UK time zone.
+
+## Introduction to mobile app based contact tracing
+
+A [layman's introduction](./background) to contact tracing and mobile app proximity detection.
+
+## Paper: Measuring the efficacy of mobile proximity protocols
+
+A [scientific paper suggestion a fair and independent approach to measuring the efficacy of a mobile phone based contact tracing protocol](./paper), providing a direct calculation of efficacy that can be used with the Oxford Risk Model to calculate the extent to which such an approach can control the spread of a virtus in a given population.
+
+## Comparing protocols: Formal testing 
+
+A [list of results](/efficacy/results) ourselves and others have calculated using our [standardised testing](/efficacy/method) method for various existing proximity protocols used for contact tracing today.
+
+## Squire Protocol: Low-level reliable bluetooth communication protocol
+
+During our research on creating an efficacy measure we created the [Squire Bluetooth LE protocol](/protocol) implementation to test the ideas. We found a welath of issues in Bluetooth on mobile phones, identified the issues, and workaround them in order to provide a robust communication protocol. 
+
+This low level protocol is independent of any information you pass over it. You could use it for contact tracing proximity detection, but also other uses within your own applications. This low-level protocol provides reliable communications between proximite mobile devices.
+
+## Squire Envelope & Secured payloads: Privacy preserving payloads that can counter hostile actors
+
+We have created a design for a [payload](./payload) that not only preserves 
+privacy, but also provides the right levels of epidemiological insight to 
+prevent virus spread. We show this can be done in a way that ensures security 
+of the contact tracing system, and can be trusted by people worldwide as they 
+go about their lives. The protocol has international interoperability built 
+in and prevents attack from hostile groups or state actors.
+
+The protocol also supports other sample payloads. You can plug in your own 
+for your specific application needs. See 
+[Custom Outer Payloads](/payloads/outer) for details.
+
+## Bluetooth low level engineering discoveries
+
+We found a lot of issues in mobile phone Bluetooth implementations and have 
+worked around a great many of them. You can read about our 
+[Bluetooth discoveries and workarounds here](./bluetooth).

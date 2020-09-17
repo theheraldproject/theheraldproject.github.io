@@ -3,11 +3,12 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: TBD NAME payload design
+title: Squire payload design
 description: Our privacy preserving and secure payload for slowing disease spread
+menubar: docs_menu
 ---
 
-# Introduction
+# Payloads Introduction
 
 The payload is what allows identity and distance estimation information to be shared.
 The payload can also include cryptographic information that allows detection and 
@@ -18,11 +19,39 @@ Whilst our [Protocol](/protocol) allows you to use any payload you wish, we are
 suggesting the below envelope payload in order to maximise international
 interoperability and security.
 
-Benefits of our payload include:-
+The Squire protocol allows any payload to be transported over it. We do
+also provide a recommended envelope header for all apps, and
+two contact tracing example payloads:-
+
+![Squire Payload Contents](/images/SquirePayloads.png)
+
+## Payload options
+
+We provide a recommended [Squire Envelope header](/payload/envelope) that allows
+international interoperability between any app, centralised or decentralised,
+whether for contact tracing or other uses.
+
+We are working on a DRAFT [Squire Secured inner payload](/payload/secured) as the inner payload
+as this provides maximum epidemiological information to the health authority whilst
+maintaining privacy by keeping the contact event 'node' identified from the contact
+graph on individuals' mobile phones only.
+
+Benefits of our secure payload include:-
 - Pseudonymous and privacy preserving
 - Can be used for a centralised or decentralised app approach
 - Allows for international interoperability
 - Lightweight, and supports a range of phones, including older ones
+
+We also provide a simpler [Squire Simple inner payload](/payload/simple) for basic
+decentralised contact tracing.
+
+You are, of course, free to use your own [Squire-compatible Custom inner payload](/payload/inner)
+or roll your own [Custom payload](/payload/outer) entirely 
+(especially if you are not writing a contact tracing app!)
+
+In future we hope to also offer an explanation of a [Beacon](/background/glossary) set of use cases
+and custom payloads for non-contact tracing needs. Please 
+[log an issue on GitHub](https://github.com/vmware/squire/issues) if you are interested in this.
 
 ## What every payload must support
 
@@ -41,7 +70,7 @@ Every contact tracing app must allow the sharing of the below information
   - Prevent relay attacks
   - Prevent replay attacks
   - Prevent spoofing
-  - Provide non-repudiation
+  - Provide non-repudiation (i.e. ensuring a contact event is validated from both participants)
 
 Every payload must also consider the following security and privacy issues.
 
@@ -68,53 +97,26 @@ Privacy requirements:-
   - “I’m sat with you, I was notified, so you must be ill!”
 Small delay, but not enough to lead to harm
 
-## How our payload supports this
-
-TODO wordsmith the below techie description:-
-
-Registration: Client would send some entropy to server, server sends some entropy to client. Mutual agreement how the master symmetric key generated from this (E.g. DH). Agree a daily key epoch.
-
-Note: In a decentralised system the master symmetric key is generated on device only. In a centralised system some entropy is shared during registration between device and government and used with a DH key agreement procedure to generate the master symmetric key.
-
-`DailyKey`: Daily key generated from master symmetric key and the date
-
-`RotationKey`: 15 minute rotation key generated from the reverse bit information of the first X bytes of the daily key, then trim this code and use the first Y bytes (SHA256 hash)
-
-Use rotation key as shared value in encryption mechanism
-
-Read ID Payload: `BluetoothID = HMACSignature || CountryCode || StateCode || TransmissionTime || RotationKey [ || OptionalMetadata]`
-
-Write ID Payload: `BluetoothID = HMACSignature || CountryCode || StateCode || TransmissionTime || RotationKey [ || OptionalMetadata]`
-
-Read Distance Estimation Payload: `Payload = N/A - done via advertising packet’s RSSI. Data held = RSSI || TxPower || RotationKey (Also known: MacAddress) `
-
-Write Distance Estimation Payload: `Payload = HMACSignature || RotationKey || TxPower || MyWriteTime || YourRSSI || YourTxPower [ || OptionalMetadata]`
-
-Note: All values are Big Endian
-
-Note: For read payload, rotation key is provided in the manufacturer’s data area of the advertisement
-
-Note: All `TxPower` are optional. Not provided by iOS. Use a -1 value (NOT 0 - it's a log scale) if not directly supplied.
-
-Note: You will also have the ‘received date time’ from the receiving device
-
-Note: `OptionalMetadata` is data shared between devices for the particular application in question. We don’t believe it is needed currently, but could include GPS location information (where legal/desired), indoors vs outdoors, in pocket / on desk / in hand metadata in order to improve distance estimation. This must also be included as data to calculate the HMAC signature. Only the issuing government can verify the hmac signature. (TODO any way to do this via rotation key in decentralised model?)
-
-
 ## Centralised or decentralised
 
-In a decentralised protocol, just generate the Daily Key and Rotation Key
+The combined Squire inner and envelope payloads provide a hybrid model.
+A contact graph where only one side of the graph is identified is present
+on the health authority's server, and all exact contact event pairwise information
+(but no identity information) is stored on each phone. The exchange method
+also prevents spoofing, relay, and replay attacks.
+
+In a pure decentralised protocol, just generate the ClientID (rotation key)
 using a symmetric master key that is only stored in the secure enclave
 of your phone, and not shared with anyone.
 
-In a centralised protocol we recommend a forward secure daily key generated
+In a pure centralised protocol we recommend a forward secure ClientID generated
 from a symmetric key which is agreed upon by both server (health authority
-providing the app) and client (the mobile app) using a Diffie Helman key
+providing the app) and client (the mobile app) using a Diffie-Hellman key
 agreement approach.
 
 Using our protocol and envelope payload allows apps from countries using
 both centralised and decentralised approaches to interoperate, maximising
 interoperability whilst assuring privacy and security.
 
-A decentralised approach has some drawbacks, both for epidemiology and
+A pure decentralised approach has some drawbacks, both for epidemiology and
 security. These are described in our [Contact tracing introduction](/background).
