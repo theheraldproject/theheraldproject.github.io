@@ -12,8 +12,34 @@ menubar: docs_menu
 
 # Introduction
 
-DISTANCE
+Measuring distance is a case of using a physical protocol based analogue, and later converting this based on physical attributes of the device and environment
+to get to a distance estimation value.
 
+## Calibration tool
+
+Squire provides a sample [Bluetooth calibration tool](https://github.com/vmware/squire-calibration). Currently this supports iOS but Android is also in the works.
+
+To use the tool on iOS simply:-
+- Clone the repository above
+- Open the ios folder project in XCode
+- Modify the signing authority to be your own
+- Deploy locally on two iPhones and run the app
+
+Instructions of how to use the app are within it
+
+To download the data after a test:-
+- Plug the phone in to your mac
+- Navigate to the PHONE NAME device in Finder
+- Go to the Files tab
+- Find the Bluetooth Calibration folder
+- Copy all files to your local machine
+
+After doing this you can generate analysis output:-
+- Open the r/calibration-analysis.R script in RStudio
+- Follow the instructions in that file to point to your data and generate analysis output
+
+Please do contact us with any interesting Distance Estimation discoveries so we can
+add them to this repository.
 
 ## Prior practical observations
 

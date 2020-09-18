@@ -1,7 +1,7 @@
 # Bluetooth Research
 
 This repository holds the content of the website
-https://vmware.github.io/ping
+https://vmware.github.io/squire
 
 Please refer to that website for the Bluetooth research details
 and link to the code repositories.

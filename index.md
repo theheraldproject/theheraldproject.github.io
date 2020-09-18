@@ -42,3 +42,10 @@ all of those in VMware Pivotal Labs and elsewhere worldwide that have
 assisted with various national and state governments to use mobile contact 
 tracing to help save lives. ❤️
 
+## License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/2.0/88x31.png" /></a><br />This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons Attribution-ShareAlike 2.0 Generic License</a>.
+
+The code repositories for Squire (Android, iOS, Analysis Scripts, Calibration tool) are MIT licensed.
+
+All Squire works are Copyright 2020 VMware, Inc.

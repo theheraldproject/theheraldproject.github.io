@@ -12,10 +12,14 @@ menubar: docs_menu
 
 This section describes how to integrate Squire in to your own applications.
 
-Below is a set of options for using Squire in both a Contact Tracing application, or a custom
+Below is a set of options for using the [Squire Protocol](/protocol) in both a Contact Tracing application, or a custom
 commercial application.
 
-TODO DIAGRAM
+![Protocol and Payload layers diagram](/images/SquireProtocolStack.png)
+
+With Squire you can use our suggested full or header [payloads](/payload), or an entirely custom payload:-
+
+![Squire Payload Contents](/images/SquirePayloads.png)
 
 ## Squire protocol integration
 
