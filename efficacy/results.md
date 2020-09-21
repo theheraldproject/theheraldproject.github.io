@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: Efficacy Measures
+title: Fair efficacy formula - formal test results
 description: How to fairly measure efficacy, and results we have generated.
 menubar: efficacy_menu
 ---
