@@ -41,11 +41,30 @@ After doing this you can generate analysis output:-
 Please do contact us with any interesting Distance Estimation discoveries so we can
 add them to this repository.
 
-## Prior practical observations
+## Practical observations
 
 During the development of the protocol we noticed some trends and approaches that worked well in testing to make the RSSI value calculated more accurate. We ended up rejecting these in favour of a raw RSSI value recorded at a fixed point in time purely because a separate scientific research effort being led by The Alan Turing Institute and the University of Oxford was assessing how RSSI could be processed. These efforts did not result in the development team being asked to take multiple measurements or perform any other 'at time of recording' data processing operations.
 
 Nevertheless we did discover two interesting aspects of RSSI recording and distribution we shall now detail for background information important to the design of a measure to assess accuracy.
+
+### Inability to use one distance conversion formula
+
+We have found in testing that some RSSI calculations by Bluetooth chipsets use different scaling for RSSI.
+
+Some chipsets use a log(distance) approach as is shown in the below diagram for communication
+between an iPhone 7 and iPhone 7+. (in both directions)
+
+Others use an inverse distance-squared scale instead. In our testing this is true between an iPhone 6 and an iPhone X (in both directions)
+
+If using the wrong scaling curve the distance estimation will be least accurate between 1.5 and 3.5 metres in our testing, causing quite a difference
+to a risk estimation.
+
+This has two implications:-
+- The appropriate distance conversion approach cannot be determine from calibration of a phone at a single distance - it must use several distances to determine the correct regression approach
+  - This in turn dramatically increases the time taken to complete manual calibration in a radiation proof chamber. Alternative automated approaches should be considered.
+  - This also likely means many current Bluetooth calibration readings used for distance estimation are invalid
+- A log(distance) algorithm such as Prof Dr Ing's [[2]](/paper/bibliography#a-2) approach to collecting calibration data cannot be solely relied upon, an equivalent process is needed for inverse square-distance too
+  - This in turn increases the difficulty of passing on ever changing calibration data and new formulae to mobile apps for local distance estimation rather than centralised risk estimation (currently used decentralised approaches) and local summation as per the [Squire secured payload](/payload/secured)
 
 ### Running mean of RSSI values in Bluetooth
 
@@ -91,25 +110,9 @@ where D is the estimated distance in meters and RSSI-MODE is the modal RSSI valu
 
 As per the chart the R value for the formula's fit was close to -1. This is no surprise as we are basing our regression on the mode rather than mean. The very small p value, however, indicates a good fit to the recorded test values.
 
-It should be noted that this function is only valid for these two iPhones used in the test. There was no standardisation or calibration for particular phone models done. The Fraunhofer Institute's paper TODO CITATION uses a similar log estimation function but based on the mean RSSI value observed whilst generating pairwise phone calibration values rather than the mode.
+It should be noted that this function is only valid for these two iPhones used in the test. There was no standardisation or calibration for particular phone models done. The Fraunhofer Institute used a similar approach. Refer to Prof Dr Ing's paper [[2]](/paper/bibliography#a-2) . It uses a similar log estimation function but based on the mean RSSI value observed whilst generating pairwise phone calibration values rather than the mode.
 
 We recommend an analysis is done in future study to see how many RSSI values would need to be read in quick succession to provide a reliable modal RSSI value close to a point in time in order to see if its use provides a better estimation function. It is possible, however, that research on probabilistic estimation functions has surpassed the accuracy of both the Fraunhofer and Fowler algorithms.
-
-### Inability to use one distance conversion formula
-
-We have found in testing that some RSSI calculations by Bluetooth chipsets use different scaling for RSSI.
-
-Some chipsets use a log(distance) approach as is shown in the above diagram for communication
-between an iPhone 7 and iPhone 7+. (in both directions)
-
-Others use an inverse distance-squared scale instead. In our testing this is true between an iPhone 6 and an iPhone X (in both directions)
-
-If using the wrong scaling curve the distance estimation will be least accurate between 1.5 and 3.5 metres in our testing, causing quite a difference
-to a risk estimation.
-
-This has two implications:-
-- The appropriate distance conversion approach cannot be determine from calibration of a phone at a single distance - it must use several distances to determine the correct regression approach
-- A log(distance) algorithm such as the Fraunhofer Institute's approach to collecting calibration data cannot be solely relied upon, an equivalent process is needed for inverse square-distance too
 
 ### The effect of movement on any RSSI processing approach
 

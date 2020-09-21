@@ -23,6 +23,8 @@ In particular the simple payload:-
 - Doesn't provide verification of the outer packet's validity itself (i.e. doesn't allow a national authority to additional verify the outer packet signature)
 - Does prevent replay and relay attacks
 - Does allow verification of the remote contact having come from the right phone, if local history is persisted of contact events
+- Does not prevent a brute force attack whereby random Contact IDs are generated and submitted by a compromised device
+- Does not prevent the creation of an 'ill person tracker' as the Contact ID is sent in the clear between devices, and is the same for all devices it talks to at the same time
 
 ## Simple inner payload content
 
@@ -34,3 +36,27 @@ Note: All numeric data is big endian.
 - Verification token (16 bytes) - The ClientID (16 bytes) of the other phone, encrypted using this phones local, 
 ephemeral, private key (32 bytes) for the time period the outer envelope packet was generated in (allowing for local matching
 and verification)
+
+## Security analysis - CIA
+
+Below is a simple security summary.
+
+Confidentiality - No. The Contact ID can be intercepted in the clear by any Bluetooth 
+device, allowing relay and replay attacks. Only the phone who generated the Contact ID
+will know who it belongs to. By rotating the Contact ID regularly (E.g. every 30 seconds)
+localised Bluetooth tracking can be reduced (E.g. adboard)
+
+Integrity - Yes. Only the sequence of TOTP codes for a particular phone can be processed
+by that phone for that time point. Data could not be manipulated or predicted such
+that an individual phone could be targeted.
+
+Availability - Maybe. Could be compromised by a brute for attack DDoS-ing the healthcare 
+system using a fake network of pre-registered devices. Amplification attacks are 
+possible in this approach. This can be somewhat mitigated by using a max number 
+of notified contacts per ill person submission approach, but this doesn't prevent 
+the creation of a fake network with, say, 5 notifications each.
+
+Non-repudiation - No. Neither the health authority nor receiving device are authenticated
+in this approach. The healthcare system and the transmitting phone also cannot verify
+that the person presenting the Contact ID is the one for whom it was initially transmitted
+to.

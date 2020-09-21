@@ -25,12 +25,12 @@ Note that the Protocol is described here, but the Payload that we are recommendi
 
 ## Highlights
 
-- Supports over 96% of UK phones in use. (98% of UK people have a smartphone with Bluetooth Low Energy support.) TODO CITATION FROM OFCOM REPORTS
+- Supports 98% of UK phones in use. (98% of UK people have a smartphone with Bluetooth Low Energy support.) Source: OFCOM reports [[9]](/efficacy/bibliography#a-9) [[10]](/efficacy/bibliography#a-10) 
 - Provides 100% detection 
   - Works around the infamous 'iOS cannot be detected in the background' OS bug in iPhones
 - Provides 93%+ continuity (i.e. takes a distance estimation at least once every 30 seconds)
   - Mean time in testing in a busy (10 phones nearby) environment was under 8 seconds. Mostly under 2 seconds per reading
-- 98.5% RSSI reading accuracy within 8 metres
+- 95.95% RSSI reading accuracy within 8 metres
 - Doesn't require operating system updates in order to be used or improved
 - Low energy - Up to 2% battery use per hour
 
@@ -42,7 +42,7 @@ See [Results](/efficacy/results) for details.
 - Supports phones and Operating Systems with known Bluetooth performance issues
   - Especially those ~14% of UK phones that do not support Advertising, and so cannot be served by other protocols (E.g. GAEN) - via the write characteristic approach
 - Provides a number of approaches to workaround the 'iOS detection in the background' bug in iOS to a point where detection and continuity is superior to existing protocols
-  - Allows our protocol to accurately capture the 50% of UK phones that are iPhones where other non-GAEN protocols do not
+  - Allows our protocol to accurately capture the ~50% of UK phones that are iPhones where other non-GAEN protocols do not
 - Provide distance estimation (RSSI) data with a mean periodicity/windowing time of 4-8 seconds (easily beating the measure we describe in the [measurements paper](/efficacy/paper) which requires 1 reading every 30 seconds) - more regular than protocols that today restrict readings to once every 3.5 - 5 minutes
   - Allows a much more accurate Risk Score to be calculated, preventing false positive and false negative COVID-19 exposure alerts
 - Supports a pluggable Payload system, allowing the same protocol to be used for a variety of Bluetooth applications, including Contact Tracing
@@ -66,4 +66,4 @@ See [Results](/efficacy/results) for details.
 
 ## Non contact tracing uses
 
-There are a range of other uses for the low level Squire protocol. These are discussed on the [commercial uses](/protocol/custom) page.
+There are a range of other uses for the low level Squire protocol. These are discussed on the [custom uses](/protocol/custom) page.

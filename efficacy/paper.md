@@ -14,39 +14,31 @@ We took the efficacy measure mentioned in the Ferretti et al paper and reasoned
 the constituent parts that affect the probability of detection of 30 second
 segments of any contact event.
 
+## Where can I get the paper?
+
+It's currently undergoing review with the publisher. A link shall be placed here once it is available.
+
+## The Fair Efficacy Formula
+
 The resultant formula is below:-
 
 ![Fair efficacy formula](/images/paper-measure-formula.png)
 
 Where:-
 
-- DET-Rate is the Detection rate - the proportion of pairings that were detected (one-way)
-- Delta flag buckets - The number of 30 second windows across contact events that were correctly observed
-- Longevity - The difference between delta flag buckets in the first and final hours of the 8 hour test
-- P-tested - Made of all of the above from physical testing
-- Mean error DA - The mean error in distance analogue estimation at a range of distances vs the expected distance analogue value (E.g. RSSI)
-- Delta error RT1 - The error in distance estimation analogue in the most hazardous (nearest) part of a contact evening. RT1 is the period around minimum distance that would constitute a risk score equivalent to 15 minutes at 2 metres. This is separate at in the Oxford Risk Model the vast majority of the risk score is achieved at the nearest distance (under 8 metres).
-- PROB-di - This is the probability of detection from the Ferretti et al paper, and is calculated from the above measures
-- P-squared-spec - The population of a country of interest (UK in our paper) that has a mobile phone with the right hardware, OS and software versions to support the protocol under assessment
-- FRAC-re - The fractional RE percentage representing the control effect of an app on the virus (a value of 0.9). From the Ferretti et al paper
-- E-T - The Efficacy of Contact Tracing measure as per Figure 3 in the Ferretti et al paper.
-
-E-T is what we call the final 'proximity protocol efficacy measure' and is the value that describes efficacy, and the main output of our paper.
-
-The paper itself goes on to define a range of additional measures that are of use when comparing protocols that are quite similar.
-
-These are comprised in totality of:-
-
-- Population reach, by specification - percentage of a country's population that can be serviced by a protocol (theoretical, no testing required)
-- Population reach, by testing - percentage of supported user's that will be effectively serviced by a protocol
-- Continuity coverage, one of provides continuity coverage, provides partial continuity coverage, or does not provide continuity coverage - discrete measure, requires a dynamic test involving both maximum range and close proximity for a short period of time
-- Continuity bucket counts missed percentage \delta flag_{BUCKETS}\rightarrow0 - measure with known maximum values during a test window, ideally uses a dynamic test to max range, but could provide a useful measure for shorter ranges especially if introduced suddenly from faraday bags
-- Continuity contact event start \delta t_{START}\rightarrow0 and end \delta t_{END}\rightarrow0 times - measure tending to 0 seconds, requires a dynamic test to max range
-- Completeness \delta Error_{RT_{1}}\rightarrow0 and \delta Error_{RT_{2}}\rightarrow0 or for shorter tests, just \delta Error_{RT_{CE}}\rightarrow0 - two scaled continuous measures tending to 0, one out from minimum distance analogue to risk threshold, and the second out to double the risk threshold for longer tests. For short tests use expected total measured risk error instead
-- Accuracy distance analogue scaled error percentage, mean \overline{Error_{DA}}\rightarrow0 and variance S_{Error_{DA}}^{2}\rightarrow0 - scaled continuous measures tending to 0, both measures required for meaningful analysis
-- Accuracy distance analogue scaled error, min Error_{DA_{MIN}}\rightarrow0 and max Error_{DA_{MAX}}\rightarrow0 - scaled continuous measures tending to 0, useful only to provide an indication of why variance is high. We shall not consider this as necessary to design a specific test for
-- Accuracy measured time window interval mean \overline{DUR_{WINDOW_{MEASURED}}}\rightarrow0 and variance S_{DUR_{WINDOW_{MEASURED}}}^{2}\rightarrow0 in seconds - time continuous measures whose mean must be less than the epidemiologically useful minimum window period (30 seconds), and whose mean and variance ideally should tend to 0 for maximum accuracy. Mainly useful to compare protocols that achieve high percentage (95%+) bucket counts.
-- Longevity - the variation absolute (positive) percentage score of variation over a working day
+- ET is the 'Efficacy of Contact Tracing' as described in the Ferretti et al paper in March 2020 from the Oxford Big Data Institute
+- 'Probability of detection' as per the Ferretti et al paper, in mobile app terms rather than manual tracing terms, is the probability of detecting a person's risk of exposure to COVID-19 and the efficacy of detecting, measuring, and basing health advice (such as please self isolate for 10-14 days) on this collected data, and crucially doing so the same day of knowing they were exposed by a positive case (in under 4 hours)
+- Pspec - Population reach. In our paper we talk about maximum population reach as those who could download and make use of the app - i.e. the maximum population reach
+  - Pspec-squared - As you need two phones to communicate in both directions to measure mutual exposure risk, you must square the Pspec value (as it applies to both phones in a contact)
+  - Pcountry - Proportion of people in a given country/area of interest that have a mobile phone (taken as smartphone, rather than tablets of course)
+  - Phardware - Those with hardware that supports the given protocol. Bluetooth Low Energy for the Squire Protocol. Other protocols have restrictions here. E.g. ~35% of Android phones do not support 'Bluetooth advertising' which means they cannot be detected by other phones. This is true of many other (non-Squire) bluetooth protocols for contact tracing
+  - Psoftware - Any software restrictions artificially made by the protocols design. E.g. some common protocols only support the latest phone operating systems, or use cryptographic libraries that are not available on all phones. This limits their reach, especially in poorer parts of the world or even in the UK in certain poorer areas
+- Rdetection - Rate of basic detection (one-way) of phones during any given scenario. This is separate from Rcontinuity as in practical tests a non detected phone would not appear in the totality of phones in Rcontinuity, and so we include it separately.
+- Rcontinuity - The number of 30 second windows a distance estimation (RSSI reading for Bluetooth) ocurred (one-way). Choice of 30 seconds is described below.
+- Rlongevity - A protocol that gets worse over time must have this reflected. This is how the rate of detection varies between the first hour of an at least 8 hour test and the last hour. This will ensure people are protected for an entire normal working day without intervening to their phone's contact tracing app
+- Raccuracy - How accurate the distance analogue (E.g. RSSI) reading is at a short period of time at a known distance compared to how its analogue reading is over a long time. A measure of estimator accuracy especially relevant to when short periods of close distance (highest risk) occur. Does NOT include error rate of converting analogue to distance and performing a risk calculation - this is the same for all formulae, and so is left to other papers to define in Risk Accuracy (See the Turing paper on risk measurement)
+- Rcompleteness RT1 - How well a recorded set of data around the riskiest (nearest) point of a contact event fits actual exposure. Think of this logically (not numerically) as the first standard deviation around the mean risk exposure. Under the Oxford model the vast majority of risk is accrued at the nearest point of distance, and so this measure is used here. 
+- fracRE - This is a fixed (0.9) value as per the Ferretti et al paper. It is not 1.0 as to ensure the final efficacy rating does not appear 'perfect', as there are always unknown problems with measuring and communicating transmission. We recommend more work is done to define this value, and determine if it changes in certain situations in the real world.
 
 ## Why is it needed?
 
@@ -57,6 +49,9 @@ during an entire test" style high level metrics.
 Whilst useful, those simplistic metrics miss out a variety of low level Operating System, 
 Hardware, and especially protocol behaviours that can lead to a misrepresentation or
 misunderstanding of efficacy in epidemiological terms.
+
+In short the simple measure tracks 'detection of phones' and not 'detection of risk exposure'.
+The fair efficacy formula presented in our paper (under peer review) does this.
 
 Epidemiologists need to calculate exposure risk based on time and distance of any contact
 event. The closer people are together, the higher risk. The length of the 'exposure window'
@@ -80,6 +75,11 @@ exhibits some deliberate limitation could modify the observed risk.
 This then led us to create a formula that took in to account all limiting factors
 that a user of such a contact tracing app could encounter in a particular day.
 
+We then applied this formula to a brand new Bluetooth protocol called [Squire](/protocol).
+We were able to identify and rapidly tune this protocol in 5 weeks thanks to the presence
+of the fair efficacy formula, and approaching the problem in an epidemiologially data driven
+way.
+
 ## Didn't you build this for your own protocol? Aren't you biased?
 
 No. Although it is true that some of the authors of our paper and protocol worked on
@@ -87,8 +87,8 @@ previous COVID-19 app efforts for governments, we built this measure independent
 particular protocol and before we wrote our
 new protocol from scratch. We wanted to be sure we could encourage all teams to
 use our measure to communicate their own protocols' effectiveness with their
-country's population. The hope is to increase use of and trust in contact tracing
-applications worldwide.
+country's population. The hope is to increase the use of, and trust in, contact tracing
+applications worldwide - no matter whose protocol they use.
 
 Once we completed the design of the formula we created a new protocol based on our 
 new knowledge of
@@ -100,7 +100,7 @@ Our [protocol](/protocol) has therefore a high score on the measure,
 but that's because we've been using the formula and testing approach for longer.
 The formula wasn't designed to show our protocol in a good light. We would
 encourage all teams to apply our formula to their work and rapidly iterate to improve 
-their efficacy. This way more lives can be saved.
+their own efficacy. This way more lives can be saved.
 
 ## What doesn't it cover?
 
@@ -114,6 +114,12 @@ already working on, or where published material already exists. This includes:-
 contact tracing systems. Mechanisms include local triangulation to get a more accurate distance estimation, or performing multiple readings in quick succession to provide more accuracy
 - Payload specifics - We use a 129 byte payload in our tests of our own protocol, but our measure does not mention this specifically. The affect of any such length of transmission on efficacy will be caught in the detection and continuity measures and so there was no need to consider payload specifics, only measure how often a particular protocol takes estimation readings for another device
 
+## Data from the paper
+
+The synthetic data and calculations used in the paper can be found in the [Synthetic Data Spreadsheet (ODS)](/documents/protocols-paper-synthetic-data.ods)
+
 ## Follow on work
 
-TODO from paper
+From the paper: "Now a low-level protocol that works across a large range of devices exists in the Squire protocol, the author aims to suggest a payload to transfer over this protocol that allows for its use in either a centralised or decentralised contact tracing application. This will provide international interoperability whilst allowing local jurisdictions to tailor their approach to one acceptable by its residents."
+
+We also believe that more work needs to be done to ensure that any [RSSI to distance estimation formulae](/bluetooth/distance) takes account of the fact that some phone pairings appear to use a log-distance approach to scale their RSSI values, whereas others use an inverse-distance-squared approach. This leads to inaccuracies around the 2.5m mark.

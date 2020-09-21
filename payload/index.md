@@ -49,8 +49,7 @@ You are, of course, free to use your own [Squire-compatible Custom inner payload
 or roll your own [Custom payload](/payload/outer) entirely 
 (especially if you are not writing a contact tracing app!)
 
-In future we hope to also offer an explanation of a [Beacon](/background/glossary) set of use cases
-and custom payloads for non-contact tracing needs. Please 
+We are also working on a [Beacon Payload](/payload/beacon) for use in Stores and Restaurants or areas of environmental exposure (E.g. gas, chemicals). Please 
 [log an issue on GitHub](https://github.com/vmware/squire/issues) if you are interested in this.
 
 ## What every payload must support

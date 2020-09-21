@@ -20,11 +20,15 @@ custom to your application.
 
 ## How to implement an Outer payload
 
-TODO discuss how this can be done
+This is simply a case of plugging in your own Payload provide directly to the Squire Protocol.
+You can still use the Squire Protocol even for a completely new payload. Callbacks are provided
+to customise its behaviour. See [the integration guide](/guide) for details.
 
 ## Wrapping an inner protocol
 
-TODO discuss how to provide inner payload callbacks
+You can either provide just an outer payload or perform a similar outer header approach that
+we adopt. See the [Squire Envelope Header page](/payload/envelope) for more details on that
+approach.
 
 ## Interoperability
 

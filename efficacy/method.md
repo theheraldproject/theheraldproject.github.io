@@ -24,11 +24,11 @@ this project website. We welcome results from any protocol teams using these tes
 
 ## Set up
 
-TODO describe set up procedures here
+The set up procedures are mentioned for both th [iOS test app GitHub site](https://github.com/vmware/squire-ios) and the [Android test app GitHub site](https://github.com/vmware/squire-android) for the Squire protocol.
 
 ## Required tests
 
-Below are the required tests.
+Below are the required tests. These provide the correct input for the Fair Efficacy Formula.
 
 ### Office test (required)
 
@@ -73,3 +73,11 @@ Two phones (one iPhone and one Android phone) are placed 1m apart from each othe
 This test is useful in order to prove 30 second continuity measures, and to provide completeness at a variety of ranges. By varying the minimum range this can also provide a good indication of accuracy across all distance ranges.
 
 Measures Continuity coverage and CE start and end times, also allows bucket counts and completeness, should be done with a phone pair with continuity measures compared to the star test to determine any negative effects of multiple devices being present in the star test. This is especially useful for Bluetooth based protocols where older phones are limited in the number of devices detected and interacted with.
+
+### Common but older or cheaper phones (optional)
+
+As we have found in our testing many older phones, or newer but cheaper Android phones, do not support Bluetooth Advertising.
+These are commonly held by those who cannot afford more expensive models that do have this support. There is a danger, therefore,
+that concentrating on just the latest or most popular phones could lead to the most disadvantaged people in society from
+not being covered by a protocol. As these people generally live in high density housing this poses a problem for
+controlling disease spread.

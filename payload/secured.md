@@ -156,18 +156,22 @@ A random bluetooth sniffer sees:-
 Health authority and mobile device have a way to rotate and fetch server public/private keys and symmetric key exchange should the server keys become compromised.
 This is down to the national health authority to implement in their own app.
 
-## CIA
+## Security Analysis - CIA
 
-Confidentiality - Provided by encrypting all data between both phones, and from phones to health service, preventing interception, spoofing, relay and replay attacks. A one time use Diffie-Hellman-Merkle symmetric key agreement is used to encrypt the data. Uses phones' built in secure enclave for storage of cryptographic material where provided.
+Confidentiality - Yes. Provided by encrypting all data between both phones, and from phones to health service, preventing interception, spoofing, relay and replay attacks. A one time use Diffie-Hellman-Merkle symmetric key agreement is used to encrypt the data. Uses phones' built in secure enclave for storage of cryptographic material where provided.
 
-Integrity - By using a TOTP code that the health authority can decrypt and an exposure confirmation token the transmitting phone can only decrypt, the transmitting
+Integrity - Yes. By using a TOTP code that the health authority can decrypt and an exposure confirmation token the transmitting phone can only decrypt, the transmitting
 phone knows that both phones and its health authority have all been involved in the exchange, and the data has been verified. Data cannot leak or be extracted and
 use by another device as the transmitting device checks the time and tokens it issued, ensuring integrity. Even if data passes via a health authority of a hostile
 state actor it cannot be manipulated to cause the exposure of incorrect or targetted individuals and groups of the originating country.
 
-Availability - Bluetooth provides built in CRC checks of data, so by the time Squire sees the data it has already been validated. Supporting both read
+Availability - Yes. Bluetooth provides built in CRC checks of data, so by the time Squire sees the data it has already been validated. Supporting both read
 and write approaches to Bluetooth data exchange ensures the maximum support of mobile phones, as some phones can discover and read and write from others,
-but not be discoverable and readable/writable themselves (35% of Android phones in the UK do not support advertising).
+but not be discoverable and readable/writable themselves (~35% of Android phones in the UK do not support advertising [[21]](/paper/bibliography#a-21)).
+
+Non-repudiation - Yes. The original transmitter can verify that the exposure token was from the exact phone they communicated with and that their
+data was decrypted and interpreted by their own health authority, and that the time of the contact is valid. All three participants (Transmitter, Receiver, Transmitter's health authority)
+are authenticated in this approach. Authentication of the receivers health authority if left to the communication channel between those authorities.
 
 ## What attacks does this prevent?
 
