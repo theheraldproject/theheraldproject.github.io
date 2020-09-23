@@ -17,7 +17,7 @@ to get to a distance estimation value.
 
 ## Calibration tool
 
-Squire provides a sample [Bluetooth calibration tool](https://github.com/vmware/squire-calibration). Currently this supports iOS but Android is also in the works.
+Herald provides a sample [Bluetooth calibration tool](https://github.com/vmware/herald-calibration). Currently this supports iOS but Android is also in the works.
 
 To use the tool on iOS simply:-
 - Clone the repository above
@@ -64,7 +64,7 @@ This has two implications:-
   - This in turn dramatically increases the time taken to complete manual calibration in a radiation proof chamber. Alternative automated approaches should be considered.
   - This also likely means many current Bluetooth calibration readings used for distance estimation are invalid
 - A log(distance) algorithm such as Prof Dr Ing's [[2]](/paper/bibliography#a-2) approach to collecting calibration data cannot be solely relied upon, an equivalent process is needed for inverse square-distance too
-  - This in turn increases the difficulty of passing on ever changing calibration data and new formulae to mobile apps for local distance estimation rather than centralised risk estimation (currently used decentralised approaches) and local summation as per the [Squire secured payload](/payload/secured)
+  - This in turn increases the difficulty of passing on ever changing calibration data and new formulae to mobile apps for local distance estimation rather than centralised risk estimation (currently used decentralised approaches) and local summation as per the [Herald secured payload](/payload/secured)
 
 ### Running mean of RSSI values in Bluetooth
 

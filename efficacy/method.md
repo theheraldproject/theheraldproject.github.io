@@ -24,7 +24,7 @@ this project website. We welcome results from any protocol teams using these tes
 
 ## Set up
 
-The set up procedures are mentioned for both th [iOS test app GitHub site](https://github.com/vmware/squire-ios) and the [Android test app GitHub site](https://github.com/vmware/squire-android) for the Squire protocol.
+The set up procedures are mentioned for both th [iOS test app GitHub site](https://github.com/vmware/herald-for-ios) and the [Android test app GitHub site](https://github.com/vmware/herald-for-android) for the Herald protocol.
 
 ## Required tests
 

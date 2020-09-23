@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: Squire payload design
+title: Herald payload design
 description: Our privacy preserving and secure payload for slowing disease spread
 menubar: docs_menu
 ---
@@ -19,19 +19,19 @@ Whilst our [Protocol](/protocol) allows you to use any payload you wish, we are
 suggesting the below envelope payload in order to maximise international
 interoperability and security.
 
-The Squire protocol allows any payload to be transported over it. We do
+The Herald protocol allows any payload to be transported over it. We do
 also provide a recommended envelope header for all apps, and
 two contact tracing example payloads:-
 
-![Squire Payload Contents](/images/SquirePayloads.png)
+![Herald Payload Contents](/images/Payloads.png)
 
 ## Payload options
 
-We provide a recommended [Squire Envelope header](/payload/envelope) that allows
+We provide a recommended [Herald Envelope header](/payload/envelope) that allows
 international interoperability between any app, centralised or decentralised,
 whether for contact tracing or other uses.
 
-We are working on a DRAFT [Squire Secured inner payload](/payload/secured) as the inner payload
+We are working on a DRAFT [Herald Secured inner payload](/payload/secured) as the inner payload
 as this provides maximum epidemiological information to the health authority whilst
 maintaining privacy by keeping the contact event 'node' identified from the contact
 graph on individuals' mobile phones only.
@@ -42,15 +42,15 @@ Benefits of our secure payload include:-
 - Allows for international interoperability
 - Lightweight, and supports a range of phones, including older ones
 
-We also provide a simpler [Squire Simple inner payload](/payload/simple) for basic
+We also provide a simpler [Herald Simple inner payload](/payload/simple) for basic
 decentralised contact tracing.
 
-You are, of course, free to use your own [Squire-compatible Custom inner payload](/payload/inner)
+You are, of course, free to use your own [Herald-compatible Custom inner payload](/payload/inner)
 or roll your own [Custom payload](/payload/outer) entirely 
 (especially if you are not writing a contact tracing app!)
 
 We are also working on a [Beacon Payload](/payload/beacon) for use in Stores and Restaurants or areas of environmental exposure (E.g. gas, chemicals). Please 
-[log an issue on GitHub](https://github.com/vmware/squire/issues) if you are interested in this.
+[log an issue on GitHub](https://github.com/vmware/herald/issues) if you are interested in this.
 
 ## What every payload must support
 
@@ -98,7 +98,7 @@ Small delay, but not enough to lead to harm
 
 ## Centralised or decentralised
 
-The combined Squire inner and envelope payloads provide a hybrid model.
+The combined Herald inner and envelope payloads provide a hybrid model.
 A contact graph where only one side of the graph is identified is present
 on the health authority's server, and all exact contact event pairwise information
 (but no identity information) is stored on each phone. The exchange method

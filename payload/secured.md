@@ -3,18 +3,18 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: Squire secured inner payload
+title: Herald secured inner payload
 description: Simple secured payload for contact tracing
 menubar: docs_menu
 ---
 
-# DRAFT Secure Payload design
+# DRAFT Contact Tracing Secure inner Payload
 
 This example of an [inner payload](/payload/inner) that is designed to work exclusively with
-the [Squire envelope payload](/payload/envelope) provides additional security and privacy
-guarantees over and above the [Squire simple inner payload](/payload/simple) example.
+the [Herald envelope payload](/payload/envelope) provides additional security and privacy
+guarantees over and above the [Herald simple inner payload](/payload/simple) example.
 
-![Secured payload data](/images/SquirePayloadSecured.png)
+![Secured payload data](/images/PayloadSecured.png)
 
 This payload was driven by two somewhat competing desires:-
 
@@ -165,7 +165,7 @@ phone knows that both phones and its health authority have all been involved in 
 use by another device as the transmitting device checks the time and tokens it issued, ensuring integrity. Even if data passes via a health authority of a hostile
 state actor it cannot be manipulated to cause the exposure of incorrect or targetted individuals and groups of the originating country.
 
-Availability - Yes. Bluetooth provides built in CRC checks of data, so by the time Squire sees the data it has already been validated. Supporting both read
+Availability - Yes. Bluetooth provides built in CRC checks of data, so by the time Herald sees the data it has already been validated. Supporting both read
 and write approaches to Bluetooth data exchange ensures the maximum support of mobile phones, as some phones can discover and read and write from others,
 but not be discoverable and readable/writable themselves (~35% of Android phones in the UK do not support advertising [[21]](/paper/bibliography#a-21)).
 

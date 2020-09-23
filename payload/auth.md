@@ -8,7 +8,7 @@ description: Kerberos style interoperable payload
 menubar: docs_menu
 ---
 
-# DEPRECATED PAGE - See [Squire Secured Inner Payload](/payload/secured)
+# DEPRECATED PAGE - See [Herald Secured Inner Payload](/payload/secured)
 
 # Authenticated association payload
 

@@ -22,7 +22,7 @@ a venue (which many people do not do), this history would be built up
 automatically on each user's phone if they had been present under the
 same beacon for a while.
 
-The Squire envelope payload ID range 0x30-0x37 is reserved for this Payload.
+The Herald envelope payload ID range 0x30-0x37 is reserved for this Payload.
 
 This payload is identical to the Simple and Secured payloads
 except that it provides an additional read characteristic

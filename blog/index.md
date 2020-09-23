@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: blog
-title: Squire blog
+title: Herald blog
 description: Latest news blog
 permalink: blog
 ---

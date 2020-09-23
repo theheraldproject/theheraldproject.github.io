@@ -10,27 +10,27 @@
       link: /background/glossary
     - name: Technology Approaches
       link: /background/approaches
-- label: Squire Protocol
+- label: Herald Protocol
   items:
     - name: About our protocol
       link: /protocol/
     - name: Non contact tracing uses
       link: /protocol/custom
-- label: Squire Payloads
+- label: Herald Payloads
   items:
     - name: About Payloads
       link: /payload
-    - name: Squire Envelope Header 
+    - name: Herald Envelope Header 
       link: /payload/envelope
-    - name: Squire Common CT Inner Header 
+    - name: Herald Common CT Inner Header 
       link: /payload/common
-    - name: Squire Simple Inner Payload 
+    - name: Herald Simple Inner Payload 
       link: /payload/simple
-    - name: Squire Secured Inner Payload (Draft)
+    - name: Herald Secured Inner Payload (Draft)
       link: /payload/secured
-    - name: Squire Beacon Payload (Draft)
+    - name: Herald Beacon Payload (Draft)
       link: /payload/beacon
-    - name: Squire-compatible Inner Payload 
+    - name: Herald-compatible Inner Payload 
       link: /payload/inner
     - name: Custom outer & inner payloads 
       link: /payload/outer

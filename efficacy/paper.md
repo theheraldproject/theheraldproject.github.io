@@ -31,7 +31,7 @@ Where:-
 - Pspec - Population reach. In our paper we talk about maximum population reach as those who could download and make use of the app - i.e. the maximum population reach
   - Pspec-squared - As you need two phones to communicate in both directions to measure mutual exposure risk, you must square the Pspec value (as it applies to both phones in a contact)
   - Pcountry - Proportion of people in a given country/area of interest that have a mobile phone (taken as smartphone, rather than tablets of course)
-  - Phardware - Those with hardware that supports the given protocol. Bluetooth Low Energy for the Squire Protocol. Other protocols have restrictions here. E.g. ~35% of Android phones do not support 'Bluetooth advertising' which means they cannot be detected by other phones. This is true of many other (non-Squire) bluetooth protocols for contact tracing
+  - Phardware - Those with hardware that supports the given protocol. Bluetooth Low Energy for the Herald Protocol. Other protocols have restrictions here. E.g. ~35% of Android phones do not support 'Bluetooth advertising' which means they cannot be detected by other phones. This is true of many other (non-Herald) bluetooth protocols for contact tracing
   - Psoftware - Any software restrictions artificially made by the protocols design. E.g. some common protocols only support the latest phone operating systems, or use cryptographic libraries that are not available on all phones. This limits their reach, especially in poorer parts of the world or even in the UK in certain poorer areas
 - Rdetection - Rate of basic detection (one-way) of phones during any given scenario. This is separate from Rcontinuity as in practical tests a non detected phone would not appear in the totality of phones in Rcontinuity, and so we include it separately.
 - Rcontinuity - The number of 30 second windows a distance estimation (RSSI reading for Bluetooth) ocurred (one-way). Choice of 30 seconds is described below.
@@ -75,7 +75,7 @@ exhibits some deliberate limitation could modify the observed risk.
 This then led us to create a formula that took in to account all limiting factors
 that a user of such a contact tracing app could encounter in a particular day.
 
-We then applied this formula to a brand new Bluetooth protocol called [Squire](/protocol).
+We then applied this formula to a brand new Bluetooth protocol called [Herald](/protocol).
 We were able to identify and rapidly tune this protocol in 5 weeks thanks to the presence
 of the fair efficacy formula, and approaching the problem in an epidemiologially data driven
 way.
@@ -120,6 +120,6 @@ The synthetic data and calculations used in the paper can be found in the [Synth
 
 ## Follow on work
 
-From the paper: "Now a low-level protocol that works across a large range of devices exists in the Squire protocol, the author aims to suggest a payload to transfer over this protocol that allows for its use in either a centralised or decentralised contact tracing application. This will provide international interoperability whilst allowing local jurisdictions to tailor their approach to one acceptable by its residents."
+From the paper: "Now a low-level protocol that works across a large range of devices exists in the Herald protocol, the author aims to suggest a payload to transfer over this protocol that allows for its use in either a centralised or decentralised contact tracing application. This will provide international interoperability whilst allowing local jurisdictions to tailor their approach to one acceptable by its residents."
 
 We also believe that more work needs to be done to ensure that any [RSSI to distance estimation formulae](/bluetooth/distance) takes account of the fact that some phone pairings appear to use a log-distance approach to scale their RSSI values, whereas others use an inverse-distance-squared approach. This leads to inaccuracies around the 2.5m mark.

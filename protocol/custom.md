@@ -3,14 +3,14 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: Squire protocol - custom uses
-description: Other uses for the Squire protocol
+title: Herald protocol - custom uses
+description: Other uses for the Herald protocol
 menubar: docs_menu
 ---
 
-# Custom apps and the Squire Protocol
+# Custom apps and the Herald Protocol
 
-The low-level Squire protocol allows for regular, reliable, information exchange between mobile devices.
+The low-level Herald protocol allows for regular, reliable, information exchange between mobile devices.
 
 As well as being used for contact tracing, other applications can be built on top of this reliable
 mechanism that were not possible before.
@@ -28,7 +28,7 @@ There are a range of example for this, with a few summarised below
   - Check in app - Walk around and be let in to secure areas automatically
   - Rescue app - E.g. for skiing/snowboarding avalanche rescue - find the hidden/non visible person. Could be fire in a large building, or rescue on a tube train
 
-## How to apply the Squire protocol for these apps
+## How to apply the Herald protocol for these apps
 
 It's a pretty simple process:-
 

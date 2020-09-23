@@ -4,43 +4,43 @@
 
 layout: page
 title: Developer and Integration Guide
-description: Full development guide for the iOS and Android Squire protocol and provided sample payloads
+description: Full development guide for the iOS and Android Herald protocol and provided sample payloads
 menubar: docs_menu
 ---
 
 # Design & Integration Guides
 
-This section describes how to integrate Squire in to your own applications.
+This section describes how to integrate Herald in to your own applications.
 
-Below is a set of options for using the [Squire Protocol](/protocol) in both a Contact Tracing application, or a custom
+Below is a set of options for using the [Herald Protocol](/protocol) in both a Contact Tracing application, or a custom
 commercial application.
 
-![Protocol and Payload layers diagram](/images/SquireProtocolStack.png)
+![Protocol and Payload layers diagram](/images/ProtocolStack.png)
 
-With Squire you can use our suggested full or header [payloads](/payload), or an entirely custom payload:-
+With Herald you can use our suggested full or header [payloads](/payload), or an entirely custom payload:-
 
-![Squire Payload Contents](/images/SquirePayloads.png)
+![Herald Payload Contents](/images/Payloads.png)
 
-## Squire protocol integration
+## Herald protocol integration
 
-Please see the [Squire protocol integration guid (PDF)](/documents/IntegrationGuide.pdf) file for integrating
-the Squire protocol in to your nation's contact tracing application.
+Please see the [Herald protocol integration guid (PDF)](/documents/IntegrationGuide.pdf) file for integrating
+the Herald protocol in to your nation's contact tracing application.
 
 ## Detailed design information
 
-Please see the [Squire design document (pdf)](/documents/SquireProximityDetectionSolutionDesign.pdf) file
-for detailed implementation design details about how the Squire protocol works.
+Please see the [Herald design document (pdf)](/documents/ProximityDetectionSolutionDesign.pdf) file
+for detailed implementation design details about how the Herald protocol works.
 
-## Squire protocol formal specification
+## Herald protocol formal specification
 
 COMING SOON! This document is currently being written.
 
-## Squire Simple and Secured payload formal specification
+## Herald Simple and Secured payload formal specification
 
 COMING SOON! This document is currently being written.
 
 ## Something missing?
 
-Please do [log an Issue on GitHub](https://github.com/vmware/squire/issues) for any missing documentation
+Please do [log an Issue on GitHub](https://github.com/vmware/herald/issues) for any missing documentation
 or to ask us to correct errors or provide clarification. We want to provide very high quality integration
-documentation to help development teams integrate the Squire API.
+documentation to help development teams integrate the Herald API.

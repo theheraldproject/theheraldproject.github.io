@@ -3,26 +3,26 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: Squire common contact tracing header
+title: Herald common contact tracing header
 description: Common header data for contact tracing interoperability
 menubar: docs_menu
 ---
 
-# Common Squire Contact Tracing data
+# Common Herald Contact Tracing data
 
 Technically this header is part of the inner payload, but the data is common to both 
-the [Squire simple inner payload](/payload/simple) or 
-the [Squire secured payload](/payload/secured) and can even be used with your own
+the [Herald simple inner payload](/payload/simple) or 
+the [Herald secured payload](/payload/secured) and can even be used with your own
 contact tracing specific custom [Inner payload](/payload/inner)
 
 ## What does the common header provide?
 
-The below information is appended to the [Squire Envelope payload](/payload/envelope):-
+The below information is appended to the [Herald Envelope payload](/payload/envelope):-
 
 Note: All numbers are Big Endian (network order).
 
 - Read ID payload
-  - Client ID - 16 byte Ephemeral rotating identifier (generated via a callback in the Squire protocol). Could use TOTP to be generated. (not required)
+  - Client ID - 16 byte Ephemeral rotating identifier (generated via a callback in the Herald protocol). Could use TOTP to be generated. (not required)
   - Routing code - 4 byte freeform area, specific to the protocol identifier, for routing data or specifying legal jurisdiction/company ownership. For contact tracing this is used as follows:-
     - Country code - 2 byte unsigned integer, ISO-3166-1 NUMERIC code for a country (E.g. 826 is the UK)
     - State code - 2 byte unsigned integer, defined by the country in country code, to identify the part of the country or a commercial or other entity within it
@@ -35,14 +35,14 @@ Note: All numbers are Big Endian (network order).
   - Multiple payloads, consisting of:-
     - Payload type - 1 byte integer. 0 = direct read, 1 = direct write, other values reserved for future use
     - Received time - 4 byte signed integer, unix epoch seconds when the echange was observed by the device
-    - Payload data - as per individual read/write payloads, above. You MUST either configure a fixed length value in the Squire outer payload, or provide your own custom parser to split each shared device payload.
-- Calling card / nearby devices write payload (disabled by default in the Squire protocol)
+    - Payload data - as per individual read/write payloads, above. You MUST either configure a fixed length value in the Herald outer payload, or provide your own custom parser to split each shared device payload.
+- Calling card / nearby devices write payload (disabled by default in the Herald protocol)
   - Exactly the same as for calling card read payload - most recent devices only
 
 ## How do I specify an inner payload?
 
 Implement the callbacks to provide a [custom inner payload](/payload/inner) data or use 
-the [Squire simple inner payload](/payload/simple) or the [Squire secured payload](/payload/secured).
+the [Herald simple inner payload](/payload/simple) or the [Herald secured payload](/payload/secured).
 
 ## How does international interoperability work?
 
@@ -53,9 +53,9 @@ the issuing state's systems for contact tracing reasons.
 
 It needs to be shared because it forms part of the contact tracing data, and will be shared with the issuing country
 by that country's health authority should the visitor become ill. This allows countries to implement
-their own signing and crytographic approach within the inner payload if they wish whilst all using the Squire Protocol.
+their own signing and crytographic approach within the inner payload if they wish whilst all using the Herald Protocol.
 
-Worked example (countries mentioned don't necessarily use the Squire protocol):-
+Worked example (countries mentioned don't necessarily use the Herald protocol):-
 - Natalie is from Australia and uses the Victoria contact tracing app
 - Jess is from the UK and uses the England app
 - Natalie visits the UK and spends 2 hours at a bar talking to Jess. She returns to Australia and falls ill

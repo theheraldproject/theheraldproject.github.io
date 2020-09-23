@@ -3,23 +3,23 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: Squire protocol design
+title: Herald protocol design
 description: Our privacy preserving and secure protocol for slowing disease spread
 menubar: docs_menu
 ---
 
-# The Squire Protocol
+# The Herald Protocol
 
 There are many parts to communication amongst contact tracing apps. This can be thought of as layers, starting with the foundation and building up:-
 
 - Mobile Operating System (OS) provided communication layer (E.g. Core Bluetooth on iOS)
-- Low-level reliable information exchange and distance estimation protocol - aka a Bluetooth Proximity protocol - such as the Squire Protocol described here
+- Low-level reliable information exchange and distance estimation protocol - aka a Bluetooth Proximity protocol - such as the Herald Protocol described here
 - The application payload - Such as information to allow contact tracing exposure tokens to be shared between devices. See [payload](/payload) for details on payload options
 - The mobile application - That provides payload information, performance settings to the protocol layer
 
-![Protocol and Payload layers diagram](/images/SquireProtocolStack.png)
+![Protocol and Payload layers diagram](/images/ProtocolStack.png)
 
-Our Squire payloads take on a variety of privacy and security issues whilst allowing epidemiologists and medical authorities appropriate levels of information to allow them to react to an epidemic and control it using mobile phones.
+Our Herald payloads take on a variety of privacy and security issues whilst allowing epidemiologists and medical authorities appropriate levels of information to allow them to react to an epidemic and control it using mobile phones.
 
 Note that the Protocol is described here, but the Payload that we are recommending for COVID-19 control is specified in the [Payload](/payload) section. The Bluetooth Protocol we describes is generally useful for any application that requires high fidelity, high density, small packet size, low frequency data exchange between mobile phones.
 
@@ -66,4 +66,4 @@ See [Results](/efficacy/results) for details.
 
 ## Non contact tracing uses
 
-There are a range of other uses for the low level Squire protocol. These are discussed on the [custom uses](/protocol/custom) page.
+There are a range of other uses for the low level Herald protocol. These are discussed on the [custom uses](/protocol/custom) page.

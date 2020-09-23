@@ -8,7 +8,7 @@ description: Chirp style interoperable payload
 menubar: docs_menu
 ---
 
-# DEPRECATED PAGE - See [Squire Simple Inner Payload](/payload/simple)
+# DEPRECATED PAGE - See [Herald Simple Inner Payload](/payload/simple)
 
 # Chirp payload
 

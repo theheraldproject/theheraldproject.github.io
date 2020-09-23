@@ -3,20 +3,20 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: page
-title: Squire Documentation
-description: Squire developer and integration documentation
+title: Herald Documentation
+description: Herald developer and integration documentation
 menubar: docs_menu
 ---
 
 # Documentation
 
-Why Squire exists, how to get the code, and how to integrate Squire in to your mobile app.
+Why Herald exists, how to get the code, and how to integrate Herald in to your mobile app.
 
 ## Background
 
-VMware Squire is an open source Bluetooth Low Energy (BLE) based protocol licensed under the MIT license for the reliable exchange of information between a range of mobile phones.
-Squire consists of a low-level [BLE protocol](/protocol), with a choice of data [payloads](/payload). The [Squire Envelope](/payload/envelope) and
-[Squire Secured](/payload/secured) payloads are examples for contact tracing applications that provide epidemiological information, individual privacy, ensure 
+VMware Herald is an open source Bluetooth Low Energy (BLE) based protocol licensed under the MIT license for the reliable exchange of information between a range of mobile phones.
+Herald consists of a low-level [BLE protocol](/protocol), with a choice of data [payloads](/payload). The [Herald Envelope](/payload/envelope) and
+[Herald Secured](/payload/secured) payloads are examples for contact tracing applications that provide epidemiological information, individual privacy, ensure 
 security, and allow international interoperability - even between 'centralised' and 'decentralised' contact tracing applications.
 
 This site also details our low-level [Bluetooth research findings](/bluetooth). These include issues with [distance estimation](/bluetooth/distance), Mobile phone 
@@ -35,16 +35,16 @@ The remainder of this page breaks down the key areas of the documentation on thi
 
 ## Get the code or get involved
 
-To see information on integrating Squire with your own application, please see the [developer & integration guide](/guide).
+To see information on integrating Herald with your own application, please see the [developer & integration guide](/guide).
 
-You can reach out to us and log general project and research data requests and issues on our [GitHub issues site](https://github.com/vmware/squire/issues).
+You can reach out to us and log general project and research data requests and issues on our [GitHub issues site](https://github.com/vmware/herald/issues).
 We are also keen to receive contributions to all of our open source repositories and research areas:-
 
-- [Squire Protocol & Payloads for iOS](https://github.com/vmware/squire-ios) (MIT licensed)
-- [Squire Protocol & Payloads for Android](https://github.com/vmware/squire-android) (MIT licensed)
-- [Squire Research & documentation website](https://github.com/vmware/squire) (this site) (CC-BY-SA licensed)
-- [Sample R analysis scripts](https://github.com/vmware/squire-analysis) for the fair efficacy formula (MIT licensed)
-- Our generic [BLE RSSI calibration and distance estimation testing tool](https://github.com/vmware/squire-calibration) (MIT licensed)
+- [Herald Protocol & Payloads for iOS](https://github.com/vmware/herald-for-ios) (MIT licensed)
+- [Herald Protocol & Payloads for Android](https://github.com/vmware/herald-for-android) (MIT licensed)
+- [Herald Research & documentation website](https://github.com/vmware/herald) (this site) (CC-BY-SA licensed)
+- [Sample R analysis scripts](https://github.com/vmware/herald-analysis) for the fair efficacy formula (MIT licensed)
+- Our generic [BLE RSSI calibration and distance estimation testing tool](https://github.com/vmware/herald-calibration) (MIT licensed)
 
 This project is maintained primarily by VMware personnel and some external contributors in our spare time. We aim to respond to logged issues and emails within 24-28 hours during week days (Monday-Friday) in the UK time zone.
 
@@ -60,13 +60,13 @@ A [scientific paper suggestion a fair and independent approach to measuring the 
 
 A [list of results](/efficacy/results) ourselves and others have calculated using our [standardised testing](/efficacy/method) method for various existing proximity protocols used for contact tracing today.
 
-## Squire Protocol: Low-level reliable bluetooth communication protocol
+## Herald Protocol: Low-level reliable bluetooth communication protocol
 
-During our research on creating an efficacy measure we created the [Squire Bluetooth LE protocol](/protocol) implementation to test the ideas. We found a welath of issues in Bluetooth on mobile phones, identified the issues, and workaround them in order to provide a robust communication protocol. 
+During our research on creating an efficacy measure we created the [Herald Bluetooth LE protocol](/protocol) implementation to test the ideas. We found a welath of issues in Bluetooth on mobile phones, identified the issues, and workaround them in order to provide a robust communication protocol. 
 
 This low level protocol is independent of any information you pass over it. You could use it for contact tracing proximity detection, but also other uses within your own applications. This low-level protocol provides reliable communications between proximite mobile devices.
 
-## Squire Envelope & Secured payloads: Privacy preserving payloads that can counter hostile actors
+## Herald Envelope & Secured payloads: Privacy preserving payloads that can counter hostile actors
 
 We have created a design for a [payload](./payload) that not only preserves 
 privacy, but also provides the right levels of epidemiological insight to 

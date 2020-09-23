@@ -168,7 +168,7 @@ A centralised system allows all of the above problems to be countered.
 It is up to individual governments to decide which level of risk is more of
 an issue to their populations.
 
-Our suggested [Squire Secure payload](/payload/secured) strikes a middle
+Our suggested [Herald Secure payload](/payload/secured) strikes a middle
 ground here, providing a predictable ID and graph to the state, but with only
 one side of the contact graph shared. (When the ill person submits their data)
 This approach also counters spoofing, relay, and replay attacks and is more
@@ -190,7 +190,7 @@ and using this to calculated the risk of others' exposure to this person,
 and providing advice for them to take (E.g. isolation and testing)
 
 The first two points are generally grouped and called 'Proximity Detection'
-and are the purvue of the [Squire Protocol](/protocol) and [Payload](/payload)
+and are the purvue of the [Herald Protocol](/protocol) and [Payload](/payload)
 of a particular Proximity Detection Protocol.
 
 Distance estimation has been out of scope of our research, but we have
@@ -200,3 +200,6 @@ The final one, Tracing, and how it occurs is determined by the mobile
 contact tracing application using the protocol that is provided to a
 particular state or countries residents.
 
+Below is a diagram of an end to end contact tracing system flow:-
+
+![Contact tracing end to end flow](/images/tracing-flow.png)

@@ -3,18 +3,18 @@
     - name: Recommended Payloads
       link: /payload
       items:
-        - name: Squire Envelope Outer Payload 
+        - name: Herald Envelope Outer Payload 
           link: /payload/envelope
-        - name: Squire Common CT Inner Header 
+        - name: Herald Common CT Inner Header 
           link: /payload/common
-        - name: Squire Secured Inner Payload 
+        - name: Herald Secured Inner Payload 
           link: /payload/secured
     - name: Other Payloads
       link: /payload/custom
       items:
         - name: Custom outer & inner payloads 
           link: /payload/outer
-        - name: Squire-compatible Inner Payload 
+        - name: Herald-compatible Inner Payload 
           link: /payload/inner
-        - name: Squire simple Inner Payload 
+        - name: Herald simple Inner Payload 
           link: /payload/simple

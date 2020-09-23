@@ -11,7 +11,7 @@ menubar: docs_menu
 # Custom inner payloads
 
 A custom inner payload is designed to work exclusively with the 
-[Squire Envelope payload](/payload/envelope). If you want a completely
+[Herald Envelope payload](/payload/envelope). If you want a completely
 custom payload, see the [custom outer payload page](/payload/outer).
 
 The inner payload is constructed by a national/state authority and MAY only be
@@ -20,10 +20,10 @@ verifiable or readable by that health authority.
 There are many reasons individual countries' inner packets may vary:-
 
 - A different appetite for privacy vs national security, and thus more data needing to be shared
-   - E.g. one country may be decentralised, another centralised, but using the [Squire Envelope payload](/payload/envelope) would allow for international interoperability still
+   - E.g. one country may be decentralised, another centralised, but using the [Herald Envelope payload](/payload/envelope) would allow for international interoperability still
 - Requiring the sharing of more epidemiologically useful information (E.g. phones were outside, phone orientation, GPS location)
 
-Note: We recommend the [Squire Secured inner payload](/payload/secured) as this provides full epidemiological information
+Note: We recommend the [Herald Secured inner payload](/payload/secured) as this provides full epidemiological information
 as well as ensuring national security and individual privacy.
 
 ## How to implement a custom inner payload
@@ -32,11 +32,11 @@ There are only two steps:-
 
 - Implement a Payload provider callback to construct your inner payload on the fly
 - Provide size information on the inner payload by either:-
-  - If using a fixed payload size, tell the Squire protocol what your inner payload size is
+  - If using a fixed payload size, tell the Herald protocol what your inner payload size is
   - If using a variable payload size, implement a Payload Parser callback
 
 Performing these steps allows your national contact tracing app to continue as-is, but supporting international interoperability by using
-the [Squire Envelope payload](/payload/envelope).
+the [Herald Envelope payload](/payload/envelope).
 
 ## Alternatives
 

@@ -7,10 +7,10 @@ author: adamfowleruk
 ---
 
 We are pleased to announce the publication of an open source, reliable, Bluetooth protocol
-called 'Squire', and our [Fair Efficacy Formula](/efficacy) to enable the measurement and improvement of
+called 'Herald', and our [Fair Efficacy Formula](/efficacy) to enable the measurement and improvement of
 all contact tracing applications.
 
-The [Squire protocol](/protocol) will be of use to those developing Contact Tracing applicatins, and any
+The [Herald protocol](/protocol) will be of use to those developing Contact Tracing applicatins, and any
 other applications requiring reliable pair-wise bluetooth communication between
 mobile devices. This overcomes many of the issues present in existing contact tracing apps
 and Bluetooth approaches on mobile devices.

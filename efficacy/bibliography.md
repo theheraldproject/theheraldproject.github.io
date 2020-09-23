@@ -29,12 +29,12 @@ and reference material in the paper and on this website.
 tings. Retrieved 27 August 2020. [https://github.com/google/exposure-notifications-internals/blob/main/exposurenotification/src/main/java/com/google/samples/exposurenotification/features/ContactTracingFeature.java](https://github.com/google/exposure-notifications-internals/blob/main/exposurenotification/src/main/java/com/google/samples/exposurenotification/features/ContactTracingFeature.java)
 - <a id="a-12" />[12] Google API for Exposure Notification (GAEN) . Retrieved 27 August 2020. [https://developers.google.com/android/exposure-notifications/exposure-notifications-api](https://developers.google.com/android/exposure-notifications/exposure-notifications-api)
 25
-- <a id="a-13" />[13] Distance Estimation Research findings. Adam Fowler. Retrieved 21 Sep 2020. [https://vmware.github.io/squire/bluetooth/distance](https://vmware.github.io/squire/bluetooth/distance)
-- <a id="a-14" />[14] Formulasummary. Adam Fowler. Retrieved 21 Sep 2020. [https://vmware.github.io/squire/efficacy/paper](https://vmware.github.io/squire/efficacy/paper)
-- <a id="a-15" />[15] Physical testing methods. Adam Fowler. Retrieved 21 Sep [https://vmware.github.io/squire/efficacy/method](https://vmware.github.io/squire/efficacy/method)
-- <a id="a-16" />[16] Fair Measure testing results. Adam Fowler. Retrieved 21 Sep [https://vmware.github.io/squire/efficacy/results](https://vmware.github.io/squire/efficacy/results)
-- <a id="a-17" />[17] Contact Tracing terminology glossary. Adam Fowler. Retrieved 21 Sep 2020 [https://vmware.github.io/squire/background/glossary](https://vmware.github.io/squire/background/glossary)
-- <a id="a-18" />[18] Squire Protocol for Bluetooth Communications. Adam Fowler. Retrieved 21 Sep 2020. [https://vmware.github.io/squire](https://vmware.github.io/squire) (This website!)
+- <a id="a-13" />[13] Distance Estimation Research findings. Adam Fowler. Retrieved 21 Sep 2020. [https://vmware.github.io/herald/bluetooth/distance](https://vmware.github.io/herald/bluetooth/distance)
+- <a id="a-14" />[14] Formulasummary. Adam Fowler. Retrieved 21 Sep 2020. [https://vmware.github.io/herald/efficacy/paper](https://vmware.github.io/herald/efficacy/paper)
+- <a id="a-15" />[15] Physical testing methods. Adam Fowler. Retrieved 21 Sep [https://vmware.github.io/herald/efficacy/method](https://vmware.github.io/herald/efficacy/method)
+- <a id="a-16" />[16] Fair Measure testing results. Adam Fowler. Retrieved 21 Sep [https://vmware.github.io/herald/efficacy/results](https://vmware.github.io/herald/efficacy/results)
+- <a id="a-17" />[17] Contact Tracing terminology glossary. Adam Fowler. Retrieved 21 Sep 2020 [https://vmware.github.io/herald/background/glossary](https://vmware.github.io/herald/background/glossary)
+- <a id="a-18" />[18] Herald Protocol for Bluetooth Communications. Adam Fowler. Retrieved 21 Sep 2020. [https://vmware.github.io/herald](https://vmware.github.io/herald) (This website!)
 - <a id="a-19" />[19] M Briers, personal communication, June 2020
 - <a id="a-20" />[20] Mobile phones accessing BBC services from UK IP addresses, BBC shared for July 2020.
 - <a id="a-21" />[21] Phones that do not support advertising. AltBeacon 2020, Device Support For Beacon Transmission with Android 5+, Radius Networks, viewed August 2020, [https://altbeacon.github.io/android-beacon-library/beacon-transmitter-devices.html](https://altbeacon.github.io/android-beacon-library/beacon-transmitter-devices.html)
@@ -48,7 +48,7 @@ The below links are used on this website only, and not in the paper, but may be 
 
 ### Secured protocol links
 
-Below are a list of external links used when talking about the [Squire Secured payload for contact tracing](/payload/secured):-
+Below are a list of external links used when talking about the [Herald Secured payload for contact tracing](/payload/secured):-
 
 - Kerberos authentication and ticket passing (As used when you log in to corporate networks and services): [RFC-4120](https://tools.ietf.org/html/rfc4120)
 - Time base one time password - TOTP (As used in your online banking codes): [RFC-6238](https://tools.ietf.org/html/rfc6238)
