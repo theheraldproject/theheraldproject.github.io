@@ -44,7 +44,7 @@ published.
 We then took this measure and applied it to a new protocol we designed from scratch
 to work around known Bluetooth communication issues across mobile phones. By using this
 formula to highlight shortcomings in certain tests we were able to rapidly within a
-month create [a new low level Bluetooth protocol](/protocol) that has a very high 
+month create [a new low level Bluetooth protocol](../protocol) that has a very high 
 efficacy score.
 
 As part of preparation for publication we have also been looking at other existing

@@ -19,10 +19,10 @@ In the Herald Envelope payload for Contact Tracing we provide the outer payload 
 interoperability but leave the inner payload - the data payload for that country - to the national team
 to implement.
 
-![Herald Envelope Header](/images/PayloadEnvelope.png)
+![Herald Envelope Header](../images/PayloadEnvelope.png)
 
-We recommend each country use the Envelope protocol and embed their payload as an [Inner Payload](/payload/inner),
-but there's nothing stopping individual groups from creating their own [Outer payload](/payload/outer) if they wish.
+We recommend each country use the Envelope protocol and embed their payload as an [Inner Payload](../payload/inner),
+but there's nothing stopping individual groups from creating their own [Outer payload](../payload/outer) if they wish.
 Doing so though will prevent international interoperability between contact tracing apps and devices.
 
 ## What does the outer payload provide?
@@ -33,7 +33,7 @@ Note: All numbers are Big Endian (network order).
 
 - Read ID payload
   - Payload identifier and version - 4 byte unsigned integer - 0x00 for Herald envelope payload V1.0, up to 0x07, wrapping around for further versions (not part of the signature)
-  - Inner payload data - See the [common contact tracing header](/payload/common) for options for this content for contact tracing, or custom use cases
+  - Inner payload data - See the [common contact tracing header](../payload/common) for options for this content for contact tracing, or custom use cases
 - Calling card / ID write payload
   - Same content as for Read ID payload 
 - Calling card / nearby devices read payload - most recent devices only
@@ -51,5 +51,5 @@ for the use of the Herald Project. You are free to use any other values.
 
 You do not need to register your protocol IDs with us so long as you use a different Bluetooth
 service UUID and characteristic UUID. If you wish to provide an extension to Herald, as we
-have done for our [beacon](/payload/beacon) payload, then please do let us know what
+have done for our [beacon](../payload/beacon) payload, then please do let us know what
 range you are using.

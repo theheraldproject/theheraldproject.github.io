@@ -40,7 +40,7 @@ It's a pretty simple process:-
 - Set your security information
   - Cryptographic material for ClientID rotation
   - Cryptographic public/private key for secure data exchange (optional)
-- Provide your own [Outer Payload](/payload/outer) callbacks to allow data exchange
+- Provide your own [Outer Payload](../payload/outer) callbacks to allow data exchange
   - Given a nearby ID and distance information, what do you want to share with them?
   - Allow passing data via a nearby device (Calling card - useful to workaround certain phone limitations/bugs) (optional)
 - Implement necessary callbacks to receive shared data in your app

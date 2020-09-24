@@ -14,18 +14,18 @@ There are many parts to communication amongst contact tracing apps. This can be 
 
 - Mobile Operating System (OS) provided communication layer (E.g. Core Bluetooth on iOS)
 - Low-level reliable information exchange and distance estimation protocol - aka a Bluetooth Proximity protocol - such as the Herald Protocol described here
-- The application payload - Such as information to allow contact tracing exposure tokens to be shared between devices. See [payload](/payload) for details on payload options
+- The application payload - Such as information to allow contact tracing exposure tokens to be shared between devices. See [payload](../payload) for details on payload options
 - The mobile application - That provides payload information, performance settings to the protocol layer
 
-![Protocol and Payload layers diagram](/images/ProtocolStack.png)
+![Protocol and Payload layers diagram](../images/ProtocolStack.png)
 
 Our Herald payloads take on a variety of privacy and security issues whilst allowing epidemiologists and medical authorities appropriate levels of information to allow them to react to an epidemic and control it using mobile phones.
 
-Note that the Protocol is described here, but the Payload that we are recommending for COVID-19 control is specified in the [Payload](/payload) section. The Bluetooth Protocol we describes is generally useful for any application that requires high fidelity, high density, small packet size, low frequency data exchange between mobile phones.
+Note that the Protocol is described here, but the Payload that we are recommending for COVID-19 control is specified in the [Payload](../payload) section. The Bluetooth Protocol we describes is generally useful for any application that requires high fidelity, high density, small packet size, low frequency data exchange between mobile phones.
 
 ## Highlights
 
-- Supports 98% of UK phones in use. (98% of UK people have a smartphone with Bluetooth Low Energy support.) Source: OFCOM reports [[9]](/efficacy/bibliography#a-9) [[10]](/efficacy/bibliography#a-10) 
+- Supports 98% of UK phones in use. (98% of UK people have a smartphone with Bluetooth Low Energy support.) Source: OFCOM reports [[9]](../efficacy/bibliography#a-9) [[10]](../efficacy/bibliography#a-10) 
 - Provides 100% detection 
   - Works around the infamous 'iOS cannot be detected in the background' OS bug in iPhones
 - Provides 93%+ continuity (i.e. takes a distance estimation at least once every 30 seconds)
@@ -34,7 +34,7 @@ Note that the Protocol is described here, but the Payload that we are recommendi
 - Doesn't require operating system updates in order to be used or improved
 - Low energy - Up to 2% battery use per hour
 
-See [Results](/efficacy/results) for details.
+See [Results](../efficacy/results) for details.
 
 ## Key Features
 
@@ -43,11 +43,11 @@ See [Results](/efficacy/results) for details.
   - Especially those ~14% of UK phones that do not support Advertising, and so cannot be served by other protocols (E.g. GAEN) - via the write characteristic approach
 - Provides a number of approaches to workaround the 'iOS detection in the background' bug in iOS to a point where detection and continuity is superior to existing protocols
   - Allows our protocol to accurately capture the ~50% of UK phones that are iPhones where other non-GAEN protocols do not
-- Provide distance estimation (RSSI) data with a mean periodicity/windowing time of 4-8 seconds (easily beating the measure we describe in the [measurements paper](/efficacy/paper) which requires 1 reading every 30 seconds) - more regular than protocols that today restrict readings to once every 3.5 - 5 minutes
+- Provide distance estimation (RSSI) data with a mean periodicity/windowing time of 4-8 seconds (easily beating the measure we describe in the [measurements paper](../efficacy/paper) which requires 1 reading every 30 seconds) - more regular than protocols that today restrict readings to once every 3.5 - 5 minutes
   - Allows a much more accurate Risk Score to be calculated, preventing false positive and false negative COVID-19 exposure alerts
 - Supports a pluggable Payload system, allowing the same protocol to be used for a variety of Bluetooth applications, including Contact Tracing
   - Supports large Identity and Distance Estimation payloads (such as those using Elliptic Curve encryption for added privacy and security)
-  - We provide a sample [payload](/payload) implementation that protects privacy, ensures security and trust, whilst providing useful epidemiological information
+  - We provide a sample [payload](../payload) implementation that protects privacy, ensures security and trust, whilst providing useful epidemiological information
 
 ## How it achieves this
 
@@ -66,4 +66,4 @@ See [Results](/efficacy/results) for details.
 
 ## Non contact tracing uses
 
-There are a range of other uses for the low level Herald protocol. These are discussed on the [custom uses](/protocol/custom) page.
+There are a range of other uses for the low level Herald protocol. These are discussed on the [custom uses](../protocol/custom) page.

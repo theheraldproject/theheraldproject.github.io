@@ -63,8 +63,8 @@ This has two implications:-
 - The appropriate distance conversion approach cannot be determine from calibration of a phone at a single distance - it must use several distances to determine the correct regression approach
   - This in turn dramatically increases the time taken to complete manual calibration in a radiation proof chamber. Alternative automated approaches should be considered.
   - This also likely means many current Bluetooth calibration readings used for distance estimation are invalid
-- A log(distance) algorithm such as Prof Dr Ing's [[2]](/paper/bibliography#a-2) approach to collecting calibration data cannot be solely relied upon, an equivalent process is needed for inverse square-distance too
-  - This in turn increases the difficulty of passing on ever changing calibration data and new formulae to mobile apps for local distance estimation rather than centralised risk estimation (currently used decentralised approaches) and local summation as per the [Herald secured payload](/payload/secured)
+- A log(distance) algorithm such as Prof Dr Ing's [[2]](../paper/bibliography#a-2) approach to collecting calibration data cannot be solely relied upon, an equivalent process is needed for inverse square-distance too
+  - This in turn increases the difficulty of passing on ever changing calibration data and new formulae to mobile apps for local distance estimation rather than centralised risk estimation (currently used decentralised approaches) and local summation as per the [Herald secured payload](../payload/secured)
 
 ### Running mean of RSSI values in Bluetooth
 
@@ -84,7 +84,7 @@ Below shows the output of that analysis. The R scripts used to produce this and 
 
 This application can be used to determine the 'correct' RSSI reading for two known phones at a particular distance, and thus useful for formal evaluation of a proximity detection protocol's accuracy, and so we discuss the results here.
 
-![RSSI distribution over thousands of readings at different distances](/images/distance-rssi-distribution.png)
+![RSSI distribution over thousands of readings at different distances](../images/distance-rssi-distribution.png)
 
 The above images show over ten thousands readings per contact event over approximately 4-5 minutes at each distance. The iPhones were kept in the foreground allowing a very high rate of RSSI readings to be taken. This would not be the case in a real application but it was useful to be able to discover RSSI distribution over time at each distance.
 
@@ -100,17 +100,17 @@ We further analysed these modal values to determine if they could be used to dis
 
 The result of using these modal values was a logarithmic function that provided the following distribution. Note that the values for RSSI have been processed as a log before plotting. The function is not linear.
 
-![RSSI distance data regression](/images/distance-rssi-regression.png)
+![RSSI distance data regression](../images/distance-rssi-regression.png)
 
 This provided the following naive formula which we will call Fowler's formula for want of a better name, named after the author, naturally.
 
-![Fowler's RSSI distance regression formula](/images/distance-rssi-formula.png)
+![Fowler's RSSI distance regression formula](../images/distance-rssi-formula.png)
 
 where D is the estimated distance in meters and RSSI-MODE is the modal RSSI value.
 
 As per the chart the R value for the formula's fit was close to -1. This is no surprise as we are basing our regression on the mode rather than mean. The very small p value, however, indicates a good fit to the recorded test values.
 
-It should be noted that this function is only valid for these two iPhones used in the test. There was no standardisation or calibration for particular phone models done. The Fraunhofer Institute used a similar approach. Refer to Prof Dr Ing's paper [[2]](/paper/bibliography#a-2) . It uses a similar log estimation function but based on the mean RSSI value observed whilst generating pairwise phone calibration values rather than the mode.
+It should be noted that this function is only valid for these two iPhones used in the test. There was no standardisation or calibration for particular phone models done. The Fraunhofer Institute used a similar approach. Refer to Prof Dr Ing's paper [[2]](../paper/bibliography#a-2) . It uses a similar log estimation function but based on the mean RSSI value observed whilst generating pairwise phone calibration values rather than the mode.
 
 We recommend an analysis is done in future study to see how many RSSI values would need to be read in quick succession to provide a reliable modal RSSI value close to a point in time in order to see if its use provides a better estimation function. It is possible, however, that research on probabilistic estimation functions has surpassed the accuracy of both the Fraunhofer and Fowler algorithms.
 

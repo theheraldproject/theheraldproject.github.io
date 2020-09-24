@@ -11,10 +11,10 @@ menubar: docs_menu
 # Contact Tracing Simple inner payload
 
 This inner payload allows for minimum information sharing - just large enough to enable contact tracing.
-This makes it simple, but it's not as secure as the [Herald Secured payload](/payload/secured), and
+This makes it simple, but it's not as secure as the [Herald Secured payload](../payload/secured), and
 really only supports decentralised contact tracing.
 
-![Simple payload data](/images/PayloadSimple.png)
+![Simple payload data](../images/PayloadSimple.png)
 
 In particular the simple payload:-
 
@@ -28,7 +28,7 @@ In particular the simple payload:-
 
 ## Simple inner payload content
 
-In addition to the information in the [Herald envelope header](/payload/envelope), the simple
+In addition to the information in the [Herald envelope header](../payload/envelope), the simple
 inner paylod provides the following data.
 
 Note: All numeric data is big endian.

@@ -80,7 +80,7 @@ An attacker could use a device to intercept many nearby valid rotation keys. A c
 
 A relay attack could be used to send the valid ID to a different location and have it recorded as a contact for the same time period in a new geography. Again this attack vector is limited to a 15 minute period.
 
-In a centralised system it would be possible, although computationally and network intensive, to send a message to the originating phone to see if the other side of the contact was themselves seen. This would prevent relay attacks. This does suffer from the issue of 'one way detection', but in our [protocol](/protocol) this is minised thanks to the 'connect back' mechanism in use. This validation functionality would have to be built in to the app and backend external to our protocol and payload specifications.
+In a centralised system it would be possible, although computationally and network intensive, to send a message to the originating phone to see if the other side of the contact was themselves seen. This would prevent relay attacks. This does suffer from the issue of 'one way detection', but in our [protocol](../protocol) this is minised thanks to the 'connect back' mechanism in use. This validation functionality would have to be built in to the app and backend external to our protocol and payload specifications.
 
 ### Fake Contact network and amplification attacks
 
@@ -94,7 +94,7 @@ Rotating the chirp every 15 minutes prevents long exposure a little. Using a sho
 
 It's worth rememberding that the receiving device (the same as the person who says they are ill) is the one calculating the RSSI and thus providing the distance estimator to the backend system (centralised or decentralised). This means they can 'fake' the RSSI. They can also fake the txpower in the received advertisement packet.
 
-Using a write instead of just advertisement data to provide a signed and played-back RSSI from the remote device would catch mismatches in RSSI and txpower data. This extra Bluetooth communication, however, will come at the cost of [higher continuity error](/paper) and for that reason we don't recommend it.
+Using a write instead of just advertisement data to provide a signed and played-back RSSI from the remote device would catch mismatches in RSSI and txpower data. This extra Bluetooth communication, however, will come at the cost of [higher continuity error](../paper) and for that reason we don't recommend it.
 
 It should be noted that in a decentralised system, a smaller time window means a much bigger list of chirps when a person becomes ill. This could pose a DDoS style network effect risk to a nation's mobile and internet networks.
 

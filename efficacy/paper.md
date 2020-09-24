@@ -22,7 +22,7 @@ It's currently undergoing review with the publisher. A link shall be placed here
 
 The resultant formula is below:-
 
-![Fair efficacy formula](/images/paper-measure-formula.png)
+![Fair efficacy formula](../images/paper-measure-formula.png)
 
 Where:-
 
@@ -75,7 +75,7 @@ exhibits some deliberate limitation could modify the observed risk.
 This then led us to create a formula that took in to account all limiting factors
 that a user of such a contact tracing app could encounter in a particular day.
 
-We then applied this formula to a brand new Bluetooth protocol called [Herald](/protocol).
+We then applied this formula to a brand new Bluetooth protocol called [Herald](../protocol).
 We were able to identify and rapidly tune this protocol in 5 weeks thanks to the presence
 of the fair efficacy formula, and approaching the problem in an epidemiologially data driven
 way.
@@ -96,7 +96,7 @@ what affects efficacy, and used the formula to test and measure its performance,
 and directed our efforts at the mechanisms that would provide most epidemiological
 advantage. 
 
-Our [protocol](/protocol) has therefore a high score on the measure,
+Our [protocol](../protocol) has therefore a high score on the measure,
 but that's because we've been using the formula and testing approach for longer.
 The formula wasn't designed to show our protocol in a good light. We would
 encourage all teams to apply our formula to their work and rapidly iterate to improve 
@@ -107,7 +107,7 @@ their own efficacy. This way more lives can be saved.
 The paper does mention some items out of scope of our research that others are 
 already working on, or where published material already exists. This includes:-
 
-- Converting distance analogue (E.g. RSSI in Bluetooth) to distance (Although we do mention some observations we have on [distance calibration](/bluetooth/distance))
+- Converting distance analogue (E.g. RSSI in Bluetooth) to distance (Although we do mention some observations we have on [distance calibration](../bluetooth/distance))
 - Anything outside of the mobile phone - We only deal with phone to phone communication in our measure - we do not deal with isolation efficacy or speed to isolation metrics
 - Any technology-specific variations - The measure is independent of any technology, although we often explain it in terms of Bluetooth because this is the predominant technology available today
 - Manipulation of multiple readings - We leave these discussions to those designing end to end
@@ -116,10 +116,10 @@ contact tracing systems. Mechanisms include local triangulation to get a more ac
 
 ## Data from the paper
 
-The synthetic data and calculations used in the paper can be found in the [Synthetic Data Spreadsheet (ODS)](/documents/protocols-paper-synthetic-data.ods)
+The synthetic data and calculations used in the paper can be found in the [Synthetic Data Spreadsheet (ODS)](../documents/protocols-paper-synthetic-data.ods)
 
 ## Follow on work
 
 From the paper: "Now a low-level protocol that works across a large range of devices exists in the Herald protocol, the author aims to suggest a payload to transfer over this protocol that allows for its use in either a centralised or decentralised contact tracing application. This will provide international interoperability whilst allowing local jurisdictions to tailor their approach to one acceptable by its residents."
 
-We also believe that more work needs to be done to ensure that any [RSSI to distance estimation formulae](/bluetooth/distance) takes account of the fact that some phone pairings appear to use a log-distance approach to scale their RSSI values, whereas others use an inverse-distance-squared approach. This leads to inaccuracies around the 2.5m mark.
+We also believe that more work needs to be done to ensure that any [RSSI to distance estimation formulae](../bluetooth/distance) takes account of the fact that some phone pairings appear to use a log-distance approach to scale their RSSI values, whereas others use an inverse-distance-squared approach. This leads to inaccuracies around the 2.5m mark.

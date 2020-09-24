@@ -56,7 +56,7 @@ Thus whilst much of the public debate has centred on the simplified 'single risk
 
 ## Proximity Detection Protocol
 
-This is a protocol designed to enable two mobile devices in possession of a person to detect, identify, and record data useful for distance estimation and thus later risk score calculation. We may refer to just 'protocol' in this paper. It is the underlying protocol and not the application built on it. Examples include The Google-Apple protocol (aka Gapple or GAEN) or the new [protocol](/protocol) defined by ourselves.
+This is a protocol designed to enable two mobile devices in possession of a person to detect, identify, and record data useful for distance estimation and thus later risk score calculation. We may refer to just 'protocol' in this paper. It is the underlying protocol and not the application built on it. Examples include The Google-Apple protocol (aka Gapple or GAEN) or the new [protocol](../protocol) defined by ourselves.
 
 ## Contact Tracing
 

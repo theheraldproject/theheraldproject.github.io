@@ -10,11 +10,11 @@ menubar: docs_menu
 
 # DRAFT Contact Tracing Secure inner Payload
 
-This example of an [inner payload](/payload/inner) that is designed to work exclusively with
-the [Herald envelope payload](/payload/envelope) provides additional security and privacy
-guarantees over and above the [Herald simple inner payload](/payload/simple) example.
+This example of an [inner payload](../payload/inner) that is designed to work exclusively with
+the [Herald envelope payload](../payload/envelope) provides additional security and privacy
+guarantees over and above the [Herald simple inner payload](../payload/simple) example.
 
-![Secured payload data](/images/PayloadSecured.png)
+![Secured payload data](../images/PayloadSecured.png)
 
 This payload was driven by two somewhat competing desires:-
 
@@ -70,7 +70,7 @@ Identity information is managed as follows:-
 
 ## Who knows what, and when?
 
-The [Transmitting](/background/glossary) phone know:-
+The [Transmitting](../background/glossary) phone know:-
 
 - It's own master identity symmetric key/UUID (Agreed via Diffie-Hellman-Merkle with healthcare central system)
 - It's health authorities public key for any given day
@@ -81,7 +81,7 @@ The [Transmitting](/background/glossary) phone know:-
 - It's own phone make and model identifier string
 - The receiver's ephemeral public key for this single exchange
 
-The [Receiving](/background/glossary) phone knows:-
+The [Receiving](../background/glossary) phone knows:-
 
 - The transmitter's ephemeral public key
 - The transmitter provided exposure service token for the transmitter's health authority, which it cannot decrypt, secured with the daily server public key, which includes:-
@@ -167,7 +167,7 @@ state actor it cannot be manipulated to cause the exposure of incorrect or targe
 
 Availability - Yes. Bluetooth provides built in CRC checks of data, so by the time Herald sees the data it has already been validated. Supporting both read
 and write approaches to Bluetooth data exchange ensures the maximum support of mobile phones, as some phones can discover and read and write from others,
-but not be discoverable and readable/writable themselves (~35% of Android phones in the UK do not support advertising [[21]](/paper/bibliography#a-21)).
+but not be discoverable and readable/writable themselves (~35% of Android phones in the UK do not support advertising [[21]](../paper/bibliography#a-21)).
 
 Non-repudiation - Yes. The original transmitter can verify that the exposure token was from the exact phone they communicated with and that their
 data was decrypted and interpreted by their own health authority, and that the time of the contact is valid. All three participants (Transmitter, Receiver, Transmitter's health authority)

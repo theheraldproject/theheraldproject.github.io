@@ -18,7 +18,7 @@ Contact Tracing and other applications to have regular and accurate information 
 
 Herald provides a solution to the following epidemiological problems:-
 
-![Herald epidemiological solutions](/images/EstimationBenefits.png)
+![Herald epidemiological solutions](../images/EstimationBenefits.png)
 
 ## Features
 
@@ -28,11 +28,11 @@ Herald provides a solution to the following epidemiological problems:-
 
 ## Latest blog posts
 
-The last news can be found in our [blog](./blog).
+The last news can be found in our [blog](../blog).
 
 ## Documentation
 
-We have a large section on [Development & Integration](/docs).
+We have a large section on [Development & Integration](../docs).
 
 ## Thanks
 

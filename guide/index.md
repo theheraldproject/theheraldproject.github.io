@@ -12,23 +12,23 @@ menubar: docs_menu
 
 This section describes how to integrate Herald in to your own applications.
 
-Below is a set of options for using the [Herald Protocol](/protocol) in both a Contact Tracing application, or a custom
+Below is a set of options for using the [Herald Protocol](../protocol) in both a Contact Tracing application, or a custom
 commercial application.
 
-![Protocol and Payload layers diagram](/images/ProtocolStack.png)
+![Protocol and Payload layers diagram](../images/ProtocolStack.png)
 
-With Herald you can use our suggested full or header [payloads](/payload), or an entirely custom payload:-
+With Herald you can use our suggested full or header [payloads](../payload), or an entirely custom payload:-
 
-![Herald Payload Contents](/images/Payloads.png)
+![Herald Payload Contents](../images/Payloads.png)
 
 ## Herald protocol integration
 
-Please see the [Herald protocol integration guid (PDF)](/documents/IntegrationGuide.pdf) file for integrating
+Please see the [Herald protocol integration guid (PDF)](../documents/IntegrationGuide.pdf) file for integrating
 the Herald protocol in to your nation's contact tracing application.
 
 ## Detailed design information
 
-Please see the [Herald design document (pdf)](/documents/ProximityDetectionSolutionDesign.pdf) file
+Please see the [Herald design document (pdf)](../documents/ProximityDetectionSolutionDesign.pdf) file
 for detailed implementation design details about how the Herald protocol works.
 
 ## Herald protocol formal specification
