@@ -25,7 +25,7 @@ identifiers these phones maintain a virtual, and pseudoanonymous, list of your c
 
 Below is a diagram showing elements of a contact tracing system beyond just the app:-
 
-![Contact Tracing System](/images/CTSystem.png)
+![Contact Tracing System](../images/CTSystem.png)
 
 ## Benefits of mobile contact tracing
 
