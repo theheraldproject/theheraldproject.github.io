@@ -15,7 +15,7 @@ using our Fair Efficacy Measure.
 
 Note: The theoretical max efficacy in the UK given our phone mix, and perfect radio conditions, is 76.39%.
 
-The Ferretti et al paper [[6]](/paper/bibliography#a-6) shows a 'same day' efficacy requirement of 50%,
+The Ferretti et al paper [[6]](../paper/bibliography#a-6) shows a 'same day' efficacy requirement of 50%,
 with an error range between 30 and 60%. This assumes a 90% effective lockdown of ill people. 
 Thus in our paper we call:-
 

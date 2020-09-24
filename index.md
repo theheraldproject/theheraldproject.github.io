@@ -22,7 +22,7 @@ Herald provides a solution to the following epidemiological problems:-
 
 ## Features
 
-|<b>Detect nearby phones</b>|100% detection of phones in the foreground and background across iOS and Android devices. Herald supports the 35% (in the UK) of Android phones that cannot act as  advertisers' and so remain unseen by advertising-only based protocols.|
+|<b>Detect nearby phones</b>|100% detection of phones in the foreground and background across iOS and Android devices. Herald supports 100% of the phones in the UK that support advertising, as well as the 35% of Android phones that cannot act as 'advertisers' and so remain unseen by advertising-only based protocols.|
 |<b>Provide regular distance readings</b>|Herald performs distance estimations every few seconds, with higher frequency on modern phones. This allows for a more accurate data and risk picture over time. Maximum frequency can be configured to optimise battery use. At ~4s per reading battery use is 6-11% over 8 hours, depending on the age of the phone and its battery capacity.|
 |<b>Interoperate internationally</b>|By providing a common packet header we allow for international interoperability amongst all contact tracing applications, whether designed for centralised or decentralised contact matching and risk scoring.|
 
