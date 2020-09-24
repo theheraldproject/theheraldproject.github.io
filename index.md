@@ -14,7 +14,7 @@ Contact Tracing and other applications to have regular and accurate information 
 
 |Wide Phone Support|Easy to integrate|Flexible|
 |---|---|---|
-|95% of phones worldwide can use the Herald Protocol|Provide a few callbacks to the Herald API and integrate Herald to your app in minutes using your own payload|Does not restrict how people can use it, for contact tracing or any reliable Bluetooth communication|
+|97.5% of phones worldwide can use the Herald Protocol|Provide a few callbacks to the Herald API and integrate Herald to your app in minutes using your own payload|Does not restrict how people can use it, for contact tracing or any reliable Bluetooth communication|
 
 Herald provides a solution to the following epidemiological problems:-
 
