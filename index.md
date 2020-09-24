@@ -44,9 +44,10 @@ tracing to help save lives. ❤️
 
 ## License
 
-[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-This website is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-
-The code repositories for Herald (Android, iOS, Analysis Scripts, Calibration tool) are MIT licensed.
-
 All Herald works are Copyright 2020 VMware, Inc.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+The repositories for Herald (Herald, Android, iOS, Analysis Scripts, Calibration tool) are MIT licensed.
+
+See LICENSE.txt and NOTICE.txt for details.
