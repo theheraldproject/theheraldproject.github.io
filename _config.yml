@@ -29,8 +29,8 @@ twitter_username: adamfowleruk
 github_username:  adamfowleruk
 
 # Build settings
-theme: bulma-clean-theme 
-#remote_theme: chrisrhymes/bulma-clean-theme
+#theme: bulma-clean-theme 
+remote_theme: chrisrhymes/bulma-clean-theme
 plugins:
   - jekyll-feed
   - github-pages
