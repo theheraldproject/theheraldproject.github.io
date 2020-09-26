@@ -37,6 +37,12 @@ Note: All numeric data is big endian.
 ephemeral, private key (32 bytes) for the time period the outer envelope packet was generated in (allowing for local matching
 and verification)
 
+## Who knows what, and when?
+
+Below is a visual representation of what each phone and health authority knows:-
+
+![Simple contact graph information](../images/PayloadSimpleGraph.png)
+
 ## Security analysis - CIA
 
 Below is a simple security summary.
