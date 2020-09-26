@@ -70,6 +70,12 @@ Identity information is managed as follows:-
 
 ## Who knows what, and when?
 
+Below is a visual representation of what each phone and health authority knows:-
+
+![Secured contact graph information](../images/PayloadSecuredGraph.png)
+
+The detailed explanation is below:-
+
 The [Transmitting](../background/glossary) phone know:-
 
 - It's own master identity symmetric key/UUID (Agreed via Diffie-Hellman-Merkle with healthcare central system)
@@ -103,9 +109,9 @@ The Receiver's health authority knows, from the receiver:-
 - The transmitter's exposure service token, for this receiver at this time, which it cannot decrypt
 - The transmitter's exposure confirmation token, for this receiver at this time, which it cannot decrypt
 - The transmitter's country and state codes (allowing passing of exposure data to this health authority)
-- The date or datetime of the contact as observed by the receiver (optional, depends on receiver's app)
+- The date (and potentially time - NOT recommended) of the contact as observed by the receiver (optional, depends on receiver's app configuration)
 - Optionally (but NOT recommended - here in case of a bad actor country using the payload) the transmitter's ephemeral public key as observed by the receiver, which is why this should be rotated per contact
-- datetime of contact and its distance RSSI info
+- Date of contact and its distance RSSI info
 
 The transmitter's health authority is told by the receiver's health authority:-
 
@@ -120,7 +126,7 @@ The transmitter's health authority is told by the receiver's health authority:-
 The transmitter's health authority posts the below to all phones it manages (MUST BE WITHIN 30 MINUTES):-
 
 - Transmitter's exposure confirmation token
-- Datetime of start of contact event
+- Date of the contact event
 - Risk accrued score associated with it
 - TOTP token for the transmitter's persistent UUID
 - Date time this data was posted
@@ -135,15 +141,17 @@ The transmitter can now:-
 - Notify it's health authority that they have breached the risk threshold, ideally not immediately after receiving the latest exposures keys (MUST be within 3hrs 30 mins, and should take the posting date time in to account)
   - May also share the person's total risk score for the last 7-14 days
 
-Other receiving phones receive:-
+Other receiving phones receive from the exposure download list:-
 
+- Date and time the exposure list was last updated
 - Transmitter's exposure confirmation token, which it cannot decrypt
-- Contact event start date time
-- Risk score for this unknown pair of people in the contact event
+- Contact event date
+- Risk score for this unknown transmitter in the contact event
 - TOTP token for the transmitter's persistent UUID, which it cannot use as it doesn't know the associated transmitter persistent UUID
 
 A random bluetooth sniffer sees:-
 
+- Date and time the transmission was intercepted
 - Ephemeral public keys for receiver and transmitter, which it cannot use as it doesn't have the private keys
 - Encrypted data exchanges between the two phones, including the health exposure service token and exposure confirmation token, which it cannot decrypt
 - Country and State code for receiver and transmitter
