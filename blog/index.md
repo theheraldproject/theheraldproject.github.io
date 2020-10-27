@@ -8,17 +8,19 @@ description: Latest news blog
 permalink: blog
 ---
 
-# Recent posts
+<div class="content">
 
+<h1>Recent posts</h1>
 
 <ul>
   {% for post in site.posts %}
     <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      by <a href="https://github.com/{{post.author}}">{{post.author}}</a><br><br>
+      <h2><a href="/herald{{ post.url }}">{{ post.title }}</a></h2>
+      by <a target="_new" href="https://github.com/{{post.author}}">{{post.author}}</a><br><br>
 
       {{ post.excerpt }}
     </li>
   {% endfor %}
 </ul>
 
+</div>
