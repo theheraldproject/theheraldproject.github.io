@@ -24,7 +24,7 @@ author: Herald Authors
 description: >- # this means to ignore newlines until "baseurl:"
   The home for our research in to low level mobile phone Bluetooth
   capabilities, issues, workarounds, and testing.
-#baseurl: "/herald" # the subpath of your site, e.g. /blog
+baseurl: "/herald" # the subpath of your site, e.g. /blog
 #url: "https://vmware.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 logo: herald.svg
 vm_logo: vm-logo.png
