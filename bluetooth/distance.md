@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: page
+layout: docs
 title: Bluetooth Distance Estimation
 description: Distance Estimation research
 toc: true
@@ -63,8 +63,8 @@ This has two implications:-
 - The appropriate distance conversion approach cannot be determine from calibration of a phone at a single distance - it must use several distances to determine the correct regression approach
   - This in turn dramatically increases the time taken to complete manual calibration in a radiation proof chamber. Alternative automated approaches should be considered.
   - This also likely means many current Bluetooth calibration readings used for distance estimation are invalid
-- A log(distance) algorithm such as Prof Dr Ing's [[2]](../paper/bibliography#a-2) approach to collecting calibration data cannot be solely relied upon, an equivalent process is needed for inverse square-distance too
-  - This in turn increases the difficulty of passing on ever changing calibration data and new formulae to mobile apps for local distance estimation rather than centralised risk estimation (currently used decentralised approaches) and local summation as per the [Herald secured payload](../payload/secured)
+- A log(distance) algorithm such as Prof Dr Ing's [[2]]({{"/efficacy/bibliography#a-2" | relative_url }}) approach to collecting calibration data cannot be solely relied upon, an equivalent process is needed for inverse square-distance too
+  - This in turn increases the difficulty of passing on ever changing calibration data and new formulae to mobile apps for local distance estimation rather than centralised risk estimation (currently used decentralised approaches) and local summation as per the [Herald secured payload]({{"/payload/secured" | relative_url }})
 
 ### Running mean of RSSI values in Bluetooth
 
@@ -110,7 +110,7 @@ where D is the estimated distance in meters and RSSI-MODE is the modal RSSI valu
 
 As per the chart the R value for the formula's fit was close to -1. This is no surprise as we are basing our regression on the mode rather than mean. The very small p value, however, indicates a good fit to the recorded test values.
 
-It should be noted that this function is only valid for these two iPhones used in the test. There was no standardisation or calibration for particular phone models done. The Fraunhofer Institute used a similar approach. Refer to Prof Dr Ing's paper [[2]](../paper/bibliography#a-2) . It uses a similar log estimation function but based on the mean RSSI value observed whilst generating pairwise phone calibration values rather than the mode.
+It should be noted that this function is only valid for these two iPhones used in the test. There was no standardisation or calibration for particular phone models done. The Fraunhofer Institute used a similar approach. Refer to Prof Dr Ing's paper [[2]]({{"/efficacy/bibliography#a-2" | relative_url }}) . It uses a similar log estimation function but based on the mean RSSI value observed whilst generating pairwise phone calibration values rather than the mode.
 
 We recommend an analysis is done in future study to see how many RSSI values would need to be read in quick succession to provide a reliable modal RSSI value close to a point in time in order to see if its use provides a better estimation function. It is possible, however, that research on probabilistic estimation functions has surpassed the accuracy of both the Fraunhofer and Fowler algorithms.
 

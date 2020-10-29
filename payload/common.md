@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: page
+layout: docs
 title: Herald common contact tracing header
 description: Common header data for contact tracing interoperability
 menubar: docs_menu
@@ -11,13 +11,13 @@ menubar: docs_menu
 # Common Herald Contact Tracing data
 
 Technically this header is part of the inner payload, but the data is common to both 
-the [Herald simple inner payload](../payload/simple) or 
-the [Herald secured payload](../payload/secured) and can even be used with your own
-contact tracing specific custom [Inner payload](../payload/inner)
+the [Herald simple inner payload]({{"/payload/simple" | relative_url }}) or 
+the [Herald secured payload]({{"/payload/secured" | relative_url }}) and can even be used with your own
+contact tracing specific custom [Inner payload]({{"/payload/inner" | relative_url }})
 
 ## What does the common header provide?
 
-The below information is appended to the [Herald Envelope payload](../payload/envelope):-
+The below information is appended to the [Herald Envelope payload]({{"/payload/envelope" | relative_url }}):-
 
 Note: All numbers are Big Endian (network order).
 
@@ -41,8 +41,8 @@ Note: All numbers are Big Endian (network order).
 
 ## How do I specify an inner payload?
 
-Implement the callbacks to provide a [custom inner payload](../payload/inner) data or use 
-the [Herald simple inner payload](../payload/simple) or the [Herald secured payload](/payload/secured).
+Implement the callbacks to provide a [custom inner payload]({{"/payload/inner" | relative_url }}) data or use 
+the [Herald simple inner payload]({{"/payload/simple" | relative_url }}) or the [Herald secured payload]({{"/payload/secured" | relative_url }}).
 
 ## How does international interoperability work?
 
@@ -64,8 +64,8 @@ Worked example (countries mentioned don't necessarily use the Herald protocol):-
     - Victoria state's health authority doesn't need to know the make and model of Jess' phone, as she's the one that is exposed
 - Victoria state's health authority confirms Natalie is ill, and sends "Hey, a person in my country fell ill on X date, and met someone for your country."
   - This includes the entire contact packet shared by Jess, including the time of receipt.
-  - This MAY optionally include 'exposure verifier' data, known only to Natalie and Jess' phones, allowing Jess' phone in a decentralised system, or the England health authority in a centralised system, to verify this data was sent by Jess and received by Natalie. (See the [Secured inner payload](../payload/secured) for an example approach)
+  - This MAY optionally include 'exposure verifier' data, known only to Natalie and Jess' phones, allowing Jess' phone in a decentralised system, or the England health authority in a centralised system, to verify this data was sent by Jess and received by Natalie. (See the [Secured inner payload]({{"/payload/secured" | relative_url }}) for an example approach)
 - England's state health authority processes the shared contact payload from Victoria state and notifies the user of the exposure if necessary (usually if it hits a notifiable threshold in a centralised system, or always notified in a decentralised one)
   - England Confirms the validity of the contact by verifying the inner packet provided by Jess' phone, and validating the signature of the whole packet
-  - In a centralised system, the ClientID would be associated with a particular unique ID, and so England would know it's a single person, Jess, exposed for 2 hours and thus needs notifying. If contact details are already known, a manual contact tracing team could make contact. Alternatively (or as well) a message could be sent to England's app on Jess' phone making her aware, given advice on self isolation and testing, and requesting she submit nearby contact details (See [Second order](../background/glossary) contact tracing as to why you'd do this before testing Jess)
+  - In a centralised system, the ClientID would be associated with a particular unique ID, and so England would know it's a single person, Jess, exposed for 2 hours and thus needs notifying. If contact details are already known, a manual contact tracing team could make contact. Alternatively (or as well) a message could be sent to England's app on Jess' phone making her aware, given advice on self isolation and testing, and requesting she submit nearby contact details (See [Second order]({{"/background/glossary" | relative_url }}) contact tracing as to why you'd do this before testing Jess)
   - In a decentralised system, the entire payload, or a decoded portion thereof, could be sent to all phones, and distance estimation and exposure could be calculated locally on Jess' phone. Ideally the inner payload would be linked via time (E.g. TOTP) to the client ID, the client ID would be predictable only by Jess' phone, and the inner payload verifies the time in an encrypted form, preventing replay and relay attacks

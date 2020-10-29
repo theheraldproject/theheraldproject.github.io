@@ -1,0 +1,242 @@
+---
+layout: default
+id: home
+description: Reliable mobile Bluetooth
+backgrounds:
+  case_study: green
+  team: dark-blue
+hero:
+  banner: /img/heroes/herald.png
+  headline: Reliable mobile Bluetooth
+  content: Herald provides reliable Bluetooth communication and range finding across a wide range of mobile devices, allowing Contact Tracing and other applications to have regular and accurate information to make them highly effective.
+  cta_link1:
+    text: Get Started with Herald
+    url: /docs
+  cta_link2:
+    text: Download iOS Release
+    url: https://github.com/vmware/herald-for-ios
+  cta_link3:
+    text: Download Android Release
+    url: https://github.com/vmware/herald-for-android
+  promo1:
+    icon: /img/testing-icon.svg
+    #url: http://www.example.com?box1
+    title:  Wide phone support
+    content: 97.5% of phones worldwide can use the Herald Protocol
+  promo2:
+    icon: /img/debug-icon.svg
+    #url: http://www.example.com?box2
+    title:  Easy to integrate
+    content: Provide a few callbacks to the Herald API and integrate Herald to your app in minutes using your own payload
+  promo3:
+    icon: /img/test-icon.svg
+    #url: http://www.example.com?box3
+    title: Flexible
+    content: Does not restrict how people can use it, for contact tracing or any reliable Bluetooth communication
+secondary_ctas:
+  cta1:
+    title: Measuring Bluetooth efficacy
+    url: /efficacy/
+    content: Read an overview of how efficacy for contact tracing can be assessed
+  cta2:
+    title: Learn how Herald is used for custom Bluetooth mobile apps
+    url: /payloads/custom
+    content: Learn how to create your own mobile app using Herald
+#reference:
+#  title: Getting Herald
+#  content: Lorem ipsum dolor sit amet....
+#  links: 
+#    ISO: http://www.example.com
+#    OVA: http://www.example.com
+#    Amazon Machine Image: http://www.example.com
+#    Google Compute Engine Image: http://www.example.com
+#    Azure VHD: http://www.example.com
+---
+<div class="home-hero bg-color-{{ site.hero.background-color }}" style="background-image: url('{{ page.hero.banner }}')">
+  <div class="section">
+    <div class="section-content">
+      <div class="hero-content">
+        <h1 class="mb-3">{{ page.hero.headline }}</h1>
+        <p>{{ page.hero.content }}</p>        
+      </div>
+      <div class="hero-cta mt-4">
+        <a href="{{ page.hero.cta_link1.url }}" class="btn btn-primary mb-3 mb-sm-0">{{ page.hero.cta_link1.text }}</a>
+        <a href="{{ page.hero.cta_link2.url }}" class="btn btn-outline-light">{{ page.hero.cta_link2.text }}</a>
+        <a href="{{ page.hero.cta_link3.url }}" class="btn btn-outline-light">{{ page.hero.cta_link3.text }}</a>
+      </div>
+    </div>
+  </div>
+</div> <!-- /home-hero -->
+<div class="section section-card section-card-offset-top promo-cards">
+  <div class="section-content">
+    <div class="row">
+      <div class="col-md">
+        <div class="card card-light mb-3 mb-md-0 shadow-sm">
+          <div class="card-body match-height">
+            <figure>
+              <img src="{{ page.hero.promo1.icon }}" alt="{{ page.hero.promo1.title }}" />
+            </figure>
+            {% if page.hero.promo1.url.size > 0 %}
+            <h5><a href="{{ page.hero.promo1.url }}" class="dark">{{ page.hero.promo1.title }}</a></h5>
+            {% else %}
+            <h5>{{ page.hero.promo1.title }}</h5>
+            {% endif %}
+            <p>{{ page.hero.promo1.content }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card card-light mb-3 mb-md-0 shadow-sm">
+          <div class="card-body match-height">
+            <figure>
+              <img src="{{ page.hero.promo2.icon }}" alt="{{ page.hero.promo2.title }}" />
+            </figure>
+            {% if page.hero.promo2.url.size > 0 %}
+            <h5><a href="{{ page.hero.promo2.url }}" class="dark">{{ page.hero.promo2.title }}</a></h5>
+            {% else %}
+            <h5>{{ page.hero.promo2.title }}</h5>
+            {% endif %}
+            <p>{{ page.hero.promo2.content }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card card-light mb-3 mb-md-0 shadow-sm">
+          <div class="card-body match-height">
+            <figure>
+              <img src="{{ page.hero.promo3.icon }}" alt="{{ page.hero.promo3.title }}" />
+            </figure>
+            {% if page.hero.promo3.url.size > 0 %}
+            <h5><a href="{{ page.hero.promo3.url }}" class="dark">{{ page.hero.promo3.title }}</a></h5>
+            {% else %}
+            <h5>{{ page.hero.promo3.title }}</h5>
+            {% endif %}
+            <p>{{ page.hero.promo3.content }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="section section-grey">
+  <div class="section-content">
+    <div class="row bg-grey">
+      <div class="col-sm-5 mb-3 mb-sm-0">
+        <h6 class="mb-1">
+          <a href="{{ page.secondary_ctas.cta1.url }}">{{ page.secondary_ctas.cta1.title }}</a>
+        </h6>
+        <p class="mb-0">{{ page.secondary_ctas.cta1.content }}</p>
+      </div>
+      <div class="col-sm-5 offset-sm-2">
+        <h6 class="mb-1">
+          <a href="{{ page.secondary_ctas.cta2.url }}">{{ page.secondary_ctas.cta2.title }}</a>
+        </h6>
+        <p class="mb-0">{{ page.secondary_ctas.cta2.content }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+<div class="section pb-0">
+    <div class="section-content">
+      <div class="row">
+        <div class="col">
+          <h2 class="text-center">{{ page.reference.title }}</h2>
+          <p>{{ page.reference.content }}</p>
+  
+          <ul>
+            {% for link in page.reference.links %}
+            <li><a href="{{ link[1] }}">{{ link[0] }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+--> 
+
+<div class="section">
+  <div class="section-content">
+    <div class="row">
+      <div class="col">
+        <h2>Herald solves risk estimation problems</h2>
+      </div>          
+    </div>
+    <img src="images/EstimationBenefits.png" alt="Herald estimation benefits" style="width: 95%" />
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-content">
+    <div class="row">
+      <div class="col">
+        <h2>Features</h2>
+      </div>          
+    </div>
+    {% assign limit = 3 %}
+    {% include case-studies-alternating.html %}
+  </div>
+</div>
+
+<div class="section pt-3">
+  <div class="section-content">
+    <div class="row">
+      <div class="col">
+        <h2>Blog Highlights</h2>        
+      </div>
+    </div>
+    {% assign limit = 3 %}
+    {% include blog-posts.html %}
+    <div class="row pt-5">
+      <div class="col text-center">
+        <a href="/blog" class="btn btn-secondary btn-sm">See All Posts</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="section pt-3">
+  <div class="section-content">
+    <div class="row">
+      <div class="col">
+        <h2>Thanks</h2>        
+      </div>
+    </div>
+<p>
+A lot of work has gone in to mobile app based contact tracing protocol 
+research, design, testing and collaboration worldwide. We'd like to thank 
+all of those in VMware Pivotal Labs and elsewhere worldwide that have 
+assisted with various national and state governments to use mobile contact 
+tracing to help save lives. ❤️
+</p>
+  </div>
+</div>
+
+<div class="section pt-3">
+  <div class="section-content">
+    <div class="row">
+      <div class="col">
+        <h2>License</h2>        
+      </div>
+    </div>
+<p>
+
+All Herald works are Copyright 2020 Herald Authors.
+</p><p>
+<a href="https://opensource.org/licenses/MIT" target="_new"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT Licensed" /></a>
+</p><p>
+The repositories for Herald (Herald, Android, iOS, Analysis Scripts, Calibration tool) are MIT licensed.
+</p><p>
+See LICENSE.txt and NOTICE.txt for details.
+</p>
+  </div>
+</div>
+
+
+<div class="section section-background-{{ page.backgrounds.team }}">
+  <div class="section-content">
+    {% include contributors.html %}
+  </div>
+</div>

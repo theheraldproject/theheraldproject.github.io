@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: page
+layout: docs
 title: Authenticated association
 description: Kerberos style interoperable payload
 menubar: docs_menu

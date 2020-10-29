@@ -18,22 +18,66 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: VMware Herald Project
+title: Herald Project
 email: adamf@vmware.com
+author: Herald Authors
 description: >- # this means to ignore newlines until "baseurl:"
   The home for our research in to low level mobile phone Bluetooth
   capabilities, issues, workarounds, and testing.
-baseurl: "/herald" # the subpath of your site, e.g. /blog
-url: "https://vmware.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: adamfowleruk
-github_username:  adamfowleruk
+#baseurl: "/herald" # the subpath of your site, e.g. /blog
+#url: "https://vmware.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+logo: herald.svg
+vm_logo: vm-logo.png
+gh_repo: https://github.com/vmware/?q=herald
+markdown: redcarpet
+hero:
+  background-color: scheme-purple
+footer:
+  title: Getting Started
+  content: To help you get started, see the documentation.
+  cta_title:
+  cta_url: /docs
+  cta_text: Documentation
+  vm-link: http://vmware.github.io/
+
+footer_social_links:
+  Twitter:
+    fa_icon: fab fa-twitter
+    url: https://twitter.com/HeraldBluetooth
+  Slack:
+    fa_icon: fab fa-slack
+    url: https://herald-bluetooth.slack.com/
+  RSS:
+    fa_icon: fa fa-rss
+    url: feed.xml
+  GitHub:
+    fa_icon: fab fa-github
+    url: https://github.com/vmware/?q=herald
+
+collections:
+  - contributors
+  - casestudies
 
 # Build settings
 #theme: bulma-clean-theme 
-remote_theme: chrisrhymes/bulma-clean-theme
+#remote_theme: chrisrhymes/bulma-clean-theme
 plugins:
   - jekyll-feed
   - github-pages
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-relative-links # Used to auto generate md links to html links
+  - jekyll-optional-front-matter # Parse Markdown files that do not have front-matter callouts
+  - jekyll-readme-index # use README.md as index.html
+  - jekyll-titles-from-headings # pull the page title from the first Markdown heading when none is specified.
+  - jekyll-paginate # pagination object for collections (e.g. posts)
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+
+permalink: blog/:title
+sass:
+  sass_dir: css
+  style: :compressed
 
 # Blog properties
 paginate: 10
@@ -71,3 +115,6 @@ exclude:
   - .gitignore
   - code_of_conduct.md
   - contributing.md
+
+redcarpet:
+    extensions: ["no_intra_emphasis", "tables", "autolink", "strikethrough", "with_toc_data"]

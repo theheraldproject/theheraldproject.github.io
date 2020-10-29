@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: page
+layout: docs
 title: Efficacy Test Methods
 description: The methods we recommend as standard for our formula
 toc: true
@@ -13,7 +13,7 @@ menubar: efficacy_menu
 # Formal testing methods
 
 This section details the formal tests we used in order to validate the formula in
-[The Paper](../efficacy/paper)
+[The Paper]({{"/efficacy/paper" | relative_url }})
 
 In the end we determined you only needed to run the two required tests in order
 to get all the data you need, with a single long run of the office test the best

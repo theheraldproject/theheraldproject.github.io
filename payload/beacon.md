@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: page
+layout: docs
 title: DRAFT beacon payload
 description: A DRAFT payload specification for fixed beacons in restaurants
 menubar: docs_menu

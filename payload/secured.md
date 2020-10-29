@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: page
+layout: docs
 title: Herald secured inner payload
 description: Simple secured payload for contact tracing
 menubar: docs_menu
@@ -10,9 +10,9 @@ menubar: docs_menu
 
 # DRAFT Contact Tracing Secure inner Payload
 
-This example of an [inner payload](../payload/inner) that is designed to work exclusively with
-the [Herald envelope payload](../payload/envelope) provides additional security and privacy
-guarantees over and above the [Herald simple inner payload](../payload/simple) example.
+This example of an [inner payload]({{"/payload/inner" | relative_url }}) that is designed to work exclusively with
+the [Herald envelope payload]({{"/payload/envelope" | relative_url }}) provides additional security and privacy
+guarantees over and above the [Herald simple inner payload]({{"/payload/simple" | relative_url }}) example.
 
 ![Secured payload data](../images/PayloadSecured.png)
 
@@ -76,7 +76,7 @@ Below is a visual representation of what each phone and health authority knows:-
 
 The detailed explanation is below:-
 
-The [Transmitting](../background/glossary) phone know:-
+The [Transmitting]({{"/background/glossary" | relative_url }}) phone know:-
 
 - It's own master identity symmetric key/UUID (Agreed via Diffie-Hellman-Merkle with healthcare central system)
 - It's health authorities public key for any given day
@@ -87,7 +87,7 @@ The [Transmitting](../background/glossary) phone know:-
 - It's own phone make and model identifier string
 - The receiver's ephemeral public key for this single exchange
 
-The [Receiving](../background/glossary) phone knows:-
+The [Receiving]({{"/background/glossary" | relative_url }}) phone knows:-
 
 - The transmitter's ephemeral public key
 - The transmitter provided exposure service token for the transmitter's health authority, which it cannot decrypt, secured with the daily server public key, which includes:-

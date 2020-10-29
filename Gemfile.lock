@@ -9,12 +9,6 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    bulma-clean-theme (0.3)
-      jekyll (~> 3.8)
-      jekyll-feed (~> 0.11)
-      jekyll-paginate (~> 1.1)
-      jekyll-seo-tag (~> 2.5)
-      jekyll-sitemap (~> 1.2)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -225,6 +219,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redcarpet (3.5.0)
     rexml (3.2.4)
     rouge (3.19.0)
     ruby-enum (0.8.0)
@@ -258,10 +253,18 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bulma-clean-theme
   github-pages
-  jekyll-feed (~> 0.12)
+  jekyll-feed (~> 0.13.0)
+  jekyll-optional-front-matter (~> 0.3.2)
+  jekyll-paginate (~> 1.1)
+  jekyll-readme-index (~> 0.3.0)
+  jekyll-redirect-from (~> 0.15.0)
+  jekyll-relative-links (~> 0.6.1)
+  jekyll-seo-tag (~> 2.6, >= 2.6.1)
+  jekyll-sitemap (~> 1.4)
+  jekyll-titles-from-headings (~> 0.5.3)
   kramdown (>= 2.3.0)
+  redcarpet (~> 3.5)
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)

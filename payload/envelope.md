@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: page
+layout: docs
 title: Herald envelope payload
 description: Our privacy preserving and secure payload for sharing contact tracing data
 menubar: docs_menu
@@ -21,8 +21,8 @@ to implement.
 
 ![Herald Envelope Header](../images/PayloadEnvelope.png)
 
-We recommend each country use the Envelope protocol and embed their payload as an [Inner Payload](../payload/inner),
-but there's nothing stopping individual groups from creating their own [Outer payload](../payload/outer) if they wish.
+We recommend each country use the Envelope protocol and embed their payload as an [Inner Payload]({{"/payload/inner" | relative_url }}),
+but there's nothing stopping individual groups from creating their own [Outer payload]({{"/payload/outer" | relative_url }}) if they wish.
 Doing so though will prevent international interoperability between contact tracing apps and devices.
 
 ## What does the outer payload provide?
@@ -33,7 +33,7 @@ Note: All numbers are Big Endian (network order).
 
 - Read ID payload
   - Payload identifier and version - 4 byte unsigned integer - 0x00 for Herald envelope payload V1.0, up to 0x07, wrapping around for further versions (not part of the signature)
-  - Inner payload data - See the [common contact tracing header](../payload/common) for options for this content for contact tracing, or custom use cases
+  - Inner payload data - See the [common contact tracing header]({{"/payload/common" | relative_url }}) for options for this content for contact tracing, or custom use cases
 - Calling card / ID write payload
   - Same content as for Read ID payload 
 - Calling card / nearby devices read payload - most recent devices only
@@ -51,5 +51,5 @@ for the use of the Herald Project. You are free to use any other values.
 
 You do not need to register your protocol IDs with us so long as you use a different Bluetooth
 service UUID and characteristic UUID. If you wish to provide an extension to Herald, as we
-have done for our [beacon](../payload/beacon) payload, then please do let us know what
+have done for our [beacon]({{"/payload/beacon" | relative_url }}) payload, then please do let us know what
 range you are using.

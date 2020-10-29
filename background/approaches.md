@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: page
+layout: docs
 title: Technological approaches
 description: Technology approaches to contact tracing
 toc: true
@@ -41,7 +41,7 @@ See Second and Third degree methods below for enhancements.
 ## Extended approaches
 
 This are further approaches that can be used to increase effectiveness that are not common place.
- We have implemented all of these in our own [Protocol](../protocol).
+ We have implemented all of these in our own [Protocol]({{"/protocol" | relative_url }}).
 
 ### Write characteristic
 
@@ -51,7 +51,7 @@ a much lower continuity error, increasing accuracy, and reducing mean window tim
  seconds (minutes for some phones) to 0.5 - 4 seconds, depending on handset and number of 
  devices nearby.
 
-We there use a write characteristic wherever possible in [our own protocol](../protocol).
+We there use a write characteristic wherever possible in [our own protocol]({{"/protocol" | relative_url }}).
 
 Note: You have to use 'write and acknowledge' as iPhones do not support 'write without 
 acknoeldgement' when they act as 'peripherals' (advertisers) themselves.
@@ -82,7 +82,7 @@ distances.
 As an extension to this, the more phone B's you have the more accurate you can be. You could use
 multiple calling card readings to triangulate distance. In fact this approach could also make
 distance estimation more generally accurate for all phones if done as routine, overcoming
-some of the issues in [distance estimation](../bluetooth/distance) calculations.
+some of the issues in [distance estimation]({{"/bluetooth/distance" | relative_url }}) calculations.
 
 ### Custom Android timers
 

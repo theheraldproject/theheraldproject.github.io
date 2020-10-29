@@ -15,7 +15,15 @@ source "https://rubygems.org"
 gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  gem 'jekyll-feed', '~> 0.13.0'
+  gem 'jekyll-optional-front-matter', '~> 0.3.2'
+  gem 'jekyll-paginate', '~> 1.1'
+  gem 'jekyll-readme-index', '~> 0.3.0'
+  gem 'jekyll-redirect-from', '~> 0.15.0'
+  gem 'jekyll-relative-links', '~> 0.6.1'
+  gem 'jekyll-sitemap', '~> 1.4'
+  gem 'jekyll-titles-from-headings', '~> 0.5.3'
+  gem 'jekyll-seo-tag', '~> 2.6', '>= 2.6.1'
   gem 'github-pages'
 end
 
@@ -30,7 +38,9 @@ end
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 #gem 'bulma-clean-theme', '0.9'
-gem 'bulma-clean-theme'
+#gem 'bulma-clean-theme'
 
 # Security dependabot findings fixes:-
 gem "kramdown", ">= 2.3.0"
+
+gem 'redcarpet', '~> 3.5'

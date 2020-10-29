@@ -1,0 +1,20 @@
+<nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  {% assign toc = site.data[page.menubar] %}
+
+  {% for item in toc %}
+  <h5>{{ item.label }}</h5>
+  <ul>
+    {% for entry in item.items %}
+    <li>
+      {% if entry.github %}
+        <a href="{{ entry.url | prepend: page.gh }}" target="_blank">{{ entry.name }}</a>
+      {% else %}
+        <a href="{{ entry.link | relative_url }}">{{ entry.name }}</a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</nav>

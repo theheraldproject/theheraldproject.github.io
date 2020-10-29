@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: page
+layout: docs
 title: What is Contact Tracing?
 description: Background to contact tracing, proximity detection, and distance estimation
 menubar: docs_menu
@@ -18,7 +18,7 @@ What is new is using technology to perform Contact Tracing. A team from Cambridg
 did this for a Flu outbreak in the mid 2000s. This used an older version of Bluetooth
 which was power hungry and so was not more widely adopted at the time.
 
-In 2020 many worldwide teams are developing [Bluetooth Protocols](../protocol) to 
+In 2020 many worldwide teams are developing [Bluetooth Protocols]({{"/protocol" | relative_url }}) to 
 perform mobile app based contact tracing. This involves having an app running on your
 phone that is constantly talking to other nearby phones during the day. By swapping
 identifiers these phones maintain a virtual, and pseudoanonymous, list of your contacts.
@@ -74,14 +74,14 @@ contact tracing applications. Whether these are associated with any healthcare i
 or personal information is a decision best left to particular societies. 
 
 In our
-[Payload](../payload) specification we suggest a general payload that can be used for
+[Payload]({{"/payload" | relative_url }}) specification we suggest a general payload that can be used for
 both centralised and decentralised approaches, with or without linking to a healthcare
 identifier. This also supports international interoperability. Using such an approach
 will allow local countries to make their own decisions on where to draw the line
 whilst allowing for a maximal health response.
 
 Also clearly an issue is having a device that is capable of running a particular
-protocol. Our [Protocol](../protocol) supports 97.5% of the population and the handsets
+protocol. Our [Protocol]({{"/protocol" | relative_url }}) supports 97.5% of the population and the handsets
 they use. Other protocols relies on particular technologies, or mobile operating system
 versions, that greatly reduce this reach by 30%.
 
@@ -89,7 +89,7 @@ Also anything electronic has battery life issues. Bluetooth Low Energy since Jun
 has much lower battery use. It's important to take regular
 distance estimations in a contact tracing app, but also to not do so often
 enough to run the battery down. A full day needs to be supported. 
-[Our protocol](../protocol) has been shown to only drain the battery by 6-11% over
+[Our protocol]({{"/protocol" | relative_url }}) has been shown to only drain the battery by 6-11% over
 an 8 hour day. That's less battery use than WhatsApp on your phone!
 
 Western countries like the UK have a population where 98% of people own a 
@@ -168,7 +168,7 @@ A centralised system allows all of the above problems to be countered.
 It is up to individual governments to decide which level of risk is more of
 an issue to their populations.
 
-Our suggested [Herald Secure payload](../payload/secured) strikes a middle
+Our suggested [Herald Secure payload]({{"/payload/secured" | relative_url }}) strikes a middle
 ground here, providing a predictable ID and graph to the state, but with only
 one side of the contact graph shared. (When the ill person submits their data)
 This approach also counters spoofing, relay, and replay attacks and is more
@@ -190,11 +190,11 @@ and using this to calculated the risk of others' exposure to this person,
 and providing advice for them to take (E.g. isolation and testing)
 
 The first two points are generally grouped and called 'Proximity Detection'
-and are the purvue of the [Herald Protocol](../protocol) and [Payload](../payload)
+and are the purvue of the [Herald Protocol]({{"/protocol" | relative_url }}) and [Payload]({{"/payload" | relative_url }})
 of a particular Proximity Detection Protocol.
 
 Distance estimation has been out of scope of our research, but we have
-made [some distance estimation discoveries](../bluetooth/distance).
+made [some distance estimation discoveries]({{"/bluetooth/distance" | relative_url }}).
 
 The final one, Tracing, and how it occurs is determined by the mobile
 contact tracing application using the protocol that is provided to a

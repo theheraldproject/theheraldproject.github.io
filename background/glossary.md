@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: page
+layout: docs
 title: Contact Tracing glossary
 description: Demystifying technical terminology
 toc: true
@@ -52,11 +52,11 @@ An appropriate analogy here is helpful to understand accrued risk. Consider a nu
 
 The time the person must take action to preserve their health is not dependent upon a singly 'risky' event, but rather every event whether it be many low risk events or a single very risky event. The exposure accrued in total is what a corrective health action is based on, and not a 'single risky contact'.
 
-Thus whilst much of the public debate has centred on the simplified 'single risky contact' advise, an application which solely relies on this will discount the accrued risk over time, potentially leading people to accumulate much more risk, and thus viral load, before corrective action is advised or taken - if ever advised. In this paper we do not consider 'single risky events' as they are a poor model when compared to real world epidemiology. This accrued model of risk scoring calculation is discussed in detail in other papers[2]. Thus our discussion on accrued risk may differ from the original protocol authors' explanations of their own protocols, but for good reason, as the above definition represents the reality of disease exposure.
+Thus whilst much of the public debate has centred on the simplified 'single risky contact' advise, an application which solely relies on this will discount the accrued risk over time, potentially leading people to accumulate much more risk, and thus viral load, before corrective action is advised or taken - if ever advised. In this paper we do not consider 'single risky events' as they are a poor model when compared to real world epidemiology. This accrued model of risk scoring calculation is discussed in detail in other papers[2]({{"/efficacy/bibliography#a-2" | relative_url }}). Thus our discussion on accrued risk may differ from the original protocol authors' explanations of their own protocols, but for good reason, as the above definition represents the reality of disease exposure.
 
 ## Proximity Detection Protocol
 
-This is a protocol designed to enable two mobile devices in possession of a person to detect, identify, and record data useful for distance estimation and thus later risk score calculation. We may refer to just 'protocol' in this paper. It is the underlying protocol and not the application built on it. Examples include The Google-Apple protocol (aka Gapple or GAEN) or the new [protocol](../protocol) defined by ourselves.
+This is a protocol designed to enable two mobile devices in possession of a person to detect, identify, and record data useful for distance estimation and thus later risk score calculation. We may refer to just 'protocol' in this paper. It is the underlying protocol and not the application built on it. Examples include The Google-Apple protocol (aka Gapple or GAEN) or the new [protocol]({{"/protocol" | relative_url }}) defined by ourselves.
 
 ## Contact Tracing
 

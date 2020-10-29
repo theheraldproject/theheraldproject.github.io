@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: page
+layout: docs
 title: Herald payload design
 description: Our privacy preserving and secure payload for slowing disease spread
 menubar: docs_menu
@@ -15,7 +15,7 @@ The payload can also include cryptographic information that allows detection and
 prevention of Relay and Replay attacks, and prevent misuse of mobile contact
 tracing by mischievous individuals or hostile state actors.
 
-Whilst our [Protocol](../protocol) allows you to use any payload you wish, we are
+Whilst our [Protocol]({{"/protocol" | relative_url }}) allows you to use any payload you wish, we are
 suggesting the below envelope payload in order to maximise international
 interoperability and security.
 
@@ -27,11 +27,11 @@ two contact tracing example payloads:-
 
 ## Payload options
 
-We provide a recommended [Herald Envelope header](../payload/envelope) that allows
+We provide a recommended [Herald Envelope header]({{"/payload/envelope" | relative_url }}) that allows
 international interoperability between any app, centralised or decentralised,
 whether for contact tracing or other uses.
 
-We are working on a DRAFT [Herald Secured inner payload](../payload/secured) as the inner payload
+We are working on a DRAFT [Herald Secured inner payload]({{"/payload/secured" | relative_url }}) as the inner payload
 as this provides maximum epidemiological information to the health authority whilst
 maintaining privacy by keeping the contact event 'node' identified from the contact
 graph on individuals' mobile phones only.
@@ -42,14 +42,14 @@ Benefits of our secure payload include:-
 - Allows for international interoperability
 - Lightweight, and supports a range of phones, including older ones
 
-We also provide a simpler [Herald Simple inner payload](../payload/simple) for basic
+We also provide a simpler [Herald Simple inner payload]({{"/payload/simple" | relative_url }}) for basic
 decentralised contact tracing.
 
-You are, of course, free to use your own [Herald-compatible Custom inner payload](../payload/inner)
-or roll your own [Custom payload](../payload/outer) entirely 
+You are, of course, free to use your own [Herald-compatible Custom inner payload]({{"/payload/inner" | relative_url }})
+or roll your own [Custom payload]({{"/payload/outer" | relative_url }}) entirely 
 (especially if you are not writing a contact tracing app!)
 
-We are also working on a [Beacon Payload](../payload/beacon) for use in Stores and Restaurants or areas of environmental exposure (E.g. gas, chemicals). Please 
+We are also working on a [Beacon Payload]({{"/payload/beacon" | relative_url }}) for use in Stores and Restaurants or areas of environmental exposure (E.g. gas, chemicals). Please 
 [log an issue on GitHub](https://github.com/vmware/herald/issues) if you are interested in this.
 
 ## What every payload must support

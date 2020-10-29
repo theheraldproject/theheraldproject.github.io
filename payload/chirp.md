@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: page
+layout: docs
 title: Chirp Payload Option
 description: Chirp style interoperable payload
 menubar: docs_menu
@@ -94,7 +94,7 @@ Rotating the chirp every 15 minutes prevents long exposure a little. Using a sho
 
 It's worth rememberding that the receiving device (the same as the person who says they are ill) is the one calculating the RSSI and thus providing the distance estimator to the backend system (centralised or decentralised). This means they can 'fake' the RSSI. They can also fake the txpower in the received advertisement packet.
 
-Using a write instead of just advertisement data to provide a signed and played-back RSSI from the remote device would catch mismatches in RSSI and txpower data. This extra Bluetooth communication, however, will come at the cost of [higher continuity error](../paper) and for that reason we don't recommend it.
+Using a write instead of just advertisement data to provide a signed and played-back RSSI from the remote device would catch mismatches in RSSI and txpower data. This extra Bluetooth communication, however, will come at the cost of [higher continuity error]({{"/efficacy/paper" | relative_url }}) and for that reason we don't recommend it.
 
 It should be noted that in a decentralised system, a smaller time window means a much bigger list of chirps when a person becomes ill. This could pose a DDoS style network effect risk to a nation's mobile and internet networks.
 

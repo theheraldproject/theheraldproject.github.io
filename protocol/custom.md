@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: page
+layout: docs
 title: Herald protocol - custom uses
 description: Other uses for the Herald protocol
 menubar: docs_menu
@@ -40,7 +40,7 @@ It's a pretty simple process:-
 - Set your security information
   - Cryptographic material for ClientID rotation
   - Cryptographic public/private key for secure data exchange (optional)
-- Provide your own [Outer Payload](../payload/outer) callbacks to allow data exchange
+- Provide your own [Outer Payload]({{"/payload/outer" | relative_url }}) callbacks to allow data exchange
   - Given a nearby ID and distance information, what do you want to share with them?
   - Allow passing data via a nearby device (Calling card - useful to workaround certain phone limitations/bugs) (optional)
 - Implement necessary callbacks to receive shared data in your app
