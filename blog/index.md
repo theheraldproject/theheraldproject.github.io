@@ -15,7 +15,7 @@ permalink: blog
 <div>
   {% for post in site.posts %}
       <div>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <h2><a href="/herald/{{ post.url }}">{{ post.title }}</a></h2>
       <div class="post-single-meta-author">
         {% if post.author_avatar %}
         <div class="post-single-meta-author-avatar">

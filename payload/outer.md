@@ -10,7 +10,7 @@ menubar: docs_menu
 
 # Custom outer payloads
 
-If you have implemented a [Commercial application]({{"/protocol/commercial" | relative_url }}) using the Herald protocol
+If you have implemented a [Custom application]({{"/protocol/custom" | relative_url }}) using the Herald protocol
 then you may wish to completely change what data is passed between devices.
 
 The [Herald Envelope Payload]({{"/payload/envelope" | relative_url }}) is an example of such a payload.
@@ -33,7 +33,7 @@ approach.
 ## Interoperability
 
 Because your payload is completely custom, do not forget to use your own Service and Characteristic UUIDs
-for the Herald Protocol. This is described on the [Commercial Protocol]({{"/protocol/commercial" | relative_url }}) page.
+for the Herald Protocol. This is described on the [Custom Protocol]({{"/protocol/custom" | relative_url }}) page.
 
 Doing this will stop your app interfering with others' apps, and prevent those apps from interfering with
 yours.

@@ -28,13 +28,13 @@
                 </ul>
             </div>
             <div class="col-12 col-md-7 text-center text-md-right">
-              <a href="/" aria-label="Herald homepage" ><img src="/img/{{ site.logo }}" class="logo" alt="Homepage" /></a>
+              <a href="/herald/" aria-label="Herald homepage" ><img src="{{ site.logo }}" class="logo" alt="Homepage" /></a>
             </div>
         </div>
         <div class="row align-items-center">
           <div class="col copyright text-center text-md-right mt-4">
             &copy; {{ site.time | date: '%Y' }} {{ site.author }}.
-            <a href="{{ site.footer.vm-link }}" class="vm-logo">A VMware-backed project. <img src="/img/{{ site.vm_logo }}" alt="VMware logo" /></a>
+            <a href="{{ site.footer.vm-link }}" class="vm-logo">A VMware-backed project. <img src="{{ site.vm_logo }}" alt="VMware logo" /></a>
           </div>
         </div>
     </div>
@@ -50,5 +50,5 @@
     crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
-<script src="/js/jquery.matchHeight.js?{{site.time | date: '%s%N'}}"></script>
-<script src="/js/scripts.js?{{site.time | date: '%s%N'}}"></script>
+<script src="/herald/js/jquery.matchHeight.js?{{site.time | date: '%s%N'}}"></script>
+<script src="/herald/js/scripts.js?{{site.time | date: '%s%N'}}"></script>

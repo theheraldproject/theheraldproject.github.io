@@ -25,18 +25,18 @@ description: >- # this means to ignore newlines until "baseurl:"
   The home for our research in to low level mobile phone Bluetooth
   capabilities, issues, workarounds, and testing.
 baseurl: "/herald" # the subpath of your site, e.g. /blog
-#url: "https://vmware.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-logo: herald.svg
-vm_logo: vm-logo.png
+url: "https://vmware.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+logo: /herald/img/herald.png
+vm_logo: /herald/img/vm-logo.png
 gh_repo: https://github.com/vmware/?q=herald
-markdown: redcarpet
+#markdown: redcarpet
 hero:
   background-color: scheme-purple
 footer:
   title: Getting Started
   content: To help you get started, see the documentation.
   cta_title:
-  cta_url: /docs
+  cta_url: /herald/docs
   cta_text: Documentation
   vm-link: http://vmware.github.io/
 
@@ -81,7 +81,7 @@ sass:
 
 # Blog properties
 paginate: 10
-paginate_path: "/blog/page:num"
+paginate_path: "/herald/blog/page:num"
 
 # Site defaults
 defaults:
@@ -116,5 +116,5 @@ exclude:
   - code_of_conduct.md
   - contributing.md
 
-redcarpet:
-    extensions: ["no_intra_emphasis", "tables", "autolink", "strikethrough", "with_toc_data"]
+#redcarpet:
+#    extensions: ["no_intra_emphasis", "tables", "autolink", "strikethrough", "with_toc_data"]
