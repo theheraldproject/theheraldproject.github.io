@@ -31,7 +31,7 @@ vm_logo: /herald/img/vm-logo.png
 gh_repo: https://github.com/vmware/?q=herald
 #markdown: redcarpet
 hero:
-  background-color: scheme-purple
+  background-color: med-blue
 footer:
   title: Getting Started
   content: To help you get started, see the documentation.
