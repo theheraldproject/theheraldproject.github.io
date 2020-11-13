@@ -16,7 +16,7 @@ segments of any contact event.
 
 ## Where can I get the paper?
 
-It's currently undergoing review with the publisher. A link shall be placed here once it is available.
+The paper is now available on medRxiv here: https://www.medrxiv.org/content/10.1101/2020.11.07.20227447v1
 
 ## The Fair Efficacy Formula
 
@@ -34,7 +34,7 @@ Where:-
   - Phardware - Those with hardware that supports the given protocol. Bluetooth Low Energy for the Herald Protocol. Other protocols have restrictions here. E.g. ~35% of Android phones do not support 'Bluetooth advertising' which means they cannot be detected by other phones. This is true of many other (non-Herald) bluetooth protocols for contact tracing
   - Psoftware - Any software restrictions artificially made by the protocols design. E.g. some common protocols only support the latest phone operating systems, or use cryptographic libraries that are not available on all phones. This limits their reach, especially in poorer parts of the world or even in the UK in certain poorer areas
 - Rdetection - Rate of basic detection (one-way) of phones during any given scenario. This is separate from Rcontinuity as in practical tests a non detected phone would not appear in the totality of phones in Rcontinuity, and so we include it separately.
-- Rcontinuity - The number of 30 second windows a distance estimation (RSSI reading for Bluetooth) ocurred (one-way). Choice of 30 seconds is described below.
+- Rcontinuity - The percentage of 30 second windows a distance estimation (RSSI reading for Bluetooth) ocurred (one-way). Choice of 30 seconds is described below.
 - Rlongevity - A protocol that gets worse over time must have this reflected. This is how the rate of detection varies between the first hour of an at least 8 hour test and the last hour. This will ensure people are protected for an entire normal working day without intervening to their phone's contact tracing app
 - Raccuracy - How accurate the distance analogue (E.g. RSSI) reading is at a short period of time at a known distance compared to how its analogue reading is over a long time. A measure of estimator accuracy especially relevant to when short periods of close distance (highest risk) occur. Does NOT include error rate of converting analogue to distance and performing a risk calculation - this is the same for all formulae, and so is left to other papers to define in Risk Accuracy (See the Turing paper on risk measurement)
 - Rcompleteness RT1 - How well a recorded set of data around the riskiest (nearest) point of a contact event fits actual exposure. Think of this logically (not numerically) as the first standard deviation around the mean risk exposure. Under the Oxford model the vast majority of risk is accrued at the nearest point of distance, and so this measure is used here. 
@@ -123,3 +123,16 @@ The synthetic data and calculations used in the paper can be found in the [Synth
 From the paper: "Now a low-level protocol that works across a large range of devices exists in the Herald protocol, the author aims to suggest a payload to transfer over this protocol that allows for its use in either a centralised or decentralised contact tracing application. This will provide international interoperability whilst allowing local jurisdictions to tailor their approach to one acceptable by its residents."
 
 We also believe that more work needs to be done to ensure that any [RSSI to distance estimation formulae]({{"/bluetooth/distance" | relative_url }}) takes account of the fact that some phone pairings appear to use a log-distance approach to scale their RSSI values, whereas others use an inverse-distance-squared approach. This leads to inaccuracies around the 2.5m mark.
+
+## Update: Oxford Simulations OpenABM-COVID-19
+
+Since the first draft of the paper was distributed, Oxford University's Big Data Institute (BDI) 
+have released OpenABM-COVID-19[27]({{"/efficacy/bibliography#a-27" | relative_url }}), a Jupyter notebook simulation of COVID-19 cases, spread, and hospitalisation
+statistics given a population size, existing number of cases, and settings for various control methods.
+
+The paper we have written has a new section in it detailing how to take the output
+of the fair efficacy formula and apply it to an OpenABM simulation for COVID-19 spread.
+
+Our team has created an extension to Oxford's work to simulate the disease spread curve given
+efficacy results presented in the Fair Efficacy Formula. This is currently undergoing review.
+Once verified, the results and spread control charts shall be published here.

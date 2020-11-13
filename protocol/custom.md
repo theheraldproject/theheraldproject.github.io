@@ -17,16 +17,7 @@ mechanism that were not possible before.
 
 ## Application examples
 
-There are a range of example for this, with a few summarised below
-
-- Communication apps
-  - File sharing between Android and iOS devices, reliably
-  - Local 'same location' peer to peer applications, such as instant messaging or gaming apps
-- Safety apps
-  - Using beacons in high-risk areas, an employee exposure app could accurate record exact exposure to hazardous environments
-  - Also using beacons, know where to deep clean if an employee does fall ill at your large campus
-  - Check in app - Walk around and be let in to secure areas automatically
-  - Rescue app - E.g. for skiing/snowboarding avalanche rescue - find the hidden/non visible person. Could be fire in a large building, or rescue on a tube train
+There are a range of example for this. See the [Applications page]({{"/applications" | relative_url }}) for details.
 
 ## How to apply the Herald protocol for these apps
 

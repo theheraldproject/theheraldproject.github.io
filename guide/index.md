@@ -21,23 +21,22 @@ With Herald you can use our suggested full or header [payloads]({{"/payload" | r
 
 ![Herald Payload Contents](../images/Payloads.png)
 
-## Herald protocol integration
+## Overview
 
-Please see the [Herald protocol integration guid (PDF)]({{"/documents/IntegrationGuide.pdf" | relative_url }}) file for integrating
-the Herald protocol in to your nation's contact tracing application.
+Herald is a cross-platform proximity detection solution for iOS and Android devices. It detects all devices within epidemiologically relevant range (8 metres), and offers frequent sampling of distance measurements (at least one sample per 30 seconds) for each device. The solution has been designed to operate indefinitely on screen locked iOS and Android devices in the background without any user interaction. It overcomes all the background operation challenges, especially on iOS devices. Herald works on iOS 9.3+ and Android 5.0+, making it compatible with 98% of smartphones worldwide. The solution is also payload agnostic, to facilitate integration with existing contact tracing apps, acting as a reliable cross-platform transport for existing device identification data payload, thus it has no impact on approved security and privacy designs to minimise disruption to existing apps.
 
-## Detailed design information
+This integration guide aims to offer an easy to follow recipe for enhancing existing contact tracing apps with Herald. As an overview, the process involves:
 
-Please see the [Herald design document (pdf)]({{"/documents/ProximityDetectionSolutionDesign.pdf" | relative_url }}) file
-for detailed implementation design details about how the Herald protocol works.
+- Isolating the existing device identification data payload generation code and wrapping it into a PayloadDataSupplier.
+- Isolating the existing contact data logging code and wrapping it into a SensorDelegate.
+- Remove existing Bluetooth Low Energy (BLE) code for detecting devices, exchanging device identification data, and distance measurement.
+- Replace the existing BLE code with the Herald SensorArray for the PayloadDataSupplier and register the SensorDelegate for receiving detection and distance measurement events.
 
-## Herald protocol formal specification
+The API for both iOS and Android have been kept nearly identical in concept and in code where possible for ease of integration. The integration process can be as quick as one working day for both platforms; this has been tested on real open source apps. The API design also considered the architecture of several public Contact Tracing apps for ease of integration.
 
-COMING SOON! This document is currently being written.
+See the integration guide page navigation to the left for each section.
 
-## Herald Simple and Secured payload formal specification
-
-COMING SOON! This document is currently being written.
+Start here: [About the code]({{"/guide/code" | relative_url }})
 
 ## Something missing?
 

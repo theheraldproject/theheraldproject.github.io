@@ -2,14 +2,16 @@
   items:
     - name: Our documentation
       link: /docs
-- label: About Contact Tracing
+- label: Applications
   items:
-    - name: What is Contact Tracing?
-      link: /background
-    - name: Glossary of terms
-      link: /background/glossary
-    - name: Technology Approaches
-      link: /background/approaches
+    - name: Herald Applications
+      link: /applications
+    - name: Contact Tracing
+      link: /applications/ct
+    - name: Device to Device
+      link: /applications/p2p
+    - name: Bluetooth Mesh Gateways
+      link: /applications/mesh
 - label: Herald Protocol
   items:
     - name: About our protocol
@@ -38,6 +40,22 @@
   items:
     - name: How to integrate
       link: /guide/
+    - name: About the code
+      link: /guide/code
+    - name: Import Herald
+      link: /guide/add
+    - name: iOS app guide
+      link: /guide/ios
+    - name: Android app guide
+      link: /guide/android 
+- label: About Contact Tracing
+  items:
+    - name: What is Contact Tracing?
+      link: /background
+    - name: Glossary of terms
+      link: /background/glossary
+    - name: Technology Approaches
+      link: /background/approaches
 - label: Bluetooth Research
   items:
     - name: Our Research
