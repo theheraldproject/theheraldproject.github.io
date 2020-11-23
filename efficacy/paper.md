@@ -16,7 +16,7 @@ segments of any contact event.
 
 ## Where can I get the paper?
 
-The paper is now available on medRxiv here: https://www.medrxiv.org/content/10.1101/2020.11.07.20227447v1
+The paper is now available on medRxiv here: [https://www.medrxiv.org/content/10.1101/2020.11.07.20227447v1](https://www.medrxiv.org/content/10.1101/2020.11.07.20227447v1)
 
 ## The Fair Efficacy Formula
 

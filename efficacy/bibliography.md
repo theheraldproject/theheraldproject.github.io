@@ -41,9 +41,9 @@ tings. Retrieved 27 August 2020. [https://github.com/google/exposure-notificatio
 - <a id="a-22" />[22] References iOS and Android phones as percentage globally. Statcounter 2020, Mobile Operating System Market Share, Statcounter Global Stats, viewed August 2020, [https://gs.statcounter.com/os-market-share/mobile/worldwide](https://gs.statcounter.com/os-market-share/mobile/worldwide)
 - <a id="a-23" />[23] References iOS version as a percentage globally and per country. Statcounter 2020, Mobile & Tablet iOS Version Market Share, Statcounter Global Stats, viewed August 2020, [https://gs.statcounter.com/os-version-market-share/ios/mobile-tablet/worldwide](https://gs.statcounter.com/os-version-market-share/ios/mobile-tablet/worldwide)
 - <a id="a-24" />[24] References Android version as percentage globally and per country. Statcounter 2020, Mobile & Tablet Android Version Market Share, Statcounter Global Stats, viewed August 2020, [https://gs.statcounter.com/os-version-market-share/android/mobile-tablet/worldwide](https://gs.statcounter.com/os-version-market-share/android/mobile-tablet/worldwide)
-- <a id="a-25" />[25] ONS Overview of the UK population: August 2019. Retrieved 22 Sep 2020. https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/articles/overviewoftheukpopulation/august201
-- <a id="a-26" />[26] Bluetooth Low Energy 5.2 specification. Retrieved 22 Sep 2020. https://www.bluetooth.com/specifications/bluetooth-core-specification/
-- <a id="a-27" />[27] Robert Hinch, William J M Probert, Anel Nurtay, Michelle Kendall, Chris Wymatt, Matthew Hall, Katrina Lythgoe, Ana Bulas Cruz, Lele Zhao, Andrea Stewart, Luca Ferritti, Daniel Montero, James Warren, Nicole Mather, Matthew Abueg, Neo Wu, Anthony Finkelstein, David G Bonsall, Lucie Abeler-Dorner, Christophe Fraser. OpenABM-Covid19 - an agent-based model for non-pharmaceutical interventions against COVID-19 including contact tracing. 22 Sep 2020. https://doi.org/10.1101/2020.09.16.20195925
+- <a id="a-25" />[25] ONS Overview of the UK population: August 2019. Retrieved 22 Sep 2020. [https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/articles/overviewoftheukpopulation/august2019](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/articles/overviewoftheukpopulation/august2019)
+- <a id="a-26" />[26] Bluetooth Low Energy 5.2 specification. Retrieved 22 Sep 2020. [https://www.bluetooth.com/specifications/bluetooth-core-specification/](https://www.bluetooth.com/specifications/bluetooth-core-specification/)
+- <a id="a-27" />[27] Robert Hinch, William J M Probert, Anel Nurtay, Michelle Kendall, Chris Wymatt, Matthew Hall, Katrina Lythgoe, Ana Bulas Cruz, Lele Zhao, Andrea Stewart, Luca Ferritti, Daniel Montero, James Warren, Nicole Mather, Matthew Abueg, Neo Wu, Anthony Finkelstein, David G Bonsall, Lucie Abeler-Dorner, Christophe Fraser. OpenABM-Covid19 - an agent-based model for non-pharmaceutical interventions against COVID-19 including contact tracing. 22 Sep 2020. [https://doi.org/10.1101/2020.09.16.20195925](https://doi.org/10.1101/2020.09.16.20195925)
 
 ## Website-only citations
 
@@ -57,3 +57,8 @@ Below are a list of external links used when talking about the [Herald Secured p
 - Time base one time password - TOTP (As used in your online banking codes): [RFC-6238](https://tools.ietf.org/html/rfc6238)
 - Diffie-Hellman-Merkle key agreement (As used whenever you use a 'https' secure connection): [RFC-2631](https://tools.ietf.org/html/rfc2631) (Note: We mention Merkle as a nod to the request of Hellman)
 
+### External security links
+
+Other security related links around Bluetooth that we refer to
+
+- Issues on iOS with revealing users' personal information [French INRIA institute paper](https://hal.inria.fr/hal-02394619)

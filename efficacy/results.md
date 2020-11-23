@@ -15,13 +15,13 @@ using our Fair Efficacy Measure.
 
 Note: The theoretical max efficacy in the UK given our phone mix, and perfect radio conditions, is 76.39%.
 
-The Ferretti et al paper [[6]]({{"/efficacy/bibliography#a-6" | relative_url }}) shows a 'same day' efficacy requirement of 40%,
-with an error range between 10 and 60%. This assumes a 90% effective lockdown of ill people. 
+The Ferretti et al paper [[6]]({{"/efficacy/bibliography#a-6" | relative_url }}) shows a 'same day' efficacy requirement of 30%,
+with an error range between 10 and 57%. This assumes a 90% effective lockdown of ill people. 
 Thus in our paper we call:-
 
-- 60%+ 'Very effective'
-- 40%+ 'Effective'
-- 10%+ 'limited effectiveness'
+- 57%+ 'Very effective'
+- 30%+ 'Effective'
+- 10%+ 'Limited effectiveness'
 - Less than 10% 'not effective'
 
 See the [Fair Efficacy Paper page]({{"/efficacy/paper" | relative_url }}) for details on how these values are defined and derived in testing.
