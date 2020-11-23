@@ -18,6 +18,18 @@
       link: /protocol/
     - name: Non contact tracing uses
       link: /protocol/custom
+- label: Design Guide
+  items: 
+    - name: Herald's Design
+      link: /design/
+    - name: Core philosophy
+      link: /design/core
+    - name: Data used
+      link: /design/data
+    - name: Protocol lifecycle
+      link: /design/protocol
+    - name: Design summary
+      link: /design/summary
 - label: Herald Payloads
   items:
     - name: About Payloads
