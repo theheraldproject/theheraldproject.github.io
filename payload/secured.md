@@ -74,6 +74,8 @@ Below is a visual representation of what each phone and health authority knows:-
 
 ![Secured contact graph information](../images/PayloadSecuredGraph.png)
 
+NOTE: Please see the [Interoperability page]({{"/payload/interop" | relative_url }}) on how the secured payload ensures security and privacy whilst working between multiple countries.
+
 The detailed explanation is below:-
 
 The [Transmitting]({{"/background/glossary" | relative_url }}) phone know:-

@@ -36,6 +36,8 @@
       link: /payload
     - name: Herald Envelope Header 
       link: /payload/envelope
+    - name: Interoperability
+      link: /payload/interop
     - name: Herald Common CT Inner Header 
       link: /payload/common
     - name: Herald Simple Inner Payload 

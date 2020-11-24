@@ -1,10 +1,7 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: docs
 title: Herald envelope payload
-description: Our privacy preserving and secure payload for sharing contact tracing data
+description: Our common header for sharing contact tracing data
 menubar: docs_menu
 ---
 
@@ -53,3 +50,7 @@ You do not need to register your protocol IDs with us so long as you use a diffe
 service UUID and characteristic UUID. If you wish to provide an extension to Herald, as we
 have done for our [beacon]({{"/payload/beacon" | relative_url }}) payload, then please do let us know what
 range you are using.
+
+## International Interoperability
+
+The envelope header is the cornerstone of international interoperability. Please see the [Interoperability page]({{"/payload/interop" | relative_url }}) for full details
