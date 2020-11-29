@@ -80,7 +80,7 @@ The author has produced a calibration application and calculated a basic algorit
 
 I ran two calibration applications running on iOS to rapidly perform RSSI readings between the phones at a known measured distance. The application's user interface allowed the tester to specify the distance, providing the ability to take tens of thousands of readings per distance in a single test cycle before uploading the data for analysis.
 
-Below shows the output of that analysis. The R scripts used to produce this and the application itself is available on request under the MIT license.
+Below shows the output of that analysis. The R scripts used to produce this and the application itself is available on request under the Apache-2.0 license.
 
 This application can be used to determine the 'correct' RSSI reading for two known phones at a particular distance, and thus useful for formal evaluation of a proximity detection protocol's accuracy, and so we discuss the results here.
 
