@@ -1,7 +1,4 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: docs
 title: Bluetooth Hardware issues
 description: Hardware issues affecting mobile phone's hardware performance
@@ -26,9 +23,6 @@ Thus not all phones that support Bluetooth support Bluetooth Low Energy,
 although practically any phone released since 2010 support Bluetooth Low 
 Energy.
 
-In our research we found 94.49% of the UK population has a mobile smartphone 
-(all ages), and 97.5% of those support Bluetooth Low Energy (summer 2020).
-
 ## Battery life impact
 
 If constant scanning and interaction occurs then mobile phones will run 
@@ -39,7 +33,7 @@ out of battery very quickly. They will also get uncomfortably hot.
 The simplest workaround is to perform a scan for 1-3 seconds but with a 
 gap of a few seconds between each scan-identify-estimate interaction.
 
-In our testing this results in a battery drain of approx 6% in 8 hours of 
+In our testing this results in a battery drain of approx [1-2% per hour]({{"/efficacy/herald" | relative_url }}) of 
 use. This is a minor drain and much smaller than using WhatsApp for the 
 same period of time. Any reasonably designed protocol should be able to 
 achieve this low level of drain.
@@ -56,8 +50,8 @@ tracing.
 - All Huawei phones tested (Psmart, P20)
 - Many older phones
 
-This is a major issue as in our research approx 14.37% of UK mobile phones 
-currently in use (Summer 2020) do not support advertising. This is a much 
+This is a major issue as in our research approx [~14 of UK mobile phones 
+currently in use do not support advertising]({{"/efficacy/statistics" | relative_url }}). This is a much 
 larger issue than the proportion of the population without a phone. This 
 is a major percentage of the population and so a workaround should be used.
 

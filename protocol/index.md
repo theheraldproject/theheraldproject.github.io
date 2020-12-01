@@ -40,7 +40,7 @@ See [Results]({{"/efficacy/results" | relative_url }}) for details.
 
 - Works on all Android and iPhones dating back to 2010 (Supports over 96% of UK mobile phone users)
 - Supports phones and Operating Systems with known Bluetooth performance issues
-  - Especially those ~14% of UK phones that do not support Advertising, and so cannot be served by other protocols (E.g. GAEN) - via the write characteristic approach
+  - Especially those [~14% of UK phones that do not support Advertising]({{"/efficacy/statistics" | relative_url }}), and so cannot be served by other protocols (E.g. GAEN) - via the write characteristic approach
 - Provides a number of approaches to workaround the 'iOS detection in the background' bug in iOS to a point where detection and continuity is superior to existing protocols
   - Allows our protocol to accurately capture the ~50% of UK phones that are iPhones where other non-GAEN protocols do not
 - Provide distance estimation (RSSI) data with a mean periodicity/windowing time of 4-8 seconds (easily beating the measure we describe in the [measurements paper]({{"/efficacy/paper" | relative_url }}) which requires 1 reading every 30 seconds) - more regular than protocols that today restrict readings to once every 3.5 - 5 minutes
@@ -53,7 +53,7 @@ See [Results]({{"/efficacy/results" | relative_url }}) for details.
 
 - Hardware Approaches
   - Ephemeral ID in advert approach: Some phones also rotate mac address every few seconds rather than once every 15 minutes forcing the ID payload to be fetched, and increasing delay. We work around this using an ephemeral ID approach.
-  - Uses a 'write characteristic' allowing phones that cannot advertise (16% approx of UK phones) to tell other phones they are neaby, and still provide regular distance estimation data
+  - Uses a 'write characteristic' allowing phones that cannot advertise ([~14% approx of UK phones]({{"/efficacy/statistics" | relative_url }})) to tell other phones they are neaby, and still provide regular distance estimation data
   - Android bluetooth stack randomly fails in some circumstances, so our protocol has been extensively tested and checked for these situations to prevent them.
 - Low battery usage during the day (thanks to maximum interaction frequency)
   - Only 6% over 8 hours in testing (way better than even having WhatsApp running in the background!)

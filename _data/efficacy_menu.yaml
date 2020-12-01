@@ -8,5 +8,9 @@
       link: /efficacy/method
     - name: Test Results
       link: /efficacy/results
+    - name: Statistics
+      link: /efficacy/statistics
+    - name: Herald Performance
+      link: /efficacy/herald
     - name: Bibliography
       link: /efficacy/bibliography

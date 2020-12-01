@@ -25,6 +25,7 @@ group :jekyll_plugins do
   gem 'jekyll-titles-from-headings', '~> 0.5.3'
   gem 'jekyll-seo-tag', '~> 2.6', '>= 2.6.1'
   gem 'github-pages'
+  gem 'jekyll-spaceship'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
