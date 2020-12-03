@@ -82,3 +82,16 @@
       link: /bluetooth/crowding
     - name: Distance Estimation
       link: /bluetooth/distance
+- label: Formal Specifications
+  items:
+    - name: List and status
+      link: /specs
+    - name: Herald Protocol
+      link: /specs/protocol
+    - name: Simple Payload
+      link: /specs/payload-simple
+    - name: Secured Payload
+      link: /specs/payload-secured
+    - name: International Interoperability
+      link: /specs/interop
+    

@@ -43,7 +43,7 @@ Below is a visual representation of what each phone and health authority knows:-
 
 ![Simple contact graph information](../images/PayloadSimpleGraph.png)
 
-## Security analysis - CIA
+## Security analysis summary - CIA
 
 Below is a simple security summary.
 
@@ -66,3 +66,7 @@ Non-repudiation - No. Neither the health authority nor receiving device are auth
 in this approach. The healthcare system and the transmitting phone also cannot verify
 that the person presenting the Contact ID is the one for whom it was initially transmitted
 to.
+
+## Formal Specification
+
+Please see the [Formal simple payload specification page]({{"/specs/payload-simple" | relative_url }}) for full details

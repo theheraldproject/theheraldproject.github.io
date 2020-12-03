@@ -48,3 +48,7 @@ Phone B would effectively 'trust' their own country (Country B) to tell them to 
 See the [Contact Tracing approaches page]({{"/background/approaches" | relative_url }})
 for why second degree notifications are desirable given high virus rates. 
 (Note: Second degree notifications are being used in some countries, such as Australia.)
+
+## Formal specification
+
+Please see the [Formal international interoperability specification page]({{"/specs/interop" | relative_url }}) for full details
