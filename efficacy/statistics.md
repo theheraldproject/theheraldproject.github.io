@@ -98,9 +98,7 @@ and mutual two-way detection, you need to create a truth table for two phones wi
 Herald works when your contact scenario is one of the first three options in the
 above truth table, giving a likelihood of two-way detection of 98.01%.
 
-
 ![W4](w4.svg)
-
 
 Other protocols that support advertising-only can only support two-way
 detection in the scenario on the first row of the table - or for 73.75% of pairings.
@@ -149,10 +147,7 @@ Again Herald supports a wider range of devices, going back to Android 5.0.
 When you apply the UK device prevalence statistics from earlier sources
 on this page to the above data, then you get the below OS support chart:-
 
-
 ![W6](w6.svg)
-
-
 
 ## Distance estimation
 

@@ -40,11 +40,11 @@ To see information on integrating Herald with your own application, please see t
 You can reach out to us and log general project and research data requests and issues on our [GitHub issues site](https://github.com/vmware/herald/issues).
 We are also keen to receive contributions to all of our open source repositories and research areas:-
 
-- [Herald Protocol & Payloads for iOS](https://github.com/vmware/herald-for-ios) (MIT licensed)
-- [Herald Protocol & Payloads for Android](https://github.com/vmware/herald-for-android) (MIT licensed)
-- [Herald Research & documentation website](https://github.com/vmware/herald) (this site) (MIT licensed)
-- [Sample R analysis scripts](https://github.com/vmware/herald-analysis) for the fair efficacy formula (MIT licensed)
-- Our generic [BLE RSSI calibration and distance estimation testing tool](https://github.com/vmware/herald-calibration) (MIT licensed)
+- [Herald Protocol & Payloads for iOS](https://github.com/vmware/herald-for-ios) (Apache-2.0 licensed)
+- [Herald Protocol & Payloads for Android](https://github.com/vmware/herald-for-android) (Apache-2.0 licensed)
+- [Herald Research & documentation website](https://github.com/vmware/herald) (this site) (CC-BY licensed)
+- [Sample R analysis scripts](https://github.com/vmware/herald-analysis) for the fair efficacy formula (Apache-2.0 licensed)
+- Our generic [BLE RSSI calibration and distance estimation testing tool](https://github.com/vmware/herald-calibration) (Apache-2.0 licensed)
 
 This project is maintained primarily by VMware personnel and some external contributors in our spare time. We aim to respond to logged issues and emails within 24-28 hours during week days (Monday-Friday) in the UK time zone.
 
