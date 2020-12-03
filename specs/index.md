@@ -17,6 +17,6 @@ Specifications:-
 |Herald Protocol | Implemented | [Overview page]({{"/protocol" | relative_url }}) <br> [Specification HTML]({{"/specs/protocol" | relative_url }}) |
 |Herald Simple Payload | Implemented | [Overview page]({{"/payload/simple" | relative_url }}) <br> [Specification HTML]({{"/specs/payload-simple" | relative_url }}) |
 |Herald Secured Payload | Draft | [Overview page]({{"/payload/secured" | relative_url }}) <br> [Specification HTML]({{"/specs/payload-secured" | relative_url }}) |
-|Herald International Interoperability | Draft | [Overview page]({{"/payload/interop" | relative_url }}) <br> [Specification HTML]({{"/specs/interop" | relative_url }}) |
+|Herald International Interoperability | Draft | [Overview page]({{"/payload/interop" | relative_url }}) <br> [Specification HTML]({{"/specs/payload-interop" | relative_url }}) |
 
 To raise issues for these protocols, please add them to the [main Herald GitHub issues webpage](https://github.com/vmware/herald/issues)

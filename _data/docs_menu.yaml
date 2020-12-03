@@ -93,5 +93,5 @@
     - name: Secured Payload
       link: /specs/payload-secured
     - name: International Interoperability
-      link: /specs/interop
+      link: /specs/payload-interop
     

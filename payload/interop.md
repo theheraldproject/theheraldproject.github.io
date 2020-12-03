@@ -51,4 +51,4 @@ for why second degree notifications are desirable given high virus rates.
 
 ## Formal specification
 
-Please see the [Formal international interoperability specification page]({{"/specs/interop" | relative_url }}) for full details
+Please see the [Formal international interoperability specification page]({{"/specs/payload-interop" | relative_url }}) for full details
