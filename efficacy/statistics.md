@@ -55,7 +55,11 @@ Below are the number of unique phones in the UK from BBC data that support BLe.
 We then used the [GSM Arena website](https://www.gsmarena.com/) 
 to determine individuals phones' Bluetooth support.
 
-![W1](w1.svg)
+@startmermaid
+pie title Fig W1. Phones with BLe support
+"With BLe" : 90.70
+"Without BLe" : 9.30
+@endmermaid
 
 ### Bluetooth Advertising support
 
@@ -73,12 +77,20 @@ The raw data for this table is from [the AltBeacon website](https://altbeacon.gi
 
 All iPhones with BLe support advertising, so this chart shows just the raw Android devices without advertising from the above website:-
 
-![W2](w2.svg)
+@startmermaid
+pie title Fig W2. Android 5+ Phones with Advertising support
+"With advertising" : 52.76
+"Without advertising" : 47.24
+@endmermaid
 
 When you calculate this up to population level and include iPhones too, you 
 end up with the below chart:-
 
-![W3](w3.svg)
+@startmermaid
+pie title Fig W3. All UK phones with Advertising support
+"With advertising" : 85.88
+"Without advertising" : 14.12
+@endmermaid
 
 **NOTE**: This is the source of our '~14% of Android devices do not support advertising' statistic 
 quoted on this website.
@@ -98,12 +110,20 @@ and mutual two-way detection, you need to create a truth table for two phones wi
 Herald works when your contact scenario is one of the first three options in the
 above truth table, giving a likelihood of two-way detection of 98.01%.
 
-![W4](w4.svg)
+@startmermaid
+pie title Fig W4. Herald providing two-way detection
+"Detected all phones" : 98.01
+"Not detected all phones" : 1.99
+@endmermaid
 
 Other protocols that support advertising-only can only support two-way
 detection in the scenario on the first row of the table - or for 73.75% of pairings.
 
-![W5](w5.svg)
+@startmermaid
+pie title Fig W5. Advertising-only protocols providing two-way detection
+"Detected all phones" : 73.75
+"Not detected all phones" : 26.25
+@endmermaid
 
 ## Supported Operating Systems
 
@@ -147,7 +167,11 @@ Again Herald supports a wider range of devices, going back to Android 5.0.
 When you apply the UK device prevalence statistics from earlier sources
 on this page to the above data, then you get the below OS support chart:-
 
-![W6](w6.svg)
+@startmermaid
+pie title Fig W6. Devices in the UK with an OS supported by Herald
+"Supported" : 98.00
+"Unsupported" : 2.0
+@endmermaid
 
 ## Distance estimation
 

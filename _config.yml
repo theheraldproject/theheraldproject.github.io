@@ -116,6 +116,8 @@ exclude:
   - .gitignore
   - code_of_conduct.md
   - contributing.md
+  - .travis.yml
+  - cibuild
 
 #redcarpet:
 #    extensions: ["no_intra_emphasis", "tables", "autolink", "strikethrough", "with_toc_data"]
