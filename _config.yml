@@ -118,6 +118,7 @@ exclude:
   - contributing.md
   - .travis.yml
   - cibuild
+  - .github
 
 #redcarpet:
 #    extensions: ["no_intra_emphasis", "tables", "autolink", "strikethrough", "with_toc_data"]
