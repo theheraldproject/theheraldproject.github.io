@@ -18,7 +18,7 @@ deploy:
   keep_history: false
   local_dir: "./_site"
   commit_message: "release: deploy %{project_name}"
-  github_token: $GITHUB_TOKEN
+  github_token: $PAGES_TOKEN
   committer_from_gh: true
   on:
     branch: master
