@@ -92,8 +92,10 @@ pie title Fig W3. All UK phones with Advertising support
 "Without advertising" : 14.12
 @endmermaid
 
-**NOTE**: This is the source of our '~14% of Android devices do not support advertising' statistic 
+**NOTE**: This is the source of our '~14% of all phones in use in the UK do not support advertising' statistic 
 quoted on this website.
+
+The statistics from which we draw this information are a little old. It's worth noting though that it's not just 'old phones' that do not support advertising. Many cheaper end Android handsets do not support advertising and so it would be dangerous to assumes that 100% of phones released in the last two years have advertising support, even if 'Full Bluetooth support' is claimed.
 
 In order to determine which Contact Tracing protocols can detect individual random pairings of devices
 and mutual two-way detection, you need to create a truth table for two phones with or without advertising:-
