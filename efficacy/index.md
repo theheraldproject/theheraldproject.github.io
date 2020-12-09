@@ -35,7 +35,7 @@ We define the 'Efficacy of Contact Tracing' measure used in their paper, and cre
 a fair and standardised assessment for the 'probability of detection' aspect of that
 measure.
 
-This measure and it's exact make up is summardised in the [fair Efficacy Formula Paper]({{"/efficacy/paper" | relative_url }})
+This measure and its exact make up is summardised in the [fair Efficacy Formula Paper]({{"/efficacy/paper" | relative_url }})
 page, and detailed precisely in our paper. We shall post a link here once the paper is
 published.
 

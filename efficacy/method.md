@@ -50,9 +50,9 @@ This test shall be used only for distance accuracy (mean error) calculations.
 
 ### Continuity window test (required if source code not available of detection routine)
 
-A set of pairwise tests shall be carried out in order to establish the actual in-practice window detection size of a given protocol. This is mainly required if the protocol and it's test app do not provide the necessary metrics in formal testing as a matter of course. 
+A set of pairwise tests shall be carried out in order to establish the actual in-practice window detection size of a given protocol. This is mainly required if the protocol and its test app do not provide the necessary metrics in formal testing as a matter of course. 
 
-This test comprises of two phones with the app running in a radiation shielded environment being introduced for one or more multiples of 30 seconds, and counting how many one way detections occur. Comparing the most common handsets across windows of 30 seconds up to that protocol's declared estimation interval will reveal it's actual minimum mean detection time, and the detection time required to guarantee 100% detection.
+This test comprises of two phones with the app running in a radiation shielded environment being introduced for one or more multiples of 30 seconds, and counting how many one way detections occur. Comparing the most common handsets across windows of 30 seconds up to that protocol's declared estimation interval will reveal its actual minimum mean detection time, and the detection time required to guarantee 100% detection.
 
 It should be noted that testing application only in scenarios with more than 5 minute intervals is not realistic to modern life or the 30 second required minimum epidemiological window for risk estimation. Tests should therefore be of irregular numbers of minutes for contact events, at irregular distances in order to best expose limitations of particular protocols' implementations.
 

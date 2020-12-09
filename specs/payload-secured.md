@@ -73,13 +73,13 @@ The detailed explanation is below:-
 
 The [Transmitting]({{"/background/glossary" | relative_url }}) phone know:-
 
-- It's own master identity symmetric key/UUID (Agreed via Diffie-Hellman-Merkle with healthcare central system)
-- It's health authorities public key for any given day
-- It's own ephemeral (Bluetooth) pubic/private key pair for this single exchange
-- It's own exposure confirmation public/private key pair for this day
-- It's own persistent UUID
-- It's own geo-approximator (E.g. postal district in the UK - 10000 households on average)
-- It's own phone make and model identifier string
+- Its own master identity symmetric key/UUID (Agreed via Diffie-Hellman-Merkle with healthcare central system)
+- Its health authority's public key for any given day
+- Its own ephemeral (Bluetooth) pubic/private key pair for this single exchange
+- Its own exposure confirmation public/private key pair for this day
+- Its own persistent UUID
+- Its own geo-approximator (E.g. postal district in the UK - 10000 households on average)
+- Its own phone make and model identifier string
 - The receiver's ephemeral public key for this single exchange
 
 The [Receiving]({{"/background/glossary" | relative_url }}) phone knows:-
@@ -97,7 +97,7 @@ The [Receiving]({{"/background/glossary" | relative_url }}) phone knows:-
 The Transmitter's health authority knows, from the transmitter:-
 
 - The transmitter's master identity symmetric key/UUID (agreed via Diffie-Hellman-Merkle)
-- It's own daily exposure submission public/private key pair
+- Its own daily exposure submission public/private key pair
 
 The Receiver's health authority knows, from the receiver:-
 
@@ -131,9 +131,9 @@ The transmitter can now:-
 - Recognise and decrypt its own exposure confirmation token, extracting:-
   - Country Code, State Code, ClientID of the receiver, which it verifies the date and time of with its history record
   - Transmission datetime from unix epoch
-- Verify that the server decrypted TOTP for it's persistent UUID matches the time of the exposure confirmation token (thus verifying ALL THREE participants, transmitter, receiver, transmitter health authority)
+- Verify that the server decrypted TOTP for its persistent UUID matches the time of the exposure confirmation token (thus verifying ALL THREE participants, transmitter, receiver, transmitter health authority)
 - Use the risk score to calculate the locally acrued risk for a given date/set of days, and see whether it breaches the risk threshold
-- Notify it's health authority that they have breached the risk threshold, ideally not immediately after receiving the latest exposures keys (MUST be within 3hrs 30 mins, and should take the posting date time in to account)
+- Notify its health authority that they have breached the risk threshold, ideally not immediately after receiving the latest exposures keys (MUST be within 3hrs 30 mins, and should take the posting date time in to account)
   - May also share the person's total risk score for the last 7-14 days
 
 Other receiving phones receive from the exposure download list:-
@@ -152,7 +152,7 @@ A random bluetooth sniffer sees:-
 - Country and State code for receiver and transmitter
 - Any random Bluetooth data being advertised by that phone (E.g. 15 min rotating BLE mac address, "Adam's iPhone" name, FindMyPhone or other manufacturer specific data)
    - On some phones this includes the TX power of the advertiser (transmitter)
-- It can calculate it's own RSSI to each device, but not see the RSSI between the two devices
+- It can calculate its own RSSI to each device, but not see the RSSI between the two devices
 
 ## Assumptions
 

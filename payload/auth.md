@@ -55,7 +55,7 @@ There is no additional risk posed by this 15 minute rotating ID over and above t
 
 The above method uses a forward secure machanism preventing an attacker from determining a future or past rotation key by observing the rotation keys used by a particular device.
 
-In our payload above the client ID is itself never passed in the clear, but the public key could be used as a persistent identifier. As this is passed in a read, it could be re-generated for each device interaction, if needed, or on a very regular basis. This would prevent it's use as a tracking ID as each read would be different.
+In our payload above the client ID is itself never passed in the clear, but the public key could be used as a persistent identifier. As this is passed in a read, it could be re-generated for each device interaction, if needed, or on a very regular basis. This would prevent its use as a tracking ID as each read would be different.
 
 ### Ill person tracker
 

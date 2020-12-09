@@ -112,7 +112,7 @@ to start their Herald-based contact tracing app once, and forget about it afterw
 
 ## iOS doesn't always re-report its power state on resumption of Bluetooth scanning
 
-iOS will report it's 'Central' and 'Peripheral' manager power states as callbacks.
+iOS will report its 'Central' and 'Peripheral' manager power states as callbacks.
 Sometimes when Bluetooth is suspended and resumed there will be a poweredOff message
 without a corresponding poweredOn message, even though the device itself is visibly
 chatting over Bluetooth.

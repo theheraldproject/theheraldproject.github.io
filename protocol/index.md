@@ -62,7 +62,7 @@ See [Results]({{"/efficacy/results" | relative_url }}) for details.
   - Allow background iOS phone detection from iOS via a nearby Android phone (The 'calling card' characteristic), which can also support more accurate distance estimation via triangulation
   - Optional: Allow background iOS phone detection from iOS directly with location permission turned on (does NOT capture GPS location, just uses the permission to 'awake on screen activation' which happens on average every 10 minutes, and stays active for 5-10 minutes)
 - Uses 'connect back' on incoming request to connect to phones that we cannot see, but who see and interact with us (avoiding 'one way detection')
-- Uses it's own internal timer implementation on Android to avoid the 'randomly long wait' issue with Android native timers
+- Uses its own internal timer implementation on Android to avoid the 'randomly long wait' issue with Android native timers
 
 ## Non contact tracing uses
 
