@@ -49,11 +49,12 @@ Below is a simple security summary.
 
 Confidentiality - No. The Contact ID can be intercepted in the clear by any Bluetooth 
 device, allowing relay and replay attacks. Only the phone who generated the Contact ID
-will know who it belongs to. By rotating the Contact ID regularly (E.g. every 30 seconds)
+will know who it belongs to. By rotating the Contact ID regularly (E.g. every 15 minutes)
 localised Bluetooth tracking can be reduced (E.g. adboard)
 
-Integrity - Yes. Only the sequence of TOTP codes for a particular phone can be processed
-by that phone for that time point. Data could not be manipulated or predicted such
+Integrity - Yes. Only the sequence of codes for a particular phone can be known
+by that phone for that time point as only that phone has the daily key seeds. 
+Data could not be manipulated or predicted such
 that an individual phone could be targeted.
 
 Availability - Maybe. Could be compromised by a brute for attack DDoS-ing the healthcare 

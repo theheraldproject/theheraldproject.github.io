@@ -13,21 +13,68 @@ This page formally specifies the Extended Data Payload. This is referenced in bo
 
 This specification is a **DRAFT**
 
-## Changes and errata
-
-The below is the version history:-
-
-|Date|Author|Change summary|
-|---|---|---|
-|2020-12-05|[Adam Fowler](https://github.com/adamfowleruk/)|Initial draft content|
 
 ## Contents
 
 **NOTE:** No contents or formal notation as of yet. Placeholder content until formal spec format decided.
 
-## Figures
 
-None
+## Modal verbs terminology
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL 
+NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and
+"OPTIONAL" in this document are to be interpreted as described in
+[RFC 2119](https://tools.ietf.org/html/rfc2119).
+
+Note that these terms apply whether they are uppercase or lowercase
+and no matter what styles are applied to the phrases.
+
+## Executive summary
+
+## Introduction
+
+## Scope
+
+What is in scope
+
+What is out of scope
+
+## References
+
+### Normative references
+
+References are either specific (identified by date of publication and/or edition number or version number) or non specific. For specific references,only the cited version applies. For non-specific references, the latest version of the referenced document (including any amendments) applies.
+
+The following referenced documents are necessary for the application of the present document.
+
+### Information references
+
+References are either specific (identified by date of publication and/or edition number or version number) or non specific. For specific references,only the cited version applies. For non-specific references, the latest version of the referenced document (including any amendments) applies.
+
+The following referenced documents are not necessary for the application of the present document but they assist the user with regard to a particular subject area.
+
+## Definition of terms, symbols and abbreviations
+
+### Terms
+
+### Symbols
+
+### Abbreviations
+
+## Design Constraints
+
+The below are the constraints placed on the design of the system that the rest of this standard is defined within.
+
+
+
+## Lifecycle Summary
+
+
+
+
+
+
+
 
 ## Packet data format
 
@@ -77,4 +124,25 @@ I.e. 0 byte length extended segments are omitted.
 |0x3F|Indicates the following data is encrypted for decryption by the originating phone’s health service/authority|1+ bytes, binary|
 |0x40<br>-<br>0x7F|Reserved for future Herald standard use|
 |0x80<br>-<br>0xFF|Custom country / application use|
+
+
+
+
+## Annex A (Informative): Bibliography
+
+Links to prior art and further reading
+
+## Annex B (Informative): Figures 
+
+The below figures are also shown inline within the standard document.
+
+
+
+## Annex C (Informative): Change history
+
+|Date|Author|Change summary|
+|---|---|---|
+|2020-12-09|[Adam Fowler](https://github.com/adamfowleruk/)|Existing payload fully documented (Valid for Herald v1.1)|
+|2020-12-05|[Adam Fowler](https://github.com/adamfowleruk/)|Initial draft content|
+
 

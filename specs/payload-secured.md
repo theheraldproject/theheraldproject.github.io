@@ -11,31 +11,61 @@ This page formally specifies the [Secured Payload]({{"/payload/secured" | relati
 
 This specification is a **DRAFT**
 
-## Changes and errata
-
-The below is the version history:-
-
-|Date|Author|Change summary|
-|---|---|---|
-|2020-12-03|[Adam Fowler](https://github.com/adamfowleruk/)|Initial very draft content|
-
 ## Contents
 
 **NOTE:** No contents or formal notation as of yet. Placeholder content until formal spec format decided.
 
-## Figures
 
-Figure 1. Secured Payload Contents
 
-![Secured payload data](../images/PayloadSecured.png)
+## Modal verbs terminology
 
-Figure 2. Extension Data Area Contents
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL 
+NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and
+"OPTIONAL" in this document are to be interpreted as described in
+[RFC 2119](https://tools.ietf.org/html/rfc2119).
 
-![Secured payload extension data](../images/PayloadExtensionData.png)
+Note that these terms apply whether they are uppercase or lowercase
+and no matter what styles are applied to the phrases.
 
-Figure 3. Knowledge graph
+## Executive summary
 
-![Secured payload knowledge graph](../images/PayloadSecuredGraph.png)
+## Introduction
+
+## Scope
+
+What is in scope
+
+What is out of scope
+
+## References
+
+### Normative references
+
+References are either specific (identified by date of publication and/or edition number or version number) or non specific. For specific references,only the cited version applies. For non-specific references, the latest version of the referenced document (including any amendments) applies.
+
+The following referenced documents are necessary for the application of the present document.
+
+### Information references
+
+References are either specific (identified by date of publication and/or edition number or version number) or non specific. For specific references,only the cited version applies. For non-specific references, the latest version of the referenced document (including any amendments) applies.
+
+The following referenced documents are not necessary for the application of the present document but they assist the user with regard to a particular subject area.
+
+## Definition of terms, symbols and abbreviations
+
+### Terms
+
+### Symbols
+
+### Abbreviations
+
+## Payload Design Constraints
+
+The below are the constraints placed on the design of the system that the rest of this standard is defined within.
+
+
+
+
 
 ## Overview of Roles in transmission
 
@@ -191,3 +221,32 @@ It is important, therefore, that when an app becomes aware of being dangerously 
 or notified that its user could be a super spreader, that it doesn't immediately
 declare itself as in this state. It should lag this status update by a random time period
 of up to 30 minutes.
+
+
+## Annex A (Informative): Bibliography
+
+Links to prior art and further reading
+
+## Annex B (Informative): Figures 
+
+The below figures are also shown inline within the standard document.
+
+Figure 1. Secured Payload Contents
+
+![Secured payload data](../images/PayloadSecured.png)
+
+Figure 2. Extension Data Area Contents
+
+![Secured payload extension data](../images/PayloadExtensionData.png)
+
+Figure 3. Knowledge graph
+
+![Secured payload knowledge graph](../images/PayloadSecuredGraph.png)
+
+## Annex C (Informative): Change History
+
+The below is the version history:-
+
+|Date|Author|Change summary|
+|---|---|---|
+|2020-12-03|[Adam Fowler](https://github.com/adamfowleruk/)|Initial very draft content|
