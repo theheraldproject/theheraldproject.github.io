@@ -92,7 +92,7 @@ An amplification attack occurs where a network of fake IDs is generated and 200 
 
 Rotating the chirp every 15 minutes prevents long exposure a little. Using a shorter rotation period (E.g. 1 minute) would be even better, and guarantee each contact to be below the 3.5 minute window at 1m to breach a standard (15 min 2m) risk threshold under the Oxford Model.
 
-It's worth rememberding that the receiving device (the same as the person who says they are ill) is the one calculating the RSSI and thus providing the distance estimator to the backend system (centralised or decentralised). This means they can 'fake' the RSSI. They can also fake the txpower in the received advertisement packet.
+It's worth remembering that the receiving device (the same as the person who says they are ill) is the one calculating the RSSI and thus providing the distance estimator to the backend system (centralised or decentralised). This means they can 'fake' the RSSI. They can also fake the txpower in the received advertisement packet.
 
 Using a write instead of just advertisement data to provide a signed and played-back RSSI from the remote device would catch mismatches in RSSI and txpower data. This extra Bluetooth communication, however, will come at the cost of [higher continuity error]({{"/efficacy/paper" | relative_url }}) and for that reason we don't recommend it.
 
