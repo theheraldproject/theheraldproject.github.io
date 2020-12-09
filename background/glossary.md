@@ -13,12 +13,12 @@ menubar: docs_menu
 # Introduction
 
 There are a myriad of confusing terms used in contact tracing and proximity detection
-protocols and apps. This page acts as a standard glossary. This terminology is used 
+protocols and apps. This page acts as a standard glossary. This terminology is used
 throughout our website, research and published papers.
 
 ## Contact event
 
-The time period between the point at which two devices in the possession of their owners first detect each other as being proximate until their last detection. This is a pairwise activity, but it is possible that one bluetooth device discovers another at different time periods. This is due to the different power and reliability of the bluetooth chipsets in use on particular phone models. Thus it is usual for a contact event to begin and end with 'one way detection' - i.e. one phone detecting another prior to itself being detected. 
+The time period between the point at which two devices in the possession of their owners first detect each other as being proximate until their last detection. This is a pairwise activity, but it is possible that one bluetooth device discovers another at different time periods. This is due to the different power and reliability of the bluetooth chipsets in use on particular phone models. Thus it is usual for a contact event to begin and end with 'one way detection' - i.e. one phone detecting another prior to itself being detected.
 
 It is also possible for two people to record multiple contact events from each other during a given day. Consider an office environment with a general working area where people congregate and which has meeting rooms spread out throughout the office. Between meetings people will record contact events with the same people who are in the general workspace area. See Accrued Risk, below.
 
@@ -60,7 +60,7 @@ This is a protocol designed to enable two mobile devices in possession of a pers
 
 ## Contact Tracing
 
-This is an application and set of associated healthcare control processes used to take proximity detection data and provide a healthcare response to slow the spread of a disease within a population. The “NHS Covid-19” mobile app is the UK contact tracing application. These applications always have a central healthcare system used to report individual (even is pseudo anonymous) status to, and to help report on and manage the spread of a virus. 
+This is an application and set of associated healthcare control processes used to take proximity detection data and provide a healthcare response to slow the spread of a disease within a population. The “NHS Covid-19” mobile app is the UK contact tracing application. These applications always have a central healthcare system used to report individual (even is pseudo anonymous) status to, and to help report on and manage the spread of a virus.
 
 Thus the 'centralised' and 'decentralised' classifications of proximity detection protocols is a misnomer as every protocol must have one or more centralised support systems. For the Google-Apple (GAEN) protocol this would be the ID server that hosts ill people's IDs as well as the a country's healthcare systems that the contact tracing apps built on it reports to. For other protocols this is just the backend healthcare system for a particular health jurisdiction. (State, Country)
 

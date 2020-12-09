@@ -37,7 +37,7 @@ Where:-
 - Rcontinuity - The percentage of 30 second windows a distance estimation (RSSI reading for Bluetooth) ocurred (one-way). Choice of 30 seconds is described below.
 - Rlongevity - A protocol that gets worse over time must have this reflected. This is how the rate of detection varies between the first hour of an at least 8 hour test and the last hour. This will ensure people are protected for an entire normal working day without intervening to their phone's contact tracing app
 - Raccuracy - How accurate the distance analogue (E.g. RSSI) reading is at a short period of time at a known distance compared to how its analogue reading is over a long time. A measure of estimator accuracy especially relevant to when short periods of close distance (highest risk) occur. Does NOT include error rate of converting analogue to distance and performing a risk calculation - this is the same for all formulae, and so is left to other papers to define in Risk Accuracy (See the Turing paper on risk measurement)
-- Rcompleteness RT1 - How well a recorded set of data around the riskiest (nearest) point of a contact event fits actual exposure. Think of this logically (not numerically) as the first standard deviation around the mean risk exposure. Under the Oxford model the vast majority of risk is accrued at the nearest point of distance, and so this measure is used here. 
+- Rcompleteness RT1 - How well a recorded set of data around the riskiest (nearest) point of a contact event fits actual exposure. Think of this logically (not numerically) as the first standard deviation around the mean risk exposure. Under the Oxford model the vast majority of risk is accrued at the nearest point of distance, and so this measure is used here.
 - fracRE - This is a fixed (0.9) value as per the Ferretti et al paper. It is not 1.0 as to ensure the final efficacy rating does not appear 'perfect', as there are always unknown problems with measuring and communicating transmission. We recommend more work is done to define this value, and determine if it changes in certain situations in the real world.
 
 ## Why is it needed?
@@ -46,7 +46,7 @@ There was no standardised way to measure proximity detection and continuity of
 coverage of a contact event other than simple "Percentage of devices detected
 during an entire test" style high level metrics.
 
-Whilst useful, those simplistic metrics miss out a variety of low level Operating System, 
+Whilst useful, those simplistic metrics miss out a variety of low level Operating System,
 Hardware, and especially protocol behaviours that can lead to a misrepresentation or
 misunderstanding of efficacy in epidemiological terms.
 
@@ -59,14 +59,14 @@ will determine how fine grained such risk scores are. Performance across a range
 of devices prevalent in a particular population will determine a protocol's maximum reach.
 
 All of these measures need to be understood in order to truly score and compare the
-effectiveness of any Proximity Detection Protocol and therefore the contact tracing 
+effectiveness of any Proximity Detection Protocol and therefore the contact tracing
 applications and health service responses built on this underpinning.
 
 ## Why is it fair?
 
 We took a step back and considered what physically happens between two mobile devices
 during a contact event. We then reasoned what actions could occur to reduce the chances
-of a part (window) of a contact event from being correctly recorded. 
+of a part (window) of a contact event from being correctly recorded.
 
 We then created dummy data for a simple theoretical contact event. We then applied
 an existing risk scoring model to show how a 'perfect protocol' and a protocol that
@@ -83,28 +83,28 @@ way.
 ## Didn't you build this for your own protocol? Aren't you biased?
 
 No. Although it is true that some of the authors of our paper and protocol worked on
-previous COVID-19 app efforts for governments, we built this measure independent of any 
+previous COVID-19 app efforts for governments, we built this measure independent of any
 particular protocol and before we wrote our
 new protocol from scratch. We wanted to be sure we could encourage all teams to
 use our measure to communicate their own protocols' effectiveness with their
 country's population. The hope is to increase the use of, and trust in, contact tracing
 applications worldwide - no matter whose protocol they use.
 
-Once we completed the design of the formula we created a new protocol based on our 
+Once we completed the design of the formula we created a new protocol based on our
 new knowledge of
 what affects efficacy, and used the formula to test and measure its performance,
 and directed our efforts at the mechanisms that would provide most epidemiological
-advantage. 
+advantage.
 
 Our [protocol]({{"/protocol" | relative_url }}) has therefore a high score on the measure,
 but that's because we've been using the formula and testing approach for longer.
 The formula wasn't designed to show our protocol in a good light. We would
-encourage all teams to apply our formula to their work and rapidly iterate to improve 
+encourage all teams to apply our formula to their work and rapidly iterate to improve
 their own efficacy. This way more lives can be saved.
 
 ## What doesn't it cover?
 
-The paper does mention some items out of scope of our research that others are 
+The paper does mention some items out of scope of our research that others are
 already working on, or where published material already exists. This includes:-
 
 - Converting distance analogue (E.g. RSSI in Bluetooth) to distance (Although we do mention some observations we have on [distance calibration]({{"/bluetooth/distance" | relative_url }}))
@@ -126,7 +126,7 @@ We also believe that more work needs to be done to ensure that any [RSSI to dist
 
 ## Update: Oxford Simulations OpenABM-COVID-19
 
-Since the first draft of the paper was distributed, Oxford University's Big Data Institute (BDI) 
+Since the first draft of the paper was distributed, Oxford University's Big Data Institute (BDI)
 have released OpenABM-COVID-19[27]({{"/efficacy/bibliography#a-27" | relative_url }}), a Jupyter notebook simulation of COVID-19 cases, spread, and hospitalisation
 statistics given a population size, existing number of cases, and settings for various control methods.
 

@@ -38,7 +38,7 @@ Note: Ideally we would use Write packets everywhere, initiated once a client rea
 
 On a device identifying as 'fallen ill', it uploads the following information for each contact event
 
-ContactEventDetails = `TimestampReceived || MyClientID (as issued to this phone we were in contact with) || CTSTicket || Authenticator || ObservedClientID || RiskExposureDetails (E.g. RSSI, txpower)` 
+ContactEventDetails = `TimestampReceived || MyClientID (as issued to this phone we were in contact with) || CTSTicket || Authenticator || ObservedClientID || RiskExposureDetails (E.g. RSSI, txpower)`
 
 Note: Could the risk exposure details and the observedclientid be encrypted with the TGS Session key in order to allow a central to know about the contact but not reveal the ObservedClientID? Thus be privacy preserving whilst providing contact level information?
 

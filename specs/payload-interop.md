@@ -524,7 +524,7 @@ The below figures are also shown inline within the standard document.
 **Figure 1**: International Interoperability sequence of events
 
 @startmermaid
-sequenceDiagram 
+sequenceDiagram
   Phone A->>Health System A: Upload contact events
   Health System A->>Phone A: Upload successful
   Health System A->>Health System B: Forward contacts

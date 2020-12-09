@@ -28,10 +28,10 @@ persistent and so exchanged only once per Bluetooth MAC address rotation.
 
 It is possible to vary the frequency of exchange. We have tested this to
 once every 30 seconds too. This is useful where the exchange wire data changes
-due to wanting to prevent relay and replay attacks, encrypting the data 
+due to wanting to prevent relay and replay attacks, encrypting the data
 differently every 30 seconds.
 
-This is a mechanism used by our 
+This is a mechanism used by our
 [Secured Payload]({{"/payload/secured" | relative_url }}).
 
 ### Immediate Send (Since v1.1)

@@ -30,7 +30,7 @@ the reliable Bluetooth messaging and range finding to Herald.
 
 ## All about contact tracing
 
-Please see the [Contact tracing introduction]({{"/background" | relative_url }}) 
+Please see the [Contact tracing introduction]({{"/background" | relative_url }})
 for a discussion of the many issues with manual and mobile contact tracing.
 
 ## What does Herald provide?
@@ -45,7 +45,7 @@ protocol.
 By adopting the [Herald envelope]({{"/payload/envelope" | relative_url }})
 for your contact tracing app (supported by all our suggested payloads) you
 will ensure that wherever your country's residents travel to, their application
-can be used as-is internationally. We recommend the 
+can be used as-is internationally. We recommend the
 [Secured payload]({{"/payload/secured" | relative_url }})
 in this instance.
 

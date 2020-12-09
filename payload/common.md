@@ -10,8 +10,8 @@ menubar: docs_menu
 
 # Common Herald Contact Tracing data
 
-Technically this header is part of the inner payload, but the data is common to both 
-the [Herald simple inner payload]({{"/payload/simple" | relative_url }}) or 
+Technically this header is part of the inner payload, but the data is common to both
+the [Herald simple inner payload]({{"/payload/simple" | relative_url }}) or
 the [Herald secured payload]({{"/payload/secured" | relative_url }}) and can even be used with your own
 contact tracing specific custom [Inner payload]({{"/payload/inner" | relative_url }})
 
@@ -41,7 +41,7 @@ Note: All numbers are Big Endian (network order).
 
 ## How do I specify an inner payload?
 
-Implement the callbacks to provide a [custom inner payload]({{"/payload/inner" | relative_url }}) data or use 
+Implement the callbacks to provide a [custom inner payload]({{"/payload/inner" | relative_url }}) data or use
 the [Herald simple inner payload]({{"/payload/simple" | relative_url }}) or the [Herald secured payload]({{"/payload/secured" | relative_url }}).
 
 ## How does international interoperability work?
@@ -49,7 +49,7 @@ the [Herald simple inner payload]({{"/payload/simple" | relative_url }}) or the 
 Each receiving device records the inner payload along with all the other information but may not interpret
 its content directly. It is important, therefore, that the issuing country is content with the inner payload
 being recorded by a foreign visitors device and when they return home that data could be shared with
-the issuing state's systems for contact tracing reasons. 
+the issuing state's systems for contact tracing reasons.
 
 It needs to be shared because it forms part of the contact tracing data, and will be shared with the issuing country
 by that country's health authority should the visitor become ill. This allows countries to implement

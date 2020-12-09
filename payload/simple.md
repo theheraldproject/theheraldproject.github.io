@@ -35,7 +35,7 @@ inner paylod provides the following data.
 
 Note: All numeric data is big endian.
 
-- Verification token (16 bytes) - The ClientID (16 bytes) of the other phone, encrypted using this phones local, 
+- Verification token (16 bytes) - The ClientID (16 bytes) of the other phone, encrypted using this phones local,
 ephemeral, private key (32 bytes) for the time period the outer envelope packet was generated in (allowing for local matching
 and verification)
 
@@ -49,7 +49,7 @@ Below is a visual representation of what each phone and health authority knows:-
 
 Below is a simple security summary.
 
-Confidentiality - No. The Contact ID can be intercepted in the clear by any Bluetooth 
+Confidentiality - No. The Contact ID can be intercepted in the clear by any Bluetooth
 device, allowing relay and replay attacks. Only the phone who generated the Contact ID
 will know who it belongs to. By rotating the Contact ID regularly (E.g. every 15 minutes)
 localised Bluetooth tracking can be reduced (E.g. adboard)
@@ -59,10 +59,10 @@ by that phone for that time point as only that phone has the daily key seeds.
 Data could not be manipulated or predicted such
 that an individual phone could be targeted.
 
-Availability - Maybe. Could be compromised by a brute for attack DDoS-ing the healthcare 
-system using a fake network of pre-registered devices. Amplification attacks are 
-possible in this approach. This can be somewhat mitigated by using a max number 
-of notified contacts per ill person submission approach, but this doesn't prevent 
+Availability - Maybe. Could be compromised by a brute for attack DDoS-ing the healthcare
+system using a fake network of pre-registered devices. Amplification attacks are
+possible in this approach. This can be somewhat mitigated by using a max number
+of notified contacts per ill person submission approach, but this doesn't prevent
 the creation of a fake network with, say, 5 notifications each.
 
 Non-repudiation - No. Neither the health authority nor receiving device are authenticated

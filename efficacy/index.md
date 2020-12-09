@@ -27,7 +27,7 @@ of use for epidemiological control of disease spread.
 
 In our soon to be published paper we describe a method for formally assessing the real
 world performance of any proximity detection protocol and its distance analogue (E.g.
-RSSI readings for Bluetooth based protocols) that links in with the Fraser Group's at 
+RSSI readings for Bluetooth based protocols) that links in with the Fraser Group's at
 Oxford University's previous work on stopping the spread of COVID-19 by using a mobile
 application.
 
@@ -44,7 +44,7 @@ published.
 We then took this measure and applied it to a new protocol we designed from scratch
 to work around known Bluetooth communication issues across mobile phones. By using this
 formula to highlight shortcomings in certain tests we were able to rapidly within a
-month create [a new low level Bluetooth protocol]({{"/protocol" | relative_url }}) that has a very high 
+month create [a new low level Bluetooth protocol]({{"/protocol" | relative_url }}) that has a very high
 efficacy score.
 
 As part of preparation for publication we have also been looking at other existing

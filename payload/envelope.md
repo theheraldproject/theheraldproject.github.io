@@ -32,7 +32,7 @@ Note: All numbers are Big Endian (network order).
   - Payload identifier and version - 4 byte unsigned integer - 0x00 for Herald envelope payload V1.0, up to 0x07, wrapping around for further versions (not part of the signature)
   - Inner payload data - See the [common contact tracing header]({{"/payload/common" | relative_url }}) for options for this content for contact tracing, or custom use cases
 - Calling card / ID write payload
-  - Same content as for Read ID payload 
+  - Same content as for Read ID payload
 - Calling card / nearby devices read payload - most recent devices only
   - Multiple payloads, consisting of:-
     - Payload type - 1 byte integer. 0 = direct read, 1 = direct write, other values reserved for future use
@@ -44,7 +44,7 @@ Note: All numbers are Big Endian (network order).
 ## Reserved fields
 
 Any protocol and version identify ending in 0-7 (E.g. 0x00-0x07, 0x10-0x17, 0x20-0x27) is reserved
-for the use of the Herald Project. You are free to use any other values. 
+for the use of the Herald Project. You are free to use any other values.
 
 You do not need to register your protocol IDs with us so long as you use a different Bluetooth
 service UUID and characteristic UUID. If you wish to provide an extension to Herald, as we

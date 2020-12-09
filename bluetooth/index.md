@@ -14,7 +14,7 @@ During our research we discovered a number of low-level Bluetooth issues on mobi
 
 ## Hardware issues
 
-The older the [mobile phone hardware]({{"/bluetooth/hardware" | relative_url }}) the worse its performance. 
+The older the [mobile phone hardware]({{"/bluetooth/hardware" | relative_url }}) the worse its performance.
 No surprises there. There are certain devices,
 or pairings of devices, that cause issues. These are detailed in this section.
 
@@ -32,5 +32,5 @@ We detail issues we found and workaround and approaches to minimise interference
 
 ## Distance estimation calibration
 
-Whilst not directly the subject of our research we have some insight 
+Whilst not directly the subject of our research we have some insight
 in to [Distance Estimation Calibration]({{"/bluetooth/distance" | relative_url }}) and so include this information here.

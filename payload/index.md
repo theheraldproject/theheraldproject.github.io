@@ -11,7 +11,7 @@ menubar: docs_menu
 # Payloads Introduction
 
 The payload is what allows identity and distance estimation information to be shared.
-The payload can also include cryptographic information that allows detection and 
+The payload can also include cryptographic information that allows detection and
 prevention of Relay and Replay attacks, and prevent misuse of mobile contact
 tracing by mischievous individuals or hostile state actors.
 
@@ -46,10 +46,10 @@ We also provide a simpler [Herald Simple inner payload]({{"/payload/simple" | re
 decentralised contact tracing.
 
 You are, of course, free to use your own [Herald-compatible Custom inner payload]({{"/payload/inner" | relative_url }})
-or roll your own [Custom payload]({{"/payload/outer" | relative_url }}) entirely 
+or roll your own [Custom payload]({{"/payload/outer" | relative_url }}) entirely
 (especially if you are not writing a contact tracing app!)
 
-We are also working on a [Beacon Payload]({{"/payload/beacon" | relative_url }}) for use in Stores and Restaurants or areas of environmental exposure (E.g. gas, chemicals). Please 
+We are also working on a [Beacon Payload]({{"/payload/beacon" | relative_url }}) for use in Stores and Restaurants or areas of environmental exposure (E.g. gas, chemicals). Please
 [log an issue on GitHub](https://github.com/vmware/herald/issues) if you are interested in this.
 
 ## What every payload must support

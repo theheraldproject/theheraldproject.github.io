@@ -161,7 +161,7 @@ This is down to the national health authority to implement in their own app.
 
 ## What attacks does this prevent?
 
-- Westminster/hospital attack - Where a state actor can generate a large set of fake device 
+- Westminster/hospital attack - Where a state actor can generate a large set of fake device
 registrations and intercept a set of identifiers that it claims it, itself, received. This
 prevents locking down of specific, targetted, areas so long as a large 'spike' of
 notifications from a single source is trapped.
@@ -173,13 +173,13 @@ notifications from a single source is trapped.
 
 A mix of :-
 
-- Kerberos ([RFC 4120 (external link)](https://tools.ietf.org/html/rfc4120)); and 
+- Kerberos ([RFC 4120 (external link)](https://tools.ietf.org/html/rfc4120)); and
 - Time base one time password - TOTP ([RFC-6238 (external link)](https://tools.ietf.org/html/rfc6238)); and
 - Diffie-Hellman-Merkle key agreement ([RFC-2631 (external link)](https://tools.ietf.org/html/rfc2631)).
 
 Diffie-Hellman-Merkle should be used over an encrypted channel between each mobile phone app and its health authority to exchange cryptographic material between
 mobile and health authority servers that allow a mutually agreed symmetric key to be created without interception. This key is used
-to secure all communication between mobile and health server, like a password, but instead of directly being used should be used with TOTP to generate a one time use key per request. 
+to secure all communication between mobile and health server, like a password, but instead of directly being used should be used with TOTP to generate a one time use key per request.
 This prevents well funded actors breaking Diffie-Hellman-Merkle protected exchanges through pre-calculation of factors as they do not know the mutually agreed epoch.
 In the same way a client UUID can be generated.
 
@@ -192,29 +192,29 @@ Time based one-time password is used in several areas, but with different source
 - To generate a one time use exposure confirmation code allowing a mobile device to verify any received exposure keys
 - To provide the transmitter's health authority, via the receiver and its health authority, with an encrypted verification code, allowing receiver and server to be verified in the eyes of the transmitter when an exposure notification is received
 
-Kerberos was used as inspiration for the method of token passing and validation without 
-communication between the health authority and trasmitter each time (and thus loss of privacy). 
-The difference here is that each transmitter, NOT the health authority server, acts as its 
-own authentication authority, and treats the health authority it belongs to as a 'Service' 
-provider (hence the term exposure service token). 
+Kerberos was used as inspiration for the method of token passing and validation without
+communication between the health authority and trasmitter each time (and thus loss of privacy).
+The difference here is that each transmitter, NOT the health authority server, acts as its
+own authentication authority, and treats the health authority it belongs to as a 'Service'
+provider (hence the term exposure service token).
 
-The transmitter also treats itself as a service 
+The transmitter also treats itself as a service
 provider, so it can verify the exposure record later on.
-The receiver phone is regarded as a 'client' of both the transmitter and health 
+The receiver phone is regarded as a 'client' of both the transmitter and health
 authority exposure notification service.
 
 ## Extensions
 
-Given that enough contact graph data is known by the health authority it would 
+Given that enough contact graph data is known by the health authority it would
 be possible for it to identify asymptomatic people and super spreaders.
-In this scenario the health authority would have to add a different 
+In this scenario the health authority would have to add a different
 notification list where the exposure confirmation token was verifiable
-as being from the health authority server. 
+as being from the health authority server.
 
 This would of course potentially
-identify this transmitter as the hitherto anonymous end of the contact graph, 
-identifying both ends of the contact event and linking the persistent UUID 
-forever to a known real transmitting device, if both transmitter and receiver are 
+identify this transmitter as the hitherto anonymous end of the contact graph,
+identifying both ends of the contact event and linking the persistent UUID
+forever to a known real transmitting device, if both transmitter and receiver are
 from the same health authority.
 
 It is important, therefore, that when an app becomes aware of being dangerously exposed,

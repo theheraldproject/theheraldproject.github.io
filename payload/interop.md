@@ -41,12 +41,12 @@ If the risk total A has now exceeded some threshold then Citizen A can request m
 
 ## Second degree notifications
 
-It is possible within, say within country B in the above example, that to gain more control effect over virus spread an additional 'Anonymous exposure token' list is provided. 
+It is possible within, say within country B in the above example, that to gain more control effect over virus spread an additional 'Anonymous exposure token' list is provided.
 Country B could then perform data analysis over all contact information they have on the anonymous contact graph to spot asymptomatic carriers and super spreaders.
-Phone B would effectively 'trust' their own country (Country B) to tell them to 'lock down' as a prevention rather than rely on local exposure matching. 
+Phone B would effectively 'trust' their own country (Country B) to tell them to 'lock down' as a prevention rather than rely on local exposure matching.
 
 See the [Contact Tracing approaches page]({{"/background/approaches" | relative_url }})
-for why second degree notifications are desirable given high virus rates. 
+for why second degree notifications are desirable given high virus rates.
 (Note: Second degree notifications are being used in some countries, such as Australia.)
 
 ## Formal specification

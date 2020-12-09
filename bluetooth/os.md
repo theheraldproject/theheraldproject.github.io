@@ -16,8 +16,8 @@ OS based issues
 
 ## Operating system support
 
-Some older Operating Systems do not support BLE. These handsets are very rare, however, and 
-typically date to early 2010. In the UK less than 2% of mobile phones will have this issue. 
+Some older Operating Systems do not support BLE. These handsets are very rare, however, and
+typically date to early 2010. In the UK less than 2% of mobile phones will have this issue.
 Bluetooth Low Energy support is uniquitous in 2020 in the UK.
 
 ## OS hides underlying bluetooth activity
@@ -27,7 +27,7 @@ Application developers can only request to be notified of devices running specif
 Normally this isn't an issue, but iOS has a bug whereby it does not 'see' other iOS devices
 who are advertising whilst in the background (screen off, app in background, the typical state of
 a contact tracing application). This bug has existed since 2011 when introduced in an iOS update.
-This is not a deliberate privacy feature of iOS. Apple has been notified and is yet to issue a 
+This is not a deliberate privacy feature of iOS. Apple has been notified and is yet to issue a
 fix. (as of Summer 2020, iOS 13.6.1)
 
 Until Apple fix this bug in passing advertising information to applications iOS to iOS direct
@@ -39,15 +39,15 @@ The first workaround is to enable Location services in the application. The app 
 request a GPS location, but having this permission allows the app to subscribe to the 'screen on'
 event. So every time a user looks at their phone (once every 10 minutes according to research)
 the background bluetooth app will be knocked in to foreground mode for 5-10 minutes, allowing direct
-detection. (It should be noted that Android apps have to be given the location permission 
+detection. (It should be noted that Android apps have to be given the location permission
 already just to use Bluetooth, so this is no great barrier in itself)
 
 The other, more reliable and less privacy concerning, mechanism is to use a nearby Android device
-as a relay. iOS devices will see other Android (FG or BG) or foreground iOS devices when 
+as a relay. iOS devices will see other Android (FG or BG) or foreground iOS devices when
 iOS is in the background, just not other
 iOS backgrounded devices. Thus they can exchange identity information with these devices. By leaving
 these 'calling cards', devices can request 'have you seen anyone else nearby in the last few seconds?'
-These nearby identities can be exchanged. 
+These nearby identities can be exchanged.
 
 The remaining challenge is that of distance estimation. Instead of a pairwise single distance with
 error bound you now have two sets of RSSI information - from Phone A to Phone B, and Phone B to Phone C
@@ -64,7 +64,7 @@ distance estimation and so do not represent a degradation of distance estimation
 One-hot encoding (binary)
 New variable hex encoding (iOS 13.5, 13.5.1)
 
-Workaround from android: Ask for services and chars from any device seen (even if not 
+Workaround from android: Ask for services and chars from any device seen (even if not
 decipherable in manufacturers data)
 Workaround in iOS: Write characteristic
 Pairwise iOS workaround: Calling card characteristic
@@ -176,14 +176,14 @@ preventing application authors from making mistakes here.
 Android and iOS Bluetooth OS Stacks will sometimes just fail. This is transparent to the app and does not
 result in any errors thrown - it just provides no data. This requires restart of the phone to fix.
 There are various mitigations to avoid this. This issue is not limited to older phones - it
-happens on all phones and all Android and iOS versions. 
+happens on all phones and all Android and iOS versions.
 
 Herald uses a small subset of Bluetooth standard features that have been tested to be reliable
-in order to ensure this does not happen. 
+in order to ensure this does not happen.
 
-The Herald project have a future feature idea to 
+The Herald project have a future feature idea to
 detect and alert the parent app (and thus the user) when this occurs (E.g. caused by another app
-on the same phone). 
+on the same phone).
 
 ## Some Android devices report capabilities incorrectly
 
@@ -195,15 +195,15 @@ Both of these issues result and exceptions in the Bluetooth stack that, without 
 
 Herald uses heuristics to determine the capabilities of the phone it is running on, and dynamically uses the approach necessary. Herald includes support for phones that do not themselves support advertising, but do support scanning, and vice-versa.
 
-Herald does this by correctly trapping errors or detecting these models the programmer can prevent crashes, but this leaves the problem of one-way detection. (I.e. this device can see other devices, but not be seen as an advertiser). 
+Herald does this by correctly trapping errors or detecting these models the programmer can prevent crashes, but this leaves the problem of one-way detection. (I.e. this device can see other devices, but not be seen as an advertiser).
 
-This in turn can be worked around through a 'write characteristic' allowing these devices to write their identity information and the signal strength they have seen from the advertiser, back to the advertiser. 
+This in turn can be worked around through a 'write characteristic' allowing these devices to write their identity information and the signal strength they have seen from the advertiser, back to the advertiser.
 
 This is like tapping a person on the back to let them know you are there and leaving your business card.
 
 ## Kotlin vs Java differences
 
-For some reason using Kotlin, the default programming language on Android, rather than Java leaves 
+For some reason using Kotlin, the default programming language on Android, rather than Java leaves
 to poor Bluetooth performance and missed callbacks for some state events.
 
 The Herald protocol uses Java for this reason. It can still be used by a Kotlin based application but does not suffer from the performance issues of Kotlin Bluetooth libraries.

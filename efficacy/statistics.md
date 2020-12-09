@@ -37,7 +37,7 @@ that are not based on actual observed usage.
 
 The BBC data on active unique UK phone use collates unique
 access devices that were geolocated via IP address to within the UK. This data lists specific device models
-and their prevalence amongst UK BBC users. This data is not public, but has been provided by the BBC on 
+and their prevalence amongst UK BBC users. This data is not public, but has been provided by the BBC on
 request from the Herald team in Summer 2020. It is the most specific user data available for UK actual phones in use.
 
 You can instead use data from statcounter, but it's less accurate at device make and model that the BBC app data.
@@ -50,9 +50,9 @@ estimate is perfect - the numbers presented are the best estimate possible.
 
 ### Bluetooth Low-Energy support
 
-Below are the number of unique phones in the UK from BBC data that support BLe. 
+Below are the number of unique phones in the UK from BBC data that support BLe.
 
-We then used the [GSM Arena website](https://www.gsmarena.com/) 
+We then used the [GSM Arena website](https://www.gsmarena.com/)
 to determine individuals phones' Bluetooth support.
 
 @startmermaid
@@ -68,7 +68,7 @@ see its advertisement. All phones can scan for advertisements, but not all phone
 an advertiser themselves.
 
 For most other protocols, BOTH phones must support advertising. For Herald,
-only one of a pair of phones must support advertising. This is because Herald uses short lived 
+only one of a pair of phones must support advertising. This is because Herald uses short lived
 connections between devices in order to share information. This allows a Herald device that
 cannot itself advertise to see another phone and 'tap it on the shoulder' and write its
 data to the other phone. This allows Herald to support a wider segment of devices.
@@ -83,7 +83,7 @@ pie title Fig W2. Android 5+ Phones with Advertising support
 "Without advertising" : 47.24
 @endmermaid
 
-When you calculate this up to population level and include iPhones too, you 
+When you calculate this up to population level and include iPhones too, you
 end up with the below chart:-
 
 @startmermaid
@@ -92,7 +92,7 @@ pie title Fig W3. All UK phones with Advertising support
 "Without advertising" : 14.12
 @endmermaid
 
-**NOTE**: This is the source of our '~14% of all phones in use in the UK do not support advertising' statistic 
+**NOTE**: This is the source of our '~14% of all phones in use in the UK do not support advertising' statistic
 quoted on this website.
 
 The statistics from which we draw this information are a little old. It's worth noting though that it's not just 'old phones' that do not support advertising. Many cheaper end Android handsets do not support advertising and so it would be dangerous to assumes that 100% of phones released in the last two years have advertising support, even if 'Full Bluetooth support' is claimed.

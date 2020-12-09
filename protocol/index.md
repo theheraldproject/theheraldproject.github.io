@@ -25,8 +25,8 @@ Note that the Protocol is described here, but the Payload that we are recommendi
 
 ## Highlights
 
-- Supports 98% of UK phones in use. (98% of UK people have a smartphone with Bluetooth Low Energy support.) Source: OFCOM reports [[9]]({{"/efficacy/bibliography#a-9" | relative_url }}) [[10]]({{"/efficacy/bibliography#a-10" | relative_url }}) 
-- Provides 100% detection 
+- Supports 98% of UK phones in use. (98% of UK people have a smartphone with Bluetooth Low Energy support.) Source: OFCOM reports [[9]]({{"/efficacy/bibliography#a-9" | relative_url }}) [[10]]({{"/efficacy/bibliography#a-10" | relative_url }})
+- Provides 100% detection
   - Works around the infamous 'iOS cannot be detected in the background' OS bug in iPhones
 - Provides 93%+ continuity (i.e. takes a distance estimation at least once every 30 seconds)
   - Mean time in testing in a busy (10 phones nearby) environment was under 8 seconds. Mostly under 2 seconds per reading

@@ -18,7 +18,7 @@ What is new is using technology to perform Contact Tracing. A team from Cambridg
 did this for a Flu outbreak in the mid 2000s. This used an older version of Bluetooth
 which was power hungry and so was not more widely adopted at the time.
 
-In 2020 many worldwide teams are developing [Bluetooth Protocols]({{"/protocol" | relative_url }}) to 
+In 2020 many worldwide teams are developing [Bluetooth Protocols]({{"/protocol" | relative_url }}) to
 perform mobile app based contact tracing. This involves having an app running on your
 phone that is constantly talking to other nearby phones during the day. By swapping
 identifiers these phones maintain a virtual, and pseudoanonymous, list of your contacts.
@@ -66,12 +66,12 @@ is certainly a very useful and specific instrument in the hands of a health auth
 ## Problems with mobile contact tracing
 
 Clearly if an app was sharing very personal information like your name and healthcare
-identifier as you were walking around this would be a very big privacy concern. 
+identifier as you were walking around this would be a very big privacy concern.
 Mechanisms have to be used that preserve the privacy of an individual.
 
 Pseudononymous identifers, rotating keys, and encryption are all methods used within
 contact tracing applications. Whether these are associated with any healthcare identifier
-or personal information is a decision best left to particular societies. 
+or personal information is a decision best left to particular societies.
 
 In our
 [Payload]({{"/payload" | relative_url }}) specification we suggest a general payload that can be used for
@@ -88,11 +88,11 @@ versions, that greatly reduce this reach by 30%.
 Also anything electronic has battery life issues. Bluetooth Low Energy since June 2010
 has much lower battery use. It's important to take regular
 distance estimations in a contact tracing app, but also to not do so often
-enough to run the battery down. A full day needs to be supported. 
+enough to run the battery down. A full day needs to be supported.
 [Our protocol]({{"/protocol" | relative_url }}) has been shown to only drain the battery by 6-11% over
 an 8 hour day. That's less battery use than WhatsApp on your phone!
 
-Western countries like the UK have a population where 98% of people own a 
+Western countries like the UK have a population where 98% of people own a
 phone with Bluetooth Low Energy support. In other countries this will be lower, which
 is why manual contact tracing is still important.
 
@@ -143,15 +143,15 @@ location where they can be analysed for such patterns in advance
 - Only first-order contacts can be notified. At the height of a pandemic you may
 wish to reach out to second or third order contacts in order to lock those down
 until they are tested in order to drastically cut the spread of the virus
-[Some studies (PDF, Oxford)](https://github.com/BDI-pathogens/covid-19_instant_tracing/blob/master/Report%20-%20Effective%20Configurations%20of%20a%20Digital%20Contact%20Tracing%20App.pdf) 
+[Some studies (PDF, Oxford)](https://github.com/BDI-pathogens/covid-19_instant_tracing/blob/master/Report%20-%20Effective%20Configurations%20of%20a%20Digital%20Contact%20Tracing%20App.pdf)
 have been done on this and show this can drastically cut the
-spread of a virus. Whilst wide ranging, this would provide a level of control 
+spread of a virus. Whilst wide ranging, this would provide a level of control
 before requiring a full national lock down
-- In a decentralised system you cannot verify that a device saying they are 
+- In a decentralised system you cannot verify that a device saying they are
 infected and have had a myriad of contacts is real, or that a contact graph
 is real. This allows hostile state actors potentially to use devices in particular
 areas to lock down individuals, important buildings/organisations, or as has
-been [reported recently (Website, Forbes)](https://www.forbes.com/sites/michaeldelcastillo/2020/08/27/google-and-apple-downplay-possible-election-threat-identified-in-their-covid-19-tracing-software/) 
+been [reported recently (Website, Forbes)](https://www.forbes.com/sites/michaeldelcastillo/2020/08/27/google-and-apple-downplay-possible-election-threat-identified-in-their-covid-19-tracing-software/)
 prevent them from going to the polls
 - International interoperability - Whilst every government could adopt the same
 physical protocol and thus be technically compatible, it should be noted that
@@ -178,12 +178,12 @@ secure than the pure decentralised approach.
 
 There are several steps. They are as follows:-
 
-- Detection - Seeing another phone running an app, and logging the owners 
+- Detection - Seeing another phone running an app, and logging the owners
 pseudononymous identifier
-- Proximity Ranging - Regularly providing distance estimations during a 
+- Proximity Ranging - Regularly providing distance estimations during a
 Contact Event. The more regularly this is done, the more accurate the risk
 estimation
-- Risk exposure calculation - how much risk has been ocurred 
+- Risk exposure calculation - how much risk has been ocurred
 (a function of distance and time)
 - Tracing - Taken an ill person's log of information and/or identifier
 and using this to calculated the risk of others' exposure to this person,

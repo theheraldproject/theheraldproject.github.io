@@ -16,7 +16,7 @@ Crowding is an issue whereby many Bluetooth enabled devices are in close proximi
 and their pairwise communication becomes so frequent that there is an increase in
 response time to any discovery and phone to phone communication.
 
-In testing an early version of our protocol we found that regularly reading an 
+In testing an early version of our protocol we found that regularly reading an
 ID characteristic as well as a
 distance estimation data characteristic (E.g. nearby ID list) would cause the
 continuity number to drop significantly after 4 phones were communicating.
@@ -27,7 +27,7 @@ This problem occurs most severely on earlier model phones with strange Bluetooth
 behaviours. This is especially true of Samsung A10, A20 and A40 devices. These
 devices rotate their mac address every few seconds rather than every 15 minutes.
 This resulted in our early protocols having to re-read identity information
-every few seconds. The more phones are present, the more of these superfluous 
+every few seconds. The more phones are present, the more of these superfluous
 identity requests were needed.
 
 ### Workaround
@@ -55,7 +55,7 @@ We now use write characteristics wherever possible, and never repeat any reads t
 we don't have to (such as ID reads whilst the remote device has the same mac address).
 This has resulted in an average window size of 1-4 seconds rather than over 8 seconds
 using just read characteristics. It has also removed all longer than 30 second
-responses. 
+responses.
 
 As a result our continuity error rate is much lower now than before by a considerable
 factor.

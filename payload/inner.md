@@ -10,7 +10,7 @@ menubar: docs_menu
 
 # Custom inner payloads
 
-A custom inner payload is designed to work exclusively with the 
+A custom inner payload is designed to work exclusively with the
 [Herald Envelope payload]({{"/payload/envelope" | relative_url }}). If you want a completely
 custom payload, see the [custom outer payload page]({{"/payload/outer" | relative_url }}).
 

@@ -29,7 +29,7 @@ Ensuring the vast majority of the population can use the app, as an interaction 
 
 ### Efficacy
 Ensuring all other app users within 8 metres are detected, and the distance and duration of exposure is accurately captured by the app throughout an encounter of any length. Case isolation decisions are taken based on proximity and duration measurements in magnitudes of minutes and metres (e.g. exposure of 15 minutes at 2 metres). Exposure risk is cumulative, thus an
-infection may stem from one long exposure, or the combination of many short exposures. For this reason, precise measurement of duration, achieved by a high sampling rate, is essential for precise risk estimation. 
+infection may stem from one long exposure, or the combination of many short exposures. For this reason, precise measurement of duration, achieved by a high sampling rate, is essential for precise risk estimation.
 
 Herald will aim to take a sample once every 8 seconds but the sampling rate may degrade to once every 30 seconds when there are many devices in the vicinity. Distance estimation based on RSSI is inaccurate (Leith and Farrell, 2020), although accuracy is improved by taking additional samples, and also the precise translation from RSSI to physical distance remains an active area of research, therefore Herald aims to take as many samples as possible, and delivers the raw RSSI measurements for analysis by the app to take advantage of latest advances in distance estimation.
 

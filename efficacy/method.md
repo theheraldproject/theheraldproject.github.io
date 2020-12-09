@@ -36,7 +36,7 @@ Replicates an office environment with people sat nearby each other.
 
 Set phones up in two to four rows of up to 5 devices per row at a fixed 2m separation, in a grid. Run the test for 30 minutes. Ideally introduce each phone 'fully backgrounded' for Bluetooth in order to prevent bias due to newly interrupted phones (i.e. replicate the 'worst case scenario' rather than 'sunny day' phone activity option). Phones must not be artificially awoken or played with during this test as this could skew the sensor readings.
 
-Proves continuity coverage, continuity, and completeness with multiple measurements per test. 
+Proves continuity coverage, continuity, and completeness with multiple measurements per test.
 
 Run this test for 8 hours in order to gain a relevant longevity measurement.
 
@@ -50,7 +50,7 @@ This test shall be used only for distance accuracy (mean error) calculations.
 
 ### Continuity window test (required if source code not available of detection routine)
 
-A set of pairwise tests shall be carried out in order to establish the actual in-practice window detection size of a given protocol. This is mainly required if the protocol and its test app do not provide the necessary metrics in formal testing as a matter of course. 
+A set of pairwise tests shall be carried out in order to establish the actual in-practice window detection size of a given protocol. This is mainly required if the protocol and its test app do not provide the necessary metrics in formal testing as a matter of course.
 
 This test comprises of two phones with the app running in a radiation shielded environment being introduced for one or more multiples of 30 seconds, and counting how many one way detections occur. Comparing the most common handsets across windows of 30 seconds up to that protocol's declared estimation interval will reveal its actual minimum mean detection time, and the detection time required to guarantee 100% detection.
 

@@ -68,7 +68,7 @@ This has two implications:-
 
 ### Running mean of RSSI values in Bluetooth
 
-During early development the iBeacon API was assessed. This was eventually rejected as it did not allow a mechanism for easily exchanging cryptographic material necessary to ensure privacy and security of a proximity detection protocol, or provide a continuous variable for distance estimation. Whilst attempting to replicate the style of functionality of the iBeacon API in Core Bluetooth on iOS we discovered that a more accurate RSSI value (and thus distance estimation) could be achieved by taking a simple running mean of the last 5 RSSI readings taken. 
+During early development the iBeacon API was assessed. This was eventually rejected as it did not allow a mechanism for easily exchanging cryptographic material necessary to ensure privacy and security of a proximity detection protocol, or provide a continuous variable for distance estimation. Whilst attempting to replicate the style of functionality of the iBeacon API in Core Bluetooth on iOS we discovered that a more accurate RSSI value (and thus distance estimation) could be achieved by taking a simple running mean of the last 5 RSSI readings taken.
 
 Whilst we did not have time to formally assess this improvement it appeared for short ranges to improve accuracy from 30cm to 10cm within a meter. It was also observed in an evaluation application showing both the iBeacon API and our RSSI mean model to respond quicker to changes in distance between devices, and settle down to an accurate value quicker than the iBeacon API itself. We presumed at the time that the iBeacon API must be doing something similar, but with perhaps more readings over a longer period of time.
 

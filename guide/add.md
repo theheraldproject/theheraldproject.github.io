@@ -19,7 +19,7 @@ The process for inserting Herald into your app is similar in concept for both iO
 1. Open ```build.gradle``` for your app and insert the following line.
 
    ```implementation project(':Herald')```
-1. Select ```File > Sync Project with Gradle Files```, the Herald module is now available for use in your project. 
+1. Select ```File > Sync Project with Gradle Files```, the Herald module is now available for use in your project.
 1. Copy ```requestPermissions``` and ```onRequestPermissionsResult``` methods from the ```MainActivity``` of the Herald test app into your main app activity, along with the ```permissionRequestCode``` static variable; call the ```requestPermissions``` method on initialisation of your app to ensure all the required permissions are requested and granted for Herald to function.
 1. Select ```Build > Make Project``` to ensure Herald is able to coexist with your existing app code, resolve any naming clashes and compilation errors now before proceeding to integration.
 
