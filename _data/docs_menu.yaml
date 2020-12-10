@@ -88,7 +88,7 @@
       link: /specs
     - name: Herald Protocol
       link: /specs/protocol
-    - name: Beaacon Payload
+    - name: Beacon Payload
       link: /specs/payload-beacon
     - name: Extended Data Area
       link: /specs/payload-extended

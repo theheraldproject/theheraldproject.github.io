@@ -7,7 +7,7 @@ menubar: docs_menu
 
 # Simple Payload Formal Specification
 
-This page formally specifies the Simple Data Payload.
+This page formally specifies the [Simple Payload]({{"/payload/simple" | relative_url }}).
 
 This specification is a **DRAFT** with a sample reference implementation available in Herald v1.1 for iOS and Android.
 
