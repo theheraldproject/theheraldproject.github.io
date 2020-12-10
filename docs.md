@@ -48,6 +48,14 @@ We are also keen to receive contributions to all of our open source repositories
 
 This project is maintained primarily by VMware personnel and some external contributors in our spare time. We aim to respond to logged issues and emails within 24-28 hours during week days (Monday-Friday) in the UK time zone.
 
+## API documentation
+
+Below are the latest API documentation for each platform:-
+
+- [Android JavaDoc API]({{"/api/android/index.html" | relative_url }})
+- [iOS Swift API]({{"/api/ios/index.html" | relative_url }})
+- C++ - Coming soon
+
 ## Introduction to mobile app based contact tracing
 
 A [layman's introduction]({{"/background" | relative_url }}) to contact tracing and mobile app proximity detection.

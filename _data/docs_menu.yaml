@@ -56,6 +56,8 @@
       link: /guide/
     - name: About the code
       link: /guide/code
+    - name: API docs
+      link: /guide/api
     - name: Import Herald
       link: /guide/add
     - name: iOS app guide
