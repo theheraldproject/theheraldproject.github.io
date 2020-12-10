@@ -15,6 +15,8 @@ Specifications:-
 |Title|Status|Links|
 |---|---|---|
 |Herald Protocol | Implemented | [Overview page]({{"/protocol" | relative_url }}) <br> [Specification HTML]({{"/specs/protocol" | relative_url }}) |
+|Herald Beacon Payload | Draft, Sample implementation | [Overview page]({{"/payload/beacon" | relative_url }}) <br> [Specification HTML]({{"/specs/payload-beacon" | relative_url }}) |
+|Herald Extended Data area Payload | Draft, Sample implementation | [Specification HTML]({{"/specs/payload-extended" | relative_url }}) |
 |Herald Simple Payload | Draft, Sample implementation | [Overview page]({{"/payload/simple" | relative_url }}) <br> [Specification HTML]({{"/specs/payload-simple" | relative_url }}) |
 |Herald Secured Payload | Draft | [Overview page]({{"/payload/secured" | relative_url }}) <br> [Specification HTML]({{"/specs/payload-secured" | relative_url }}) |
 |Herald International Interoperability | Draft | [Overview page]({{"/payload/interop" | relative_url }}) <br> [Specification HTML]({{"/specs/payload-interop" | relative_url }}) |
