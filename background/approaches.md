@@ -1,7 +1,4 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: docs
 title: Technological approaches
 description: Technology approaches to contact tracing
@@ -91,12 +88,13 @@ not awake for many minutes. Creating a custom timer based on OS events allows ap
 to more effectively perform regular timed actions from a main event loop. This in turn
 increases detection and greatly lowers continuity error in our testing.
 
-### Ephemeral ID
+### Pseudo Device Address
 
 Some older Android phones change their network identifiers so often that the airwaves become 
 crowded with communication. We use the advert manufacturer's data area to include an 
-ephemeral ID that changes on the same period as the mac address (15 minutes) to work 
-around this issue.
+ephemeral pseudo device address that changes on the same period as the MAC address (15 minutes) to work 
+around this issue. This is described in detail in the 
+[Herald Formal Protocol Specification]({{"/specs/protocol" | relative_url }}).
 
 ## Additional efficacy approaches
 
@@ -145,3 +143,8 @@ app in a privacy preserving way (compared to handing over your personal details 
 you visit) and allow for automated notification. It also minimises the cost to businesses 
 of assisting with contact tracing, and is likely to increase the number of premises 
 complying with assisting with contact tracing measures.
+
+Herald implements 'check-in' beacon support as of v1.2 (Dec 2020). Please see the
+[Beacon Payload overview]({{"/payload/beacon" | relative_url }}).
+or the [Beacon Payload Formal Specification]({{"/specs/payload-beacon" | relative_url }}).
+for further details.
