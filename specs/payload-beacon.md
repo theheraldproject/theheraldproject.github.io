@@ -169,7 +169,7 @@ A full example for a single Beacon payload is shown below:-
 
 @startmermaid
 graph LR
-  A(Protocol<br>Version<br>1 byte<br>0x30<br>_) --> B(Country<br> <br>2 bytes<br>826<br>_) --> C(State<br> <br>2 bytes<br>1<br>_) --> D(Location<br>Code<br>4 bytes<br>123456<br>_) --> E(Extension<br>Data<br>0-501 bytes<br>As below<br>_)
+  A(Protocol<br>Version<br>1 byte<br>0x30<br>_) --> B(Country<br> <br>2 bytes<br>826<br>_) --> C(State<br> <br>2 bytes<br>1<br>_) --> D(Location<br>Code<br>4 bytes<br>123456<br>_) --> E(Extension<br>Data<br>71 bytes<br>As below<br>_)
   F(Code<br>0x10<br>Premises Name<br>_)-->G(Length<br>19<br>_)-->H(Data<br>Joe's Gourmet Pizza<br>_)
   I(Code<br>0x11<br>Area Name<br>_)-->J(Length<br>14<br>_)-->K(Data<br>Window Seating<br>_)
   L(Code<br>0x13<br>Details URL<br>_)-->M(Length<br>32<br>_)-->N(Data<br>https://someurl.com/venue/123456<br>_)
@@ -243,7 +243,7 @@ graph LR
 
 @startmermaid
 graph LR
-  A(Protocol<br>Version<br>1 byte<br>0x30<br>_) --> B(Country<br> <br>2 bytes<br>826<br>_) --> C(State<br> <br>2 bytes<br>1<br>_) --> D(Location<br>Code<br>4 bytes<br>123456<br>_) --> E(Extension<br>Data<br>0-501 bytes<br>As below<br>_)
+  A(Protocol<br>Version<br>1 byte<br>0x30<br>_) --> B(Country<br> <br>2 bytes<br>826<br>_) --> C(State<br> <br>2 bytes<br>1<br>_) --> D(Location<br>Code<br>4 bytes<br>123456<br>_) --> E(Extension<br>Data<br>71 bytes<br>As below<br>_)
   F(Code<br>0x10<br>Premises Name<br>_)-->G(Length<br>19<br>_)-->H(Data<br>Joe's Gourmet Pizza<br>_)
   I(Code<br>0x11<br>Area Name<br>_)-->J(Length<br>14<br>_)-->K(Data<br>Window Seating<br>_)
   L(Code<br>0x13<br>Details URL<br>_)-->M(Length<br>32<br>_)-->N(Data<br>https://someurl.com/venue/123456<br>_)
