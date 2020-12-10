@@ -12,15 +12,6 @@ protocol and data payloads.
 
 This specification is a **DRAFT**
 
-
-## Contents
-
-**NOTE:** No contents or formal notation as of yet. Placeholder content until formal spec format decided.
-
-## Figures
-
-None
-
 ## Modal verbs terminology
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL 

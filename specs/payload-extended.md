@@ -8,16 +8,11 @@ menubar: docs_menu
 # Payload Extended Data Specification
 
 This page formally specifies the Extended Data Payload. This is referenced in both the
+[Simple Payload Specification]({{"/specs/payload-simple" | relative_url }}) and the
 [Secured Payload Specification]({{"/specs/payload-secured" | relative_url }}) and the
 [Beacon Payload Specification]({{"/payload/payload-beacon" | relative_url }}).
 
 This specification is a **DRAFT**
-
-
-## Contents
-
-**NOTE:** No contents or formal notation as of yet. Placeholder content until formal spec format decided.
-
 
 ## Modal verbs terminology
 

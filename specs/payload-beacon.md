@@ -7,7 +7,8 @@ menubar: docs_menu
 
 # Beacon Payload Formal Specification
 
-This page formally specifies Beacon Data Payload.
+This page formally specifies Beacon Data Payload. View the [introduction to the Beacon Payload]({{"/payload/beacon" | relative_url }})
+for a simpler explanation of the payload.
 
 This specification is a **DRAFT**
 

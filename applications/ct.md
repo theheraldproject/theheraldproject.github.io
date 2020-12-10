@@ -49,6 +49,23 @@ can be used as-is internationally. We recommend the
 [Secured payload]({{"/payload/secured" | relative_url }})
 in this instance.
 
+## Automated check-in (Expected v1.2)
+
+Using the new [Herald Beacon Payload]({{"/payload/beacon" | relative_url }})
+a phone supporting the detection of Herald Beacons (but using ANY contact
+tracing protocol) can build up a diary of check-ins and check-outs from
+venues. 
+
+This means people don't have to remember to scan QR codes for locations which is
+error prone. Multiple beacons can be placed in big venues, hospitals, or company
+campusses with specific area names to provide more fine-grained exposure
+notifications. 
+
+Herald Beacons also track the full time from check-in to check-out
+to minimise false exposure notifications to wrong people who happened to turn up
+on the same day, but at different times and areas within a venue, to people who
+were ill.
+
 ## Wearables (Expected v1.2)
 
 For younger school children without phones, or for the elderly too, a contact

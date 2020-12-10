@@ -13,6 +13,8 @@ that the mobile phone can use to build up a diary of movements.
 This payload provides 'check in' information about the current
 venue. E.g. "John's Italian, Sheffield Road, Chesterfield - Seating section A - website url"
 
+Click here to [View the Formal Specification for the Beacon Payload]({{"/specs/payload-beacon" | relative_url }})
+
 Instead of signing in and filling out a contact tracing form (which many
 people do not bother to fill in) or require the scanning of a QR code at
 a venue (which many people do not do), this history would be built up

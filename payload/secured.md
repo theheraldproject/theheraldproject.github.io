@@ -14,6 +14,8 @@ This example of an [inner payload]({{"/payload/inner" | relative_url }}) that is
 the [Herald envelope payload]({{"/payload/envelope" | relative_url }}) provides additional security and privacy
 guarantees over and above the [Herald simple inner payload]({{"/payload/simple" | relative_url }}) example.
 
+Click here to [View the Formal Specification for the Secured Payload]({{"/specs/payload-secured" | relative_url }})
+
 ![Secured payload data](../images/PayloadSecured.png)
 
 This payload was driven by two somewhat competing desires:-

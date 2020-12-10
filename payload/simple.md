@@ -14,6 +14,8 @@ This inner payload allows for minimum information sharing - just large enough to
 This makes it simple, but it's not as secure as the [Herald Secured payload]({{"/payload/secured" | relative_url }}), and
 really only supports decentralised contact tracing.
 
+Click here to [View the Formal Specification for the Simple Payload]({{"/specs/payload-simple" | relative_url }})
+
 ![Simple payload data](../images/PayloadSimple.png)
 
 In particular the simple payload:-

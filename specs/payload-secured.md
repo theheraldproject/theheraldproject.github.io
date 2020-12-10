@@ -11,12 +11,6 @@ This page formally specifies the [Secured Payload]({{"/payload/secured" | relati
 
 This specification is a **DRAFT**
 
-## Contents
-
-**NOTE:** No contents or formal notation as of yet. Placeholder content until formal spec format decided.
-
-
-
 ## Modal verbs terminology
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL 
