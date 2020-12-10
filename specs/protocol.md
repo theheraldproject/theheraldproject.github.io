@@ -83,9 +83,11 @@ Below are technical terms and abbreviations used throughout this document.
 
 ### Terms
 
-Big Endian - Also known as 'Network Order'. A way of encoding numeric values for transport over data networks. Bluetooth (and most network protocols) are Big Endian.
+**Beacon** - A fixed device in a location that provides location-specific information. May be called a Bluetooth Beacon.
 
-Herald Project - The opensource contributors and maintainers of the Herald website, code, and standards documents.
+**Big Endian** - Also known as 'Network Order'. A way of encoding numeric values for transport over data networks. Bluetooth (and most network protocols) are Big Endian.
+
+**Herald Project** - The opensource contributors and maintainers of the Herald website, code, and standards documents.
 
 ### Symbols
 
