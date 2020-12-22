@@ -185,6 +185,10 @@ data items that are of interest for a check in app:-
 |0x11|Textual short name description of beacon location within premises (E.g. Seating area B)|1+ bytes UTF-8 String|
 |0x12|Textual disambiguation (optional) for beacon area (E.g. Seating Area B - West wall, and Seating area B - East wall). Useful for large rooms such as sports halls, football stadiums, shopping centres/malls.|1+byte UTF-8 String|
 |0x13|Location information URL (optional). MUST be https.|1+ byte UTF-8 URL|
+|0x14|Full Address|1+ byte UTF-8. \n as newline|
+|0x15|Entry Source|1+ byte UTF-8. "ble" for Bluetooth Low Energy (i.e. Beacon)|
+|0x16|Entry Source Version|1+ byte UTF-8. N/A for Herald beacons (See QR codes, below)|
+|0x20|Contact event start time|uint32 seconds since Unix Epoch. May be 'present time' - useful for transmitting time to wearable devices with no external time reference|
 
 The above list of useful Extended Data is NOT exhaustive or authoritative. Please see the Extended Data specification for full details.
 
@@ -222,13 +226,61 @@ See ConcreteBeaconPayload.swift in the herald/sensor/payload/beacon folder for t
 
 A C++ reference implementation is pending. See BP-3 below for a link.
 
+## QR Code system interoperability
+
+There are various manual QR code standards in use for COVID-19 venue contact tracing today. This section
+deals with how those systems map on to this Venue Beacon data standard.
+
+### New Zealand QR Code system.
+
+The details on this system can be found in BP-4 and BP-5.
+
+Note: The New Zealand QR code is a non-standard QR code format that does not follow the existing QR code or GS1 2D barcode standards.
+
+Below is the conversion from a QR code scan in the New Zealand system to a check-in payload as per this document's standard.
+
+|QR Standard field|Equivalent field in the Beacon Payload|Reformatting necessary|
+|---|---|---|
+|N/A|Payload Version=0x30|N/A|
+|N/A|Country=554 (New Zealand), other if deployed elsewhere|N/A|
+|N/A|State=0 (National)|N/A|
+|N/A|ContactID=? MAY be from the location part of GLN, depending how this was assigned by the country/state|uint32 not string|
+|typ|No equivalent||
+|gln|13 characters but exact format and contents may vary by assigned code segment size|UTF-8|
+|opn|Extended 0x10 (Premises Name)|UTF-8|
+|adr|Extended 0x14 (Full Address)|UTF-8, Newline is \n|
+|N/A|0x15 (Entry Source)|"qr" as UTF-8, lowercase|
+|ver|0x16 (Entry Source Version)|As ver (E.g. "c19-1"), UTF-8|
+
+Check-in date time shall be maintained by the app, not the payload data area.
+
+Check-in and check-out times MUST be the seconds since UNIX epoch encoded as a uint32.
+
+Check-out time shall be nil/null/not present for a QR code 'check-in', as check-outs are not supported and MUST NOT be specified for a QR code check-in. 
+
+Such a check-in record MUST NOT be marked as 'closed' as a result. (As there is no confirmed check-out time.)
+
+Applications MAY allow a user to specify a check-out time manually as an edit to their venue diary. Such edited records SHOULD mark the relevant venue event as 'closed' (Now there is a check-in and check-out time)
+
+## Data upload standard
+
+Binary data area as for the above standard, but with these additional fields:-
+
+|Extended data field ID|Meaning|Mandatory|Example|
+|---|---|---|---|
+|0x20|(Contact) Event start time|Yes|1608062077 (Tue 15 Dec 2020 ~19:54)|
+|0x21|(Contact) Event end time|Yes, if known (and event 'closed')|Same format as above|
+
+
 ## Annex A (Informative): Bibliography
 
 Links to prior art and further reading
 
 - BP-1: Android reference implementation - Coming soon
-- BP-2: iOS reference implementation - Coming soon
-- BP-3: C++ reference implamanetation - Coming soon
+- BP-2: [iOS reference implementation - partial](https://github.com/vmware/herald-for-ios/blob/develop/herald/herald/Sensor/Payload/Beacon/BeaconPayloadDataSupplier.swift) [External, GitHub]
+- BP-3: C++ reference implemanetation - Coming soon
+- BP-4: [New Zealand COVID-19 data standards](https://www.health.govt.nz/publication/hiso-100852020-covid-19-contact-tracing-data-standard) [External]
+- BP-5: [New Zealand QR code data standard](https://www.health.govt.nz/system/files/documents/publications/covid-19_contact_tracing_qr_code_specification_25_may_2020.pdf) [External, PDF]
 
 ## Annex B (Informative): Figures 
 
@@ -254,4 +306,6 @@ graph LR
 
 |Date|Author|Change summary|
 |---|---|---|
+|2020-12-22|[Adam Fowler](https://github.com/adamfowleruk/)|Added information from GS1 body discussions|
+|2020-12-15|[Adam Fowler](https://github.com/adamfowleruk/)|Added NZ QR code interoperability guidance|
 |2020-12-09|[Adam Fowler](https://github.com/adamfowleruk/)|New payload fully documented (Ready for Herald v1.2)|

@@ -121,6 +121,15 @@ I.e. 0 byte length extended segments are omitted.
 |0x11|Textual short name description of beacon location within premises|1+ bytes UTF-8 String|Seating Area B|
 |0x12|Textual disambiguation (optional) for beacon area. Useful for large rooms such as sports halls, football stadiums, shopping centres/malls.|1+byte UTF-8 String|East Wall or West Wall|
 |0x13|Location information URL (optional). MUST be https.|1+ byte UTF-8 URL|https://www.someurl.com/myvenue|
+|0x14|Full Address|1+ byte UTF-8. \n as newline|121 High Street\nScunthorpe|
+|0x15|Entry Source|1+ byte UTF-8|"ble" for Bluetooth Low Energy (i.e. Beacon)|
+|0x16|Entry Source Version|1+ byte UTF-8|N/A for Herald beacons (See QR codes in Beacon standard)|
+|0x17|Location company ID (For register in 'Country' and 'State')|1+ byte UTF-8 or numeric, as per country/state standard|Variable|
+|0x18|Location company ID (GS1 only)|uint32|9012345|
+|0x19|Reserved for future Herald standard use|
+|0x20|Contact event start time|uint32 seconds since Unix Epoch. May be 'present time' - useful for transmitting time to wearable devices with no external time reference|1608062077 (Tue 15 Dec 2020 ~19:54)|
+|0x21|(Contact) Event end time|uint32 unix epoch seconds|Same example as above|
+|0x22<br>-<br>-0x3D|Reserved for future Herald standard use|
 |0x3E|Indicates the following data is encrypted for decryption by the originating phone|1+ bytes, binary|
 |0x3F|Indicates the following data is encrypted for decryption by the originating phone’s health service/authority|1+ bytes, binary|
 |0x40<br>-<br>0x7F|Reserved for future Herald standard use|
@@ -143,6 +152,7 @@ The below figures are also shown inline within the standard document.
 
 |Date|Author|Change summary|
 |---|---|---|
+|2020-12-15|[Adam Fowler](https://github.com/adamfowleruk/)|Added additional entries from Beacon standard|
 |2020-12-09|[Adam Fowler](https://github.com/adamfowleruk/)|Existing payload fully documented (Valid for Herald v1.1)|
 |2020-12-05|[Adam Fowler](https://github.com/adamfowleruk/)|Initial draft content|
 
