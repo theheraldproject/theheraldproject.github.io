@@ -5,3 +5,7 @@ _site
 vendor
 
 .DS_Store
+
+git-template
+sync.sh
+
