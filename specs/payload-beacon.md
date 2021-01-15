@@ -278,7 +278,7 @@ Links to prior art and further reading
 
 - BP-1: Android reference implementation - Coming soon
 - BP-2: [iOS reference implementation - partial](https://github.com/vmware/herald-for-ios/blob/develop/herald/herald/Sensor/Payload/Beacon/BeaconPayloadDataSupplier.swift) [External, GitHub]
-- BP-3: C++ reference implemanetation - Coming soon
+- BP-3: [C++ reference implemanetation](https://github.com/vmware/herald-for-cpp/blob/develop/herald/src/payload/beacon/beacon_payload_data_supplier.cpp) [External, GitHub]
 - BP-4: [New Zealand COVID-19 data standards](https://www.health.govt.nz/publication/hiso-100852020-covid-19-contact-tracing-data-standard) [External]
 - BP-5: [New Zealand QR code data standard](https://www.health.govt.nz/system/files/documents/publications/covid-19_contact_tracing_qr_code_specification_25_may_2020.pdf) [External, PDF]
 
