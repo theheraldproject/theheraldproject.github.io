@@ -107,7 +107,7 @@ I.e. 0 byte length extended segments are omitted.
 
 |Code|Description|Format and size|Example|
 |---|---|---|---|
-|0x00|Extension data area format version ID (assume “1” if not present).|uint8|
+|0x00|Extension data area format version ID (assume “1” if not present). First field, if present.|uint8|
 |0x01|RSSI description.|1 byte hex| 0x00 = raw<br>0x01 = sample mean<br>0x02 = running mean<br>0x03 = sample mode<br>0x04 = running mode|
 |0x02|RSSI error bound - Expressed as +/- RSSI.|uint8|3|
 |0x03|Sonar range estimate - decimal metres (size = type of float, use C++ standard types).|Float. E.g. float-32 or float-64|6.54|
@@ -132,9 +132,12 @@ I.e. 0 byte length extended segments are omitted.
 |0x22<br>-<br>-0x3D|Reserved for future Herald standard use|
 |0x3E|Indicates the following data is encrypted for decryption by the originating phone|1+ bytes, binary|
 |0x3F|Indicates the following data is encrypted for decryption by the originating phone’s health service/authority|1+ bytes, binary|
-|0x40<br>-<br>0x7F|Reserved for future Herald standard use|
-|0x80<br>-<br>0xFF|Custom country / application use|
-
+|0x40|Your last RSSI|int8_t|-56|
+|0x41|Your last txPower|uint8_t|12|
+|0x42|My phone model|utf-8|iPhone7,2|
+|0x43<br>-<br>0x7F|Reserved for future Herald standard use|
+|0x80<br>-<br>0xFE|Custom country / application use|
+|0xFF|Extended code length. Switches to X byte length for field codes. Reserved for future use.|
 
 
 
@@ -152,6 +155,7 @@ The below figures are also shown inline within the standard document.
 
 |Date|Author|Change summary|
 |---|---|---|
+|2021-01-18|[Adam Fowler](https://github.com/adamfowleruk/)|Added phone metadata fields|
 |2020-12-15|[Adam Fowler](https://github.com/adamfowleruk/)|Added additional entries from Beacon standard|
 |2020-12-09|[Adam Fowler](https://github.com/adamfowleruk/)|Existing payload fully documented (Valid for Herald v1.1)|
 |2020-12-05|[Adam Fowler](https://github.com/adamfowleruk/)|Initial draft content|

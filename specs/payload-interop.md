@@ -570,6 +570,7 @@ TODO
 
 |Date|Author|Change summary|
 |---|---|---|
+|2021-01-18|[Adam Fowler](https://github.com/adamfowleruk/)|Added Bluetrace encoding example to Annex|
 |2020-12-22|[Adam Fowler](https://github.com/adamfowleruk/)|Issues and basic mechanism documented (Valid for Herald v1.2)|
 |2020-12-04|[Adam Fowler](https://github.com/adamfowleruk/)|Initial draft content|
 
@@ -588,7 +589,55 @@ TODO
 |0x38-0x7F|Unassigned but reserved||
 |0x80-0x87|GAEN - Advertisement only|No header, fixed 16 byte data payload (Chirp)|
 |0x88-0x8F|Robert (France) - Connection based only|No header, data payload TBC|
-|0x90-0x97|Open Trace - Connection based only|No header, data payload TBC. Many variants with different data payloads. (E.g. Singapore, Australia)|
+|0x90-0x97|Open Trace - Connection based only|No header, data payload TBC. Many variants with different data payloads. (E.g. Singapore, Australia) 0x90=standard bluetrace encoding, 0x91=Herald binary encoding (See annex E)|
 |0x98-0x9F|DP3T - Advertisement only|No header, 2 byte data payload (TBC)|
 |0xA0-0xA7|PACT (MIT) - Advertisement only|No header, fixed 28 byte data payload (Chirp)|
 |0xA8-0xFF|Unassigned but reserved||
+
+## Annex E: Herald payload encoding examples
+
+To aid implementors below are examples of the Herald payload encoding for a variety of DCT payloads types.
+
+### Bluetrace: Basic encoding
+
+This encoding uses the same over the air format as standard BlueTrace, but prepends the data with
+a Herald DCT header.
+
+An example is below:-
+
+@startmermaid
+graph LR
+  A(Protocol<br>Version<br>1 byte<br>0x90<br>_) --> B(Country<br> <br>2 bytes<br>826<br>_) --> C(State   <br> <br>2 bytes<br>4<br>_) --> D(Length<br>uint16_t<br>2 bytes<br>55<br>_) --> D2(Base64 Data<br>String with uint16 length<br>3+ bytes<br>53, BD7GJW9FG...<br>_) --> E(Extension<br>Data<br>0+ bytes<br>As below<br>_)
+  I(None by default<br>_)
+@endmermaid
+
+Note: It is valid to also use the extended fields here. Hence the two 'length' fields, above
+
+### Bluetrace: Binary encoding
+
+This encoding maps BlueTrace fields on to Herald fields, and greatly reduces the overall
+over the air and storage data size requirements for no loss of data.
+
+Firstly we map BlueTrace fields on to Herald fields.
+
+|Bluetrace JSON field|Equivalent Herald field|
+|---|---|
+|v (version) E.g. v2|Protocol Version E.g. 0x91 (up to 0x97)|
+|org E.g. GB_en|Country and State code E.g. 826 and 4|
+|txPower|Extended 0x41 - txPower field|
+|rssi|Extended 0x40 - rssi field|
+|modelC E.g. iPhone6|Extended 0x42 model code E.g. iPhone7,2 (This is the manufacturer code for iPhone6)|
+
+The final binary representation will be around 27 bytes, depending on ID and phone model length, as in the below figure:-
+
+@startmermaid
+graph LR
+  A(Protocol<br>Version<br>1 byte<br>0x91<br>_) --> B(Country<br> <br>2 bytes<br>826<br>_) --> C(State   <br> <br>2 bytes<br>4<br>_) --> D(Length<br>uint16_t<br>2 bytes<br>22<br>_) --> D2(ID<br>String with uint16 length<br>10 bytes<br>8, AB123456<br>_) --> E(Extension<br>Data<br>15 bytes<br>As below<br>_)
+  I(Code<br>0x40<br>Your RSSI<br>_)-->J(Length<br>1<br>_)-->K(int8_t<br>-56<br>_)
+  F(Code<br>0x41<br>Your TxPower<br>_)-->G(Length<br>2<br>_)-->H(uint16_t<br>12<br>_)
+  L(Code<br>0x42<br>My Device Model<br>_)-->M(Length<br>9<br>_)-->N(utf-8<br>iPhone7,2<br>_)
+@endmermaid
+
+Note: You may also wish to include fields 0x01 (RSSI method - raw, mean, etc) and 0x02 (Error bound +/- uint8).
+See the [Payload Extended Specification]({{"/specs/payload-extended" | relative_url }}) for details.
+
