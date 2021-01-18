@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/herald/css/styles.css?1610982289774457475">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Secured Payload Specification">
+<meta name="author" content="Herald Authors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Secured Payload Specification">
+<meta property="og:description" content="Secured Payload Specification">
+<link rel="canonical" href="https://vmware.github.io/herald/specs/payload-secured">
+<meta property="og:url" content="https://vmware.github.io/herald/specs/payload-secured">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"description":"Secured Payload Specification","url":"https://vmware.github.io/herald/specs/payload-secured","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://vmware.github.io/herald/herald/img/herald.png"},"name":"Herald Authors"},"author":{"@type":"Person","name":"Herald Authors"},"headline":"Secured Payload Specification","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Secured Payload Specification</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="logo">
+            <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+        </div>
+        <ul class="nav-menu" id="header-nav">
+            <li class="home"><a href="/herald/" title="Herald Project">Home</a></li>
+            <li class="blog"><a href="/herald/blog" title="Blog Posts">Blog</a></li>
+            <li class="community"><a href="/herald/community" title="Community">Community</a></li>
+            <li class="docs"><a href="/herald/docs">Documentation</a></li>
+            <li class="efficacy"><a href="/herald/efficacy" title="Efficacy Paper">Efficacy Paper</a></li>
+        </ul>
+        <div class="nav-mobile-link">
+            <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Secured Payload Specification</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-3">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>Introduction</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/docs">Our documentation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Applications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/applications">Herald Applications</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/ct">Contact Tracing</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/p2p">Device to Device</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/mesh">Bluetooth Mesh Gateways</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Protocol</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/protocol/">About our protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/protocol/custom">Non contact tracing uses</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Design Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/design/">Herald's Design</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/core">Core philosophy</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/data">Data used</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/protocol">Protocol lifecycle</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/summary">Design summary</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Payloads</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/payload">About Payloads</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/envelope">Herald Envelope Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/interop">Interoperability</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/common">Herald Common CT Inner Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/simple">Herald Simple Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/secured">Herald Secured Inner Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/beacon">Herald Beacon Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/inner">Herald-compatible Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/outer">Custom outer &amp; inner payloads</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Development &amp; Integration Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/guide/">How to integrate</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/code">About the code</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/api">API docs</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/add">Import Herald</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/ios">iOS app guide</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/android">Android app guide</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>About Contact Tracing</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/background">What is Contact Tracing?</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/background/glossary">Glossary of terms</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/background/approaches">Technology Approaches</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Bluetooth Research</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/bluetooth">Our Research</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/hardware">Hardware Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/os">Operating System Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/crowding">Crowding</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/distance">Distance Estimation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Formal Specifications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/specs">List and status</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/protocol">Herald Protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-beacon">Beacon Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-extended">Extended Data Area</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-simple">Simple Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-secured">Secured Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-interop">International Interoperability</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-8 offset-md-1">
+                
+
+  
+
+                <h1 id="secured-payload-specification">Secured Payload Specification</h1>
+
+<p>This page formally specifies the <a href="/herald/payload/secured">Secured Payload</a>.</p>
+
+<p>This specification is a <strong>DRAFT</strong></p>
+
+<h2 id="modal-verbs-terminology">Modal verbs terminology</h2>
+
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
+NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”,  “MAY”, and
+“OPTIONAL” in this document are to be interpreted as described in
+<a href="https://tools.ietf.org/html/rfc2119">RFC 2119</a>.</p>
+
+<p>Note that these terms apply whether they are uppercase or lowercase
+and no matter what styles are applied to the phrases.</p>
+
+<h2 id="executive-summary">Executive summary</h2>
+
+<h2 id="introduction">Introduction</h2>
+
+<h2 id="scope">Scope</h2>
+
+<p>What is in scope</p>
+
+<p>What is out of scope</p>
+
+<h2 id="references">References</h2>
+
+<h3 id="normative-references">Normative references</h3>
+
+<p>References are either specific (identified by date of publication and/or edition number or version number) or non specific. For specific references,only the cited version applies. For non-specific references, the latest version of the referenced document (including any amendments) applies.</p>
+
+<p>The following referenced documents are necessary for the application of the present document.</p>
+
+<h3 id="information-references">Information references</h3>
+
+<p>References are either specific (identified by date of publication and/or edition number or version number) or non specific. For specific references,only the cited version applies. For non-specific references, the latest version of the referenced document (including any amendments) applies.</p>
+
+<p>The following referenced documents are not necessary for the application of the present document but they assist the user with regard to a particular subject area.</p>
+
+<h2 id="definition-of-terms-symbols-and-abbreviations">Definition of terms, symbols and abbreviations</h2>
+
+<h3 id="terms">Terms</h3>
+
+<p><strong>Beacon</strong> - A fixed device in a location that provides location-specific information. May be called a Bluetooth Beacon.</p>
+
+<p><strong>Big Endian</strong> - Also known as ‘Network Order’. A way of encoding numeric values for transport over data networks. Bluetooth (and most network protocols) are Big Endian.</p>
+
+<p><strong>Herald Project</strong> - The opensource contributors and maintainers of the Herald website, code, and standards documents.</p>
+
+<h3 id="symbols">Symbols</h3>
+
+<h3 id="abbreviations">Abbreviations</h3>
+
+<h2 id="payload-design-constraints">Payload Design Constraints</h2>
+
+<p>The below are the constraints placed on the design of the system that the rest of this standard is defined within.</p>
+
+<h2 id="overview-of-roles-in-transmission">Overview of Roles in transmission</h2>
+
+<p>The detailed explanation is below:-</p>
+
+<p>The <a href="/herald/background/glossary">Transmitting</a> phone know:-</p>
+
+<ul>
+  <li>It’s own master identity symmetric key/UUID (Agreed via Diffie-Hellman-Merkle with healthcare central system)</li>
+  <li>It’s health authorities public key for any given day</li>
+  <li>It’s own ephemeral (Bluetooth) pubic/private key pair for this single exchange</li>
+  <li>It’s own exposure confirmation public/private key pair for this day</li>
+  <li>It’s own persistent UUID</li>
+  <li>It’s own geo-approximator (E.g. postal district in the UK - 10000 households on average)</li>
+  <li>It’s own phone make and model identifier string</li>
+  <li>The receiver’s ephemeral public key for this single exchange</li>
+</ul>
+
+<p>The <a href="/herald/background/glossary">Receiving</a> phone knows:-</p>
+
+<ul>
+  <li>The transmitter’s ephemeral public key</li>
+  <li>The transmitter provided exposure service token for the transmitter’s health authority, which it cannot decrypt, secured with the daily server public key, which includes:-
+    <ul>
+      <li>Transmitter’s persistent UUID (16 bytes)</li>
+      <li>Geo-approximator for the transmitter (4 bytes)</li>
+      <li>Transmitter phone make and model identifier (8 bytes)</li>
+      <li>TOTP token for the transmitter’s persistent UUID (4 bytes)</li>
+    </ul>
+  </li>
+  <li>The transmitter provided exposure confirmation service token, which it cannot decrypt, can only be decrypted by the transmitter’s confirmation private key, but which contains:-
+    <ul>
+      <li>ClientID of the receiver (16 bytes)</li>
+    </ul>
+  </li>
+  <li>The transmitter’s country and state codes (allowing passing of exposure data to this health authority)</li>
+</ul>
+
+<p>The Transmitter’s health authority knows, from the transmitter:-</p>
+
+<ul>
+  <li>The transmitter’s master identity symmetric key/UUID (agreed via Diffie-Hellman-Merkle)</li>
+  <li>It’s own daily exposure submission public/private key pair</li>
+</ul>
+
+<p>The Receiver’s health authority knows, from the receiver:-</p>
+
+<ul>
+  <li>The transmitter’s exposure service token, for this receiver at this time, which it cannot decrypt</li>
+  <li>The transmitter’s exposure confirmation token, for this receiver at this time, which it cannot decrypt</li>
+  <li>The transmitter’s country and state codes (allowing passing of exposure data to this health authority)</li>
+  <li>The date (and potentially time - NOT recommended) of the contact as observed by the receiver (optional, depends on receiver’s app configuration)</li>
+  <li>Optionally (but NOT recommended - here in case of a bad actor country using the payload) the transmitter’s ephemeral public key as observed by the receiver, which is why this should be rotated per contact</li>
+  <li>Date of contact and its distance RSSI info</li>
+</ul>
+
+<p>The transmitter’s health authority is told by the receiver’s health authority:-</p>
+
+<ul>
+  <li>Receiver phone make and model only</li>
+  <li>Transmitter’s exposure service token, and decrypts it, revealing:-
+    <ul>
+      <li>Transmitter’s persistent UUID (which it CANNOT identify the owner of)</li>
+      <li>Geo-approximator for the transmitter</li>
+      <li>Transmitter phone make and model identifier</li>
+      <li>TOTP token for the transmitter’s persistent UUID</li>
+    </ul>
+  </li>
+  <li>Transmitter’s exposure confirmation token, which it cannot decrypt</li>
+</ul>
+
+<p>The transmitter’s health authority posts the below to all phones it manages (MUST BE WITHIN 30 MINUTES):-</p>
+
+<ul>
+  <li>Transmitter’s exposure confirmation token</li>
+  <li>Date of the contact event</li>
+  <li>Risk accrued score associated with it</li>
+  <li>TOTP token for the transmitter’s persistent UUID</li>
+  <li>Date time this data was posted</li>
+</ul>
+
+<p>The transmitter can now:-</p>
+
+<ul>
+  <li>Recognise and decrypt its own exposure confirmation token, extracting:-
+    <ul>
+      <li>Country Code, State Code, ClientID of the receiver, which it verifies the date and time of with its history record</li>
+      <li>Transmission datetime from unix epoch</li>
+    </ul>
+  </li>
+  <li>Verify that the server decrypted TOTP for it’s persistent UUID matches the time of the exposure confirmation token (thus verifying ALL THREE participants, transmitter, receiver, transmitter health authority)</li>
+  <li>Use the risk score to calculate the locally acrued risk for a given date/set of days, and see whether it breaches the risk threshold</li>
+  <li>Notify it’s health authority that they have breached the risk threshold, ideally not immediately after receiving the latest exposures keys (MUST be within 3hrs 30 mins, and should take the posting date time in to account)
+    <ul>
+      <li>May also share the person’s total risk score for the last 7-14 days</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Other receiving phones receive from the exposure download list:-</p>
+
+<ul>
+  <li>Date and time the exposure list was last updated</li>
+  <li>Transmitter’s exposure confirmation token, which it cannot decrypt</li>
+  <li>Contact event date</li>
+  <li>Risk score for this unknown transmitter in the contact event</li>
+  <li>TOTP token for the transmitter’s persistent UUID, which it cannot use as it doesn’t know the associated transmitter persistent UUID</li>
+</ul>
+
+<p>A random bluetooth sniffer sees:-</p>
+
+<ul>
+  <li>Date and time the transmission was intercepted</li>
+  <li>Ephemeral public keys for receiver and transmitter, which it cannot use as it doesn’t have the private keys</li>
+  <li>Encrypted data exchanges between the two phones, including the health exposure service token and exposure confirmation token, which it cannot decrypt</li>
+  <li>Country and State code for receiver and transmitter</li>
+  <li>Any random Bluetooth data being advertised by that phone (E.g. 15 min rotating BLE mac address, “Adam’s iPhone” name, FindMyPhone or other manufacturer specific data)
+    <ul>
+      <li>On some phones this includes the TX power of the advertiser (transmitter)</li>
+    </ul>
+  </li>
+  <li>It can calculate it’s own RSSI to each device, but not see the RSSI between the two devices</li>
+</ul>
+
+<h2 id="assumptions">Assumptions</h2>
+
+<p>Health authority and mobile device have a way to rotate and fetch server public/private keys and symmetric key exchange should the server keys become compromised.
+This is down to the national health authority to implement in their own app.</p>
+
+<h2 id="what-attacks-does-this-prevent">What attacks does this prevent?</h2>
+
+<ul>
+  <li>Westminster/hospital attack - Where a state actor can generate a large set of fake device 
+registrations and intercept a set of identifiers that it claims it, itself, received. This
+prevents locking down of specific, targetted, areas so long as a large ‘spike’ of
+notifications from a single source is trapped.</li>
+  <li>Relay attacks - cannot work as the entire contact chain is verified by the transmitter</li>
+  <li>Replay attacks - Comms are encrypted, and pub/priv keys are one time use, preventing valid replays</li>
+  <li>Compromise of networking between mobile and its health authority. E.g. impersonation of network device in the chain, post registration</li>
+</ul>
+
+<h2 id="where-did-this-idea-come-from">Where did this idea come from?</h2>
+
+<p>A mix of :-</p>
+
+<ul>
+  <li>Kerberos (<a href="https://tools.ietf.org/html/rfc4120">RFC 4120 (external link)</a>); and</li>
+  <li>Time base one time password - TOTP (<a href="https://tools.ietf.org/html/rfc6238">RFC-6238 (external link)</a>); and</li>
+  <li>Diffie-Hellman-Merkle key agreement (<a href="https://tools.ietf.org/html/rfc2631">RFC-2631 (external link)</a>).</li>
+</ul>
+
+<p>Diffie-Hellman-Merkle should be used over an encrypted channel between each mobile phone app and its health authority to exchange cryptographic material between
+mobile and health authority servers that allow a mutually agreed symmetric key to be created without interception. This key is used
+to secure all communication between mobile and health server, like a password, but instead of directly being used should be used with TOTP to generate a one time use key per request. 
+This prevents well funded actors breaking Diffie-Hellman-Merkle protected exchanges through pre-calculation of factors as they do not know the mutually agreed epoch.
+In the same way a client UUID can be generated.</p>
+
+<p>Optionally, in a very centralised system with lower privacy guarantees, the rotation key (TOTP password) derived from this symmetric key is used as the transmitter persistent UUID (NOT the bluetooth ClientID).
+This should not be necessary, however, as all epidemiological data is provided without this needing to be done.</p>
+
+<p>Time based one-time password is used in several areas, but with different source material:-</p>
+
+<ul>
+  <li>To secure comms between a mobile device and its health authority server directly</li>
+  <li>To generate a one time use exposure confirmation code allowing a mobile device to verify any received exposure keys</li>
+  <li>To provide the transmitter’s health authority, via the receiver and its health authority, with an encrypted verification code, allowing receiver and server to be verified in the eyes of the transmitter when an exposure notification is received</li>
+</ul>
+
+<p>Kerberos was used as inspiration for the method of token passing and validation without 
+communication between the health authority and trasmitter each time (and thus loss of privacy). 
+The difference here is that each transmitter, NOT the health authority server, acts as its 
+own authentication authority, and treats the health authority it belongs to as a ‘Service’ 
+provider (hence the term exposure service token).</p>
+
+<p>The transmitter also treats itself as a service 
+provider, so it can verify the exposure record later on.
+The receiver phone is regarded as a ‘client’ of both the transmitter and health 
+authority exposure notification service.</p>
+
+<h2 id="extensions">Extensions</h2>
+
+<p>Given that enough contact graph data is known by the health authority it would 
+be possible for it to identify asymptomatic people and super spreaders.
+In this scenario the health authority would have to add a different 
+notification list where the exposure confirmation token was verifiable
+as being from the health authority server.</p>
+
+<p>This would of course potentially
+identify this transmitter as the hitherto anonymous end of the contact graph, 
+identifying both ends of the contact event and linking the persistent UUID 
+forever to a known real transmitting device, if both transmitter and receiver are 
+from the same health authority.</p>
+
+<p>It is important, therefore, that when an app becomes aware of being dangerously exposed,
+or notified that its user could be a super spreader, that it doesn’t immediately
+declare itself as in this state. It should lag this status update by a random time period
+of up to 30 minutes.</p>
+
+<h2 id="annex-a-informative-bibliography">Annex A (Informative): Bibliography</h2>
+
+<p>Links to prior art and further reading</p>
+
+<h2 id="annex-b-informative-figures">Annex B (Informative): Figures</h2>
+
+<p>The below figures are also shown inline within the standard document.</p>
+
+<p>Figure 1. Secured Payload Contents</p>
+
+<p><img src="/herald/images/PayloadSecured.png" alt="Secured payload data"></p>
+
+<p>Figure 2. Extension Data Area Contents</p>
+
+<p><img src="/herald/images/PayloadExtensionData.png" alt="Secured payload extension data"></p>
+
+<p>Figure 3. Knowledge graph</p>
+
+<p><img src="/herald/images/PayloadSecuredGraph.png" alt="Secured payload knowledge graph"></p>
+
+<h2 id="annex-c-informative-change-history">Annex C (Informative): Change History</h2>
+
+<p>The below is the version history:-</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Author</th>
+      <th>Change summary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2020-12-03</td>
+      <td><a href="https://github.com/adamfowleruk/">Adam Fowler</a></td>
+      <td>Initial very draft content</td>
+    </tr>
+  </tbody>
+</table>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/herald/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldBluetooth">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://herald-bluetooth.slack.com/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/vmware/?q=herald">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            © 2021 Herald Authors.
+            <a href="http://vmware.github.io/" class="vm-logo">A VMware-backed project. <img src="/herald/img/vm-logo.png" alt="VMware logo"></a>
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/herald/js/jquery.matchHeight.js?1610982289774457475"></script>
+<script src="/herald/js/scripts.js?1610982289774457475"></script>
+    </div>
+  </div>
+</body>
+
+</html>

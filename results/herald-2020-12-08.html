@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/herald/css/styles.css?1610982289774457475">
+  <title>Herald Project Herald App (Herald Protocol) Results 2020-12-08</title>
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Herald App (Herald Protocol) Results 2020-12-08 | Herald Project</title>
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Herald App (Herald Protocol) Results 2020-12-08">
+<meta name="author" content="Herald Authors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Herald App Formal Tests">
+<meta property="og:description" content="Herald App Formal Tests">
+<link rel="canonical" href="https://vmware.github.io/herald/results/herald-2020-12-08">
+<meta property="og:url" content="https://vmware.github.io/herald/results/herald-2020-12-08">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"description":"Herald App Formal Tests","url":"https://vmware.github.io/herald/results/herald-2020-12-08","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://vmware.github.io/herald/herald/img/herald.png"},"name":"Herald Authors"},"author":{"@type":"Person","name":"Herald Authors"},"headline":"Herald App (Herald Protocol) Results 2020-12-08","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body id="">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="logo">
+            <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+        </div>
+        <ul class="nav-menu" id="header-nav">
+            <li class="home"><a href="/herald/" title="Herald Project">Home</a></li>
+            <li class="blog"><a href="/herald/blog" title="Blog Posts">Blog</a></li>
+            <li class="community"><a href="/herald/community" title="Community">Community</a></li>
+            <li class="docs"><a href="/herald/docs">Documentation</a></li>
+            <li class="efficacy"><a href="/herald/efficacy" title="Efficacy Paper">Efficacy Paper</a></li>
+        </ul>
+        <div class="nav-mobile-link">
+            <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+            <h1>Herald App (Herald Protocol) Results 2020-12-08</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+            <h1 id="2020-12-08">2020-12-08</h1>
+
+<p>A formal test on 4 phones (2 iOS, 2 Android) carried out on 8 Dec 2020 by Adam Fowler of the Herald Protocol development team as a pre-release test for Herald v1.2.0-beta2. These are the same 4 phones used for all Herald minor version and beta version performance regression tests.</p>
+
+<p>Herald v1.2.0-beta2 made improvements in connection efficiency for both iOS and Android. Changes were also introduced to reduce overhead of the demonstration app user interface during background tests.</p>
+
+<p>This resulted in only a single 30 second window being missed between the 4 phones in the test during a full 12 hour period. Mean time between RSSI readings has also been reduced from &lt;= 4.39s to &lt;= 1.44s. Battery usage was 1.9%, 2.2%, and 2.5% per hour for the Samsung A10, A20, and iPhone 6+. The log revealed the iPhone 6S battery is faulty and near end-of-life as it drains in steps (see battery chart below), therefore it is excluded from battery usage analysis.</p>
+
+<p>The test was deliberately ran on known problem phones. A Samsung A10 on Android 29, Samsung A20 on Android 28, iPhone 6+ on iOS 12.4.5, and iPhone 6S on iOS 12.1.4. The Samsung A10 and A20 both rotate their BLE MAC address every few seconds, and the iPhones 6+ and 6S are test devices with worn batteries that have been in use since 2014 and 2015. The raw log data is available <a href="/herald/results/herald-2020-12-08/20201208.zip">here</a> for analysis and inspection.</p>
+
+<p>Completeness has not been recalculated, but is likely to be higher. We have used the current known value for this until a full 10 device test can be ran.</p>
+
+<h2 id="results">Results</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Measure</th>
+      <th>Result</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Overall Efficacy</td>
+      <td><b>41.35%</b></td>
+      <td>
+<b>Effective</b><br>(UK MAX 46.57%)</td>
+    </tr>
+    <tr>
+      <td><i>Probability of detection</i></td>
+      <td>94.37%</td>
+      <td>Formal RISK detection</td>
+    </tr>
+    <tr>
+      <td>Phone Detection</td>
+      <td>100%</td>
+      <td>Includes iOS in the background</td>
+    </tr>
+    <tr>
+      <td>Continuity</td>
+      <td>99.994%</td>
+      <td>Full continuity</td>
+    </tr>
+    <tr>
+      <td>Completeness RT1</td>
+      <td colspan="2">98.36%</td>
+      
+    </tr>
+    <tr>
+      <td>Completeness RT2</td>
+      <td>TBD</td>
+      <td>Not yet calculated from data</td>
+    </tr>
+    <tr>
+      <td>Completeness CE</td>
+      <td colspan="2">95.95%</td>
+      
+    </tr>
+    <tr>
+      <td>Accuracy</td>
+      <td>95.95%</td>
+      <td>RSSI accuracy</td>
+    </tr>
+    <tr>
+      <td>Longevity</td>
+      <td>99.93%</td>
+      <td>12 hour test</td>
+    </tr>
+    <tr>
+      <td>Mean time<br>between readings</td>
+      <td colspan="2">&lt;=1.44s</td>
+      
+    </tr>
+    <tr>
+      <td>Country</td>
+      <td colspan="2">UK</td>
+      
+    </tr>
+    <tr>
+      <td>Have BLE Phones</td>
+      <td>72.53%</td>
+      <td>OFCOM reports</td>
+    </tr>
+    <tr>
+      <td>Hardware Support</td>
+      <td>98.19%</td>
+      <td>BBC data</td>
+    </tr>
+    <tr>
+      <td>Software/OS Support</td>
+      <td>98.00%</td>
+      <td>BBC data</td>
+    </tr>
+    <tr>
+      <td>Overall Pspec</td>
+      <td colspan="2">69.79%</td>
+      
+    </tr>
+    <tr>
+      <td><i>Pspec squared</i></td>
+      <td colspan="2">48.71%</td>
+      
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="phones-tested">Phones tested</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>PhoneId</th>
+      <th>Phone Make and Model</th>
+      <th>OS and version</th>
+      <th>Known issues</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Samsung A10 (SM-A105FN)</td>
+      <td>Android 28</td>
+      <td>A10s knowingly rotate their BLE MAC address with every request. Herald uses an ephemeral ID that rotates every 15 minutes as a performance improvement.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Samsung A20 (SM-A202F)</td>
+      <td>Android 29</td>
+      <td>Same issue as A10, above.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>iPhone 6S</td>
+      <td>iOS 12.1.4</td>
+      <td>Phone name is Denmark. Battery is faulty and near end-of-life as it loses charge in steps.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>iPhone 6+</td>
+      <td>iOS 12.4.5</td>
+      <td>Phone name is Netherlands.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="fair-efficacy-stats-summary">Fair Efficacy Stats Summary</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Phones</td>
+      <td>Max Pairs</td>
+      <td>Pairs Detected</td>
+      <td>Detection Percent</td>
+      <td>Max 30 second windows</td>
+      <td>30 second windows achieved</td>
+      <td>Missed windows percentage</td>
+      <td>Longevity change over 12 hours</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>12</td>
+      <td>12</td>
+      <td>100%</td>
+      <td>16800</td>
+      <td>16799</td>
+      <td>0.00595%</td>
+      <td>0.069%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="phone-detection-and-distance-estimation-reports">Phone detection and distance estimation reports</h2>
+
+<p>The below 4 charts show discoveries, ID (data payload) reads, and RSSI (distance estimation) readings as individual dots.</p>
+
+<p><img src="/herald/results/herald-2020-12-08/A10-report.png" alt="A10 results">
+<img src="/herald/results/herald-2020-12-08/A20-report.png" alt="A20 results">
+<img src="/herald/results/herald-2020-12-08/Denmark-report.png" alt="iPhone 6S results">
+<img src="/herald/results/herald-2020-12-08/Netherlands-report.png" alt="iPhone 6+ results"></p>
+
+<p>The below charts show RSSI variation over time. In a formal 12 hour test these will mostly be static.</p>
+
+<p><img src="/herald/results/herald-2020-12-08/A10-accuracy.png" alt="A10 RSSI">
+<img src="/herald/results/herald-2020-12-08/A20-accuracy.png" alt="A20 RSSI">
+<img src="/herald/results/herald-2020-12-08/Denmark-accuracy.png" alt="iPhone 6S RSSI">
+<img src="/herald/results/herald-2020-12-08/Netherlands-accuracy.png" alt="iPhone 6+ RSSI"></p>
+
+<h2 id="battery-usage">Battery usage</h2>
+
+<p>The below table and chart shows battery charge remaining over time. Note the iPhone 6S has a faulty near end-of-life battery that loses charge in steps.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Samsung A10<br>SM-A105FN</th>
+      <th>Samsung A20<br>SM-A202F</th>
+      <th>iPhone 6S<br>‘Denmark’</th>
+      <th>iPhone6+<br>‘Netherlands’</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Start time</td>
+      <td>2020-12-08 23:00:29</td>
+      <td>2020-12-08 23:00:17</td>
+      <td>2020-12-08 23:00:07</td>
+      <td>2020-12-08 23:00:18</td>
+    </tr>
+    <tr>
+      <td>End time</td>
+      <td>2020-12-09 11:20:08</td>
+      <td>2020-12-09 11:21:56</td>
+      <td>2020-12-09 11:21:37</td>
+      <td>2020-12-09 11:22:48</td>
+    </tr>
+    <tr>
+      <td>Start battery</td>
+      <td>96%</td>
+      <td>92%</td>
+      <td>94%</td>
+      <td>92%</td>
+    </tr>
+    <tr>
+      <td>End battery</td>
+      <td>77%</td>
+      <td>70%</td>
+      <td>59%</td>
+      <td>69%</td>
+    </tr>
+    <tr>
+      <td>Elapsed</td>
+      <td>12h 19m 30s</td>
+      <td>12h 21m 39s</td>
+      <td>12h 21m 30s</td>
+      <td>12h 22m 30s</td>
+    </tr>
+    <tr>
+      <td>Usage per hour</td>
+      <td>1.54127%</td>
+      <td>1.77982%</td>
+      <td>2.83210%</td>
+      <td>1.85858%</td>
+    </tr>
+    <tr>
+      <td>Notes</td>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>End of live Battery.<br>See chart.</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="/herald/results/herald-2020-12-08/battery.png" alt="Battery Level"></p>
+
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/herald/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldBluetooth">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://herald-bluetooth.slack.com/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/vmware/?q=herald">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            © 2021 Herald Authors.
+            <a href="http://vmware.github.io/" class="vm-logo">A VMware-backed project. <img src="/herald/img/vm-logo.png" alt="VMware logo"></a>
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/herald/js/jquery.matchHeight.js?1610982289774457475"></script>
+<script src="/herald/js/scripts.js?1610982289774457475"></script>
+    </div>
+  </div>
+</body>
+
+</html>

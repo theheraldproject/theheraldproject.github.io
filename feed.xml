@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://vmware.github.io/herald/feed.xml" rel="self" type="application/atom+xml" /><link href="https://vmware.github.io/herald/" rel="alternate" type="text/html" /><updated>2021-01-18T15:04:49+00:00</updated><id>https://vmware.github.io/herald/feed.xml</id><title type="html">Herald Project</title><subtitle>The home for our research in to low level mobile phone Bluetooth capabilities, issues, workarounds, and testing.</subtitle><author><name>Herald Authors</name></author><entry><title type="html">Raw RSSI data released</title><link href="https://vmware.github.io/herald/blog/rssi-data" rel="alternate" type="text/html" title="Raw RSSI data released" /><published>2021-01-06T17:00:00+00:00</published><updated>2021-01-06T17:00:00+00:00</updated><id>https://vmware.github.io/herald/blog/rssi-data</id><content type="html" xml:base="https://vmware.github.io/herald/blog/rssi-data">&lt;p&gt;The Herald Project team are pleased to announce the publication of our first
+dataset from our Edison distance calibration robot. This robot allows two phones
+to be placed at a precise distance in a controlled setting and moved distance
+over time.&lt;/p&gt;
+
+&lt;p&gt;This provides for a very rich dataset of RSSI readings for known devices at
+known distances.&lt;/p&gt;
+
+&lt;p&gt;The Herald team hope this data will allow researchers to come up with new 
+and novel ways to provide accurate distance estimations from Bluetooth RSSI data.&lt;/p&gt;
+
+&lt;p&gt;Notes about the data set:-&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Collected from a pair of phones. One static, the other which is moved to a fixed distance by the Edison robot&lt;/li&gt;
+  &lt;li&gt;RSSI is a raw RSSI from the local phones Bluetooth Chipset via the advertisement from the remote phone&lt;/li&gt;
+  &lt;li&gt;Both phones were running the standard Herald Protocol and Fixed Payload demonstration application&lt;/li&gt;
+  &lt;li&gt;Phones were then left alone to record the data, and moved by the Edison robot over time&lt;/li&gt;
+  &lt;li&gt;No modification has occurred to the raw rssi readings (no calibration/alteration)&lt;/li&gt;
+  &lt;li&gt;Contains 634574 RSSI readings in this dataset&lt;/li&gt;
+  &lt;li&gt;Distances range from 0-200cm in 25 cm divisions&lt;/li&gt;
+  &lt;li&gt;Accelerometer data was used to detect movement, and those data points have been removed from the above dataset&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can find our reference data at the below locations:-&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/vmware/herald-analysis/tree/develop/reference-data/rssi-raw-edison&quot;&gt;Raw RSSI data from Phone pairs, and the Edison robot code&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/vmware/herald-analysis/tree/develop/reference-data&quot;&gt;Description of all reference data&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We aim to publish more data soon, including accelerometer data for test subject phones,
+Bluetooth Beacon and Wearable RSSI readings with these phones, and code for Colin the Calibration robot.&lt;/p&gt;</content><author><name>Herald Authors</name></author><summary type="html">The Herald Project team are pleased to announce the publication of our first dataset from our Edison distance calibration robot. This robot allows two phones to be placed at a precise distance in a controlled setting and moved distance over time.</summary></entry><entry><title type="html">Version 1.1.0 released</title><link href="https://vmware.github.io/herald/blog/version-110" rel="alternate" type="text/html" title="Version 1.1.0 released" /><published>2020-11-29T08:00:00+00:00</published><updated>2020-11-29T08:00:00+00:00</updated><id>https://vmware.github.io/herald/blog/version-110</id><content type="html" xml:base="https://vmware.github.io/herald/blog/version-110">&lt;p&gt;Version 1.1.0 of Herald is now available for iOS and Android!&lt;/p&gt;
+
+&lt;p&gt;Key features in this release include:-&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Improved performance, stability, and reliability between Android and iOS devices (including iOS 14.2 testing)&lt;/li&gt;
+  &lt;li&gt;Social Mixing Score demo - Like a virtual ‘step counter’ for social mixing, helping people manage their own social mixing&lt;/li&gt;
+  &lt;li&gt;API changes to make adoption easier&lt;/li&gt;
+  &lt;li&gt;A &lt;a href=&quot;https://cocoapods.org/pods/Herald&quot;&gt;CocoaPod for Herald for iOS&lt;/a&gt; is now available! There’s a 1.1.0 version and -beta versions for the develop branch too!&lt;/li&gt;
+  &lt;li&gt;Android libraries are in the works. For now, download the Android Archive at &lt;a href=&quot;https://github.com/vmware/herald-for-android/releases/tag/v1.1.0&quot;&gt;The Android v1.1.0 release page&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;We’ve moved to the Apache 2.0 license from the MIT license for our code and the CC-BY 4.0 International license for our documentation, including this website&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For a full list of changes please see the release notes:-&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/vmware/herald-for-ios/releases/tag/v1.1.0&quot;&gt;iOS Release Notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/vmware/herald-for-android/releases/tag/v1.1.0&quot;&gt;Android Release Notes and library download&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We’re now busy on enabling further adopters of Herald in the health care space and beyond. We’re community driven, 
+so please come and &lt;a href=&quot;/herald/community&quot;&gt;join the Herald community&lt;/a&gt; and help us with deciding the
+future of the Herald project!&lt;/p&gt;</content><author><name>Herald Authors</name></author><summary type="html">Version 1.1.0 of Herald is now available for iOS and Android!</summary></entry><entry><title type="html">New guides added to website</title><link href="https://vmware.github.io/herald/blog/guides" rel="alternate" type="text/html" title="New guides added to website" /><published>2020-11-23T22:00:00+00:00</published><updated>2020-11-23T22:00:00+00:00</updated><id>https://vmware.github.io/herald/blog/guides</id><content type="html" xml:base="https://vmware.github.io/herald/blog/guides">&lt;p&gt;We’ve been busy getting ready for the upcoming V1.1 release. For this release we’ve dramatically changed
+our documentation on this website.&lt;/p&gt;
+
+&lt;p&gt;There is now a new high level &lt;a href=&quot;/herald/applications/&quot;&gt;Herald applications&lt;/a&gt; set of pages. These detail scenarios that Herald can
+be used in beyond contact tracing. This includes interaction with Bluetooth fixed beacons, and using Herald as a gateway protocol
+for Bluetooth 5.0 Mesh networks.&lt;/p&gt;
+
+&lt;p&gt;We’ve also converted both the &lt;a href=&quot;/herald/guide/&quot;&gt;Implementation guide&lt;/a&gt; and the &lt;a href=&quot;/herald/design/&quot;&gt;Design guide&lt;/a&gt; in to HTML from PDF and 
+added to this website. These will help application developers quickly get access to source code,
+write their own apps using Herald, and understand how Herald is designed for reliable consumer Bluetooth.&lt;/p&gt;
+
+&lt;p&gt;We’ve also generated a &lt;a href=&quot;https://cocoapods.org/pods/Herald&quot;&gt;CocoaPod for Herald for iOS&lt;/a&gt;. Please evaluate it and give us feedback.&lt;/p&gt;
+
+&lt;p&gt;Adoption continues to increase. We hope to be in a position to announce adopters publicly in the coming days.&lt;/p&gt;
+
+&lt;p&gt;We’re also working on some exciting extensions of Herald in to new areas. More on that in the V1.1 and V1.2 upcoming releases!&lt;/p&gt;</content><author><name>Herald Authors</name></author><summary type="html">We’ve been busy getting ready for the upcoming V1.1 release. For this release we’ve dramatically changed our documentation on this website.</summary></entry><entry><title type="html">New logo and website</title><link href="https://vmware.github.io/herald/blog/website" rel="alternate" type="text/html" title="New logo and website" /><published>2020-09-28T09:00:00+00:00</published><updated>2020-09-28T09:00:00+00:00</updated><id>https://vmware.github.io/herald/blog/website</id><content type="html" xml:base="https://vmware.github.io/herald/blog/website">&lt;p&gt;Quite a few things have happened in the first month since Herald was published as Open Source Software
+under the MIT license. [29 Nov 2020 NOTE: Code now under the Apache-2.0 license]&lt;/p&gt;
+
+&lt;p&gt;The most visible change is this website. A new theme based on our new project logo:-&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/herald.png&quot; alt=&quot;Herald logo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ve also modified the Herald library to allow for an ‘immediate send’ function. This is useful
+for Bluetooth apps that use Herald for reliable communication and timed payloads, but
+who also need to send time sensitive information to nearby devices. The new
+optional callback surfaces this to the remote application.&lt;/p&gt;
+
+&lt;p&gt;Also added are two new communication channels: Slack and Twitter.&lt;/p&gt;
+
+&lt;p&gt;Our twitter handle is &lt;a href=&quot;https://twitter.com/HeraldBluetooth&quot; target=&quot;_new&quot;&gt;@HeraldBluetooth&lt;/a&gt; (there’s a link in the footer of our website.).&lt;/p&gt;
+
+&lt;p&gt;We have our own Slack instance too to allow for protocol collaboration and joint research. This is available at 
+&lt;a href=&quot;https://herald-bluetooth.slack.com/&quot; target=&quot;_new&quot;&gt;https://herald-bluetooth.slack.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Please join in with the development of Herald. We’re planning our next 
+formal release and so welcome any and all feedback you have.&lt;/p&gt;</content><author><name>Herald Authors</name></author><summary type="html">Quite a few things have happened in the first month since Herald was published as Open Source Software under the MIT license. [29 Nov 2020 NOTE: Code now under the Apache-2.0 license]</summary></entry><entry><title type="html">Research published</title><link href="https://vmware.github.io/herald/blog/published" rel="alternate" type="text/html" title="Research published" /><published>2020-09-24T20:30:00+00:00</published><updated>2020-09-24T20:30:00+00:00</updated><id>https://vmware.github.io/herald/blog/published</id><content type="html" xml:base="https://vmware.github.io/herald/blog/published">&lt;p&gt;We are pleased to announce the publication of an open source, reliable, Bluetooth protocol
+called ‘Herald’, and our &lt;a href=&quot;/herald/efficacy&quot;&gt;Fair Efficacy Formula&lt;/a&gt; to enable the measurement and improvement of
+all contact tracing applications.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;/herald/protocol&quot;&gt;Herald protocol&lt;/a&gt; will be of use to those developing Contact Tracing applicatins, and any
+other applications requiring reliable pair-wise bluetooth communication between
+mobile devices. This overcomes many of the issues present in existing contact tracing apps
+and Bluetooth approaches on mobile devices.&lt;/p&gt;
+
+&lt;p&gt;This was created in the spare time by researchers at &lt;a href=&quot;https://www.vmware.com/&quot;&gt;VMware, Inc.&lt;/a&gt;
+and elsewhere and is now provided to the worldwide community!&lt;/p&gt;
+
+&lt;p&gt;The documentation on this site is available under the Creative Commons Attribution 4.0 International Public License. The source code
+to the protocol and fair efficacy analysis tools is available under the Apache-2.0 license.&lt;/p&gt;
+
+&lt;p&gt;Please visit the &lt;a href=&quot;/herald/&quot;&gt;Home page&lt;/a&gt; for full details.&lt;/p&gt;</content><author><name>Herald Authors</name></author><summary type="html">We are pleased to announce the publication of an open source, reliable, Bluetooth protocol called ‘Herald’, and our Fair Efficacy Formula to enable the measurement and improvement of all contact tracing applications.</summary></entry></feed>

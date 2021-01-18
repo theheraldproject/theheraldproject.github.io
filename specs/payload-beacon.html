@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/herald/css/styles.css?1610982289774457475">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Beacon Payload Specification">
+<meta name="author" content="Herald Authors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Beacon Payload Specification">
+<meta property="og:description" content="Beacon Payload Specification">
+<link rel="canonical" href="https://vmware.github.io/herald/specs/payload-beacon">
+<meta property="og:url" content="https://vmware.github.io/herald/specs/payload-beacon">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"description":"Beacon Payload Specification","url":"https://vmware.github.io/herald/specs/payload-beacon","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://vmware.github.io/herald/herald/img/herald.png"},"name":"Herald Authors"},"author":{"@type":"Person","name":"Herald Authors"},"headline":"Beacon Payload Specification","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Beacon Payload Specification</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="logo">
+            <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+        </div>
+        <ul class="nav-menu" id="header-nav">
+            <li class="home"><a href="/herald/" title="Herald Project">Home</a></li>
+            <li class="blog"><a href="/herald/blog" title="Blog Posts">Blog</a></li>
+            <li class="community"><a href="/herald/community" title="Community">Community</a></li>
+            <li class="docs"><a href="/herald/docs">Documentation</a></li>
+            <li class="efficacy"><a href="/herald/efficacy" title="Efficacy Paper">Efficacy Paper</a></li>
+        </ul>
+        <div class="nav-mobile-link">
+            <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Beacon Payload Specification</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-3">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>Introduction</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/docs">Our documentation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Applications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/applications">Herald Applications</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/ct">Contact Tracing</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/p2p">Device to Device</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/mesh">Bluetooth Mesh Gateways</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Protocol</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/protocol/">About our protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/protocol/custom">Non contact tracing uses</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Design Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/design/">Herald's Design</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/core">Core philosophy</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/data">Data used</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/protocol">Protocol lifecycle</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/summary">Design summary</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Payloads</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/payload">About Payloads</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/envelope">Herald Envelope Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/interop">Interoperability</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/common">Herald Common CT Inner Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/simple">Herald Simple Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/secured">Herald Secured Inner Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/beacon">Herald Beacon Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/inner">Herald-compatible Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/outer">Custom outer &amp; inner payloads</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Development &amp; Integration Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/guide/">How to integrate</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/code">About the code</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/api">API docs</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/add">Import Herald</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/ios">iOS app guide</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/android">Android app guide</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>About Contact Tracing</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/background">What is Contact Tracing?</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/background/glossary">Glossary of terms</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/background/approaches">Technology Approaches</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Bluetooth Research</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/bluetooth">Our Research</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/hardware">Hardware Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/os">Operating System Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/crowding">Crowding</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/distance">Distance Estimation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Formal Specifications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/specs">List and status</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/protocol">Herald Protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-beacon">Beacon Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-extended">Extended Data Area</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-simple">Simple Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-secured">Secured Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-interop">International Interoperability</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-8 offset-md-1">
+                
+
+  
+
+                <h1 id="beacon-payload-formal-specification">Beacon Payload Formal Specification</h1>
+
+<p>This page formally specifies Beacon Data Payload. View the <a href="/herald/payload/beacon">introduction to the Beacon Payload</a>
+for a simpler explanation of the payload.</p>
+
+<p>This specification is a <strong>DRAFT</strong></p>
+
+<h2 id="modal-verbs-terminology">Modal verbs terminology</h2>
+
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
+NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”,  “MAY”, and
+“OPTIONAL” in this document are to be interpreted as described in
+<a href="https://tools.ietf.org/html/rfc2119">RFC 2119</a>.</p>
+
+<p>Note that these terms apply whether they are uppercase or lowercase
+and no matter what styles are applied to the phrases.</p>
+
+<h2 id="executive-summary">Executive summary</h2>
+
+<p>The Beacon Data Payload is designed as a method to allow static venue based Bluetooth USB devices
+to advertise their venue’s information to nearby Herald protocol supporting applications. This
+includes information about the venue and its different areas. E.g. seating areas in restaurants,
+or wards and rooms in hospitals.</p>
+
+<p>This allows the Herald protocol supporting phones to receive this information and build up a
+virtual diary - that exists only on the phone - of when a person arrived (checked in) and left
+(checked out) a venue or area within the venue.</p>
+
+<p>This payload works alongside existing Herald Protocol based payloads to provide an additional
+set of data useful to contact tracers and consumer device users.</p>
+
+<p>This specification is meant as a replacement for manual scanning QR codes and overcomes their
+limitations of ongoing incremental cost, inability to track exact check in/check out times,
+and reliance on individual action to remember to scan QR codes.</p>
+
+<p>It is especial important to note that the consumer device could be running anyones contact
+tracing application - not just one powered by Herald - and still build up a diary of
+venue visits which could later be shared with contact tracers.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>This specification follows the standard Herald data payload international interoperability header
+and provides a fixed venue identifier and venue section information locally to nearby devices.</p>
+
+<p>A virtual diary can be built with a Herald powered application. A user could choose to simply
+email a summary of this diary for selected days to their local contact tracing team, facilitating
+rapid manual tracing and spreader event analysis.</p>
+
+<h2 id="scope">Scope</h2>
+
+<p>What is in scope</p>
+
+<ul>
+  <li>Beacon payload that provides basic venue information</li>
+</ul>
+
+<p>What is out of scope</p>
+
+<ul>
+  <li>Extension data such as that to allow more accurate distance estimation and triangulation of
+location visited within a venue. See the Extended Payload
+specification for this.</li>
+  <li>Contact tracing system upload and health service integration</li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<h3 id="normative-references">Normative references</h3>
+
+<p>References are either specific (identified by date of publication and/or edition number or version number) or non specific. For specific references,only the cited version applies. For non-specific references, the latest version of the referenced document (including any amendments) applies.</p>
+
+<p>The following referenced documents are necessary for the application of the present document.</p>
+
+<p>None</p>
+
+<h3 id="information-references">Information references</h3>
+
+<p>References are either specific (identified by date of publication and/or edition number or version number) or non specific. For specific references,only the cited version applies. For non-specific references, the latest version of the referenced document (including any amendments) applies.</p>
+
+<p>The following referenced documents are not necessary for the application of the present document but they assist the user with regard to a particular subject area.</p>
+
+<p>Reference implementations will be made available of this payload for iOS (swift), Android (Java) and embedded (C++). See BP-1, BP-2 and BP-3 for links.</p>
+
+<h2 id="definition-of-terms-symbols-and-abbreviations">Definition of terms, symbols and abbreviations</h2>
+
+<h3 id="terms">Terms</h3>
+
+<p><strong>Beacon</strong> - A fixed device in a location that provides location-specific information. May be called a Bluetooth Beacon.</p>
+
+<p><strong>Big Endian</strong> - Also known as ‘Network Order’. A way of encoding numeric values for transport over data networks. Bluetooth (and most network protocols) are Big Endian.</p>
+
+<p><strong>Herald Project</strong> - The opensource contributors and maintainers of the Herald website, code, and standards documents.</p>
+
+<h3 id="symbols">Symbols</h3>
+
+<p>None</p>
+
+<h3 id="abbreviations">Abbreviations</h3>
+
+<p><strong>App</strong> - Short for Application. Usually a ‘mobile application’ on a phone or ‘wearable application’</p>
+
+<p><strong>BLe</strong> - Bluetooth Low Energy. Introduced as part of the Bluetooth standard in Bluetooth 4.0 in 2010. As of this writing the latest version was Bluetooth 5.2. Versions are backwards compatible. (I.e. a Bluetooth 5 device can communicate with a Bluetooth 4 device, and vice versa).</p>
+
+<p><strong>COVID-19</strong> - Common name referring to SARS-CoV-2.</p>
+
+<p><strong>ECIES</strong> - Elliptic Curve Integrated Encryption Scheme. A modern encryption scheme believed to be resistant to emerging quantum computing encryption brute forcing mechanisms.</p>
+
+<p><strong>GATT</strong> - Bluetooth Generic Attribute Profile.</p>
+
+<p><strong>iOS</strong> - Apple’s Operating System for mobile phones</p>
+
+<p><strong>MAC or MAC address</strong> - Media Access Control address. A short (6 byte in Bluetooth Low Energy) approximately unique identifier for a device on a network, such as Bluetooth Low Energy, before any high-level identity or security information can be ascertained. Typically rotates every 15 minutes on modern phones. May be static on beacons.</p>
+
+<p><strong>RSSI</strong> - Received Signal Strength Indicator. A signal strength approximation calculated on a device based on the power of a remote transmission. Calculated by the Bluetooth chipset on the local device, and not transmitted. The scale varies by manufacturer, some use 0 to 255, others 0 to 100. Normally expressed as a negative integer rather than a positive number.</p>
+
+<p><strong>OS</strong> - Operating System. Typically refers to a mobile phone or Bluetooth beacon operating system. The software on which a Herald based Bluetooth app operates. Operating Systems typically provide a unique API for communicating with that device’s Bluetooth capabilities. Some functionality in OS’ Bluetooth layers may be hidden from the app developer, or non-standard.</p>
+
+<p><strong>SIG</strong> - Typically Bluetooth SIG. Standards Interest Group. Group of technolists that decide on changes to the Bluetooth standards. See HP-3 below.</p>
+
+<p><strong>TxPower</strong> - Transmit power. Expressed in integer or floating point in dBm. Known to the transmitter only, unless ‘advertised’ in the Bluetooth GATT field for TxPower. As it is transmitted it must be presumed that it could be spoofed by the sender.</p>
+
+<p><strong>UUID</strong> - Universally Unique Identifier. Typically a ‘Version 4 UUID’. A 128-bit (16 byte) identifier that unique identifies a service or characteristic in Bluetooth. A shorter (4 byte) ‘short code’ identifier may instead be registered with the Bluetooth SIG.</p>
+
+<h2 id="design-constraints">Design Constraints</h2>
+
+<p>The below are the constraints placed on the design of the system that the rest of this standard is defined within.</p>
+
+<p>MUST provide a read payload sufficient to provide local context information without an Internet connection</p>
+
+<p>MAY provide a link to gain further information about a venue.</p>
+
+<p>MUST allow a local government authority or registration company to provide an identifier that links to further venue information, if required.</p>
+
+<p>MUST NOT rely on ECIES encryption or other API that are not present on iOS 9.3 or Android 5.0 or later.</p>
+
+<p>MUST support Bluetooth Low Energy 4.0 or above.</p>
+
+<p>MUST be able to be implemented on low cost embedded hardware that can be mass produced.</p>
+
+<h2 id="lifecycle-summary">Lifecycle Summary</h2>
+
+<p>A beacon device MUST conform to the Herald Protocol and its lifecycle of connections.</p>
+
+<h2 id="beacon-payload-data-format">Beacon Payload Data Format</h2>
+
+<p>A Herald Beacon MUST provide the payload data format laid out in this document.</p>
+
+<p>A Herald Beacon MUST provide a Country Code and State Code for the authority providing a registry of venues. (MAY be a public or private organisation. Not limited to a healthcare authority.)</p>
+
+<p>A Herald Beacon MUST provide a Location Code that is unique within the specified Country and State authority for the given venue.</p>
+
+<p>A Venue MAY have one or more Herald Beacons. Each Beacon at the same venue SHOULD have a different textual description for the area in which it is located in its extended data area.</p>
+
+<p>A Venue code MAY have a ‘further information’ URL embedded within its Extended Data area.</p>
+
+<p>Below is a description of this format:-</p>
+
+<p><strong>Figure 1. Beacon Payload Data Format</strong>
+<img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggTFJcbkEoUHJvdG9jb2w8YnI-VmVyc2lvbjxicj4xIGJ5dGU8YnI-MHgzMC0weDM3PGJyPl8pIC0tPiBCKENvdW50cnk8YnI-IDxicj4yIGJ5dGVzPGJyPnVpbnQxNjxicj5fKSAtLT4gQyhTdGF0ZTxicj4gPGJyPjIgYnl0ZXM8YnI-dWludDE2PGJyPl8pIC0tPiBEKExvY2F0aW9uPGJyPkNvZGU8YnI-NCBieXRlczxicj51aW50MzI8YnI-XykgLS0-IEUoRXh0ZW5zaW9uPGJyPkRhdGE8YnI-MC01MDEgYnl0ZXM8YnI-YmluYXJ5PGJyPl8pIiwibWVybWFpZCI6bnVsbH0"></p>
+
+<p>A full example for a single Beacon payload is shown below:-</p>
+
+<p><strong>Figure 2. Example Beacon Payload</strong></p>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggTFJcbkEoUHJvdG9jb2w8YnI-VmVyc2lvbjxicj4xIGJ5dGU8YnI-MHgzMDxicj5fKSAtLT4gQihDb3VudHJ5PGJyPiA8YnI-MiBieXRlczxicj44MjY8YnI-XykgLS0-IEMoU3RhdGU8YnI-IDxicj4yIGJ5dGVzPGJyPjE8YnI-XykgLS0-IEQoTG9jYXRpb248YnI-Q29kZTxicj40IGJ5dGVzPGJyPjEyMzQ1Njxicj5fKSAtLT4gRShFeHRlbnNpb248YnI-RGF0YTxicj43MSBieXRlczxicj5BcyBiZWxvdzxicj5fKVxuRihDb2RlPGJyPjB4MTA8YnI-UHJlbWlzZXMgTmFtZTxicj5fKS0tPkcoTGVuZ3RoPGJyPjE5PGJyPl8pLS0-SChEYXRhPGJyPkpvZSdzIEdvdXJtZXQgUGl6emE8YnI-XylcbkkoQ29kZTxicj4weDExPGJyPkFyZWEgTmFtZTxicj5fKS0tPkooTGVuZ3RoPGJyPjE0PGJyPl8pLS0-SyhEYXRhPGJyPldpbmRvdyBTZWF0aW5nPGJyPl8pXG5MKENvZGU8YnI-MHgxMzxicj5EZXRhaWxzIFVSTDxicj5fKS0tPk0oTGVuZ3RoPGJyPjMyPGJyPl8pLS0-TihEYXRhPGJyPmh0dHBzOi8vc29tZXVybC5jb20vdmVudWUvMTIzNDU2PGJyPl8pIiwibWVybWFpZCI6bnVsbH0"></p>
+
+<p><strong>NOTE</strong>: that the <a href="/herald/specs/payload-extended">Extended Data format</a> is the same as used by the Secured Payload and Simple Payload. This allows the following
+data items that are of interest for a check in app:-</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+      <th>Size and format</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0x10</td>
+      <td>Textual short name description of premises (E.g. College, Restaurant)</td>
+      <td>1+ bytes UTF-8 String</td>
+    </tr>
+    <tr>
+      <td>0x11</td>
+      <td>Textual short name description of beacon location within premises (E.g. Seating area B)</td>
+      <td>1+ bytes UTF-8 String</td>
+    </tr>
+    <tr>
+      <td>0x12</td>
+      <td>Textual disambiguation (optional) for beacon area (E.g. Seating Area B - West wall, and Seating area B - East wall). Useful for large rooms such as sports halls, football stadiums, shopping centres/malls.</td>
+      <td>1+byte UTF-8 String</td>
+    </tr>
+    <tr>
+      <td>0x13</td>
+      <td>Location information URL (optional). MUST be https.</td>
+      <td>1+ byte UTF-8 URL</td>
+    </tr>
+    <tr>
+      <td>0x14</td>
+      <td>Full Address</td>
+      <td>1+ byte UTF-8. \n as newline</td>
+    </tr>
+    <tr>
+      <td>0x15</td>
+      <td>Entry Source</td>
+      <td>1+ byte UTF-8. “ble” for Bluetooth Low Energy (i.e. Beacon)</td>
+    </tr>
+    <tr>
+      <td>0x16</td>
+      <td>Entry Source Version</td>
+      <td>1+ byte UTF-8. N/A for Herald beacons (See QR codes, below)</td>
+    </tr>
+    <tr>
+      <td>0x20</td>
+      <td>Contact event start time</td>
+      <td>uint32 seconds since Unix Epoch. May be ‘present time’ - useful for transmitting time to wearable devices with no external time reference</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The above list of useful Extended Data is NOT exhaustive or authoritative. Please see the Extended Data specification for full details.</p>
+
+<h2 id="diary-application-recommendations">Diary Application recommendations</h2>
+
+<p>A Diary application SHOULD have a minimum time or signal strength (RSSI) threshold so as not to log locations a mobile phone user is just walking past in the street.</p>
+
+<p>A Diary application SHOULD automatically log locations without the need for user interaction.</p>
+
+<p>A Diary application SHOULD allow the user to remove check-in entries.</p>
+
+<p>A Diary application SHOULD show one entry per venue on a given day even if it has data for multiple beacons at that location.</p>
+
+<p>A Diary application SHOULD allow a user interface mechanism to email or export a section of the diary for sharing with contact tracers. (E.g. as a simple CSV file)</p>
+
+<h2 id="sharing-of-visit-data">Sharing of visit data</h2>
+
+<p>It is anticipated that app creators MAY NOT routinely upload all diarised contact events but MAY instead ask for them to be submitted if
+a person becomes unwell.</p>
+
+<h2 id="exposure-notification">Exposure notification</h2>
+
+<p>An app SHOULD share exposure information for a venue with an exact date and start and end times for a known case being within contact with a specified venue.</p>
+
+<p>An app SHOULD provide precise information regarding which beacons within the venue are relevant for an exposure during which subset of time periods for the above event.</p>
+
+<p>An app MAY provide distance triangulation data specifying the location and time of specific ‘hot spots’ where an ill person was seated, or where people are most likely to
+have been sat in order to be exposed, from the beacones within that venue at specific times.</p>
+
+<h2 id="reference-implementations">Reference implementations</h2>
+
+<p>See ConcreteBeaconPayload.java in the com.vmware.herald.sensor.payload.beacon package for the Android reference implementation. See BP-1 below for a link.</p>
+
+<p>See ConcreteBeaconPayload.swift in the herald/sensor/payload/beacon folder for the iOS reference implementation. See BP-2 below for a link.</p>
+
+<p>A C++ reference implementation is pending. See BP-3 below for a link.</p>
+
+<h2 id="qr-code-system-interoperability">QR Code system interoperability</h2>
+
+<p>There are various manual QR code standards in use for COVID-19 venue contact tracing today. This section
+deals with how those systems map on to this Venue Beacon data standard.</p>
+
+<h3 id="new-zealand-qr-code-system">New Zealand QR Code system.</h3>
+
+<p>The details on this system can be found in BP-4 and BP-5.</p>
+
+<p>Note: The New Zealand QR code is a non-standard QR code format that does not follow the existing QR code or GS1 2D barcode standards.</p>
+
+<p>Below is the conversion from a QR code scan in the New Zealand system to a check-in payload as per this document’s standard.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>QR Standard field</th>
+      <th>Equivalent field in the Beacon Payload</th>
+      <th>Reformatting necessary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>N/A</td>
+      <td>Payload Version=0x30</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>N/A</td>
+      <td>Country=554 (New Zealand), other if deployed elsewhere</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>N/A</td>
+      <td>State=0 (National)</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>N/A</td>
+      <td>ContactID=? MAY be from the location part of GLN, depending how this was assigned by the country/state</td>
+      <td>uint32 not string</td>
+    </tr>
+    <tr>
+      <td>typ</td>
+      <td colspan="2">No equivalent</td>
+      
+    </tr>
+    <tr>
+      <td>gln</td>
+      <td>13 characters but exact format and contents may vary by assigned code segment size</td>
+      <td>UTF-8</td>
+    </tr>
+    <tr>
+      <td>opn</td>
+      <td>Extended 0x10 (Premises Name)</td>
+      <td>UTF-8</td>
+    </tr>
+    <tr>
+      <td>adr</td>
+      <td>Extended 0x14 (Full Address)</td>
+      <td>UTF-8, Newline is \n</td>
+    </tr>
+    <tr>
+      <td>N/A</td>
+      <td>0x15 (Entry Source)</td>
+      <td>“qr” as UTF-8, lowercase</td>
+    </tr>
+    <tr>
+      <td>ver</td>
+      <td>0x16 (Entry Source Version)</td>
+      <td>As ver (E.g. “c19-1”), UTF-8</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Check-in date time shall be maintained by the app, not the payload data area.</p>
+
+<p>Check-in and check-out times MUST be the seconds since UNIX epoch encoded as a uint32.</p>
+
+<p>Check-out time shall be nil/null/not present for a QR code ‘check-in’, as check-outs are not supported and MUST NOT be specified for a QR code check-in.</p>
+
+<p>Such a check-in record MUST NOT be marked as ‘closed’ as a result. (As there is no confirmed check-out time.)</p>
+
+<p>Applications MAY allow a user to specify a check-out time manually as an edit to their venue diary. Such edited records SHOULD mark the relevant venue event as ‘closed’ (Now there is a check-in and check-out time)</p>
+
+<h2 id="data-upload-standard">Data upload standard</h2>
+
+<p>Binary data area as for the above standard, but with these additional fields:-</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Extended data field ID</th>
+      <th>Meaning</th>
+      <th>Mandatory</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0x20</td>
+      <td>(Contact) Event start time</td>
+      <td>Yes</td>
+      <td>1608062077 (Tue 15 Dec 2020 ~19:54)</td>
+    </tr>
+    <tr>
+      <td>0x21</td>
+      <td>(Contact) Event end time</td>
+      <td>Yes, if known (and event ‘closed’)</td>
+      <td>Same format as above</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="annex-a-informative-bibliography">Annex A (Informative): Bibliography</h2>
+
+<p>Links to prior art and further reading</p>
+
+<ul>
+  <li>BP-1: Android reference implementation - Coming soon</li>
+  <li>BP-2: <a href="https://github.com/vmware/herald-for-ios/blob/develop/herald/herald/Sensor/Payload/Beacon/BeaconPayloadDataSupplier.swift">iOS reference implementation - partial</a> [External, GitHub]</li>
+  <li>BP-3: <a href="https://github.com/vmware/herald-for-cpp/blob/develop/herald/src/payload/beacon/beacon_payload_data_supplier.cpp">C++ reference implemanetation</a> [External, GitHub]</li>
+  <li>BP-4: <a href="https://www.health.govt.nz/publication/hiso-100852020-covid-19-contact-tracing-data-standard">New Zealand COVID-19 data standards</a> [External]</li>
+  <li>BP-5: <a href="https://www.health.govt.nz/system/files/documents/publications/covid-19_contact_tracing_qr_code_specification_25_may_2020.pdf">New Zealand QR code data standard</a> [External, PDF]</li>
+</ul>
+
+<h2 id="annex-b-informative-figures">Annex B (Informative): Figures</h2>
+
+<p>The below figures are also shown inline within this standard document.</p>
+
+<p><strong>Figure 1. Beacon Payload Data Format</strong>
+<img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggTFJcbkEoUHJvdG9jb2w8YnI-VmVyc2lvbjxicj4xIGJ5dGU8YnI-MHgzMC0weDM3PGJyPl8pIC0tPiBCKENvdW50cnk8YnI-IDxicj4yIGJ5dGVzPGJyPnVpbnQxNjxicj5fKSAtLT4gQyhTdGF0ZTxicj4gPGJyPjIgYnl0ZXM8YnI-dWludDE2PGJyPl8pIC0tPiBEKExvY2F0aW9uPGJyPkNvZGU8YnI-NCBieXRlczxicj51aW50MzI8YnI-XykgLS0-IEUoRXh0ZW5zaW9uPGJyPkRhdGE8YnI-MC01MDEgYnl0ZXM8YnI-YmluYXJ5PGJyPl8pIiwibWVybWFpZCI6bnVsbH0"></p>
+
+<p><strong>Figure 2. Example Beacon Payload</strong></p>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggTFJcbkEoUHJvdG9jb2w8YnI-VmVyc2lvbjxicj4xIGJ5dGU8YnI-MHgzMDxicj5fKSAtLT4gQihDb3VudHJ5PGJyPiA8YnI-MiBieXRlczxicj44MjY8YnI-XykgLS0-IEMoU3RhdGU8YnI-IDxicj4yIGJ5dGVzPGJyPjE8YnI-XykgLS0-IEQoTG9jYXRpb248YnI-Q29kZTxicj40IGJ5dGVzPGJyPjEyMzQ1Njxicj5fKSAtLT4gRShFeHRlbnNpb248YnI-RGF0YTxicj43MSBieXRlczxicj5BcyBiZWxvdzxicj5fKVxuRihDb2RlPGJyPjB4MTA8YnI-UHJlbWlzZXMgTmFtZTxicj5fKS0tPkcoTGVuZ3RoPGJyPjE5PGJyPl8pLS0-SChEYXRhPGJyPkpvZSdzIEdvdXJtZXQgUGl6emE8YnI-XylcbkkoQ29kZTxicj4weDExPGJyPkFyZWEgTmFtZTxicj5fKS0tPkooTGVuZ3RoPGJyPjE0PGJyPl8pLS0-SyhEYXRhPGJyPldpbmRvdyBTZWF0aW5nPGJyPl8pXG5MKENvZGU8YnI-MHgxMzxicj5EZXRhaWxzIFVSTDxicj5fKS0tPk0oTGVuZ3RoPGJyPjMyPGJyPl8pLS0-TihEYXRhPGJyPmh0dHBzOi8vc29tZXVybC5jb20vdmVudWUvMTIzNDU2PGJyPl8pIiwibWVybWFpZCI6bnVsbH0"></p>
+
+<h2 id="annex-c-informative-change-history">Annex C (Informative): Change history</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Author</th>
+      <th>Change summary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2020-12-22</td>
+      <td><a href="https://github.com/adamfowleruk/">Adam Fowler</a></td>
+      <td>Added information from GS1 body discussions</td>
+    </tr>
+    <tr>
+      <td>2020-12-15</td>
+      <td><a href="https://github.com/adamfowleruk/">Adam Fowler</a></td>
+      <td>Added NZ QR code interoperability guidance</td>
+    </tr>
+    <tr>
+      <td>2020-12-09</td>
+      <td><a href="https://github.com/adamfowleruk/">Adam Fowler</a></td>
+      <td>New payload fully documented (Ready for Herald v1.2)</td>
+    </tr>
+  </tbody>
+</table>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/herald/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldBluetooth">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://herald-bluetooth.slack.com/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/vmware/?q=herald">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            © 2021 Herald Authors.
+            <a href="http://vmware.github.io/" class="vm-logo">A VMware-backed project. <img src="/herald/img/vm-logo.png" alt="VMware logo"></a>
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/herald/js/jquery.matchHeight.js?1610982289774457475"></script>
+<script src="/herald/js/scripts.js?1610982289774457475"></script>
+    </div>
+  </div>
+</body>
+
+</html>

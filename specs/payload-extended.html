@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/herald/css/styles.css?1610982289774457475">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Payload Extended Data Specification">
+<meta name="author" content="Herald Authors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Payload Extended Data Specification">
+<meta property="og:description" content="Payload Extended Data Specification">
+<link rel="canonical" href="https://vmware.github.io/herald/specs/payload-extended">
+<meta property="og:url" content="https://vmware.github.io/herald/specs/payload-extended">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"description":"Payload Extended Data Specification","url":"https://vmware.github.io/herald/specs/payload-extended","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://vmware.github.io/herald/herald/img/herald.png"},"name":"Herald Authors"},"author":{"@type":"Person","name":"Herald Authors"},"headline":"Payload Extended Data Specification","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Payload Extended Data Specification</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="logo">
+            <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+        </div>
+        <ul class="nav-menu" id="header-nav">
+            <li class="home"><a href="/herald/" title="Herald Project">Home</a></li>
+            <li class="blog"><a href="/herald/blog" title="Blog Posts">Blog</a></li>
+            <li class="community"><a href="/herald/community" title="Community">Community</a></li>
+            <li class="docs"><a href="/herald/docs">Documentation</a></li>
+            <li class="efficacy"><a href="/herald/efficacy" title="Efficacy Paper">Efficacy Paper</a></li>
+        </ul>
+        <div class="nav-mobile-link">
+            <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Payload Extended Data Specification</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-3">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>Introduction</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/docs">Our documentation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Applications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/applications">Herald Applications</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/ct">Contact Tracing</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/p2p">Device to Device</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/mesh">Bluetooth Mesh Gateways</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Protocol</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/protocol/">About our protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/protocol/custom">Non contact tracing uses</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Design Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/design/">Herald's Design</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/core">Core philosophy</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/data">Data used</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/protocol">Protocol lifecycle</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/summary">Design summary</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Payloads</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/payload">About Payloads</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/envelope">Herald Envelope Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/interop">Interoperability</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/common">Herald Common CT Inner Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/simple">Herald Simple Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/secured">Herald Secured Inner Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/beacon">Herald Beacon Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/inner">Herald-compatible Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/outer">Custom outer &amp; inner payloads</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Development &amp; Integration Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/guide/">How to integrate</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/code">About the code</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/api">API docs</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/add">Import Herald</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/ios">iOS app guide</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/android">Android app guide</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>About Contact Tracing</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/background">What is Contact Tracing?</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/background/glossary">Glossary of terms</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/background/approaches">Technology Approaches</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Bluetooth Research</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/bluetooth">Our Research</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/hardware">Hardware Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/os">Operating System Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/crowding">Crowding</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/distance">Distance Estimation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Formal Specifications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/specs">List and status</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/protocol">Herald Protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-beacon">Beacon Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-extended">Extended Data Area</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-simple">Simple Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-secured">Secured Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-interop">International Interoperability</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-8 offset-md-1">
+                
+
+  
+
+                <h1 id="payload-extended-data-specification">Payload Extended Data Specification</h1>
+
+<p>This page formally specifies the Extended Data Payload. This is referenced in both the
+<a href="/herald/specs/payload-simple">Simple Payload Specification</a> and the
+<a href="/herald/specs/payload-secured">Secured Payload Specification</a> and the
+<a href="/herald/payload/payload-beacon">Beacon Payload Specification</a>.</p>
+
+<p>This specification is a <strong>DRAFT</strong></p>
+
+<h2 id="modal-verbs-terminology">Modal verbs terminology</h2>
+
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
+NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”,  “MAY”, and
+“OPTIONAL” in this document are to be interpreted as described in
+<a href="https://tools.ietf.org/html/rfc2119">RFC 2119</a>.</p>
+
+<p>Note that these terms apply whether they are uppercase or lowercase
+and no matter what styles are applied to the phrases.</p>
+
+<h2 id="executive-summary">Executive summary</h2>
+
+<h2 id="introduction">Introduction</h2>
+
+<h2 id="scope">Scope</h2>
+
+<p>What is in scope</p>
+
+<p>What is out of scope</p>
+
+<h2 id="references">References</h2>
+
+<h3 id="normative-references">Normative references</h3>
+
+<p>References are either specific (identified by date of publication and/or edition number or version number) or non specific. For specific references,only the cited version applies. For non-specific references, the latest version of the referenced document (including any amendments) applies.</p>
+
+<p>The following referenced documents are necessary for the application of the present document.</p>
+
+<h3 id="information-references">Information references</h3>
+
+<p>References are either specific (identified by date of publication and/or edition number or version number) or non specific. For specific references,only the cited version applies. For non-specific references, the latest version of the referenced document (including any amendments) applies.</p>
+
+<p>The following referenced documents are not necessary for the application of the present document but they assist the user with regard to a particular subject area.</p>
+
+<h2 id="definition-of-terms-symbols-and-abbreviations">Definition of terms, symbols and abbreviations</h2>
+
+<h3 id="terms">Terms</h3>
+
+<p><strong>Beacon</strong> - A fixed device in a location that provides location-specific information. May be called a Bluetooth Beacon.</p>
+
+<p><strong>Big Endian</strong> - Also known as ‘Network Order’. A way of encoding numeric values for transport over data networks. Bluetooth (and most network protocols) are Big Endian.</p>
+
+<p><strong>Herald Project</strong> - The opensource contributors and maintainers of the Herald website, code, and standards documents.</p>
+
+<h3 id="symbols">Symbols</h3>
+
+<h3 id="abbreviations">Abbreviations</h3>
+
+<h2 id="design-constraints">Design Constraints</h2>
+
+<p>The below are the constraints placed on the design of the system that the rest of this standard is defined within.</p>
+
+<h2 id="lifecycle-summary">Lifecycle Summary</h2>
+
+<h2 id="packet-data-format">Packet data format</h2>
+
+<p>Note all values are Big Endian (Network Order) and optional by default.</p>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggTFJcbkEoRGF0YSBDb2RlPGJyPjEgYnl0ZTxicj4weDAwLTB4M0Y8YnI-UmVzZXJ2ZWQ8YnI-XykgLS0-IEIoRGF0YSBMZW5ndGg8YnI-IDxicj4xIGJ5dGU8YnI-dWludDg8YnI-XylcbkItLT5DKERhdGE8YnI-PGJyPjErIGJ5dGVzPGJyPmJpbmFyeTxicj5fKSIsIm1lcm1haWQiOm51bGx9"></p>
+
+<p>Note there may be multiple sections. Below is an example showing three extended data sections:-</p>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggTFJcbkEoRGF0YSBDb2RlPGJyPjEgYnl0ZTxicj4weDAxPGJyPlJTU0kgZGVzYzxicj5fKSAtLT4gQihEYXRhIExlbmd0aDxicj4xIGJ5dGU8YnI-MTxicj4gPGJyPl8pXG5CIC0tPiBDKCAgRGF0YSAgPGJyPjEgYnl0ZSA8YnI-MHgwMDxicj5yYXc8YnI-XylcbkMgLS4tPiBEKERhdGEgQ29kZTxicj4xIGJ5dGU8YnI-MHgwMjxicj5SU1NJIGVycm9yPGJyPl8pIC0tPiBFKERhdGEgTGVuZ3RoPGJyPjEgYnl0ZTxicj4xPGJyPiA8YnI-XylcbkUgLS0-IEYoICBEYXRhICA8YnI-MSBieXRlIDxicj4yPGJyPiA8YnI-XylcbkYgLS4tPiBHKERhdGEgQ29kZTxicj4xIGJ5dGU8YnI-MHgwNTxicj5BcHByb3ggR2VvPGJyPl8pIC0tPiBIKERhdGEgTGVuZ3RoPGJyPjEgYnl0ZTxicj4zPGJyPiA8YnI-XylcbkggLS0-IEkoICBEYXRhICA8YnI-NCBieXRlczxicj5TNDE8YnI-IDxicj5fKSIsIm1lcm1haWQiOm51bGx9"></p>
+
+<h2 id="data-values-supported">Data values supported</h2>
+
+<p>Any data item with no value should not be included in the data payload. 
+I.e. 0 byte length extended segments are omitted.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+      <th>Format and size</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0x00</td>
+      <td>Extension data area format version ID (assume “1” if not present). First field, if present.</td>
+      <td>uint8</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>0x01</td>
+      <td>RSSI description.</td>
+      <td>1 byte hex</td>
+      <td>0x00 = raw<br>0x01 = sample mean<br>0x02 = running mean<br>0x03 = sample mode<br>0x04 = running mode</td>
+    </tr>
+    <tr>
+      <td>0x02</td>
+      <td>RSSI error bound - Expressed as +/- RSSI.</td>
+      <td>uint8</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>0x03</td>
+      <td>Sonar range estimate - decimal metres (size = type of float, use C++ standard types).</td>
+      <td>Float. E.g. float-32 or float-64</td>
+      <td>6.54</td>
+    </tr>
+    <tr>
+      <td>0x04</td>
+      <td>Sonar error bound - Expressed as +/- metres, single value. 4+ bytes, but float. E.g. float-32 or float-64. 0x03 must be present.</td>
+      <td>Same as 0x03</td>
+      <td>1.08</td>
+    </tr>
+    <tr>
+      <td>0x05</td>
+      <td>Approximate geo location (textual) - E.g. in UK “Postal District” which is ~6000 homes.</td>
+      <td>1+ bytes UTF-8</td>
+      <td>‘S41’ or ‘53800’</td>
+    </tr>
+    <tr>
+      <td>0x06</td>
+      <td>Approximate geo co-ordinates - EPSG:4826 (WGS 84) - minutes (0.0166 degrees), accurate to ~1852 metres</td>
+      <td>Two signed int16. Lat then Lon</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>0x07</td>
+      <td>As 0x06, but EPSG:3857 (Web mercator projection)</td>
+      <td colspan="2">As 0x06</td>
+      
+    </tr>
+    <tr>
+      <td>0x08</td>
+      <td>As 0x06, but EPSG:7789 (ITRF2014)</td>
+      <td colspan="2">As 0x06</td>
+      
+    </tr>
+    <tr>
+      <td>0x09<br>-<br>0x0F</td>
+      <td>Reserved for future geo data sections</td>
+      <td colspan="2">1+ bytes</td>
+      
+    </tr>
+    <tr>
+      <td>0x10</td>
+      <td>Textual short name description of location</td>
+      <td>1+ bytes UTF-8 String</td>
+      <td>Joe’s Pizza</td>
+    </tr>
+    <tr>
+      <td>0x11</td>
+      <td>Textual short name description of beacon location within premises</td>
+      <td>1+ bytes UTF-8 String</td>
+      <td>Seating Area B</td>
+    </tr>
+    <tr>
+      <td>0x12</td>
+      <td>Textual disambiguation (optional) for beacon area. Useful for large rooms such as sports halls, football stadiums, shopping centres/malls.</td>
+      <td>1+byte UTF-8 String</td>
+      <td>East Wall or West Wall</td>
+    </tr>
+    <tr>
+      <td>0x13</td>
+      <td>Location information URL (optional). MUST be https.</td>
+      <td>1+ byte UTF-8 URL</td>
+      <td>https://www.someurl.com/myvenue</td>
+    </tr>
+    <tr>
+      <td>0x14</td>
+      <td>Full Address</td>
+      <td>1+ byte UTF-8. \n as newline</td>
+      <td>121 High Street\nScunthorpe</td>
+    </tr>
+    <tr>
+      <td>0x15</td>
+      <td>Entry Source</td>
+      <td>1+ byte UTF-8</td>
+      <td>“ble” for Bluetooth Low Energy (i.e. Beacon)</td>
+    </tr>
+    <tr>
+      <td>0x16</td>
+      <td>Entry Source Version</td>
+      <td>1+ byte UTF-8</td>
+      <td>N/A for Herald beacons (See QR codes in Beacon standard)</td>
+    </tr>
+    <tr>
+      <td>0x17</td>
+      <td>Location company ID (For register in ‘Country’ and ‘State’)</td>
+      <td>1+ byte UTF-8 or numeric, as per country/state standard</td>
+      <td>Variable</td>
+    </tr>
+    <tr>
+      <td>0x18</td>
+      <td>Location company ID (GS1 only)</td>
+      <td>uint32</td>
+      <td>9012345</td>
+    </tr>
+    <tr>
+      <td>0x19</td>
+      <td>Reserved for future Herald standard use</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>0x20</td>
+      <td>Contact event start time</td>
+      <td>uint32 seconds since Unix Epoch. May be ‘present time’ - useful for transmitting time to wearable devices with no external time reference</td>
+      <td>1608062077 (Tue 15 Dec 2020 ~19:54)</td>
+    </tr>
+    <tr>
+      <td>0x21</td>
+      <td>(Contact) Event end time</td>
+      <td>uint32 unix epoch seconds</td>
+      <td>Same example as above</td>
+    </tr>
+    <tr>
+      <td>0x22<br>-<br>-0x3D</td>
+      <td>Reserved for future Herald standard use</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>0x3E</td>
+      <td>Indicates the following data is encrypted for decryption by the originating phone</td>
+      <td>1+ bytes, binary</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>0x3F</td>
+      <td>Indicates the following data is encrypted for decryption by the originating phone’s health service/authority</td>
+      <td>1+ bytes, binary</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>0x40</td>
+      <td>Your last RSSI</td>
+      <td>int8_t</td>
+      <td>-56</td>
+    </tr>
+    <tr>
+      <td>0x41</td>
+      <td>Your last txPower</td>
+      <td>uint8_t</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>0x42</td>
+      <td>My phone model</td>
+      <td>utf-8</td>
+      <td>iPhone7,2</td>
+    </tr>
+    <tr>
+      <td>0x43<br>-<br>0x7F</td>
+      <td>Reserved for future Herald standard use</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>0x80<br>-<br>0xFE</td>
+      <td>Custom country / application use</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>0xFF</td>
+      <td>Extended code length. Switches to X byte length for field codes. Reserved for future use.</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="annex-a-informative-bibliography">Annex A (Informative): Bibliography</h2>
+
+<p>Links to prior art and further reading</p>
+
+<h2 id="annex-b-informative-figures">Annex B (Informative): Figures</h2>
+
+<p>The below figures are also shown inline within the standard document.</p>
+
+<h2 id="annex-c-informative-change-history">Annex C (Informative): Change history</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Author</th>
+      <th>Change summary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2021-01-18</td>
+      <td><a href="https://github.com/adamfowleruk/">Adam Fowler</a></td>
+      <td>Added phone metadata fields</td>
+    </tr>
+    <tr>
+      <td>2020-12-15</td>
+      <td><a href="https://github.com/adamfowleruk/">Adam Fowler</a></td>
+      <td>Added additional entries from Beacon standard</td>
+    </tr>
+    <tr>
+      <td>2020-12-09</td>
+      <td><a href="https://github.com/adamfowleruk/">Adam Fowler</a></td>
+      <td>Existing payload fully documented (Valid for Herald v1.1)</td>
+    </tr>
+    <tr>
+      <td>2020-12-05</td>
+      <td><a href="https://github.com/adamfowleruk/">Adam Fowler</a></td>
+      <td>Initial draft content</td>
+    </tr>
+  </tbody>
+</table>
+
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/herald/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldBluetooth">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://herald-bluetooth.slack.com/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/vmware/?q=herald">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            © 2021 Herald Authors.
+            <a href="http://vmware.github.io/" class="vm-logo">A VMware-backed project. <img src="/herald/img/vm-logo.png" alt="VMware logo"></a>
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/herald/js/jquery.matchHeight.js?1610982289774457475"></script>
+<script src="/herald/js/scripts.js?1610982289774457475"></script>
+    </div>
+  </div>
+</body>
+
+</html>

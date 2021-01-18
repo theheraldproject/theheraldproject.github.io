@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/herald/css/styles.css?1610982289774457475">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Design Guide">
+<meta name="author" content="Herald Authors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Background and rationale for the design of Herald">
+<meta property="og:description" content="Background and rationale for the design of Herald">
+<link rel="canonical" href="https://vmware.github.io/herald/design/">
+<meta property="og:url" content="https://vmware.github.io/herald/design/">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"description":"Background and rationale for the design of Herald","url":"https://vmware.github.io/herald/design/","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://vmware.github.io/herald/herald/img/herald.png"},"name":"Herald Authors"},"author":{"@type":"Person","name":"Herald Authors"},"headline":"Design Guide","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Design Guide</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="logo">
+            <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+        </div>
+        <ul class="nav-menu" id="header-nav">
+            <li class="home"><a href="/herald/" title="Herald Project">Home</a></li>
+            <li class="blog"><a href="/herald/blog" title="Blog Posts">Blog</a></li>
+            <li class="community"><a href="/herald/community" title="Community">Community</a></li>
+            <li class="docs"><a href="/herald/docs">Documentation</a></li>
+            <li class="efficacy"><a href="/herald/efficacy" title="Efficacy Paper">Efficacy Paper</a></li>
+        </ul>
+        <div class="nav-mobile-link">
+            <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Design Guide</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-3">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>Introduction</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/docs">Our documentation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Applications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/applications">Herald Applications</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/ct">Contact Tracing</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/p2p">Device to Device</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/mesh">Bluetooth Mesh Gateways</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Protocol</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/protocol/">About our protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/protocol/custom">Non contact tracing uses</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Design Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/design/">Herald's Design</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/core">Core philosophy</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/data">Data used</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/protocol">Protocol lifecycle</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/summary">Design summary</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Payloads</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/payload">About Payloads</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/envelope">Herald Envelope Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/interop">Interoperability</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/common">Herald Common CT Inner Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/simple">Herald Simple Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/secured">Herald Secured Inner Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/beacon">Herald Beacon Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/inner">Herald-compatible Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/outer">Custom outer &amp; inner payloads</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Development &amp; Integration Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/guide/">How to integrate</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/code">About the code</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/api">API docs</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/add">Import Herald</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/ios">iOS app guide</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/android">Android app guide</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>About Contact Tracing</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/background">What is Contact Tracing?</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/background/glossary">Glossary of terms</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/background/approaches">Technology Approaches</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Bluetooth Research</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/bluetooth">Our Research</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/hardware">Hardware Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/os">Operating System Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/crowding">Crowding</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/distance">Distance Estimation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Formal Specifications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/specs">List and status</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/protocol">Herald Protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-beacon">Beacon Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-extended">Extended Data Area</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-simple">Simple Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-secured">Secured Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-interop">International Interoperability</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-8 offset-md-1">
+                
+
+  
+
+                <h1 id="design-guide">Design Guide</h1>
+
+<p>This section describes how Herald is designed, and the rationale for design decisions.</p>
+
+<p>Herald can be thought of as a ‘Layer 7’ (Application) protocol. It sits on top of
+any Operating Systems’s Bluetooth Low Energy 4.0 or above protocol stack and uses
+a small subset of functionality in order to provide reliable discovery, data
+exchange, and (optionally) distance estimation between Bluetooth devices.</p>
+
+<p>Thanks to this design Herald is Bluetooth compliant and does not use any non-standard
+features of Bluetooth.</p>
+
+<p>The following pages detail the full design rationale for Herald.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Herald is a free and open source cross-platform protocol for proximity detection. It was created to enable all countries, regardless of wealth and technical capability, to control the COVID-19 pandemic with automated contact tracing. The solution is compatible with 97.5% of smartphones worldwide, detects 100% of app users within 8 metres, and delivers 93.06% accurate duration and 95.35% accurate distance measurements to support epidemiological interventions.</p>
+
+<p>Research has shown the pandemic can be controlled if the majority of a population adopt an effective contact tracing app (Ferretti, et al., 2020) that accurately detects at least 80% of interactions. Herald was created according to epidemiology requirements derived from the paper, to enable adoption by the vast majority of world population, and deliver frequent and accurate proximity measurements for exposure risk estimation to inform case isolation decisions.</p>
+
+<p>Simulations (Hinch, et al., 2020) have shown the technical characteristics of Herald offer effective disease control, close to theoretically perfect. Figure 1 presents the results of a comparative simulation where a contact tracing app, and government advice to self-quarantine on development of symptoms are the only interventions being applied to a representative UK population. It shows Herald achieving a similar daily infection rate as a theoretically IDEAL app, and a significant improvement to the BASELINE. For reference, the IDEAL app accurately captures all interactions, and the entire population comply with app instructions to quarantine; BASELINE app captures 0% of interactions and achieves 0% compliance. According to test results and analysis, Herald captures 80.10% of interactions (Fowler, 2020) and achieves 80% compliance.</p>
+
+<p><img src="/herald/images/simulation.png" alt="Figure 1. Simulation of disease spread control with Herald"></p>
+
+<h2 id="approach-background">Approach background</h2>
+
+<p>COVID-19 is a novel virus. We have a limited understanding of its transmission and characteristics (Qureshi, et al., 2020). Contact tracing, in conjunction with social distancing, is currently the most effective intervention for COVID-19, but only if applied at speed, widely, and thoroughly to prevent the spread of the virus. Many countries have developed their own Bluetooth Low Energy</p>
+
+<p>(BLE) based contract tracing app to enable automated contact tracing. The key technical challenge is making an app operate in the background indefinitely with no user input, using minimal power, and also not disrupting normal usage of the phone. The key social challenge is encouraging the vast majority of a population to adopt the app and comply with its quarantine instructions.</p>
+
+<p>The technical challenge stems from the fact that BLE on smartphones was never designed for continuous proximity detection with other phones; the phone operating system naturally prefers to be idle while apps are not being actively used to conserve power, rather than work continuously in the background. The social challenge is in part a technical issue, where a large proportion of the world population are using smartphones that are several years old, thus running a wide range of older operating system software; many people cannot use the latest software and are unwilling to upgrade. Secondly, while research (Ferretti, et al., 2020) has demonstrated the positive impact of contact tracing apps, the model assumes the app can accurately detect at least 80% of interactions. There is little evidence in the public domain that confirms current contact tracing apps achieve this required level of efficacy, thus limiting public trust, adoption and compliance to quarantine instructions from the apps.</p>
+
+<p>All BLE based contact tracing apps are underpinned by a core component, called the protocol, that provides data exchange functionalities, and also frequent and accurate distance estimation across iOS and Android devices. Given the state of app development across the globe, and different app requirements across nations, Herald aims to provide a reliable protocol component for integration, to enhance the efficacy of existing and future apps without mandating a centralised or decentralised approach, nor dictating the payload data for device identification. Herald offers a reliable generic data transport for exchange of app specific payload data across BLE, and delivers frequent and accurate proximity measurements according to epidemiological requirements. It offers a simple integration interface that has been designed according to analysis of existing contact tracing apps in use today worldwide.</p>
+
+<h2 id="research-and-testing">Research and Testing</h2>
+
+<p>Herald has been created from the ground up, based on lessons learnt from the development of the first NHS contact tracing app, new ideas, and also knowledge from open source projects. All its code is new, without borrowing anything from existing work or external parties, thus making it possible for Herald to be released for use for free without restriction.</p>
+
+<p>A key design decision in the development of Herald is the adoption of a test driven development (TDD) methodology where the key requirements of the solution are expressed as objectively measurable automated tests. Development is then driven by continuous testing and refinement according to test results.</p>
+
+<p>Research was conducted at the start of development to understand, define, and characterise epidemiological requirements (Ferretti, et al., 2020, Hinch, et al., 2020, and Qureshi, et al., 2020) in objectively measurable technical terms (Fowler, 2020). Automated app data logging, log data analysis tools, and formal test procedures were then created and validated to enable frequent, objective, and repeatable evaluation of Herald prototypes for rapid fault diagnosis and continuous refinement. As an overview, the evaluation procedure covered detection rate, continuity, completeness, longevity, and accuracy, thus naturally driving the solution towards one that can detect all smartphones within detection range, and provide regular and accurate distance measurements continuously over long periods (e.g. over 24 hours), all while the app is running in the background without any user input.</p>
+
+<p>Additional research was also conducted to understand population reach, by analysing Office for National Statistics and OFCOM data to assess smartphone ownership in the UK; BBC user device model statistics and phone specification data to assess BLE support and BLE advertising support in UK smartphones; and finally GlobalStats mobile phone operating system (OS) version adoption rate in the UK and across the globe to assess software compatibility. The research quantified the impact of software and hardware compatibility on population reach, thus naturally driving the solution towards one that can be adopted by the vast majority of the world population, exceeding the threshold required for disease control (Ferretti, et al., 2020).</p>
+
+<p>For testing and development, the work used a selection of old and challenging devices, as well as newer devices to ensure the solution works under the least favourable conditions. As a general rule, the work was constantly seeking and creating failure conditions for resolution and quality assurance, rather than searching for evidence of success by only using best performing devices in tests. Systematic tests of Herald were conducted using combinations of challenging devices (e.g. iOS devices in background, iPhone 4S running iOS 9.3, non-advertising Android device) to ensure all failure modes are fully understood, addressed and accounted for. Formal testing of Herald was conducted multiple times by two independent testers, using 10 different devices (5 iOS and 5 Android) including the most challenging devices over 12 hours. The detailed test procedure, tools, and results are all publicly available for inspection and independent evaluation.</p>
+
+<p>Next: <a href="/herald/design/core">Core design philosophy</a></p>
+
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/herald/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldBluetooth">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://herald-bluetooth.slack.com/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/vmware/?q=herald">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            © 2021 Herald Authors.
+            <a href="http://vmware.github.io/" class="vm-logo">A VMware-backed project. <img src="/herald/img/vm-logo.png" alt="VMware logo"></a>
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/herald/js/jquery.matchHeight.js?1610982289774457475"></script>
+<script src="/herald/js/scripts.js?1610982289774457475"></script>
+    </div>
+  </div>
+</body>
+
+</html>

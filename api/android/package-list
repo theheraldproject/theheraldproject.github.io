@@ -1,0 +1,11 @@
+com.vmware.herald.sensor
+com.vmware.herald.sensor.analysis
+com.vmware.herald.sensor.ble
+com.vmware.herald.sensor.ble.filter
+com.vmware.herald.sensor.data
+com.vmware.herald.sensor.datatype
+com.vmware.herald.sensor.payload
+com.vmware.herald.sensor.payload.c19x
+com.vmware.herald.sensor.payload.simple
+com.vmware.herald.sensor.payload.sonar
+com.vmware.herald.sensor.service

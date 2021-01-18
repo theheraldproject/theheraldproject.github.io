@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/herald/css/styles.css?1610982289774457475">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="What is Contact Tracing?">
+<meta name="author" content="Herald Authors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Background to contact tracing, proximity detection, and distance estimation">
+<meta property="og:description" content="Background to contact tracing, proximity detection, and distance estimation">
+<link rel="canonical" href="https://vmware.github.io/herald/background/">
+<meta property="og:url" content="https://vmware.github.io/herald/background/">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"description":"Background to contact tracing, proximity detection, and distance estimation","url":"https://vmware.github.io/herald/background/","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://vmware.github.io/herald/herald/img/herald.png"},"name":"Herald Authors"},"author":{"@type":"Person","name":"Herald Authors"},"headline":"What is Contact Tracing?","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - What is Contact Tracing?</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="logo">
+            <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+        </div>
+        <ul class="nav-menu" id="header-nav">
+            <li class="home"><a href="/herald/" title="Herald Project">Home</a></li>
+            <li class="blog"><a href="/herald/blog" title="Blog Posts">Blog</a></li>
+            <li class="community"><a href="/herald/community" title="Community">Community</a></li>
+            <li class="docs"><a href="/herald/docs">Documentation</a></li>
+            <li class="efficacy"><a href="/herald/efficacy" title="Efficacy Paper">Efficacy Paper</a></li>
+        </ul>
+        <div class="nav-mobile-link">
+            <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>What is Contact Tracing?</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-3">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>Introduction</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/docs">Our documentation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Applications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/applications">Herald Applications</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/ct">Contact Tracing</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/p2p">Device to Device</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/mesh">Bluetooth Mesh Gateways</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Protocol</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/protocol/">About our protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/protocol/custom">Non contact tracing uses</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Design Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/design/">Herald's Design</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/core">Core philosophy</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/data">Data used</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/protocol">Protocol lifecycle</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/summary">Design summary</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Payloads</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/payload">About Payloads</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/envelope">Herald Envelope Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/interop">Interoperability</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/common">Herald Common CT Inner Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/simple">Herald Simple Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/secured">Herald Secured Inner Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/beacon">Herald Beacon Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/inner">Herald-compatible Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/outer">Custom outer &amp; inner payloads</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Development &amp; Integration Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/guide/">How to integrate</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/code">About the code</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/api">API docs</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/add">Import Herald</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/ios">iOS app guide</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/android">Android app guide</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>About Contact Tracing</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/background">What is Contact Tracing?</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/background/glossary">Glossary of terms</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/background/approaches">Technology Approaches</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Bluetooth Research</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/bluetooth">Our Research</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/hardware">Hardware Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/os">Operating System Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/crowding">Crowding</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/distance">Distance Estimation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Formal Specifications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/specs">List and status</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/protocol">Herald Protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-beacon">Beacon Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-extended">Extended Data Area</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-simple">Simple Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-secured">Secured Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-interop">International Interoperability</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-8 offset-md-1">
+                
+
+  
+
+                <h1 id="about-contact-tracing">About Contact Tracing</h1>
+
+<p>Contact Tracing is not a new process. It is about asking an individual who has fallen ill to
+list the people and places they have been to in order to find, isolate and test other
+people who may be ill before they can spread a particular illness more widely.</p>
+
+<p>What is new is using technology to perform Contact Tracing. A team from Cambridge first
+did this for a Flu outbreak in the mid 2000s. This used an older version of Bluetooth
+which was power hungry and so was not more widely adopted at the time.</p>
+
+<p>In 2020 many worldwide teams are developing <a href="/herald/protocol">Bluetooth Protocols</a> to 
+perform mobile app based contact tracing. This involves having an app running on your
+phone that is constantly talking to other nearby phones during the day. By swapping
+identifiers these phones maintain a virtual, and pseudoanonymous, list of your contacts.</p>
+
+<p>Below is a diagram showing elements of a contact tracing system beyond just the app:-</p>
+
+<p><img src="/herald/images/CTSystem.png" alt="Contact Tracing System"></p>
+
+<h2 id="benefits-of-mobile-contact-tracing">Benefits of mobile contact tracing</h2>
+
+<p>Mobile contact tracing helps in many situations where manual contact tracing cannot.
+Consider a situation where you were sat in a coffee shop with a friend but also nearby
+many other customers. You would not be able to tell manual contact tracers who you
+had been near to, and that shop would not be able to notify all of its customers. By
+having an app running on peoples phones though you would not need to. The contact and
+relative distance would be logged.</p>
+
+<p>Logging relative distance also provides a richer set of data in order to estimate
+risk upon. An app can also accurately measure the duration of a contact rather than
+rely upon human memory. This too makes the risk calculation more accurate than relying
+on human memory.</p>
+
+<p>Some diseases, like COVID-19, also have a very long period where you can be spreading
+the disease prior to showing symptoms. COVID-19 has a 95 percentile probability of showing
+symptoms only by the 14 day period. This places a very large burden on human memory
+especially for those with busy lifestyles that commute and meet regularly. These people
+are also those moving about most, and thus are most likely to widely spread a disease.</p>
+
+<p>There are also edge cases where a psudeononymous app is beneficial. People at risk of
+domestic violence if they reveal their movements in an interview that is overheard is
+one risk. Another is that of super spreaders. These people more readily pass on
+diseased than others. It could be a simple brief encounter of passing them on the
+street that infects you. In such a circumstance no manual contact tracing method
+could help - you simply pass too many people on the way in to an office to trace.</p>
+
+<p>Interventions can also be aimed at individuals who are at risk rather than pre-emptively
+locking down entire groups of workers in an office, whole towns, or states. In a
+centralised system health authorities could also garner information on general population
+mixing in specific towns and track a virus’ spread in advance of people falling ill.
+App based contact tracing can therefore be very useful in prevention.</p>
+
+<p>Whilst app based contact tracing is unlikely to replace manual contact tracing, it
+is certainly a very useful and specific instrument in the hands of a health authority.</p>
+
+<h2 id="problems-with-mobile-contact-tracing">Problems with mobile contact tracing</h2>
+
+<p>Clearly if an app was sharing very personal information like your name and healthcare
+identifier as you were walking around this would be a very big privacy concern. 
+Mechanisms have to be used that preserve the privacy of an individual.</p>
+
+<p>Pseudononymous identifers, rotating keys, and encryption are all methods used within
+contact tracing applications. Whether these are associated with any healthcare identifier
+or personal information is a decision best left to particular societies.</p>
+
+<p>In our
+<a href="/herald/payload">Payload</a> specification we suggest a general payload that can be used for
+both centralised and decentralised approaches, with or without linking to a healthcare
+identifier. This also supports international interoperability. Using such an approach
+will allow local countries to make their own decisions on where to draw the line
+whilst allowing for a maximal health response.</p>
+
+<p>Also clearly an issue is having a device that is capable of running a particular
+protocol. Our <a href="/herald/protocol">Protocol</a> supports 97.5% of the population and the handsets
+they use. Other protocols relies on particular technologies, or mobile operating system
+versions, that greatly reduce this reach by 30%.</p>
+
+<p>Also anything electronic has battery life issues. Bluetooth Low Energy since June 2010
+has much lower battery use. It’s important to take regular
+distance estimations in a contact tracing app, but also to not do so often
+enough to run the battery down. A full day needs to be supported. 
+<a href="/herald/protocol">Our protocol</a> has been shown to only drain the battery by 6-11% over
+an 8 hour day. That’s less battery use than WhatsApp on your phone!</p>
+
+<p>Western countries like the UK have a population where 98% of people own a 
+phone with Bluetooth Low Energy support. In other countries this will be lower, which
+is why manual contact tracing is still important.</p>
+
+<h2 id="how-does-mobile-contact-tracing-work">How does mobile contact tracing work?</h2>
+
+<p>The idea is that people run an app on their phone and keep it running at all times
+in the background as they go about their business. During the day this phones is regularly
+advertising the fact it’s running a contact tracing protocol to other devices nearby.
+Non contact tracing apps ignore this advertisement, but other contact tracing apps
+are specifically looking for it.</p>
+
+<p>When another phone discovers this advertisement it will record the pseudonymous identifier
+of the other device and then regularly take distance estimation readings. Using Bluetooth
+this is done by using the RSSI signal strength indicator. These readings are then stored
+locally on the phone for around 14 days.</p>
+
+<p>When someone with an app falls ill they are asked to share their status and recent identifiers.
+These are then matched against others’ recorded data to determine others’ risk exposure.
+Any people who exceed a particular risk threshold will typically be given advice
+to self isolate and get tested.</p>
+
+<h2 id="centralised-or-decentralised">Centralised or Decentralised</h2>
+
+<p>There have been two terms that aim to describe contact tracing approaches. These are
+centralised and decentralised. Every contact tracing system necessarily has a central
+server to link an individual (whether identified by name or healthcare ID or not)
+back in to the health service. What “Decentralised” actually means is “Ensuring the
+health authority cannot have a full contact graph such that this information can be
+abused by another part of the State apparentus”. E.g. for restricting freedom of
+movement or assembly, or law enforcement location/social tracing.</p>
+
+<p>How contact matching occurs depends on whether the app uses a centralised or decentralised
+approach. In a decentralised approach all matching occurs on individual phones, with
+no proximity information shared with a health authority. Many privacy advocates
+prefer this approach.</p>
+
+<p>The downside of the pure decentralised approach is as follows:-</p>
+<ul>
+  <li>It provides no advance information to the healthcare system of a particular country
+as to the mixing and spreading of a disease prior to a person getting diagnosed</li>
+  <li>The data cannot be mined to determine if the ‘risk alert threshold’ in a particular
+country, or part of a country, is at the right level to reduce virus spread making
+it hard for countries to determine the right balance between lockdown advice and risk</li>
+  <li>Decentralised approaches cannot spot ‘asymptomatic’ individuals - people who are
+ill with the disease, and spreading it, and should be directed to a health professional</li>
+  <li>Decentralised approaches cannot spot ‘super spreaders’ prior to their own
+diagnosis as they don’t provide multiple device’s contact graphs to a central
+location where they can be analysed for such patterns in advance</li>
+  <li>Only first-order contacts can be notified. At the height of a pandemic you may
+wish to reach out to second or third order contacts in order to lock those down
+until they are tested in order to drastically cut the spread of the virus
+<a href="https://github.com/BDI-pathogens/covid-19_instant_tracing/blob/master/Report%20-%20Effective%20Configurations%20of%20a%20Digital%20Contact%20Tracing%20App.pdf">Some studies (PDF, Oxford)</a> 
+have been done on this and show this can drastically cut the
+spread of a virus. Whilst wide ranging, this would provide a level of control 
+before requiring a full national lock down</li>
+  <li>In a decentralised system you cannot verify that a device saying they are 
+infected and have had a myriad of contacts is real, or that a contact graph
+is real. This allows hostile state actors potentially to use devices in particular
+areas to lock down individuals, important buildings/organisations, or as has
+been <a href="https://www.forbes.com/sites/michaeldelcastillo/2020/08/27/google-and-apple-downplay-possible-election-threat-identified-in-their-covid-19-tracing-software/">reported recently (Website, Forbes)</a> 
+prevent them from going to the polls</li>
+  <li>International interoperability - Whilst every government could adopt the same
+physical protocol and thus be technically compatible, it should be noted that
+each jurisdiction maintains its own list of ill contact identifiers even in
+decentralised protocols. This means a French app wouldn’t see the UK’s list of
+ill people, so people mixing between countries wouldn’t be notified of any
+risk they are being placed at, and governments would not known without manual
+contact tracing where sick people were travelling from. This is particularly
+an issue in areas where people regularly cross a border, such as that between
+Ulster and the Republic of Ireland.</li>
+</ul>
+
+<p>A centralised system allows all of the above problems to be countered.</p>
+
+<p>It is up to individual governments to decide which level of risk is more of
+an issue to their populations.</p>
+
+<p>Our suggested <a href="/herald/payload/secured">Herald Secure payload</a> strikes a middle
+ground here, providing a predictable ID and graph to the state, but with only
+one side of the contact graph shared. (When the ill person submits their data)
+This approach also counters spoofing, relay, and replay attacks and is more
+secure than the pure decentralised approach.</p>
+
+<h2 id="what-does-mobile-contact-tracing-comprise-of">What does mobile Contact Tracing comprise of?</h2>
+
+<p>There are several steps. They are as follows:-</p>
+
+<ul>
+  <li>Detection - Seeing another phone running an app, and logging the owners 
+pseudononymous identifier</li>
+  <li>Proximity Ranging - Regularly providing distance estimations during a 
+Contact Event. The more regularly this is done, the more accurate the risk
+estimation</li>
+  <li>Risk exposure calculation - how much risk has been ocurred 
+(a function of distance and time)</li>
+  <li>Tracing - Taken an ill person’s log of information and/or identifier
+and using this to calculated the risk of others’ exposure to this person,
+and providing advice for them to take (E.g. isolation and testing)</li>
+</ul>
+
+<p>The first two points are generally grouped and called ‘Proximity Detection’
+and are the purvue of the <a href="/herald/protocol">Herald Protocol</a> and <a href="/herald/payload">Payload</a>
+of a particular Proximity Detection Protocol.</p>
+
+<p>Distance estimation has been out of scope of our research, but we have
+made <a href="/herald/bluetooth/distance">some distance estimation discoveries</a>.</p>
+
+<p>The final one, Tracing, and how it occurs is determined by the mobile
+contact tracing application using the protocol that is provided to a
+particular state or countries residents.</p>
+
+<p>Below is a diagram of an end to end contact tracing system flow:-</p>
+
+<p><img src="/herald/images/tracing-flow.png" alt="Contact tracing end to end flow"></p>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/herald/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldBluetooth">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://herald-bluetooth.slack.com/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/vmware/?q=herald">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            © 2021 Herald Authors.
+            <a href="http://vmware.github.io/" class="vm-logo">A VMware-backed project. <img src="/herald/img/vm-logo.png" alt="VMware logo"></a>
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/herald/js/jquery.matchHeight.js?1610982289774457475"></script>
+<script src="/herald/js/scripts.js?1610982289774457475"></script>
+    </div>
+  </div>
+</body>
+
+</html>

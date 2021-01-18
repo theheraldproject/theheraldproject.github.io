@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/herald/css/styles.css?1610982289774457475">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Herald secured inner payload">
+<meta name="author" content="Herald Authors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Simple secured payload for contact tracing">
+<meta property="og:description" content="Simple secured payload for contact tracing">
+<link rel="canonical" href="https://vmware.github.io/herald/payload/secured">
+<meta property="og:url" content="https://vmware.github.io/herald/payload/secured">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"description":"Simple secured payload for contact tracing","url":"https://vmware.github.io/herald/payload/secured","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://vmware.github.io/herald/herald/img/herald.png"},"name":"Herald Authors"},"author":{"@type":"Person","name":"Herald Authors"},"headline":"Herald secured inner payload","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Herald secured inner payload</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="logo">
+            <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+        </div>
+        <ul class="nav-menu" id="header-nav">
+            <li class="home"><a href="/herald/" title="Herald Project">Home</a></li>
+            <li class="blog"><a href="/herald/blog" title="Blog Posts">Blog</a></li>
+            <li class="community"><a href="/herald/community" title="Community">Community</a></li>
+            <li class="docs"><a href="/herald/docs">Documentation</a></li>
+            <li class="efficacy"><a href="/herald/efficacy" title="Efficacy Paper">Efficacy Paper</a></li>
+        </ul>
+        <div class="nav-mobile-link">
+            <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Herald secured inner payload</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-3">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>Introduction</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/docs">Our documentation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Applications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/applications">Herald Applications</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/ct">Contact Tracing</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/p2p">Device to Device</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/mesh">Bluetooth Mesh Gateways</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Protocol</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/protocol/">About our protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/protocol/custom">Non contact tracing uses</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Design Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/design/">Herald's Design</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/core">Core philosophy</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/data">Data used</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/protocol">Protocol lifecycle</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/summary">Design summary</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Payloads</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/payload">About Payloads</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/envelope">Herald Envelope Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/interop">Interoperability</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/common">Herald Common CT Inner Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/simple">Herald Simple Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/secured">Herald Secured Inner Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/beacon">Herald Beacon Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/inner">Herald-compatible Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/outer">Custom outer &amp; inner payloads</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Development &amp; Integration Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/guide/">How to integrate</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/code">About the code</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/api">API docs</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/add">Import Herald</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/ios">iOS app guide</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/android">Android app guide</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>About Contact Tracing</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/background">What is Contact Tracing?</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/background/glossary">Glossary of terms</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/background/approaches">Technology Approaches</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Bluetooth Research</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/bluetooth">Our Research</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/hardware">Hardware Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/os">Operating System Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/crowding">Crowding</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/distance">Distance Estimation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Formal Specifications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/specs">List and status</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/protocol">Herald Protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-beacon">Beacon Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-extended">Extended Data Area</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-simple">Simple Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-secured">Secured Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-interop">International Interoperability</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-8 offset-md-1">
+                
+
+  
+
+                <h1 id="draft-contact-tracing-secure-inner-payload">DRAFT Contact Tracing Secure inner Payload</h1>
+
+<p>This example of an <a href="/herald/payload/inner">inner payload</a> that is designed to work exclusively with
+the <a href="/herald/payload/envelope">Herald envelope payload</a> provides additional security and privacy
+guarantees over and above the <a href="/herald/payload/simple">Herald simple inner payload</a> example.</p>
+
+<p>Click here to <a href="/herald/specs/payload-secured">View the Formal Specification for the Secured Payload</a></p>
+
+<p><img src="/herald/images/PayloadSecured.png" alt="Secured payload data"></p>
+
+<p>This payload was driven by two somewhat competing desires:-</p>
+
+<ul>
+  <li>Provide as much information to a state/national health authority as possible to prevent virus transmission</li>
+  <li>Preserve contact-to-contact privacy</li>
+</ul>
+
+<p>The data we support for both is described in the following two sections. Later follows a detailed explanation
+of how the payload works.</p>
+
+<p><b>DRAFT</b> This is a draft payload description currently under review.</p>
+
+<h2 id="providing-information-to-a-national-health-authority">Providing information to a national health authority</h2>
+
+<p>We wanted to support these extended contact tracing approaches:-</p>
+
+<ul>
+  <li>Allow the tracking of spread throughout a contact graph network, with persistent graph-node identifiers</li>
+  <li>Allow the spotting of asymptomatic individuals, and super spreaders, through network analysis</li>
+  <li>Support not just First Order contact notifications, but also Second and Third order, to drastically cut virus transmission in the peak of a pandemic</li>
+</ul>
+
+<p>This places some restrictions on the outer payload:-</p>
+<ul>
+  <li>ClientID is knowable by the health authority and can be linked to a persistent identifier over time (although NOT necessarily the registration ID of that phone user)</li>
+</ul>
+
+<p>This also requires the inner payload to provide the following information:-</p>
+<ul>
+  <li>Exposure service token (32 bytes) - Token issued by phone A allowing the remote phone B to notify phone A’s health authority that the exposure is valid</li>
+  <li>Phone exposure confirmation token (16 bytes) - Token issued by phone A, passed by phone A’s health authority back to it when phone B is ill, allowing that phone to verify that the exposure is real, and was not the result of a replay/relay or spoofing attack, or the result of health authority for phone A being compromised</li>
+</ul>
+
+<h2 id="enhancing-privacy">Enhancing privacy</h2>
+
+<p>Privacy is an issue when an organisation can request, warrant, or extract the contact information from a health authority and identify the individual phones or users
+behind the ClientIDs passed during contact event sharing. I.e. knowing the identity between the ‘nodes’ on a contact graph.</p>
+
+<p>Ideally we want to share a solid and verifiable contact graph with a national health authority without them knowing both sides of the contact graph, even if both sides declare themselves as ill
+and submites their contact information to the same health authority.</p>
+
+<p>The way to do this is to provide edge information to the health authority, and a persistent but unregistered identifier (Node ID) for the contacts. The way to ensure that the exposure
+is a valid one and only acted upon is to verify the tokens shared between the two phones locally, and encrypted so only they know the content shared,
+and verifiable with secrets only stored in the secre enclave of each phone.</p>
+
+<p>Basically we do this:-</p>
+<ul>
+  <li>Provide all graph edge information to the health authority, and risk calculation is done centrally, subtotalling by Persistent UUID</li>
+  <li>Post the ClientIDs, exposure confirmation tokens, and summarised risk subtotals to all devices under the health authority’s control - regularly, within 30 minutes of receipt (See the Ferretti et al paper, March 2020 for rationale)</li>
+  <li>Leave exposure risk verification, and notifying to the health authority that the user is exposed, to the exposed mobile phone (not doing this centrally)</li>
+</ul>
+
+<p>Identity information is managed as follows:-</p>
+
+<ul>
+  <li>Each phone registers with a heath authority on first launch, and creates a base symmetric key using Diffie-Hellman-Merkle approach, and agrees an epoch time</li>
+  <li>Each phone uses the symmetric key and agreed epoch to generate a ClientID using the TOTP approach <a href="https://tools.ietf.org/html/rfc6238">RFC-6238 (external link)</a>. This is NOT the outer packet client id, but a validation ID used to secure comms to the health authority (E.g. via a one time use security header)</li>
+  <li>Each phone generates two of its own public/private key pair which is stored only locally in the secure enclave. These are:-
+    <ul>
+      <li>Ephemeral public/private key pair, for short lived cryptographic comms between devices over Bluetooth. MUST be generated per-device and used only once (I.e. for this single client exchange). Never shared with the health authority, deleted after use.</li>
+      <li>Exposure confirmation public/private key pair, used to generate locally verifiable exposure confirmation tokens. Regularly rotated (E.g. daily), but stored locally for 15 days for verification. Never shared with the health authority</li>
+    </ul>
+  </li>
+  <li>Each phone generates a 256 bit (32 bytes) symmetric key, stored locally in the secure enclave, along with a random epoch value less than the ClientID epoch value, and generates the ClientID using TOTP. Key never shared directly with the health authority, but the TOTP result is.</li>
+  <li>Each phone generates a 16 byte UUID used as a persistent identifier. Never shared by the transmitter directly with a health authority, only indirectly via a nearby phone, and only encrypted using the health authority’s submission TOTP data</li>
+</ul>
+
+<h2 id="who-knows-what-and-when">Who knows what, and when?</h2>
+
+<p>Below is a visual representation of what each phone and health authority knows:-</p>
+
+<p><img src="/herald/images/PayloadSecuredGraph.png" alt="Secured contact graph information"></p>
+
+<p>NOTE: Please see the <a href="/herald/payload/interop">Interoperability page</a> on how the secured payload ensures security and privacy whilst working between multiple countries.</p>
+
+<h2 id="security-analysis-summary---cia">Security Analysis Summary - CIA</h2>
+
+<p>Confidentiality - Yes. Provided by encrypting all data between both phones, and from phones to health service, preventing interception, spoofing, relay and replay attacks. A one time use Diffie-Hellman-Merkle symmetric key agreement is used to encrypt the data. Uses phones’ built in secure enclave for storage of cryptographic material where provided.</p>
+
+<p>Integrity - Yes. By using a TOTP code that the health authority can decrypt and an exposure confirmation token the transmitting phone can only decrypt, the transmitting
+phone knows that both phones and its health authority have all been involved in the exchange, and the data has been verified. Data cannot leak or be extracted and
+use by another device as the transmitting device checks the time and tokens it issued, ensuring integrity. Even if data passes via a health authority of a hostile
+state actor it cannot be manipulated to cause the exposure of incorrect or targetted individuals and groups of the originating country.</p>
+
+<p>Availability - Yes. Bluetooth provides built in CRC checks of data, so by the time Herald sees the data it has already been validated. Supporting both read
+and write approaches to Bluetooth data exchange ensures the maximum support of mobile phones, as some phones can discover and read and write from others,
+but not be discoverable and readable/writable themselves (~35% of Android phones in the UK do not support advertising <a href="../paper/bibliography#a-21">[21]</a>).</p>
+
+<p>Non-repudiation - Yes. The original transmitter can verify that the exposure token was from the exact phone they communicated with and that their
+data was decrypted and interpreted by their own health authority, and that the time of the contact is valid. All three participants (Transmitter, Receiver, Transmitter’s health authority)
+are authenticated in this approach. Authentication of the receivers health authority if left to the communication channel between those authorities.</p>
+
+<h2 id="formal-specification">Formal specification</h2>
+
+<p>Please see the <a href="/herald/specs/payload-secured">Formal secured payload specification page</a> for full details</p>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/herald/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldBluetooth">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://herald-bluetooth.slack.com/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/vmware/?q=herald">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            © 2021 Herald Authors.
+            <a href="http://vmware.github.io/" class="vm-logo">A VMware-backed project. <img src="/herald/img/vm-logo.png" alt="VMware logo"></a>
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/herald/js/jquery.matchHeight.js?1610982289774457475"></script>
+<script src="/herald/js/scripts.js?1610982289774457475"></script>
+    </div>
+  </div>
+</body>
+
+</html>

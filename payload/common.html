@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/herald/css/styles.css?1610982289774457475">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Herald common contact tracing header">
+<meta name="author" content="Herald Authors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Common header data for contact tracing interoperability">
+<meta property="og:description" content="Common header data for contact tracing interoperability">
+<link rel="canonical" href="https://vmware.github.io/herald/payload/common">
+<meta property="og:url" content="https://vmware.github.io/herald/payload/common">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"description":"Common header data for contact tracing interoperability","url":"https://vmware.github.io/herald/payload/common","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://vmware.github.io/herald/herald/img/herald.png"},"name":"Herald Authors"},"author":{"@type":"Person","name":"Herald Authors"},"headline":"Herald common contact tracing header","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Herald common contact tracing header</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="logo">
+            <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+        </div>
+        <ul class="nav-menu" id="header-nav">
+            <li class="home"><a href="/herald/" title="Herald Project">Home</a></li>
+            <li class="blog"><a href="/herald/blog" title="Blog Posts">Blog</a></li>
+            <li class="community"><a href="/herald/community" title="Community">Community</a></li>
+            <li class="docs"><a href="/herald/docs">Documentation</a></li>
+            <li class="efficacy"><a href="/herald/efficacy" title="Efficacy Paper">Efficacy Paper</a></li>
+        </ul>
+        <div class="nav-mobile-link">
+            <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Herald common contact tracing header</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-3">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>Introduction</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/docs">Our documentation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Applications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/applications">Herald Applications</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/ct">Contact Tracing</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/p2p">Device to Device</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/mesh">Bluetooth Mesh Gateways</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Protocol</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/protocol/">About our protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/protocol/custom">Non contact tracing uses</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Design Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/design/">Herald's Design</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/core">Core philosophy</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/data">Data used</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/protocol">Protocol lifecycle</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/summary">Design summary</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Payloads</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/payload">About Payloads</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/envelope">Herald Envelope Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/interop">Interoperability</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/common">Herald Common CT Inner Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/simple">Herald Simple Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/secured">Herald Secured Inner Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/beacon">Herald Beacon Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/inner">Herald-compatible Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/outer">Custom outer &amp; inner payloads</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Development &amp; Integration Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/guide/">How to integrate</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/code">About the code</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/api">API docs</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/add">Import Herald</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/ios">iOS app guide</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/android">Android app guide</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>About Contact Tracing</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/background">What is Contact Tracing?</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/background/glossary">Glossary of terms</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/background/approaches">Technology Approaches</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Bluetooth Research</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/bluetooth">Our Research</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/hardware">Hardware Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/os">Operating System Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/crowding">Crowding</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/distance">Distance Estimation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Formal Specifications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/specs">List and status</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/protocol">Herald Protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-beacon">Beacon Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-extended">Extended Data Area</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-simple">Simple Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-secured">Secured Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-interop">International Interoperability</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-8 offset-md-1">
+                
+
+  
+
+                <h1 id="common-herald-contact-tracing-data">Common Herald Contact Tracing data</h1>
+
+<p>Technically this header is part of the inner payload, but the data is common to both 
+the <a href="/herald/payload/simple">Herald simple inner payload</a> or 
+the <a href="/herald/payload/secured">Herald secured payload</a> and can even be used with your own
+contact tracing specific custom <a href="/herald/payload/inner">Inner payload</a></p>
+
+<h2 id="what-does-the-common-header-provide">What does the common header provide?</h2>
+
+<p>The below information is appended to the <a href="/herald/payload/envelope">Herald Envelope payload</a>:-</p>
+
+<p>Note: All numbers are Big Endian (network order).</p>
+
+<ul>
+  <li>Read ID payload
+    <ul>
+      <li>Client ID - 16 byte Ephemeral rotating identifier (generated via a callback in the Herald protocol). Could use TOTP to be generated. (not required)</li>
+      <li>Routing code - 4 byte freeform area, specific to the protocol identifier, for routing data or specifying legal jurisdiction/company ownership. For contact tracing this is used as follows:-
+        <ul>
+          <li>Country code - 2 byte unsigned integer, ISO-3166-1 NUMERIC code for a country (E.g. 826 is the UK)</li>
+          <li>State code - 2 byte unsigned integer, defined by the country in country code, to identify the part of the country or a commercial or other entity within it</li>
+        </ul>
+      </li>
+      <li>My TX power - 2 byte float, current tx power of the device whose ID is being read</li>
+      <li>Inner payload data - remaining bytes are reserved for the inner payload. MUST be either fixed length, or you can provide a parser that detects the end of this payload (See calling card / read characteristic, below)</li>
+    </ul>
+  </li>
+  <li>Calling card / ID write payload
+    <ul>
+      <li>Same content as for Read ID payload except after TX power and before inner payload you also have the following (included in the signature)</li>
+      <li>Your RSSI - 2 byte signed integer. RSSI seen of the written to phone by the writer. Needed to support the (14% in the UK) phones that do not support advertising and so cannot be read from</li>
+    </ul>
+  </li>
+  <li>Calling card / nearby devices read payload - most recent devices only
+    <ul>
+      <li>Multiple payloads, consisting of:-
+        <ul>
+          <li>Payload type - 1 byte integer. 0 = direct read, 1 = direct write, other values reserved for future use</li>
+          <li>Received time - 4 byte signed integer, unix epoch seconds when the echange was observed by the device</li>
+          <li>Payload data - as per individual read/write payloads, above. You MUST either configure a fixed length value in the Herald outer payload, or provide your own custom parser to split each shared device payload.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Calling card / nearby devices write payload (disabled by default in the Herald protocol)
+    <ul>
+      <li>Exactly the same as for calling card read payload - most recent devices only</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="how-do-i-specify-an-inner-payload">How do I specify an inner payload?</h2>
+
+<p>Implement the callbacks to provide a <a href="/herald/payload/inner">custom inner payload</a> data or use 
+the <a href="/herald/payload/simple">Herald simple inner payload</a> or the <a href="/herald/payload/secured">Herald secured payload</a>.</p>
+
+<h2 id="how-does-international-interoperability-work">How does international interoperability work?</h2>
+
+<p>Each receiving device records the inner payload along with all the other information but may not interpret
+its content directly. It is important, therefore, that the issuing country is content with the inner payload
+being recorded by a foreign visitors device and when they return home that data could be shared with
+the issuing state’s systems for contact tracing reasons.</p>
+
+<p>It needs to be shared because it forms part of the contact tracing data, and will be shared with the issuing country
+by that country’s health authority should the visitor become ill. This allows countries to implement
+their own signing and crytographic approach within the inner payload if they wish whilst all using the Herald Protocol.</p>
+
+<p>Worked example (countries mentioned don’t necessarily use the Herald protocol):-</p>
+<ul>
+  <li>Natalie is from Australia and uses the Victoria contact tracing app</li>
+  <li>Jess is from the UK and uses the England app</li>
+  <li>Natalie visits the UK and spends 2 hours at a bar talking to Jess. She returns to Australia and falls ill</li>
+  <li>Natalie submits her contact information for the past 14 days, that includes Jess’ contact tracing payload
+    <ul>
+      <li>Victoria state’s health authority now has 8 Payloads for Jess, but doesn’t know they’re for the same person, and a bunch of RSSI information
+        <ul>
+          <li>Victoria state’s health authority doesn’t need to know the make and model of Jess’ phone, as she’s the one that is exposed</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Victoria state’s health authority confirms Natalie is ill, and sends “Hey, a person in my country fell ill on X date, and met someone for your country.”
+    <ul>
+      <li>This includes the entire contact packet shared by Jess, including the time of receipt.</li>
+      <li>This MAY optionally include ‘exposure verifier’ data, known only to Natalie and Jess’ phones, allowing Jess’ phone in a decentralised system, or the England health authority in a centralised system, to verify this data was sent by Jess and received by Natalie. (See the <a href="/herald/payload/secured">Secured inner payload</a> for an example approach)</li>
+    </ul>
+  </li>
+  <li>England’s state health authority processes the shared contact payload from Victoria state and notifies the user of the exposure if necessary (usually if it hits a notifiable threshold in a centralised system, or always notified in a decentralised one)
+    <ul>
+      <li>England Confirms the validity of the contact by verifying the inner packet provided by Jess’ phone, and validating the signature of the whole packet</li>
+      <li>In a centralised system, the ClientID would be associated with a particular unique ID, and so England would know it’s a single person, Jess, exposed for 2 hours and thus needs notifying. If contact details are already known, a manual contact tracing team could make contact. Alternatively (or as well) a message could be sent to England’s app on Jess’ phone making her aware, given advice on self isolation and testing, and requesting she submit nearby contact details (See <a href="/herald/background/glossary">Second order</a> contact tracing as to why you’d do this before testing Jess)</li>
+      <li>In a decentralised system, the entire payload, or a decoded portion thereof, could be sent to all phones, and distance estimation and exposure could be calculated locally on Jess’ phone. Ideally the inner payload would be linked via time (E.g. TOTP) to the client ID, the client ID would be predictable only by Jess’ phone, and the inner payload verifies the time in an encrypted form, preventing replay and relay attacks</li>
+    </ul>
+  </li>
+</ul>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/herald/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldBluetooth">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://herald-bluetooth.slack.com/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/vmware/?q=herald">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            © 2021 Herald Authors.
+            <a href="http://vmware.github.io/" class="vm-logo">A VMware-backed project. <img src="/herald/img/vm-logo.png" alt="VMware logo"></a>
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/herald/js/jquery.matchHeight.js?1610982289774457475"></script>
+<script src="/herald/js/scripts.js?1610982289774457475"></script>
+    </div>
+  </div>
+</body>
+
+</html>

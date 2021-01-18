@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/herald/css/styles.css?1610982289774457475">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Efficacy Test Methods">
+<meta name="author" content="Herald Authors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="The methods we recommend as standard for our formula">
+<meta property="og:description" content="The methods we recommend as standard for our formula">
+<link rel="canonical" href="https://vmware.github.io/herald/efficacy/method">
+<meta property="og:url" content="https://vmware.github.io/herald/efficacy/method">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"description":"The methods we recommend as standard for our formula","url":"https://vmware.github.io/herald/efficacy/method","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://vmware.github.io/herald/herald/img/herald.png"},"name":"Herald Authors"},"author":{"@type":"Person","name":"Herald Authors"},"headline":"Efficacy Test Methods","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Efficacy Test Methods</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="logo">
+            <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+        </div>
+        <ul class="nav-menu" id="header-nav">
+            <li class="home"><a href="/herald/" title="Herald Project">Home</a></li>
+            <li class="blog"><a href="/herald/blog" title="Blog Posts">Blog</a></li>
+            <li class="community"><a href="/herald/community" title="Community">Community</a></li>
+            <li class="docs"><a href="/herald/docs">Documentation</a></li>
+            <li class="efficacy"><a href="/herald/efficacy" title="Efficacy Paper">Efficacy Paper</a></li>
+        </ul>
+        <div class="nav-mobile-link">
+            <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Efficacy Test Methods</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-3">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>Efficacy</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/efficacy">Introduction</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/efficacy/paper">The Fair Measure Paper</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/efficacy/method">Testing Methodology</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/efficacy/results">Test Results</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/efficacy/statistics">Statistics</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/efficacy/herald">Herald Performance</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/efficacy/bibliography">Bibliography</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-8 offset-md-1">
+                
+
+  
+
+                <h1 id="formal-testing-methods">Formal testing methods</h1>
+
+<p>This section details the formal tests we used in order to validate the formula in
+<a href="/herald/efficacy/paper">The Paper</a></p>
+
+<p>In the end we determined you only needed to run the two required tests in order
+to get all the data you need, with a single long run of the office test the best
+to provide replicable data.</p>
+
+<p>Only test results gained by using this method shall be considered for publication on
+this project website. We welcome results from any protocol teams using these tests.</p>
+
+<h2 id="set-up">Set up</h2>
+
+<p>The set up procedures are mentioned for both th <a href="https://github.com/vmware/herald-for-ios">iOS test app GitHub site</a> and the <a href="https://github.com/vmware/herald-for-android">Android test app GitHub site</a> for the Herald protocol.</p>
+
+<h2 id="required-tests">Required tests</h2>
+
+<p>Below are the required tests. These provide the correct input for the Fair Efficacy Formula.</p>
+
+<h3 id="office-test-required">Office test (required)</h3>
+
+<p>Replicates an office environment with people sat nearby each other.</p>
+
+<p>Set phones up in two to four rows of up to 5 devices per row at a fixed 2m separation, in a grid. Run the test for 30 minutes. Ideally introduce each phone ‘fully backgrounded’ for Bluetooth in order to prevent bias due to newly interrupted phones (i.e. replicate the ‘worst case scenario’ rather than ‘sunny day’ phone activity option). Phones must not be artificially awoken or played with during this test as this could skew the sensor readings.</p>
+
+<p>Proves continuity coverage, continuity, and completeness with multiple measurements per test.</p>
+
+<p>Run this test for 8 hours in order to gain a relevant longevity measurement.</p>
+
+<h3 id="formal-accuracy-test-required">Formal accuracy test (required)</h3>
+
+<p>In order to fairly test the accuracy of a distance analogue two phones shall have to have their distance analogues measured at a known distance. This is the ‘expected distance analogue’ value. Do this for distances of 3m, 2m, 1.2m, 0.8m, 1m, 1.5m, 2.5m, 3.5m for as long a time as necessary to determine the true expected distance analogue value. Then in a test of the actual application and protocol place the phone at each distance for exactly 1 minute, then move to the next distance, and so on during the same test. Log data from both sides of the communication.</p>
+
+<p>Now you can use a script to compare the expected distance analogue value (E.g. -51 RSSI at 2m) against the individual distance analogue values within each 1 minute period. It is expected each protocol have at least 2 readings in each period, thus providing readings that can be analysed. The reason for the 1 minute period is to try to replicate a real scenario of approaching someone, talking, then moving away again just like as colleagues working in an office might.</p>
+
+<p>This test shall be used only for distance accuracy (mean error) calculations.</p>
+
+<h3 id="continuity-window-test-required-if-source-code-not-available-of-detection-routine">Continuity window test (required if source code not available of detection routine)</h3>
+
+<p>A set of pairwise tests shall be carried out in order to establish the actual in-practice window detection size of a given protocol. This is mainly required if the protocol and it’s test app do not provide the necessary metrics in formal testing as a matter of course.</p>
+
+<p>This test comprises of two phones with the app running in a radiation shielded environment being introduced for one or more multiples of 30 seconds, and counting how many one way detections occur. Comparing the most common handsets across windows of 30 seconds up to that protocol’s declared estimation interval will reveal it’s actual minimum mean detection time, and the detection time required to guarantee 100% detection.</p>
+
+<p>It should be noted that testing application only in scenarios with more than 5 minute intervals is not realistic to modern life or the 30 second required minimum epidemiological window for risk estimation. Tests should therefore be of irregular numbers of minutes for contact events, at irregular distances in order to best expose limitations of particular protocols’ implementations.</p>
+
+<h2 id="optional-tests">Optional tests</h2>
+
+<p>Whilst not necessary to gain the input variables for our formula, the below tests may be of
+use to protocol development teams, and so we mention them here.</p>
+
+<h3 id="star-test-optional">Star test (optional)</h3>
+
+<p>Have a central phone surrounded by other phones at a fixed distance away. Proves continuity coverage, accuracy and completeness with multiple measurements per test. Better than previous office test for accuracy measurement as all phones are equi-distant from the measurement phone (the centre of the star is the only measuring phone)</p>
+
+<h3 id="parade-test-optional">Parade test (optional)</h3>
+
+<p>Two phones (one iPhone and one Android phone) are placed 1m apart from each other. Other phones individual are walked toward these phones, held for 30 seconds at the distance in question (must at least measure 0.8m - i.e. within the 1m Oxford model risk score distance), before being walked away again.</p>
+
+<p>This test is useful in order to prove 30 second continuity measures, and to provide completeness at a variety of ranges. By varying the minimum range this can also provide a good indication of accuracy across all distance ranges.</p>
+
+<p>Measures Continuity coverage and CE start and end times, also allows bucket counts and completeness, should be done with a phone pair with continuity measures compared to the star test to determine any negative effects of multiple devices being present in the star test. This is especially useful for Bluetooth based protocols where older phones are limited in the number of devices detected and interacted with.</p>
+
+<h3 id="common-but-older-or-cheaper-phones-optional">Common but older or cheaper phones (optional)</h3>
+
+<p>As we have found in our testing many older phones, or newer but cheaper Android phones, do not support Bluetooth Advertising.
+These are commonly held by those who cannot afford more expensive models that do have this support. There is a danger, therefore,
+that concentrating on just the latest or most popular phones could lead to the most disadvantaged people in society from
+not being covered by a protocol. As these people generally live in high density housing this poses a problem for
+controlling disease spread.</p>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/herald/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldBluetooth">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://herald-bluetooth.slack.com/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/vmware/?q=herald">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            © 2021 Herald Authors.
+            <a href="http://vmware.github.io/" class="vm-logo">A VMware-backed project. <img src="/herald/img/vm-logo.png" alt="VMware logo"></a>
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/herald/js/jquery.matchHeight.js?1610982289774457475"></script>
+<script src="/herald/js/scripts.js?1610982289774457475"></script>
+    </div>
+  </div>
+</body>
+
+</html>

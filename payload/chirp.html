@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/herald/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/herald/css/styles.css?1610982289774457475">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Chirp Payload Option">
+<meta name="author" content="Herald Authors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Chirp style interoperable payload">
+<meta property="og:description" content="Chirp style interoperable payload">
+<link rel="canonical" href="https://vmware.github.io/herald/payload/chirp">
+<meta property="og:url" content="https://vmware.github.io/herald/payload/chirp">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"description":"Chirp style interoperable payload","url":"https://vmware.github.io/herald/payload/chirp","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://vmware.github.io/herald/herald/img/herald.png"},"name":"Herald Authors"},"author":{"@type":"Person","name":"Herald Authors"},"headline":"Chirp Payload Option","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Chirp Payload Option</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="logo">
+            <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+        </div>
+        <ul class="nav-menu" id="header-nav">
+            <li class="home"><a href="/herald/" title="Herald Project">Home</a></li>
+            <li class="blog"><a href="/herald/blog" title="Blog Posts">Blog</a></li>
+            <li class="community"><a href="/herald/community" title="Community">Community</a></li>
+            <li class="docs"><a href="/herald/docs">Documentation</a></li>
+            <li class="efficacy"><a href="/herald/efficacy" title="Efficacy Paper">Efficacy Paper</a></li>
+        </ul>
+        <div class="nav-mobile-link">
+            <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Chirp Payload Option</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-3">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>Introduction</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/docs">Our documentation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Applications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/applications">Herald Applications</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/ct">Contact Tracing</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/p2p">Device to Device</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/applications/mesh">Bluetooth Mesh Gateways</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Protocol</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/protocol/">About our protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/protocol/custom">Non contact tracing uses</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Design Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/design/">Herald's Design</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/core">Core philosophy</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/data">Data used</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/protocol">Protocol lifecycle</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/design/summary">Design summary</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Payloads</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/payload">About Payloads</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/envelope">Herald Envelope Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/interop">Interoperability</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/common">Herald Common CT Inner Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/simple">Herald Simple Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/secured">Herald Secured Inner Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/beacon">Herald Beacon Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/inner">Herald-compatible Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/payload/outer">Custom outer &amp; inner payloads</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Development &amp; Integration Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/guide/">How to integrate</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/code">About the code</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/api">API docs</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/add">Import Herald</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/ios">iOS app guide</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/guide/android">Android app guide</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>About Contact Tracing</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/background">What is Contact Tracing?</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/background/glossary">Glossary of terms</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/background/approaches">Technology Approaches</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Bluetooth Research</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/bluetooth">Our Research</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/hardware">Hardware Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/os">Operating System Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/crowding">Crowding</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/bluetooth/distance">Distance Estimation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Formal Specifications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald/specs">List and status</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/protocol">Herald Protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-beacon">Beacon Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-extended">Extended Data Area</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-simple">Simple Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-secured">Secured Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/herald/specs/payload-interop">International Interoperability</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-8 offset-md-1">
+                
+
+  
+
+                <h1 id="deprecated-page---see-herald-simple-inner-payload">DEPRECATED PAGE - See <a href="/payload/simple">Herald Simple Inner Payload</a>
+</h1>
+
+<h1 id="chirp-payload">Chirp payload</h1>
+
+<p>This payload is based on a combination of Diffie-Hellman and <a href="https://tools.ietf.org/html/rfc6238">RFC 6238</a> TOTP (Time based one-time password) approaches in order to generate a ‘chirp’ style ID as in the GAEN API, but without the cryptographic issues of predicting an entire day’s worth of keys. It also uses HMAC as specified in <a href="https://tools.ietf.org/html/rfc2104">RFC 2104</a>.</p>
+
+<h2 id="make-up">Make up</h2>
+
+<p>TODO wordsmith the below techie description:-</p>
+
+<p>Registration: Client would send some entropy to server, server sends some entropy to client. Mutual agreement how the master symmetric key generated from this (E.g. DH). Agree a daily key epoch.</p>
+
+<p>Note: In a decentralised system the master symmetric key is generated on device only. In a centralised system some entropy is shared during registration between device and government and used with a DH key agreement procedure to generate the master symmetric key.</p>
+
+<p><code class="language-plaintext highlighter-rouge">MasterKey</code>: 512 bit symmetric key generated either locally on the phone and stored in the secure enclave, or by DH style approach with central server.</p>
+
+<p><code class="language-plaintext highlighter-rouge">DailyKey</code>: 256 bit Daily key generated from master symmetric key and the date using HMAC-SHA-256</p>
+
+<p><code class="language-plaintext highlighter-rouge">RotationKey</code>: 128 bit key. 15 minute rotation key generated from the daily key and time via HMAC-SHA-256, then trim this code and use the first 16 bytes</p>
+
+<p>Read ID Payload: <code class="language-plaintext highlighter-rouge">BluetoothID = HMACSignature (last 16) || CountryCode (2) || StateCode (2) || TransmissionTime (8 - time_t 64) || RotationKey (16) [ || OptionalMetadata]</code> (44 bytes)</p>
+
+<p>Write ID Payload: <code class="language-plaintext highlighter-rouge">BluetoothID = HMACSignature (last 16) || CountryCode (2) || StateCode (2) || TransmissionTime (8 - time_t 64) || RotationKey (16) [ || OptionalMetadata]</code> (44 bytes)</p>
+
+<p>Read Distance Estimation Payload: <code class="language-plaintext highlighter-rouge">Payload = N/A - done via advertising packet’s RSSI. Data held = RSSI || TxPower || RotationKey (Also known: MacAddress) </code></p>
+
+<p>Write Distance Estimation Payload: <code class="language-plaintext highlighter-rouge">Payload = HMACSignature (last 16) || RotationKey (16) || TxPower (2) || MyWriteTime (8 - time_t 64) || YourRSSI (1) || YourTxPower (4 float) [ || OptionalMetadata]</code> (47 bytes)</p>
+
+<p>Note: All values are Big Endian</p>
+
+<p>Note: HMACSignature result is last 16 bytes, whereas the hmac used in the rotation key is the first 16 bytes.</p>
+
+<p>Note: The ephemeral ID/key from the protocol is separate from all keys mentioned in this payload</p>
+
+<p>Note: All <code class="language-plaintext highlighter-rouge">TxPower</code> are optional. Not provided by iOS. Use a -1 value (NOT 0 - it’s a log scale) if not directly supplied.</p>
+
+<p>Note: You will also have the ‘received date time’ from the receiving device</p>
+
+<p>Note: <code class="language-plaintext highlighter-rouge">OptionalMetadata</code> is data shared between devices for the particular application in question. We don’t believe it is needed currently, but could include GPS location information (where legal/desired), indoors vs outdoors, in pocket / on desk / in hand metadata in order to improve distance estimation. This must also be included as data to calculate the HMAC signature. Only the issuing government can verify the hmac signature. (TODO any way to do this via rotation key in decentralised model?)</p>
+
+<h2 id="security--privacy-analysis">Security &amp; Privacy analysis</h2>
+
+<p>Below is the initial security analysis of the attack surface of the above payload as described</p>
+
+<h3 id="tracking-using-a-persistent-id">Tracking using a persistent ID</h3>
+
+<p>We rotate the rotation key every 15 minutes. This is the same time period as Bluetooth MAC address rotation. This could be rotated more frequently. Ideally rotation should be done at the same time as the MAC address, but this can only be guaranteed at the mobile OS level currently (there’s no callback hooks in vendors’ Bluetooth stacks).</p>
+
+<p>There is no additional risk posed by this 15 minute rotating ID over and above the mac address rotation period. (Assumes it rotates at the same time as the mac address).</p>
+
+<p>The above method uses a forward secure machanism preventing an attacker from determining a future or past rotation key by observing the rotation keys used by a particular device.</p>
+
+<h3 id="ill-person-tracker">Ill person tracker</h3>
+
+<p>In a deccentralised system, any advertised / general ‘chirp’ mechanism suffers from the problem of allowing someone to build an ‘ill person detector’ after they alert the central list of their infection.</p>
+
+<p>This attack works by a tracker app recording the iPhone’s persistent name (E.g. “John’s iPhone”), and perhaps other persistent Bluetooth information such as encrypted/hashed service IDs and iTunes email details, or even record their face as they enter a shop.</p>
+
+<p>In future this app downloads the keys for ill people, including some of those intercepted on that day. This enables the attacker to identify someone who has become ill since their last visit, and thus target them for harassment.</p>
+
+<p>A centralised system does not suffer from this problem as only the ill person and their health authority ever know that an ill person is linked to this chirp ID.</p>
+
+<p>Our chirp format has an advantage in that the full run of rotation keys cannot be determined from a limited intercepted set of them.</p>
+
+<p>A centralised system of matching would not suffer from this risk.</p>
+
+<h3 id="relay-and-replay-attacks-misusing-a-valid-id">Relay and replay attacks misusing a valid ID</h3>
+
+<p>An attacker could use a device to intercept many nearby valid rotation keys. A centralised system could validate these rotation keys and thus prevent them being used outside of the time window they were seen in to cause mass exposure events. This is not preventable with a decentralised system.</p>
+
+<p>A relay attack could be used to send the valid ID to a different location and have it recorded as a contact for the same time period in a new geography. Again this attack vector is limited to a 15 minute period.</p>
+
+<p>In a centralised system it would be possible, although computationally and network intensive, to send a message to the originating phone to see if the other side of the contact was themselves seen. This would prevent relay attacks. This does suffer from the issue of ‘one way detection’, but in our <a href="../protocol">protocol</a> this is minised thanks to the ‘connect back’ mechanism in use. This validation functionality would have to be built in to the app and backend external to our protocol and payload specifications.</p>
+
+<h3 id="fake-contact-network-and-amplification-attacks">Fake Contact network and amplification attacks</h3>
+
+<p>It is possible for an attacker to generate fake IDs under any payload for an anonymous app not linked to a persistent government identifier. These IDs can be used by an attacker to say “I’m ill, and honest have been close to these 200 contacts for 2 hours each within 1m”.</p>
+
+<p>This type of attack can be prevented through ‘average number of alerts per ill person’ simple mathematical analysis prior to locking people down. This can only be achieved in a centralised system, as only a centralised system knows how many ‘chirp’ values represent a given number of people. I.e. whether’s a 2 hour period is 1 chirp for 8 people, or 8 chirps for the same person.</p>
+
+<p>An amplification attack occurs where a network of fake IDs is generated and 200 intercepted chirps are spread out between these fake IDs. This would drop each individual notification below the average number of exposure notifications per ill person, and thus not be detected using the above mechanism.</p>
+
+<p>Rotating the chirp every 15 minutes prevents long exposure a little. Using a shorter rotation period (E.g. 1 minute) would be even better, and guarantee each contact to be below the 3.5 minute window at 1m to breach a standard (15 min 2m) risk threshold under the Oxford Model.</p>
+
+<p>It’s worth rememberding that the receiving device (the same as the person who says they are ill) is the one calculating the RSSI and thus providing the distance estimator to the backend system (centralised or decentralised). This means they can ‘fake’ the RSSI. They can also fake the txpower in the received advertisement packet.</p>
+
+<p>Using a write instead of just advertisement data to provide a signed and played-back RSSI from the remote device would catch mismatches in RSSI and txpower data. This extra Bluetooth communication, however, will come at the cost of <a href="/herald/efficacy/paper">higher continuity error</a> and for that reason we don’t recommend it.</p>
+
+<p>It should be noted that in a decentralised system, a smaller time window means a much bigger list of chirps when a person becomes ill. This could pose a DDoS style network effect risk to a nation’s mobile and internet networks.</p>
+
+<p>Applying the ‘please verify this contact data’ approach to the other side of the communication, as mentioned in the relay and replay section above, would provide a way of validating the data prior to exposure notification. Again this can only be achieved in a centralised system.</p>
+
+<h3 id="bio-security---track-outbreak-spread">Bio Security - track outbreak spread</h3>
+
+<p>In a centralised system with some link to geography (E.g. postal district in the UK - 10 000 households) the spread of the disease can be tracked by ill people submitting their IDs when they become ill to a central.</p>
+
+<p>All apps can also have functionality added such as a symptom tracker, providing even earlier data that can be compared to later test data to spot patterns in symptoms throughout populations.</p>
+
+<p>Our payload when used in a centralised system would provide a rich set of data with low exposure risk error, allowing for high quality bio security monitoring and modelling.</p>
+
+<p>This is not possible in a decentralised solution.</p>
+
+<h3 id="bio-security---identify-asymptomatic-spreaders">Bio Security - Identify asymptomatic spreaders</h3>
+
+<p>In our payload, when used in a centralised system only, asymptomatic spreaders could be spotted as their chirp IDs would be common across multiple ill people. Statistical modelling could be used to spot such people and ask them to get tested.</p>
+
+<p>This is not possible in a decentralised solution.</p>
+
+<h2 id="bio-security---detect-super-spreaders">Bio Security - Detect super spreaders</h2>
+
+<p>As for asymptomatic spreaders, above, our payload and protocol provide a very rich and accurate data set to allow super spreaders to be detected and communicated with.</p>
+
+<p>This is not possible in a decentralised solution.</p>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/herald/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldBluetooth">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://herald-bluetooth.slack.com/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/vmware/?q=herald">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/herald/" aria-label="Herald homepage"><img src="/herald/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            © 2021 Herald Authors.
+            <a href="http://vmware.github.io/" class="vm-logo">A VMware-backed project. <img src="/herald/img/vm-logo.png" alt="VMware logo"></a>
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/herald/js/jquery.matchHeight.js?1610982289774457475"></script>
+<script src="/herald/js/scripts.js?1610982289774457475"></script>
+    </div>
+  </div>
+</body>
+
+</html>
