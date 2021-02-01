@@ -16,7 +16,7 @@ using our Fair Efficacy Measure.
 Note: The theoretical max efficacy in the UK given our phone mix, and perfect radio conditions, is 76.39%.
 
 The Ferretti et al paper [[6]]({{"/efficacy/bibliography#a-6" | relative_url }}) shows a 'same day' efficacy requirement of 30%,
-with an error range between 10 and 57%. This assumes a 90% effective lockdown of ill people. 
+with an error range between 10 and 57%. This assumes a 90% effective lockdown of ill people.
 Thus in our paper we call:-
 
 - 57%+ 'Very effective'
@@ -28,7 +28,7 @@ See the [Fair Efficacy Paper page]({{"/efficacy/paper" | relative_url }}) for de
 
 |Protocol|Latest results|Test reports|
 |---|---|---|
-|<b>Herald Test App</b><br>(Herald Protocol)<br>(Tolerates 1 of 2 phones without advertising)|<b>Efficacy: 41.37%<br>(Effective)</b><br>Pspec^2: 48.71%<br>Detection: 100%<br>Continuity: 99.991%<br>Completeness: 98.36%<br>Accuracy: 95.95%|Dev team tests: <br />v1.1 Release: [2020-11-28]({{"/results/herald-2020-11-28" | relative_url }})<br />v1.2.0-beta2 in development: [2020-12-08]({{"/results/herald-2020-12-08" | relative_url }})<br>See the bottom of this page for historical Herald results. |
+|<b>Herald Test App</b><br>(Herald Protocol)<br>(Tolerates 1 of 2 phones without advertising)|<b>Efficacy: 41.37%<br>(Effective)</b><br>Pspec^2: 48.71%<br>Detection: 100%<br>Continuity: 99.991%<br>Completeness: 98.36%<br>Accuracy: 95.95%|Dev team tests: <br />v1.1 Release: [2020-11-28]({{"/results/herald-2020-11-28" | relative_url }})<br />v1.2.0-beta2 in development: [2020-12-08]({{"/results/herald-2020-12-08" | relative_url }})<br />v1.2.0-beta3 in development: [2021-01-31]({{"/results/herald-2021-01-31" | relative_url }})<br>See the bottom of this page for historical Herald results. |
 |<b>Theoretical UK Max</b><br>(UK phone mix)|<b>Max Efficacy: 46.57%<br>(Effective)</b><br>Pspec^2: 51.75%<br>Detection: 100%<br>Continuity: 100%<br>Completeness: 100%<br>Accuracy: 100%|Dev team tests: N/A (Simulation)<br>Independent tests: N/A (Simulation)<br>Simulation: [2020-08-31 Simulations (ODS)]({{"/documents/protocols-paper-synthetic-data.ods" | relative_url }}) |
 |<b>5-minute annealed, exact RSSI</b><br>(Theoretical, simulated)<br>(Requires BLe Advertising)|<b>Efficacy: 4.46%<br>(Not effective)</b><br>Pspec^2: 24.67%<br>Detection: 100%<br>Continuity: 20.93%<br>Completeness: 95.87%<br>Accuracy: 100%|Dev team tests: N/A (Simulation)<br>Independent tests: N/A (Simulation)<br>Simulation: [2020-08-31 Simulations (ODS)]({{"/documents/protocols-paper-synthetic-data.ods" | relative_url }}) |
 |<b>5-minute annealed, bucketed RSSI</b><br>(Theoretical, simulated)<br>(Requires BLe Advertising)|<b>Efficacy: 3.49%<br>(Not effective)</b><br>Pspec^2: 24.67%<br>Detection: 100%<br>Continuity: 20.93%<br>Completeness: 75.18%<br>Accuracy: 100%|Dev team tests: N/A (Simulation)<br>Independent tests: N/A (Simulation)<br>Simulation: [2020-08-31 Simulations (ODS)]({{"/documents/protocols-paper-synthetic-data.ods" | relative_url }}) |
