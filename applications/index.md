@@ -39,7 +39,7 @@ arena and in many other areas.
 These fall in to the following separately documented categories:-
 
 - [Point to Point / Device to Device use]({{"/applications/p2p" | relative_url }})
-  - Including [Contact Tracing]({{"/applications/ct" | relative_url }})
+  - Including [Digital Contact Tracing]({{"/applications/ct" | relative_url }})
 - [Bluetooth Mesh interactions]({{"/applications/mesh" | relative_url }})
 
 Many other use cases are possible.

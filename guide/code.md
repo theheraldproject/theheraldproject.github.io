@@ -7,7 +7,7 @@ menubar: docs_menu
 
 # About the code
 
-This section describes the whole code base
+This section describes the whole code base.
 
 ## Test applications
 
@@ -20,7 +20,7 @@ testing these test apps are available on the GitHub repositories.
 GitHub repositories:-
 - [iOS API and App](https://github.com/vmware/herald-for-ios)
 - [Android API and App](https://github.com/vmware/herald-for-android)
-- C++ API and Apps (Coming soon!)
+- [C++ API and Apps](https://github.com/vmware/herald-for-cpp)
 
 ## Understanding the code
 
