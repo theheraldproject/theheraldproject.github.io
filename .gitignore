@@ -9,3 +9,5 @@ vendor
 git-template
 sync.sh
 
+
+*.bak
