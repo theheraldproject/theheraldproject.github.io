@@ -5,7 +5,7 @@
 layout: docs
 title: Herald payload design
 description: Our privacy preserving and secure payload for slowing disease spread
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # Payloads Introduction

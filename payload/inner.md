@@ -5,7 +5,7 @@
 layout: docs
 title: Inner payloads
 description: Custom inner payload design
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # Custom inner payloads

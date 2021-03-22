@@ -7,7 +7,7 @@ title: Efficacy Test Methods
 description: The methods we recommend as standard for our formula
 toc: true
 toc_title: Efficacy test methods
-menubar: efficacy_menu
+menubar: research_menu
 ---
 
 # Formal testing methods

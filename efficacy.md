@@ -5,7 +5,7 @@
 layout: docs
 title: Efficacy Measures
 description: How to fairly measure efficacy, and results we have generated.
-menubar: efficacy_menu
+menubar: research_menu
 ---
 
 # Efficacy

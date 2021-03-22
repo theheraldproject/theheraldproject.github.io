@@ -5,7 +5,7 @@
 layout: docs
 title: Bluetooth detailed research
 description: Full background information in to the Bluetooth issues we discovered and how we worked around them.
-menubar: docs_menu
+menubar: research_menu
 ---
 
 # Bluetooth Research

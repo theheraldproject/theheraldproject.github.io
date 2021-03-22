@@ -2,16 +2,6 @@
   items:
     - name: Our documentation
       link: /docs
-- label: Applications
-  items:
-    - name: Herald Applications
-      link: /applications
-    - name: Contact Tracing
-      link: /applications/ct
-    - name: Device to Device
-      link: /applications/p2p
-    - name: Bluetooth Mesh Gateways
-      link: /applications/mesh
 - label: Herald Protocol
   items:
     - name: About our protocol
@@ -30,26 +20,6 @@
       link: /design/protocol
     - name: Design summary
       link: /design/summary
-- label: Herald Payloads
-  items:
-    - name: About Payloads
-      link: /payload
-    - name: Herald Envelope Header 
-      link: /payload/envelope
-    - name: Interoperability
-      link: /payload/interop
-    - name: Herald Common CT Inner Header 
-      link: /payload/common
-    - name: Herald Simple Inner Payload 
-      link: /payload/simple
-    - name: Herald Secured Inner Payload (Draft)
-      link: /payload/secured
-    - name: Herald Beacon Payload (Draft)
-      link: /payload/beacon
-    - name: Herald-compatible Inner Payload 
-      link: /payload/inner
-    - name: Custom outer & inner payloads 
-      link: /payload/outer
 - label: Development & Integration Guide
   items:
     - name: How to integrate
@@ -64,40 +34,3 @@
       link: /guide/ios
     - name: Android app guide
       link: /guide/android 
-- label: About Contact Tracing
-  items:
-    - name: What is Contact Tracing?
-      link: /background
-    - name: Glossary of terms
-      link: /background/glossary
-    - name: Technology Approaches
-      link: /background/approaches
-- label: Bluetooth Research
-  items:
-    - name: Our Research
-      link: /bluetooth
-    - name: Hardware Issues
-      link: /bluetooth/hardware
-    - name: Operating System Issues
-      link: /bluetooth/os
-    - name: Crowding
-      link: /bluetooth/crowding
-    - name: Distance Estimation
-      link: /bluetooth/distance
-- label: Formal Specifications
-  items:
-    - name: List and status
-      link: /specs
-    - name: Herald Protocol
-      link: /specs/protocol
-    - name: Beacon Payload
-      link: /specs/payload-beacon
-    - name: Extended Data Area
-      link: /specs/payload-extended
-    - name: Simple Payload
-      link: /specs/payload-simple
-    - name: Secured Payload
-      link: /specs/payload-secured
-    - name: International Interoperability
-      link: /specs/payload-interop
-    

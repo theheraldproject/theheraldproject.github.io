@@ -5,7 +5,7 @@
 layout: docs
 title: Herald common contact tracing header
 description: Common header data for contact tracing interoperability
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # Common Herald Contact Tracing data

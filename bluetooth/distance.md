@@ -7,7 +7,7 @@ title: Bluetooth Distance Estimation
 description: Distance Estimation research
 toc: true
 toc_title: Distance Estimation
-menubar: docs_menu
+menubar: research_menu
 ---
 
 # Introduction

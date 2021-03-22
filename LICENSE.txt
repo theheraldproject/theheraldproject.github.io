@@ -1,5 +1,5 @@
 herald
-Copyright 2020 VMware, Inc.
+Copyright 2020-2021 Herald Project Contributors
 
 Creative Commons Attribution 4.0 International Public License
 

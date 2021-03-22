@@ -2,7 +2,7 @@
 layout: docs
 title: Point to Point applications
 description: Point to Point applications
-menubar: docs_menu
+menubar: about_menu
 ---
 
 # Point to Point applications (Since v1.0)

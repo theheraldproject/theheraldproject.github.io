@@ -2,7 +2,7 @@
 layout: docs
 title: Payload Extended Data Specification
 description: Payload Extended Data Specification
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # Payload Extended Data Specification

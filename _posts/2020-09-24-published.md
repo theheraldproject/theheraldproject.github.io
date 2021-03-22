@@ -17,8 +17,7 @@ other applications requiring reliable pair-wise bluetooth communication between
 mobile devices. This overcomes many of the issues present in existing contact tracing apps
 and Bluetooth approaches on mobile devices.
 
-This was created in the spare time by researchers at [VMware, Inc.](https://www.vmware.com/)
-and elsewhere and is now provided to the worldwide community!
+This was created in the spare time by researchers and is now provided to the worldwide community!
 
 The documentation on this site is available under the Creative Commons Attribution 4.0 International Public License. The source code
 to the protocol and fair efficacy analysis tools is available under the Apache-2.0 license.

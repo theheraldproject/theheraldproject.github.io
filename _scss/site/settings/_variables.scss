@@ -42,7 +42,7 @@ $body-color-darkest: #111;
 // Container
 
 $container-background: $white;
-$container-max-width: 1440px;
+$container-max-width: 95%;
 
 // Header
 
@@ -57,7 +57,7 @@ $footer-copyright: $black;
 
 // Sections
 
-$section-content-max-width: 996px;
+$section-content-max-width: 100%; // was 996px
 $section-grey-background: #f2f2f2;
 
 $section-blue-background: #0165AB;

@@ -2,7 +2,7 @@
 layout: docs
 title: Herald Performance
 description: Herald Performance
-menubar: efficacy_menu
+menubar: research_menu
 ---
 
 # Herald Performance

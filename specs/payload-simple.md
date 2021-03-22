@@ -2,7 +2,7 @@
 layout: docs
 title: Simple Payload Specification
 description: Simple Payload Specification
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # Simple Payload Formal Specification

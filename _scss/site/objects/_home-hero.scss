@@ -14,10 +14,13 @@
     color: $white;
     font-weight: $font-weight-light;
   }
+  .section {
+    padding-bottom: 0px;
+  }
   .section-content {
     margin-top: 15px;
     .hero-content,
-    .hero-cta {       
+    .hero-cta {
       @include media-breakpoint-up(md) {
         @include make-col-ready();
         @include make-col(8);

@@ -4,7 +4,7 @@
         {% if limit > 0 and forloop.index >= limit %}
          {% break %}
         {% endif %}
-        {% assign row = forloop.index | modulo: 3 %}
+        {% assign row = forloop.index | modulo: 6 %}
 {% if row == 0 %}
 </div>
 <div class="row mt-4">

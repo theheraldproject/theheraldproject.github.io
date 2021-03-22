@@ -2,7 +2,7 @@
 layout: docs
 title: DRAFT beacon payload
 description: A DRAFT payload specification for fixed beacons in restaurants
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # DRAFT Beacon payload

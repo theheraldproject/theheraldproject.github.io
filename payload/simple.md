@@ -5,7 +5,7 @@
 layout: docs
 title: Herald simple inner payload
 description: Simple inner payload for contact tracing
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # Contact Tracing Simple inner payload

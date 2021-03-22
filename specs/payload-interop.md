@@ -2,7 +2,7 @@
 layout: docs
 title: International Interoperability Specification
 description: International Interoperability Specification
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # International Interoperability Specification

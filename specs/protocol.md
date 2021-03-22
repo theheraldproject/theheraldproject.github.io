@@ -2,7 +2,7 @@
 layout: docs
 title: Protocol Specification
 description: Protocol Specification
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # Herald Protocol Formal Specification

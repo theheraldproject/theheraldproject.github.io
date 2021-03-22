@@ -5,7 +5,7 @@
 layout: docs
 title: The Fair Efficacy Formula paper
 description: Our fair efficacy formula for comparing proximity detection protocols
-menubar: efficacy_menu
+menubar: research_menu
 ---
 
 # The Fair Efficacy Formula paper

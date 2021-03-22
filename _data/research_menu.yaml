@@ -1,0 +1,28 @@
+- label: Efficacy
+  items:
+    - name: Introduction
+      link: /efficacy
+    - name: The Fair Measure Paper
+      link: /efficacy/paper
+    - name: Testing Methodology
+      link: /efficacy/method
+    - name: Test Results
+      link: /efficacy/results
+    - name: Statistics
+      link: /efficacy/statistics
+    - name: Herald Performance
+      link: /efficacy/herald
+    - name: Bibliography
+      link: /efficacy/bibliography
+- label: Bluetooth Research
+  items:
+    - name: Our Research
+      link: /bluetooth
+    - name: Hardware Issues
+      link: /bluetooth/hardware
+    - name: Operating System Issues
+      link: /bluetooth/os
+    - name: Crowding
+      link: /bluetooth/crowding
+    - name: Distance Estimation
+      link: /bluetooth/distance

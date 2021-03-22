@@ -5,7 +5,7 @@
 layout: docs
 title: Chirp Payload Option
 description: Chirp style interoperable payload
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # DEPRECATED PAGE - See [Herald Simple Inner Payload](/payload/simple)

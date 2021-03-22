@@ -2,7 +2,7 @@
 layout: docs
 title: Beacon Payload Specification
 description: Beacon Payload Specification
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # Beacon Payload Formal Specification

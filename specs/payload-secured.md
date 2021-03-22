@@ -2,7 +2,7 @@
 layout: docs
 title: Secured Payload Specification
 description: Secured Payload Specification
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # Secured Payload Specification

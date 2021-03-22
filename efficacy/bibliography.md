@@ -5,7 +5,7 @@
 layout: docs
 title: Bibliography
 description: Links to further research and reference material
-menubar: efficacy_menu
+menubar: research_menu
 ---
 
 # Bibliography

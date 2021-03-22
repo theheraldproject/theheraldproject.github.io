@@ -5,7 +5,7 @@
 layout: docs
 title: Herald secured inner payload
 description: Simple secured payload for contact tracing
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # DRAFT Contact Tracing Secure inner Payload

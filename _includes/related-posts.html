@@ -2,7 +2,7 @@
 <div class="row">
   {% for category in site.categories limit:1 %}
 
-  {% for post in category[1] limit:2 %}
+  {% for post in category[1] limit:5 %}
     {% include blog-post-card.html %}
 
   {% endfor %}
