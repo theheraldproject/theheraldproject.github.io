@@ -2,6 +2,8 @@
   items:
     - name: Introduction
       link: /about
+    - name: FAQs
+      link: /about/faq
 - label: Applications
   items:
     - name: Overview
