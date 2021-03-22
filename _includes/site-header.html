@@ -1,17 +1,21 @@
 <header class="site-header">
     <div class="site-header-content">
-        <div class="logo">
-            <a href="/herald/" aria-label="Herald homepage" ><img src="{{ site.logo }}" class="logo" alt="Homepage" /></a>
-        </div>
-        <ul class="nav-menu" id="header-nav">
-            <li class="home"><a href="/herald/" title="{{ site.title }}">Home</a></li>
-            <li class="blog"><a href="/herald/blog" title="Blog Posts">Blog</a></li>
-            <li class="community"><a href="/herald/community" title="Community">Community</a></li>
-            <li class="docs"><a href="/herald/docs">Documentation</a></li>
-            <li class="efficacy"><a href="/herald/efficacy" title="Efficacy Paper">Efficacy Paper</a></li>
-        </ul>
-        <div class="nav-mobile-link">
-            <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="logo">
+                    <a href="/herald/" aria-label="Herald homepage" ><img src="{{ site.logo }}" class="logo" alt="Homepage" /></a>
+                </div>
+            </div>
+            <div class="col-md-9 offset-md-1">
+                <ul class="nav-menu" id="header-nav">
+                {% for item in site.data.navigation %}
+                    <li class="{% if page.url.include(item.link) %}active{% endif %}"><a href="{{ item.link }}">{{ item.name }}</a></li>
+                {% endfor %}
+                </ul>
+                <div class="nav-mobile-link">
+                    <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+                </div>
+            </div>
         </div>
     </div>
 </header>

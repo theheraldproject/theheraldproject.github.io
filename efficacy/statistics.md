@@ -2,7 +2,7 @@
 layout: docs
 title: Statistics
 description: Background to statistics
-menubar: efficacy_menu
+menubar: research_menu
 ---
 
 # Background Statistics

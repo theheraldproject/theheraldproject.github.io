@@ -5,7 +5,7 @@
 layout: docs
 title: Authenticated association
 description: Kerberos style interoperable payload
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # DEPRECATED PAGE - See [Herald Secured Inner Payload](/payload/secured)

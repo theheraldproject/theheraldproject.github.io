@@ -7,7 +7,7 @@ title: Bluetooth Crowding
 description: Problems as the number of devices nearby increases
 toc: true
 toc_title: Bluetooth Crowding
-menubar: docs_menu
+menubar: research_menu
 ---
 
 # Introduction

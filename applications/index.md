@@ -5,7 +5,7 @@
 layout: docs
 title: Applications
 description: Applications of Herald
-menubar: docs_menu
+menubar: about_menu
 ---
 
 # Applications of Herald

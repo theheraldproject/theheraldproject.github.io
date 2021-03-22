@@ -5,7 +5,7 @@
 layout: docs
 title: Fair efficacy formula - formal test results
 description: How to fairly measure efficacy, and results we have generated.
-menubar: efficacy_menu
+menubar: reference_menu
 ---
 
 # Testing Results

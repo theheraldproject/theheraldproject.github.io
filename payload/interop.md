@@ -2,7 +2,7 @@
 layout: docs
 title: Interoperability
 description: International Interoperability
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # International Interoperability

@@ -14,7 +14,7 @@ Why Herald exists, how to get the code, and how to integrate Herald in to your m
 
 ## Background
 
-VMware Herald is an open source Bluetooth Low Energy (BLE) based protocol licensed under the Apache-2.0 license for the reliable exchange of information between a range of mobile phones.
+Herald is an open source Bluetooth Low Energy (BLE) based protocol licensed under the Apache-2.0 license for the reliable exchange of information between a range of mobile phones.
 Herald consists of a low-level [BLE protocol]({{"/protocol" | relative_url }}), with a choice of data [payloads]({{"/payload" | relative_url }}). The [Herald Envelope](payload/envelope) and
 [Herald Secured]({{"/payload/secured" | relative_url }}) payloads are examples for contact tracing applications that provide epidemiological information, individual privacy, ensure 
 security, and allow international interoperability - even between 'centralised' and 'decentralised' contact tracing applications.
@@ -46,7 +46,7 @@ We are also keen to receive contributions to all of our open source repositories
 - [Sample R analysis scripts](https://github.com/vmware/herald-analysis) for the fair efficacy formula (Apache-2.0 licensed)
 - Our generic [BLE RSSI calibration and distance estimation testing tool](https://github.com/vmware/herald-calibration) (Apache-2.0 licensed)
 
-This project is maintained primarily by VMware personnel and some external contributors in our spare time. We aim to respond to logged issues and emails within 24-28 hours during week days (Monday-Friday) in the UK time zone.
+This project is maintained primarily by the opensource community in our spare time. We aim to respond to logged issues and emails within 24-28 hours during week days (Monday-Friday) in the UK time zone.
 
 ## API documentation
 

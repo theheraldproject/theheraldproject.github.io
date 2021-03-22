@@ -5,7 +5,7 @@
 layout: docs
 title: Outer payloads
 description: Custom outer payload design
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # Custom outer payloads

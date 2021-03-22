@@ -2,7 +2,7 @@
 layout: docs
 title: Herald envelope payload
 description: Our common header for sharing contact tracing data
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # Herald Envelope Header

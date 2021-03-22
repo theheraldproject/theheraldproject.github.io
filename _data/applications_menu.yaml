@@ -1,0 +1,11 @@
+
+- label: Applications
+  items:
+    - name: Herald Applications
+      link: /applications
+    - name: Contact Tracing
+      link: /applications/ct
+    - name: Device to Device
+      link: /applications/p2p
+    - name: Bluetooth Mesh Gateways
+      link: /applications/mesh

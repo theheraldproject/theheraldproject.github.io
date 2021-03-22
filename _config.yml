@@ -19,15 +19,14 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Herald Project
-email: adamf@vmware.com
-author: Herald Authors
+email: adam@adamfowler.org
+author: Herald Project Contributors
 description: >- # this means to ignore newlines until "baseurl:"
   The home for our research in to low level mobile phone Bluetooth
   capabilities, issues, workarounds, and testing.
 baseurl: "/herald" # the subpath of your site, e.g. /blog
 url: "https://vmware.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 logo: /herald/img/herald.png
-vm_logo: /herald/img/vm-logo.png
 gh_repo: https://github.com/vmware/?q=herald
 #markdown: redcarpet
 hero:
@@ -38,7 +37,6 @@ footer:
   cta_title:
   cta_url: /herald/docs
   cta_text: Documentation
-  vm-link: http://vmware.github.io/
 
 footer_social_links:
   Twitter:
@@ -46,7 +44,7 @@ footer_social_links:
     url: https://twitter.com/HeraldBluetooth
   Slack:
     fa_icon: fab fa-slack
-    url: https://herald-bluetooth.slack.com/
+    url: https://slack.lfph.io/
   RSS:
     fa_icon: fa fa-rss
     url: feed.xml

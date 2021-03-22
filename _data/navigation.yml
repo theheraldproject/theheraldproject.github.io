@@ -1,6 +1,16 @@
-- name: Documentation
-  link: /docs
-- name: Efficacy Paper
-  link: /efficacy
+- name: Home
+  link: /herald/
+- name: About
+  link: /herald/about
+- name: Community
+  link: /herald/community
 - name: Blog
-  link: /blog
+  link: /herald/blog
+- name: Download
+  link: /herald/download
+- name: Documentation
+  link: /herald/docs
+- name: Reference
+  link: /herald/reference
+- name: Research
+  link: /herald/research

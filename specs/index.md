@@ -2,7 +2,7 @@
 layout: docs
 title: Specifications
 description: Formal specifications for Herald components
-menubar: docs_menu
+menubar: reference_menu
 ---
 
 # Formal specifications

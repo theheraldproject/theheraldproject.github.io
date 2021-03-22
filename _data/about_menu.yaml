@@ -1,0 +1,16 @@
+- label: About
+  items:
+    - name: Introduction
+      link: /about
+- label: Applications
+  items:
+    - name: Overview
+      link: /applications
+    - name: Contact Tracing
+      link: /applications/ct
+    - name: eHealth Wearables
+      link: /applications/wearable
+    - name: Device to Device
+      link: /applications/p2p
+    - name: Bluetooth Mesh Gateways
+      link: /applications/mesh

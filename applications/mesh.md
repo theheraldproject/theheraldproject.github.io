@@ -2,7 +2,7 @@
 layout: docs
 title: Bluetooth Mesh applications
 description: Bluetooth Mesh applications
-menubar: docs_menu
+menubar: about_menu
 ---
 
 # Bluetooth Mesh applications (Coming soon)
