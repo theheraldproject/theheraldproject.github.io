@@ -1,0 +1,20 @@
+- label: Payload
+  items:
+    - name: Recommended Payloads
+      link: /payload
+      items:
+        - name: Herald Envelope Outer Payload 
+          link: /payload/envelope
+        - name: Herald Common CT Inner Header 
+          link: /payload/common
+        - name: Herald Secured Inner Payload 
+          link: /payload/secured
+    - name: Other Payloads
+      link: /payload/custom
+      items:
+        - name: Custom outer & inner payloads 
+          link: /payload/outer
+        - name: Herald-compatible Inner Payload 
+          link: /payload/inner
+        - name: Herald simple Inner Payload 
+          link: /payload/simple

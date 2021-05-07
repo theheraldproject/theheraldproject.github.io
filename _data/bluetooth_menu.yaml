@@ -1,0 +1,13 @@
+- label: Bluetooth Research
+  items:
+    - name: Home
+      link: /bluetooth
+      items:
+        - name: Hardware Issues
+          link: /bluetooth/hardware
+        - name: Operating System Issues
+          link: /bluetooth/os
+        - name: Crowding
+          link: /bluetooth/crowding
+        - name: Distance Estimation
+          link: /bluetooth/distance

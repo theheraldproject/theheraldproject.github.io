@@ -1,0 +1,7 @@
+- label: Herald Protocol
+  items:
+    - name: Our protocol
+      link: /protocol/
+      items:
+        - name: Non contact tracing uses
+          link: /protocol/custom

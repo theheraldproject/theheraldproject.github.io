@@ -1,0 +1,9 @@
+
+- label: About Contact Tracing
+  items:
+    - name: What is Contact Tracing?
+      link: /background
+    - name: Glossary of terms
+      link: /background/glossary
+    - name: Technology Approaches
+      link: /background/approaches

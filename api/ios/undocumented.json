@@ -1,0 +1,467 @@
+{
+  "warnings": [
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Analysis/Interactions.swift",
+      "line": 20,
+      "symbol": "Interactions.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Analysis/Interactions.swift",
+      "line": 27,
+      "symbol": "Interactions.init(filename:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Analysis/Interactions.swift",
+      "line": 48,
+      "symbol": "Interactions.append(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Analysis/Sample.swift",
+      "line": 55,
+      "symbol": "Sample.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/BLE/BLEDatabase.swift",
+      "line": 142,
+      "symbol": "BLEDevice",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/BLE/BLEDatabase.swift",
+      "line": 282,
+      "symbol": "BLEDevice.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/BLE/BLESensor.swift",
+      "line": 33,
+      "symbol": "BLESensorConfiguration.legacyPayloadCharacteristicUUID",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Data/SensorLogger.swift",
+      "line": 24,
+      "symbol": "SensorLoggerLevel",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Data/SensorLogger.swift",
+      "line": 25,
+      "symbol": "SensorLoggerLevel.debug",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Data/SensorLogger.swift",
+      "line": 25,
+      "symbol": "SensorLoggerLevel.fault",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Data/SensorLogger.swift",
+      "line": 25,
+      "symbol": "SensorLoggerLevel.info",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Data/SensorLogger.swift",
+      "line": 25,
+      "symbol": "SensorLoggerLevel.off",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Device.swift",
+      "line": 10,
+      "symbol": "Device",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Beacon/BeaconPayloadDataSupplier.swift",
+      "line": 26,
+      "symbol": "ConcreteBeaconPayloadDataSupplierV1.init(countryCode:stateCode:code:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/C19X/C19XPayloadSupplier.swift",
+      "line": 20,
+      "symbol": "ConcretePayloadDataSupplier.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 13,
+      "symbol": "ExtendedData.hasData()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 14,
+      "symbol": "ExtendedData.addSection(code:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 15,
+      "symbol": "ExtendedData.addSection(code:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 17,
+      "symbol": "ExtendedData.addSection(code:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 18,
+      "symbol": "ExtendedData.addSection(code:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 19,
+      "symbol": "ExtendedData.addSection(code:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 23,
+      "symbol": "ExtendedData.payload()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 26,
+      "symbol": "ExtendedDataSegmentCode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 27,
+      "symbol": "ExtendedDataSegmentCode.TextPremises",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 28,
+      "symbol": "ExtendedDataSegmentCode.TextLocation",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 29,
+      "symbol": "ExtendedDataSegmentCode.TextArea",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 30,
+      "symbol": "ExtendedDataSegmentCode.LocationUrl",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 37,
+      "symbol": "ConcreteExtendedDataV1.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 41,
+      "symbol": "ConcreteExtendedDataV1.payload()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 45,
+      "symbol": "ConcreteExtendedDataV1.hasData()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 49,
+      "symbol": "ConcreteExtendedDataV1.addSection(code:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 55,
+      "symbol": "ConcreteExtendedDataV1.addSection(code:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 63,
+      "symbol": "ConcreteExtendedDataV1.addSection(code:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 77,
+      "symbol": "ConcreteExtendedDataV1.addSection(code:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Extended/ExtendedData.swift",
+      "line": 92,
+      "symbol": "ConcreteExtendedDataV1.addSection(code:value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/SimplePayloadDataSupplier.swift",
+      "line": 27,
+      "symbol": "ConcreteSimplePayloadDataSupplier.init(protocolAndVersion:countryCode:stateCode:secretKey:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 16,
+      "symbol": "XXH3",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 26,
+      "symbol": "XXH3",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 28,
+      "symbol": "XXH3.digest64(_:seed:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 32,
+      "symbol": "XXH3.digest64(_:seed:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 36,
+      "symbol": "XXH3.digest64(_:seed:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 40,
+      "symbol": "XXH3.digest64Hex(_:seed:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 45,
+      "symbol": "XXH3.digest64Hex(_:seed:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 50,
+      "symbol": "XXH3.digest64Hex(_:seed:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 637,
+      "symbol": "xxHash64",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 638,
+      "symbol": "XXH64",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 894,
+      "symbol": "XXH64",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 995,
+      "symbol": "XXH64",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 1126,
+      "symbol": "XXH64",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 1165,
+      "symbol": "xxHash32",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 1166,
+      "symbol": "XXH32",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 1333,
+      "symbol": "XXH32",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 1428,
+      "symbol": "XXH32",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Simple/XXH3.swift",
+      "line": 1555,
+      "symbol": "XXH32",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/Payload/Sonar/SonarPayloadSupplier.swift",
+      "line": 19,
+      "symbol": "MockSonarPayloadSupplier.init(identifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/PayloadDataSupplier.swift",
+      "line": 52,
+      "symbol": "PayloadData.shortName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/SensorArray.swift",
+      "line": 15,
+      "symbol": "SensorArray.payloadData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/SensorArray.swift",
+      "line": 16,
+      "symbol": "SensorArray.deviceDescription",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/SensorArray.swift",
+      "line": 20,
+      "symbol": "SensorArray.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/SensorArray.swift",
+      "line": 57,
+      "symbol": "SensorArray.immediateSend(data:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/SensorArray.swift",
+      "line": 61,
+      "symbol": "SensorArray.immediateSendAll(data:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/SensorDelegate.swift",
+      "line": 147,
+      "symbol": "LocationReference",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/SensorDelegate.swift",
+      "line": 148,
+      "symbol": "LocationReference.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/SensorDelegate.swift",
+      "line": 156,
+      "symbol": "WGS84PointLocationReference.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/SensorDelegate.swift",
+      "line": 167,
+      "symbol": "WGS84CircularAreaLocationReference.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald/herald/Sensor/SensorDelegate.swift",
+      "line": 175,
+      "symbol": "PlacenameLocationReference.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Volumes/TB3-1/git/skunkworks/herald-for-ios/herald"
+}

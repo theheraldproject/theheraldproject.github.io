@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LocationReference Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/LocationReference" class="dashAnchor"></a>
+    <a title="LocationReference Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (72% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        LocationReference Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/BLEDevice.html">BLEDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcreteBeaconPayloadDataSupplierV1.html">ConcreteBeaconPayloadDataSupplierV1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcreteExtendedDataV1.html">ConcreteExtendedDataV1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcretePayloadDataSupplier.html">ConcretePayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcreteSimplePayloadDataSupplier.html">ConcreteSimplePayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:@M@Herald@objc(cs)Device">Device</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:6Herald9EncounterC">Encounter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Interactions.html">Interactions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MockSonarPayloadSupplier.html">MockSonarPayloadSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sample.html">Sample</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensorArray.html">SensorArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SocialDistance.html">SocialDistance</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/XXH3.html">XXH3</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/XXH32.html">XXH32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/XXH64.html">XXH64</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CalibrationMeasurementUnit.html">CalibrationMeasurementUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ExtendedDataSegmentCode.html">ExtendedDataSegmentCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ProximityMeasurementUnit.html">ProximityMeasurementUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SensorLoggerLevel.html">SensorLoggerLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SensorState.html">SensorState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SensorType.html">SensorType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/CBCentralManagerState.html">CBCentralManagerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CBManagerState.html">CBManagerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CBPeripheralManagerState.html">CBPeripheralManagerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CBPeripheralState.html">CBPeripheralState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/PayloadData.html">PayloadData</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:6Herald25BeaconPayloadDataSupplierP">BeaconPayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:6Herald23C19XPayloadDataSupplierP">C19XPayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ExtendedData.html">ExtendedData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/LocationReference.html">LocationReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PayloadDataSupplier.html">PayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Sensor.html">Sensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SensorDelegate.html">SensorDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:6Herald25SimplePayloadDataSupplierP">SimplePayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:6Herald24SonarPayloadDataSupplierP">SonarPayloadDataSupplier</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/BLESensorConfiguration.html">BLESensorConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Calibration.html">Calibration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Location.html">Location</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PlacenameLocationReference.html">PlacenameLocationReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Proximity.html">Proximity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/WGS84CircularAreaLocationReference.html">WGS84CircularAreaLocationReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/WGS84PointLocationReference.html">WGS84PointLocationReference</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald10BeaconCodea">BeaconCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald14BeaconCodeSeeda">BeaconCodeSeed</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald17ContactIdentifiera">ContactIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald11MatchingKeya">MatchingKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald11PayloadDataa">PayloadData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald16PayloadTimestampa">PayloadTimestamp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald9SecretKeya">SecretKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald12SharedSecreta">SharedSecret</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald16TargetIdentifiera">TargetIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald7xxHash3a">xxHash3</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald8xxHash32a">xxHash32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald8xxHash64a">xxHash64</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>LocationReference</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">LocationReference</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald17LocationReferenceP11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald17LocationReferenceP11descriptionSSvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-12-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

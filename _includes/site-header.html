@@ -1,0 +1,21 @@
+<header class="site-header">
+    <div class="site-header-content">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="logo">
+                    <a href="/herald/" aria-label="Herald homepage" ><img src="{{ site.logo }}" class="logo" alt="Homepage" /></a>
+                </div>
+            </div>
+            <div class="col-md-9 offset-md-1">
+                <ul class="nav-menu" id="header-nav">
+                {% for item in site.data.navigation %}
+                    <li class="{% if page.url.include(item.link) %}active{% endif %}"><a href="{{ item.link }}">{{ item.name }}</a></li>
+                {% endfor %}
+                </ul>
+                <div class="nav-mobile-link">
+                    <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
