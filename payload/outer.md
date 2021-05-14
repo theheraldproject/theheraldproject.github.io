@@ -42,4 +42,4 @@ yours.
 
 We will happily list and mention your payload, whether commercial or open source, on this site. Please
 provide high level details of your payload and a website link for further details via a 
-[GitHub Issues](https://github.com/vmware/herald/issues) request.
+[GitHub Issues](https://github.com/theheraldproject/theheraldproject.github.io/issues) request.

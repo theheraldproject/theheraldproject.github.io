@@ -310,8 +310,8 @@ Links to prior art and further reading
 - SP-3: [ISO-3166 Numeric country codes](https://en.wikipedia.org/wiki/ISO_3166-1_numeric) [External]
 - SP-4: [Herald International Interoperability standard]({{"/specs/payload-interop" | relative_url }})
 - SP-5: [MIT PACT protocol description](https://pact.mit.edu/technical-reports/) [External]
-- SP-6: [Herald Android API implementation](https://github.com/vmware/herald-for-android/tree/develop/herald/src/main/java/com/vmware/herald/sensor/payload/simple) [External]
-- SP-7: [Herald iOS API implementation](https://github.com/vmware/herald-for-ios/tree/develop/herald/herald/Sensor/Payload/Simple) [External]
+- SP-6: [Herald Android API implementation](https://github.com/theheraldproject/herald-for-android/tree/develop/herald/src/main/java/com/vmware/herald/sensor/payload/simple) [External]
+- SP-7: [Herald iOS API implementation](https://github.com/theheraldproject/herald-for-ios/tree/develop/herald/herald/Sensor/Payload/Simple) [External]
 - SP-8: Luca Ferretti, Chris Wymant, Michelle Kendall, Lele Zhao, Anel Nurtay, Lucie Abeler-Dörner, Michael Parker, David Bonsall, Christophe Fraser. Quantifying SARS-CoV-2 transmission suggests epidemic control with digital contact tracing. Ferretti et al., Science 368, 619 (2020)
 - SP-9: [Herald Extended Data Formal Specification]({{"/specs/payload-extended" | relative_url }})
 - SP-10: [NIST SP800-90A defining use of SHA1PRNG](https://csrc.nist.gov/publications/detail/sp/800-90a/rev-1/final) [External]

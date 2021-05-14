@@ -113,9 +113,9 @@ system (RTOS). This is currently in Alpha development.
 We currently have the following sample applications that can be used as inspiration
 for your own digital contact tracing applications:-
 
-- [C++ Venue Beacon](https://github.com/vmware/herald-for-cpp/tree/develop/herald-venue-beacon) - Tell nearby phones that they're in a particular venue, and even which area within the venue
-- [C++ wearable DCT](https://github.com/vmware/herald-for-cpp/tree/develop/herald-wearable) - A basic design for a DCT app like those for iOS and Android, but on a dedicated hardware device
-- [iOS demo app](https://github.com/vmware/herald-for-ios/tree/develop/Herald-for-iOS) - Demonstrates low and mid level functionality useful for DCT, including Venue Diary support and social mixing score
-- [Android demo app](https://github.com/vmware/herald-for-android/tree/develop/app) - Demonstrates low and mid level functionality useful for DCT, including Venue Diary support and social mixing score
+- [C++ Venue Beacon](https://github.com/theheraldproject/herald-for-cpp/tree/develop/herald-venue-beacon) - Tell nearby phones that they're in a particular venue, and even which area within the venue
+- [C++ wearable DCT](https://github.com/theheraldproject/herald-for-cpp/tree/develop/herald-wearable) - A basic design for a DCT app like those for iOS and Android, but on a dedicated hardware device
+- [iOS demo app](https://github.com/theheraldproject/herald-for-ios/tree/develop/Herald-for-iOS) - Demonstrates low and mid level functionality useful for DCT, including Venue Diary support and social mixing score
+- [Android demo app](https://github.com/theheraldproject/herald-for-android/tree/develop/app) - Demonstrates low and mid level functionality useful for DCT, including Venue Diary support and social mixing score
 
 Note: These are NOT production quality applications with full functionality as that would require an appropriate PHA-controlled backend set of services.

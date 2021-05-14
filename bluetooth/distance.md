@@ -17,7 +17,7 @@ to get to a distance estimation value.
 
 ## Calibration tool
 
-Herald provides a sample [Bluetooth calibration tool](https://github.com/vmware/herald-calibration). Currently this supports iOS but Android is also in the works.
+Herald provides a sample [Bluetooth calibration tool](https://github.com/theheraldproject/herald-calibration). Currently this supports iOS but Android is also in the works.
 
 To use the tool on iOS simply:-
 - Clone the repository above

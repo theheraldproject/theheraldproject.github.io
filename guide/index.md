@@ -40,6 +40,6 @@ Start here: [About the code]({{"/guide/code" | relative_url }})
 
 ## Something missing?
 
-Please do [log an Issue on GitHub](https://github.com/vmware/herald/issues) for any missing documentation
+Please do [log an Issue on GitHub](https://github.com/theheraldproject/theheraldproject.github.,io/issues) for any missing documentation
 or to ask us to correct errors or provide clarification. We want to provide very high quality integration
 documentation to help development teams integrate the Herald API.

@@ -7,7 +7,7 @@ menubar: about_menu
 
 # Herald and Wearables
 
-Herald has a [C++ API and demo applications](https://github.com/vmware/herald-for-cpp) that showcase
+Herald has a [C++ API and demo applications](https://github.com/theheraldproject/herald-for-cpp) that showcase
 how a low-cost but high performance eHealth wearable can be developed.
 
 Our first wearable sample application is for 
@@ -18,9 +18,10 @@ This also works well with our Venue Beacon, logging both nearby contacts and whe
 restaurants and bars - both check-in and check-out time - and storing them on your wearable.
 You can then choose to later share these with contact tracers.
 
-## Opensource hardware - COMING SOON!
+## Opensource hardware
 
-We are also working on an opensource hardware design that will be published shortly in Herald v1.5.
+We are also working on an opensource hardware design that will be published shortly in Herald v2.1.
+You can review our work on this at the [Herald Hardware GitHub repo](https://github.com/theheraldproject/herald-hardware).
 
 The focus of this design is to minimise the cost of producing DCT solutions for use by those
 who cannot afford $1000 smartphones, for young and old people without this technology, and
