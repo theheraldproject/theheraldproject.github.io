@@ -18,9 +18,9 @@ confidence in Herald. Full details of our development environment and procedure 
 testing these test apps are available on the GitHub repositories.
 
 GitHub repositories:-
-- [iOS API and App](https://github.com/vmware/herald-for-ios)
-- [Android API and App](https://github.com/vmware/herald-for-android)
-- [C++ API and Apps](https://github.com/vmware/herald-for-cpp)
+- [iOS API and App](https://github.com/theheraldproject/herald-for-ios)
+- [Android API and App](https://github.com/theheraldproject/herald-for-android)
+- [C++ API and Apps](https://github.com/theheraldproject/herald-for-cpp)
 
 ## Understanding the code
 

@@ -229,7 +229,7 @@ This problem occurs when scheduling a delay between Bluetooth scans, which are c
 app on Android and not the OS. You can ask for "Awake in 8 seconds". Rather than always awaking just after
 8 seconds, Android's default timer class can wait for over 30 minutes.
 
-The solution within Herald is to provide [our own Timer implementation](https://github.com/vmware/herald-for-android/blob/develop/herald/src/main/java/com/vmware/herald/sensor/ble/BLETimer.java)
+The solution within Herald is to provide [our own Timer implementation](https://github.com/theheraldproject/herald-for-android/blob/develop/herald/src/main/java/com/vmware/herald/sensor/ble/BLETimer.java)
 
 ## Inability to use timers on iOS without extra permissions
 

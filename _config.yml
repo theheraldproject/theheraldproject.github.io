@@ -24,10 +24,10 @@ author: Herald Project Contributors
 description: >- # this means to ignore newlines until "baseurl:"
   The home for our research in to low level mobile phone Bluetooth
   capabilities, issues, workarounds, and testing.
-baseurl: "/herald" # the subpath of your site, e.g. /blog
-url: "https://vmware.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-logo: /herald/img/herald.png
-gh_repo: https://github.com/vmware/?q=herald
+#baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://theheraldproject.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+logo: /img/herald.png
+gh_repo: https://github.com/theheraldproject/theheraldproject.github.io
 #markdown: redcarpet
 hero:
   background-color: med-blue
@@ -35,13 +35,13 @@ footer:
   title: Getting Started
   content: To help you get started, see the documentation.
   cta_title:
-  cta_url: /herald/docs
+  cta_url: /docs
   cta_text: Documentation
 
 footer_social_links:
   Twitter:
     fa_icon: fab fa-twitter
-    url: https://twitter.com/HeraldBluetooth
+    url: https://twitter.com/HeraldProximity
   Slack:
     fa_icon: fab fa-slack
     url: https://slack.lfph.io/
@@ -50,7 +50,7 @@ footer_social_links:
     url: feed.xml
   GitHub:
     fa_icon: fab fa-github
-    url: https://github.com/vmware/?q=herald
+    url: https://github.com/theheraldproject
 
 collections:
   - contributors
@@ -73,14 +73,14 @@ plugins:
   - jekyll-seo-tag
   - jekyll-spaceship
 
-permalink: blog/:title
+permalink: /blog/:title
 sass:
   sass_dir: css
   style: :compressed
 
 # Blog properties
 paginate: 10
-paginate_path: "/herald/blog/page:num"
+paginate_path: "/blog/page:num"
 
 # Site defaults
 defaults:

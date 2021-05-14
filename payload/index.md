@@ -50,7 +50,7 @@ or roll your own [Custom payload]({{"/payload/outer" | relative_url }}) entirely
 (especially if you are not writing a contact tracing app!)
 
 We are also working on a [Beacon Payload]({{"/payload/beacon" | relative_url }}) for use in Stores and Restaurants or areas of environmental exposure (E.g. gas, chemicals). Please 
-[log an issue on GitHub](https://github.com/vmware/herald/issues) if you are interested in this.
+[log an issue on GitHub](https://github.com/theheraldproject/theheraldproject.github.io/issues) if you are interested in this.
 
 ## What every payload must support
 

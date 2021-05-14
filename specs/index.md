@@ -21,7 +21,7 @@ Specifications:-
 |Herald Secured Payload | Draft | [Overview page]({{"/payload/secured" | relative_url }}) <br> [Specification HTML]({{"/specs/payload-secured" | relative_url }}) |
 |Herald International Interoperability | Draft | [Overview page]({{"/payload/interop" | relative_url }}) <br> [Specification HTML]({{"/specs/payload-interop" | relative_url }}) |
 
-To raise issues for these protocols, please add them to the [main Herald GitHub issues webpage](https://github.com/vmware/herald/issues)
+To raise issues for these protocols, please add them to the [main Herald GitHub issues webpage](https://github.com/theheraldproject/theheraldproject.github.io/issues)
 
 ## Terminology
 
