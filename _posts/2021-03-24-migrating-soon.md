@@ -19,7 +19,7 @@ on the changes coming soon.
 
 ### By mid-April 2021
 
-- Website moved from vmware.github.io/herald to theheraldproject.github.io but shown on our new domain of https://heraldprox.io/
+- Website moved from vmware.github.io/herald to https://theheraldproject.github.io/ but soon on our new domain of https://heraldprox.io/
 
 We hope these changes help build a
 We're community driven, so please come and [join the Herald community]({{"/community" | relative_url }}) 

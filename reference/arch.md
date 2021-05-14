@@ -9,7 +9,7 @@ menubar: reference_menu
 
 Herald's high level design is documentated in diagram form
 in our [Archi HTML export]({{"/documents/architecture/index.html" | relative_url }}). The 
-[raw archi file](https://github.com/vmware/herald/blob/develop/documents/herald-architecture.archimate) 
+[raw archi file](https://github.com/theheraldproject/theheraldproject.github.io/blob/develop/documents/herald-architecture.archimate) 
 can be downloaded from GitHub.
 
 The best diagram to start with is the 
@@ -29,4 +29,4 @@ Each class here shows its inheritance diagram.
 
 If you think some documentation is missing, please head on over to 
 [#herald-general on the LFPH Slack](https://slack.lfph.io/) or open a new
-[Feature request on GitHub](https://github.com/vmware/herald/issues/new).
+[Feature request on GitHub](https://github.com/theheraldproject/theheraldproject.github.io/issues/new).

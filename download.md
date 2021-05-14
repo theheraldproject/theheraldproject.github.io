@@ -19,9 +19,9 @@ If you would like a final Herald-powered application, you can access the below:-
 There are a number of demonstration apps available within the Herald project. These are
 in the same GitHub repositories as the API for each platform:-
 
-- [iOS/Swift](https://github.com/vmware/herald-for-ios) - Swift API & Herald demonstration app. Has DCT and Venue Beacon modes
-- [Android/Java](https://github.com/vmware/herald-for-android) - Java API & Herald demonstration app. Has DCT mode only
-- [Native/C++](https://github.com/vmware/herald-for-cpp) - C++ API & DCT wearable and Venue Beacon demonstration apps
+- [iOS/Swift](https://github.com/theheraldproject/herald-for-ios) - Swift API & Herald demonstration app. Has DCT and Venue Beacon modes
+- [Android/Java](https://github.com/theheraldproject/herald-for-android) - Java API & Herald demonstration app. Has DCT mode only
+- [Native/C++](https://github.com/theheraldproject/herald-for-cpp) - C++ API & DCT wearable and Venue Beacon demonstration apps
 
 Please follow our [Getting started with the Code guide]({{"/guide/code" | relative_url }}) if you are developing a Herald based application.
 
@@ -35,4 +35,4 @@ DCT wearables and beacons. Once published we shall link to those from here.
 The Herald project maintain a number of repositories for tooling to enable efficacy testing
 and scientific research into Proximity.
 
-- [Analysis R Scripts](https://github.com/vmware/herald-analysis) - R Studio scripts for the Fair Efficacy Formula and RSSI-Distance calculation, and evaluation of distance and risk algorithms
+- [Analysis R Scripts](https://github.com/theheraldproject/herald-analysis) - R Studio scripts for the Fair Efficacy Formula and RSSI-Distance calculation, and evaluation of distance and risk algorithms
