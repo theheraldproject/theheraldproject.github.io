@@ -3,7 +3,7 @@
 Please visit:-
 
 - Website: https://heraldprox.io/
-- GitHub: https://github.com/theheraldproject/herald
+- GitHub: https://github.com/theheraldproject/theheraldproject.github.io
 
 ## License and copyright
 
