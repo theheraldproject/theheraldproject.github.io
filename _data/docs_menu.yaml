@@ -34,3 +34,19 @@
       link: /guide/ios
     - name: Android app guide
       link: /guide/android 
+- label: Contributors Guide
+  items:
+    - name: Introduction
+      link: /contribute
+    - name: Our repositories
+      link: /contribute/repos
+    - name: Create a fork
+      link: /contribute/fork
+    - name: Feature Branches
+      link: /contribute/branch
+    - name: Style guidelines
+      link: /contribute/style
+    - name: Making a Commit
+      link: /contribute/commit
+    - name: Pull Requests
+      link: /contribute/pullrequest
