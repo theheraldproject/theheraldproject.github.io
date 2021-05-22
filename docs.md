@@ -1,7 +1,4 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: docs
 title: Herald Documentation
 description: Herald developer and integration documentation
@@ -37,16 +34,10 @@ The remainder of this page breaks down the key areas of the documentation on thi
 
 To see information on integrating Herald with your own application, please see the [developer & integration guide]({{"/guide" | relative_url }}).
 
-You can reach out to us and log general project and research data requests and issues on our [GitHub issues site](https://github.com/theheraldproject/theheraldproject.github.io/issues).
-We are also keen to receive contributions to all of our open source repositories and research areas:-
+For those wishing to contribute to Herald's development, we also have a
+[Contributor's Guide]({{"/contribute" | relative_url }}).
 
-- [Herald Protocol & Payloads for iOS](https://github.com/theheraldproject/herald-for-ios) (Apache-2.0 licensed)
-- [Herald Protocol & Payloads for Android](https://github.com/theheraldproject/herald-for-android) (Apache-2.0 licensed)
-- [Herald Research & documentation website](https://github.com/theheraldproject/theheraldproject.github.io) (this site) (CC-BY licensed)
-- [Sample R analysis scripts](https://github.com/theheraldproject/herald-analysis) for the fair efficacy formula (Apache-2.0 licensed)
-- Our generic [BLE RSSI calibration and distance estimation testing tool](https://github.com/theheraldproject/herald-calibration) (Apache-2.0 licensed)
-
-This project is maintained primarily by the opensource community in our spare time. We aim to respond to logged issues and emails within 24-28 hours during week days (Monday-Friday) in the UK time zone.
+You can get the code from one of the many [Herald Project Repositories](/download).
 
 ## API documentation
 
