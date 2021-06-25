@@ -9,7 +9,7 @@ author_avatar: https://avatars2.githubusercontent.com/u/2700521?s=150&u=7998edea
 ---
 
 We're now over a year since the first national lockdowns due to SARS-CoV-2 (COVID-19). In this post we look to the
-continued need of Digital Contact Tracing (DCT), and where it is going next.
+continued need for Digital Contact Tracing (DCT), and where the technology is going next.
 
 ### The need for DCT
 
