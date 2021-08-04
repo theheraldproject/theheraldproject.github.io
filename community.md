@@ -3,14 +3,32 @@ layout: docs
 title: Community
 description: Herald Community
 id: community
+menubar: community_menu
 ---
-Do you want to help build Herald?
+
+# The Herald Community
+
+The Herald Community consists of software developers, designers, and healthcare experts all working together to improve healthcare software for all.
+
+## Project Advisory Group
+
+We have a [Project Advisory Group]({{"/community/pag" | relative_url }}) consisting of Public Health Authorities and experts in Digital Contact Tracing.
+Membership is invite only but output will be posted as unattributed minutes in our project website.
+
+## Public Meetings
+
+We also organise public meetings in varying timezones to present the latest updates, and to gather public feedback and answer questions. You can see when
+these are on the [Linux Foundation Public Health's Calendar](https://www.lfph.io/calendar/).
+
+## Do you want to help build Herald?
 
 If you’re a newcomer, check out the “[Good first issue](https://github.com/theheraldproject/theheraldproject.github.io/issues?q=is%3Aopen+is%3Aissue+label%3A%22Good+first+issue%22)” and “[Help wanted](https://github.com/theheraldproject/theheraldproject.github.io/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3A%22Help+wanted%22+)” labels in the Herald documentation repository.
 
 * Join the Linux Foundation Public Health's Slack and our #herald-general channel and talk to our community members: <a href="https://slack.lfph.io" target="_new">https://slack.lfph.io/</a>
 
 * Follow us on Twitter at [@HeraldProximity](https://twitter.com/HeraldProximity)
+
+* You can also view our [Public Roadmap on Miro](https://miro.com/app/board/o9J_kidPGWQ=/?moveToWidget=3074457360693388765&cot=14)
 
 ## Helps
 

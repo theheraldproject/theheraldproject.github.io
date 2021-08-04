@@ -5,6 +5,8 @@
       link: /applications
     - name: Contact Tracing
       link: /applications/ct
+    - name: Disease Control
+      link: /applications/disease
     - name: Device to Device
       link: /applications/p2p
     - name: Bluetooth Mesh Gateways
