@@ -8,9 +8,9 @@ menubar: about_menu
 
 # OpenTrace
 
-OpenTrace was created by [GovTech Singapore]([https://tech.gov.sg](https://tech.gov.sg)) in March 2020 and was the 
+OpenTrace was created by [GovTech Singapore]( [https://tech.gov.sg](https://tech.gov.sg) ) in March 2020 and was the 
 first publicly available and open source Digital Contact Tracing system in the world based
-on Bluetooth Low Energy. OpenTrace supported the [BlueTrace protocol]([https://bluetrace.io](https://bluetrace.io)).
+on Bluetooth Low Energy. OpenTrace supported the [BlueTrace protocol]( [https://bluetrace.io](https://bluetrace.io) ).
 
 ![OpenTrace Logo](/img/opentrace.png)
 
