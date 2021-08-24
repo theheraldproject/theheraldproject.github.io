@@ -1,9 +1,12 @@
 <div class="row">
 {% for cs in site.casestudies %}
-    <div class="card card-dark col-md-12 mb-3 mb-sm-0 {% if forloop.index > 1 %}mt-3{% endif %}">
+    <div class="card card-dark col-md-6 mb-3 mb-sm-0 {% if forloop.index > 2 %}mt-3{% endif %}">
         <div class="card-body match-height text-center">
             {% if cs.title != blank %}
             <h5 class="card-title">{{ cs.title }}</h5>
+            {% endif %}
+            {% if cs.icon != blank %}
+            <img class="card-icon" src="{{ cs.icon }}"/>
             {% endif %}
             {% if cs.subtitle != blank %}
             <h6 class="card-subtitle mb-2">{{ cs.subtitle }}</h6>

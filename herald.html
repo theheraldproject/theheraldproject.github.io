@@ -1,0 +1,180 @@
+---
+layout: default
+id: herald
+description: Reliable mobile Bluetooth
+backgrounds:
+  case_study: green
+  team: dark-blue
+hero:
+  banner: /img/heroes/herald.png
+  headline: Proximity detection, distance estimation & data sharing
+  content: Herald provides reliable Bluetooth communication and range finding across a wide range of mobile devices, wearables, and beacons allowing Contact Tracing and other applications to have regular and accurate information to make them highly effective.
+  cta_link1:
+    text: Learn about Herald
+    url: /about
+  cta_link2:
+    text: Download Herald
+    url: /download
+  cta_link3:
+    text: Read Documentation
+    url: /docs
+  promo1:
+    icon: /img/testing-icon.svg
+    url: /about#phone-support
+    title:  Wide phone support
+    content: 97.5% of phones worldwide can use the Herald Protocol
+  promo2:
+    icon: /img/debug-icon.svg
+    url: /about#detection
+    title:  Detect nearby devices
+    content: 100% detection of devices in the foreground and background
+  promo3:
+    icon: /img/test-icon.svg
+    url: /about#distance
+    title: Regular distance readings
+    content: Regularly read signal strength and convert to distance
+  promo4:
+    icon: /img/test-icon.svg
+    url: /about#environment
+    title: Log other readings
+    content: Temperature, gas concentration, or estimate disease risk exposure
+  promo5:
+    icon: /img/test-icon.svg
+    url: /about#interoperability
+    title: Interoperate
+    content: A wide range of devices and application can interoperate using Herald
+secondary_ctas:
+  cta1:
+    title: Measuring Bluetooth efficacy
+    url: /efficacy/
+    content: Read an overview of how efficacy for contact tracing can be assessed
+  cta2:
+    title: Learn how Herald is used in applications
+    url: /applications
+    content: Learn about Herald powered applications
+---
+<div class="home-hero bg-color-{{ site.hero.background-color }}" style="background-image: url('{{ page.hero.banner }}')">
+  <div class="section">
+    <div class="section-content">
+      <div class="hero-content">
+        <h1 class="mb-4">{{ page.hero.headline }}</h1>
+        <p>{{ page.hero.content }}</p>        
+      </div>
+      <div class="hero-cta mt-4">
+        <a href="{{ page.hero.cta_link1.url }}" class="btn btn-primary mb-3 mb-sm-0">{{ page.hero.cta_link1.text }}</a>
+        <a href="{{ page.hero.cta_link2.url }}" class="btn btn-outline-light">{{ page.hero.cta_link2.text }}</a>
+        <a href="{{ page.hero.cta_link3.url }}" class="btn btn-outline-light">{{ page.hero.cta_link3.text }}</a>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+<div class="section section-card section-card-offset-top promo-cards">
+  <div class="section-content">
+    <div class="row">
+      <div class="col-md">
+        <div class="card card-light mb-2 mb-md-0 shadow-sm">
+          <div class="card-body match-height">
+            <figure>
+              <img src="{{ page.hero.promo1.icon }}" alt="{{ page.hero.promo1.title }}" />
+            </figure>
+            {% if page.hero.promo1.url.size > 0 %}
+            <h5><a href="{{ page.hero.promo1.url }}" class="dark">{{ page.hero.promo1.title }}</a></h5>
+            {% else %}
+            <h5>{{ page.hero.promo1.title }}</h5>
+            {% endif %}
+            <p>{{ page.hero.promo1.content }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card card-light mb-2 mb-md-0 shadow-sm">
+          <div class="card-body match-height">
+            <figure>
+              <img src="{{ page.hero.promo2.icon }}" alt="{{ page.hero.promo2.title }}" />
+            </figure>
+            {% if page.hero.promo2.url.size > 0 %}
+            <h5><a href="{{ page.hero.promo2.url }}" class="dark">{{ page.hero.promo2.title }}</a></h5>
+            {% else %}
+            <h5>{{ page.hero.promo2.title }}</h5>
+            {% endif %}
+            <p>{{ page.hero.promo2.content }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card card-light mb-2 mb-md-0 shadow-sm">
+          <div class="card-body match-height">
+            <figure>
+              <img src="{{ page.hero.promo3.icon }}" alt="{{ page.hero.promo3.title }}" />
+            </figure>
+            {% if page.hero.promo3.url.size > 0 %}
+            <h5><a href="{{ page.hero.promo3.url }}" class="dark">{{ page.hero.promo3.title }}</a></h5>
+            {% else %}
+            <h5>{{ page.hero.promo3.title }}</h5>
+            {% endif %}
+            <p>{{ page.hero.promo3.content }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card card-light mb-2 mb-md-0 shadow-sm">
+          <div class="card-body match-height">
+            <figure>
+              <img src="{{ page.hero.promo4.icon }}" alt="{{ page.hero.promo4.title }}" />
+            </figure>
+            {% if page.hero.promo4.url.size > 0 %}
+            <h5><a href="{{ page.hero.promo4.url }}" class="dark">{{ page.hero.promo4.title }}</a></h5>
+            {% else %}
+            <h5>{{ page.hero.promo4.title }}</h5>
+            {% endif %}
+            <p>{{ page.hero.promo4.content }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="card card-light mb-2 mb-md-0 shadow-sm">
+          <div class="card-body match-height">
+            <figure>
+              <img src="{{ page.hero.promo5.icon }}" alt="{{ page.hero.promo5.title }}" />
+            </figure>
+            {% if page.hero.promo5.url.size > 0 %}
+            <h5><a href="{{ page.hero.promo5.url }}" class="dark">{{ page.hero.promo5.title }}</a></h5>
+            {% else %}
+            <h5>{{ page.hero.promo5.title }}</h5>
+            {% endif %}
+            <p>{{ page.hero.promo5.content }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="section pt-3">
+  <div class="section-content">
+    <div class="row">
+      <div class="col">
+        <h2>License</h2>        
+      </div>
+    </div>
+<p>
+
+All Herald works are Copyright 2020-2021 Herald Project Contributors
+</p><p>
+The code for Herald (Android, iOS, C++, Analysis Scripts, Calibration tool) are Apache-2.0 licensed. The documentation for Herald, including this website, are under the Creative Commons Attribution 4.0 International Public License.
+</p><p>
+See LICENSE.txt and NOTICE.txt for details.
+</p>
+  </div>
+</div>
+
+
+<div class="section section-background-{{ page.backgrounds.team }}">
+  <div class="section-content">
+    {% include contributors.html %}
+  </div>
+</div>
