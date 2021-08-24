@@ -46,3 +46,4 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 #gem "rexml", ">= 3.2.5"
 
 gem 'redcarpet', '~> 3.5.1'
+gem "webrick", "~> 1.7"

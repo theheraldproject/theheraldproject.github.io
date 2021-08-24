@@ -4,6 +4,12 @@
       link: /about
     - name: FAQs
       link: /about/faq
+- label: Packages
+  items:
+    - name: Herald API
+      link: /herald
+    - name: OpenTrace
+      link: /opentrace
 - label: Applications
   items:
     - name: Overview

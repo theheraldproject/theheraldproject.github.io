@@ -4,6 +4,10 @@
     text-align: center;
     padding: 2rem 1.25rem;
   }
+  .card-icon {
+    height: 159px;
+    background-color: white;
+  }
 
   &.card-dark {
     color: $card-dark-foreground;

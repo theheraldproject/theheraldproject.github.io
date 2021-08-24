@@ -14,6 +14,10 @@ are present in how Herald works.
 As it turns out these same problems are also applicable for a wide range of
 [other applications]({{"/applications" | relative_url }}).
 
+An end-to-end Digital Contact Tracing (DCT) system is available from the Herald
+Project within [OpenTrace]({{"/opentrace" | relative_url }}), which is built on Herald.
+You can also use the Herald API within your own, custom, DCT application.
+
 Herald supports over 98% of phones worldwide - this includes phones that do not
 support advertising their presence themselves. Many contact tracing protocols in
 use today fail to take this scenario in to account, meaning they miss around
