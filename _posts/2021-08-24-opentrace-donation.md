@@ -1,7 +1,7 @@
 ---
 layout: posts
 title:  "Singapore's GovTech donates OpenTrace to Linux Foundation Public Health's Herald Project"
-date:   2021-08-10 13:00:00 +0100
+date:   2021-08-24 07:00:00 +0100
 categories: blog update jekyll
 author_name: adamfowleruk
 author_url: https://github.com/adamfowleruk
