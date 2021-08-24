@@ -73,6 +73,9 @@ Whilst we provide demonstration software as 'Herald sample apps' these are stric
 for production use. Herald is used within others' DCT apps for mobile phones and wearables
 though.
 
+If you are looking for an end-to-end whitelabled Digital Contact Tracing system, look
+at our [OpenTrace system]({{"/opentrace" | relative_url }}) pages.
+
 ### How does Herald compare against *INSERT NAME* DCT protocol?
 
 Herald has been developed to ensure it is the most effective DCT protocol at providing
@@ -104,12 +107,12 @@ a restrictive software product and then try to make it fit. We continue to carry
 new research in to areas that no-one else does. 
 
 We're working on accurate distance conversion from RSSI - an area of research that 
-some, we believe, have prematurely abandoned. We are also pushing millions of datapoints
+some, we believe, have prematurely abandoned. We are also publishing millions of datapoints
 on distance and RSSI readings for a variety of devices, and have built automated data
 collection robots to do this. All of these approaches and our data are free for other
 research teams to use under a permissive license.
 
-### What's your end goal with Herald?
+### What's your end goal with Herald and OpenTrace?
 
 We aim to put an end to blanket geographic lockdowns for new diseases and disease variants.
 We will provide foundational technology to avoid a repeat of the COVID-19 crisis, and 
@@ -119,4 +122,4 @@ We want to make the entire end to end system low cost, reliable, and give people
 to deploy it to all communities worldwide, helping to protect the health of everyone.
 
 We also believe this technology can have eHealth benefits outside of disease control.
-We continue to be on the lookout
+We continue to be on the lookout for new application areas for the Herald API.

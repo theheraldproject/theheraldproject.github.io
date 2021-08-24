@@ -15,11 +15,9 @@
 
   &.section-card {
     padding-top: 0;
-    padding-left: 0;
-    padding-right: 0;
     &.section-card-offset-top {
       .row {
-        margin-top: -120px;
+        margin-top: -40px;
       }
       .section-content {
         @include media-breakpoint-up(lg) {
