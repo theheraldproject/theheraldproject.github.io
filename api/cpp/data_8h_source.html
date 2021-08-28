@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -74,120 +74,582 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef DATA_H</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define DATA_H</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef HERALD_DATA_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define HERALD_DATA_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iosfwd&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;memory_arena.h&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceherald.html">herald</a> {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>datatype {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>(<a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>&amp;&amp; other); <span class="comment">// move ctor</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>(<span class="keyword">const</span> std::uint8_t* value, std::size_t length);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>(<span class="keyword">const</span> std::byte* value, std::size_t length);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>(std::vector&lt;std::byte&gt; value);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>&amp; from); <span class="comment">// copy ctor</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>(std::byte repeating, std::size_t count);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>(std::size_t reserveLength);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">// Data(Base64String from); // use Base64String.from(std::string).decode() instead</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>&amp; other);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  ~<a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="comment">// std::string base64EncodedString(); // use Base64String.encode(Data) instead</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">static</span> <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a> fromHexEncodedString(<span class="keyword">const</span> std::string&amp; hex);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  std::string description() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a> subdata(std::size_t offset) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a> subdata(std::size_t offset, std::size_t length) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  std::byte at(std::size_t index) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data.html#a8fec42f34a0061f13692193537de7c53">   48</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1datatype_1_1_data.html#a8fec42f34a0061f13692193537de7c53">assign</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>&amp; other);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">void</span> append(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>&amp; data, std::size_t offset, std::size_t length);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">void</span> append(<span class="keyword">const</span> std::uint8_t* data, std::size_t offset, std::size_t length);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> appendReversed(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>&amp; data, std::size_t offset, std::size_t length);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">void</span> append(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>&amp; data);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">void</span> append(std::byte data);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">void</span> append(uint8_t data);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> append(uint16_t data);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">void</span> append(uint32_t data);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">void</span> append(uint64_t data);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">void</span> append(<span class="keyword">const</span> std::string&amp; data);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordtype">bool</span> uint8(std::size_t fromIndex, uint8_t&amp; into) <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">bool</span> uint16(std::size_t fromIndex, uint16_t&amp; into) <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">bool</span> uint32(std::size_t fromIndex, uint32_t&amp; into) <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">bool</span> uint64(std::size_t fromIndex, uint64_t&amp; into) <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="comment">// TODO signed versions of the above functions too</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>&amp; other) <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>&amp; other) <span class="keyword">const</span> noexcept;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">bool</span> operator&lt;(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>&amp; other) <span class="keyword">const</span> noexcept; <span class="comment">// required for std::less</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">bool</span> operator&gt;(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>&amp; other) <span class="keyword">const</span> noexcept; <span class="comment">// required for std::less</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a> reversed() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  std::string hexEncodedString() const noexcept;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="namespacestd.html">std</a>::<span class="keywordtype">size_t</span> hashCode() const noexcept;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#ifndef HERALD_MEMORYARENA_MAX</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MemoryArenaT = MemoryArena&lt;8192, 8&gt;&gt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#ifndef HERALD_MEMORYARENA_PAGE</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MemoryArenaT = MemoryArena&lt;HERALD_MEMORYARENA_MAX, 8&gt;&gt;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MemoryArenaT = MemoryArena&lt;HERALD_MEMORYARENA_MAX, HERALD_MEMORYARENA_PAGE&gt;&gt;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a8350b820f66abd7b2e48ce5be18d712e">   36</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a8350b820f66abd7b2e48ce5be18d712e">DataRef</a>() : entry()</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    ;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a779426f8b3c8c111a846eefca11046fc">   41</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a779426f8b3c8c111a846eefca11046fc">DataRef</a>(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a>&amp;&amp; other)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  : entry()</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::swap(entry,other.entry);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a743c757cc6b6565e53a938121549d0bb">   47</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a743c757cc6b6565e53a938121549d0bb">DataRef</a>(<span class="keyword">const</span> std::uint8_t* value, std::size_t length) : </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  entry(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.allocate(length)) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">for</span> (std::size_t i = 0;i &lt; length; ++i) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="comment">// data[i] = std::byte(value[i]);</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry, i, (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)value[i]);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#ab0f18e1e6e31462e1873cf79562ab4e7">   55</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#ab0f18e1e6e31462e1873cf79562ab4e7">DataRef</a>(<span class="keyword">const</span> std::byte* value, std::size_t length) : entry(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.allocate(length)) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">for</span> (std::size_t i = 0;i &lt; length; ++i) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="comment">// data[i] = value[i];</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry, i, (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)value[i]);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a1fa34a200369797e4f2ede264a5f6010">   62</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a1fa34a200369797e4f2ede264a5f6010">DataRef</a>(<span class="keyword">const</span> std::string&amp; from) : entry(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.allocate(from.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a>())) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">for</span> (std::size_t i = 0;i &lt; from.size(); ++i) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="comment">// data[i] = value[i];</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry, i, (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)from[i]);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  }</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a0fae903d7e99474c7998ec7d5f67f0ec">   69</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a0fae903d7e99474c7998ec7d5f67f0ec">DataRef</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a>&amp; from) : entry(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.allocate(from.entry.byteLength)) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">for</span> (std::size_t i = 0;i &lt; from.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a>(); ++i) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry, i, from.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(from.entry,i));</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <a class="code" href="namespacestd.html">std</a>::<span class="keywordtype">size_t</span> size() const noexcept;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="comment">// TODO support other C++ STD container type functions to allow iteration over data elements (uint8)</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">void</span> clear() noexcept;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;protected:</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  static const <span class="keywordtype">char</span> hexChars[];</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  class Impl;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <a class="code" href="namespacestd.html">std</a>::unique_ptr&lt;Impl&gt; mImpl; <span class="comment">// PIMPL IDIOM</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a6b7e8caadf31bc9d8a601d56fb3d260d">   76</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a6b7e8caadf31bc9d8a601d56fb3d260d">DataRef</a>(std::byte repeating, std::size_t count) : entry(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.allocate(count)) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">for</span> (std::size_t i = 0;i &lt; count; ++i) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,i,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)repeating);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a5ad028534d521ff3d109e9e6d800b9e6">   82</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a5ad028534d521ff3d109e9e6d800b9e6">DataRef</a>(std::size_t reserveLength) : entry(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.allocate(reserveLength)) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    ;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;} <span class="comment">// end namespace</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;} <span class="comment">// end namespace</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="namespacestd.html">   89</a></span>&#160;namespace <a class="code" href="namespacestd.html">std</a> {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keyword">inline</span> std::ostream&amp; operator&lt;&lt;(std::ostream &amp;os, <span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data.html">herald::datatype::Data</a>&amp; d)</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> os &lt;&lt; d.hexEncodedString();</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> hash_combine_impl(std::size_t&amp; seed, std::size_t value)</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    seed ^= value + 0x9e3779b9 + (seed&lt;&lt;6) + (seed&gt;&gt;2);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="comment">// std::hash function for std::vector&lt;T&gt;</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01std_1_1vector_3_01_t_01_4_01_4.html">  102</a></span>&#160;  <span class="keyword">struct </span>hash&lt;<a class="code" href="namespacestd.html">std</a>::vector&lt;T&gt;&gt;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">size_t</span> operator()(<span class="keyword">const</span> std::vector&lt;T&gt;&amp; v)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      std::size_t hv = 0;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; vpart : v) {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        hash_combine_impl(hv, std::hash&lt;T&gt;()(vpart));</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <span class="keywordflow">return</span> hv;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  };</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keyword">template</span>&lt;&gt;</div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01herald_1_1datatype_1_1_data_01_4.html">  115</a></span>&#160;  <span class="keyword">struct </span>hash&lt;<a class="code" href="namespaceherald.html">herald</a>::datatype::Data&gt;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">size_t</span> operator()(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data.html">herald::datatype::Data</a>&amp; v)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <span class="keywordflow">return</span> v.hashCode();</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  };</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;} <span class="comment">// end namespace</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassherald_1_1datatype_1_1_data_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_data.html">herald::datatype::Data</a></div><div class="ttdoc">The main data workhorse class of the Herald API.</div><div class="ttdef"><b>Definition:</b> data.h:24</div></div>
-<div class="ttc" id="aclassherald_1_1datatype_1_1_data_html_a8fec42f34a0061f13692193537de7c53"><div class="ttname"><a href="classherald_1_1datatype_1_1_data.html#a8fec42f34a0061f13692193537de7c53">herald::datatype::Data::assign</a></div><div class="ttdeci">void assign(const Data &amp;other)</div></div>
-<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Main Herald library include for C++ Native platforms.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
-<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> data.h:89</div></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="comment">// Data(Base64String from); // use Base64String.from(std::string).decode() instea</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a8dcc5bf1a6ca6dafa7917f6b4abc635a">   89</a></span>&#160;<span class="comment"></span>  <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a>&amp; <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a8dcc5bf1a6ca6dafa7917f6b4abc635a">operator=</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a>&amp; other)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    entry = <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.allocate(other.entry.byteLength);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">for</span> (std::size_t i = 0;i &lt; other.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a>(); ++i) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry, i, other.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(other.entry,i));</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a1ff5dae91d1a5727fe39b645ee26c29f">   99</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a1ff5dae91d1a5727fe39b645ee26c29f">~DataRef</a>() {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#aa48ea3c45bde7bf88ed701577bf9222d">clear</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="comment">// std::string base64EncodedString(); // use Base64String.encode(Data) instead</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a76b73ab73fe045be89bfad0dcea2bf15">  105</a></span>&#160;<span class="comment"></span>  <span class="keyword">static</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a76b73ab73fe045be89bfad0dcea2bf15">fromHexEncodedString</a>(<span class="keyword">const</span> std::string&amp; hex)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">// parse string</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">const</span> std::size_t length = hex.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a>();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    std::string hexInput;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">// Input size check - two characters per single byte</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">if</span> (1 == length % 2) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="comment">// invalid format - not an even number of characters</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="comment">// Prepend input with a 0. (Note &#39;8&#39; and &#39;08&#39; in hex are the same)</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      hexInput += <span class="stringliteral">&quot;0&quot;</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    hexInput += hex;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a> d(hexInput.size() / 2);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; hexInput.size(); i += 2) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      std::string byteString = hexInput.substr(i, 2);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      std::byte <span class="keywordtype">byte</span> = std::byte(strtol(byteString.c_str(), NULL, 16));</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      <span class="comment">// d.data.push_back(byte);</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(d.entry,i / 2, (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)<span class="keywordtype">byte</span>);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span> d;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#ae5454f884466ea6ee35cc97a1cf8c0e3">  131</a></span>&#160;  std::string <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#ae5454f884466ea6ee35cc97a1cf8c0e3">description</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a458f1963c599a8ea35f5bdaa5fdd647f">hexEncodedString</a>();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a407c8949d011531c15f04b198806fc33">  137</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a407c8949d011531c15f04b198806fc33">subdata</a>(std::size_t offset)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordflow">if</span> (offset &gt;= entry.byteLength) {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a8350b820f66abd7b2e48ce5be18d712e">DataRef</a>(0);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a> copy(entry.byteLength - offset);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">for</span> (std::size_t i = 0;i &lt; entry.byteLength - offset;++i) {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      copy.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(copy.entry,i,<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,i + offset));</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="comment">// std::copy(data.begin() + offset, data.end(), std::back_inserter(copy.data));</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">return</span> copy;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#ad255680e71fed5eef631531d301b34a3">  151</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#ad255680e71fed5eef631531d301b34a3">subdata</a>(std::size_t offset, std::size_t length)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="comment">// Note: offset if passed as -1 could be MAX_LONG_LONG, so check it on its own too</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordflow">if</span> (offset &gt;= entry.byteLength) {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a8350b820f66abd7b2e48ce5be18d712e">DataRef</a>(0);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    std::size_t correctedLength = length;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">if</span> (length &gt; entry.byteLength || length + offset &gt; entry.byteLength) {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      correctedLength = entry.byteLength - offset;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a> copy(correctedLength);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="comment">// Note the below is necessary as calling with (4,-1), the second condition IS valid!</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="comment">// if (length &gt; entry.byteLength || offset + length &gt; entry.byteLength) {</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="comment">//   for (std::size_t i = 0;i &lt; entry.byteLength - offset;++i) {</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="comment">//     copy.arena.set(copy.entry,i,arena.get(entry,offset + i));</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="comment">//   }</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="comment">//   // std::copy(data.begin() + offset, data.end(), std::back_inserter(copy.data));</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="comment">// } else {</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      <span class="keywordflow">for</span> (std::size_t i = 0;i &lt; correctedLength;++i) {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        copy.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(copy.entry,i,<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,offset + i));</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <span class="comment">// std::copy(data.begin() + offset, data.begin() + offset + length, std::back_inserter(copy.data));</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="comment">// }</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">return</span> copy;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a1474ac9b5ba9e7176acc02d5547cb084">  178</a></span>&#160;  std::byte <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a1474ac9b5ba9e7176acc02d5547cb084">at</a>(std::size_t index)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">if</span> (index &gt; (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>)(entry.byteLength - 1)) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      <span class="keywordflow">return</span> std::byte(0);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="keywordflow">return</span> std::byte(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,index));</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#aac1e08f7c459fe79e3759fb7c15cab26">  190</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#aac1e08f7c459fe79e3759fb7c15cab26">assign</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a>&amp; other)</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">if</span> (other.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a>() &gt; entry.byteLength) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.reserve(entry,other.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a>());</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">for</span> (std::size_t pos = 0; pos &lt; other.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a>();++pos) {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,pos,other.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(other.entry,pos));</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#ac1e2166d195a87fc9f806dc3c366862c">  201</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#ac1e2166d195a87fc9f806dc3c366862c">append</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a>&amp; rawData, std::size_t offset, std::size_t length)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keyword">auto</span> curSize = entry.byteLength;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.reserve(entry,curSize + length);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">for</span> (std::size_t pos = 0; pos &lt; length;++pos) {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize + pos,rawData.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(rawData.entry,pos + offset));</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="comment">// std::copy(rawData.data.begin() + offset, </span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="comment">//           rawData.data.begin() + offset + length, </span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="comment">//           std::back_inserter(data)</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="comment">// );</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a62d04cc25da80172d2363e444280324e">  215</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a62d04cc25da80172d2363e444280324e">append</a>(<span class="keyword">const</span> std::string&amp; rawData)</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keyword">auto</span> curSize = entry.byteLength;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.reserve(entry,curSize + rawData.size());</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">for</span> (std::size_t pos = 0; pos &lt; rawData.size();++pos) {</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;      <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize + pos,rawData[pos]);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#af37508bd7952173c6697dd927f77495a">  225</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#af37508bd7952173c6697dd927f77495a">append</a>(<span class="keyword">const</span> std::uint8_t* rawData, std::size_t offset, std::size_t length)</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keyword">auto</span> curSize = entry.byteLength;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.reserve(entry,curSize + length);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">for</span> (std::size_t i = 0;i &lt; length;++i) {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize + i,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(rawData[offset + i]));</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      <span class="comment">// arena.set(entry,curSize,std::byte(rawData[offset + i]));</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a760b44a12f2a11a859121fb724d1296d">  236</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a760b44a12f2a11a859121fb724d1296d">appendReversed</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a>&amp; rawData, std::size_t offset, std::size_t length)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  {</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">if</span> (offset &gt; rawData.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a>()) {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      <span class="keywordflow">return</span>; <span class="comment">// append nothing - out of range</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    std::size_t checkedLength = length;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">if</span> (length &gt; (rawData.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a>() - offset)) {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      checkedLength = rawData.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a>() - offset;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keyword">auto</span> curSize = entry.byteLength;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.reserve(entry,curSize + checkedLength);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">for</span> (std::size_t i = 0;i &lt; checkedLength;++i) {</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize + i,</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      rawData.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(rawData.entry,offset + (checkedLength - i - 1)));</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="comment">// std::reverse_copy(rawData.data.begin() + offset, </span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="comment">//                   rawData.data.begin() + offset + checkedLength, </span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="comment">//                   std::back_inserter(data)</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="comment">// );</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  }</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#aeda2f186bbac5e68e703c37988d26c83">  258</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#aeda2f186bbac5e68e703c37988d26c83">append</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a>&amp; rawData)</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keyword">auto</span> orig = entry.byteLength;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.reserve(entry,rawData.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a>() + orig);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordflow">for</span> (std::size_t pos = 0; pos &lt; rawData.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a>();++pos) {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,orig + pos,rawData.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(rawData.entry,pos));</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    }</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="comment">// std::copy(rawData.data.begin(), rawData.data.end(), std::back_inserter(data));</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a4ca7ce3e11ccb6b38a4c52011351d284">  269</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a4ca7ce3e11ccb6b38a4c52011351d284">append</a>(std::byte rawData)</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  {</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    std::size_t curSize = entry.byteLength;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.reserve(entry,curSize + 1);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="comment">// data.push_back(rawData);</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)rawData);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="comment">// curSize++;</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a7d7f06c173fccb90eb5dfa30e9b45b60">  279</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7d7f06c173fccb90eb5dfa30e9b45b60">append</a>(uint8_t rawData)</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  {</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    std::size_t curSize = entry.byteLength;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.reserve(entry,curSize + 1); <span class="comment">// C++ ensures types are AT LEAST x bits</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="comment">// arena.set(entry,curSize,std::byte(rawData));</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(rawData));</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="comment">// curSize++;</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#ae8be5725e1754a47026c232ad4cd3d2f">  289</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#ae8be5725e1754a47026c232ad4cd3d2f">append</a>(uint16_t rawData)</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    std::size_t curSize = entry.byteLength;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.reserve(entry,curSize + 2); <span class="comment">// C++ ensures types are AT LEAST x bits</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(rawData &amp; 0xff));</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize + 1,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(rawData &gt;&gt; 8));</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a5cd3922a67264ddbaa6d5a074a50c510">  298</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a5cd3922a67264ddbaa6d5a074a50c510">append</a>(uint32_t rawData)</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    std::size_t curSize = entry.byteLength;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.reserve(entry,curSize + 4); <span class="comment">// C++ ensures types are AT LEAST x bits</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(rawData &amp; 0xff));</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize + 1,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(rawData &gt;&gt; 8));</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize + 2,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(rawData &gt;&gt; 16));</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize + 3,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(rawData &gt;&gt; 24));</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00309"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a3eaba29238ead658f49753c1a995a16d">  309</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a3eaba29238ead658f49753c1a995a16d">append</a>(uint64_t rawData)</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    std::size_t curSize = entry.byteLength;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.reserve(entry,curSize + 8); <span class="comment">// C++ ensures types are AT LEAST x bits</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(rawData &amp; 0xff));</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize + 1,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(rawData &gt;&gt; 8));</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize + 2,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(rawData &gt;&gt; 16));</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize + 3,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(rawData &gt;&gt; 24));</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize + 4,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(rawData &gt;&gt; 32));</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize + 5,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(rawData &gt;&gt; 40));</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize + 6,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(rawData &gt;&gt; 48));</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(entry,curSize + 7,(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(rawData &gt;&gt; 56));</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a9a914e5e43054120ea77a261c38f827f">  324</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a9a914e5e43054120ea77a261c38f827f">uint8</a>(std::size_t fromIndex, uint8_t&amp; into) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">if</span> (fromIndex &gt; (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>)(entry.byteLength - 1)) {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    into = std::uint8_t(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,fromIndex));</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  }</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00334"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a213819a9c3322ed8fa4e25c1e5ce6c79">  334</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a213819a9c3322ed8fa4e25c1e5ce6c79">uint16</a>(std::size_t fromIndex, uint16_t&amp; into) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  {</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordflow">if</span> (fromIndex &gt; (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>)(entry.byteLength - 2)) {</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    into = (std::uint16_t(std::uint8_t(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,fromIndex + 1))) &lt;&lt; 8) | std::uint16_t(std::uint8_t(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,fromIndex)));</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00344"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#aa4e41f37d37ff08f8d54d85359f13e1a">  344</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#aa4e41f37d37ff08f8d54d85359f13e1a">uint32</a>(std::size_t fromIndex, uint32_t&amp; into) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  {</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordflow">if</span> (fromIndex &gt; entry.byteLength - 4) {</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    }</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    into =  std::uint32_t(std::uint8_t(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,fromIndex)))            | (std::uint32_t(std::uint8_t(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,fromIndex + 1))) &lt;&lt; 8) |</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;          (std::uint32_t(std::uint8_t(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,fromIndex + 2))) &lt;&lt; 16) | (std::uint32_t(std::uint8_t(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,fromIndex + 3))) &lt;&lt; 24);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  }</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
+<div class="line"><a name="l00355"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#abf05013855e21a804c7cb02936253191">  355</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#abf05013855e21a804c7cb02936253191">uint64</a>(std::size_t fromIndex, uint64_t&amp; into) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;  {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordflow">if</span> (entry.byteLength &lt; 8 || fromIndex &gt; entry.byteLength - 8) {</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    into = (std::uint64_t(std::uint8_t(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,fromIndex + 7))) &lt;&lt; 56) | (std::uint64_t(std::uint8_t(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,fromIndex + 6))) &lt;&lt; 48) |</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;          (std::uint64_t(std::uint8_t(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,fromIndex + 5))) &lt;&lt; 40) | (std::uint64_t(std::uint8_t(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,fromIndex + 4))) &lt;&lt; 32) |</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;          (std::uint64_t(std::uint8_t(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,fromIndex + 3))) &lt;&lt; 24) | (std::uint64_t(std::uint8_t(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,fromIndex + 2))) &lt;&lt; 16) |</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;          (std::uint64_t(std::uint8_t(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,fromIndex + 1))) &lt;&lt; 8)  |  std::uint64_t(std::uint8_t(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,fromIndex)));</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;  }</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  <span class="comment">// TODO signed versions of the above functions too</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#ab00fbed8ed30435bd45791b7e793bb4d">  369</a></span>&#160;<span class="comment"></span>  <span class="keywordtype">bool</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#ab00fbed8ed30435bd45791b7e793bb4d">operator==</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a>&amp; other) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  {</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a>() != other.size()) {</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    }</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="comment">//if (hashCode() != other.hashCode()) {</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="comment">//  return false;</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="comment">//}</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="comment">// else compare each value</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; </div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="comment">// alternatively, cheat...</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a57ee89d56ea42b03e4836a14909c19bc">hashCode</a>() == other.hashCode(); <span class="comment">// Somewhat naughty</span></div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  }</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
+<div class="line"><a name="l00384"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a80026747eab9e0a9c7965eabfbfc33fe">  384</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a80026747eab9e0a9c7965eabfbfc33fe">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a>&amp; other) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;  {</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a>() != other.size()) {</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    }</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a57ee89d56ea42b03e4836a14909c19bc">hashCode</a>() != other.hashCode();</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;  }</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160; </div>
+<div class="line"><a name="l00393"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a73dc6242b7a5853ff4f785d1d2255b6a">  393</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a73dc6242b7a5853ff4f785d1d2255b6a">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a>&amp; other) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  {</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a57ee89d56ea42b03e4836a14909c19bc">hashCode</a>() &lt; other.hashCode();</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  }</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
+<div class="line"><a name="l00399"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a0b08057ce262f2e0aa11a847a0af6ce6">  399</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a0b08057ce262f2e0aa11a847a0af6ce6">operator&gt;</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a>&amp; other) <span class="keyword">const</span> noexcept</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  {</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a57ee89d56ea42b03e4836a14909c19bc">hashCode</a>() &gt; other.hashCode();</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;  }</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
+<div class="line"><a name="l00405"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a8e5727f1a1d7a5e1eb6beecde578053c">  405</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a8e5727f1a1d7a5e1eb6beecde578053c">reversed</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a> result(entry.byteLength);</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="comment">// result.reserve(entry.byteLength);</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordflow">for</span> (std::size_t pos = 0;pos &lt; entry.byteLength;++pos) {</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;      result.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(result.entry,pos,<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,entry.byteLength - pos - 1));</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    }</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="comment">// std::reverse_copy(data.begin(),data.end(),</span></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="comment">//   std::back_inserter(result.data)</span></div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <span class="comment">// );</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  }</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160; </div>
+<div class="line"><a name="l00419"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#ab4f9c008fb742d406ce27781380949db">  419</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#ab4f9c008fb742d406ce27781380949db">reverseEndianness</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a> result(entry.byteLength);</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="comment">// result.data.reserve(entry.byteLength);</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <span class="comment">// Keep byte order intact (caller could use reversed() to change that)</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="comment">// but reverse the order of the individual bits by each byte</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    std::uint8_t value, original;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keywordflow">for</span> (std::size_t i = 0;i &lt; entry.byteLength;++i) {</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;      original = std::uint8_t(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,i));</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;      value = 0;</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> b = 0;b &lt; 8;++b) {</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        <span class="keywordflow">if</span> ((original &amp; (1 &lt;&lt; b)) &gt; 0) {</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;          value |= 1 &lt;&lt; (7 - b);</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        }</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;      }</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;      <span class="comment">// result.data[i] = std::byte(value);</span></div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;      result.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.set(result.entry,entry.byteLength - i - 1,value);</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    }</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160; </div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  }</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
+<div class="line"><a name="l00443"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a458f1963c599a8ea35f5bdaa5fdd647f">  443</a></span>&#160;  std::string <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a458f1963c599a8ea35f5bdaa5fdd647f">hexEncodedString</a>() const noexcept</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;  {</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keywordflow">if</span> (0 == entry.byteLength) {</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    }</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    std::string result;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    std::size_t <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a> = entry.byteLength;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    result.reserve(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a> * 2);</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    std::size_t v;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a>; ++i) {</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;      <span class="comment">// v = std::size_t(data.at(i));</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;      v = std::size_t(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.get(entry,i));</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;      result += hexChars[0x0F &amp; (v &gt;&gt; 4)]; <span class="comment">// MSB</span></div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;      result += hexChars[0x0F &amp;  v      ]; <span class="comment">// LSB</span></div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    }</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;  }</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160; </div>
+<div class="line"><a name="l00462"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a57ee89d56ea42b03e4836a14909c19bc">  462</a></span>&#160;  std::size_t <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a57ee89d56ea42b03e4836a14909c19bc">hashCode</a>() const noexcept</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;  {</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="comment">// TODO consider a faster (E.g. SIMD) algorithm or one with less hotspots (see hashdos attacks)</span></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="keywordflow">return</span> std::hash&lt;DataRef&lt;MemoryArenaT&gt;&gt;{}(*this);</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;  }</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
+<div class="line"><a name="l00469"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">  469</a></span>&#160;  std::size_t <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a>() const noexcept{</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="keywordflow">return</span> entry.byteLength;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;  }</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;  <span class="comment">// TODO support other C++ STD container type functions to allow iteration over data elements (uint8)</span></div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160; </div>
+<div class="line"><a name="l00475"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#aa48ea3c45bde7bf88ed701577bf9222d">  475</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#aa48ea3c45bde7bf88ed701577bf9222d">clear</a>() noexcept</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;  {</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>.deallocate(entry);</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;  }</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160; </div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;  <span class="keyword">static</span> MemoryArenaT&amp; getArena() {</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>;</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;  }</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;  </div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> hexChars[];</div>
+<div class="line"><a name="l00486"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">  486</a></span>&#160;  <span class="keyword">static</span> MemoryArenaT <a class="code" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">arena</a>;</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;  <a class="code" href="structherald_1_1datatype_1_1_memory_arena_entry.html">MemoryArenaEntry</a> entry;</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;};</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160; </div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160; </div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160; </div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160; </div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MemoryArenaT&gt;</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;MemoryArenaT <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef&lt;MemoryArenaT&gt;::arena</a> = MemoryArenaT();</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160; </div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> MemoryArenaT&gt;</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef&lt;MemoryArenaT&gt;::hexChars</a>[] = {</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;  <span class="charliteral">&#39;0&#39;</span>,<span class="charliteral">&#39;1&#39;</span>,<span class="charliteral">&#39;2&#39;</span>,<span class="charliteral">&#39;3&#39;</span>,<span class="charliteral">&#39;4&#39;</span>,<span class="charliteral">&#39;5&#39;</span>,<span class="charliteral">&#39;6&#39;</span>,<span class="charliteral">&#39;7&#39;</span>,</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;  <span class="charliteral">&#39;8&#39;</span>,<span class="charliteral">&#39;9&#39;</span>,<span class="charliteral">&#39;a&#39;</span>,<span class="charliteral">&#39;b&#39;</span>,<span class="charliteral">&#39;c&#39;</span>,<span class="charliteral">&#39;d&#39;</span>,<span class="charliteral">&#39;e&#39;</span>,<span class="charliteral">&#39;f&#39;</span></div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;};</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160; </div>
+<div class="line"><a name="l00506"></a><span class="lineno"><a class="line" href="namespaceherald_1_1datatype.html#af099c8a3a3714971b5f0631932a217a2">  506</a></span>&#160;<span class="keyword">using</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">Data</a> = <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">DataRef&lt;&gt;</a>; <span class="comment">// uses MemoryArenaT&lt;4096,8&gt;</span></div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160; </div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160; </div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160; </div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160; </div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;<span class="keyword">template</span> &lt;std::<span class="keywordtype">size_t</span> maxSize = 8&gt;</div>
+<div class="line"><a name="l00513"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_sections.html">  513</a></span>&#160;<span class="keyword">class </span><a class="code" href="classherald_1_1datatype_1_1_data_sections.html">DataSections</a> {</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;  <span class="keyword">static</span> constexpr std::size_t MaxSize = maxSize;</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160; </div>
+<div class="line"><a name="l00518"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_sections.html#a69b4941677eb292fe2abec5311dfeb86">  518</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data_sections.html#a69b4941677eb292fe2abec5311dfeb86">DataSections</a>() noexcept : sections(), sz(0) {}</div>
+<div class="line"><a name="l00520"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_sections.html#a55721b8e19079aad10c4d5ecad483608">  520</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data_sections.html#a55721b8e19079aad10c4d5ecad483608">~DataSections</a>() noexcept = default;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160; </div>
+<div class="line"><a name="l00523"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_sections.html#a04029df91735c837f06ba600ff40e655">  523</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1datatype_1_1_data_sections.html#a04029df91735c837f06ba600ff40e655">append</a>(const <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">Data</a>&amp; toCopy) noexcept {</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    <span class="keywordflow">if</span> (sz &gt;= MaxSize) {</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;      <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;    }</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    sections[sz] = toCopy; <span class="comment">// copy assign operator</span></div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;    ++sz;</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;  }</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160; </div>
+<div class="line"><a name="l00532"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_sections.html#a61a7b08591d2bac31223931fe446cb5b">  532</a></span>&#160;  std::size_t <a class="code" href="classherald_1_1datatype_1_1_data_sections.html#a61a7b08591d2bac31223931fe446cb5b">size</a>() noexcept {</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <span class="keywordflow">return</span> sz;</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;  }</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160; </div>
+<div class="line"><a name="l00537"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_sections.html#ac1114671932ac3e85e12b60eadca8cfc">  537</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">Data</a>&amp; <a class="code" href="classherald_1_1datatype_1_1_data_sections.html#ac1114671932ac3e85e12b60eadca8cfc">get</a>(std::size_t index) noexcept {</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;    <span class="keywordflow">if</span> (index &gt;= MaxSize) {</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;      <span class="keywordflow">return</span> emptyRef;</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    }</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;    <span class="keywordflow">return</span> sections[index];</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;  }</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160; </div>
+<div class="line"><a name="l00545"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_data_sections.html#a532aa780b3e5b77c3564836af75ed6df">  545</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">Data</a>&amp; <a class="code" href="classherald_1_1datatype_1_1_data_sections.html#a532aa780b3e5b77c3564836af75ed6df">operator[]</a>(std::size_t index) noexcept {</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classherald_1_1datatype_1_1_data_sections.html#ac1114671932ac3e85e12b60eadca8cfc">get</a>(index);</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;  }</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160; </div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;  <span class="keyword">static</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">Data</a> emptyRef;</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;  std::array&lt;Data,MaxSize&gt; sections;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;  std::size_t sz;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;};</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160; </div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;<span class="keyword">template</span> &lt;std::<span class="keywordtype">size_t</span> maxSize&gt;</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;<a class="code" href="classherald_1_1datatype_1_1_data_ref.html">Data</a> <a class="code" href="classherald_1_1datatype_1_1_data_sections.html">DataSections&lt;maxSize&gt;::emptyRef</a> = <a class="code" href="namespaceherald_1_1datatype.html#af099c8a3a3714971b5f0631932a217a2">Data</a>();</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160; </div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;} <span class="comment">// end namespace</span></div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;} <span class="comment">// end namespace</span></div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160; </div>
+<div class="line"><a name="l00562"></a><span class="lineno"><a class="line" href="namespacestd.html">  562</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacestd.html">std</a> {</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> MemoryArenaT&gt;</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;  <span class="keyword">inline</span> std::ostream&amp; operator&lt;&lt;(std::ostream &amp;os, <span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">herald::datatype::DataRef&lt;MemoryArenaT&gt;</a>&amp; d)</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;  {</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    <span class="keywordflow">return</span> os &lt;&lt; d.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a458f1963c599a8ea35f5bdaa5fdd647f">hexEncodedString</a>();</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;  }</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160; </div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> hash_combine_impl(std::size_t&amp; seed, std::size_t value)</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;  {</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;    seed ^= value + 0x9e3779b9 + (seed&lt;&lt;6) + (seed&gt;&gt;2);</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;  }</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160; </div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> MemoryArenaT&gt;</div>
+<div class="line"><a name="l00575"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01herald_1_1datatype_1_1_data_ref_3_01_memory_arena_t_01_4_01_4.html">  575</a></span>&#160;  <span class="keyword">struct </span>hash&lt;<a class="code" href="namespaceherald.html">herald</a>::datatype::DataRef&lt;MemoryArenaT&gt;&gt;</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;  {</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    <span class="keywordtype">size_t</span> operator()(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">herald::datatype::DataRef&lt;MemoryArenaT&gt;</a>&amp; v)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;      std::size_t hv = 0;</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;      std::uint8_t ui = 0;</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;      <span class="keywordtype">bool</span> ok;</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;      <span class="keywordflow">for</span> (std::size_t pos = 0;pos &lt; v.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">size</a>();++pos) {</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;        ok = v.<a class="code" href="classherald_1_1datatype_1_1_data_ref.html#a9a914e5e43054120ea77a261c38f827f">uint8</a>(pos,ui);</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;        hash_combine_impl(hv, std::hash&lt;std::uint8_t&gt;()(ui));</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;      }</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;      <span class="keywordflow">return</span> hv;</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    }</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;  };</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;} <span class="comment">// end namespace</span></div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160; </div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html">herald::datatype::DataRef</a></div><div class="ttdoc">The main data workhorse class of the Herald API.</div><div class="ttdef"><b>Definition:</b> data.h:33</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a0b08057ce262f2e0aa11a847a0af6ce6"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a0b08057ce262f2e0aa11a847a0af6ce6">herald::datatype::DataRef::operator&gt;</a></div><div class="ttdeci">bool operator&gt;(const DataRef &amp;other) const noexcept</div><div class="ttdoc">Greater than operator for another DataRef instance (same memory arena)</div><div class="ttdef"><b>Definition:</b> data.h:399</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a0fae903d7e99474c7998ec7d5f67f0ec"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a0fae903d7e99474c7998ec7d5f67f0ec">herald::datatype::DataRef::DataRef</a></div><div class="ttdeci">DataRef(const DataRef &amp;from)</div><div class="ttdoc">Initialises a DataRef copying another data object (uses more data, to ensure only one object owns the...</div><div class="ttdef"><b>Definition:</b> data.h:69</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a1474ac9b5ba9e7176acc02d5547cb084"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a1474ac9b5ba9e7176acc02d5547cb084">herald::datatype::DataRef::at</a></div><div class="ttdeci">std::byte at(std::size_t index) const</div><div class="ttdoc">Returns the individual byte at index position, or a byte value of zero if index is out of bounds.</div><div class="ttdef"><b>Definition:</b> data.h:178</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a1fa34a200369797e4f2ede264a5f6010"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a1fa34a200369797e4f2ede264a5f6010">herald::datatype::DataRef::DataRef</a></div><div class="ttdeci">DataRef(const std::string &amp;from)</div><div class="ttdoc">Initialises a DataRef from a string of chars.</div><div class="ttdef"><b>Definition:</b> data.h:62</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a1ff5dae91d1a5727fe39b645ee26c29f"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a1ff5dae91d1a5727fe39b645ee26c29f">herald::datatype::DataRef::~DataRef</a></div><div class="ttdeci">~DataRef()</div><div class="ttdoc">Default destructor.</div><div class="ttdef"><b>Definition:</b> data.h:99</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a213819a9c3322ed8fa4e25c1e5ce6c79"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a213819a9c3322ed8fa4e25c1e5ce6c79">herald::datatype::DataRef::uint16</a></div><div class="ttdeci">bool uint16(std::size_t fromIndex, uint16_t &amp;into) const noexcept</div><div class="ttdoc">Returns whether reading a single uint16_t to into at fromIndex was successful.</div><div class="ttdef"><b>Definition:</b> data.h:334</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a3eaba29238ead658f49753c1a995a16d"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a3eaba29238ead658f49753c1a995a16d">herald::datatype::DataRef::append</a></div><div class="ttdeci">void append(uint64_t rawData)</div><div class="ttdoc">Appends a single uint64_t.</div><div class="ttdef"><b>Definition:</b> data.h:309</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a407c8949d011531c15f04b198806fc33"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a407c8949d011531c15f04b198806fc33">herald::datatype::DataRef::subdata</a></div><div class="ttdeci">DataRef subdata(std::size_t offset) const</div><div class="ttdoc">Returns a NEWLY allocated DataRef instance returning a subset of this instance.</div><div class="ttdef"><b>Definition:</b> data.h:137</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a458f1963c599a8ea35f5bdaa5fdd647f"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a458f1963c599a8ea35f5bdaa5fdd647f">herald::datatype::DataRef::hexEncodedString</a></div><div class="ttdeci">std::string hexEncodedString() const noexcept</div><div class="ttdoc">Returns a hex encoded string of this binary data.</div><div class="ttdef"><b>Definition:</b> data.h:443</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a4ca7ce3e11ccb6b38a4c52011351d284"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a4ca7ce3e11ccb6b38a4c52011351d284">herald::datatype::DataRef::append</a></div><div class="ttdeci">void append(std::byte rawData)</div><div class="ttdoc">Appends a single byte.</div><div class="ttdef"><b>Definition:</b> data.h:269</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a57ee89d56ea42b03e4836a14909c19bc"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a57ee89d56ea42b03e4836a14909c19bc">herald::datatype::DataRef::hashCode</a></div><div class="ttdeci">std::size_t hashCode() const noexcept</div><div class="ttdoc">Returns the hash code of this instance.</div><div class="ttdef"><b>Definition:</b> data.h:462</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a5ad028534d521ff3d109e9e6d800b9e6"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a5ad028534d521ff3d109e9e6d800b9e6">herald::datatype::DataRef::DataRef</a></div><div class="ttdeci">DataRef(std::size_t reserveLength)</div><div class="ttdoc">Initialises a DataRef with reserveLength bytes of undefined data.</div><div class="ttdef"><b>Definition:</b> data.h:82</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a5cd3922a67264ddbaa6d5a074a50c510"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a5cd3922a67264ddbaa6d5a074a50c510">herald::datatype::DataRef::append</a></div><div class="ttdeci">void append(uint32_t rawData)</div><div class="ttdoc">Appends a single uint32_t.</div><div class="ttdef"><b>Definition:</b> data.h:298</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a62d04cc25da80172d2363e444280324e"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a62d04cc25da80172d2363e444280324e">herald::datatype::DataRef::append</a></div><div class="ttdeci">void append(const std::string &amp;rawData)</div><div class="ttdoc">Appends a set of characters to the end of this DataRef.</div><div class="ttdef"><b>Definition:</b> data.h:215</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a6b7e8caadf31bc9d8a601d56fb3d260d"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a6b7e8caadf31bc9d8a601d56fb3d260d">herald::datatype::DataRef::DataRef</a></div><div class="ttdeci">DataRef(std::byte repeating, std::size_t count)</div><div class="ttdoc">Initialises a DataRef with count number of repeating bytes.</div><div class="ttdef"><b>Definition:</b> data.h:76</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a73dc6242b7a5853ff4f785d1d2255b6a"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a73dc6242b7a5853ff4f785d1d2255b6a">herald::datatype::DataRef::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const DataRef &amp;other) const noexcept</div><div class="ttdoc">Less than operator for another DataRef instance (same memory arena)</div><div class="ttdef"><b>Definition:</b> data.h:393</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a743c757cc6b6565e53a938121549d0bb"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a743c757cc6b6565e53a938121549d0bb">herald::datatype::DataRef::DataRef</a></div><div class="ttdeci">DataRef(const std::uint8_t *value, std::size_t length)</div><div class="ttdoc">Initialises a DataRef from a std::uint8_t array of length length</div><div class="ttdef"><b>Definition:</b> data.h:47</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a760b44a12f2a11a859121fb724d1296d"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a760b44a12f2a11a859121fb724d1296d">herald::datatype::DataRef::appendReversed</a></div><div class="ttdeci">void appendReversed(const DataRef &amp;rawData, std::size_t offset, std::size_t length)</div><div class="ttdoc">Appends the specified DataRef to this one, but in its reverse order.</div><div class="ttdef"><b>Definition:</b> data.h:236</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a76b73ab73fe045be89bfad0dcea2bf15"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a76b73ab73fe045be89bfad0dcea2bf15">herald::datatype::DataRef::fromHexEncodedString</a></div><div class="ttdeci">static DataRef fromHexEncodedString(const std::string &amp;hex)</div><div class="ttdoc">Creates a new DataRef object from a hexadecimal encoded string.</div><div class="ttdef"><b>Definition:</b> data.h:105</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a779426f8b3c8c111a846eefca11046fc"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a779426f8b3c8c111a846eefca11046fc">herald::datatype::DataRef::DataRef</a></div><div class="ttdeci">DataRef(DataRef &amp;&amp;other)</div><div class="ttdoc">Takes control of another DataRef's memory allocation.</div><div class="ttdef"><b>Definition:</b> data.h:41</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a7babd5518a338942b0dfe57d1b5e99ad"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">herald::datatype::DataRef::size</a></div><div class="ttdeci">std::size_t size() const noexcept</div><div class="ttdoc">Returns the size in allocated bytes of this instance.</div><div class="ttdef"><b>Definition:</b> data.h:469</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a7d7f06c173fccb90eb5dfa30e9b45b60"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a7d7f06c173fccb90eb5dfa30e9b45b60">herald::datatype::DataRef::append</a></div><div class="ttdeci">void append(uint8_t rawData)</div><div class="ttdoc">appends a single uint8_t</div><div class="ttdef"><b>Definition:</b> data.h:279</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a80026747eab9e0a9c7965eabfbfc33fe"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a80026747eab9e0a9c7965eabfbfc33fe">herald::datatype::DataRef::operator!=</a></div><div class="ttdeci">bool operator!=(const DataRef &amp;other) const noexcept</div><div class="ttdoc">Inequality operator for another DataRef instance (same memory arena)</div><div class="ttdef"><b>Definition:</b> data.h:384</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a8350b820f66abd7b2e48ce5be18d712e"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a8350b820f66abd7b2e48ce5be18d712e">herald::datatype::DataRef::DataRef</a></div><div class="ttdeci">DataRef()</div><div class="ttdoc">Creates a DataRef with no memory used.</div><div class="ttdef"><b>Definition:</b> data.h:36</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a8dcc5bf1a6ca6dafa7917f6b4abc635a"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a8dcc5bf1a6ca6dafa7917f6b4abc635a">herald::datatype::DataRef::operator=</a></div><div class="ttdeci">DataRef &amp; operator=(const DataRef &amp;other)</div><div class="ttdoc">Copy assign operator. Copies the data to be sure only one object owns the entry.</div><div class="ttdef"><b>Definition:</b> data.h:89</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a8e5727f1a1d7a5e1eb6beecde578053c"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a8e5727f1a1d7a5e1eb6beecde578053c">herald::datatype::DataRef::reversed</a></div><div class="ttdeci">DataRef reversed() const</div><div class="ttdoc">Returns a new DataRef instance with the same data as this one, but in the reverse order.</div><div class="ttdef"><b>Definition:</b> data.h:405</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_a9a914e5e43054120ea77a261c38f827f"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#a9a914e5e43054120ea77a261c38f827f">herald::datatype::DataRef::uint8</a></div><div class="ttdeci">bool uint8(std::size_t fromIndex, uint8_t &amp;into) const noexcept</div><div class="ttdoc">Returns whether reading a single uint8_t to into at fromIndex was successful.</div><div class="ttdef"><b>Definition:</b> data.h:324</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_aa48ea3c45bde7bf88ed701577bf9222d"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#aa48ea3c45bde7bf88ed701577bf9222d">herald::datatype::DataRef::clear</a></div><div class="ttdeci">void clear() noexcept</div><div class="ttdoc">Clears (deallocates) the bytes referred to by this instance.</div><div class="ttdef"><b>Definition:</b> data.h:475</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_aa4e41f37d37ff08f8d54d85359f13e1a"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#aa4e41f37d37ff08f8d54d85359f13e1a">herald::datatype::DataRef::uint32</a></div><div class="ttdeci">bool uint32(std::size_t fromIndex, uint32_t &amp;into) const noexcept</div><div class="ttdoc">Returns whether reading a single uint32_t to into at fromIndex was successful.</div><div class="ttdef"><b>Definition:</b> data.h:344</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_aac1e08f7c459fe79e3759fb7c15cab26"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#aac1e08f7c459fe79e3759fb7c15cab26">herald::datatype::DataRef::assign</a></div><div class="ttdeci">void assign(const DataRef &amp;other)</div><div class="ttdoc">Assigns the data in-place, reserving the size required if the current size is too small.</div><div class="ttdef"><b>Definition:</b> data.h:190</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_ab00fbed8ed30435bd45791b7e793bb4d"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#ab00fbed8ed30435bd45791b7e793bb4d">herald::datatype::DataRef::operator==</a></div><div class="ttdeci">bool operator==(const DataRef &amp;other) const noexcept</div><div class="ttdoc">Equality operator for another DataRef instance (same memory arena)</div><div class="ttdef"><b>Definition:</b> data.h:369</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_ab0f18e1e6e31462e1873cf79562ab4e7"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#ab0f18e1e6e31462e1873cf79562ab4e7">herald::datatype::DataRef::DataRef</a></div><div class="ttdeci">DataRef(const std::byte *value, std::size_t length)</div><div class="ttdoc">Initialises a DataRef from a std::byte array of length length</div><div class="ttdef"><b>Definition:</b> data.h:55</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_ab4f9c008fb742d406ce27781380949db"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#ab4f9c008fb742d406ce27781380949db">herald::datatype::DataRef::reverseEndianness</a></div><div class="ttdeci">DataRef reverseEndianness() const</div><div class="ttdoc">Returns the same order of bytes, but with the bits in each byte reversed.</div><div class="ttdef"><b>Definition:</b> data.h:419</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_abf05013855e21a804c7cb02936253191"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#abf05013855e21a804c7cb02936253191">herald::datatype::DataRef::uint64</a></div><div class="ttdeci">bool uint64(std::size_t fromIndex, uint64_t &amp;into) const noexcept</div><div class="ttdoc">Returns whether reading a single uint64_t to into at fromIndex was successful.</div><div class="ttdef"><b>Definition:</b> data.h:355</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_ac1e2166d195a87fc9f806dc3c366862c"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#ac1e2166d195a87fc9f806dc3c366862c">herald::datatype::DataRef::append</a></div><div class="ttdeci">void append(const DataRef &amp;rawData, std::size_t offset, std::size_t length)</div><div class="ttdoc">Copies another DataRef into this instance, expanding if required.</div><div class="ttdef"><b>Definition:</b> data.h:201</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_ad255680e71fed5eef631531d301b34a3"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#ad255680e71fed5eef631531d301b34a3">herald::datatype::DataRef::subdata</a></div><div class="ttdeci">DataRef subdata(std::size_t offset, std::size_t length) const</div><div class="ttdoc">Returns a NEWLY allocated DataRef instance returning a subset of this instance.</div><div class="ttdef"><b>Definition:</b> data.h:151</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_add92e1efcffc050e6cedfeb85446e592"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">herald::datatype::DataRef::arena</a></div><div class="ttdeci">static MemoryArenaT arena</div><div class="ttdoc">Instantiates the MemoryArena instance used by all DataRefs that share it.</div><div class="ttdef"><b>Definition:</b> data.h:486</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_ae5454f884466ea6ee35cc97a1cf8c0e3"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#ae5454f884466ea6ee35cc97a1cf8c0e3">herald::datatype::DataRef::description</a></div><div class="ttdeci">std::string description() const</div><div class="ttdoc">Returns the hex encoded string represetation as the description.</div><div class="ttdef"><b>Definition:</b> data.h:131</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_ae8be5725e1754a47026c232ad4cd3d2f"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#ae8be5725e1754a47026c232ad4cd3d2f">herald::datatype::DataRef::append</a></div><div class="ttdeci">void append(uint16_t rawData)</div><div class="ttdoc">Appends a single uint16_t.</div><div class="ttdef"><b>Definition:</b> data.h:289</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_aeda2f186bbac5e68e703c37988d26c83"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#aeda2f186bbac5e68e703c37988d26c83">herald::datatype::DataRef::append</a></div><div class="ttdeci">void append(const DataRef &amp;rawData)</div><div class="ttdoc">Appends the specified DataRef to this one.</div><div class="ttdef"><b>Definition:</b> data.h:258</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html_af37508bd7952173c6697dd927f77495a"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html#af37508bd7952173c6697dd927f77495a">herald::datatype::DataRef::append</a></div><div class="ttdeci">void append(const std::uint8_t *rawData, std::size_t offset, std::size_t length)</div><div class="ttdoc">Copies a uint8_t array onto the end of this instance, expanding if necessary.</div><div class="ttdef"><b>Definition:</b> data.h:225</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_sections_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_sections.html">herald::datatype::DataSections</a></div><div class="ttdoc">Represents a fixed array of Data references using the default memory arena that tracks its own in-use...</div><div class="ttdef"><b>Definition:</b> data.h:513</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_sections_html_a04029df91735c837f06ba600ff40e655"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_sections.html#a04029df91735c837f06ba600ff40e655">herald::datatype::DataSections::append</a></div><div class="ttdeci">void append(const Data &amp;toCopy) noexcept</div><div class="ttdoc">Adds a new section, if room exists. Otherwise quietly performs a NO OP.</div><div class="ttdef"><b>Definition:</b> data.h:523</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_sections_html_a532aa780b3e5b77c3564836af75ed6df"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_sections.html#a532aa780b3e5b77c3564836af75ed6df">herald::datatype::DataSections::operator[]</a></div><div class="ttdeci">const Data &amp; operator[](std::size_t index) noexcept</div><div class="ttdoc">Returns the DataRef at the relevant index, or an empty DataRef.</div><div class="ttdef"><b>Definition:</b> data.h:545</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_sections_html_a55721b8e19079aad10c4d5ecad483608"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_sections.html#a55721b8e19079aad10c4d5ecad483608">herald::datatype::DataSections::~DataSections</a></div><div class="ttdeci">~DataSections() noexcept=default</div><div class="ttdoc">Default destructor.</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_sections_html_a61a7b08591d2bac31223931fe446cb5b"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_sections.html#a61a7b08591d2bac31223931fe446cb5b">herald::datatype::DataSections::size</a></div><div class="ttdeci">std::size_t size() noexcept</div><div class="ttdoc">Returns the number of dataref elements in use.</div><div class="ttdef"><b>Definition:</b> data.h:532</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_sections_html_a69b4941677eb292fe2abec5311dfeb86"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_sections.html#a69b4941677eb292fe2abec5311dfeb86">herald::datatype::DataSections::DataSections</a></div><div class="ttdeci">DataSections() noexcept</div><div class="ttdoc">Default constructors. No memory allocation other than size (8 bytes)</div><div class="ttdef"><b>Definition:</b> data.h:518</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_sections_html_ac1114671932ac3e85e12b60eadca8cfc"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_sections.html#ac1114671932ac3e85e12b60eadca8cfc">herald::datatype::DataSections::get</a></div><div class="ttdeci">const Data &amp; get(std::size_t index) noexcept</div><div class="ttdoc">Returns the DataRef at the relevant index, or an empty DataRef.</div><div class="ttdef"><b>Definition:</b> data.h:537</div></div>
+<div class="ttc" id="anamespaceherald_1_1datatype_html_af099c8a3a3714971b5f0631932a217a2"><div class="ttname"><a href="namespaceherald_1_1datatype.html#af099c8a3a3714971b5f0631932a217a2">herald::datatype::Data</a></div><div class="ttdeci">DataRef&lt;&gt; Data</div><div class="ttdoc">Defaults references to Data to equal the DataRef with the default Memory Arena dimensions,...</div><div class="ttdef"><b>Definition:</b> data.h:506</div></div>
+<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Acts as a non-global memory arena for arbitrary classes.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> data.h:562</div></div>
+<div class="ttc" id="astructherald_1_1datatype_1_1_memory_arena_entry_html"><div class="ttname"><a href="structherald_1_1datatype_1_1_memory_arena_entry.html">herald::datatype::MemoryArenaEntry</a></div><div class="ttdoc">Represents an external 'pointer' to an allocated memory area.</div><div class="ttdef"><b>Definition:</b> memory_arena.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

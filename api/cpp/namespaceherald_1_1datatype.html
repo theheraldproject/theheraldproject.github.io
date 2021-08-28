@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -68,6 +68,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -83,12 +84,17 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1datatype_1_1_base64_string.html">Base64String</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strongly, rather than stringly, typed representation of Base64 String data. Prevents incorrect initialisation or manipulation.  <a href="classherald_1_1datatype_1_1_base64_string.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1datatype_1_1_data.html">Data</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main data workhorse class of the Herald API.  <a href="classherald_1_1datatype_1_1_data.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main data workhorse class of the Herald API.  <a href="classherald_1_1datatype_1_1_data_ref.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1datatype_1_1_data_sections.html">DataSections</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a fixed array of Data references using the default memory arena that tracks its own in-use size.  <a href="classherald_1_1datatype_1_1_data_sections.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1datatype_1_1_date.html">Date</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structherald_1_1datatype_1_1_distance.html">Distance</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1datatype_1_1_distribution.html">Distribution</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1datatype_1_1_encounter.html">Encounter</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -100,6 +106,12 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structherald_1_1datatype_1_1_location_reference.html">LocationReference</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structherald_1_1datatype_1_1_memory_arena_entry.html">MemoryArenaEntry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents an external 'pointer' to an allocated memory area.  <a href="structherald_1_1datatype_1_1_memory_arena_entry.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1datatype_1_1_memory_arena.html">MemoryArena</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Very basic paged memory arena class.  <a href="classherald_1_1datatype_1_1_memory_arena.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1datatype_1_1_payload_data.html">PayloadData</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structherald_1_1datatype_1_1_payload_sharing_data.html">PayloadSharingData</a></td></tr>
@@ -109,8 +121,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structherald_1_1datatype_1_1_placename_location_reference.html">PlacenameLocationReference</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structherald_1_1datatype_1_1_proximity.html">Proximity</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1datatype_1_1_randomness_source.html">RandomnessSource</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1datatype_1_1_all_zeros_not_random.html">AllZerosNotRandom</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,6 +142,13 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structherald_1_1datatype_1_1_w_g_s84_point_location_reference.html">WGS84PointLocationReference</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:af099c8a3a3714971b5f0631932a217a2"><td class="memItemLeft" align="right" valign="top"><a id="af099c8a3a3714971b5f0631932a217a2"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceherald_1_1datatype.html#af099c8a3a3714971b5f0631932a217a2">Data</a> = <a class="el" href="classherald_1_1datatype_1_1_data_ref.html">DataRef</a>&lt;&gt;</td></tr>
+<tr class="memdesc:af099c8a3a3714971b5f0631932a217a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defaults references to Data to equal the <a class="el" href="classherald_1_1datatype_1_1_data_ref.html" title="The main data workhorse class of the Herald API.">DataRef</a> with the default Memory Arena dimensions, unless HERALD_MEMORYARENA_MAX is specified May also have its allocation size set by HERALD_MEMORYARENA_PAGE. Note this only takes affect if HERALD_MEMORYARENA_MAX is also specified. <br /></td></tr>
+<tr class="separator:af099c8a3a3714971b5f0631932a217a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -162,19 +179,12 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a17f7cd44e41ae4985b0c2061f94ed36f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sensor type as qualifier for target identifier.  <a href="namespaceherald_1_1datatype.html#a17f7cd44e41ae4985b0c2061f94ed36f">More...</a><br /></td></tr>
 <tr class="separator:a17f7cd44e41ae4985b0c2061f94ed36f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e63c1a80dd55aa7ca75c89a5409d89e"><td class="memItemLeft" align="right" valign="top"><a id="a0e63c1a80dd55aa7ca75c89a5409d89e"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>SignalCharacteristicDataType</b> : short { <br />
-&#160;&#160;<b>rssi</b>
-, <b>payload</b>
-, <b>payloadSharing</b>
-, <b>immediateSend</b>
-, <br />
-&#160;&#160;<b>unknown</b>
-<br />
- }</td></tr>
-<tr class="separator:a0e63c1a80dd55aa7ca75c89a5409d89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a7499919ac4bfb40ab37c8303a99725a6"><td class="memItemLeft" align="right" valign="top"><a id="a7499919ac4bfb40ab37c8303a99725a6"></a>
+constexpr unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>pagesRequired</b> (std::size_t size, std::size_t pageSize)</td></tr>
+<tr class="separator:a7499919ac4bfb40ab37c8303a99725a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefacb46c7111cc4375382c4667615ad2"><td class="memItemLeft" align="right" valign="top"><a id="aefacb46c7111cc4375382c4667615ad2"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>str</b> (<a class="el" href="namespaceherald_1_1datatype.html#a17f7cd44e41ae4985b0c2061f94ed36f">SensorType</a> t) noexcept</td></tr>
 <tr class="separator:aefacb46c7111cc4375382c4667615ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,11 +212,11 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>str</b> (<a cl
 </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afc9ffaecca63839f34f4a2aaf85f96ffaed2b5c0139cec8ad2873829dc1117d50"></a>on&#160;</td><td class="fielddoc"><p><a class="el" href="classherald_1_1_sensor.html" title="The base Sensor class that all Sensors implement.">Sensor</a> is powered on, active and operational. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afc9ffaecca63839f34f4a2aaf85f96ffaed2b5c0139cec8ad2873829dc1117d50"></a>on&#160;</td><td class="fielddoc"><p>Sensor is powered on, active and operational. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="afc9ffaecca63839f34f4a2aaf85f96ffa3262d48df5d75e3452f0f16b313b7808"></a>off&#160;</td><td class="fielddoc"><p><a class="el" href="classherald_1_1_sensor.html" title="The base Sensor class that all Sensors implement.">Sensor</a> is powered off, inactive and not operational. </p>
+<tr><td class="fieldname"><a id="afc9ffaecca63839f34f4a2aaf85f96ffa3262d48df5d75e3452f0f16b313b7808"></a>off&#160;</td><td class="fielddoc"><p>Sensor is powered off, inactive and not operational. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="afc9ffaecca63839f34f4a2aaf85f96ffa7060e0481896e00b3f7d20f1e8e2749a"></a>unavailable&#160;</td><td class="fielddoc"><p><a class="el" href="classherald_1_1_sensor.html" title="The base Sensor class that all Sensors implement.">Sensor</a> is not available. </p>
+<tr><td class="fieldname"><a id="afc9ffaecca63839f34f4a2aaf85f96ffa7060e0481896e00b3f7d20f1e8e2749a"></a>unavailable&#160;</td><td class="fielddoc"><p>Sensor is not available. </p>
 </td></tr>
 </table>
 
@@ -232,7 +242,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>str</b> (<a cl
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classherald_1_1_sensor.html" title="The base Sensor class that all Sensors implement.">Sensor</a> type as qualifier for target identifier. </p>
+<p>Sensor type as qualifier for target identifier. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a17f7cd44e41ae4985b0c2061f94ed36faae804beca913e84e57f2288debee6d2a"></a>BLE&#160;</td><td class="fielddoc"><p>Bluetooth Low Energy (BLE) </p>
 </td></tr>
