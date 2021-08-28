@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -74,50 +74,208 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef COORDINATOR_H</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define COORDINATOR_H</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef HERALD_COORDINATOR_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define HERALD_COORDINATOR_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;../context.h&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../sensor.h&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceherald.html">herald</a> {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>engine {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;activities.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../data/sensor_logger.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;iterator&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;optional&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classherald_1_1engine_1_1_coordinator.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="classherald_1_1engine_1_1_coordinator.html">Coordinator</a> {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classherald_1_1engine_1_1_coordinator.html#a82fdf5e2d8eb14b600113f2c06270f67">   36</a></span>&#160;  <a class="code" href="classherald_1_1engine_1_1_coordinator.html#a82fdf5e2d8eb14b600113f2c06270f67">Coordinator</a>(std::shared_ptr&lt;Context&gt; context);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  ~<a class="code" href="classherald_1_1engine_1_1_coordinator.html">Coordinator</a>();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classherald_1_1engine_1_1_coordinator.html#abeac9202d645782878644a078efad64a">   40</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1engine_1_1_coordinator.html#abeac9202d645782878644a078efad64a">add</a>(std::shared_ptr&lt;Sensor&gt; sensor);</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classherald_1_1engine_1_1_coordinator.html#a2b95d269b433715690e8cac576c11bb2">   42</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1engine_1_1_coordinator.html#a2b95d269b433715690e8cac576c11bb2">remove</a>(std::shared_ptr&lt;Sensor&gt; sensor);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classherald_1_1engine_1_1_coordinator.html#a48e2afdefc222983022629ab8d2a5829">   45</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1engine_1_1_coordinator.html#a48e2afdefc222983022629ab8d2a5829">start</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classherald_1_1engine_1_1_coordinator.html#aec332071948eb055f4668c485190f32c">   47</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1engine_1_1_coordinator.html#aec332071948eb055f4668c485190f32c">iteration</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classherald_1_1engine_1_1_coordinator.html#a513fc2a248dad2c912448e2a0a4eda39">   49</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1engine_1_1_coordinator.html#a513fc2a248dad2c912448e2a0a4eda39">stop</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceherald.html">herald</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span>engine {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ContextT&gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classherald_1_1engine_1_1_coordinator.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="classherald_1_1engine_1_1_coordinator.html">Coordinator</a> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classherald_1_1engine_1_1_coordinator.html#a892d8ff78c78ceb99573b1ad7c4da48e">   42</a></span>&#160;  <a class="code" href="classherald_1_1engine_1_1_coordinator.html#a892d8ff78c78ceb99573b1ad7c4da48e">Coordinator</a>(ContextT&amp; ctx)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  : context(ctx),</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    providers(),</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    running(false)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    HLOGGERINIT(ctx,<span class="stringliteral">&quot;engine&quot;</span>,<span class="stringliteral">&quot;coordinator&quot;</span>)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  {}</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  ~<a class="code" href="classherald_1_1engine_1_1_coordinator.html">Coordinator</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">class </span>Impl;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  std::unique_ptr&lt;Impl&gt; mImpl;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="namespaceherald_1_1engine.html#a1edef4d6679beffe70137018b69958f4">   57</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="namespaceherald_1_1engine.html#a1edef4d6679beffe70137018b69958f4">operator&lt;</a>(<span class="keyword">const</span> std::shared_ptr&lt;CoordinationProvider&gt;&amp; first, <span class="keyword">const</span> std::shared_ptr&lt;CoordinationProvider&gt;&amp; second);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassherald_1_1engine_1_1_coordinator_html"><div class="ttname"><a href="classherald_1_1engine_1_1_coordinator.html">herald::engine::Coordinator</a></div><div class="ttdoc">Coordinates all connection and activities used across all sensors within Herald.</div><div class="ttdef"><b>Definition:</b> coordinator.h:33</div></div>
-<div class="ttc" id="aclassherald_1_1engine_1_1_coordinator_html_a2b95d269b433715690e8cac576c11bb2"><div class="ttname"><a href="classherald_1_1engine_1_1_coordinator.html#a2b95d269b433715690e8cac576c11bb2">herald::engine::Coordinator::remove</a></div><div class="ttdeci">void remove(std::shared_ptr&lt; Sensor &gt; sensor)</div><div class="ttdoc">Remove from iteration planning.</div></div>
-<div class="ttc" id="aclassherald_1_1engine_1_1_coordinator_html_a48e2afdefc222983022629ab8d2a5829"><div class="ttname"><a href="classherald_1_1engine_1_1_coordinator.html#a48e2afdefc222983022629ab8d2a5829">herald::engine::Coordinator::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">Prepares for iterations to be called (may pre-emptively make calls)</div></div>
-<div class="ttc" id="aclassherald_1_1engine_1_1_coordinator_html_a513fc2a248dad2c912448e2a0a4eda39"><div class="ttname"><a href="classherald_1_1engine_1_1_coordinator.html#a513fc2a248dad2c912448e2a0a4eda39">herald::engine::Coordinator::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Closes out any existing connections/activities.</div></div>
-<div class="ttc" id="aclassherald_1_1engine_1_1_coordinator_html_a82fdf5e2d8eb14b600113f2c06270f67"><div class="ttname"><a href="classherald_1_1engine_1_1_coordinator.html#a82fdf5e2d8eb14b600113f2c06270f67">herald::engine::Coordinator::Coordinator</a></div><div class="ttdeci">Coordinator(std::shared_ptr&lt; Context &gt; context)</div><div class="ttdoc">Default constructor. Receives a configured platform-specific context instance.</div></div>
-<div class="ttc" id="aclassherald_1_1engine_1_1_coordinator_html_abeac9202d645782878644a078efad64a"><div class="ttname"><a href="classherald_1_1engine_1_1_coordinator.html#abeac9202d645782878644a078efad64a">herald::engine::Coordinator::add</a></div><div class="ttdeci">void add(std::shared_ptr&lt; Sensor &gt; sensor)</div><div class="ttdoc">Introspect and include in iteration planning.</div></div>
-<div class="ttc" id="aclassherald_1_1engine_1_1_coordinator_html_aec332071948eb055f4668c485190f32c"><div class="ttname"><a href="classherald_1_1engine_1_1_coordinator.html#aec332071948eb055f4668c485190f32c">herald::engine::Coordinator::iteration</a></div><div class="ttdeci">void iteration()</div><div class="ttdoc">Execute an iteration of activity, according to settings.</div></div>
-<div class="ttc" id="anamespaceherald_1_1engine_html_a1edef4d6679beffe70137018b69958f4"><div class="ttname"><a href="namespaceherald_1_1engine.html#a1edef4d6679beffe70137018b69958f4">herald::engine::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const std::shared_ptr&lt; CoordinationProvider &gt; &amp;first, const std::shared_ptr&lt; CoordinationProvider &gt; &amp;second)</div></div>
-<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Main Herald library include for C++ Native platforms.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> SensorT&gt;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classherald_1_1engine_1_1_coordinator.html#af4c33ec6ceb74e4e791ec4c8f9a98448">   53</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1engine_1_1_coordinator.html#af4c33ec6ceb74e4e791ec4c8f9a98448">add</a>(SensorT&amp; sensor) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    HTDBG(<span class="stringliteral">&quot;Adding sensor&quot;</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">auto</span> prov = sensor.coordinationProvider();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (prov.has_value()) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      HTDBG(<span class="stringliteral">&quot;Sensor has Provider implementation&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      providers.push_back(prov.value());</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> SensorT&gt;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classherald_1_1engine_1_1_coordinator.html#af2717ea0ebfbe95cbeb1edb6be741f91">   63</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1engine_1_1_coordinator.html#af2717ea0ebfbe95cbeb1edb6be741f91">remove</a>(SensorT&amp; sensor)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// TODO support remove</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classherald_1_1engine_1_1_coordinator.html#ac9484ad04d23db98d21c83e679fef6ca">   69</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1engine_1_1_coordinator.html#ac9484ad04d23db98d21c83e679fef6ca">start</a>() {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    HTDBG(<span class="stringliteral">&quot;Start called&quot;</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// Clear feature providers</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    featureProviders.clear();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">// Fetch feature providers</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> prov: providers) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <span class="keyword">auto</span> myFeatures = prov.get().connectionsProvided();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span> feature : myFeatures) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        featureProviders.emplace(feature,prov);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    running = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    HTDBG(<span class="stringliteral">&quot;Start returning&quot;</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classherald_1_1engine_1_1_coordinator.html#aed2b9f90c7281c4c6a1c365cbc2262ea">   85</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1engine_1_1_coordinator.html#aed2b9f90c7281c4c6a1c365cbc2262ea">iteration</a>() {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span> (!running) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      HTDBG(<span class="stringliteral">&quot;Coordinator not running. Returning from iteration having done nothing.&quot;</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    HTDBG(<span class="stringliteral">&quot;################# ITERATION #################&quot;</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">// HTDBG(&quot;Entered iteration&quot;);</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">// Create empty list of required prereqs per provider</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::map&lt;std::reference_wrapper&lt;CoordinationProvider&gt;,std::vector&lt;PrioritisedPrerequisite&gt;&gt; assignPrereqs;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; prov : providers) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      assignPrereqs.emplace(prov,std::vector&lt;PrioritisedPrerequisite&gt;());</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">// HTDBG(&quot;Completed initialisation of provider prerequisities containers&quot;);</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">// HTDBG(&quot; - Provider count: {}&quot;, providers.size());</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    std::vector&lt;PrioritisedPrerequisite&gt; connsRequired;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">// Loop over providers and ask for feature pre-requisites</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; prov : providers) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="keyword">auto</span> myConns = prov.get().requiredConnections();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      std::copy(myConns.begin(),myConns.end(),</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        std::back_insert_iterator&lt;std::vector&lt;PrioritisedPrerequisite&gt;&gt;(connsRequired));</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">// HTDBG(std::to_string(connsRequired.size()));</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// HTDBG(&quot;Retrieved providers&#39; current prerequisites&quot;);</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">// TODO de-duplicate pre-reqs</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">// Now link required prereqs to each provider</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; p : connsRequired) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keyword">auto</span> el = featureProviders.find(std::get&lt;0&gt;(p)); <span class="comment">// find provider for given prereq by feature tag</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="keywordflow">if</span> (featureProviders.end() != el) {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        assignPrereqs[el-&gt;second].push_back(p);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">// HTDBG(&quot;Linked pre-reqs to their providers&quot;);</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">// // Some debug checks here</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="comment">// int cnt = 0;</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">// for (auto&amp; ass : assignPrereqs) {</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">//   // HTDBG(&quot;assign prereqs number {} has this many prereqs to fill {}&quot;, cnt, ass.second.size());</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="comment">//   cnt++;</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="comment">// }</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">// Communicate with relevant feature providers and request features for targets (in descending priority order)</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="comment">//  - Includes removal of previous features no longer needed</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    std::vector&lt;PrioritisedPrerequisite&gt; provisioned;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; prov : assignPrereqs) {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="comment">// TODO sort by descending priority before passing on</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      <span class="comment">// FOR PLATFORMS WITH STD::FUTURE AND STD::ASYNC</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="comment">// std::future&lt;void&gt; fut = std::async(std::launch::async,</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      <span class="comment">//     &amp;CoordinationProvider::provision, prov.first,</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <span class="comment">// //prov.first-&gt;provision(</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      <span class="comment">//     prov.second,[&amp;provisioned] (</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      <span class="comment">//   const std::vector&lt;PrioritisedPrerequisite&gt; myProvisioned) -&gt; void {</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      <span class="comment">//   std::copy(myProvisioned.begin(),myProvisioned.end(),</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      <span class="comment">//     std::back_insert_iterator&lt;std::vector&lt;PrioritisedPrerequisite&gt;&gt;(provisioned));</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      <span class="comment">// });</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      <span class="comment">// fut.get(); // waits for callback // TODO wait with timeout</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;      <span class="comment">// FOR OTHER PLATFORMS (E.g. ZEPHYR):-</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      std::vector&lt;PrioritisedPrerequisite&gt; myProvisioned = prov.first.get().provision(prov.second);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      std::copy(myProvisioned.begin(),myProvisioned.end(),</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        std::back_insert_iterator&lt;std::vector&lt;PrioritisedPrerequisite&gt;&gt;(provisioned));</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">// HTDBG(&quot;All pre-requisities requests sent and responses received&quot;);</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="comment">// TODO do the above asynchronously and await callback or timeout for all</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="comment">// For each which are now present, ask for activities (in descending priority order)</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; prov : providers) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      <span class="keyword">auto</span> maxActs = prov.get().requiredActivities();</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;      <span class="comment">// TODO sort by descending priority before actioning</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; act : maxActs) {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        std::string san(<span class="stringliteral">&quot;Activity &quot;</span>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        san += act.name;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        HTDBG(san);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="comment">// HTDBG(&quot;Checking next desired activity for prereqs being satisfied&quot;);</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="comment">// Filter requested by provisioned</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordtype">bool</span> allFound = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; pre : act.prerequisites) {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;          <span class="keywordtype">bool</span> myFound = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;          <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; exists : provisioned) {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordflow">if</span> (std::get&lt;0&gt;(pre) == std::get&lt;0&gt;(exists) &amp;&amp;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                std::get&lt;1&gt;(pre) == std::get&lt;2&gt;(exists)) {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;              myFound = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;          }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;          allFound = allFound &amp; myFound;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;          <span class="keywordflow">if</span> (myFound) {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            HTDBG(<span class="stringliteral">&quot; - Prereq satisfied&quot;</span>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;          } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            HTDBG(<span class="stringliteral">&quot; - Prereq NOT SATISFIED&quot;</span>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;          }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="comment">// Carry out activities with completion callbacks passed in</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">if</span> (allFound) {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;          HTDBG(<span class="stringliteral">&quot;All satisfied, calling activity&quot;</span>);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;          <span class="comment">// do activity</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;          <span class="comment">// FOR PLATFORMS WITH STD::ASYNC</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;          <span class="comment">// act.executor(act,[this] (Activity act, std::optional&lt;Activity&gt; followOn) -&gt; void {</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;          <span class="comment">//   // TODO handle result</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;          <span class="comment">//   // TODO Carry out any follow up activities</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;          <span class="comment">//   HTDBG(&quot;Activity completion callback called&quot;);</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;          <span class="comment">// });</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;          <span class="comment">// FOR PLATFORMS WITHOUT</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;          std::optional&lt;Activity&gt; followOn = act.executor(act);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;          <span class="comment">// TODO carry out follow on activity until no more follow ons (or max follow on number hit)</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="comment">// HTDBG(&quot;Leaving iteration&quot;);</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    HTDBG(<span class="stringliteral">&quot;#################    END    #################&quot;</span>);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  }</div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="classherald_1_1engine_1_1_coordinator.html#aa36e418042e0b78104f787ceea078e3d">  199</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1engine_1_1_coordinator.html#aa36e418042e0b78104f787ceea078e3d">stop</a>() {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    running = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  ContextT&amp; context;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  std::vector&lt;std::reference_wrapper&lt;CoordinationProvider&gt;&gt; providers;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  std::map&lt;FeatureTag,std::reference_wrapper&lt;CoordinationProvider&gt;&gt; featureProviders;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  <span class="keywordtype">bool</span> running;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  HLOGGER(ContextT);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;};</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="comment">// /** Comparator for less than (use in maps) **/</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="keywordtype">bool</span> operator&lt;(<span class="keyword">const</span> std::reference_wrapper&lt;CoordinationProvider&gt; first, <span class="keyword">const</span> std::reference_wrapper&lt;CoordinationProvider&gt; second);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;}</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassherald_1_1engine_1_1_coordinator_html"><div class="ttname"><a href="classherald_1_1engine_1_1_coordinator.html">herald::engine::Coordinator</a></div><div class="ttdoc">Coordinates all connection and activities used across all sensors within Herald.</div><div class="ttdef"><b>Definition:</b> coordinator.h:39</div></div>
+<div class="ttc" id="aclassherald_1_1engine_1_1_coordinator_html_a892d8ff78c78ceb99573b1ad7c4da48e"><div class="ttname"><a href="classherald_1_1engine_1_1_coordinator.html#a892d8ff78c78ceb99573b1ad7c4da48e">herald::engine::Coordinator::Coordinator</a></div><div class="ttdeci">Coordinator(ContextT &amp;ctx)</div><div class="ttdoc">Default constructor. Receives a configured platform-specific context instance.</div><div class="ttdef"><b>Definition:</b> coordinator.h:42</div></div>
+<div class="ttc" id="aclassherald_1_1engine_1_1_coordinator_html_aa36e418042e0b78104f787ceea078e3d"><div class="ttname"><a href="classherald_1_1engine_1_1_coordinator.html#aa36e418042e0b78104f787ceea078e3d">herald::engine::Coordinator::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Closes out any existing connections/activities.</div><div class="ttdef"><b>Definition:</b> coordinator.h:199</div></div>
+<div class="ttc" id="aclassherald_1_1engine_1_1_coordinator_html_ac9484ad04d23db98d21c83e679fef6ca"><div class="ttname"><a href="classherald_1_1engine_1_1_coordinator.html#ac9484ad04d23db98d21c83e679fef6ca">herald::engine::Coordinator::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">Prepares for iterations to be called (may pre-emptively make calls)</div><div class="ttdef"><b>Definition:</b> coordinator.h:69</div></div>
+<div class="ttc" id="aclassherald_1_1engine_1_1_coordinator_html_aed2b9f90c7281c4c6a1c365cbc2262ea"><div class="ttname"><a href="classherald_1_1engine_1_1_coordinator.html#aed2b9f90c7281c4c6a1c365cbc2262ea">herald::engine::Coordinator::iteration</a></div><div class="ttdeci">void iteration()</div><div class="ttdoc">Execute an iteration of activity, according to settings.</div><div class="ttdef"><b>Definition:</b> coordinator.h:85</div></div>
+<div class="ttc" id="aclassherald_1_1engine_1_1_coordinator_html_af2717ea0ebfbe95cbeb1edb6be741f91"><div class="ttname"><a href="classherald_1_1engine_1_1_coordinator.html#af2717ea0ebfbe95cbeb1edb6be741f91">herald::engine::Coordinator::remove</a></div><div class="ttdeci">void remove(SensorT &amp;sensor)</div><div class="ttdoc">Remove from iteration planning.</div><div class="ttdef"><b>Definition:</b> coordinator.h:63</div></div>
+<div class="ttc" id="aclassherald_1_1engine_1_1_coordinator_html_af4c33ec6ceb74e4e791ec4c8f9a98448"><div class="ttname"><a href="classherald_1_1engine_1_1_coordinator.html#af4c33ec6ceb74e4e791ec4c8f9a98448">herald::engine::Coordinator::add</a></div><div class="ttdeci">void add(SensorT &amp;sensor)</div><div class="ttdoc">Introspect and include in iteration planning.</div><div class="ttdef"><b>Definition:</b> coordinator.h:53</div></div>
+<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Acts as a non-global memory arena for arbitrary classes.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

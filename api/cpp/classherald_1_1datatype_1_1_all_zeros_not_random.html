@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -75,33 +75,28 @@ $(function() {
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="randomness_8h_source.html">randomness.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for herald::datatype::AllZerosNotRandom:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="classherald_1_1datatype_1_1_all_zeros_not_random.png" usemap="#herald::datatype::AllZerosNotRandom_map" alt=""/>
-  <map id="herald::datatype::AllZerosNotRandom_map" name="herald::datatype::AllZerosNotRandom_map">
-<area href="classherald_1_1datatype_1_1_randomness_source.html" alt="herald::datatype::RandomnessSource" shape="rect" coords="0,0,221,24"/>
-  </map>
-</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a52335b3a21a8809ab2f94ff0f3d6b7f0"><td class="memItemLeft" align="right" valign="top"><a id="a52335b3a21a8809ab2f94ff0f3d6b7f0"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>methodName</b> () const override</td></tr>
-<tr class="separator:a52335b3a21a8809ab2f94ff0f3d6b7f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae38447cc365c5a86d1699ccc880d783a"><td class="memItemLeft" align="right" valign="top"><a id="ae38447cc365c5a86d1699ccc880d783a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>nextBytes</b> (std::size_t count, <a class="el" href="classherald_1_1datatype_1_1_data.html">Data</a> &amp;into) override</td></tr>
-<tr class="separator:ae38447cc365c5a86d1699ccc880d783a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac174b2f9b38d9aa541eaae3dd685cdf2"><td class="memItemLeft" align="right" valign="top"><a id="ac174b2f9b38d9aa541eaae3dd685cdf2"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>nextInt</b> () override</td></tr>
-<tr class="separator:ac174b2f9b38d9aa541eaae3dd685cdf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e9ba20d6199282cc74f341036171ede"><td class="memItemLeft" align="right" valign="top"><a id="a5e9ba20d6199282cc74f341036171ede"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>nextDouble</b> () override</td></tr>
-<tr class="separator:a5e9ba20d6199282cc74f341036171ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d960f15534f6f9a52e0f05c9739767"><td class="memItemLeft" align="right" valign="top"><a id="ae0d960f15534f6f9a52e0f05c9739767"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AllZerosNotRandom</b> (<a class="el" href="classherald_1_1datatype_1_1_all_zeros_not_random.html">AllZerosNotRandom</a> &amp;&amp;other) noexcept=default</td></tr>
+<tr class="separator:ae0d960f15534f6f9a52e0f05c9739767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a83f2cc70ad0bb102550ce69593051"><td class="memItemLeft" align="right" valign="top"><a id="aa8a83f2cc70ad0bb102550ce69593051"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>methodName</b> () const</td></tr>
+<tr class="separator:aa8a83f2cc70ad0bb102550ce69593051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a771431c483b234ee8dc528bf20aa787e"><td class="memItemLeft" align="right" valign="top"><a id="a771431c483b234ee8dc528bf20aa787e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>nextBytes</b> (std::size_t count, <a class="el" href="namespaceherald_1_1datatype.html#af099c8a3a3714971b5f0631932a217a2">Data</a> &amp;into)</td></tr>
+<tr class="separator:a771431c483b234ee8dc528bf20aa787e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b982d15209c15e5fccbda32dc04ede"><td class="memItemLeft" align="right" valign="top"><a id="ab9b982d15209c15e5fccbda32dc04ede"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>nextInt</b> ()</td></tr>
+<tr class="separator:ab9b982d15209c15e5fccbda32dc04ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5881ccd0d778883991ae94743352d784"><td class="memItemLeft" align="right" valign="top"><a id="a5881ccd0d778883991ae94743352d784"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>nextDouble</b> ()</td></tr>
+<tr class="separator:a5881ccd0d778883991ae94743352d784"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A decidedly non random source!!! Used to test the v4 <a class="el" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a> format generation function only. DO NOT USE IN PRODUCTION. </p>
+<div class="textblock"><p>A Randomness Source provides random data. It could be a simple uniform integer distribution, it could be a predictable sequence, it could be derived from a chipsets secure enclave, if present.</p>
+<p>This high level class abstracts away the underlying implementation mechanics. On native platforms in C++ the implementations available may vary dramatically. A decidedly non random source!!! Used to test the v4 <a class="el" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a> format generation function only. DO NOT USE IN PRODUCTION. </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/git/skunkworks/herald-for-cpp/herald/include/herald/datatype/<a class="el" href="randomness_8h_source.html">randomness.h</a></li>
 </ul>

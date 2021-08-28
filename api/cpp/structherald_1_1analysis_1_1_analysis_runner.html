@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>herald: herald::analysis::AnalysisRunner&lt; SourceTypes &gt; Struct Template Reference</title>
+<title>herald: herald::analysis::AnalysisRunner&lt; AnalysisDelegateManagerT, AnalysisProviderManagerT, SourceTypes &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -68,9 +68,10 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="structherald_1_1analysis_1_1_analysis_runner-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">herald::analysis::AnalysisRunner&lt; SourceTypes &gt; Struct Template Reference</div>  </div>
+<div class="title">herald::analysis::AnalysisRunner&lt; AnalysisDelegateManagerT, AnalysisProviderManagerT, SourceTypes &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -81,32 +82,35 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5d64607275af922bd293f6b3e396317e"><td class="memTemplParams" colspan="2"><a id="a5d64607275af922bd293f6b3e396317e"></a>
-template&lt;typename ValT , std::size_t Size&gt; </td></tr>
-<tr class="memitem:a5d64607275af922bd293f6b3e396317e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structherald_1_1analysis_1_1_analysis_runner.html#a5d64607275af922bd293f6b3e396317e">newSample</a> (<a class="el" href="namespaceherald_1_1analysis_1_1sampling.html#a492936d33595ad699ccc9850d22e51ba">SampledID</a> sampled, <a class="el" href="structherald_1_1analysis_1_1sampling_1_1_sample.html">sampling::Sample</a>&lt; ValT &gt; sample)</td></tr>
-<tr class="memdesc:a5d64607275af922bd293f6b3e396317e"><td class="mdescLeft">&#160;</td><td class="mdescRight">We are an analysis delegate ourselves - this is used by Source types, and by producers (analysis runners) <br /></td></tr>
-<tr class="separator:a5d64607275af922bd293f6b3e396317e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2ab21f27487b85703d1f8d0fd09fb59"><td class="memItemLeft" align="right" valign="top"><a id="af2ab21f27487b85703d1f8d0fd09fb59"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structherald_1_1analysis_1_1_analysis_runner.html#af2ab21f27487b85703d1f8d0fd09fb59">run</a> (<a class="el" href="classherald_1_1datatype_1_1_date.html">Date</a> timeNow)</td></tr>
-<tr class="memdesc:af2ab21f27487b85703d1f8d0fd09fb59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the relevant analyses given the current time point. <br /></td></tr>
-<tr class="separator:af2ab21f27487b85703d1f8d0fd09fb59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a218c110cb5ac865d8efccedec434fcdd"><td class="memItemLeft" align="right" valign="top"><a id="a218c110cb5ac865d8efccedec434fcdd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>add</b> (std::shared_ptr&lt; <a class="el" href="structherald_1_1analysis_1_1_analysis_delegate.html">AnalysisDelegate</a> &gt; delegate)</td></tr>
-<tr class="separator:a218c110cb5ac865d8efccedec434fcdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee108b6bc8ae5c36b498e09fe0d4119b"><td class="memTemplParams" colspan="2"><a id="aee108b6bc8ae5c36b498e09fe0d4119b"></a>
-template&lt;typename AnalyserT &gt; </td></tr>
-<tr class="memitem:aee108b6bc8ae5c36b498e09fe0d4119b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>addAnalyser</b> (AnalyserT &amp;analyser)</td></tr>
-<tr class="separator:aee108b6bc8ae5c36b498e09fe0d4119b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55847c8107312cfe051a82aa2c6a746d"><td class="memItemLeft" align="right" valign="top"><a id="a55847c8107312cfe051a82aa2c6a746d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>AnalysisRunner</b> (AnalysisDelegateManagerT &amp;adm, AnalysisProviderManagerT &amp;provds)</td></tr>
+<tr class="separator:a55847c8107312cfe051a82aa2c6a746d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a203c84dc80f740a45730b070f4a33a46"><td class="memTemplParams" colspan="2"><a id="a203c84dc80f740a45730b070f4a33a46"></a>
+template&lt;typename ValT &gt; </td></tr>
+<tr class="memitem:a203c84dc80f740a45730b070f4a33a46"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structherald_1_1analysis_1_1_analysis_runner.html#a203c84dc80f740a45730b070f4a33a46">newSample</a> (<a class="el" href="namespaceherald_1_1analysis_1_1sampling.html#a492936d33595ad699ccc9850d22e51ba">SampledID</a> sampled, <a class="el" href="structherald_1_1analysis_1_1sampling_1_1_sample.html">sampling::Sample</a>&lt; ValT &gt; sample)</td></tr>
+<tr class="memdesc:a203c84dc80f740a45730b070f4a33a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">We are an analysis delegate ourselves - this is used by Source types, and by producers (analysis runners) <br /></td></tr>
+<tr class="separator:a203c84dc80f740a45730b070f4a33a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab43352f41c8da72e8a30f7c254c4bed1"><td class="memTemplParams" colspan="2"><a id="ab43352f41c8da72e8a30f7c254c4bed1"></a>
+template&lt;typename ValT &gt; </td></tr>
+<tr class="memitem:ab43352f41c8da72e8a30f7c254c4bed1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (<a class="el" href="namespaceherald_1_1analysis_1_1sampling.html#a492936d33595ad699ccc9850d22e51ba">SampledID</a> sampled, <a class="el" href="structherald_1_1analysis_1_1sampling_1_1_sample.html">sampling::Sample</a>&lt; ValT &gt; sample)</td></tr>
+<tr class="separator:ab43352f41c8da72e8a30f7c254c4bed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e679b4360b2aaee3e15671e0ec69c2a"><td class="memItemLeft" align="right" valign="top"><a id="a2e679b4360b2aaee3e15671e0ec69c2a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structherald_1_1analysis_1_1_analysis_runner.html#a2e679b4360b2aaee3e15671e0ec69c2a">run</a> (<a class="el" href="classherald_1_1datatype_1_1_date.html">Date</a> timeNow)</td></tr>
+<tr class="memdesc:a2e679b4360b2aaee3e15671e0ec69c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the relevant analyses given the current time point. <br /></td></tr>
+<tr class="separator:a2e679b4360b2aaee3e15671e0ec69c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a1a5dae0c1346a7dd451acd125abcf665"><td class="memItemLeft" align="right" valign="top"><a id="a1a5dae0c1346a7dd451acd125abcf665"></a>
+static constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>ListSize</b> = 25</td></tr>
+<tr class="separator:a1a5dae0c1346a7dd451acd125abcf665"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename... SourceTypes&gt;<br />
-struct herald::analysis::AnalysisRunner&lt; SourceTypes &gt;</h3>
+<div class="textblock"><h3>template&lt;typename AnalysisDelegateManagerT, typename AnalysisProviderManagerT, typename... SourceTypes&gt;<br />
+struct herald::analysis::AnalysisRunner&lt; AnalysisDelegateManagerT, AnalysisProviderManagerT, SourceTypes &gt;</h3>
 
 <p>Manages all sample lists, sources, sinks, and analysis instances for all data generated within a system. </p>
-<p>The below is an example ValueSource... template &lt;typename ValT&gt; struct ExValueSource { using value_type = ValT;</p>
-<p>template &lt;typename RunnerT&gt; void setDestination(RunnerT&amp; runner) { // save reference }</p>
-<p>// At some predetermined point external to the analyser runner // this ValueSource will call runner.newSample(Sample&lt;ValT&gt; sample) };</p>
-<p>This class can be used 'live' against real sensors, or statically with reference data. This is achieved by ensuring the <a class="el" href="structherald_1_1analysis_1_1_analysis_runner.html#af2ab21f27487b85703d1f8d0fd09fb59" title="Run the relevant analyses given the current time point.">run(Date)</a> method takes in the Date for the time of evaluation rather than using the current Date. </p>
+<p>This class can be used 'live' against real sensors, or statically with reference data. This is achieved by ensuring the <a class="el" href="structherald_1_1analysis_1_1_analysis_runner.html#a2e679b4360b2aaee3e15671e0ec69c2a" title="Run the relevant analyses given the current time point.">run(Date)</a> method takes in the Date for the time of evaluation rather than using the current Date. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>D:/git/skunkworks/herald-for-cpp/herald/include/herald/analysis/<a class="el" href="runner_8h_source.html">runner.h</a></li>
 </ul>

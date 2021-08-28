@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -74,209 +74,250 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef BLE_CONCRETE_H</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define BLE_CONCRETE_H</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef HERALD_BLE_CONCRETE_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define HERALD_BLE_CONCRETE_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;ble_database.h&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;ble_receiver.h&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;ble_sensor.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;ble_transmitter.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;ble_protocols.h&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;bluetooth_state_manager.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;ble_device_delegate.h&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../payload/payload_data_supplier.h&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../context.h&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceherald.html">herald</a> {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span>ble {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceherald_1_1datatype.html">herald::datatype</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using namespace </span>herald::payload;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// NOTE THIS HEADER IS FOR ALL PLATFORMS. </span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//      SPECIFIC PLATFORM DEFINITIONS ARE WITHIN SEVERAL C++ FILES</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">//      UNDER WINDOWS AND ZEPHYR SUB DIRECTORIES</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_concrete_bluetooth_state_manager.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classherald_1_1ble_1_1_concrete_bluetooth_state_manager.html">ConcreteBluetoothStateManager</a> : <span class="keyword">public</span> <a class="code" href="classherald_1_1ble_1_1_bluetooth_state_manager.html">BluetoothStateManager</a>, <span class="keyword">public</span> std::enable_shared_from_this&lt;BluetoothStateManager&gt;  {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_bluetooth_state_manager.html">ConcreteBluetoothStateManager</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_bluetooth_state_manager.html">ConcreteBluetoothStateManager</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_concrete_bluetooth_state_manager.html">ConcreteBluetoothStateManager</a>&amp; from) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_bluetooth_state_manager.html">ConcreteBluetoothStateManager</a>(<a class="code" href="classherald_1_1ble_1_1_concrete_bluetooth_state_manager.html">ConcreteBluetoothStateManager</a>&amp;&amp; from) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  ~<a class="code" href="classherald_1_1ble_1_1_concrete_bluetooth_state_manager.html">ConcreteBluetoothStateManager</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="comment">// Bluetooth State Manager overrides</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">void</span> add(std::shared_ptr&lt;BluetoothStateManagerDelegate&gt; delegate) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  BluetoothState state() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_concrete_b_l_e_database.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_database.html">ConcreteBLEDatabase</a> : <span class="keyword">public</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_database.html">BLEDatabase</a>, <span class="keyword">public</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_device_delegate.html">BLEDeviceDelegate</a>, <span class="keyword">public</span> std::enable_shared_from_this&lt;ConcreteBLEDatabase&gt;  {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_database.html">ConcreteBLEDatabase</a>(std::shared_ptr&lt;Context&gt; context);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_database.html">ConcreteBLEDatabase</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_database.html">ConcreteBLEDatabase</a>&amp; from) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_database.html">ConcreteBLEDatabase</a>(<a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_database.html">ConcreteBLEDatabase</a>&amp;&amp; from) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  ~<a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_database.html">ConcreteBLEDatabase</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">// BLE Database overrides</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> add(<span class="keyword">const</span> std::shared_ptr&lt;BLEDatabaseDelegate&gt;&amp; delegate) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="comment">// Creation overrides</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  std::shared_ptr&lt;BLEDevice&gt; device(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_mac_address.html">BLEMacAddress</a>&amp; mac, <span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>&amp; advert<span class="comment">/*, const RSSI&amp; rssi*/</span>) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  std::shared_ptr&lt;BLEDevice&gt; device(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_mac_address.html">BLEMacAddress</a>&amp; mac, <span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_mac_address.html">BLEMacAddress</a>&amp; pseudo) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  std::shared_ptr&lt;BLEDevice&gt; device(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_mac_address.html">BLEMacAddress</a>&amp; mac) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  std::shared_ptr&lt;BLEDevice&gt; device(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_payload_data.html">PayloadData</a>&amp; payloadData) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  std::shared_ptr&lt;BLEDevice&gt; device(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_target_identifier.html">TargetIdentifier</a>&amp; targetIdentifier) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="comment">// Introspection overrides</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  std::size_t size() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  std::vector&lt;std::shared_ptr&lt;BLEDevice&gt;&gt; matches(</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">const</span> std::function&lt;<span class="keywordtype">bool</span>(std::shared_ptr&lt;BLEDevice&gt;&amp;)&gt;&amp; matcher) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="comment">// std::vector&lt;std::shared_ptr&lt;BLEDevice&gt;&gt; devices() const override;</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_concrete_b_l_e_database.html#ac27810353496adad3a99296a7a24260f">   69</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_database.html#ac27810353496adad3a99296a7a24260f">remove</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_target_identifier.html">TargetIdentifier</a>&amp; targetIdentifier) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="comment">// std::optional&lt;PayloadSharingData&gt; payloadSharingData(const std::shared_ptr&lt;BLEDevice&gt;&amp; peer) override;</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="comment">// BLE Device Delegate overrides</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">void</span> device(<span class="keyword">const</span> std::shared_ptr&lt;BLEDevice&gt;&amp; device, BLEDeviceAttribute didUpdate) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;ble_concrete_database.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;ble_database.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;ble_receiver.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;ble_sensor.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;ble_transmitter.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;ble_concrete.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;ble_protocols.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;bluetooth_state_manager.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;ble_device_delegate.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;filter/ble_advert_parser.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;../payload/payload_data_supplier.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;../context.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;../data/sensor_logger.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;ble_sensor_configuration.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;ble_coordinator.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;../datatype/bluetooth_state.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// Include the relevant concrete BLE Receiver here</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#ifdef __ZEPHYR__</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#ifdef CONFIG_BT_SCAN</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;zephyr/concrete_ble_receiver.h&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;default/concrete_ble_receiver.h&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;zephyr/concrete_ble_transmitter.h&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// TODO other platforms here</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;default/concrete_ble_receiver.h&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;default/concrete_ble_transmitter.h&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceherald.html">herald</a> {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">namespace </span>ble {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceherald_1_1datatype.html">herald::datatype</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">using namespace </span>herald::ble::filter;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">using namespace </span>herald::payload;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">// NOTE THIS HEADER IS FOR ALL PLATFORMS. </span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">//      SPECIFIC PLATFORM DEFINITIONS ARE WITHIN SEVERAL C++ FILES</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">//      UNDER WINDOWS AND ZEPHYR SUB DIRECTORIES</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> ContextT, <span class="keyword">typename</span> PayloadDataSupplierT, <span class="keyword">typename</span> SensorDelegateSetT, std::<span class="keywordtype">size_t</span> DBSize = 10&gt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">   59</a></span>&#160;<span class="keyword">class </span><a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">ConcreteBLESensor</a> : <span class="keyword">public</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_database_delegate.html">BLEDatabaseDelegate</a>, </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">public</span> <a class="code" href="classherald_1_1ble_1_1_bluetooth_state_manager_delegate.html">BluetoothStateManagerDelegate</a> {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">ConcreteBLESensor</a>(ContextT&amp; ctx, <a class="code" href="classherald_1_1ble_1_1_bluetooth_state_manager.html">BluetoothStateManager</a>&amp; bluetoothStateManager, </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    PayloadDataSupplierT&amp; payloadDataSupplier, SensorDelegateSetT&amp; dels)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  : m_context(ctx),</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    database(ctx), </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    stateManager(bluetoothStateManager),</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    transmitter(ctx, bluetoothStateManager, payloadDataSupplier, database, dels),</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    receiver(ctx, bluetoothStateManager, payloadDataSupplier, database, dels),</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    delegates(dels),</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    coordinator(ctx, database, receiver),</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    addedSelfAsDelegate(<span class="keyword">false</span>)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    HLOGGERINIT(ctx,<span class="stringliteral">&quot;sensor&quot;</span>,<span class="stringliteral">&quot;ConcreteBLESensor&quot;</span>)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">class </span>Impl;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  std::unique_ptr&lt;Impl&gt; mImpl; <span class="comment">// unique as this is handled internally for all platforms by Herald</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">   84</a></span>&#160;<span class="keyword">class </span><a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">ConcreteBLESensor</a> : <span class="keyword">public</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_sensor.html">BLESensor</a>, <span class="keyword">public</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_database_delegate.html">BLEDatabaseDelegate</a>, </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">public</span> <a class="code" href="classherald_1_1ble_1_1_bluetooth_state_manager_delegate.html">BluetoothStateManagerDelegate</a>, <span class="keyword">public</span> std::enable_shared_from_this&lt;ConcreteBLESensor&gt;  {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">ConcreteBLESensor</a>(std::shared_ptr&lt;Context&gt; ctx, std::shared_ptr&lt;BluetoothStateManager&gt; bluetoothStateManager, </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    std::shared_ptr&lt;PayloadDataSupplier&gt; payloadDataSupplier);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">ConcreteBLESensor</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">ConcreteBLESensor</a>&amp; from) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">ConcreteBLESensor</a>(<a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">ConcreteBLESensor</a>&amp;&amp; from) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  ~<a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">ConcreteBLESensor</a>();</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="comment">// Coordination overrides - Since v1.2-beta3</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html#ab6341e7e5b6743135cfc77b71a3ad94a">   94</a></span>&#160;  std::optional&lt;std::shared_ptr&lt;CoordinationProvider&gt;&gt; <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html#ab6341e7e5b6743135cfc77b71a3ad94a">coordinationProvider</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordtype">bool</span> immediateSend(<a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a> data, <span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_target_identifier.html">TargetIdentifier</a>&amp; targetIdentifier);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordtype">bool</span> immediateSendAll(<a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a> data);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="comment">// Sensor overrides</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">void</span> add(<span class="keyword">const</span> std::shared_ptr&lt;SensorDelegate&gt;&amp; delegate) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">void</span> start() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordtype">void</span> stop() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="comment">// Database overrides</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">void</span> bleDatabaseDidCreate(<span class="keyword">const</span> std::shared_ptr&lt;BLEDevice&gt;&amp; device) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">void</span> bleDatabaseDidUpdate(<span class="keyword">const</span> std::shared_ptr&lt;BLEDevice&gt;&amp; device, <span class="keyword">const</span> BLEDeviceAttribute attribute) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">void</span> bleDatabaseDidDelete(<span class="keyword">const</span> std::shared_ptr&lt;BLEDevice&gt;&amp; device) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="comment">// Bluetooth state manager delegate overrides</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">void</span> bluetoothStateManager(BluetoothState didUpdateState) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keyword">class </span>Impl;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  std::unique_ptr&lt;Impl&gt; mImpl; <span class="comment">// unique as this is handled internally for all platforms by Herald</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;};</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html">  117</a></span>&#160;<span class="keyword">class </span><a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html">ConcreteBLEReceiver</a> : <span class="keyword">public</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_receiver.html">BLEReceiver</a>, <span class="keyword">public</span> <a class="code" href="classherald_1_1ble_1_1_herald_protocol_v1_provider.html">HeraldProtocolV1Provider</a>, <span class="keyword">public</span> std::enable_shared_from_this&lt;ConcreteBLEReceiver&gt; {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html">ConcreteBLEReceiver</a>(std::shared_ptr&lt;Context&gt; ctx, std::shared_ptr&lt;BluetoothStateManager&gt; bluetoothStateManager, </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    std::shared_ptr&lt;PayloadDataSupplier&gt; payloadDataSupplier, std::shared_ptr&lt;BLEDatabase&gt; bleDatabase);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html">ConcreteBLEReceiver</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html">ConcreteBLEReceiver</a>&amp; from) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html">ConcreteBLEReceiver</a>(<a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html">ConcreteBLEReceiver</a>&amp;&amp; from) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  ~<a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html">ConcreteBLEReceiver</a>();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="comment">// Coordination overrides - Since v1.2-beta3</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#aa59fe54e9e103c644ed0fec7de5013fb">  126</a></span>&#160;  std::optional&lt;std::shared_ptr&lt;CoordinationProvider&gt;&gt; <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#aa59fe54e9e103c644ed0fec7de5013fb">coordinationProvider</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordtype">bool</span> immediateSend(<a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a> data, <span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_target_identifier.html">TargetIdentifier</a>&amp; targetIdentifier) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordtype">bool</span> immediateSendAll(<a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a> data) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="comment">// Delete for GCC 8/9. See https://stackoverflow.com/questions/63812165/stdvariant-requires-default-constructor-in-gcc-8-and-9-and-not-require-in-gcc</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">ConcreteBLESensor</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">ConcreteBLESensor</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">ConcreteBLESensor</a>&amp; from) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">ConcreteBLESensor</a>(<a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">ConcreteBLESensor</a>&amp;&amp; from) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  ~<a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">ConcreteBLESensor</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="comment">// Coordination overrides - Since v1.2-beta3</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  std::optional&lt;std::reference_wrapper&lt;CoordinationProvider&gt;&gt; coordinationProvider() {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">// Only return this if we support scanning</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> (m_context.getSensorConfiguration().scanningEnabled) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      HTDBG(<span class="stringliteral">&quot;Providing a BLECoordinationProvider&quot;</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="comment">//return std::optional&lt;std::reference_wrapper&lt;CoordinationProvider&gt;&gt;(std::static_cast&lt;CoordinationProvider&gt;(coordinator));</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordflow">return</span> coordinator;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    HTDBG(<span class="stringliteral">&quot;Scanning not supported - so not returning a BLECoordinationProvider&quot;</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">return</span> {};</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">bool</span> immediateSend(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html">Data</a> data, <span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_target_identifier.html">TargetIdentifier</a>&amp; targetIdentifier) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span> receiver.immediateSend(data,targetIdentifier);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">bool</span> immediateSendAll(<a class="code" href="classherald_1_1datatype_1_1_data_ref.html">Data</a> data) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> receiver.immediateSendAll(data);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="comment">// Sensor overrides</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">void</span> start() {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">if</span> (!addedSelfAsDelegate) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      stateManager.add(*<span class="keyword">this</span>); <span class="comment">// FAILS IF USED IN THE CTOR - DO NOT DO THIS FROM CTOR</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      database.add(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      addedSelfAsDelegate = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    transmitter.start();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    receiver.start();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="comment">// for (auto&amp; delegate : delegates) {</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      delegates.sensor(SensorType::BLE, SensorState::on);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">// }</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordtype">void</span> stop() {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    transmitter.stop();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    receiver.stop();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">// for (auto&amp; delegate : delegates) {</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      delegates.sensor(SensorType::BLE, SensorState::off);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">// }</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  }</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="comment">// Database overrides</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordtype">void</span> bleDatabaseDidCreate(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>&amp; device)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">// for (auto&amp; delegate : delegates) {</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      delegates.sensor(SensorType::BLE, device.identifier()); <span class="comment">// didDetect</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="comment">// }</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  }</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="comment">// Sensor overrides</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">void</span> add(<span class="keyword">const</span> std::shared_ptr&lt;SensorDelegate&gt;&amp; delegate) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordtype">void</span> start() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordtype">void</span> stop() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="comment">// Herald V1 protocol provider overrides</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="comment">// C++17 CALLBACK VERSION:-</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="comment">// void openConnection(const TargetIdentifier&amp; toTarget, const HeraldConnectionCallback&amp; connCallback) override;</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="comment">// void closeConnection(const TargetIdentifier&amp; toTarget, const HeraldConnectionCallback&amp; connCallback) override;</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="comment">// void serviceDiscovery(Activity, CompletionCallback) override;</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="comment">// void readPayload(Activity, CompletionCallback) override;</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="comment">// void immediateSend(Activity, CompletionCallback) override;</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="comment">// void immediateSendAll(Activity, CompletionCallback) override;</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="comment">// NON C++17 VERSION:-</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#a275882247ed4bf70b3794eac17e57f50">  146</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#a275882247ed4bf70b3794eac17e57f50">openConnection</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_target_identifier.html">TargetIdentifier</a>&amp; toTarget) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#ac1f069551b0730197a7ebfb892125475">  147</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#ac1f069551b0730197a7ebfb892125475">closeConnection</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_target_identifier.html">TargetIdentifier</a>&amp; toTarget) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#a52352341f1befcedcb496d38707f983c">  148</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#a52352341f1befcedcb496d38707f983c">restartScanningAndAdvertising</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  std::optional&lt;Activity&gt; serviceDiscovery(<a class="code" href="structherald_1_1engine_1_1_activity.html">Activity</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  std::optional&lt;Activity&gt; readPayload(<a class="code" href="structherald_1_1engine_1_1_activity.html">Activity</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  std::optional&lt;Activity&gt; immediateSend(<a class="code" href="structherald_1_1engine_1_1_activity.html">Activity</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  std::optional&lt;Activity&gt; immediateSendAll(<a class="code" href="structherald_1_1engine_1_1_activity.html">Activity</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keyword">class </span>Impl;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  std::shared_ptr&lt;Impl&gt; mImpl; <span class="comment">// shared to allow static callbacks to be bound</span></div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;};</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_concrete_b_l_e_transmitter.html">  159</a></span>&#160;<span class="keyword">class </span><a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_transmitter.html">ConcreteBLETransmitter</a> : <span class="keyword">public</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_transmitter.html">BLETransmitter</a>, <span class="keyword">public</span> std::enable_shared_from_this&lt;ConcreteBLETransmitter&gt; {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_transmitter.html">ConcreteBLETransmitter</a>(std::shared_ptr&lt;Context&gt; ctx, std::shared_ptr&lt;BluetoothStateManager&gt; bluetoothStateManager, </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    std::shared_ptr&lt;PayloadDataSupplier&gt; payloadDataSupplier, std::shared_ptr&lt;BLEDatabase&gt; bleDatabase);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_transmitter.html">ConcreteBLETransmitter</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_transmitter.html">ConcreteBLETransmitter</a>&amp; from) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_transmitter.html">ConcreteBLETransmitter</a>(<a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_transmitter.html">ConcreteBLETransmitter</a>&amp;&amp; from) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  ~<a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_transmitter.html">ConcreteBLETransmitter</a>();</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="comment">// Coordination overrides - Since v1.2-beta3</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_concrete_b_l_e_transmitter.html#aba1c54046051bd2815323da3c878de7b">  168</a></span>&#160;  std::optional&lt;std::shared_ptr&lt;CoordinationProvider&gt;&gt; <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_transmitter.html#aba1c54046051bd2815323da3c878de7b">coordinationProvider</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="comment">// Sensor overrides</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keywordtype">void</span> add(<span class="keyword">const</span> std::shared_ptr&lt;SensorDelegate&gt;&amp; delegate) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keywordtype">void</span> start() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="keywordtype">void</span> stop() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keyword">class </span>Impl;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  std::shared_ptr&lt;Impl&gt; mImpl; <span class="comment">// shared to allow static callbacks to be bound</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;};</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;} <span class="comment">// end namespace</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;} <span class="comment">// end namespace</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_database_delegate_html"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_database_delegate.html">herald::ble::BLEDatabaseDelegate</a></div><div class="ttdef"><b>Definition:</b> ble_database_delegate.h:19</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_database_html"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_database.html">herald::ble::BLEDatabase</a></div><div class="ttdef"><b>Definition:</b> ble_database.h:25</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_device_delegate_html"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_device_delegate.html">herald::ble::BLEDeviceDelegate</a></div><div class="ttdef"><b>Definition:</b> ble_device_delegate.h:17</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_mac_address_html"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_mac_address.html">herald::ble::BLEMacAddress</a></div><div class="ttdef"><b>Definition:</b> ble_mac_address.h:18</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_receiver_html"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_receiver.html">herald::ble::BLEReceiver</a></div><div class="ttdef"><b>Definition:</b> ble_receiver.h:16</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_sensor_html"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_sensor.html">herald::ble::BLESensor</a></div><div class="ttdef"><b>Definition:</b> ble_sensor.h:16</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_transmitter_html"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_transmitter.html">herald::ble::BLETransmitter</a></div><div class="ttdef"><b>Definition:</b> ble_transmitter.h:21</div></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordtype">void</span> bleDatabaseDidUpdate(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>&amp; device, <span class="keyword">const</span> BLEDeviceAttribute attribute)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">switch</span> (attribute) {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="keywordflow">case</span> BLEDeviceAttribute::rssi: {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keyword">auto</span> rssi = device.rssi();</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">if</span> (rssi.intValue() != 0) {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;          <span class="keywordtype">double</span> rssiValue = (double)rssi.intValue();</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;          <span class="keyword">auto</span> prox = <a class="code" href="structherald_1_1datatype_1_1_proximity.html">Proximity</a>{.unit=ProximityMeasurementUnit::RSSI, .value=rssiValue};</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;          <span class="comment">// for (auto&amp; delegate: delegates) {</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            delegates.sensor(SensorType::BLE,</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;              prox,</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;              device.identifier()</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            ); <span class="comment">// didMeasure</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;          <span class="comment">// }</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;          <span class="comment">// also payload with rssi</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;          <span class="keyword">auto</span> payload = device.payloadData();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;          <span class="keywordflow">if</span> (payload.size() &gt; 0) {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="comment">// for (auto&amp; delegate: delegates) {</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;              delegates.sensor(SensorType::BLE,</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                prox,</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                device.identifier(),</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                payload</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;              ); <span class="comment">// didMeasure withPayload</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="comment">// }</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;          }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      <span class="keywordflow">case</span> BLEDeviceAttribute::payloadData: {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keyword">auto</span> payload = device.payloadData();</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">if</span> (payload.size() &gt; 0) {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;          <span class="comment">// for (auto&amp; delegate: delegates) {</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            delegates.sensor(SensorType::BLE,</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;              payload,</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;              device.identifier()</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            ); <span class="comment">// didReadPayload</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;          <span class="comment">// }</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;          <span class="comment">// also payload with rssi</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;          <span class="keyword">auto</span> rssi = device.rssi();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;          <span class="keywordflow">if</span> (rssi.intValue() != 0) {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="keywordtype">double</span> rssiValue = (double)rssi.intValue();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keyword">auto</span> prox = <a class="code" href="structherald_1_1datatype_1_1_proximity.html">Proximity</a>{.unit=ProximityMeasurementUnit::RSSI, .value=rssiValue};</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="comment">// for (auto&amp; delegate: delegates) {</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;              delegates.sensor(SensorType::BLE,</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                prox,</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                device.identifier(),</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                payload</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;              ); <span class="comment">// didMeasure withPayload</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="comment">// }</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;          }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;      }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      <span class="keywordflow">default</span>: {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        ; <span class="comment">// do nothing</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;      }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keywordtype">void</span> bleDatabaseDidDelete(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>&amp; device)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    ; <span class="comment">// TODO just log this // TODO determine if to pass this on too</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="comment">// TODO fire this for analysis runner and others&#39; benefit</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="comment">// Bluetooth state manager delegate overrides</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keywordtype">void</span> bluetoothStateManager(BluetoothState didUpdateState)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">if</span> (BluetoothState::poweredOff == didUpdateState) {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      <span class="comment">// stop();</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">if</span> (BluetoothState::poweredOn == didUpdateState) {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <span class="comment">// start();</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">if</span> (BluetoothState::unsupported == didUpdateState) {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      <span class="comment">// for (auto&amp; delegate : delegates) {</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        delegates.sensor(SensorType::BLE, SensorState::unavailable);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <span class="comment">// }</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="comment">// Internal API private methods here too</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="comment">// Data members hidden by PIMPL</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  ContextT&amp; m_context;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_database.html">ConcreteBLEDatabase&lt;ContextT,DBSize&gt;</a> database;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_bluetooth_state_manager.html">BluetoothStateManager</a>&amp; stateManager;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_transmitter.html">ConcreteBLETransmitter&lt;ContextT,PayloadDataSupplierT,ConcreteBLEDatabase&lt;ContextT,DBSize&gt;</a>,SensorDelegateSetT&gt; transmitter;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html">ConcreteBLEReceiver&lt;ContextT,PayloadDataSupplierT,ConcreteBLEDatabase&lt;ContextT,DBSize&gt;</a>,SensorDelegateSetT&gt; receiver;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  SensorDelegateSetT&amp; delegates;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_herald_protocol_b_l_e_coordination_provider.html">HeraldProtocolBLECoordinationProvider</a>&lt;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    ContextT,</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_database.html">ConcreteBLEDatabase&lt;ContextT,DBSize&gt;</a>,</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html">ConcreteBLEReceiver&lt;ContextT,PayloadDataSupplierT,ConcreteBLEDatabase&lt;ContextT,DBSize&gt;</a>,SensorDelegateSetT&gt;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  &gt; coordinator;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="keywordtype">bool</span> addedSelfAsDelegate;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  HLOGGER(ContextT);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;};</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;} <span class="comment">// end namespace</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;} <span class="comment">// end namespace</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_database_delegate_html"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_database_delegate.html">herald::ble::BLEDatabaseDelegate</a></div><div class="ttdef"><b>Definition:</b> ble_database_delegate.h:15</div></div>
+<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_device_html"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_device.html">herald::ble::BLEDevice</a></div><div class="ttdef"><b>Definition:</b> ble_device.h:181</div></div>
 <div class="ttc" id="aclassherald_1_1ble_1_1_bluetooth_state_manager_delegate_html"><div class="ttname"><a href="classherald_1_1ble_1_1_bluetooth_state_manager_delegate.html">herald::ble::BluetoothStateManagerDelegate</a></div><div class="ttdef"><b>Definition:</b> bluetooth_state_manager_delegate.h:16</div></div>
 <div class="ttc" id="aclassherald_1_1ble_1_1_bluetooth_state_manager_html"><div class="ttname"><a href="classherald_1_1ble_1_1_bluetooth_state_manager.html">herald::ble::BluetoothStateManager</a></div><div class="ttdef"><b>Definition:</b> bluetooth_state_manager.h:19</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_concrete_b_l_e_database_html"><div class="ttname"><a href="classherald_1_1ble_1_1_concrete_b_l_e_database.html">herald::ble::ConcreteBLEDatabase</a></div><div class="ttdef"><b>Definition:</b> ble_concrete.h:42</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_concrete_b_l_e_database_html_ac27810353496adad3a99296a7a24260f"><div class="ttname"><a href="classherald_1_1ble_1_1_concrete_b_l_e_database.html#ac27810353496adad3a99296a7a24260f">herald::ble::ConcreteBLEDatabase::remove</a></div><div class="ttdeci">void remove(const TargetIdentifier &amp;targetIdentifier) override</div><div class="ttdoc">Cannot name a function delete in C++. remove is common.</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_concrete_b_l_e_receiver_html"><div class="ttname"><a href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html">herald::ble::ConcreteBLEReceiver</a></div><div class="ttdef"><b>Definition:</b> ble_concrete.h:117</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_concrete_b_l_e_receiver_html_a275882247ed4bf70b3794eac17e57f50"><div class="ttname"><a href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#a275882247ed4bf70b3794eac17e57f50">herald::ble::ConcreteBLEReceiver::openConnection</a></div><div class="ttdeci">bool openConnection(const TargetIdentifier &amp;toTarget) override</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_concrete_b_l_e_receiver_html_a52352341f1befcedcb496d38707f983c"><div class="ttname"><a href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#a52352341f1befcedcb496d38707f983c">herald::ble::ConcreteBLEReceiver::restartScanningAndAdvertising</a></div><div class="ttdeci">void restartScanningAndAdvertising() override</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_concrete_b_l_e_receiver_html_aa59fe54e9e103c644ed0fec7de5013fb"><div class="ttname"><a href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#aa59fe54e9e103c644ed0fec7de5013fb">herald::ble::ConcreteBLEReceiver::coordinationProvider</a></div><div class="ttdeci">std::optional&lt; std::shared_ptr&lt; CoordinationProvider &gt; &gt; coordinationProvider() override</div><div class="ttdoc">For complex sensor coordination support, if required - Since v1.2-beta3.</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_concrete_b_l_e_receiver_html_ac1f069551b0730197a7ebfb892125475"><div class="ttname"><a href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#ac1f069551b0730197a7ebfb892125475">herald::ble::ConcreteBLEReceiver::closeConnection</a></div><div class="ttdeci">bool closeConnection(const TargetIdentifier &amp;toTarget) override</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_concrete_b_l_e_sensor_html"><div class="ttname"><a href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">herald::ble::ConcreteBLESensor</a></div><div class="ttdef"><b>Definition:</b> ble_concrete.h:85</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_concrete_b_l_e_sensor_html_ab6341e7e5b6743135cfc77b71a3ad94a"><div class="ttname"><a href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html#ab6341e7e5b6743135cfc77b71a3ad94a">herald::ble::ConcreteBLESensor::coordinationProvider</a></div><div class="ttdeci">std::optional&lt; std::shared_ptr&lt; CoordinationProvider &gt; &gt; coordinationProvider() override</div><div class="ttdoc">For complex sensor coordination support, if required - Since v1.2-beta3.</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_concrete_b_l_e_transmitter_html"><div class="ttname"><a href="classherald_1_1ble_1_1_concrete_b_l_e_transmitter.html">herald::ble::ConcreteBLETransmitter</a></div><div class="ttdef"><b>Definition:</b> ble_concrete.h:159</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_concrete_b_l_e_transmitter_html_aba1c54046051bd2815323da3c878de7b"><div class="ttname"><a href="classherald_1_1ble_1_1_concrete_b_l_e_transmitter.html#aba1c54046051bd2815323da3c878de7b">herald::ble::ConcreteBLETransmitter::coordinationProvider</a></div><div class="ttdeci">std::optional&lt; std::shared_ptr&lt; CoordinationProvider &gt; &gt; coordinationProvider() override</div><div class="ttdoc">For complex sensor coordination support, if required - Since v1.2-beta3.</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_concrete_bluetooth_state_manager_html"><div class="ttname"><a href="classherald_1_1ble_1_1_concrete_bluetooth_state_manager.html">herald::ble::ConcreteBluetoothStateManager</a></div><div class="ttdef"><b>Definition:</b> ble_concrete.h:30</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_herald_protocol_v1_provider_html"><div class="ttname"><a href="classherald_1_1ble_1_1_herald_protocol_v1_provider.html">herald::ble::HeraldProtocolV1Provider</a></div><div class="ttdef"><b>Definition:</b> ble_protocols.h:22</div></div>
-<div class="ttc" id="aclassherald_1_1datatype_1_1_data_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_data.html">herald::datatype::Data</a></div><div class="ttdoc">The main data workhorse class of the Herald API.</div><div class="ttdef"><b>Definition:</b> data.h:24</div></div>
-<div class="ttc" id="aclassherald_1_1datatype_1_1_payload_data_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_payload_data.html">herald::datatype::PayloadData</a></div><div class="ttdef"><b>Definition:</b> payload_data.h:13</div></div>
+<div class="ttc" id="aclassherald_1_1ble_1_1_concrete_b_l_e_database_html"><div class="ttname"><a href="classherald_1_1ble_1_1_concrete_b_l_e_database.html">herald::ble::ConcreteBLEDatabase</a></div><div class="ttdef"><b>Definition:</b> ble_concrete_database.h:46</div></div>
+<div class="ttc" id="aclassherald_1_1ble_1_1_concrete_b_l_e_receiver_html"><div class="ttname"><a href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html">herald::ble::ConcreteBLEReceiver</a></div><div class="ttdoc">Dummy implementation of a ConcreteBLEReceiver that does nothing (used for testing)</div><div class="ttdef"><b>Definition:</b> concrete_ble_receiver.h:24</div></div>
+<div class="ttc" id="aclassherald_1_1ble_1_1_concrete_b_l_e_sensor_html"><div class="ttname"><a href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html">herald::ble::ConcreteBLESensor</a></div><div class="ttdef"><b>Definition:</b> ble_concrete.h:60</div></div>
+<div class="ttc" id="aclassherald_1_1ble_1_1_concrete_b_l_e_transmitter_html"><div class="ttname"><a href="classherald_1_1ble_1_1_concrete_b_l_e_transmitter.html">herald::ble::ConcreteBLETransmitter</a></div><div class="ttdoc">Dummy implementation of a ConcreteBLETransmitter that does nothing (used for testing)</div><div class="ttdef"><b>Definition:</b> concrete_ble_transmitter.h:39</div></div>
+<div class="ttc" id="aclassherald_1_1ble_1_1_herald_protocol_b_l_e_coordination_provider_html"><div class="ttname"><a href="classherald_1_1ble_1_1_herald_protocol_b_l_e_coordination_provider.html">herald::ble::HeraldProtocolBLECoordinationProvider</a></div><div class="ttdef"><b>Definition:</b> ble_coordinator.h:27</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html">herald::datatype::DataRef</a></div><div class="ttdoc">The main data workhorse class of the Herald API.</div><div class="ttdef"><b>Definition:</b> data.h:33</div></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_target_identifier_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_target_identifier.html">herald::datatype::TargetIdentifier</a></div><div class="ttdef"><b>Definition:</b> target_identifier.h:17</div></div>
 <div class="ttc" id="anamespaceherald_1_1datatype_html"><div class="ttname"><a href="namespaceherald_1_1datatype.html">herald::datatype</a></div><div class="ttdoc">Contains all low-level Herald datatype implementations.</div><div class="ttdef"><b>Definition:</b> base64_string.h:14</div></div>
-<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Main Herald library include for C++ Native platforms.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
-<div class="ttc" id="astructherald_1_1engine_1_1_activity_html"><div class="ttname"><a href="structherald_1_1engine_1_1_activity.html">herald::engine::Activity</a></div><div class="ttdoc">An activity that needs to be performed due to some state being achieved in a Sensor.</div><div class="ttdef"><b>Definition:</b> activities.h:75</div></div>
+<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Acts as a non-global memory arena for arbitrary classes.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
+<div class="ttc" id="astructherald_1_1datatype_1_1_proximity_html"><div class="ttname"><a href="structherald_1_1datatype_1_1_proximity.html">herald::datatype::Proximity</a></div><div class="ttdef"><b>Definition:</b> proximity.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

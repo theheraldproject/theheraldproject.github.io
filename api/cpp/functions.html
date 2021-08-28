@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -66,10 +66,30 @@ $(function() {
 
 <h3><a id="index_a"></a>- a -</h3><ul>
 <li>add()
-: <a class="el" href="classherald_1_1engine_1_1_coordinator.html#abeac9202d645782878644a078efad64a">herald::engine::Coordinator</a>
+: <a class="el" href="classherald_1_1datatype_1_1_distribution.html#a958cfbcf39717b7b75e7f60e498c7e87">herald::datatype::Distribution</a>
+, <a class="el" href="classherald_1_1engine_1_1_coordinator.html#af4c33ec6ceb74e4e791ec4c8f9a98448">herald::engine::Coordinator&lt; ContextT &gt;</a>
+</li>
+<li>advertRefreshTimeInterval
+: <a class="el" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html#adc43fdb9d33d5d32ee74e112af5cf473">herald::ble::BLESensorConfiguration</a>
+</li>
+<li>androidSignalCharacteristicUUID
+: <a class="el" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html#a1fbc1e14442b2bd94bc152f902adaeda">herald::ble::BLESensorConfiguration</a>
+</li>
+<li>append()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#ac1e2166d195a87fc9f806dc3c366862c">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+, <a class="el" href="classherald_1_1datatype_1_1_data_sections.html#a04029df91735c837f06ba600ff40e655">herald::datatype::DataSections&lt; maxSize &gt;</a>
+</li>
+<li>appendReversed()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#a760b44a12f2a11a859121fb724d1296d">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
+<li>arena
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#add92e1efcffc050e6cedfeb85446e592">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
 </li>
 <li>assign()
-: <a class="el" href="classherald_1_1datatype_1_1_data.html#a8fec42f34a0061f13692193537de7c53">herald::datatype::Data</a>
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#aac1e08f7c459fe79e3759fb7c15cab26">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
+<li>at()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#a1474ac9b5ba9e7176acc02d5547cb084">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
 </li>
 </ul>
 
@@ -82,30 +102,44 @@ $(function() {
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
+<li>clear()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#aa48ea3c45bde7bf88ed701577bf9222d">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
 <li>closeConnection()
-: <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#ac1f069551b0730197a7ebfb892125475">herald::ble::ConcreteBLEReceiver</a>
+: <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#a441051e3b5d721e2a4132eb609951192">herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, BLEDatabaseT, SensorDelegateSetT &gt;</a>
 , <a class="el" href="classherald_1_1ble_1_1_herald_protocol_v1_provider.html#a2354407a7ed96cdab94f945425b06067">herald::ble::HeraldProtocolV1Provider</a>
 </li>
+<li>configuration()
+: <a class="el" href="classherald_1_1ble_1_1_b_l_e_device.html#a240ff5f9085a91b796fa2de24b294804">herald::ble::BLEDevice</a>
+</li>
 <li>connectionsProvided()
-: <a class="el" href="classherald_1_1ble_1_1_herald_protocol_b_l_e_coordination_provider.html#aac169b2ae5147c595736d86d6c0362bc">herald::ble::HeraldProtocolBLECoordinationProvider</a>
+: <a class="el" href="classherald_1_1ble_1_1_herald_protocol_b_l_e_coordination_provider.html#ae9195847984da976e322c795165bc4ba">herald::ble::HeraldProtocolBLECoordinationProvider&lt; ContextT, BLEDBT, ProviderT &gt;</a>
 , <a class="el" href="classherald_1_1engine_1_1_coordination_provider.html#ab2db48ad431b15102672f55aa686d6d2">herald::engine::CoordinationProvider</a>
 </li>
-<li>coordinationProvider()
-: <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#aa59fe54e9e103c644ed0fec7de5013fb">herald::ble::ConcreteBLEReceiver</a>
-, <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_sensor.html#ab6341e7e5b6743135cfc77b71a3ad94a">herald::ble::ConcreteBLESensor</a>
-, <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_transmitter.html#aba1c54046051bd2815323da3c878de7b">herald::ble::ConcreteBLETransmitter</a>
-, <a class="el" href="classherald_1_1_sensor.html#ad635afa8708070e4316e9183be5169d7">herald::Sensor</a>
-, <a class="el" href="classherald_1_1_sensor_array.html#a11fc17af76f14a834dd7507315bf3915">herald::SensorArray</a>
-</li>
 <li>Coordinator()
-: <a class="el" href="classherald_1_1engine_1_1_coordinator.html#a82fdf5e2d8eb14b600113f2c06270f67">herald::engine::Coordinator</a>
+: <a class="el" href="classherald_1_1engine_1_1_coordinator.html#a892d8ff78c78ceb99573b1ad7c4da48e">herald::engine::Coordinator&lt; ContextT &gt;</a>
+</li>
+<li>count()
+: <a class="el" href="classherald_1_1datatype_1_1_distribution.html#a0c9e5afd46521aee1dbd93ca8b526eb6">herald::datatype::Distribution</a>
 </li>
 </ul>
 
 
 <h3><a id="index_d"></a>- d -</h3><ul>
+<li>DataRef()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#a8350b820f66abd7b2e48ce5be18d712e">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
+<li>DataSections()
+: <a class="el" href="classherald_1_1datatype_1_1_data_sections.html#a69b4941677eb292fe2abec5311dfeb86">herald::datatype::DataSections&lt; maxSize &gt;</a>
+</li>
 <li>decode()
 : <a class="el" href="classherald_1_1datatype_1_1_base64_string.html#a7f32daa7c4191d4d9483aaf54b01f46c">herald::datatype::Base64String</a>
+</li>
+<li>description()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#ae5454f884466ea6ee35cc97a1cf8c0e3">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
+<li>Distribution()
+: <a class="el" href="classherald_1_1datatype_1_1_distribution.html#a80da8f096950892e049cf3b51d5959db">herald::datatype::Distribution</a>
 </li>
 </ul>
 
@@ -124,36 +158,70 @@ $(function() {
 
 
 <h3><a id="index_f"></a>- f -</h3><ul>
+<li>FowlerBasicAnalyser()
+: <a class="el" href="structherald_1_1analysis_1_1algorithms_1_1distance_1_1_fowler_basic_analyser.html#a1fac3cc1a9ad80c36fcd9210e834bcef">herald::analysis::algorithms::distance::FowlerBasicAnalyser</a>
+</li>
 <li>from()
 : <a class="el" href="classherald_1_1datatype_1_1_base64_string.html#a6a6b9a97916763a4b2d32fe4ebc096a4">herald::datatype::Base64String</a>
+</li>
+<li>fromHexEncodedString()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#a76b73ab73fe045be89bfad0dcea2bf15">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_g"></a>- g -</h3><ul>
 <li>get()
-: <a class="el" href="structherald_1_1analysis_1_1_variant_set.html#adf54fa575e8a469a1c9f0daafb039f9e">herald::analysis::VariantSet&lt; ValTs &gt;</a>
+: <a class="el" href="structherald_1_1analysis_1_1_analysis_delegate_manager.html#ac65a1818c7e862cfbd310302f76530a7">herald::analysis::AnalysisDelegateManager&lt; DelegateTypes &gt;</a>
+, <a class="el" href="structherald_1_1analysis_1_1_analysis_provider_manager.html#a1d0162886984c7d41b8a9238a2268585">herald::analysis::AnalysisProviderManager&lt; ProviderTypes &gt;</a>
+, <a class="el" href="structherald_1_1analysis_1_1_variant_set.html#adf54fa575e8a469a1c9f0daafb039f9e">herald::analysis::VariantSet&lt; ValTs &gt;</a>
+, <a class="el" href="classherald_1_1datatype_1_1_data_sections.html#ac1114671932ac3e85e12b60eadca8cfc">herald::datatype::DataSections&lt; maxSize &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_h"></a>- h -</h3><ul>
+<li>hashCode()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#a57ee89d56ea42b03e4836a14909c19bc">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
 <li>hasService()
 : <a class="el" href="classherald_1_1ble_1_1_b_l_e_device.html#afe85d00d70919f6b90ec8dbcbe1e7236">herald::ble::BLEDevice</a>
 </li>
-<li>hasServicesSet()
-: <a class="el" href="classherald_1_1ble_1_1_b_l_e_device.html#af4485ac52b3cb94c50eaedd55cb290b1">herald::ble::BLEDevice</a>
+<li>hexEncodedString()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#a458f1963c599a8ea35f5bdaa5fdd647f">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_i"></a>- i -</h3><ul>
-<li>isSupported()
-: <a class="el" href="classherald_1_1ble_1_1_b_l_e_transmitter.html#a72c37fb123cf81e65e8b6630d1a20ecf">herald::ble::BLETransmitter</a>
+<li>iosSignalCharacteristicUUID
+: <a class="el" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html#ab853828960d8951d30ae9baff2d4eef5">herald::ble::BLESensorConfiguration</a>
 </li>
 <li>iteration()
-: <a class="el" href="classherald_1_1engine_1_1_coordinator.html#aec332071948eb055f4668c485190f32c">herald::engine::Coordinator</a>
-, <a class="el" href="classherald_1_1_sensor_array.html#afafbb1936d71b23e89c75aef3aac5c5b">herald::SensorArray</a>
+: <a class="el" href="classherald_1_1engine_1_1_coordinator.html#aed2b9f90c7281c4c6a1c365cbc2262ea">herald::engine::Coordinator&lt; ContextT &gt;</a>
+, <a class="el" href="classherald_1_1_sensor_array.html#a529d45aa00eea81ef58fe8a5a20e4c70">herald::SensorArray&lt; ContextT, PayloadDataSupplierT, SensorTs &gt;</a>
+</li>
+</ul>
+
+
+<h3><a id="index_m"></a>- m -</h3><ul>
+<li>manufacturerIdForApple
+: <a class="el" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html#a5b96fb44a9b4fc15a070be0afd793bd0">herald::ble::BLESensorConfiguration</a>
+</li>
+<li>manufacturerIdForSensor
+: <a class="el" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html#adcb6efa8a1f97b857d658e3ae89910a4">herald::ble::BLESensorConfiguration</a>
+</li>
+<li>max()
+: <a class="el" href="classherald_1_1datatype_1_1_distribution.html#ab495f0c4e03767fdc9067318ab11f641">herald::datatype::Distribution</a>
+</li>
+<li>maxBluetoothConnections
+: <a class="el" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html#af29507859dc8c0d37cdef7effd52ba13">herald::ble::BLESensorConfiguration</a>
+</li>
+<li>mean()
+: <a class="el" href="classherald_1_1datatype_1_1_distribution.html#aec1d257049bb5c67a2fd6629b5615446">herald::datatype::Distribution</a>
+</li>
+<li>min()
+: <a class="el" href="classherald_1_1datatype_1_1_distribution.html#a2090bee83808c552727725ba1899fbcd">herald::datatype::Distribution</a>
 </li>
 </ul>
 
@@ -163,21 +231,25 @@ $(function() {
 : <a class="el" href="structherald_1_1engine_1_1_activity.html#a082622ee0585efb575e62e1e39c08869">herald::engine::Activity</a>
 </li>
 <li>newSample()
-: <a class="el" href="structherald_1_1analysis_1_1_analysis_runner.html#a5d64607275af922bd293f6b3e396317e">herald::analysis::AnalysisRunner&lt; SourceTypes &gt;</a>
+: <a class="el" href="structherald_1_1analysis_1_1_analysis_runner.html#a203c84dc80f740a45730b070f4a33a46">herald::analysis::AnalysisRunner&lt; AnalysisDelegateManagerT, AnalysisProviderManagerT, SourceTypes &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_o"></a>- o -</h3><ul>
 <li>openConnection()
-: <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#a275882247ed4bf70b3794eac17e57f50">herald::ble::ConcreteBLEReceiver</a>
+: <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#ae61f4e75eda8343e83463cd3be20261e">herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, BLEDatabaseT, SensorDelegateSetT &gt;</a>
 , <a class="el" href="classherald_1_1ble_1_1_herald_protocol_v1_provider.html#ae50a26b9ea4221c36e4a575fc0fd3e13">herald::ble::HeraldProtocolV1Provider</a>
 </li>
 <li>operator std::string()
 : <a class="el" href="classherald_1_1ble_1_1_b_l_e_mac_address.html#ae213d73a54d1641d4a90c4db96407b94">herald::ble::BLEMacAddress</a>
+, <a class="el" href="classherald_1_1datatype_1_1_distribution.html#a24a07cd2856104f99a64312151036b24">herald::datatype::Distribution</a>
+</li>
+<li>operator!=()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#a80026747eab9e0a9c7965eabfbfc33fe">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
 </li>
 <li>operator+()
-: <a class="el" href="structherald_1_1analysis_1_1sampling_1_1_sample_iterator.html#afa726bf6a35086f17d23378c42f261cf">herald::analysis::sampling::SampleIterator&lt; SampleListT, ValT &gt;</a>
+: <a class="el" href="structherald_1_1analysis_1_1sampling_1_1_sample_iterator.html#a30fa6e7ed77a7c92c82efe2b8ace7a9a">herald::analysis::sampling::SampleIterator&lt; SampleListT, ValT &gt;</a>
 </li>
 <li>operator++()
 : <a class="el" href="structherald_1_1analysis_1_1sampling_1_1_sample_iterator.html#a599a59d803a21bd17d6728103c0c7ea4">herald::analysis::sampling::SampleIterator&lt; SampleListT, ValT &gt;</a>
@@ -185,13 +257,28 @@ $(function() {
 , <a class="el" href="structherald_1_1analysis_1_1views_1_1iterator__proxy.html#a24cb66e338d8fa1deebad640b54ce98f">herald::analysis::views::iterator_proxy&lt; Coll, ValT, IterT, SizeT &gt;</a>
 </li>
 <li>operator-()
-: <a class="el" href="structherald_1_1analysis_1_1sampling_1_1_sample_iterator.html#a8504c9e31624563846ff6aa410625f18">herald::analysis::sampling::SampleIterator&lt; SampleListT, ValT &gt;</a>
+: <a class="el" href="structherald_1_1analysis_1_1sampling_1_1_sample_iterator.html#a2c268175eb31a67b90f132ee3dfeff40">herald::analysis::sampling::SampleIterator&lt; SampleListT, ValT &gt;</a>
 </li>
 <li>operator/()
 : <a class="el" href="classherald_1_1datatype_1_1_time_interval.html#afa78e148fea161c8b505e56af6cc0714">herald::datatype::TimeInterval</a>
 </li>
 <li>operator/=()
 : <a class="el" href="classherald_1_1datatype_1_1_time_interval.html#a0025ab6d2322349d65514938c2c58865">herald::datatype::TimeInterval</a>
+</li>
+<li>operator&lt;()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#a73dc6242b7a5853ff4f785d1d2255b6a">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
+<li>operator=()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#a8dcc5bf1a6ca6dafa7917f6b4abc635a">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
+<li>operator==()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#ab00fbed8ed30435bd45791b7e793bb4d">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
+<li>operator&gt;()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#a0b08057ce262f2e0aa11a847a0af6ce6">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
+<li>operator[]()
+: <a class="el" href="classherald_1_1datatype_1_1_data_sections.html#a532aa780b3e5b77c3564836af75ed6df">herald::datatype::DataSections&lt; maxSize &gt;</a>
 </li>
 <li>operator|
 : <a class="el" href="structherald_1_1analysis_1_1views_1_1to__view.html#a5bfa41c0df5445807cd5c18030a01780">herald::analysis::views::to_view</a>
@@ -200,8 +287,20 @@ $(function() {
 
 
 <h3><a id="index_p"></a>- p -</h3><ul>
-<li>payloadData()
-: <a class="el" href="classherald_1_1ble_1_1_b_l_e_transmitter.html#abf69ebbaeccddabda6808ac5ac5d0a4a">herald::ble::BLETransmitter</a>
+<li>PageSize
+: <a class="el" href="classherald_1_1datatype_1_1_memory_arena.html#ae5454aa8e7051af10a6b5c0fc15c2b3a">herald::datatype::MemoryArena&lt; MaxSize, AllocationSize &gt;</a>
+</li>
+<li>payloadCharacteristicUUID
+: <a class="el" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html#a2a495dab937e151bbc439ee4e31fcd71">herald::ble::BLESensorConfiguration</a>
+</li>
+<li>payloadDataUpdateTimeInterval
+: <a class="el" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html#a6e38cab489bca898aa48ec5adaedbf0a">herald::ble::BLESensorConfiguration</a>
+</li>
+<li>payloadSharingExpiryTimeInterval
+: <a class="el" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html#ab6894092759a6c6f7dbf5db8b91ae926">herald::ble::BLESensorConfiguration</a>
+</li>
+<li>peripheralCleanInterval
+: <a class="el" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html#af52bc99a294bc057d61b90094b208a7e">herald::ble::BLESensorConfiguration</a>
 </li>
 <li>prerequisites
 : <a class="el" href="structherald_1_1engine_1_1_activity.html#a84f95a201743fc8ca8e746c065c96e38">herald::engine::Activity</a>
@@ -210,7 +309,7 @@ $(function() {
 : <a class="el" href="structherald_1_1engine_1_1_activity.html#aed4b406f9ef3984ceb0044cb557d0503">herald::engine::Activity</a>
 </li>
 <li>provision()
-: <a class="el" href="classherald_1_1ble_1_1_herald_protocol_b_l_e_coordination_provider.html#aaf43d88386fdcd840a9ea4af9da637ca">herald::ble::HeraldProtocolBLECoordinationProvider</a>
+: <a class="el" href="classherald_1_1ble_1_1_herald_protocol_b_l_e_coordination_provider.html#a86554f9e7fd7dc75cc2bd39614e011b9">herald::ble::HeraldProtocolBLECoordinationProvider&lt; ContextT, BLEDBT, ProviderT &gt;</a>
 , <a class="el" href="classherald_1_1engine_1_1_coordination_provider.html#ae37ef6911e8c42fe993b2666e4c3e44a">herald::engine::CoordinationProvider</a>
 </li>
 </ul>
@@ -219,44 +318,107 @@ $(function() {
 <h3><a id="index_r"></a>- r -</h3><ul>
 <li>remove()
 : <a class="el" href="classherald_1_1ble_1_1_b_l_e_database.html#a9e0f9a2088d12e7ee4b02e29f019bdc6">herald::ble::BLEDatabase</a>
-, <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_database.html#ac27810353496adad3a99296a7a24260f">herald::ble::ConcreteBLEDatabase</a>
-, <a class="el" href="classherald_1_1engine_1_1_coordinator.html#a2b95d269b433715690e8cac576c11bb2">herald::engine::Coordinator</a>
+, <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_database.html#a6e7b8e12f8e09095a2e0ec8ca3f415dd">herald::ble::ConcreteBLEDatabase&lt; ContextT, MaxDevicesCached &gt;</a>
+, <a class="el" href="classherald_1_1engine_1_1_coordinator.html#af2717ea0ebfbe95cbeb1edb6be741f91">herald::engine::Coordinator&lt; ContextT &gt;</a>
 </li>
 <li>requiredActivities()
-: <a class="el" href="classherald_1_1ble_1_1_herald_protocol_b_l_e_coordination_provider.html#a2120cc6dc3951ab8e75caa169e9ca3df">herald::ble::HeraldProtocolBLECoordinationProvider</a>
+: <a class="el" href="classherald_1_1ble_1_1_herald_protocol_b_l_e_coordination_provider.html#a005fd4a0acc4f40a233eb0166d5fa80a">herald::ble::HeraldProtocolBLECoordinationProvider&lt; ContextT, BLEDBT, ProviderT &gt;</a>
 , <a class="el" href="classherald_1_1engine_1_1_coordination_provider.html#abf7fb103c853cc9307827d236a15a538">herald::engine::CoordinationProvider</a>
 </li>
 <li>requiredConnections()
-: <a class="el" href="classherald_1_1ble_1_1_herald_protocol_b_l_e_coordination_provider.html#ad19e53e7fb04ec382b32d06b324253bc">herald::ble::HeraldProtocolBLECoordinationProvider</a>
+: <a class="el" href="classherald_1_1ble_1_1_herald_protocol_b_l_e_coordination_provider.html#a6316ead832a80a34be03f6fc4104a908">herald::ble::HeraldProtocolBLECoordinationProvider&lt; ContextT, BLEDBT, ProviderT &gt;</a>
 , <a class="el" href="classherald_1_1engine_1_1_coordination_provider.html#a52a9155acf0a5d1436a857a0036013cc">herald::engine::CoordinationProvider</a>
 </li>
+<li>reset()
+: <a class="el" href="classherald_1_1ble_1_1_b_l_e_device.html#a789360e76a5e1fd87fed91321ef3d24f">herald::ble::BLEDevice</a>
+, <a class="el" href="classherald_1_1datatype_1_1_distribution.html#a99672d0d205a9e4e05dcb45fe0503a2d">herald::datatype::Distribution</a>
+</li>
 <li>restartScanningAndAdvertising()
-: <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#a52352341f1befcedcb496d38707f983c">herald::ble::ConcreteBLEReceiver</a>
+: <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#aa35ceeef9da3844c6737d320436d672c">herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, BLEDatabaseT, SensorDelegateSetT &gt;</a>
 , <a class="el" href="classherald_1_1ble_1_1_herald_protocol_v1_provider.html#a9e569448ebca41fa55161abe2d7a97fb">herald::ble::HeraldProtocolV1Provider</a>
 </li>
+<li>reversed()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#a8e5727f1a1d7a5e1eb6beecde578053c">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
+<li>reverseEndianness()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#ab4f9c008fb742d406ce27781380949db">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
 <li>run()
-: <a class="el" href="structherald_1_1analysis_1_1_analysis_runner.html#af2ab21f27487b85703d1f8d0fd09fb59">herald::analysis::AnalysisRunner&lt; SourceTypes &gt;</a>
+: <a class="el" href="structherald_1_1analysis_1_1_analysis_runner.html#a2e679b4360b2aaee3e15671e0ec69c2a">herald::analysis::AnalysisRunner&lt; AnalysisDelegateManagerT, AnalysisProviderManagerT, SourceTypes &gt;</a>
 </li>
 </ul>
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
 <li>sensor()
-: <a class="el" href="classherald_1_1data_1_1_error_stream_contact_logger.html#adfabe9c7324718464f37850ba726e545">herald::data::ErrorStreamContactLogger</a>
-, <a class="el" href="classherald_1_1_default_sensor_delegate.html#a912a62e3a4da5a9782ee86a01f7eec8f">herald::DefaultSensorDelegate</a>
-, <a class="el" href="classherald_1_1_sensor_delegate.html#a49ca4d913df2549a6f726dd70fb16c1d">herald::SensorDelegate</a>
+: <a class="el" href="classherald_1_1_sensor_delegate_set.html#a4d2f09e0c054f37137fd9bd09831fa48">herald::SensorDelegateSet&lt; SensorDelegateTs &gt;</a>
 </li>
 <li>SensorArray()
-: <a class="el" href="classherald_1_1_sensor_array.html#a36a1628a23303952406a07fe960509c9">herald::SensorArray</a>
+: <a class="el" href="classherald_1_1_sensor_array.html#ac6b7d00f5d2ff41528326a0f68111c47">herald::SensorArray&lt; ContextT, PayloadDataSupplierT, SensorTs &gt;</a>
 </li>
 <li>services()
 : <a class="el" href="classherald_1_1ble_1_1_b_l_e_device.html#ae58a9d3d605c91e51dce16666e169422">herald::ble::BLEDevice</a>
 </li>
+<li>serviceUUID
+: <a class="el" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html#abdd0ec252401beb1346afc4a37984a1c">herald::ble::BLESensorConfiguration</a>
+</li>
+<li>setToNow()
+: <a class="el" href="classherald_1_1datatype_1_1_date.html#a0f98866c20eb96aad3a275ad2cf43ac3">herald::datatype::Date</a>
+</li>
+<li>signalCharacteristicActionWriteImmediate
+: <a class="el" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html#afaf41ed9b6c7e1c942d86a3f1bdd39c7">herald::ble::BLESensorConfiguration</a>
+</li>
+<li>signalCharacteristicActionWritePayload
+: <a class="el" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html#a1ef13c2ed9a91374900484b655463f5f">herald::ble::BLESensorConfiguration</a>
+</li>
+<li>signalCharacteristicActionWritePayloadSharing
+: <a class="el" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html#a3ffdf3d17d63200556237430555dbedb">herald::ble::BLESensorConfiguration</a>
+</li>
+<li>signalCharacteristicActionWriteRSSI
+: <a class="el" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html#aaa9f075cfa5dd938fc6f1949dfa70edf">herald::ble::BLESensorConfiguration</a>
+</li>
+<li>size()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#a7babd5518a338942b0dfe57d1b5e99ad">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+, <a class="el" href="classherald_1_1datatype_1_1_data_sections.html#a61a7b08591d2bac31223931fe446cb5b">herald::datatype::DataSections&lt; maxSize &gt;</a>
+</li>
+<li>Size
+: <a class="el" href="classherald_1_1datatype_1_1_memory_arena.html#ad7ef7f2fae95bcb6cd8ab9b6b435e2e1">herald::datatype::MemoryArena&lt; MaxSize, AllocationSize &gt;</a>
+</li>
+<li>standardDeviation()
+: <a class="el" href="classherald_1_1datatype_1_1_distribution.html#a253efb632aaff557fb276ced830e816f">herald::datatype::Distribution</a>
+</li>
 <li>start()
-: <a class="el" href="classherald_1_1engine_1_1_coordinator.html#a48e2afdefc222983022629ab8d2a5829">herald::engine::Coordinator</a>
+: <a class="el" href="classherald_1_1engine_1_1_coordinator.html#ac9484ad04d23db98d21c83e679fef6ca">herald::engine::Coordinator&lt; ContextT &gt;</a>
+, <a class="el" href="classherald_1_1_sensor_array.html#a5257f28624513a9fb92663000a3f0e0b">herald::SensorArray&lt; ContextT, PayloadDataSupplierT, SensorTs &gt;</a>
 </li>
 <li>stop()
-: <a class="el" href="classherald_1_1engine_1_1_coordinator.html#a513fc2a248dad2c912448e2a0a4eda39">herald::engine::Coordinator</a>
+: <a class="el" href="classherald_1_1engine_1_1_coordinator.html#aa36e418042e0b78104f787ceea078e3d">herald::engine::Coordinator&lt; ContextT &gt;</a>
+</li>
+<li>subdata()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#a407c8949d011531c15f04b198806fc33">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
+</ul>
+
+
+<h3><a id="index_u"></a>- u -</h3><ul>
+<li>uint16()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#a213819a9c3322ed8fa4e25c1e5ce6c79">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
+<li>uint32()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#aa4e41f37d37ff08f8d54d85359f13e1a">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
+<li>uint64()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#abf05013855e21a804c7cb02936253191">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
+<li>uint8()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#a9a914e5e43054120ea77a261c38f827f">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
+</ul>
+
+
+<h3><a id="index_v"></a>- v -</h3><ul>
+<li>variance()
+: <a class="el" href="classherald_1_1datatype_1_1_distribution.html#a5047e78bda04cb2b6ec37a6112664a6f">herald::datatype::Distribution</a>
 </li>
 </ul>
 
@@ -264,6 +426,15 @@ $(function() {
 <h3><a id="index__7E"></a>- ~ -</h3><ul>
 <li>~Base64String()
 : <a class="el" href="classherald_1_1datatype_1_1_base64_string.html#ada41b7d260ba0842694985f8d29b0800">herald::datatype::Base64String</a>
+</li>
+<li>~DataRef()
+: <a class="el" href="classherald_1_1datatype_1_1_data_ref.html#a1ff5dae91d1a5727fe39b645ee26c29f">herald::datatype::DataRef&lt; MemoryArenaT &gt;</a>
+</li>
+<li>~DataSections()
+: <a class="el" href="classherald_1_1datatype_1_1_data_sections.html#a55721b8e19079aad10c4d5ecad483608">herald::datatype::DataSections&lt; maxSize &gt;</a>
+</li>
+<li>~Distribution()
+: <a class="el" href="classherald_1_1datatype_1_1_distribution.html#a579a3728e11913c83a46d65a2a73be00">herald::datatype::Distribution</a>
 </li>
 </ul>
 </div><!-- contents -->

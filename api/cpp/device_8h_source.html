@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -91,20 +91,20 @@ $(function() {
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="classherald_1_1_device.html">Device</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classherald_1_1_device.html">Device</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classherald_1_1datatype_1_1_date.html">Date</a> created() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">// virtual Date created() const = 0;</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classherald_1_1datatype_1_1_time_interval.html">TimeInterval</a> timeIntervalSinceLastUpdate() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_target_identifier.html">TargetIdentifier</a>&amp; identifier() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> identifier(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_target_identifier.html">TargetIdentifier</a>&amp; toCopyFrom) = 0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassherald_1_1_device_html"><div class="ttname"><a href="classherald_1_1_device.html">herald::Device</a></div><div class="ttdoc">Generic abstraction of a particular local proximate device type.</div><div class="ttdef"><b>Definition:</b> device.h:27</div></div>
-<div class="ttc" id="aclassherald_1_1datatype_1_1_date_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_date.html">herald::datatype::Date</a></div><div class="ttdef"><b>Definition:</b> date.h:18</div></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_target_identifier_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_target_identifier.html">herald::datatype::TargetIdentifier</a></div><div class="ttdef"><b>Definition:</b> target_identifier.h:17</div></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_time_interval_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_time_interval.html">herald::datatype::TimeInterval</a></div><div class="ttdef"><b>Definition:</b> time_interval.h:19</div></div>
 <div class="ttc" id="anamespaceherald_1_1datatype_html"><div class="ttname"><a href="namespaceherald_1_1datatype.html">herald::datatype</a></div><div class="ttdoc">Contains all low-level Herald datatype implementations.</div><div class="ttdef"><b>Definition:</b> base64_string.h:14</div></div>
-<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Main Herald library include for C++ Native platforms.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
+<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Acts as a non-global memory arena for arbitrary classes.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -74,8 +74,8 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef RANGES_H</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define RANGES_H</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef HERALD_RANGES_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define HERALD_RANGES_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// TODO if def for C++20 support check (so we don&#39;t have to roll our own ranges lib)</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// i.e. map std::views on to herald::analysis::views, otherwise include the following.</span></div>
@@ -102,7 +102,7 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ValT&gt;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">bool</span> operator()(<span class="keyword">const</span> <a class="code" href="structherald_1_1analysis_1_1sampling_1_1_sample.html">herald::analysis::sampling::Sample&lt;ValT&gt;</a>&amp; s)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> s.taken &gt;= from;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> s.taken &gt; from;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  }</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">private</span>:</div>
@@ -283,219 +283,234 @@ $(function() {
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">return</span> source.end();</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  }</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> IterT&gt;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> IterT&amp; other) {</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordflow">return</span> other == source;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  }</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> IterT&gt;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> IterT&amp; other) {</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">return</span> other != source;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  }</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keyword">auto</span> size() -&gt; BaseSizeT {</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="comment">// return source.size(); // this is the UNFILTERED size</span></div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    BaseSizeT sz = 0;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keyword">auto</span> iter = source;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keyword">auto</span> end = source.end();</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">while</span> (iter != end) {</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      ++sz;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      ++iter;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    }</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="comment">// minus one as we don&#39;t want the distance to end() but the last element the 1 before it</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordflow">return</span> sz;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="comment">// return std::distance(source.wrapped(),source.end() - 1);</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  }</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="keyword">auto</span> operator[](BaseSizeT position) -&gt; BaseValT {</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">return</span> *(source + position);</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  }</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  IterProxyT source;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;};</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  <span class="comment">// auto latest() -&gt; BaseValT {</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="comment">//   //return source.latest();</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="comment">//   return *(source.end() - 1);</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="comment">// }</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_date.html">Date</a> latest() {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordflow">return</span> (*(source.end() - 1)).taken;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> IterT&gt;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> IterT&amp; other) {</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordflow">return</span> other == source;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> IterT&gt;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> IterT&amp; other) {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">return</span> other != source;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="keyword">auto</span> size() -&gt; BaseSizeT {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="comment">// return source.size(); // this is the UNFILTERED size</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    BaseSizeT sz = 0;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keyword">auto</span> iter = source; <span class="comment">// copy the iterator so as not to alter its state</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keyword">auto</span> end = source.end(); <span class="comment">// copy the iterator so as not to alter its state</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">while</span> (iter != end) {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      ++sz;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      ++iter;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="comment">// minus one as we don&#39;t want the distance to end() but the last element the 1 before it</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordflow">return</span> sz;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="comment">// return std::distance(source.wrapped(),source.end() - 1);</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  }</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Coll,</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;          <span class="keyword">typename</span> Pred,</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;          <span class="comment">// typename ValT = typename std::remove_cv&lt;typename Coll::value_type::first_type&gt;::type,</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;          <span class="keyword">typename</span> ValT = <span class="keyword">typename</span> std::remove_cv&lt;typename Coll::value_type&gt;::type, <span class="comment">// works for intrinsic types and complex types</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;          <span class="keyword">typename</span> IterT = <span class="keyword">typename</span> Coll::iterator,</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;          <span class="keyword">typename</span> SizeT = <span class="keyword">typename</span> Coll::size_type</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;         &gt;</div>
-<div class="line"><a name="l00281"></a><span class="lineno"><a class="line" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">  281</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy</a> {</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="keyword">using</span> base_iterator = IterT;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="keyword">using</span> base_coll_type = Coll; <span class="comment">// for chaining</span></div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <span class="keyword">using</span> base_pred_type = Pred; <span class="comment">// for chaining</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <span class="keyword">using</span> base_value_type = ValT;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="keyword">using</span> base_size_type = SizeT;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  <span class="keyword">using</span> value_type = ValT;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <span class="keyword">using</span> iterator = IterT;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="keyword">using</span> size_type = SizeT;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="comment">// using difference_type = typename Coll::difference_type;</span></div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <span class="keyword">using</span> is_proxy = std::true_type;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy</a>(Coll&amp; coll, Pred pred) : coll(coll), iter(std::move(std::begin(coll))), endIter(std::move(std::end(coll))), <a class="code" href="structherald_1_1analysis_1_1views_1_1filter.html">filter</a>(pred) {</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="comment">// move forward to the first match (or end)</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    moveToNext();</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  }</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="comment">// chaining ctor</span></div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <span class="comment">// filtered_iterator_proxy(filtered_iterator_proxy&amp;&amp; other, Pred pred) : iter(std::move(other.iter)), endIter(std::move(other.endIter)), filter(dual_filter(other.filter,pred)) {}</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy</a>(<a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy</a>&amp;&amp; other) : coll(other.coll), iter(std::move(other.iter)), endIter(std::move(other.endIter)), <a class="code" href="structherald_1_1analysis_1_1views_1_1filter.html">filter</a>(other.filter) {}</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy</a>(<span class="keyword">const</span> <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy</a>&amp; other) : coll(other.coll), iter(other.iter), endIter(other.endIter), <a class="code" href="structherald_1_1analysis_1_1views_1_1filter.html">filter</a>(other.filter) {}</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  ~<a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  <span class="keyword">auto</span> operator*() -&gt; <span class="keyword">const</span> ValT&amp; {</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">return</span> *iter;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  }</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
-<div class="line"><a name="l00311"></a><span class="lineno"><a class="line" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html#aa530537faf74764ec8f4053aeafd19be">  311</a></span>&#160;  <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;Coll,Pred&gt;</a>&amp; <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html#aa530537faf74764ec8f4053aeafd19be">operator++</a>() {</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="comment">// move forward until we get a match (or end)</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    moveToNext();</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  }</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="comment">// postfix operator</span></div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;Coll,Pred&gt;</a> <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html#aa530537faf74764ec8f4053aeafd19be">operator++</a>(<span class="keywordtype">int</span>) {</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;Coll,Pred&gt;</a> cp =  *<span class="keyword">this</span>; <span class="comment">// copy of instance</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    ++(*this);</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordflow">return</span> cp;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  }</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  filtered_iterator_proxy&lt;Coll,Pred&gt; operator+(<span class="keywordtype">int</span> by) {</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    filtered_iterator_proxy&lt;Coll,Pred&gt; cp =  *<span class="keyword">this</span>; <span class="comment">// copy of instance</span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0;i &lt; by;++i) {</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      ++cp;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="keyword">auto</span> operator[](BaseSizeT position) -&gt; BaseValT {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">return</span> *(source + position);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  }</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  IterProxyT source;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;};</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Coll,</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;          <span class="keyword">typename</span> Pred,</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;          <span class="comment">// typename ValT = typename std::remove_cv&lt;typename Coll::value_type::first_type&gt;::type,</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;          <span class="keyword">typename</span> ValT = <span class="keyword">typename</span> std::remove_cv&lt;typename Coll::value_type&gt;::type, <span class="comment">// works for intrinsic types and complex types</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;          <span class="keyword">typename</span> IterT = <span class="keyword">typename</span> Coll::iterator,</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;          <span class="keyword">typename</span> SizeT = <span class="keyword">typename</span> Coll::size_type</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;         &gt;</div>
+<div class="line"><a name="l00289"></a><span class="lineno"><a class="line" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">  289</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy</a> {</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="keyword">using</span> base_iterator = IterT;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="keyword">using</span> base_coll_type = Coll; <span class="comment">// for chaining</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="keyword">using</span> base_pred_type = Pred; <span class="comment">// for chaining</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <span class="keyword">using</span> base_value_type = ValT;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="keyword">using</span> base_size_type = SizeT;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <span class="keyword">using</span> value_type = ValT;</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <span class="keyword">using</span> iterator = IterT;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <span class="keyword">using</span> size_type = SizeT;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  <span class="comment">// using difference_type = typename Coll::difference_type;</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <span class="keyword">using</span> is_proxy = std::true_type;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy</a>(Coll&amp; coll, Pred pred) : coll(coll), iter(std::move(std::begin(coll))), endIter(std::move(std::end(coll))), <a class="code" href="structherald_1_1analysis_1_1views_1_1filter.html">filter</a>(pred) {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="comment">// move forward to the first match (or end)</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    moveToFirst();</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  }</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  <span class="comment">// chaining ctor</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  <span class="comment">// filtered_iterator_proxy(filtered_iterator_proxy&amp;&amp; other, Pred pred) : iter(std::move(other.iter)), endIter(std::move(other.endIter)), filter(dual_filter(other.filter,pred)) {}</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy</a>(<a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy</a>&amp;&amp; other) : coll(other.coll), iter(std::move(other.iter)), endIter(std::move(other.endIter)), <a class="code" href="structherald_1_1analysis_1_1views_1_1filter.html">filter</a>(other.filter) {}</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy</a>(<span class="keyword">const</span> <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy</a>&amp; other) : coll(other.coll), iter(other.iter), endIter(other.endIter), <a class="code" href="structherald_1_1analysis_1_1views_1_1filter.html">filter</a>(other.filter) {}</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  ~<a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="keyword">auto</span> operator*() -&gt; <span class="keyword">const</span> ValT&amp; {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">return</span> *iter;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  }</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html#aa530537faf74764ec8f4053aeafd19be">  319</a></span>&#160;  <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;Coll,Pred&gt;</a>&amp; <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html#aa530537faf74764ec8f4053aeafd19be">operator++</a>() {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    <span class="comment">// move forward until we get a match (or end)</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    moveToNext();</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <span class="comment">// postfix operator</span></div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;Coll,Pred&gt;</a> <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html#aa530537faf74764ec8f4053aeafd19be">operator++</a>(<span class="keywordtype">int</span>) {</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;Coll,Pred&gt;</a> cp =  *<span class="keyword">this</span>; <span class="comment">// copy of instance</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    ++(*this);</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordflow">return</span> cp;</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  }</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  <span class="keywordtype">bool</span> operator==(IterT otherIter)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keywordflow">return</span> iter == otherIter;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  }</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  <span class="keywordtype">bool</span> operator!=(IterT otherIter)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordflow">return</span> iter != otherIter;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  filtered_iterator_proxy&lt;Coll,Pred&gt; operator+(<span class="keywordtype">int</span> by) {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    filtered_iterator_proxy&lt;Coll,Pred&gt; cp =  *<span class="keyword">this</span>; <span class="comment">// copy of instance</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0;i &lt; by;++i) {</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;      ++cp;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    }</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordflow">return</span> cp;</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  }</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  <span class="keyword">friend</span> <span class="keywordtype">bool</span> operator!=(IterT otherIter,filtered_iterator_proxy&lt;Coll,Pred&gt; thisIter) {</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordflow">return</span> otherIter != thisIter.iter;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  <span class="keywordtype">bool</span> operator==(IterT otherIter)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordflow">return</span> iter == otherIter;</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  }</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  <span class="keyword">friend</span> <span class="keywordtype">bool</span> operator==(IterT otherIter,filtered_iterator_proxy&lt;Coll,Pred&gt; thisIter) {</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">return</span> otherIter == thisIter.iter;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  <span class="keywordtype">bool</span> operator!=(IterT otherIter)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">return</span> iter != otherIter;</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  }</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  IterT&amp; wrapped() {</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordflow">return</span> iter;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  <span class="keyword">friend</span> <span class="keywordtype">bool</span> operator!=(IterT otherIter,filtered_iterator_proxy&lt;Coll,Pred&gt; thisIter) {</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordflow">return</span> otherIter != thisIter.iter;</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  }</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  IterT&amp; end() {</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">return</span> endIter;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  <span class="keyword">friend</span> <span class="keywordtype">bool</span> operator==(IterT otherIter,filtered_iterator_proxy&lt;Coll,Pred&gt; thisIter) {</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">return</span> otherIter == thisIter.iter;</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;  }</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;  <span class="keywordtype">bool</span> ended() {</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordflow">return</span> endIter == iter;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;  IterT&amp; wrapped() {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordflow">return</span> iter;</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;  }</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  Coll&amp; collection()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordflow">return</span> coll;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  IterT&amp; end() {</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordflow">return</span> endIter;</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  }</div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  Pred predicate()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordflow">return</span> filter.predicate();</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  <span class="keywordtype">bool</span> ended() {</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordflow">return</span> endIter == iter;</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  }</div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;  Coll&amp; coll;</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  IterT iter;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  IterT endIter;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  filter_fn&lt;Pred&gt; filter;</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  <span class="keywordtype">void</span> moveToNext() {</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keywordflow">if</span> (endIter == iter) <span class="keywordflow">return</span>; <span class="comment">// guard</span></div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordflow">do</span> {</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;      ++iter;</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    } <span class="keywordflow">while</span> (endIter != iter &amp;&amp; !filter(*iter));</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  }</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;};</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;  Coll&amp; collection()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordflow">return</span> coll;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  }</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160; </div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  Pred predicate()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">return</span> filter.predicate();</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  }</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  Coll&amp; coll;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  IterT iter;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  IterT endIter;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  filter_fn&lt;Pred&gt; filter;</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Pred&gt;</div>
-<div class="line"><a name="l00389"></a><span class="lineno"><a class="line" href="structherald_1_1analysis_1_1views_1_1filter.html">  389</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structherald_1_1analysis_1_1views_1_1filter.html">filter</a> {</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;  <a class="code" href="structherald_1_1analysis_1_1views_1_1filter.html">filter</a>(<span class="keyword">const</span> Pred&amp; pred) : pred(pred) {}</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;  ~<a class="code" href="structherald_1_1analysis_1_1views_1_1filter.html">filter</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160; </div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Coll&gt;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  <span class="keyword">auto</span> operator()(Coll&amp; c) -&gt; <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;Coll,Pred&gt;</a> {</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;Coll,Pred&gt;</a>(c,pred);</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  }</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  </div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> OtherColl, <span class="keyword">typename</span> OtherPred&gt; <span class="comment">// first argument must be l-value below</span></div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  <span class="keyword">friend</span> <span class="keyword">auto</span> operator|(<a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;OtherColl,OtherPred&gt;</a> c,<a class="code" href="structherald_1_1analysis_1_1views_1_1filter.html">filter&lt;Pred&gt;</a> pred) -&gt; <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;OtherColl,dual_filter&lt;OtherPred,Pred&gt;</a>&gt; {</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;OtherColl,dual_filter&lt;OtherPred,Pred&gt;</a>&gt;(c.collection(),<a class="code" href="structherald_1_1analysis_1_1views_1_1dual__filter.html">dual_filter</a>(c.predicate(),pred.pred));</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;  }</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Coll&gt;</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;  <span class="keyword">friend</span> <span class="keyword">auto</span> operator|(Coll&amp; c,<a class="code" href="structherald_1_1analysis_1_1views_1_1filter.html">filter&lt;Pred&gt;</a> pred) -&gt; <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;Coll,Pred&gt;</a> {</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;Coll,Pred&gt;</a>(c,pred.pred);</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  }</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  <span class="comment">// Need this function so as not to incorrectly always filter the first value in the underlying proxy</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  <span class="keywordtype">void</span> moveToFirst() {</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keywordflow">while</span> (endIter != iter &amp;&amp; !filter(*iter)) {</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;      ++iter;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    };</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;  }</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;  <span class="keywordtype">void</span> moveToNext() {</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordflow">if</span> (endIter == iter) <span class="keywordflow">return</span>; <span class="comment">// guard</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;      ++iter;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    } <span class="keywordflow">while</span> (endIter != iter &amp;&amp; !filter(*iter));</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  }</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;};</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Pred&gt;</div>
+<div class="line"><a name="l00404"></a><span class="lineno"><a class="line" href="structherald_1_1analysis_1_1views_1_1filter.html">  404</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structherald_1_1analysis_1_1views_1_1filter.html">filter</a> {</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  <a class="code" href="structherald_1_1analysis_1_1views_1_1filter.html">filter</a>(<span class="keyword">const</span> Pred&amp; pred) : pred(pred) {}</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  ~<a class="code" href="structherald_1_1analysis_1_1views_1_1filter.html">filter</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  Pred pred;</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;};</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160; </div>
-<div class="line"><a name="l00415"></a><span class="lineno"><a class="line" href="structherald_1_1analysis_1_1views_1_1to__view.html">  415</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structherald_1_1analysis_1_1views_1_1to__view.html">to_view</a> {</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  <a class="code" href="structherald_1_1analysis_1_1views_1_1to__view.html">to_view</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  ~<a class="code" href="structherald_1_1analysis_1_1views_1_1to__view.html">to_view</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Coll&gt;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  <span class="keyword">auto</span> operator()(Coll&amp; c) -&gt; <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;Coll,Pred&gt;</a> {</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;Coll,Pred&gt;</a>(c,pred);</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;  }</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  </div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> OtherColl, <span class="keyword">typename</span> OtherPred&gt; <span class="comment">// first argument must be l-value below</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  <span class="keyword">friend</span> <span class="keyword">auto</span> operator|(<a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;OtherColl,OtherPred&gt;</a> c,<a class="code" href="structherald_1_1analysis_1_1views_1_1filter.html">filter&lt;Pred&gt;</a> pred) -&gt; <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;OtherColl,dual_filter&lt;OtherPred,Pred&gt;</a>&gt; {</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;OtherColl,dual_filter&lt;OtherPred,Pred&gt;</a>&gt;(c.collection(),<a class="code" href="structherald_1_1analysis_1_1views_1_1dual__filter.html">dual_filter</a>(c.predicate(),pred.pred));</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  }</div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  <span class="comment">// convert something with a proxy (likely a filtered iterator proxy) into a view</span></div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> IterProxyT&gt;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  <span class="keyword">friend</span> <span class="keyword">auto</span> operator|(IterProxyT proxy,<a class="code" href="structherald_1_1analysis_1_1views_1_1to__view.html">to_view</a> <a class="code" href="structherald_1_1analysis_1_1views_1_1view.html">view</a>) -&gt; <a class="code" href="structherald_1_1analysis_1_1views_1_1view.html">herald::analysis::views::view&lt;IterProxyT&gt;</a> {</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structherald_1_1analysis_1_1views_1_1view.html">herald::analysis::views::view&lt;IterProxyT&gt;</a>(proxy);</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  }</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  </div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  <span class="comment">// template &lt;typename Coll,</span></div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  <span class="comment">//           typename IterProxyT = iterator_proxy&lt;Coll&gt;, </span></div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  <span class="comment">//           std::enable_if_t&lt;!std::is_same_v&lt;Coll,iterator_proxy&gt; &amp;&amp; !std::is_same_v&lt;Coll,filtered_iterator_proxy&gt;, bool&gt; = true</span></div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;  <span class="comment">//          &gt;</span></div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  <span class="comment">// friend auto operator|(Coll coll,to_view view) -&gt; herald::analysis::views::view&lt;IterProxyT&gt; {</span></div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  <span class="comment">//   return herald::analysis::views::view&lt;IterProxyT&gt;(iterator_proxy&lt;Coll&gt;(coll));</span></div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  <span class="comment">// }</span></div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  </div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> SampleT,</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;            std::size_t ListSize,</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            <span class="keyword">typename</span> IterProxyT = <a class="code" href="structherald_1_1analysis_1_1views_1_1iterator__proxy.html">iterator_proxy&lt;herald::analysis::sampling::SampleList&lt;SampleT,ListSize&gt;</a>&gt;</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;           &gt;</div>
-<div class="line"><a name="l00438"></a><span class="lineno"><a class="line" href="structherald_1_1analysis_1_1views_1_1to__view.html#a5bfa41c0df5445807cd5c18030a01780">  438</a></span>&#160;  <span class="keyword">friend</span> <span class="keyword">auto</span> <a class="code" href="structherald_1_1analysis_1_1views_1_1to__view.html#a5bfa41c0df5445807cd5c18030a01780">operator|</a>(<a class="code" href="structherald_1_1analysis_1_1sampling_1_1_sample_list.html">herald::analysis::sampling::SampleList&lt;SampleT,ListSize&gt;</a>&amp; coll,<a class="code" href="structherald_1_1analysis_1_1views_1_1to__view.html">to_view</a> <a class="code" href="structherald_1_1analysis_1_1views_1_1view.html">view</a>) -&gt; <a class="code" href="structherald_1_1analysis_1_1views_1_1view.html">herald::analysis::views::view&lt;IterProxyT&gt;</a> {</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structherald_1_1analysis_1_1views_1_1view.html">herald::analysis::views::view&lt;IterProxyT&gt;</a>(<a class="code" href="structherald_1_1analysis_1_1views_1_1iterator__proxy.html">iterator_proxy</a>&lt;<a class="code" href="structherald_1_1analysis_1_1sampling_1_1_sample_list.html">herald::analysis::sampling::SampleList&lt;SampleT,ListSize&gt;</a>&gt;(coll));</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  }</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;};</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160; </div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;} <span class="comment">// end namespace views</span></div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;}</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;}</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Coll&gt;</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  <span class="keyword">friend</span> <span class="keyword">auto</span> operator|(Coll&amp; c,<a class="code" href="structherald_1_1analysis_1_1views_1_1filter.html">filter&lt;Pred&gt;</a> pred) -&gt; <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;Coll,Pred&gt;</a> {</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">filtered_iterator_proxy&lt;Coll,Pred&gt;</a>(c,pred.pred);</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  }</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;  Pred pred;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;};</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
+<div class="line"><a name="l00430"></a><span class="lineno"><a class="line" href="structherald_1_1analysis_1_1views_1_1to__view.html">  430</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structherald_1_1analysis_1_1views_1_1to__view.html">to_view</a> {</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  <a class="code" href="structherald_1_1analysis_1_1views_1_1to__view.html">to_view</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  ~<a class="code" href="structherald_1_1analysis_1_1views_1_1to__view.html">to_view</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160; </div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  <span class="comment">// convert something with a proxy (likely a filtered iterator proxy) into a view</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> IterProxyT&gt;</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;  <span class="keyword">friend</span> <span class="keyword">auto</span> operator|(IterProxyT proxy,<a class="code" href="structherald_1_1analysis_1_1views_1_1to__view.html">to_view</a> <a class="code" href="structherald_1_1analysis_1_1views_1_1view.html">view</a>) -&gt; <a class="code" href="structherald_1_1analysis_1_1views_1_1view.html">herald::analysis::views::view&lt;IterProxyT&gt;</a> {</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structherald_1_1analysis_1_1views_1_1view.html">herald::analysis::views::view&lt;IterProxyT&gt;</a>(proxy);</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;  }</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;  </div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;  <span class="comment">// template &lt;typename Coll,</span></div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;  <span class="comment">//           typename IterProxyT = iterator_proxy&lt;Coll&gt;, </span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;  <span class="comment">//           std::enable_if_t&lt;!std::is_same_v&lt;Coll,iterator_proxy&gt; &amp;&amp; !std::is_same_v&lt;Coll,filtered_iterator_proxy&gt;, bool&gt; = true</span></div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;  <span class="comment">//          &gt;</span></div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;  <span class="comment">// friend auto operator|(Coll coll,to_view view) -&gt; herald::analysis::views::view&lt;IterProxyT&gt; {</span></div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  <span class="comment">//   return herald::analysis::views::view&lt;IterProxyT&gt;(iterator_proxy&lt;Coll&gt;(coll));</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;  <span class="comment">// }</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;  </div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> SampleT,</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;            std::size_t ListSize,</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;            <span class="keyword">typename</span> IterProxyT = <a class="code" href="structherald_1_1analysis_1_1views_1_1iterator__proxy.html">iterator_proxy&lt;herald::analysis::sampling::SampleList&lt;SampleT,ListSize&gt;</a>&gt;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;           &gt;</div>
+<div class="line"><a name="l00453"></a><span class="lineno"><a class="line" href="structherald_1_1analysis_1_1views_1_1to__view.html#a5bfa41c0df5445807cd5c18030a01780">  453</a></span>&#160;  <span class="keyword">friend</span> <span class="keyword">auto</span> <a class="code" href="structherald_1_1analysis_1_1views_1_1to__view.html#a5bfa41c0df5445807cd5c18030a01780">operator|</a>(<a class="code" href="structherald_1_1analysis_1_1sampling_1_1_sample_list.html">herald::analysis::sampling::SampleList&lt;SampleT,ListSize&gt;</a>&amp; coll,<a class="code" href="structherald_1_1analysis_1_1views_1_1to__view.html">to_view</a> <a class="code" href="structherald_1_1analysis_1_1views_1_1view.html">view</a>) -&gt; <a class="code" href="structherald_1_1analysis_1_1views_1_1view.html">herald::analysis::views::view&lt;IterProxyT&gt;</a> {</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structherald_1_1analysis_1_1views_1_1view.html">herald::analysis::views::view&lt;IterProxyT&gt;</a>(<a class="code" href="structherald_1_1analysis_1_1views_1_1iterator__proxy.html">iterator_proxy</a>&lt;<a class="code" href="structherald_1_1analysis_1_1sampling_1_1_sample_list.html">herald::analysis::sampling::SampleList&lt;SampleT,ListSize&gt;</a>&gt;(coll));</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;  }</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;};</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160; </div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;} <span class="comment">// end namespace views</span></div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;}</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;}</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160; </div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_date_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_date.html">herald::datatype::Date</a></div><div class="ttdef"><b>Definition:</b> date.h:18</div></div>
-<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Main Herald library include for C++ Native platforms.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
+<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Acts as a non-global memory arena for arbitrary classes.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
 <div class="ttc" id="astructherald_1_1analysis_1_1sampling_1_1_sample_html"><div class="ttname"><a href="structherald_1_1analysis_1_1sampling_1_1_sample.html">herald::analysis::sampling::Sample</a></div><div class="ttdoc">The Sample taken from an object with ID of type SampledID.</div><div class="ttdef"><b>Definition:</b> sampling.h:28</div></div>
 <div class="ttc" id="astructherald_1_1analysis_1_1sampling_1_1_sample_list_html"><div class="ttname"><a href="structherald_1_1analysis_1_1sampling_1_1_sample_list.html">herald::analysis::sampling::SampleList</a></div><div class="ttdef"><b>Definition:</b> sampling.h:102</div></div>
 <div class="ttc" id="astructherald_1_1analysis_1_1views_1_1dual__filter_html"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1dual__filter.html">herald::analysis::views::dual_filter</a></div><div class="ttdoc">dual or chained filter</div><div class="ttdef"><b>Definition:</b> ranges.h:47</div></div>
 <div class="ttc" id="astructherald_1_1analysis_1_1views_1_1filter__fn_html"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1filter__fn.html">herald::analysis::views::filter_fn</a></div><div class="ttdef"><b>Definition:</b> ranges.h:192</div></div>
-<div class="ttc" id="astructherald_1_1analysis_1_1views_1_1filter_html"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1filter.html">herald::analysis::views::filter</a></div><div class="ttdef"><b>Definition:</b> ranges.h:389</div></div>
-<div class="ttc" id="astructherald_1_1analysis_1_1views_1_1filtered__iterator__proxy_html"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">herald::analysis::views::filtered_iterator_proxy</a></div><div class="ttdef"><b>Definition:</b> ranges.h:281</div></div>
-<div class="ttc" id="astructherald_1_1analysis_1_1views_1_1filtered__iterator__proxy_html_aa530537faf74764ec8f4053aeafd19be"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html#aa530537faf74764ec8f4053aeafd19be">herald::analysis::views::filtered_iterator_proxy::operator++</a></div><div class="ttdeci">filtered_iterator_proxy&lt; Coll, Pred &gt; &amp; operator++()</div><div class="ttdoc">prefix operator</div><div class="ttdef"><b>Definition:</b> ranges.h:311</div></div>
+<div class="ttc" id="astructherald_1_1analysis_1_1views_1_1filter_html"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1filter.html">herald::analysis::views::filter</a></div><div class="ttdef"><b>Definition:</b> ranges.h:404</div></div>
+<div class="ttc" id="astructherald_1_1analysis_1_1views_1_1filtered__iterator__proxy_html"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html">herald::analysis::views::filtered_iterator_proxy</a></div><div class="ttdef"><b>Definition:</b> ranges.h:289</div></div>
+<div class="ttc" id="astructherald_1_1analysis_1_1views_1_1filtered__iterator__proxy_html_aa530537faf74764ec8f4053aeafd19be"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1filtered__iterator__proxy.html#aa530537faf74764ec8f4053aeafd19be">herald::analysis::views::filtered_iterator_proxy::operator++</a></div><div class="ttdeci">filtered_iterator_proxy&lt; Coll, Pred &gt; &amp; operator++()</div><div class="ttdoc">prefix operator</div><div class="ttdef"><b>Definition:</b> ranges.h:319</div></div>
 <div class="ttc" id="astructherald_1_1analysis_1_1views_1_1greater__than_html"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1greater__than.html">herald::analysis::views::greater_than</a></div><div class="ttdef"><b>Definition:</b> ranges.h:78</div></div>
 <div class="ttc" id="astructherald_1_1analysis_1_1views_1_1in__range_html"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1in__range.html">herald::analysis::views::in_range</a></div><div class="ttdef"><b>Definition:</b> ranges.h:63</div></div>
 <div class="ttc" id="astructherald_1_1analysis_1_1views_1_1iterator__proxy_html"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1iterator__proxy.html">herald::analysis::views::iterator_proxy</a></div><div class="ttdef"><b>Definition:</b> ranges.h:121</div></div>
 <div class="ttc" id="astructherald_1_1analysis_1_1views_1_1iterator__proxy_html_a24cb66e338d8fa1deebad640b54ce98f"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1iterator__proxy.html#a24cb66e338d8fa1deebad640b54ce98f">herald::analysis::views::iterator_proxy::operator++</a></div><div class="ttdeci">iterator_proxy&lt; Coll &gt; &amp; operator++()</div><div class="ttdoc">prefix operator</div><div class="ttdef"><b>Definition:</b> ranges.h:136</div></div>
 <div class="ttc" id="astructherald_1_1analysis_1_1views_1_1less__than_html"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1less__than.html">herald::analysis::views::less_than</a></div><div class="ttdef"><b>Definition:</b> ranges.h:92</div></div>
 <div class="ttc" id="astructherald_1_1analysis_1_1views_1_1since_html"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1since.html">herald::analysis::views::since</a></div><div class="ttdef"><b>Definition:</b> ranges.h:30</div></div>
-<div class="ttc" id="astructherald_1_1analysis_1_1views_1_1to__view_html"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1to__view.html">herald::analysis::views::to_view</a></div><div class="ttdef"><b>Definition:</b> ranges.h:415</div></div>
-<div class="ttc" id="astructherald_1_1analysis_1_1views_1_1to__view_html_a5bfa41c0df5445807cd5c18030a01780"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1to__view.html#a5bfa41c0df5445807cd5c18030a01780">herald::analysis::views::to_view::operator|</a></div><div class="ttdeci">friend auto operator|(herald::analysis::sampling::SampleList&lt; SampleT, ListSize &gt; &amp;coll, to_view view) -&gt; herald::analysis::views::view&lt; IterProxyT &gt;</div><div class="ttdoc">Convert an unfiltered source collection into a view.</div><div class="ttdef"><b>Definition:</b> ranges.h:438</div></div>
+<div class="ttc" id="astructherald_1_1analysis_1_1views_1_1to__view_html"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1to__view.html">herald::analysis::views::to_view</a></div><div class="ttdef"><b>Definition:</b> ranges.h:430</div></div>
+<div class="ttc" id="astructherald_1_1analysis_1_1views_1_1to__view_html_a5bfa41c0df5445807cd5c18030a01780"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1to__view.html#a5bfa41c0df5445807cd5c18030a01780">herald::analysis::views::to_view::operator|</a></div><div class="ttdeci">friend auto operator|(herald::analysis::sampling::SampleList&lt; SampleT, ListSize &gt; &amp;coll, to_view view) -&gt; herald::analysis::views::view&lt; IterProxyT &gt;</div><div class="ttdoc">Convert an unfiltered source collection into a view.</div><div class="ttdef"><b>Definition:</b> ranges.h:453</div></div>
 <div class="ttc" id="astructherald_1_1analysis_1_1views_1_1view_html"><div class="ttname"><a href="structherald_1_1analysis_1_1views_1_1view.html">herald::analysis::views::view</a></div><div class="ttdef"><b>Definition:</b> ranges.h:215</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

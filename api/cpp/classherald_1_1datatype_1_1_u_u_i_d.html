@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -84,12 +84,15 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b> = uin
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4059570d4cde308efdcc57f9f2987387"><td class="memItemLeft" align="right" valign="top"><a id="a4059570d4cde308efdcc57f9f2987387"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>UUID</b> (<a class="el" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a> &amp;&amp;from)</td></tr>
-<tr class="separator:a4059570d4cde308efdcc57f9f2987387"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac16ad24dd52912cdffee803ca1d01824"><td class="memItemLeft" align="right" valign="top"><a id="ac16ad24dd52912cdffee803ca1d01824"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>UUID</b> (const <a class="el" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a> &amp;from)</td></tr>
-<tr class="separator:ac16ad24dd52912cdffee803ca1d01824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af46c172e8be1cdd47e69f77729c5a767"><td class="memItemLeft" align="right" valign="top"><a id="af46c172e8be1cdd47e69f77729c5a767"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>UUID</b> (const char *from) noexcept</td></tr>
+<tr class="separator:af46c172e8be1cdd47e69f77729c5a767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee50a2de98179fb8e5251d8f0884856f"><td class="memItemLeft" align="right" valign="top"><a id="aee50a2de98179fb8e5251d8f0884856f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>UUID</b> (<a class="el" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a> &amp;&amp;from) noexcept</td></tr>
+<tr class="separator:aee50a2de98179fb8e5251d8f0884856f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97d37153ace3fe90634ec481ba1ae4ec"><td class="memItemLeft" align="right" valign="top"><a id="a97d37153ace3fe90634ec481ba1ae4ec"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>UUID</b> (const <a class="el" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a> &amp;from) noexcept</td></tr>
+<tr class="separator:a97d37153ace3fe90634ec481ba1ae4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af45b156a10fd728229725c14ff02cbcd"><td class="memItemLeft" align="right" valign="top"><a id="af45b156a10fd728229725c14ff02cbcd"></a>
 <a class="el" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a> &amp;other) noexcept</td></tr>
 <tr class="separator:af45b156a10fd728229725c14ff02cbcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,9 +129,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ed6b6c3dea919b92b36c827b3a1002f"><td class="memItemLeft" align="right" valign="top"><a id="a9ed6b6c3dea919b92b36c827b3a1002f"></a>
 static <a class="el" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a>&#160;</td><td class="memItemRight" valign="bottom"><b>fromString</b> (const std::string &amp;from) noexcept</td></tr>
 <tr class="separator:a9ed6b6c3dea919b92b36c827b3a1002f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12ae3a3f8b587ea31e693368a84a4587"><td class="memItemLeft" align="right" valign="top"><a id="a12ae3a3f8b587ea31e693368a84a4587"></a>
-static <a class="el" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a>&#160;</td><td class="memItemRight" valign="bottom"><b>random</b> (<a class="el" href="classherald_1_1datatype_1_1_randomness_generator.html">RandomnessGenerator</a> &amp;from) noexcept</td></tr>
-<tr class="separator:a12ae3a3f8b587ea31e693368a84a4587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4be486589a38f17aa2fc245a598e4e6"><td class="memTemplParams" colspan="2"><a id="af4be486589a38f17aa2fc245a598e4e6"></a>
+template&lt;typename RandomnessSourceT &gt; </td></tr>
+<tr class="memitem:af4be486589a38f17aa2fc245a598e4e6"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>random</b> (<a class="el" href="classherald_1_1datatype_1_1_randomness_generator.html">RandomnessGenerator</a>&lt; RandomnessSourceT &gt; &amp;from) noexcept</td></tr>
+<tr class="separator:af4be486589a38f17aa2fc245a598e4e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/git/skunkworks/herald-for-cpp/herald/include/herald/datatype/<a class="el" href="uuid_8h_source.html">uuid.h</a></li>

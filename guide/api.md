@@ -12,6 +12,7 @@ The APIs are all documented and can be found at the below locations:-
 - [Android JavaDoc API]({{"/api/android/index.html" | relative_url }})
 - [iOS Swift API]({{"/api/ios/index.html" | relative_url }})
 - [C++]({{"/api/cpp/namespaces.html" | relative_uri}})
+  - [C++ code coverage report]({{"/api/cpp-coverage/index.html" | relative_uri}})
 
 ## Class diagrams
 
