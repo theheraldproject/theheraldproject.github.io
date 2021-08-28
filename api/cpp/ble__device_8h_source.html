@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -74,156 +74,350 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef BLE_DEVICE_H</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define BLE_DEVICE_H</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef HERALD_BLE_DEVICE_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define HERALD_BLE_DEVICE_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;ble_tx_power.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;ble_mac_address.h&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../device.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../datatype/payload_data.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../datatype/payload_sharing_data.h&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../datatype/immediate_send_data.h&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../datatype/target_identifier.h&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;../datatype/time_interval.h&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;../datatype/date.h&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;../datatype/uuid.h&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;filter/ble_advert_parser.h&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;optional&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceherald.html">herald</a> {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>ble {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceherald_1_1datatype.html">herald::datatype</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">using namespace </span>herald::ble::filter;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">class </span>BLEDeviceDelegate; <span class="comment">// fwd decl</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;ble_sensor_configuration.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../device.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../datatype/payload_data.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../datatype/payload_sharing_data.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;../datatype/immediate_send_data.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;../datatype/target_identifier.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;../datatype/time_interval.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;../datatype/date.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;../datatype/uuid.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;filter/ble_advert_parser.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;variant&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;bitset&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceherald.html">herald</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">namespace </span>ble {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceherald_1_1datatype.html">herald::datatype</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">using namespace </span>herald::ble::filter;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">enum class</span> BLEDeviceAttribute : int {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  peripheral, state, operatingSystem, payloadData, rssi, txPower, immediateSendData</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">enum class</span> BLEDeviceOperatingSystem : int {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  android_tbc, android, ios_tbc, ios, ignore, shared, unknown</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">enum class</span> BLEDeviceState : int {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  connecting, connected, disconnected</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_b_l_e_device.html">   46</a></span>&#160;<span class="keyword">class </span><a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a> : <span class="keyword">public</span> <a class="code" href="classherald_1_1_device.html">Device</a>, <span class="keyword">public</span> std::enable_shared_from_this&lt;BLEDevice&gt; {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>(<a class="code" href="classherald_1_1datatype_1_1_target_identifier.html">TargetIdentifier</a> identifier, std::shared_ptr&lt;BLEDeviceDelegate&gt; delegate, <span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_date.html">Date</a>&amp; created = <a class="code" href="classherald_1_1datatype_1_1_date.html">Date</a>());</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>&amp; other); <span class="comment">// copy ctor</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>(<a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>&amp;&amp; other) = <span class="keyword">delete</span>; <span class="comment">// remove move constructor</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  ~<a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>&amp; other); <span class="comment">// copy assign</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a> operator=(<a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a> &amp;&amp; other) = <span class="keyword">delete</span>; <span class="comment">// remove mode assign</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_target_identifier.html">TargetIdentifier</a>&amp; identifier() <span class="keyword">const override</span>; <span class="comment">// MAC ADDRESS OR PSEUDO DEVICE ADDRESS</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_date.html">Date</a> created() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="comment">// basic descriptors</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  std::string description() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keyword">operator</span> std::string() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="comment">// GENERAL BLUETOOTH STATE</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_time_interval.html">TimeInterval</a> timeIntervalSinceLastUpdate() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_time_interval.html">TimeInterval</a> timeIntervalSinceConnected() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="comment">// TODO add in generic Advert and GATT handle number information caching here</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">bool</span> hasAdvertData() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordtype">void</span> advertData(std::vector&lt;BLEAdvertSegment&gt; segments);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  std::vector&lt;BLEAdvertSegment&gt;&amp; advertData() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_b_l_e_device.html#af4485ac52b3cb94c50eaedd55cb290b1">   74</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html#af4485ac52b3cb94c50eaedd55cb290b1">hasServicesSet</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_b_l_e_device.html#ae58a9d3d605c91e51dce16666e169422">   76</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html#ae58a9d3d605c91e51dce16666e169422">services</a>(std::vector&lt;UUID&gt; services);</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_b_l_e_device.html#afe85d00d70919f6b90ec8dbcbe1e7236">   78</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html#afe85d00d70919f6b90ec8dbcbe1e7236">hasService</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a>&amp; serviceUUID) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  std::optional&lt;BLEDeviceState&gt; state() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">void</span> state(BLEDeviceState newState);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="comment">// TODO decide if operatingSystem is relevant anymore???</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  std::optional&lt;BLEDeviceOperatingSystem&gt; operatingSystem() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">void</span> operatingSystem(BLEDeviceOperatingSystem newOS);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">class </span>BLEDeviceDelegate; <span class="comment">// fwd decl</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">enum class</span> BLEDeviceAttribute : int {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  peripheral, state, operatingSystem, payloadData, rssi, txPower, immediateSendData</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">enum class</span> BLEDeviceOperatingSystem : int {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  android_tbc, android, ios_tbc, ios, ignore, shared, unknown</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">enum class</span> BLEDeviceState : int {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  uninitialised, <span class="comment">/* Uninitialised state only seen within Herald, not seen by those listing devices in a DB */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  connecting, connected, disconnected</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">enum class</span> BLEInternalState : short {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  discovered,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  filtered,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  has_potential,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  relevant,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  identified,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  timed_out</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">enum class</span> BLELegacyService : short {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  NotApplicable, <span class="comment">// i.e. Herald</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  Unknown, <span class="comment">// i.e. other</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  OpenTrace,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  AustraliaCovidSafe</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="comment">// TODO others later (up to 7 values plus Unknown and NotApplicable)</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">namespace </span>SignalCharacteristicType {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  constexpr <span class="keywordtype">bool</span> SpecCompliant = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  constexpr <span class="keywordtype">bool</span> NotSpecCompliant = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_b_l_e_device_flags.html">   80</a></span>&#160;<span class="keyword">class </span><a class="code" href="classherald_1_1ble_1_1_b_l_e_device_flags.html">BLEDeviceFlags</a> {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_b_l_e_device_flags.html">BLEDeviceFlags</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  ~<a class="code" href="classherald_1_1ble_1_1_b_l_e_device_flags.html">BLEDeviceFlags</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">void</span> reset();</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  std::optional&lt;RSSI&gt; rssi() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">void</span> rssi(<a class="code" href="classherald_1_1datatype_1_1_r_s_s_i.html">RSSI</a> newRSSI);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  BLEInternalState internalState() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">void</span> internalState(BLEInternalState newInternalState);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  std::optional&lt;BLETxPower&gt; txPower() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordtype">void</span> txPower(BLETxPower newPower);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  BLEDeviceState state() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordtype">void</span> state(BLEDeviceState newState);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="comment">// NOTE May need a herald specific version of this, as we may wish a herald device to only receive or transmit</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">bool</span> receiveOnly() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordtype">void</span> receiveOnly(<span class="keywordtype">bool</span> newReceiveOnly);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="comment">// HERALD PROTOCOL SPECIFIC STATE - TODO HIDE THESE FROM SENSOR/EXTERNAL CALLS</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="comment">// timing related getters</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_time_interval.html">TimeInterval</a> timeIntervalSinceLastPayloadDataUpdate() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_time_interval.html">TimeInterval</a> timeIntervalSinceLastWritePayloadSharing() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_time_interval.html">TimeInterval</a> timeIntervalSinceLastWritePayload() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_time_interval.html">TimeInterval</a> timeIntervalSinceLastWriteRssi() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_time_interval.html">TimeInterval</a> timeIntervalUntilIgnoreExpired() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  std::optional&lt;UUID&gt; signalCharacteristic() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">void</span> signalCharacteristic(<a class="code" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a> newChar);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  std::optional&lt;UUID&gt; payloadCharacteristic() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordtype">void</span> payloadCharacteristic(<a class="code" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a> newChar);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  std::optional&lt;BLEMacAddress&gt; pseudoDeviceAddress() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordtype">void</span> pseudoDeviceAddress(<a class="code" href="classherald_1_1ble_1_1_b_l_e_mac_address.html">BLEMacAddress</a> newAddress);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  std::optional&lt;PayloadData&gt; payloadData() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordtype">void</span> payloadData(<a class="code" href="classherald_1_1datatype_1_1_payload_data.html">PayloadData</a> newPayloadData);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  std::optional&lt;ImmediateSendData&gt; immediateSendData() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordtype">void</span> immediateSendData(<a class="code" href="classherald_1_1datatype_1_1_immediate_send_data.html">ImmediateSendData</a> toSend);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordtype">void</span> clearImmediateSendData();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="comment">// State engine methods - Herald specific</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordtype">bool</span> ignore() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordtype">void</span> ignore(<span class="keywordtype">bool</span> newIgnore);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordtype">void</span> invalidateCharacteristics();</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordtype">void</span> registerDiscovery(<a class="code" href="classherald_1_1datatype_1_1_date.html">Date</a> at); <span class="comment">// ALWAYS externalise time (now())</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordtype">void</span> registerWritePayload(<a class="code" href="classherald_1_1datatype_1_1_date.html">Date</a> at); <span class="comment">// ALWAYS externalise time (now())</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordtype">void</span> registerWritePayloadSharing(<a class="code" href="classherald_1_1datatype_1_1_date.html">Date</a> at); <span class="comment">// ALWAYS externalise time (now())</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordtype">void</span> registerWriteRssi(<a class="code" href="classherald_1_1datatype_1_1_date.html">Date</a> at); <span class="comment">// ALWAYS externalise time (now())</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keyword">class </span>Impl;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  std::unique_ptr&lt;Impl&gt; mImpl;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;};</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;} <span class="comment">// end namespace</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;} <span class="comment">// end namespace</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  BLEDeviceOperatingSystem operatingSystem() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">void</span> operatingSystem(BLEDeviceOperatingSystem newOS);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordtype">bool</span> hasHeraldService() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordtype">void</span> hasHeraldService(<span class="keywordtype">bool</span> newValue);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">bool</span> hasLegacyService() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  BLELegacyService legacyService() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordtype">void</span> legacyService(BLELegacyService newValue);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">bool</span> hasPayloadCharacteristic() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordtype">void</span> hasPayloadCharacteristic(<span class="keywordtype">bool</span> newValue);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">bool</span> signalCharacteristic() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">void</span> signalCharacteristic(<span class="keywordtype">bool</span> newValue);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">bool</span> hasSecureCharacteristic() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">void</span> hasSecureCharacteristic(<span class="keywordtype">bool</span> newValue);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">bool</span> hasEverConnected() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordtype">void</span> hasEverConnected(<span class="keywordtype">bool</span> newValue);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="comment">// Note: Bit fields merged into a single class</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="comment">//unsigned short int bitfields; // at least 16 bits (usually always 16 bits)</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  std::bitset&lt;16&gt; bitFields; <span class="comment">// will always consume sets of 8 bits, so round up</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="comment">// 0 = BLEInternalState field 1</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="comment">// 1 = BLEInternalState field 2</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="comment">// 2 = BLEInternalState field 3</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="comment">// 3 = BLEDeviceState field 1</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="comment">// 4 = BLEDeviceState field 2</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="comment">// 5 = BLEDeviceOperatingSystem field 1</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="comment">// 6 = BLEDeviceOperatingSystem field 2</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="comment">// 7 = BLEDeviceOperatingSystem field 3</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="comment">// 8 = hasHeraldService</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="comment">// 9 = hasLegacyService field 1</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="comment">// 10 = hasLegacyService field 2</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="comment">// 11 = hasLegacyService field 3</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="comment">// 12 = hasPayloadChar</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="comment">// 13 = hasSignalChar</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="comment">// 14 = hasSecureChar</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="comment">// 15 = hasEverConnected</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;};</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="structherald_1_1ble_1_1_discovered_state.html">  132</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structherald_1_1ble_1_1_discovered_state.html">DiscoveredState</a> {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  std::vector&lt;BLEAdvertSegment&gt; segments; <span class="comment">// TODO change to fixed size containers</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;};</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">using</span> FilteredState = std::monostate;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment">// struct HasPotentialState {</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">//   BLEDeviceState state;</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">//   BLEDeviceOperatingSystem os;</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">//   BLETxPower txPower;</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">//   TimeInterval ignoreForDuration; // QN isn&#39;t this used in fetch payload stage?</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">//   Date ignoreUntil; // QN isn&#39;t this used in fetch payload stage?</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">//   std::vector&lt;UUID&gt; services; // TODO can we not just make this ephemeral?</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment">//   bool hasEverConnected;</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment">//   int connectRepeatedFailures;</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment">// };</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="structherald_1_1ble_1_1_relevant_state.html">  151</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structherald_1_1ble_1_1_relevant_state.html">RelevantState</a> {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <a class="code" href="structherald_1_1ble_1_1_relevant_state.html">RelevantState</a>()</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;   : txPower(0), </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;     ignoreForDuration(0),</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;     ignoreUntil(0),</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;     pseudoAddress(),</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;     connectRepeatedFailures(0),</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;     payloadUpdated(0)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  {}</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  BLETxPower txPower;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_time_interval.html">TimeInterval</a> ignoreForDuration; <span class="comment">// Isn&#39;t this TIME^connectRepeatedFailures?</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_date.html">Date</a> ignoreUntil;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_b_l_e_mac_address.html">BLEMacAddress</a> pseudoAddress; <span class="comment">// all zeros if unset (also OS is not Android)</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span> connectRepeatedFailures;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_date.html">Date</a> payloadUpdated; <span class="comment">// Note only use if state is Identified, not just Relevant</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;};</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="comment">// struct IdentifiedState {</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment">//   BLETxPower txPower;</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">//   BLEMacAddress pseudoAddress; // QN Isn&#39;t this available from advert stage?</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="comment">//   unsigned short  connectRepeatedFailures;</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment">// };</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_b_l_e_device.html">  181</a></span>&#160;<span class="keyword">class </span><a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a> : <span class="keyword">public</span> <a class="code" href="classherald_1_1_device.html">Device</a> {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>(); <span class="comment">// Used for array initialisation, uses dummy static config ONLY</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>(<a class="code" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html">BLESensorConfiguration</a>&amp; config);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>(<a class="code" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html">BLESensorConfiguration</a>&amp; config,<a class="code" href="classherald_1_1ble_1_1_b_l_e_device_delegate.html">BLEDeviceDelegate</a>&amp; delegate, <span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_date.html">Date</a>&amp; created = <a class="code" href="classherald_1_1datatype_1_1_date.html">Date</a>()); <span class="comment">// default (uninitialised state) constructor</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>(<a class="code" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html">BLESensorConfiguration</a>&amp; config,<a class="code" href="classherald_1_1datatype_1_1_target_identifier.html">TargetIdentifier</a> identifier, <a class="code" href="classherald_1_1ble_1_1_b_l_e_device_delegate.html">BLEDeviceDelegate</a>&amp; delegate, <span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_date.html">Date</a>&amp; created = <a class="code" href="classherald_1_1datatype_1_1_date.html">Date</a>());</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>&amp; other); <span class="comment">// copy ctor</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>(<a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>&amp;&amp; other) = <span class="keyword">delete</span>; <span class="comment">// remove move constructor</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  ~<a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_b_l_e_device.html#a789360e76a5e1fd87fed91321ef3d24f">  192</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html#a789360e76a5e1fd87fed91321ef3d24f">reset</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_target_identifier.html">TargetIdentifier</a>&amp; newID, <a class="code" href="classherald_1_1ble_1_1_b_l_e_device_delegate.html">BLEDeviceDelegate</a>&amp; newDelegate);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>&amp; other); <span class="comment">// copy assign</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a> operator=(<a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a> &amp;&amp; other) = <span class="keyword">delete</span>; <span class="comment">// remove mode assign</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>&amp; other) <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html">BLEDevice</a>&amp; other) <span class="keyword">const</span> noexcept;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_b_l_e_device.html#a240ff5f9085a91b796fa2de24b294804">  201</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html">BLESensorConfiguration</a>&amp; <a class="code" href="classherald_1_1ble_1_1_b_l_e_device.html#a240ff5f9085a91b796fa2de24b294804">configuration</a>() const noexcept;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  const <a class="code" href="classherald_1_1datatype_1_1_target_identifier.html">TargetIdentifier</a>&amp; identifier() const override; <span class="comment">// MAC ADDRESS OR PSEUDO DEVICE ADDRESS</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordtype">void</span> identifier(const <a class="code" href="classherald_1_1datatype_1_1_target_identifier.html">TargetIdentifier</a>&amp;) override; <span class="comment">// MAC ADDRESS OR PSEUDO DEVICE ADDRESS</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="comment">// Date created() const override; // TODO unused, consider removing</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <span class="comment">// basic descriptors</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <a class="code" href="namespacestd.html">std</a>::<span class="keywordtype">string</span> description() const;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  operator <a class="code" href="namespacestd.html">std</a>::<span class="keywordtype">string</span>() const;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="comment">// GENERAL BLUETOOTH STATE</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_time_interval.html">TimeInterval</a> timeIntervalSinceLastUpdate() const override;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="comment">// TimeInterval timeIntervalSinceConnected() const; // TODO unused, consider removing</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  <span class="comment">// TODO add in generic Advert and GATT handle number information caching here</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <span class="comment">// bool hasAdvertData() const; // TODO unused, consider removing</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <span class="keywordtype">void</span> advertData(<a class="code" href="namespacestd.html">std</a>::vector&lt;<a class="code" href="structherald_1_1ble_1_1filter_1_1_b_l_e_advert_segment.html">BLEAdvertSegment</a>&gt; segments); <span class="comment">// TODO getter unused, so consider removing</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="comment">// const std::vector&lt;BLEAdvertSegment&gt;&amp; advertData() const; // TODO unused, consider removing</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <span class="comment">// bool hasServicesSet() const; // TODO unused, consider removing</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_b_l_e_device.html#ae58a9d3d605c91e51dce16666e169422">  224</a></span>&#160;<span class="comment"></span>  <span class="keywordtype">void</span> services(<a class="code" href="namespacestd.html">std</a>::vector&lt;<a class="code" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a>&gt; services);</div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="classherald_1_1ble_1_1_b_l_e_device.html#afe85d00d70919f6b90ec8dbcbe1e7236">  226</a></span>&#160;  <span class="keywordtype">bool</span> hasService(const <a class="code" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a>&amp; serviceUUID) const;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  BLEDeviceState state() const;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="keywordtype">void</span> state(BLEDeviceState newState);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  <span class="comment">// TODO decide if operatingSystem is relevant anymore??? - change it to BluetoothComplianceFlag?</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  BLEDeviceOperatingSystem operatingSystem() const;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="keywordtype">void</span> operatingSystem(BLEDeviceOperatingSystem newOS);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_r_s_s_i.html">RSSI</a> rssi() const;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordtype">void</span> rssi(<a class="code" href="classherald_1_1datatype_1_1_r_s_s_i.html">RSSI</a> newRSSI);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <a class="code" href="namespacestd.html">std</a>::optional&lt;BLETxPower&gt; txPower() const;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keywordtype">void</span> txPower(BLETxPower newPower);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <span class="comment">// NOTE May need a herald specific version of this, as we may wish a herald device to only receive or transmit</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <span class="comment">// bool receiveOnly() const;</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="comment">// void receiveOnly(bool newReceiveOnly);</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="comment">// HERALD PROTOCOL SPECIFIC STATE - TODO HIDE THESE FROM SENSOR/EXTERNAL CALLS</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="comment">// timing related getters</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_time_interval.html">TimeInterval</a> timeIntervalSinceLastPayloadDataUpdate() const; <span class="comment">// TODO unused, consider removing</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_time_interval.html">TimeInterval</a> timeIntervalSinceLastWritePayloadSharing() const; <span class="comment">// TODO unused, consider removing</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_time_interval.html">TimeInterval</a> timeIntervalSinceLastWritePayload() const; <span class="comment">// TODO unused, consider removing</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_time_interval.html">TimeInterval</a> timeIntervalSinceLastWriteRssi() const; <span class="comment">// TODO unused, consider removing</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_time_interval.html">TimeInterval</a> timeIntervalUntilIgnoreExpired() const; <span class="comment">// TODO unused, consider removing</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <a class="code" href="namespacestd.html">std</a>::optional&lt;<a class="code" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a>&gt; signalCharacteristic() const;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="keywordtype">void</span> signalCharacteristic(<a class="code" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a> newChar);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <a class="code" href="namespacestd.html">std</a>::optional&lt;<a class="code" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a>&gt; payloadCharacteristic() const; <span class="comment">// TODO unused, consider removing (Needed for interop?)</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keywordtype">void</span> payloadCharacteristic(<a class="code" href="classherald_1_1datatype_1_1_u_u_i_d.html">UUID</a> newChar); <span class="comment">// TODO unused, consider removing (Needed for interop?)</span></div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <a class="code" href="namespacestd.html">std</a>::optional&lt;<a class="code" href="classherald_1_1ble_1_1_b_l_e_mac_address.html">BLEMacAddress</a>&gt; pseudoDeviceAddress() const;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="keywordtype">void</span> pseudoDeviceAddress(<a class="code" href="classherald_1_1ble_1_1_b_l_e_mac_address.html">BLEMacAddress</a> newAddress);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_payload_data.html">PayloadData</a> payloadData() const;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="keywordtype">void</span> payloadData(<a class="code" href="classherald_1_1datatype_1_1_payload_data.html">PayloadData</a> newPayloadData);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <span class="comment">// std::optional&lt;ImmediateSendData&gt; immediateSendData() const;</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="comment">// void immediateSendData(ImmediateSendData toSend);</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="comment">// void clearImmediateSendData();</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="comment">// State engine methods - Herald specific</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keywordtype">bool</span> ignore() const;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="keywordtype">void</span> ignore(<span class="keywordtype">bool</span> newIgnore);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keywordtype">void</span> invalidateCharacteristics();</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <span class="keywordtype">void</span> registerDiscovery(<a class="code" href="classherald_1_1datatype_1_1_date.html">Date</a> at); <span class="comment">// ALWAYS externalise time (now())</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <span class="comment">// void registerWritePayload(Date at); // ALWAYS externalise time (now())</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="comment">// void registerWritePayloadSharing(Date at); // ALWAYS externalise time (now())</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="comment">// void registerWriteRssi(Date at); // ALWAYS externalise time (now())</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;private:</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  static <a class="code" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html">BLESensorConfiguration</a> staticConfig; <span class="comment">// Used by empty constructor for array construction ONLY</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <a class="code" href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html">BLESensorConfiguration</a>&amp; conf; <span class="comment">// allows this class to minimise its memory storage space</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <a class="code" href="namespacestd.html">std</a>::optional&lt;<a class="code" href="namespacestd.html">std</a>::reference_wrapper&lt;<a class="code" href="classherald_1_1ble_1_1_b_l_e_device_delegate.html">BLEDeviceDelegate</a>&gt;&gt; delegate; <span class="comment">// Optional to avoid catch-22</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_target_identifier.html">TargetIdentifier</a> <span class="keywordtype">id</span>; <span class="comment">// Mac address // TODO replace this here with a hash</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <a class="code" href="classherald_1_1ble_1_1_b_l_e_device_flags.html">BLEDeviceFlags</a> flags; <span class="comment">// merging of several enums and fields to save memory</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="comment">// BLEInternalState internalState; // used for selection of union below</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="comment">// BLEDeviceOperatingSystem os;</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="comment">// BLEDeviceState state;</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="comment">// Data holders</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <span class="comment">// Date mCreated;</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <span class="comment">// std::optional&lt;Date&gt; lastUpdated;</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_date.html">Date</a> lastUpdated; <span class="comment">// Merges mCreated and lastUpdated</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="comment">// \brief RelevantState is used for hasPotential, relevant and identified</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  <a class="code" href="namespacestd.html">std</a>::variant&lt;<a class="code" href="structherald_1_1ble_1_1_discovered_state.html">DiscoveredState</a>, FilteredState, <a class="code" href="structherald_1_1ble_1_1_relevant_state.html">RelevantState</a>&gt; stateData;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  <span class="comment">// std::optional&lt;BLEDeviceState&gt; mState; // hasPotential, relevant, identified</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  <span class="comment">// std::optional&lt;BLEDeviceOperatingSystem&gt; os; // hasPotential, relevant, identified</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_payload_data.html">PayloadData</a> payload; <span class="comment">// TODO make ephemeral (other than ID portion) - identified</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  <span class="comment">// std::optional&lt;ImmediateSendData&gt; mImmediateSendData; // TODO make ephemeral - identified</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_r_s_s_i.html">RSSI</a> mRssi; <span class="comment">// TODO make ephemeral - all</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  <span class="comment">// std::optional&lt;BLETxPower&gt; mTxPower; // hasPotential, relevant, identified</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  <span class="comment">// bool mReceiveOnly; // TODO make convenience method based on other settings</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="comment">// // TODO simplify these three into their own state option (union)</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  <span class="comment">// bool mIgnore; // filtered</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="comment">// std::optional&lt;TimeInterval&gt; ignoreForDuration; // hasPotential</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="comment">// std::optional&lt;Date&gt; ignoreUntil; // hasPotential</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="comment">// // TODO key these to an external limited list of characteristics</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="comment">// std::optional&lt;UUID&gt; mPayloadCharacteristic; // relevant</span></div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  <span class="comment">// std::optional&lt;UUID&gt; mSignalCharacteristic; // relevant</span></div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  <span class="comment">// std::optional&lt;BLEMacAddress&gt; pseudoAddress; // relevant, identified</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  <span class="comment">// // Remove these as we don&#39;t support writing from C++ (there&#39;s no need - read works solidly)</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  <span class="comment">// std::optional&lt;Date&gt; lastWriteRssiAt;</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  <span class="comment">// std::optional&lt;Date&gt; lastWritePayloadAt;</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <span class="comment">// std::optional&lt;Date&gt; lastWritePayloadSharingAt;</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  <span class="comment">// // std::optional&lt;Date&gt; lastDiscoveredAt; // TODO remove - This is always the same as the last RSSI (i.e. lastUpdated) date</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  <span class="comment">// std::optional&lt;Date&gt; connected; // merge with hasEverConnected</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  <span class="comment">// std::optional&lt;Date&gt; payloadUpdated;</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <span class="comment">// // TODO make this ephemeral</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  <span class="comment">// std::optional&lt;std::vector&lt;BLEAdvertSegment&gt;&gt; segments; // discovered</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  <span class="comment">// // TODO limit this to a key to the detected service ID (Herald or other. Prefer Herald)</span></div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  <span class="comment">// std::optional&lt;std::vector&lt;UUID&gt;&gt; mServices; // hasPotential, relevant</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <span class="comment">// bool hasEverConnected; // hasPotential, relevant</span></div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  <span class="comment">// int connectRepeatedFailures; // hasPotential, relevant</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;};</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;} <span class="comment">// end namespace</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;} <span class="comment">// end namespace</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassherald_1_1_device_html"><div class="ttname"><a href="classherald_1_1_device.html">herald::Device</a></div><div class="ttdoc">Generic abstraction of a particular local proximate device type.</div><div class="ttdef"><b>Definition:</b> device.h:27</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_device_html"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_device.html">herald::ble::BLEDevice</a></div><div class="ttdef"><b>Definition:</b> ble_device.h:46</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_device_html_ae58a9d3d605c91e51dce16666e169422"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_device.html#ae58a9d3d605c91e51dce16666e169422">herald::ble::BLEDevice::services</a></div><div class="ttdeci">void services(std::vector&lt; UUID &gt; services)</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_device_html_af4485ac52b3cb94c50eaedd55cb290b1"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_device.html#af4485ac52b3cb94c50eaedd55cb290b1">herald::ble::BLEDevice::hasServicesSet</a></div><div class="ttdeci">bool hasServicesSet() const</div></div>
-<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_device_html_afe85d00d70919f6b90ec8dbcbe1e7236"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_device.html#afe85d00d70919f6b90ec8dbcbe1e7236">herald::ble::BLEDevice::hasService</a></div><div class="ttdeci">bool hasService(const UUID &amp;serviceUUID) const</div></div>
+<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_device_delegate_html"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_device_delegate.html">herald::ble::BLEDeviceDelegate</a></div><div class="ttdef"><b>Definition:</b> ble_device_delegate.h:13</div></div>
+<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_device_flags_html"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_device_flags.html">herald::ble::BLEDeviceFlags</a></div><div class="ttdoc">INTERNAL Herald class used to minimise the memory footprint with hundreds of devices nearby.</div><div class="ttdef"><b>Definition:</b> ble_device.h:80</div></div>
+<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_device_html"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_device.html">herald::ble::BLEDevice</a></div><div class="ttdef"><b>Definition:</b> ble_device.h:181</div></div>
+<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_device_html_a240ff5f9085a91b796fa2de24b294804"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_device.html#a240ff5f9085a91b796fa2de24b294804">herald::ble::BLEDevice::configuration</a></div><div class="ttdeci">const BLESensorConfiguration &amp; configuration() const noexcept</div><div class="ttdoc">Returns the BLESensorConfiguration reference relating to this instance.</div></div>
+<div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_device_html_a789360e76a5e1fd87fed91321ef3d24f"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_device.html#a789360e76a5e1fd87fed91321ef3d24f">herald::ble::BLEDevice::reset</a></div><div class="ttdeci">void reset(const TargetIdentifier &amp;newID, BLEDeviceDelegate &amp;newDelegate)</div><div class="ttdoc">Resets the device to what it's state would be if just constructed. Allows re-use in fixed size contai...</div></div>
 <div class="ttc" id="aclassherald_1_1ble_1_1_b_l_e_mac_address_html"><div class="ttname"><a href="classherald_1_1ble_1_1_b_l_e_mac_address.html">herald::ble::BLEMacAddress</a></div><div class="ttdef"><b>Definition:</b> ble_mac_address.h:18</div></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_date_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_date.html">herald::datatype::Date</a></div><div class="ttdef"><b>Definition:</b> date.h:18</div></div>
-<div class="ttc" id="aclassherald_1_1datatype_1_1_immediate_send_data_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_immediate_send_data.html">herald::datatype::ImmediateSendData</a></div><div class="ttdef"><b>Definition:</b> immediate_send_data.h:13</div></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_payload_data_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_payload_data.html">herald::datatype::PayloadData</a></div><div class="ttdef"><b>Definition:</b> payload_data.h:13</div></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_r_s_s_i_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_r_s_s_i.html">herald::datatype::RSSI</a></div><div class="ttdef"><b>Definition:</b> rssi.h:14</div></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_target_identifier_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_target_identifier.html">herald::datatype::TargetIdentifier</a></div><div class="ttdef"><b>Definition:</b> target_identifier.h:17</div></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_time_interval_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_time_interval.html">herald::datatype::TimeInterval</a></div><div class="ttdef"><b>Definition:</b> time_interval.h:19</div></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_u_u_i_d_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_u_u_i_d.html">herald::datatype::UUID</a></div><div class="ttdef"><b>Definition:</b> uuid.h:18</div></div>
 <div class="ttc" id="anamespaceherald_1_1datatype_html"><div class="ttname"><a href="namespaceherald_1_1datatype.html">herald::datatype</a></div><div class="ttdoc">Contains all low-level Herald datatype implementations.</div><div class="ttdef"><b>Definition:</b> base64_string.h:14</div></div>
-<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Main Herald library include for C++ Native platforms.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
+<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Acts as a non-global memory arena for arbitrary classes.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> data.h:562</div></div>
+<div class="ttc" id="astructherald_1_1ble_1_1_b_l_e_sensor_configuration_html"><div class="ttname"><a href="structherald_1_1ble_1_1_b_l_e_sensor_configuration.html">herald::ble::BLESensorConfiguration</a></div><div class="ttdoc">Defines BLE sensor configuration data, e.g. service and characteristic UUIDs.</div><div class="ttdef"><b>Definition:</b> ble_sensor_configuration.h:23</div></div>
+<div class="ttc" id="astructherald_1_1ble_1_1_discovered_state_html"><div class="ttname"><a href="structherald_1_1ble_1_1_discovered_state.html">herald::ble::DiscoveredState</a></div><div class="ttdef"><b>Definition:</b> ble_device.h:132</div></div>
+<div class="ttc" id="astructherald_1_1ble_1_1_relevant_state_html"><div class="ttname"><a href="structherald_1_1ble_1_1_relevant_state.html">herald::ble::RelevantState</a></div><div class="ttdef"><b>Definition:</b> ble_device.h:151</div></div>
+<div class="ttc" id="astructherald_1_1ble_1_1filter_1_1_b_l_e_advert_segment_html"><div class="ttname"><a href="structherald_1_1ble_1_1filter_1_1_b_l_e_advert_segment.html">herald::ble::filter::BLEAdvertSegment</a></div><div class="ttdef"><b>Definition:</b> ble_advert_types.h:55</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

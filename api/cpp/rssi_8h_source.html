@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -70,12 +70,12 @@ $(function() {
 <div class="title">rssi.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//  Copyright 2020 VMware, Inc.</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//  Copyright 2020-2021 Herald Project Contributors</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef RSSI_H</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define RSSI_H</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef HERALD_RSSI_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define HERALD_RSSI_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
@@ -113,16 +113,15 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">int</span> intValue() <span class="keyword">const</span> noexcept;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">class </span>Impl;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  std::unique_ptr&lt;Impl&gt; mImpl;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">int</span> value;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;} <span class="comment">// end namespace</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;} <span class="comment">// end namespace</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;} <span class="comment">// end namespace</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_r_s_s_i_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_r_s_s_i.html">herald::datatype::RSSI</a></div><div class="ttdef"><b>Definition:</b> rssi.h:14</div></div>
-<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Main Herald library include for C++ Native platforms.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
+<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Acts as a non-global memory arena for arbitrary classes.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

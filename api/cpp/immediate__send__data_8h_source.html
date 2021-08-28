@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -70,22 +70,22 @@ $(function() {
 <div class="title">immediate_send_data.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//  Copyright 2020 VMware, Inc.</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//  Copyright 2020-2021 Herald Project Contributors</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef IMMEDIATE_SEND_DATA_H</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define IMMEDIATE_SEND_DATA_H</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef HERALD_IMMEDIATE_SEND_DATA_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define HERALD_IMMEDIATE_SEND_DATA_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;data.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceherald.html">herald</a> {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>datatype {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_immediate_send_data.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classherald_1_1datatype_1_1_immediate_send_data.html">ImmediateSendData</a> : <span class="keyword">public</span> <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_immediate_send_data.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classherald_1_1datatype_1_1_immediate_send_data.html">ImmediateSendData</a> : <span class="keyword">public</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">Data</a> {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_immediate_send_data.html">ImmediateSendData</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_immediate_send_data.html">ImmediateSendData</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>&amp; from);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_immediate_send_data.html">ImmediateSendData</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">Data</a>&amp; from);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  ~<a class="code" href="classherald_1_1datatype_1_1_immediate_send_data.html">ImmediateSendData</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
@@ -93,9 +93,9 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;} <span class="comment">// end namespace</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassherald_1_1datatype_1_1_data_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_data.html">herald::datatype::Data</a></div><div class="ttdoc">The main data workhorse class of the Herald API.</div><div class="ttdef"><b>Definition:</b> data.h:24</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html">herald::datatype::DataRef</a></div><div class="ttdoc">The main data workhorse class of the Herald API.</div><div class="ttdef"><b>Definition:</b> data.h:33</div></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_immediate_send_data_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_immediate_send_data.html">herald::datatype::ImmediateSendData</a></div><div class="ttdef"><b>Definition:</b> immediate_send_data.h:13</div></div>
-<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Main Herald library include for C++ Native platforms.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
+<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Acts as a non-global memory arena for arbitrary classes.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

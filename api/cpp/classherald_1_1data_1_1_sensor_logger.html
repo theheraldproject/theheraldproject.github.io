@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>herald: herald::data::SensorLogger Class Reference</title>
+<title>herald: herald::data::SensorLogger&lt; LoggingSinkT &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -70,27 +70,39 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classherald_1_1data_1_1_sensor_logger-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">herald::data::SensorLogger Class Reference</div>  </div>
+<div class="title">herald::data::SensorLogger&lt; LoggingSinkT &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7fd617cad89e85086f010d3fb7ce49b6"><td class="memItemLeft" align="right" valign="top"><a id="a7fd617cad89e85086f010d3fb7ce49b6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SensorLogger</b> (const std::shared_ptr&lt; <a class="el" href="classherald_1_1_context.html">Context</a> &gt; &amp;ctx, std::string subsystem, std::string category)</td></tr>
-<tr class="separator:a7fd617cad89e85086f010d3fb7ce49b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9887285ecfc2c3071a6be73a5772a24"><td class="memTemplParams" colspan="2"><a id="aa9887285ecfc2c3071a6be73a5772a24"></a>
+<tr class="memitem:a474e1dcb32048dfe31dbe27174588e20"><td class="memItemLeft" align="right" valign="top"><a id="a474e1dcb32048dfe31dbe27174588e20"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SensorLogger</b> (LoggingSinkT &amp;sink, std::string subsystem, std::string category)</td></tr>
+<tr class="separator:a474e1dcb32048dfe31dbe27174588e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03baef2400a0b1d94a17833ad2f0ea70"><td class="memItemLeft" align="right" valign="top"><a id="a03baef2400a0b1d94a17833ad2f0ea70"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SensorLogger</b> (const <a class="el" href="classherald_1_1data_1_1_sensor_logger.html">SensorLogger</a> &amp;other)</td></tr>
+<tr class="separator:a03baef2400a0b1d94a17833ad2f0ea70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae5053027185dd375c0e6218bdebc0f5"><td class="memItemLeft" align="right" valign="top"><a id="aae5053027185dd375c0e6218bdebc0f5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SensorLogger</b> (<a class="el" href="classherald_1_1data_1_1_sensor_logger.html">SensorLogger</a> &amp;&amp;other)</td></tr>
+<tr class="separator:aae5053027185dd375c0e6218bdebc0f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a012f6877ed1572b3855cfa8aec42cd82"><td class="memItemLeft" align="right" valign="top"><a id="a012f6877ed1572b3855cfa8aec42cd82"></a>
+<a class="el" href="classherald_1_1data_1_1_sensor_logger.html">SensorLogger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classherald_1_1data_1_1_sensor_logger.html">SensorLogger</a> &amp;other)</td></tr>
+<tr class="separator:a012f6877ed1572b3855cfa8aec42cd82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5c8e30f395c418b2f098c8df9289b5b"><td class="memItemLeft" align="right" valign="top"><a id="ac5c8e30f395c418b2f098c8df9289b5b"></a>
+<a class="el" href="classherald_1_1data_1_1_sensor_logger.html">SensorLogger</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classherald_1_1data_1_1_sensor_logger.html">SensorLogger</a> &amp;&amp;other)</td></tr>
+<tr class="separator:ac5c8e30f395c418b2f098c8df9289b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3fe38afeee5bb21d4899c765790f539"><td class="memTemplParams" colspan="2"><a id="ac3fe38afeee5bb21d4899c765790f539"></a>
 template&lt;typename ... Types&gt; </td></tr>
-<tr class="memitem:aa9887285ecfc2c3071a6be73a5772a24"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>debug</b> (const std::string &amp;message, const Types &amp;... args)</td></tr>
-<tr class="separator:aa9887285ecfc2c3071a6be73a5772a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61df85314ddf6e62cf1f16eb90769bff"><td class="memTemplParams" colspan="2"><a id="a61df85314ddf6e62cf1f16eb90769bff"></a>
+<tr class="memitem:ac3fe38afeee5bb21d4899c765790f539"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>debug</b> (const std::string &amp;message, const Types &amp;... args)</td></tr>
+<tr class="separator:ac3fe38afeee5bb21d4899c765790f539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a988ff37f422f7135e4366a48cfed85db"><td class="memTemplParams" colspan="2"><a id="a988ff37f422f7135e4366a48cfed85db"></a>
 template&lt;typename ... Types&gt; </td></tr>
-<tr class="memitem:a61df85314ddf6e62cf1f16eb90769bff"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>info</b> (const std::string &amp;message, const Types &amp;... args)</td></tr>
-<tr class="separator:a61df85314ddf6e62cf1f16eb90769bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af802aff184e2b125cc8350520105324f"><td class="memTemplParams" colspan="2"><a id="af802aff184e2b125cc8350520105324f"></a>
+<tr class="memitem:a988ff37f422f7135e4366a48cfed85db"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>info</b> (const std::string &amp;message, const Types &amp;... args)</td></tr>
+<tr class="separator:a988ff37f422f7135e4366a48cfed85db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a918be7add3636972a0e455487e284bdd"><td class="memTemplParams" colspan="2"><a id="a918be7add3636972a0e455487e284bdd"></a>
 template&lt;typename ... Types&gt; </td></tr>
-<tr class="memitem:af802aff184e2b125cc8350520105324f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fault</b> (const std::string &amp;message, const Types &amp;... args)</td></tr>
-<tr class="separator:af802aff184e2b125cc8350520105324f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a918be7add3636972a0e455487e284bdd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>fault</b> (const std::string &amp;message, const Types &amp;... args)</td></tr>
+<tr class="separator:a918be7add3636972a0e455487e284bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>D:/git/skunkworks/herald-for-cpp/herald/include/herald/data/<a class="el" href="sensor__logger_8h_source.html">sensor_logger.h</a></li>

@@ -41,11 +41,8 @@ You can get the code from one of the many [Herald Project Repositories](/downloa
 
 ## API documentation
 
-Below are the latest API documentation for each platform:-
-
-- [Android JavaDoc API]({{"/api/android/index.html" | relative_url }})
-- [iOS Swift API]({{"/api/ios/index.html" | relative_url }})
-- C++ - Coming soon
+You can see the latest API documentation and code coverage reports
+on the [API Documentation page]({{"/guide/api" | relative_url }})
 
 ## Introduction to mobile app based contact tracing
 

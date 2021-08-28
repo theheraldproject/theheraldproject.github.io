@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -81,7 +81,10 @@ Inheritance diagram for herald::ble::HeraldProtocolV1Provider:</div>
  <div class="center">
   <img src="classherald_1_1ble_1_1_herald_protocol_v1_provider.png" usemap="#herald::ble::HeraldProtocolV1Provider_map" alt=""/>
   <map id="herald::ble::HeraldProtocolV1Provider_map" name="herald::ble::HeraldProtocolV1Provider_map">
-<area href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html" alt="herald::ble::ConcreteBLEReceiver" shape="rect" coords="0,56,227,80"/>
+<area href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html" alt="herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, herald::ble::ConcreteBLEDatabase&lt; ContextT, 10 &gt;, SensorDelegateSetT &gt;" shape="rect" coords="0,56,833,80"/>
+<area href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html" alt="herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, herald::ble::ConcreteBLEDatabase&lt; ContextT, 10 &gt;, SensorDelegateSetT &gt;" shape="rect" coords="843,56,1676,80"/>
+<area href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html" title="Dummy implementation of a ConcreteBLEReceiver that does nothing (used for testing)" alt="herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, BLEDatabaseT, SensorDelegateSetT &gt;" shape="rect" coords="1686,56,2519,80"/>
+<area href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html" title="Dummy implementation of a ConcreteBLEReceiver that does nothing (used for testing)" alt="herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, BLEDatabaseT, SensorDelegateSetT &gt;" shape="rect" coords="2529,56,3362,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -99,12 +102,6 @@ virtual std::optional&lt; <a class="el" href="structherald_1_1engine_1_1_activit
 <tr class="memitem:a2b704fcd1e1a0d499fc826bd51d6cb49"><td class="memItemLeft" align="right" valign="top"><a id="a2b704fcd1e1a0d499fc826bd51d6cb49"></a>
 virtual std::optional&lt; <a class="el" href="structherald_1_1engine_1_1_activity.html">Activity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>readPayload</b> (<a class="el" href="structherald_1_1engine_1_1_activity.html">Activity</a>)=0</td></tr>
 <tr class="separator:a2b704fcd1e1a0d499fc826bd51d6cb49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72dd4fba1d43ea589936d9327ba2aba0"><td class="memItemLeft" align="right" valign="top"><a id="a72dd4fba1d43ea589936d9327ba2aba0"></a>
-virtual std::optional&lt; <a class="el" href="structherald_1_1engine_1_1_activity.html">Activity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>immediateSend</b> (<a class="el" href="structherald_1_1engine_1_1_activity.html">Activity</a>)=0</td></tr>
-<tr class="separator:a72dd4fba1d43ea589936d9327ba2aba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f995532c1d027a4f3d5c8bced401744"><td class="memItemLeft" align="right" valign="top"><a id="a9f995532c1d027a4f3d5c8bced401744"></a>
-virtual std::optional&lt; <a class="el" href="structherald_1_1engine_1_1_activity.html">Activity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>immediateSendAll</b> (<a class="el" href="structherald_1_1engine_1_1_activity.html">Activity</a>)=0</td></tr>
-<tr class="separator:a9f995532c1d027a4f3d5c8bced401744"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The Herald protocols' low level activities. Implemented by each OS' provider </p>
@@ -134,7 +131,7 @@ virtual std::optional&lt; <a class="el" href="structherald_1_1engine_1_1_activit
 </div><div class="memdoc">
 <p>Closes a connection. Returns true if successful or already disconnected </p>
 
-<p>Implemented in <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#ac1f069551b0730197a7ebfb892125475">herald::ble::ConcreteBLEReceiver</a>.</p>
+<p>Implemented in <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#a441051e3b5d721e2a4132eb609951192">herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, BLEDatabaseT, SensorDelegateSetT &gt;</a>, <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#a441051e3b5d721e2a4132eb609951192">herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, herald::ble::ConcreteBLEDatabase&lt; ContextT, 10 &gt;, SensorDelegateSetT &gt;</a>, <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#a441051e3b5d721e2a4132eb609951192">herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, BLEDatabaseT, SensorDelegateSetT &gt;</a>, and <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#a441051e3b5d721e2a4132eb609951192">herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, herald::ble::ConcreteBLEDatabase&lt; ContextT, 10 &gt;, SensorDelegateSetT &gt;</a>.</p>
 
 </div>
 </div>
@@ -163,7 +160,7 @@ virtual std::optional&lt; <a class="el" href="structherald_1_1engine_1_1_activit
 </div><div class="memdoc">
 <p>Opens a new connection. Returns true if successful or already connected. Will cause scanning and advertising to stop. </p>
 
-<p>Implemented in <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#a275882247ed4bf70b3794eac17e57f50">herald::ble::ConcreteBLEReceiver</a>.</p>
+<p>Implemented in <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#ae61f4e75eda8343e83463cd3be20261e">herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, BLEDatabaseT, SensorDelegateSetT &gt;</a>, <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#ae61f4e75eda8343e83463cd3be20261e">herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, herald::ble::ConcreteBLEDatabase&lt; ContextT, 10 &gt;, SensorDelegateSetT &gt;</a>, <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#ae61f4e75eda8343e83463cd3be20261e">herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, BLEDatabaseT, SensorDelegateSetT &gt;</a>, and <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#ae61f4e75eda8343e83463cd3be20261e">herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, herald::ble::ConcreteBLEDatabase&lt; ContextT, 10 &gt;, SensorDelegateSetT &gt;</a>.</p>
 
 </div>
 </div>
@@ -191,7 +188,7 @@ virtual std::optional&lt; <a class="el" href="structherald_1_1engine_1_1_activit
 </div><div class="memdoc">
 <p>Restart scanning and advertising (if they were previously doing so) </p>
 
-<p>Implemented in <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#a52352341f1befcedcb496d38707f983c">herald::ble::ConcreteBLEReceiver</a>.</p>
+<p>Implemented in <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#aa35ceeef9da3844c6737d320436d672c">herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, BLEDatabaseT, SensorDelegateSetT &gt;</a>, <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#aa35ceeef9da3844c6737d320436d672c">herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, herald::ble::ConcreteBLEDatabase&lt; ContextT, 10 &gt;, SensorDelegateSetT &gt;</a>, <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#aa35ceeef9da3844c6737d320436d672c">herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, BLEDatabaseT, SensorDelegateSetT &gt;</a>, and <a class="el" href="classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#aa35ceeef9da3844c6737d320436d672c">herald::ble::ConcreteBLEReceiver&lt; ContextT, PayloadDataSupplierT, herald::ble::ConcreteBLEDatabase&lt; ContextT, 10 &gt;, SensorDelegateSetT &gt;</a>.</p>
 
 </div>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>herald: herald::engine::Coordinator Class Reference</title>
+<title>herald: herald::engine::Coordinator&lt; ContextT &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -70,7 +70,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classherald_1_1engine_1_1_coordinator-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">herald::engine::Coordinator Class Reference</div>  </div>
+<div class="title">herald::engine::Coordinator&lt; ContextT &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -81,40 +81,45 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a82fdf5e2d8eb14b600113f2c06270f67"><td class="memItemLeft" align="right" valign="top"><a id="a82fdf5e2d8eb14b600113f2c06270f67"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1engine_1_1_coordinator.html#a82fdf5e2d8eb14b600113f2c06270f67">Coordinator</a> (std::shared_ptr&lt; <a class="el" href="classherald_1_1_context.html">Context</a> &gt; context)</td></tr>
-<tr class="memdesc:a82fdf5e2d8eb14b600113f2c06270f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Receives a configured platform-specific context instance. <br /></td></tr>
-<tr class="separator:a82fdf5e2d8eb14b600113f2c06270f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abeac9202d645782878644a078efad64a"><td class="memItemLeft" align="right" valign="top"><a id="abeac9202d645782878644a078efad64a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1engine_1_1_coordinator.html#abeac9202d645782878644a078efad64a">add</a> (std::shared_ptr&lt; <a class="el" href="classherald_1_1_sensor.html">Sensor</a> &gt; sensor)</td></tr>
-<tr class="memdesc:abeac9202d645782878644a078efad64a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Introspect and include in iteration planning. <br /></td></tr>
-<tr class="separator:abeac9202d645782878644a078efad64a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b95d269b433715690e8cac576c11bb2"><td class="memItemLeft" align="right" valign="top"><a id="a2b95d269b433715690e8cac576c11bb2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1engine_1_1_coordinator.html#a2b95d269b433715690e8cac576c11bb2">remove</a> (std::shared_ptr&lt; <a class="el" href="classherald_1_1_sensor.html">Sensor</a> &gt; sensor)</td></tr>
-<tr class="memdesc:a2b95d269b433715690e8cac576c11bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove from iteration planning. <br /></td></tr>
-<tr class="separator:a2b95d269b433715690e8cac576c11bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48e2afdefc222983022629ab8d2a5829"><td class="memItemLeft" align="right" valign="top"><a id="a48e2afdefc222983022629ab8d2a5829"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1engine_1_1_coordinator.html#a48e2afdefc222983022629ab8d2a5829">start</a> ()</td></tr>
-<tr class="memdesc:a48e2afdefc222983022629ab8d2a5829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepares for iterations to be called (may pre-emptively make calls) <br /></td></tr>
-<tr class="separator:a48e2afdefc222983022629ab8d2a5829"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec332071948eb055f4668c485190f32c"><td class="memItemLeft" align="right" valign="top"><a id="aec332071948eb055f4668c485190f32c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1engine_1_1_coordinator.html#aec332071948eb055f4668c485190f32c">iteration</a> ()</td></tr>
-<tr class="memdesc:aec332071948eb055f4668c485190f32c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute an iteration of activity, according to settings. <br /></td></tr>
-<tr class="separator:aec332071948eb055f4668c485190f32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a513fc2a248dad2c912448e2a0a4eda39"><td class="memItemLeft" align="right" valign="top"><a id="a513fc2a248dad2c912448e2a0a4eda39"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1engine_1_1_coordinator.html#a513fc2a248dad2c912448e2a0a4eda39">stop</a> ()</td></tr>
-<tr class="memdesc:a513fc2a248dad2c912448e2a0a4eda39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes out any existing connections/activities. <br /></td></tr>
-<tr class="separator:a513fc2a248dad2c912448e2a0a4eda39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a892d8ff78c78ceb99573b1ad7c4da48e"><td class="memItemLeft" align="right" valign="top"><a id="a892d8ff78c78ceb99573b1ad7c4da48e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1engine_1_1_coordinator.html#a892d8ff78c78ceb99573b1ad7c4da48e">Coordinator</a> (ContextT &amp;ctx)</td></tr>
+<tr class="memdesc:a892d8ff78c78ceb99573b1ad7c4da48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Receives a configured platform-specific context instance. <br /></td></tr>
+<tr class="separator:a892d8ff78c78ceb99573b1ad7c4da48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4c33ec6ceb74e4e791ec4c8f9a98448"><td class="memTemplParams" colspan="2"><a id="af4c33ec6ceb74e4e791ec4c8f9a98448"></a>
+template&lt;typename SensorT &gt; </td></tr>
+<tr class="memitem:af4c33ec6ceb74e4e791ec4c8f9a98448"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classherald_1_1engine_1_1_coordinator.html#af4c33ec6ceb74e4e791ec4c8f9a98448">add</a> (SensorT &amp;sensor)</td></tr>
+<tr class="memdesc:af4c33ec6ceb74e4e791ec4c8f9a98448"><td class="mdescLeft">&#160;</td><td class="mdescRight">Introspect and include in iteration planning. <br /></td></tr>
+<tr class="separator:af4c33ec6ceb74e4e791ec4c8f9a98448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2717ea0ebfbe95cbeb1edb6be741f91"><td class="memTemplParams" colspan="2"><a id="af2717ea0ebfbe95cbeb1edb6be741f91"></a>
+template&lt;typename SensorT &gt; </td></tr>
+<tr class="memitem:af2717ea0ebfbe95cbeb1edb6be741f91"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classherald_1_1engine_1_1_coordinator.html#af2717ea0ebfbe95cbeb1edb6be741f91">remove</a> (SensorT &amp;sensor)</td></tr>
+<tr class="memdesc:af2717ea0ebfbe95cbeb1edb6be741f91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove from iteration planning. <br /></td></tr>
+<tr class="separator:af2717ea0ebfbe95cbeb1edb6be741f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9484ad04d23db98d21c83e679fef6ca"><td class="memItemLeft" align="right" valign="top"><a id="ac9484ad04d23db98d21c83e679fef6ca"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1engine_1_1_coordinator.html#ac9484ad04d23db98d21c83e679fef6ca">start</a> ()</td></tr>
+<tr class="memdesc:ac9484ad04d23db98d21c83e679fef6ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepares for iterations to be called (may pre-emptively make calls) <br /></td></tr>
+<tr class="separator:ac9484ad04d23db98d21c83e679fef6ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed2b9f90c7281c4c6a1c365cbc2262ea"><td class="memItemLeft" align="right" valign="top"><a id="aed2b9f90c7281c4c6a1c365cbc2262ea"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1engine_1_1_coordinator.html#aed2b9f90c7281c4c6a1c365cbc2262ea">iteration</a> ()</td></tr>
+<tr class="memdesc:aed2b9f90c7281c4c6a1c365cbc2262ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute an iteration of activity, according to settings. <br /></td></tr>
+<tr class="separator:aed2b9f90c7281c4c6a1c365cbc2262ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa36e418042e0b78104f787ceea078e3d"><td class="memItemLeft" align="right" valign="top"><a id="aa36e418042e0b78104f787ceea078e3d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classherald_1_1engine_1_1_coordinator.html#aa36e418042e0b78104f787ceea078e3d">stop</a> ()</td></tr>
+<tr class="memdesc:aa36e418042e0b78104f787ceea078e3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes out any existing connections/activities. <br /></td></tr>
+<tr class="separator:aa36e418042e0b78104f787ceea078e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Coordinates all connection and activities used across all sensors within Herald. </p>
+<div class="textblock"><h3>template&lt;typename ContextT&gt;<br />
+class herald::engine::Coordinator&lt; ContextT &gt;</h3>
+
+<p>Coordinates all connection and activities used across all sensors within Herald. </p>
 <p>Responsible for:-</p>
 <ul>
-<li>Determining <a class="el" href="classherald_1_1_sensor.html" title="The base Sensor class that all Sensors implement.">Sensor</a> capabilities and requirements around connections and <a class="el" href="structherald_1_1engine_1_1_activity.html" title="An activity that needs to be performed due to some state being achieved in a Sensor.">Activity</a> instances</li>
+<li>Determining Sensor capabilities and requirements around connections and <a class="el" href="structherald_1_1engine_1_1_activity.html" title="An activity that needs to be performed due to some state being achieved in a Sensor.">Activity</a> instances</li>
 </ul>
 <p>Manages:-</p>
 <ul>
-<li>Nothing, but coordinates activities throughout Herald <a class="el" href="classherald_1_1_sensor.html" title="The base Sensor class that all Sensors implement.">Sensor</a> networks on behalf of <a class="el" href="classherald_1_1_sensor_array.html" title="Manages all Sensors and sensor delegates for Herald.">SensorArray</a></li>
+<li>Nothing, but coordinates activities throughout Herald Sensor networks on behalf of <a class="el" href="classherald_1_1_sensor_array.html" title="Manages all Sensors and sensor delegates for Herald.">SensorArray</a></li>
 </ul>
 <p>Is managed by:-</p>
 <ul>

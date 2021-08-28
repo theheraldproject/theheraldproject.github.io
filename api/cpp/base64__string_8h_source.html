@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -74,8 +74,8 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef BASE64_STRING_H</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define BASE64_STRING_H</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef HERALD_BASE64_STRING_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define HERALD_BASE64_STRING_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;data.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
@@ -92,19 +92,18 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_base64_string.html#ada41b7d260ba0842694985f8d29b0800">   26</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_base64_string.html#ada41b7d260ba0842694985f8d29b0800">~Base64String</a>();</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_base64_string.html#a6a6b9a97916763a4b2d32fe4ebc096a4">   29</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classherald_1_1datatype_1_1_base64_string.html#a6a6b9a97916763a4b2d32fe4ebc096a4">from</a>(<span class="keyword">const</span> std::string&amp; original, <a class="code" href="classherald_1_1datatype_1_1_base64_string.html">Base64String</a>&amp; toInitialise) noexcept; <span class="comment">// initialise from string</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_base64_string.html#a6e75649e01bb37bbbea369a0b946542c">   32</a></span>&#160;<span class="comment"></span>  <span class="keyword">static</span> <a class="code" href="classherald_1_1datatype_1_1_base64_string.html">Base64String</a> <a class="code" href="classherald_1_1datatype_1_1_base64_string.html#a6e75649e01bb37bbbea369a0b946542c">encode</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a>&amp; <a class="code" href="classherald_1_1datatype_1_1_base64_string.html#a6a6b9a97916763a4b2d32fe4ebc096a4">from</a>) noexcept; <span class="comment">// initialise from Data</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_base64_string.html#a6e75649e01bb37bbbea369a0b946542c">   32</a></span>&#160;<span class="comment"></span>  <span class="keyword">static</span> <a class="code" href="classherald_1_1datatype_1_1_base64_string.html">Base64String</a> <a class="code" href="classherald_1_1datatype_1_1_base64_string.html#a6e75649e01bb37bbbea369a0b946542c">encode</a>(<span class="keyword">const</span> <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">Data</a>&amp; <a class="code" href="classherald_1_1datatype_1_1_base64_string.html#a6a6b9a97916763a4b2d32fe4ebc096a4">from</a>) noexcept; <span class="comment">// initialise from Data</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_base64_string.html#a7f32daa7c4191d4d9483aaf54b01f46c">   36</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data.html">Data</a> <a class="code" href="classherald_1_1datatype_1_1_base64_string.html#a7f32daa7c4191d4d9483aaf54b01f46c">decode</a>() const noexcept;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_base64_string.html#a7f32daa7c4191d4d9483aaf54b01f46c">   36</a></span>&#160;  <a class="code" href="classherald_1_1datatype_1_1_data_ref.html">Data</a> <a class="code" href="classherald_1_1datatype_1_1_base64_string.html#a7f32daa7c4191d4d9483aaf54b01f46c">decode</a>() const noexcept;</div>
 <div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classherald_1_1datatype_1_1_base64_string.html#a2c22a5e1c9ae14bb5e298b1676ee3563">   38</a></span>&#160;  <a class="code" href="namespacestd.html">std</a>::<span class="keywordtype">string</span> <a class="code" href="classherald_1_1datatype_1_1_base64_string.html#a2c22a5e1c9ae14bb5e298b1676ee3563">encoded</a>() const noexcept; <span class="comment">// Return base64 string representation (copy of, not reference to)</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;private:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  class Impl;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="namespacestd.html">std</a>::unique_ptr&lt;Impl&gt; mImpl; <span class="comment">// PIMPL IDIOM</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;} <span class="comment">// end namespace</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;} <span class="comment">// end namespace</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="namespacestd.html">std</a>::<span class="keywordtype">string</span> value; <span class="comment">// Base64 encoded, and guarded</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;} <span class="comment">// end namespace</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;} <span class="comment">// end namespace</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_base64_string_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_base64_string.html">herald::datatype::Base64String</a></div><div class="ttdoc">Strongly, rather than stringly, typed representation of Base64 String data. Prevents incorrect initia...</div><div class="ttdef"><b>Definition:</b> base64_string.h:18</div></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_base64_string_html_a2c22a5e1c9ae14bb5e298b1676ee3563"><div class="ttname"><a href="classherald_1_1datatype_1_1_base64_string.html#a2c22a5e1c9ae14bb5e298b1676ee3563">herald::datatype::Base64String::encoded</a></div><div class="ttdeci">std::string encoded() const noexcept</div><div class="ttdoc">Returns the Base64 encoding of this class as a std::string.</div></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_base64_string_html_a35ca8e844053d9e16fdc8658fa421859"><div class="ttname"><a href="classherald_1_1datatype_1_1_base64_string.html#a35ca8e844053d9e16fdc8658fa421859">herald::datatype::Base64String::Base64String</a></div><div class="ttdeci">Base64String(const Base64String &amp;other)=delete</div><div class="ttdoc">Deleted copy constructor to prevent temporary memory use.</div></div>
@@ -113,9 +112,9 @@ $(function() {
 <div class="ttc" id="aclassherald_1_1datatype_1_1_base64_string_html_a7f32daa7c4191d4d9483aaf54b01f46c"><div class="ttname"><a href="classherald_1_1datatype_1_1_base64_string.html#a7f32daa7c4191d4d9483aaf54b01f46c">herald::datatype::Base64String::decode</a></div><div class="ttdeci">Data decode() const noexcept</div><div class="ttdoc">Decodes this Base64String's content into a Data instance.</div></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_base64_string_html_a8830cb11890c900510591500f267109e"><div class="ttname"><a href="classherald_1_1datatype_1_1_base64_string.html#a8830cb11890c900510591500f267109e">herald::datatype::Base64String::Base64String</a></div><div class="ttdeci">Base64String(Base64String &amp;&amp;other)</div><div class="ttdoc">Move Constructor.</div></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_base64_string_html_ada41b7d260ba0842694985f8d29b0800"><div class="ttname"><a href="classherald_1_1datatype_1_1_base64_string.html#ada41b7d260ba0842694985f8d29b0800">herald::datatype::Base64String::~Base64String</a></div><div class="ttdeci">~Base64String()</div><div class="ttdoc">Custom destructor.</div></div>
-<div class="ttc" id="aclassherald_1_1datatype_1_1_data_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_data.html">herald::datatype::Data</a></div><div class="ttdoc">The main data workhorse class of the Herald API.</div><div class="ttdef"><b>Definition:</b> data.h:24</div></div>
-<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Main Herald library include for C++ Native platforms.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
-<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> data.h:89</div></div>
+<div class="ttc" id="aclassherald_1_1datatype_1_1_data_ref_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_data_ref.html">herald::datatype::DataRef</a></div><div class="ttdoc">The main data workhorse class of the Herald API.</div><div class="ttdef"><b>Definition:</b> data.h:33</div></div>
+<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Acts as a non-global memory arena for arbitrary classes.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> data.h:562</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

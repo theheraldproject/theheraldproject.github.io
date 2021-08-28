@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">herald
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">2.0.0</span>
    </div>
   </td>
  </tr>
@@ -70,12 +70,12 @@ $(function() {
 <div class="title">time_interval.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//  Copyright 2020 VMware, Inc.</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//  Copyright 2020-2021 Herald Project Contributors</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef TIME_INTERVAL_H</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define TIME_INTERVAL_H</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef HERALD_TIME_INTERVAL_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define HERALD_TIME_INTERVAL_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;date.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
@@ -128,20 +128,19 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  operator <span class="keywordtype">long</span>() const noexcept; <span class="comment">// returns SECONDS not millis</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;private:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  class Impl;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="namespacestd.html">std</a>::unique_ptr&lt;Impl&gt; mImpl;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">long</span> secs;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;} <span class="comment">// end namespace</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;} <span class="comment">// end namespace</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;} <span class="comment">// end namespace</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_date_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_date.html">herald::datatype::Date</a></div><div class="ttdef"><b>Definition:</b> date.h:18</div></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_time_interval_html"><div class="ttname"><a href="classherald_1_1datatype_1_1_time_interval.html">herald::datatype::TimeInterval</a></div><div class="ttdef"><b>Definition:</b> time_interval.h:19</div></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_time_interval_html_a0025ab6d2322349d65514938c2c58865"><div class="ttname"><a href="classherald_1_1datatype_1_1_time_interval.html#a0025ab6d2322349d65514938c2c58865">herald::datatype::TimeInterval::operator/=</a></div><div class="ttdeci">TimeInterval &amp; operator/=(double divisor) noexcept</div></div>
 <div class="ttc" id="aclassherald_1_1datatype_1_1_time_interval_html_afa78e148fea161c8b505e56af6cc0714"><div class="ttname"><a href="classherald_1_1datatype_1_1_time_interval.html#afa78e148fea161c8b505e56af6cc0714">herald::datatype::TimeInterval::operator/</a></div><div class="ttdeci">TimeInterval operator/(double divisor) noexcept</div></div>
-<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Main Herald library include for C++ Native platforms.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
-<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> data.h:89</div></div>
+<div class="ttc" id="anamespaceherald_html"><div class="ttname"><a href="namespaceherald.html">herald</a></div><div class="ttdoc">Acts as a non-global memory arena for arbitrary classes.</div><div class="ttdef"><b>Definition:</b> aggregates.h:15</div></div>
+<div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> data.h:562</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
