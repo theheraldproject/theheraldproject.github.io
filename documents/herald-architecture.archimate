@@ -111,7 +111,7 @@ This is a KEY GROUP within Herald's design goals. It includes, but is not limite
     <element xsi:type="archimate:DataObject" name="Date" id="id-f8aebfdbdff1437586c7969fc81cfa60"/>
     <element xsi:type="archimate:ApplicationInterface" name="Exposure Manager Delegate" id="id-43b75d3496214836b764a3a6682fd0e9"/>
     <element xsi:type="archimate:ApplicationService" name="Exposure Manager" id="id-9e97a76f91134133a8127cfb9586616b"/>
-    <element xsi:type="archimate:ApplicationComponent" name="Exposure Notification API" id="id-1a8fa49ec2374f888642dfd45cdfdcfc"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Exposure and Risk API" id="id-1a8fa49ec2374f888642dfd45cdfdcfc"/>
     <element xsi:type="archimate:DataObject" name="Exposure" id="id-a3ab06553fc04f588c2deb30f001a930"/>
     <element xsi:type="archimate:DataObject" name="Exposure Source ID" id="id-6095ebf873b046919aad8ca74c6f9a52">
       <documentation>For a human, the DCT hash ID. For other sources, their IDs. E.g. radiation whether a local dosemeter or one from a building's beacon.</documentation>
