@@ -27,15 +27,11 @@ The focus of this design is to minimise the cost of producing DCT solutions for 
 who cannot afford $1000 smartphones, for young and old people without this technology, and
 for parts of the world without the infrastructure to support a traditional DCT system.
 
-You can see an early mock up of our hardware design below:-
+You can see our first prototype below:-
 
 <div class="row">
 <div class="md-4">
-<img src="../images/dct-wearable-prototype.png" alt="Herald early wearable design mock up" style="width: 50%;"/>
-<img src="../images/herald-prototype-hardware-assembly.jpg" alt="First Herald wearable prototyping being assembled" style="width: 50%;"/>
-<br/>
-<b>Note:</b> An early mock-up of the main module of our DCT wearable, and the first prototype during assembly.
-<br/>
+<img src="../images/herald-prototype-hardware-assembly.jpg" alt="First Herald wearable prototyping being assembled" style="width: 40%;"/>
 <br/>
 </div>
 </div>
@@ -49,7 +45,7 @@ who either do not have a phone, or who cannot always use a phone, such as constr
 
 ## Base model - Bluetooth DCT
 
-The based model features just a main board. An estimated production cost of $20, or $25 with a watch strap and case. 
+The based model features just a main board. An estimated production cost of USD 20, or USD 25 with a watch strap and case. 
 
 This includes the following hardware:-
 
@@ -63,7 +59,7 @@ This includes the following hardware:-
 
 ## eHealth monitoring model
 
-There's a cable to plug in a variety of daughter expansion boards. The first board is designed for health monitoring to spot medical problems, such as low blood oxygenation, emerging over time. An estimated production cost of $30, or $35 with a watch strap and case. 
+There's a cable to plug in a variety of daughter expansion boards. The first board is designed for health monitoring to spot medical problems, such as low blood oxygenation, emerging over time. An estimated production cost of USD 30, or USD 35 with a watch strap and case. 
 
 This model features these additional sensors:-
 

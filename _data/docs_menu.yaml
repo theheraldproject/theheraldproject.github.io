@@ -2,12 +2,14 @@
   items:
     - name: Our documentation
       link: /docs
-- label: Herald Protocol
+- label: Use Cases
   items:
-    - name: About our protocol
-      link: /protocol/
-    - name: Non contact tracing uses
-      link: /protocol/custom
+    - name: Introduction
+      link: /uses
+    - name: Public Health
+      link: /uses/publichealth
+    - name: Hospitals
+      link: /uses/hospitals
 - label: Design Guide
   items: 
     - name: Herald's Design
@@ -34,6 +36,12 @@
       link: /guide/ios
     - name: Android app guide
       link: /guide/android 
+- label: Herald Protocol
+  items:
+    - name: About our protocol
+      link: /protocol/
+    - name: Non contact tracing uses
+      link: /protocol/custom
 - label: Contributors Guide
   items:
     - name: Introduction
