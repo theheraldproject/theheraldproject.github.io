@@ -18,6 +18,8 @@
       link: /applications/ct
     - name: eHealth Wearables
       link: /applications/wearable
+    - name: Beacons
+      link: /applications/beacons
     - name: Device to Device
       link: /applications/p2p
     - name: Bluetooth Mesh Gateways
