@@ -28,6 +28,16 @@
       link: /payload/inner
     - name: Custom outer & inner payloads 
       link: /payload/outer
+- label: Herald MESH
+  items:
+    - name: About MESH
+      link: /mesh
+    - name: MESH Networking
+      link: /mesh/network
+    - name: MESH Data Models
+      link: /mesh/models
+    - name: Herald MESH API
+      link: /mesh/api
 - label: Formal Specifications
   items:
     - name: List and status
