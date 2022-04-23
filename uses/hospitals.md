@@ -7,7 +7,7 @@ menubar: docs_menu
 
 # Hospital Use Cases
 
-By placing a low-cost set of [Herald Bluetooth MESH](/applications/mesh) devices around a hospital several use cases can be supported:-
+By placing a low-cost set of [Herald Bluetooth MESH](/mesh) devices around a hospital several use cases can be supported:-
 - Site Navigation - Allow staff, patients and visitors to navigation around your hospital using their mobile phone
 - Locating equipment - Track expensive equipment such as syringe pushers, ECG machines, or track samples taken in hospitals. Many hospitals purchase more equipment than needed due to not being able to find it when required. This leads to staff hoarding equipment in side rooms and behind screens. You can now locate them using a Herald tracker attached to the device. These only need recharging once a year.
 
@@ -26,9 +26,9 @@ Herald is an open source project. You are more than free to download our source 
 
 The following applications for Hospitals will be published soon by the Herald project and other Linux Foundation Public Health projects for your use:-
 
-- The MESH relay application provides the Bluetooth MESH backbone for all of these use cases
-- The MESH modem application links your Bluetooth MESH to your hospital servers
-- A Linux device driver for the Herald MESH modem
-- A Herald C++ MESH link application between the MESH modem and a RabbitMQ reliable message bus
-- A Kubernetes for Healthcare MESH management web application to remotely control all devices in the MESH
-- A Kubernetes for Healthcare equipment and public safety web application to find equipment and view venue use density and footfall
+- A [Herald Bluetooth MESH API](/mesh/api) that allows you to build a variety of innovative applications:-
+  - The MESH relay application provides the Bluetooth MESH backbone for all of these use cases
+  - The MESH modem application links your Bluetooth MESH to your hospital servers
+- A Herald C++ MESH link application between the MESH modem and a RabbitMQ reliable message bus, enabling:-
+  - A Kubernetes for Healthcare MESH management web application to remotely control all devices in the MESH
+  - A Kubernetes for Healthcare equipment and public safety web application to find equipment and view venue use density and footfall

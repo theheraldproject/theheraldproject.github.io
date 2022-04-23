@@ -32,3 +32,8 @@ lightbulbs. No other infrastructure is necessary.
 Such a network allows consumer devices to talk end to end, or
 central servers to be connected and provide useful services, such
 as reliable messaging.
+
+## Find out more
+
+For full details, see our [Herald Bluetooth MESH](/mesh)
+documentation pages.
