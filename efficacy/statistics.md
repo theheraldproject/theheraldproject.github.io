@@ -102,7 +102,7 @@ and mutual two-way detection, you need to create a truth table for two phones wi
 
 ***Table W1. Phone pairing advertising truth table***
 
-| Phone A Has advertising | Phone B has advertising | Percentage chance |
+| Phone A Has advertising | Phone B has advertising | Percentage change |
 |---|---|---|
 | Yes | Yes | 73.75% |
 | Yes | No | 12.13% |
