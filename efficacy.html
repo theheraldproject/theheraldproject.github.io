@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css?1676884168425440110">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Efficacy Measures">
+<meta name="author" content="Herald Project Contributors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="How to fairly measure efficacy, and results we have generated.">
+<meta property="og:description" content="How to fairly measure efficacy, and results we have generated.">
+<link rel="canonical" href="https://heraldprox.io/efficacy">
+<meta property="og:url" content="https://heraldprox.io/efficacy">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Herald Project Contributors"},"description":"How to fairly measure efficacy, and results we have generated.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://heraldprox.io/img/herald.png"},"name":"Herald Project Contributors"},"@type":"WebPage","headline":"Efficacy Measures","url":"https://heraldprox.io/efficacy","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Efficacy Measures</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="logo">
+                    <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+                </div>
+            </div>
+            <div class="col-md-9 offset-md-1">
+                <ul class="nav-menu" id="header-nav">
+                
+                    <li class=""><a href="/">Home</a></li>
+                
+                    <li class=""><a href="/about">About</a></li>
+                
+                    <li class=""><a href="/community">Community</a></li>
+                
+                    <li class=""><a href="/blog">Blog</a></li>
+                
+                    <li class=""><a href="/download">Download</a></li>
+                
+                    <li class=""><a href="/docs">Documentation</a></li>
+                
+                    <li class=""><a href="/reference">Reference</a></li>
+                
+                    <li class=""><a href="/research">Research</a></li>
+                
+                </ul>
+                <div class="nav-mobile-link">
+                    <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Efficacy Measures</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-2">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>Efficacy</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/efficacy">Introduction</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/efficacy/paper">The Fair Measure Paper</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/efficacy/method">Testing Methodology</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/efficacy/results">Test Results</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/efficacy/statistics">Statistics</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/efficacy/herald">Herald Performance</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/efficacy/bibliography">Bibliography</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Bluetooth Research</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/bluetooth">Our Research</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/bluetooth/hardware">Hardware Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/bluetooth/os">Operating System Issues</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/bluetooth/crowding">Crowding</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/bluetooth/distance">Distance Estimation</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-9 offset-md-1">
+                
+
+  
+
+                <h1 id="efficacy">Efficacy</h1>
+
+<p>Whilst there has been much debate about privacy of Contact Tracing applications
+there has been little research on creating a general purpose fair measure of
+efficacy for the Proximity Detection Protocols that under pin those applications.</p>
+
+<p>There is little point in creating a privacy preserving protocol that provides little
+or no epidemiological control of virus spread. Equally, there is little to be gained
+from creating a perfectly tracking solution that reveals citizens’ exact whereabouts
+at all times.</p>
+
+<p>We have concentrated on creating a way to measure the technical efficacy of any
+protocol - be it Bluetooth based or othwerwise - on providing information that is
+of use for epidemiological control of disease spread.</p>
+
+<h2 id="the-measure--the-paper">The measure &amp; the paper</h2>
+
+<p>In our soon to be published paper we describe a method for formally assessing the real
+world performance of any proximity detection protocol and its distance analogue (E.g.
+RSSI readings for Bluetooth based protocols) that links in with the Fraser Group’s at 
+Oxford University’s previous work on stopping the spread of COVID-19 by using a mobile
+application.</p>
+
+<p>We define the ‘Efficacy of Contact Tracing’ measure used in their paper, and create
+a fair and standardised assessment for the ‘probability of detection’ aspect of that
+measure.</p>
+
+<p>This measure and it’s exact make up is summardised in the <a href="/efficacy/paper">fair Efficacy Formula Paper</a>
+page, and detailed precisely in our paper. We shall post a link here once the paper is
+published.</p>
+
+<h2 id="test-results">Test results</h2>
+
+<p>We then took this measure and applied it to a new protocol we designed from scratch
+to work around known Bluetooth communication issues across mobile phones. By using this
+formula to highlight shortcomings in certain tests we were able to rapidly within a
+month create <a href="/protocol">a new low level Bluetooth protocol</a> that has a very high 
+efficacy score.</p>
+
+<p>As part of preparation for publication we have also been looking at other existing
+code bases in the world and carrying out testing on those using the same
+<a href="/efficacy/method">test methodology</a>. We have documented a range of ‘top sheet’ results in
+our <a href="/efficacy/results">results pages</a>. Please open a GitHub issue if you would like us
+to include your own test results.</p>
+
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldProximity">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://slack.lfph.io/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/theheraldproject">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            The Herald Project is a series of the <a target="_new" href="https://www.lfph.io/join/projects/">Linux Foundation Public Health</a>.
+            © 2023 Herald Project Contributors.
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/js/jquery.matchHeight.js?1676884168425440110"></script>
+<script src="/js/scripts.js?1676884168425440110"></script>
+    </div>
+  </div>
+</body>
+
+</html>

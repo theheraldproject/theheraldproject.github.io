@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BLESensorConfiguration Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/BLESensorConfiguration" class="dashAnchor"></a>
+    <a title="BLESensorConfiguration Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Herald 2.1.0-beta1 Docs</a> (36% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Herald Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        BLESensorConfiguration Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AES128.html">AES128</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:6Herald9AggregateC">Aggregate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AnalysisDelegate.html">AnalysisDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AnalysisDelegateManager.html">AnalysisDelegateManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AnalysisProvider.html">AnalysisProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AnalysisProviderManager.html">AnalysisProviderManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AnalysisRunner.html">AnalysisRunner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BLEDevice.html">BLEDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BatteryLog.html">BatteryLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CallableForNewSample.html">CallableForNewSample</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcreteBeaconPayloadDataSupplierV1.html">ConcreteBeaconPayloadDataSupplierV1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcreteExtendedDataSectionV1.html">ConcreteExtendedDataSectionV1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcreteExtendedDataV1.html">ConcreteExtendedDataV1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcreteSensorLogger.html">ConcreteSensorLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcreteSimplePayloadDataSupplier.html">ConcreteSimplePayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcreteTestPayloadDataSupplier.html">ConcreteTestPayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ContactLog.html">ContactLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DetectionLog.html">DetectionLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Device.html">Device</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DiffieHellmanMerkle.html">DiffieHellmanMerkle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DiffieHellmanParameters.html">DiffieHellmanParameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Distance.html">Distance</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DoubleValue.html">DoubleValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:6Herald9EncounterC">Encounter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EventLog.html">EventLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EventTimeIntervalLog.html">EventTimeIntervalLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Filter.html">Filter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FowlerBasic.html">FowlerBasic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FowlerBasicAnalyser.html">FowlerBasicAnalyser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Gaussian.html">Gaussian</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GreaterThan.html">GreaterThan</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/InPeriod.html">InPeriod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/InRange.html">InRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Interactions.html">Interactions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LegacyPayloadData.html">LegacyPayloadData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LegacyPayloadData/ProtocolName.html">– ProtocolName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LessThan.html">LessThan</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ListManager.html">ListManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Mean.html">Mean</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Median.html">Median</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Mobility.html">Mobility</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MobilityEvent.html">MobilityEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Mode.html">Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoOp.html">NoOp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PayloadData.html">PayloadData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RSSI.html">RSSI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RingBuffer.html">RingBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RiskAggregationBasic.html">RiskAggregationBasic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RssiHistogram.html">RssiHistogram</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SHA256.html">SHA256</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sample.html">Sample</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SampleIterator.html">SampleIterator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SampleIteratorProxy.html">SampleIteratorProxy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SampleList.html">SampleList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SampleListIterator.html">SampleListIterator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SampleStatistics.html">SampleStatistics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SampledID.html">SampledID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SecureRandomFunction.html">SecureRandomFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SelfCalibratedModel.html">SelfCalibratedModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensorArray.html">SensorArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensorDelegateLogger.html">SensorDelegateLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Since.html">Since</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SmoothedLinearModel.html">SmoothedLinearModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SmoothedLinearModelAnalyser.html">SmoothedLinearModelAnalyser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SocialDistance.html">SocialDistance</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StatisticsLog.html">StatisticsLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Summary.html">Summary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TestRandomFunction.html">TestRandomFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextFile.html">TextFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIntBig.html">UIntBig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UniqueVenue.html">UniqueVenue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Until.html">Until</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Variance.html">Variance</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VariantSet.html">VariantSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VenueDiary.html">VenueDiary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VenueDiaryEvent.html">VenueDiaryEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VenueEncounter.html">VenueEncounter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CalibrationMeasurementUnit.html">CalibrationMeasurementUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/EventTimeIntervalLogEventType.html">EventTimeIntervalLogEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ExtendedDataSegmentCodes.html">ExtendedDataSegmentCodes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ExtendedDataSegmentCodesV1.html">ExtendedDataSegmentCodesV1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HeraldBeaconPayloadVersions.html">HeraldBeaconPayloadVersions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ProximityMeasurementUnit.html">ProximityMeasurementUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SensorLoggerLevel.html">SensorLoggerLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SensorState.html">SensorState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SensorType.html">SensorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StringLengthEncodingOption.html">StringLengthEncodingOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/VenuePayloadParseError.html">VenuePayloadParseError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/CBCentralManagerState.html">CBCentralManagerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CBManagerState.html">CBManagerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CBPeripheralManagerState.html">CBPeripheralManagerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CBPeripheralState.html">CBPeripheralState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/TimeInterval.html">TimeInterval</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:6Herald25BeaconPayloadDataSupplierP">BeaconPayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Encryption.html">Encryption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Event.html">Event</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ExtendedData.html">ExtendedData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Integrity.html">Integrity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/KeyExchange.html">KeyExchange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/LocationReference.html">LocationReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PayloadDataFormatter.html">PayloadDataFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PayloadDataSupplier.html">PayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PseudoRandomFunction.html">PseudoRandomFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Resettable.html">Resettable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Sensor.html">Sensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SensorDelegate.html">SensorDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SensorLogger.html">SensorLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:6Herald25SimplePayloadDataSupplierP">SimplePayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:6Herald23TestPayloadDataSupplierP">TestPayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VenueDiaryDelegate.html">VenueDiaryDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/BLESensorConfiguration.html">BLESensorConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Calibration.html">Calibration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ConcretePayloadDataFormatter.html">ConcretePayloadDataFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HexEncodingOptions.html">HexEncodingOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/InertiaLocationReference.html">InertiaLocationReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Location.html">Location</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MobilityLocationReference.html">MobilityLocationReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PlacenameLocationReference.html">PlacenameLocationReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Proximity.html">Proximity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/WGS84CircularAreaLocationReference.html">WGS84CircularAreaLocationReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/WGS84PointLocationReference.html">WGS84PointLocationReference</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald8BLE_RSSIa">BLE_RSSI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald11BLE_TxPowera">BLE_TxPower</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald17ContactIdentifiera">ContactIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald13EncryptionKeya">EncryptionKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald23ExtendedDataSegmentCodea">ExtendedDataSegmentCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald018KeyExchangePrivateB0a">KeyExchangePrivateKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald017KeyExchangePublicB0a">KeyExchangePublicKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald017KeyExchangeSharedB0a">KeyExchangeSharedKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald11MatchingKeya">MatchingKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald16PayloadTimestampa">PayloadTimestamp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald9SecretKeya">SecretKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald16TargetIdentifiera">TargetIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald9ValueTypea">ValueType</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>BLESensorConfiguration</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BLESensorConfiguration</span></code></pre>
+
+                </div>
+              </div>
+            <p>Defines BLE sensor configuration data, e.g. service and characteristic UUIDs</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV11serviceUUIDSo6CBUUIDCvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/serviceUUID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV11serviceUUIDSo6CBUUIDCvpZ">serviceUUID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Service UUID for beacon service. This is a fixed UUID to enable iOS devices to find each other even
+in background mode. Android devices will need to find Apple devices first using the manufacturer code
+then discover services to identify actual beacons.</p>
+
+<ul>
+<li>Service and characteristic UUIDs are V4 UUIDs that have been randomly generated and tested
+for uniqueness by conducting web searches to ensure it returns no results.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">serviceUUID</span><span class="p">:</span> <span class="kt">CBUUID</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV31androidSignalCharacteristicUUIDSo6CBUUIDCvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/androidSignalCharacteristicUUID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV31androidSignalCharacteristicUUIDSo6CBUUIDCvpZ">androidSignalCharacteristicUUID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Signaling characteristic for controlling connection between peripheral and central, e.g. keep each other from suspend state</p>
+
+<ul>
+<li>Characteristic UUID is randomly generated V4 UUIDs that has been tested for uniqueness by conducting web searches to ensure it returns no results.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">androidSignalCharacteristicUUID</span><span class="p">:</span> <span class="kt">CBUUID</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV27iosSignalCharacteristicUUIDSo6CBUUIDCvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/iosSignalCharacteristicUUID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV27iosSignalCharacteristicUUIDSo6CBUUIDCvpZ">iosSignalCharacteristicUUID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Signaling characteristic for controlling connection between peripheral and central, e.g. keep each other from suspend state</p>
+
+<ul>
+<li>Characteristic UUID is randomly generated V4 UUIDs that has been tested for uniqueness by conducting web searches to ensure it returns no results.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">iosSignalCharacteristicUUID</span><span class="p">:</span> <span class="kt">CBUUID</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV25payloadCharacteristicUUIDSo6CBUUIDCvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/payloadCharacteristicUUID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV25payloadCharacteristicUUIDSo6CBUUIDCvpZ">payloadCharacteristicUUID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Primary payload characteristic (read) for distributing payload data from peripheral to central, e.g. identity data</p>
+
+<ul>
+<li>Characteristic UUID is randomly generated V4 UUIDs that has been tested for uniqueness by conducting web searches to ensure it returns no results.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">payloadCharacteristicUUID</span><span class="p">:</span> <span class="kt">CBUUID</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV23manufacturerIdForSensors6UInt16VvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/manufacturerIdForSensor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV23manufacturerIdForSensors6UInt16VvpZ">manufacturerIdForSensor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Manufacturer data is being used on Android to store pseudo device address</p>
+
+<ul>
+<li>Pending update to dedicated ID</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">manufacturerIdForSensor</span><span class="p">:</span> <span class="kt">UInt16</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV23interopOpenTraceEnabledSbvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/interopOpenTraceEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV23interopOpenTraceEnabledSbvpZ">interopOpenTraceEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>OpenTrace service UUID, characteristic UUID, and manufacturer ID</p>
+
+<ul>
+<li>Enables capture of OpenTrace payloads, e.g. for transition to HERALD</li>
+<li>HERALD will discover devices advertising OpenTrace service UUID (can be the same as HERALD service UUID)</li>
+<li>HERALD will search for OpenTrace characteristic, write payload of self to target,
+read payload from target, and capture payload written to self by target.</li>
+<li>HERALD will read/write payload from/to OpenTrace at regular intervals if update time
+interval is not .never. Tests have confirmed that using this feature, instead of relying
+solely on OpenTrace advert updates on idle Android and iOS devices offers more
+regular measurements for OpenTrace.</li>
+<li>OpenTrace payloads will be reported via SensorDelegate:didRead where the payload
+has type LegacyPayloadData, and service will be the OpenTrace characteristic UUID.</li>
+<li>Set interopOpenTraceEnabled = false to disable feature</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">interopOpenTraceEnabled</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV27interopOpenTraceServiceUUIDSo6CBUUIDCvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/interopOpenTraceServiceUUID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV27interopOpenTraceServiceUUIDSo6CBUUIDCvpZ">interopOpenTraceServiceUUID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">interopOpenTraceServiceUUID</span><span class="p">:</span> <span class="kt">CBUUID</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV41interopOpenTracePayloadCharacteristicUUIDSo6CBUUIDCvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/interopOpenTracePayloadCharacteristicUUID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV41interopOpenTracePayloadCharacteristicUUIDSo6CBUUIDCvpZ">interopOpenTracePayloadCharacteristicUUID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">interopOpenTracePayloadCharacteristicUUID</span><span class="p">:</span> <span class="kt">CBUUID</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV30interopOpenTraceManufacturerIds6UInt16VvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/interopOpenTraceManufacturerId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV30interopOpenTraceManufacturerIds6UInt16VvpZ">interopOpenTraceManufacturerId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">interopOpenTraceManufacturerId</span><span class="p">:</span> <span class="kt">UInt16</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV45interopOpenTracePayloadDataUpdateTimeIntervalSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/interopOpenTracePayloadDataUpdateTimeInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV45interopOpenTracePayloadDataUpdateTimeIntervalSdvpZ">interopOpenTracePayloadDataUpdateTimeInterval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">interopOpenTracePayloadDataUpdateTimeInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV33interopAdvertBasedProtocolEnabledSbvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/interopAdvertBasedProtocolEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV33interopAdvertBasedProtocolEnabledSbvpZ">interopAdvertBasedProtocolEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Advert based protocol service UUID, service data key</p>
+
+<ul>
+<li>Enable capture of advert based protocol payloads, e.g. for transition to HERALD</li>
+<li>HERALD will discover devices advertising protocol service UUID (can be the same as HERALD service UUID)</li>
+<li>HERALD will parse service data to read payload from target</li>
+<li>Protocol payloads will be reported via SensorDelegate:didRead where the payload
+has type LegacyPayloadData, and service will be the protocol service UUID.</li>
+<li>Set interopAdvertBasedProtocolEnabled = false to disable feature</li>
+<li>Scan for 16-bit service UUID by setting the value xxxx in base UUID 0000xxxx-0000-1000-8000-00805F9B34FB</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">interopAdvertBasedProtocolEnabled</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV37interopAdvertBasedProtocolServiceUUIDSo6CBUUIDCvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/interopAdvertBasedProtocolServiceUUID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV37interopAdvertBasedProtocolServiceUUIDSo6CBUUIDCvpZ">interopAdvertBasedProtocolServiceUUID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">interopAdvertBasedProtocolServiceUUID</span><span class="p">:</span> <span class="kt">CBUUID</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV40interopAdvertBasedProtocolServiceDataKeySo6CBUUIDCvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/interopAdvertBasedProtocolServiceDataKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV40interopAdvertBasedProtocolServiceDataKeySo6CBUUIDCvpZ">interopAdvertBasedProtocolServiceDataKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">interopAdvertBasedProtocolServiceDataKey</span><span class="p">:</span> <span class="kt">CBUUID</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV38signalCharacteristicActionWritePayloads5UInt8VvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/signalCharacteristicActionWritePayload" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV38signalCharacteristicActionWritePayloads5UInt8VvpZ">signalCharacteristicActionWritePayload</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Signal characteristic action code for write payload, expect 1 byte action code followed by 2 byte little-endian Int16 integer value for payload data length, then payload data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">signalCharacteristicActionWritePayload</span><span class="p">:</span> <span class="kt">UInt8</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV35signalCharacteristicActionWriteRSSIs5UInt8VvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/signalCharacteristicActionWriteRSSI" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV35signalCharacteristicActionWriteRSSIs5UInt8VvpZ">signalCharacteristicActionWriteRSSI</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Signal characteristic action code for write RSSI, expect 1 byte action code followed by 4 byte little-endian Int32 integer value for RSSI value</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">signalCharacteristicActionWriteRSSI</span><span class="p">:</span> <span class="kt">UInt8</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV45signalCharacteristicActionWritePayloadSharings5UInt8VvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/signalCharacteristicActionWritePayloadSharing" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV45signalCharacteristicActionWritePayloadSharings5UInt8VvpZ">signalCharacteristicActionWritePayloadSharing</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Signal characteristic action code for write payload, expect 1 byte action code followed by 2 byte little-endian Int16 integer value for payload sharing data length, then payload sharing data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">signalCharacteristicActionWritePayloadSharing</span><span class="p">:</span> <span class="kt">UInt8</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV40signalCharacteristicActionWriteImmediates5UInt8VvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/signalCharacteristicActionWriteImmediate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV40signalCharacteristicActionWriteImmediates5UInt8VvpZ">signalCharacteristicActionWriteImmediate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Signal characteristic action code for arbitrary immediate write</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">signalCharacteristicActionWriteImmediate</span><span class="p">:</span> <span class="kt">UInt8</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV17notificationDelay8Dispatch0F12TimeIntervalOvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/notificationDelay" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV17notificationDelay8Dispatch0F12TimeIntervalOvpZ">notificationDelay</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Time delay between notifications for subscribers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">notificationDelay</span><span class="p">:</span> <span class="kt">DispatchTimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV25advertRestartTimeIntervalSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/advertRestartTimeInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV25advertRestartTimeIntervalSdvpZ">advertRestartTimeInterval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Time delay between advert restart</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">advertRestartTimeInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV25concurrentConnectionQuotaSivpZ"></a>
+                    <a name="//apple_ref/swift/Variable/concurrentConnectionQuota" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV25concurrentConnectionQuotaSivpZ">concurrentConnectionQuota</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Maximum number of concurrent BLE connections</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">concurrentConnectionQuota</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV32androidAdvertRefreshTimeIntervalSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/androidAdvertRefreshTimeInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV32androidAdvertRefreshTimeIntervalSdvpZ">androidAdvertRefreshTimeInterval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Advert refresh time interval on Android devices</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">androidAdvertRefreshTimeInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV24connectionAttemptTimeoutSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/connectionAttemptTimeout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV24connectionAttemptTimeoutSdvpZ">connectionAttemptTimeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Herald internal connection expiry timeout</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">connectionAttemptTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV21venueCheckInTimeLimitSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/venueCheckInTimeLimit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV21venueCheckInTimeLimitSdvpZ">venueCheckInTimeLimit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The amount of time after which a diary venue event will stay in the log file (may be shown in the UI as &lsquo;pending&rsquo; before this limit)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">venueCheckInTimeLimit</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV22venueCheckOutTimeLimitSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/venueCheckOutTimeLimit" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV22venueCheckOutTimeLimitSdvpZ">venueCheckOutTimeLimit</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The amount of time after which a venue presence diary event will be said to have been finished</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">venueCheckOutTimeLimit</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV30venueDiaryDefaultRecordingDayss5UInt8VSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/venueDiaryDefaultRecordingDays" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV30venueDiaryDefaultRecordingDayss5UInt8VSgvpZ">venueDiaryDefaultRecordingDays</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The default number of days to save venue diary visits for, set by preference of the user. May be nil (no limit) or 0 (don&rsquo;t record anything, ever)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">venueDiaryDefaultRecordingDays</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV26venueDiaryDefaultShareDayss5UInt8VSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/venueDiaryDefaultShareDays" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV26venueDiaryDefaultShareDayss5UInt8VSgvpZ">venueDiaryDefaultShareDays</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If sharing a venue diary (E.g. via email to contact tracers), the number of days by default to share. nil means all. 0 means none</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">venueDiaryDefaultShareDays</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV27venueDiaryDefaultShareEmailSSSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/venueDiaryDefaultShareEmail" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV27venueDiaryDefaultShareEmailSSSgvpZ">venueDiaryDefaultShareEmail</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If sharing a venue diary (E.g. via email to contact tracers), the email address to send the diary to by default when &lsquo;share&rsquo; is clicked</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">venueDiaryDefaultShareEmail</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV8logLevelAA012SensorLoggerE0OvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/logLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV8logLevelAA012SensorLoggerE0OvpZ">logLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log level for BLESensor</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">logLevel</span><span class="p">:</span> <span class="kt"><a href="../Enums/SensorLoggerLevel.html">SensorLoggerLevel</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV21mobilitySensorEnabledAA8DistanceCSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/mobilitySensorEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV21mobilitySensorEnabledAA8DistanceCSgvpZ">mobilitySensorEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Mobility sensor for estimating range of travel without recording location</p>
+
+<ul>
+<li>Use this for prioritising positive cases that may have spread the disease over significant distances</li>
+<li>Enabling location permission also has the benefit of enabling  awake on screen for iOS-iOS background detection</li>
+<li>Set to nil to disable sensor, set to distance in metres to enable sensor for mobility sensing at given resolution.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">mobilitySensorEnabled</span><span class="p">:</span> <span class="kt"><a href="../Classes/Distance.html">Distance</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV29payloadDataUpdateTimeIntervalSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/payloadDataUpdateTimeInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV29payloadDataUpdateTimeIntervalSdvpZ">payloadDataUpdateTimeInterval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Payload update at regular intervals, in addition to default HERALD communication process.</p>
+
+<ul>
+<li>Use this to enable regular payload reads according to app payload lifespan.</li>
+<li>Set to .never to disable this function.</li>
+<li>Payload updates are reported to SensorDelegate as didRead.</li>
+<li>Setting take immediate effect, no need to restart BLESensor, can also be applied while BLESensor is active.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">payloadDataUpdateTimeInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV26filterDuplicatePayloadDataSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/filterDuplicatePayloadData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV26filterDuplicatePayloadDataSdvpZ">filterDuplicatePayloadData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Filter duplicate payload data and suppress sensor(didRead:fromTarget) delegate calls</p>
+
+<ul>
+<li>Set to .never to disable this feature</li>
+<li>Set time interval N to filter duplicate payload data seen in last N seconds</li>
+<li>Example : 60 means filter duplicates in last minute</li>
+<li>Filters all occurrences of payload data from all targets</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">filterDuplicatePayloadData</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV23peripheralCleanIntervalSdvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/peripheralCleanInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV23peripheralCleanIntervalSdvpZ">peripheralCleanInterval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove peripheral records that haven&rsquo;t been updated for some time.</p>
+
+<ul>
+<li>Herald aims to maintain a regular &ldquo;connection&rdquo; to all peripherals to gather precise proximity and duration data for all peripheral records.</li>
+<li>A regular connection in this context means frequent data sampling that may or may not require an actual connection.</li>
+<li>For example, RSSI measurements are taken from adverts, thus do not require an active connection; even the connection on iOS is just an illusion for ease of understanding.</li>
+<li>A peripheral record stops updating if the device has gone out of range, therefore the record can be deleted to reduce workload.</li>
+<li>Upper bound : Set this value to iOS Bluetooth address rotation period (roughly 15 minutes) to maximise continuity when devices go out of range, then return back in range (connection resume period = 15 mins max).</li>
+<li>Lower bound : Set this value to Android scan-process period (roughly 2 minutes) to minimise workload, but iOS connection resume will be more reliant on re-discovery (connection resume period = 2 mins or more dependent on external factors).</li>
+<li>iOS-iOS connections may resume beyond the set interval value if the addresses have not changed, due to other mechanisms in Herald.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">peripheralCleanInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald22BLESensorConfigurationV20inertiaSensorEnabledSbvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/inertiaSensorEnabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald22BLESensorConfigurationV20inertiaSensorEnabledSbvpZ">inertiaSensorEnabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enable inertia sensor</p>
+
+<ul>
+<li>Inertia sensor (accelerometer) measures acceleration in meters per second (m/s) along device X, Y and Z axis</li>
+<li>Generates SensorDelegate:didVisit callbacks with InertiaLocationReference data</li>
+<li>Set to false to disable sensor, and true value to enable sensor</li>
+<li>This is used for automated capture of RSSI at different distances, where the didVisit data is used as markers</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">inertiaSensorEnabled</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="https://heraldprox.io/" target="_blank" rel="external">adamfowleruk</a>. All rights reserved. (Last updated: 2021-06-23)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

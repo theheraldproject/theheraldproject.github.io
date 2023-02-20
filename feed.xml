@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://heraldprox.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://heraldprox.io/" rel="alternate" type="text/html" /><updated>2023-02-20T09:09:28+00:00</updated><id>https://heraldprox.io/feed.xml</id><title type="html">Herald Project</title><subtitle>The home for our research in to low level mobile phone Bluetooth capabilities, issues, workarounds, and testing.</subtitle><author><name>Herald Project Contributors</name></author><entry><title type="html">Version 2.2.0 Released</title><link href="https://heraldprox.io/blog/version-220" rel="alternate" type="text/html" title="Version 2.2.0 Released" /><published>2023-02-19T06:00:00+00:00</published><updated>2023-02-19T06:00:00+00:00</updated><id>https://heraldprox.io/blog/version-220</id><content type="html" xml:base="https://heraldprox.io/blog/version-220">&lt;h1 id=&quot;herald-version-220-released&quot;&gt;Herald Version 2.2.0 Released&lt;/h1&gt;
+
+&lt;p&gt;It’s been a busy few months for the Herald team. So busy in fact we didn’t announce the previous version 2.1.0! 
+So in this post we’ll walk you through all the recent improvements in Herald.&lt;/p&gt;
+
+&lt;p&gt;We’ve moved to a small release schedule whereby each time a feature, or feature and a few associated bugs, are fixed
+we test and push out a release immediately. This should make upcoming releases every 1-3 months rather than 12-15 months.
+This also allows us to get ahead of mobile operating system releases and perform compatibility testing on the latest iOS and
+Android releases. Expect to see more frequent releases and updates from the team in future!&lt;/p&gt;
+
+&lt;p&gt;Since v2.2.0 (Released 19 February 2023):-&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Tested on the latest iOS and Android OS versions for reliability and compatability&lt;/li&gt;
+  &lt;li&gt;Improvements in detection (including one way detection) on both iOS and Android, with connect back on iOS working well&lt;/li&gt;
+  &lt;li&gt;iOS now connects much less often to Android devices, reducing workload on Android and improving battery use on both platforms&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;BREAKING CHANGE:&lt;/strong&gt; A more explicit way for app developers to specify a custom Bluetooth Service UUID either alongside or instead of Herald’s default mode (See BLESensorConfiguration for details)&lt;/li&gt;
+  &lt;li&gt;Added production of graphs about all other phones seeing a target phone (the ‘observation’ charts when you run the script) in the Analysis Scripts which ‘zoom in’ to a small time window of interest to help to pinpoint specific phone issues&lt;/li&gt;
+  &lt;li&gt;Added an anomaly detection Java app to the Analysis scripts repository which allows the creation of issue scenarios and root cause analysis over many phones across many days, to aid anomaly detection, prioritisation, and resolution&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since v2.1.0 (Released 14 January 2023):-&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Healthcheck routines on both platforms to correct any local bugs or reliability issues&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;BREACKING CHANGE:&lt;/strong&gt; Herald now using the official, registered Linux Foundation Bluetooth Service UUID (which we share with the &lt;a href=&quot;https://zephyrproject.org/&quot;&gt;Zephyr Project&lt;/a&gt;). We’re keeping detection of the previous ID in place, but not advertising it by default since v2.1.0.&lt;/li&gt;
+  &lt;li&gt;Various security primitives and options, and the use of a new hashing function&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For a full list of changes please see the release notes:-&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/theheraldproject/herald-for-ios/releases/tag/v2.2.0&quot;&gt;iOS Release Notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/theheraldproject/herald-for-android/releases/tag/v2.2.0&quot;&gt;Android Release Notes and library download&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/theheraldproject/herald-analysis&quot;&gt;Analysis Scripts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The releases are available here:-&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cocoapods.org/pods/Herald&quot;&gt;Cocoapod for iOS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://central.sonatype.com/artifact/io.heraldprox/herald/2.2.0&quot;&gt;Library for Android&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can also build the Herald test app by cloning our repositories and building the app locally.&lt;/p&gt;
+
+&lt;h2 id=&quot;get-involved&quot;&gt;Get Involved&lt;/h2&gt;
+
+&lt;p&gt;The Herald Project thrives on community participation. If you want to get involved, or have a great idea for improving healthcare, please get in touch. Visit the &lt;a href=&quot;/community&quot;&gt;Herald Community Page&lt;/a&gt;.&lt;/p&gt;</content><author><name>Herald Project Contributors</name></author><summary type="html">Herald Version 2.2.0 Released</summary></entry><entry><title type="html">Introducing the Herald Bluetooth MESH API</title><link href="https://heraldprox.io/blog/mesh-api" rel="alternate" type="text/html" title="Introducing the Herald Bluetooth MESH API" /><published>2022-04-23T06:00:00+00:00</published><updated>2022-04-23T06:00:00+00:00</updated><id>https://heraldprox.io/blog/mesh-api</id><content type="html" xml:base="https://heraldprox.io/blog/mesh-api">&lt;h1 id=&quot;introducing-the-herald-bluetooth-mesh-api&quot;&gt;Introducing the Herald Bluetooth MESH API&lt;/h1&gt;
+
+&lt;p&gt;The Herald Bluetooth MESH API will allow Smart Hospital use cases, improving the experience of clinical staff, patients, and visitors.&lt;/p&gt;
+
+&lt;p&gt;The Herald Project contributors have been looking at how we can take what we’ve learned during COVID-19 about
+Bluetooth Low Energy and apply it to a wider healthcare context. 
+&lt;a href=&quot;/mesh&quot;&gt;Herald Bluetooth MESH&lt;/a&gt; is a new API that facilitates easy creation of a secure MESH network
+within a hospital. This can drive many use cases, including:-&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Navigation without a hospital, with downloadable and searchable map and gazetteer&lt;/li&gt;
+  &lt;li&gt;Locating hospital equipment by staff when they urgently need it&lt;/li&gt;
+  &lt;li&gt;Replacing pagers with a secure, in-hospital, self healing data network, providing more patient context in messages&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Herald Bluetooth MESH API is currently under development with the technology already running on a variety
+of devices and communicating between computer servers running the RabbitMQ reliable messaging technology,
+and a set of Herald MESH applications including a MESH Modem, MESH network Relay Nodes (which also support
+the Herald Venue Beacon functionality), and MESH and Bluetooth Low Energy ‘tags’ for equipment.&lt;/p&gt;
+
+&lt;p&gt;We hope to release a first Beta demonstration build of applications with a video explainer in May 2022.&lt;/p&gt;
+
+&lt;h2 id=&quot;get-involved&quot;&gt;Get Involved&lt;/h2&gt;
+
+&lt;p&gt;The Herald Project thrives on community participation. If you want to get involved, or have a great idea for improving healthcare, please get in touch. Visit the &lt;a href=&quot;/community&quot;&gt;Herald Community Page&lt;/a&gt;.&lt;/p&gt;</content><author><name>Herald Project Contributors</name></author><summary type="html">Introducing the Herald Bluetooth MESH API</summary></entry><entry><title type="html">Bluetooth RSSI proximity self calibration enhancements</title><link href="https://heraldprox.io/blog/self-calibration" rel="alternate" type="text/html" title="Bluetooth RSSI proximity self calibration enhancements" /><published>2022-03-11T06:00:00+00:00</published><updated>2022-03-11T06:00:00+00:00</updated><id>https://heraldprox.io/blog/self-calibration</id><content type="html" xml:base="https://heraldprox.io/blog/self-calibration">&lt;h1 id=&quot;herald-announces-working-approach-to-bluetooth-phone-rssi-proximity-self-calibration&quot;&gt;Herald announces working approach to Bluetooth phone RSSI proximity self calibration&lt;/h1&gt;
+
+&lt;p&gt;Today The Herald Project, part of LFPH, announces a promising new approach to
+measuring phone-to-phone proximity accurately using Bluetooth Low Energy on
+consumer mobile phones.&lt;/p&gt;
+
+&lt;p&gt;A problem since the start of the SARS-CoV-2 pandemic has been accurately measuring
+proximity using mobile phones. The most prevalent sensor available is your phones Bluetooth
+chip and antenna.&lt;/p&gt;
+
+&lt;p&gt;The Herald Project has researched the variability of RSSI signal strength data and published
+millions of rows of datasets down to 1cm resolution between different phones to research the
+possibilities here.&lt;/p&gt;
+
+&lt;p&gt;We have recently completed this research by creating a mechanism allowing for phones to self-calibrate&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;removing the variation from how different people store and use their phones by calibrating based
+on their behaviour - their close contacts with other people and how humans socialise with each other.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When you talk to your close friends you adopt a particular distance. For acquaintences slightly further, and so on.
+Using this information for a subset of your most prolonged ‘contact events’ (where your phone detects others)
+has enabled us to devise a way for your phone to calibrate to a standard scale, allowing proximity to be calibrated
+to your behaviour over time.&lt;/p&gt;
+
+&lt;p&gt;This works by correcting for Transmit Power from remote phones and filtering real interactions over a period of time (2.5 days should be sufficient) and then
+spotting peaks in corrected data to infer ‘close/personal space’ and ‘near/acquiantance space’ using Proxemics, and calibrating
+a proximity scale to those human behavioural zones.&lt;/p&gt;
+
+&lt;p&gt;Once the data is calibrated, epidemiologists can create risk algorithms that use this standard
+proximity scale.&lt;/p&gt;
+
+&lt;p&gt;Using two different phones on test subjects that live together and have very different jobs and working hours showed that 
+calibrating on all other Bluetooth contact events, then applying each phones own calibration results to their mutual contact events, 
+gave very similar risk scores - to within 7.5% of each other. (More accurate than your step counters when you go walking with a friend!)&lt;/p&gt;
+
+&lt;p&gt;We have also provided a file - heraldrisk.R - under an Apache 2.0 license allowing others to use our Herald demo app
+or these functions independently to calibrate their own devices.&lt;/p&gt;
+
+&lt;p&gt;More can be read about this on our GitHub site: https://github.com/theheraldproject/herald-analysis#phone-self-calibration-scripts&lt;/p&gt;
+
+&lt;p&gt;The Herald Project will now work to incorporate this into our next release of the Herald Risk and Exposure API,
+allowing Public Health Authorities to build this new accurate risk model with 7 second resolution into their
+COVID-19 Digital Contact Tracing apps, and to provide for the first time a ‘Social Mixing Score’ feedback to 
+a user.&lt;/p&gt;
+
+&lt;p&gt;Providing social mixing scores on apps will allow people to measure and track their own social mixing
+in much the same way as people monitor their daily step counts. They’ll be able to have a consistent
+points score per day for mixing with other people, and choose how to modify their own behaviour
+to minimise their risk of contracting disease.&lt;/p&gt;
+
+&lt;p&gt;This crucially allows them to prevent themselves being notified of exposure rather than wait 
+to be told they may have received too much exposure over the past few days. This should
+reduce the spread of disease and do so by reducing the number of people we ask to self
+isolate via COVID-19 apps.&lt;/p&gt;
+
+&lt;h2 id=&quot;get-involved&quot;&gt;Get Involved&lt;/h2&gt;
+
+&lt;p&gt;The Herald Project thrives on community participation. If you want to get involved, or have a great idea for improving healthcare, please get in touch. Visit the &lt;a href=&quot;/community&quot;&gt;Herald Community Page&lt;/a&gt;.&lt;/p&gt;</content><author><name>Herald Project Contributors</name></author><summary type="html">Herald announces working approach to Bluetooth phone RSSI proximity self calibration</summary></entry><entry><title type="html">Singapore’s GovTech donates OpenTrace to Linux Foundation Public Health’s Herald Project</title><link href="https://heraldprox.io/blog/opentrace-donation" rel="alternate" type="text/html" title="Singapore's GovTech donates OpenTrace to Linux Foundation Public Health's Herald Project" /><published>2021-08-24T06:00:00+00:00</published><updated>2021-08-24T06:00:00+00:00</updated><id>https://heraldprox.io/blog/opentrace-donation</id><content type="html" xml:base="https://heraldprox.io/blog/opentrace-donation">&lt;h1 id=&quot;singapores-govtech-donates-opentrace-to-linux-foundation-public-healths-herald-project&quot;&gt;Singapore’s GovTech donates OpenTrace to Linux Foundation Public Health’s Herald Project&lt;/h1&gt;
+
+&lt;p&gt;GovTech Singapore (&lt;a href=&quot;https://tech.gov.sg&quot;&gt;https://tech.gov.sg&lt;/a&gt;) has signed an agreement to donate the OpenTrace code and name to Linux Foundation Public Health (&lt;a href=&quot;https://lfph.io/&quot;&gt;https://lfph.io/&lt;/a&gt;) (LFPH)’s Herald Project (&lt;a href=&quot;https://heraldprox.io/&quot;&gt;https://heraldprox.io/&lt;/a&gt;). Open sourced in April 2020, OpenTrace was one of the first Digital Contact Tracing (DCT) systems published for use around the world. It received strong interest from many nations in early 2020 seeking to adopt similar solutions.&lt;/p&gt;
+
+&lt;p&gt;Adam Fowler, The Herald Project’s TSC Chair, had this to say:&lt;/p&gt;
+
+&lt;p&gt;“The Singapore Government’s GovTech team were the true trailblazers of practical Digital Contact Tracing. Their efforts spurred on other teams throughout the world to pursue this life saving risk screening technology. Their success in proving the viability of Digital Contact Tracing in Singapore inspired me to continue to pursue research creating a reliable Bluetooth communication system to further improve this technology, and resulted in the creation of The Herald Project. I’m very proud to work with the GovTech team and carry on the baton of open source Digital Contact Tracing as part of Project Herald.”&lt;/p&gt;
+
+&lt;p&gt;The Herald Project was formed in the summer of 2020 to investigate and create a method for reliable, privacy-preserving Bluetooth communication and range finding across multiple devices, including phones, wearables and beacons. Created as a VMware originated open source project, Herald was donated to LFPH in February 2021. The Herald Protocol is the most reliable protocol with the widest device support in the world, supporting phones back to 2010 and a wide range of inexpensive wearables. The Herald project even has its own open source wearable design which should eventually be manufactured at USD 15 per wearable and is currently undergoing testing.&lt;/p&gt;
+
+&lt;p&gt;Since its launch, Herald has been adopted by those looking to improve their DCT systems including the COVID-19 apps of Australia and Alberta, Canada, and is deployed on over 7.5 million devices worldwide. The Herald Project has developed a vibrant community since joining Linux Foundation Public Health.&lt;/p&gt;
+
+&lt;p&gt;Jenny Wanger from LFPH had this to say:&lt;/p&gt;
+
+&lt;p&gt;“GovTech’s donation of OpenTrace demonstrates exactly the kind of global collaboration between technologists and public health authorities that open source software enables and leads to better products overall. Because LFPH is dedicated to making sure everything we do happens in the open, public health authorities around the world trust us and the software we host, like Herald, to help them in the fight against COVID-19.”&lt;/p&gt;
+
+&lt;p&gt;The Singapore Government’s own TraceTogether system was built on OpenTrace and is tightly linked to the national healthcare and disease outbreak response systems in Singapore. By donating OpenTrace to Herald and assisting the team on the future direction of Herald, the hope is to create a white-labeled software suite for Digital Contact Tracing incorporating mobile apps, wearable devices, DCT backend services, and epidemiological outbreak analytics that any government can use to help protect their residents.&lt;/p&gt;
+
+&lt;p&gt;Jason Bay from GovTech Singapore had this to say about their hopes for the OpenTrace code and name joining Herald:&lt;/p&gt;
+
+&lt;p&gt;“My team and I built TraceTogether and OpenTrace because we believed in the potential for a novel application of consumer technology to support public health responses to COVID-19 and other disease outbreaks – not only in Singapore but globally too. In our March 2020 manifesto, we wrote that ‘viruses do not respect national boundaries, (and) neither should humanity’s response.’ Herald’s vision of an end-to-end white-label system that public health authorities can adopt is ambitious, but worthy of our support. We hope that by aligning our efforts around an open, interoperable framework like Herald, humanity will collectively be better able to respond to this and future pandemics.”&lt;/p&gt;
+
+&lt;p&gt;In the coming weeks The Herald Project will release a new version of OpenTrace to provide an end-to-end DCT system that leverages both the OpenTrace and Herald innovations. The OpenTrace name and brand will be used for all DCT tools within the project; the Herald name will be applied to the broader protocol technology which has potential future health use cases such as:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Replacing hospital pagers with a system that provides more context about a required consultation&lt;/li&gt;
+  &lt;li&gt;Locating urgently required hospital equipment such as syringe drivers&lt;/li&gt;
+  &lt;li&gt;Securely tracking important samples in hospitals&lt;/li&gt;
+  &lt;li&gt;Ultra Wide Band (UWB) enabled devices for very accurate distance estimation in worker safety&lt;/li&gt;
+  &lt;li&gt;Wayfinding inside complex buildings using a series of Herald-enabled beacons&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;find-out-more-about-opentrace&quot;&gt;Find out more about OpenTrace&lt;/h2&gt;
+
+&lt;p&gt;You can visit our &lt;a href=&quot;/opentrace&quot;&gt;OpenTrace section&lt;/a&gt; on this website for further details.&lt;/p&gt;
+
+&lt;h2 id=&quot;get-involved&quot;&gt;Get Involved&lt;/h2&gt;
+
+&lt;p&gt;The Herald Project thrives on community participation. If you want to get involved, or have a great idea for improving healthcare, please get in touch. Visit the &lt;a href=&quot;/community&quot;&gt;Herald Community Page&lt;/a&gt;.&lt;/p&gt;</content><author><name>Herald Project Contributors</name></author><summary type="html">Singapore’s GovTech donates OpenTrace to Linux Foundation Public Health’s Herald Project</summary></entry><entry><title type="html">Why Digital Contact Tracing is still needed</title><link href="https://heraldprox.io/blog/dct-still-needed" rel="alternate" type="text/html" title="Why Digital Contact Tracing is still needed" /><published>2021-06-25T08:00:00+00:00</published><updated>2021-06-25T08:00:00+00:00</updated><id>https://heraldprox.io/blog/dct-still-needed</id><content type="html" xml:base="https://heraldprox.io/blog/dct-still-needed">&lt;p&gt;We’re now over a year since the first national lockdowns due to SARS-CoV-2 (COVID-19). In this post we look to the
+continued need for Digital Contact Tracing (DCT), and where the technology is going next.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-need-for-dct&quot;&gt;The need for DCT&lt;/h3&gt;
+
+&lt;p&gt;SARS-CoV-2 was unique due to having several features in a single disease:-&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;High number of asymptomatic carriers (People spreading without showing signs of disease)&lt;/li&gt;
+  &lt;li&gt;Even once disease onset, symptoms were mild, but some succumbed to sudden deterioration&lt;/li&gt;
+  &lt;li&gt;Treatment of the seriously ill involved specialist equipemnt (ventilators) and took many days to recover before being released from hospital&lt;/li&gt;
+  &lt;li&gt;Long period of time until the onset of symptoms (mean of ~4.5 days, 95 percentile of 14 days)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These features in one disease meant that cases could slowly build over time and that manual contact tracers 
+had their work cut out to trace a person’s activities for up to two weeks rather than a couple of days.&lt;/p&gt;
+
+&lt;p&gt;It also meant that there was a very large burden placed on hospitals. Once hospital critical care beds
+were filled it would mean an uptick in the number of deaths through the lack of specialist care.
+Maximising those self isolating at home who had become ill became key to preventing onward spread.&lt;/p&gt;
+
+&lt;p&gt;This means that automated proximity measurement, exposure notification, and their linking to
+manual contact tracing systems were needed in a way not required for previous pandemics.
+This is where Digital Contact Tracing has emerged from.&lt;/p&gt;
+
+&lt;p&gt;A year later we’re now seeing an onset of a Delta variant, and as I write this a new 
+&lt;a href=&quot;https://www.bbc.co.uk/news/world-asia-india-57564560&quot;&gt;‘Delta-Plus’ (AY.1)&lt;/a&gt; variant
+is currently being tracked too - one which early indications show may be both more virulent and
+resistent to vaccines.&lt;/p&gt;
+
+&lt;p&gt;Hopefully this early data will be proved wrong and vaccines will continue to provide a way out
+of this pandemic, but we should take this opportunity to prepare and perfect our DCT approaches.&lt;/p&gt;
+
+&lt;p&gt;Whether in this or future pandemics, an approach will be needed to allow humanity to
+respond to new emerging diseases or variants and respond quicker, minimising the impact on
+both health services’ ability to respond and the day to day freedoms of individuals.&lt;/p&gt;
+
+&lt;h3 id=&quot;putting-contact-tracing-back-into-dct&quot;&gt;Putting Contact Tracing back into DCT&lt;/h3&gt;
+
+&lt;p&gt;Due to the fast onset of SARS-CoV-2 many application teams sought a fully automated
+DCT solution as manual teams were overwhelmed with the volume of cases.&lt;/p&gt;
+
+&lt;p&gt;Whilst useful in the peak of a pandemic, fully automated control without human 
+intervention is not the default approach of contact tracing teams.&lt;/p&gt;
+
+&lt;p&gt;Contact Tracers use epidemiological knowledge and experience to tailor their 
+recommendations to individuals. Each decision is based upon a conversation
+and understanding of an individual case.&lt;/p&gt;
+
+&lt;p&gt;This has not been the case for automated Exposure Notification systems. Instead
+they have operated, in most instances, as either a ‘black box’ - being allowed
+to fully automate and recommend self isolation, or as a ‘fill the gaps’ solution
+to an individual’s contact sheet where they don’t know the name of who they were near to,
+say on public transport.&lt;/p&gt;
+
+&lt;p&gt;The Black Box Exposure Notification (EN) approach has been viewed with scepticism by
+manual contact tracing teams as they do not have access to the basis of calculation
+for individuals’ decisions. It effectively operates as a system outside and separate
+from the standard public health contact tracing approaches which have been honed 
+over the past 100 years.&lt;/p&gt;
+
+&lt;p&gt;A Black Box approach also means no data is available to make decisions from until
+a disease is understood, so that thresholds and policies can be set for self isolation
+advice. This means at an emergence of a new pandemic these solutions will not
+be enabled for full automation as they are not trusted, and they won’t provide early
+warning data to contact tracing teams and epidemiologists.&lt;/p&gt;
+
+&lt;p&gt;The ‘fill the gaps’ approach of Digital Contact Tracing has proved useful. In many
+cases contacts that would have never been reached through manual contact tracing have
+been reached through supplementing personal memories with automated contact matching.&lt;/p&gt;
+
+&lt;p&gt;The downside to this approach is that a person in advance has to share their identity
+with the contact tracing system provider (typically a public health authority), and
+so strong legal safeguards are often added to prevent abuse of this data by governments.&lt;/p&gt;
+
+&lt;p&gt;In addition, although rich exposure risk measurement data is now possible through
+proximity detection mechanisms, such as Herald, this data has not been made available
+to the manual contact tracing teams. They just see a list of extra contacts, and perhaps
+an approximate number of 5-minute windows these individuals were near each other.&lt;/p&gt;
+
+&lt;p&gt;What is needed is a blending of these rough edges of privacy, data accuracy, and providing
+public health experts with enhanced data. With this new diseases or strains can be 
+identified early, enhanced data can be provided to public health teams, and trust
+can be built into the analyses of DCT systems prior to enabling any automated
+exposure advice.&lt;/p&gt;
+
+&lt;p&gt;This approach is Digitally Assisted Contact Tracing (DACT) and is something we’re actively
+seeking to develop in The Herald Project alongside our Project Advisory Group, which includes
+PHAs and experts in DCT.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-the-herald-project-will-drive-this-effort&quot;&gt;How the Herald project will drive this effort&lt;/h3&gt;
+
+&lt;p&gt;Over the course of the summer of 2021 The Herald Project will look to create
+a white-labled end-to-end DCT/DACT and Exposure Notification system built on top
+of the Herald Proximity library.&lt;/p&gt;
+
+&lt;p&gt;Those countries and states without such systems will be able to quickly take our
+opensource software and use it, to the benefit of their communities. This helps
+protect countries who cannot afford a hundred person application development team.&lt;/p&gt;
+
+&lt;p&gt;Those with existing systems will be able to take individual modules and plug them
+into their existing DCT system - no matter which Bluetooth protocol they are
+using between devices. Interoperability will be key.&lt;/p&gt;
+
+&lt;p&gt;We will also publish the reference implementation of the 
+&lt;a href=&quot;/specs/payload-interop&quot;&gt;Herald Interoperability Protocol&lt;/a&gt;
+allowing countries running the same or separate systems to exchange exposure information
+in a privacy preserving way once borders re-open.&lt;/p&gt;
+
+&lt;p&gt;Our first step in this journey will be to complete the first version of our wearable
+opensource hardware to provide reliable DCT and, optionally, biomonitoring to individuals
+who cannot afford the latest thousand dollar smartphones that are currently required to
+run many DCT applications today.&lt;/p&gt;
+
+&lt;p&gt;After this we’ll create an whitelabled DCT mobile app and a DCT healthcare
+backend, allowing PHAs to rapidly publish their own applications and systems based on
+this well developed and tested foundation.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-you-can-help&quot;&gt;How you can help&lt;/h3&gt;
+
+&lt;p&gt;We’re community driven, 
+so please come and &lt;a href=&quot;/community&quot;&gt;join the Herald community&lt;/a&gt; and help us with deciding the
+future of the Herald project!&lt;/p&gt;</content><author><name>Herald Project Contributors</name></author><summary type="html">We’re now over a year since the first national lockdowns due to SARS-CoV-2 (COVID-19). In this post we look to the continued need for Digital Contact Tracing (DCT), and where the technology is going next.</summary></entry><entry><title type="html">Version 2.0.0 released</title><link href="https://heraldprox.io/blog/version-200" rel="alternate" type="text/html" title="Version 2.0.0 released" /><published>2021-06-23T10:00:00+00:00</published><updated>2021-06-23T10:00:00+00:00</updated><id>https://heraldprox.io/blog/version-200</id><content type="html" xml:base="https://heraldprox.io/blog/version-200">&lt;p&gt;Version 2.0.0 of Herald is now available!&lt;/p&gt;
+
+&lt;p&gt;This version features a breaking change, hence the major version bump. This is due to moving to our own domain name heraldprox.io.&lt;/p&gt;
+
+&lt;p&gt;Key features in this release include:-&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;BREAKING change - moved to io.heraldprox.herald for the library&lt;/li&gt;
+  &lt;li&gt;Full Continuous Integration (CI) via GitHub Actions&lt;/li&gt;
+  &lt;li&gt;Now publishing artifacts to Maven Central and CocoaPods, as well as GitHub Packages&lt;/li&gt;
+  &lt;li&gt;Support for Swift package manager&lt;/li&gt;
+  &lt;li&gt;Added Nullable and other Kotlin flags for improved Kotlin app developer productivity and ease of use&lt;/li&gt;
+  &lt;li&gt;Using main instead of master for releases&lt;/li&gt;
+  &lt;li&gt;Website change to heraldprox.io, and all documentation updated with this link&lt;/li&gt;
+  &lt;li&gt;Code review, documentation fixes&lt;/li&gt;
+  &lt;li&gt;Baked in a workaround to a known older Android OS security gap in Bluetooth not fixes in the OS. Eases the burden on app developers&lt;/li&gt;
+  &lt;li&gt;Using a new approach to Pseudo Device Address generation that is both non blocking on older phones and prevents prediction of future addresses&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For a full list of changes please see the release notes:-&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/theheraldproject/herald-for-ios/releases/tag/v2.0.0&quot;&gt;iOS Release Notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/theheraldproject/herald-for-android/releases/tag/v2.0.0&quot;&gt;Android Release Notes and library download&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We’re community driven, 
+so please come and &lt;a href=&quot;/community&quot;&gt;join the Herald community&lt;/a&gt; and help us with deciding the
+future of the Herald project!&lt;/p&gt;</content><author><name>Herald Project Contributors</name></author><summary type="html">Version 2.0.0 of Herald is now available!</summary></entry><entry><title type="html">Why measuring Distance and Risk accurately is important</title><link href="https://heraldprox.io/blog/distance-risk" rel="alternate" type="text/html" title="Why measuring Distance and Risk accurately is important" /><published>2021-05-17T09:00:00+00:00</published><updated>2021-05-17T09:00:00+00:00</updated><id>https://heraldprox.io/blog/distance-risk</id><content type="html" xml:base="https://heraldprox.io/blog/distance-risk">&lt;p&gt;Herald allows for very regular Bluetooth RSSI readings. These can be used to estimate distance. In this blog we discuss
+why this is important, and what this information can be used for, and how we provide an accurate way of doing this in Herald.&lt;/p&gt;
+
+&lt;h3 id=&quot;uses-of-distance-estimation&quot;&gt;Uses of distance estimation&lt;/h3&gt;
+
+&lt;p&gt;The Herald Proximity API is designed to do two things very well:-&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Provide regular information on the presence of other local devices (E.g. those running Herald services, or a DCT app)&lt;/li&gt;
+  &lt;li&gt;Reliably exchange payload (application data) between these devices&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Up until version v1.3 Herald has only provided low-level information on nearby devices. For Bluetooth Low Energy this
+is the regular, raw RSSI (Signal Strength) information calculated by your device about other nearby devices. 
+From v1.3, the Analysis API allows you to choose from a variety of algorithms to convert this data to a distance estimate.&lt;/p&gt;
+
+&lt;p&gt;Beyond simple ‘nearby’ proximity information, ‘Distance’ estimation is useful in a variety of applications:-&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Triangulating a device’s position within a fixed-beacon or Bluetooth MESH environment to facilitate accurate in-building navigation&lt;/li&gt;
+  &lt;li&gt;Attaching Bluetooth beacons to high-value devices, such as in a hospital setting, to locate valuable and urgently needed equipment&lt;/li&gt;
+  &lt;li&gt;Measuring an employee’s exposure in terms of distance and duration to a risky work environment, such as exposure to chlorine or excessively noise in an industrial setting&lt;/li&gt;
+  &lt;li&gt;Digital Contact Tracing - to more accurately calculate ‘exposure risk’ between people in complex environments as they move around&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;important-aspects-for-distance-estimation&quot;&gt;Important aspects for distance estimation&lt;/h3&gt;
+
+&lt;p&gt;Much research has been done on using occassional RSSI samples to perform distance estimation. 
+Many of these studies have - incorrectly - concluded that Bluetooth RSSI cannot be used for accurate distance estimation, as we’ll show below.&lt;/p&gt;
+
+&lt;p&gt;There are a variety of reasons for these conclusions:-&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Many studies used occassional RSSI samples rather than every advertisement’s RSSI value across every advertising channel (this makes the RSSI value appear to ‘jump around’)&lt;/li&gt;
+  &lt;li&gt;Many existing distance conversion algorithms use ‘device calibrated at a single fixed distance’ approaches&lt;/li&gt;
+  &lt;li&gt;No current mechanism takes advantage of the fact BLE advertisements are required to be done on all three channels, which have different frequency separations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The Herald Project team have discovered that a reliable RSSI value can be achieved if you take every RSSI from every advertisement of a nearby device. There is a clear modal value for a device at a fixed distance once a few samples are taken.&lt;/p&gt;
+
+&lt;p&gt;What about moving devices, and devices with very different transmit powers? Interestingly, we have discovered that at ranges between 25cm and 800cm - the ideal range
+for Digital Contact Tracing - the shape of the RSSI chart is consistent between devices, even if the RSSI value ranges are different. 
+The interference pattern across the three advertising channel frequencies has a dominant effect on RSSI calculations at ranges below 8 metres.&lt;/p&gt;
+
+&lt;p&gt;This chart does fluctuate rather than follow an exact linear or log scale, but the pattern of fluctuations is always consistent at these ranges. We’ve measured a set
+of devices at 1cm intervals to determine this.&lt;/p&gt;
+
+&lt;p&gt;We’ve also determined that the fact that the three advertising channels have different frequency separation - and the fact we know that each advertisement is always
+given on all three channels - allows you to construct a multi-variate algorithm to determine where you are on that curve. So long as the two devices are not introduced at a static distance and never move, and they move by at least 7cm, you can determine at what distance the phones are at. You don’t even need to perform this separation though - the fact it happens predictably can be used with a simple linear model at short distances to give a good distance estimate.&lt;/p&gt;
+
+&lt;p&gt;We’ll provide more information on these aspects in a full section of the website, but for now you just need to know this: In order to provide accurate distance estimation in Bluetooth Low Energy you need to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Take every BLE Advertisement packet for each nearby device and their RSSI values - don’t use an occasional single sample (most devices advertise between 1 and 5 times a second on all three channels)&lt;/li&gt;
+  &lt;li&gt;Use a set of recent RSSI values to calculate a distance estimation&lt;/li&gt;
+  &lt;li&gt;For risk measurements derived from this, make the time slices for risk ‘slice’ calculation as small as possible&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-herald-analysis-api&quot;&gt;The Herald Analysis API&lt;/h3&gt;
+
+&lt;p&gt;In v1.3 we are providing a fixed-memory use streaming Analysis API. This maintains a fixed size sample list for each measurement for each nearby device. The output from one analysis algorithm can become the input of another. (Note: We use the term ‘sample list’, but remember - we provide ALL raw RSSI values, we don’t sample them.)&lt;/p&gt;
+
+&lt;p&gt;So for Digital Contact Tracing (DCT), for example, we expose the raw RSSI data to a distance conversion algorithm. 
+New raw samples are taken as they arrive from Herald’s Bluetooth layer and added to this fixed size ‘sample list’ which maintains the last X most recent samples. 
+This size is configurable by app developers. This produces a Distance value added to a distance sample list which is in turn exposed to a risk calculation algorithm.&lt;/p&gt;
+
+&lt;p&gt;(Remember too, that Herald is transport independent. Whilst our reference implementation today is Bluetooth Low Energy, in future we’ll support other transports, including Ultra Wide Band (UWB) radio).&lt;/p&gt;
+
+&lt;p&gt;Every so often the Analysis API’s algorithms will be invoked over the current sample lists. This will produce a new distance value from the several recent RSSI values which is added to the distance list. The recent distance values then are used to calculate risk exposure ‘slices’.&lt;/p&gt;
+
+&lt;p&gt;In a default implementation we’ll carry out new analysis runs every 5 seconds - giving a very small ‘slice’ to be added to a Risk exposure value. Application developers can customise this time interval to produce even thinner risk slices if they wish.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-this-means-for-accuracy&quot;&gt;What this means for accuracy&lt;/h3&gt;
+
+&lt;p&gt;Herald now provides in v1.3 the most accurate and efficient way of calculating both distance and risk through its API of any Digital Contact Tracing or Proximity system for Bluetooth Low Energy. Epidemiologists can provide their own risk algorithms or simply change the configuration parameters of the sample ones we provide. The Logarithmic risk algorithm provided, for example, would allow you to use the UK’s Oxford Risk Model for COVID-19 with the Herald API given the right parameters.&lt;/p&gt;
+
+&lt;p&gt;In our testing we have found that using a self-calibrated distance mechanism provides accuracy of around 10cm at ranges between 25cm and 800cm. When you consider that dedicated technologies like Ultra Wide Band (UWB) radio has an accuracy of 5-7cm, and most existing BLE distance approaches are accurate to between 50-200cm, Herald provides quite an upgrade to distance estimation!&lt;/p&gt;
+
+&lt;h3 id=&quot;where-to-go-from-here&quot;&gt;Where to go from here&lt;/h3&gt;
+
+&lt;p&gt;You can take one of the existing distance and risk conversion algorithms and trial it yourself. Our demonstration app for iOS and Android now shows both raw RSSI and distance estimate values for the basic smoothed linear model. This is a self-calibrating model that becomes more accurate over time when used in a real environment with other phones. The model assumes a phone is carried by the user, therefore it should experience the full range of distances over time for calibration.&lt;/p&gt;
+
+&lt;p&gt;The default parameters assumes a typical phone will spends 8 hours/day within 3.7m of other phones (i.e. at work), and up to 5 minutes/day within 0.5m of other phones (i.e. passing in the street). As such, a quick test with two static phones on a desk will show wildly incorrect absolute distance estimates (e.g. 0.2m showing as 3m), however the relative estimates shall remain valid for detecting whether the phones have moved closer or further apart.&lt;/p&gt;
+
+&lt;p&gt;This model gets more accurate the more the phone is used with more other phones - so use it with your friends, family, and colleagues for a day or so in real world conditions before exclaiming about it’s accuracy!&lt;/p&gt;
+
+&lt;p&gt;The Analysis API is fully pluggable though, so feel free to come up with your own distance and risk algorithms and try them out. The API is very simple, and we’ll provide an Analysis API developers guide in v2.1.&lt;/p&gt;
+
+&lt;p&gt;v2.1 will also include a new Exposure API. This will be built on top of the Analysis API as a consumer of its ‘Risk’ samples, but also provide a pluggable mechanism to talk to Public Health Authority backends in order to exchange decentralised or centralised exposure token information. Importantly, this will include support not only for Herald tokens, but also BlueTrace (OpenTrace) and GAEN (Google-Apple EN API). This means that even if your national app uses another protocol like GAEN, plugging in the Herald API will allow you to use your own more detailed algorithms for your epidemiological needs.&lt;/p&gt;
+
+&lt;p&gt;v2.1 will also support multiple diseases and strains and multiple risk models for Exposure alerts for Infection Prevention and Control (IPC), with configurable ‘risk thresholds’ and advice triggering rules for each. We want to ensure that humanity is prepared for a future pandemic, and want to also provide something useful to stop other outbreaks, such as Ebola.&lt;/p&gt;
+
+&lt;h3 id=&quot;get-involved&quot;&gt;Get involved&lt;/h3&gt;
+
+&lt;p&gt;We’re community driven, so please come and &lt;a href=&quot;/community&quot;&gt;join the Herald community&lt;/a&gt; 
+and help us build the future of the Herald project!&lt;/p&gt;</content><author><name>Herald Project Contributors</name></author><summary type="html">Herald allows for very regular Bluetooth RSSI readings. These can be used to estimate distance. In this blog we discuss why this is important, and what this information can be used for, and how we provide an accurate way of doing this in Herald.</summary></entry><entry><title type="html">Code repositories migrating soon</title><link href="https://heraldprox.io/blog/migrating-soon" rel="alternate" type="text/html" title="Code repositories migrating soon" /><published>2021-03-24T08:00:00+00:00</published><updated>2021-03-24T08:00:00+00:00</updated><id>https://heraldprox.io/blog/migrating-soon</id><content type="html" xml:base="https://heraldprox.io/blog/migrating-soon">&lt;p&gt;As part of Herald’s formal adoption by the Linux Foundation we’re about to start migrating
+our code repositories, website, and communication channels. This blog gives you a ‘heads up’
+on the changes coming soon.&lt;/p&gt;
+
+&lt;h3 id=&quot;by-the-end-of-march-2021&quot;&gt;By the end of March 2021&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Code repositories move to &lt;a href=&quot;https://github.com/theheraldproject&quot;&gt;our new GitHub org&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Slack channels created on the &lt;a href=&quot;https://slack.lfph.io&quot;&gt;LFPH Slack instance&lt;/a&gt;, and our own Herald one shut down for new content contributions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;by-mid-april-2021&quot;&gt;By mid-April 2021&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Website moved from vmware.github.io/herald to https://theheraldproject.github.io/ but soon on our new domain of https://heraldprox.io/&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We hope these changes help build a
+We’re community driven, so please come and &lt;a href=&quot;/community&quot;&gt;join the Herald community&lt;/a&gt; 
+and help us build the future of the Herald project!&lt;/p&gt;</content><author><name>Herald Project Contributors</name></author><summary type="html">As part of Herald’s formal adoption by the Linux Foundation we’re about to start migrating our code repositories, website, and communication channels. This blog gives you a ‘heads up’ on the changes coming soon.</summary></entry><entry><title type="html">Website redesigned</title><link href="https://heraldprox.io/blog/website-redesign" rel="alternate" type="text/html" title="Website redesigned" /><published>2021-03-22T08:00:00+00:00</published><updated>2021-03-22T08:00:00+00:00</updated><id>https://heraldprox.io/blog/website-redesign</id><content type="html" xml:base="https://heraldprox.io/blog/website-redesign">&lt;p&gt;The Herald website has been redesigned to make it easier to find and consume relevant information.&lt;/p&gt;
+
+&lt;p&gt;We hope this will make the website easier to use, Herald easier to understand, and get you to the right place
+more quickly.&lt;/p&gt;
+
+&lt;p&gt;Changes include:-&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Personae based top level navigation to make finding the right section easy&lt;/li&gt;
+  &lt;li&gt;High level explainers to Herald and its applications to better explain the project to non contact tracing experts&lt;/li&gt;
+  &lt;li&gt;Full width screen support to facilitate better readability&lt;/li&gt;
+  &lt;li&gt;Section-only second level navigation to make it quicker to get to the information you need&lt;/li&gt;
+  &lt;li&gt;Branding and license changes to get ready for the migration to the Linux Foundation Public Health soon&lt;/li&gt;
+  &lt;li&gt;Kept existing link URLs the same so as not to break external websites/papers linking to our site&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;New sections:-&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/about&quot;&gt;About Herald&lt;/a&gt; - High-level project information explaining the value simply&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/reference&quot;&gt;Reference&lt;/a&gt; - If you quickly want our published data, information, or API docs you can get to them at this central point&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/research&quot;&gt;Research&lt;/a&gt; - Our background detail on Bluetooth conformance issues and scientific data publishing, analysis, and paper writing has a new home&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We’re not web development or information architecture experts. 
+If you have time why not help us out? We’re community driven, 
+so please come and &lt;a href=&quot;/community&quot;&gt;join the Herald community&lt;/a&gt; and help us with deciding the
+future of the Herald project!&lt;/p&gt;</content><author><name>Herald Project Contributors</name></author><summary type="html">The Herald website has been redesigned to make it easier to find and consume relevant information.</summary></entry><entry><title type="html">Version 1.2.0 released</title><link href="https://heraldprox.io/blog/version-120" rel="alternate" type="text/html" title="Version 1.2.0 released" /><published>2021-02-16T08:00:00+00:00</published><updated>2021-02-16T08:00:00+00:00</updated><id>https://heraldprox.io/blog/version-120</id><content type="html" xml:base="https://heraldprox.io/blog/version-120">&lt;p&gt;Version 1.2.0 of Herald is now available for iOS and Android!&lt;/p&gt;
+
+&lt;p&gt;Key features in this release include:-&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/applications/ct#venue&quot;&gt;Automated visit check-in and check-out&lt;/a&gt; - Alternative to manual QR code system, and privacy preserving!&lt;/li&gt;
+  &lt;li&gt;Improved performance, stability, and reliability between Android and iOS devices (including iOS 14.4 testing)&lt;/li&gt;
+  &lt;li&gt;API changes to make adoption easier&lt;/li&gt;
+  &lt;li&gt;Battery usage tweaks - we’ve reduced battery consumption by 30% again!&lt;/li&gt;
+  &lt;li&gt;Initial release of the Simple Payload for Digital Contact Tracing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For a full list of changes please see the release notes:-&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/theheraldproject/herald-for-ios/releases/tag/v1.2.0&quot;&gt;iOS Release Notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/theheraldproject/herald-for-android/releases/tag/v1.2.0&quot;&gt;Android Release Notes and library download&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We’ve gained new developers and adopters recently. We’re community driven, 
+so please come and &lt;a href=&quot;/community&quot;&gt;join the Herald community&lt;/a&gt; and help us with deciding the
+future of the Herald project!&lt;/p&gt;</content><author><name>Herald Project Contributors</name></author><summary type="html">Version 1.2.0 of Herald is now available for iOS and Android!</summary></entry></feed>

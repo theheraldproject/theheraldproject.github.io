@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css?1676884168425440110">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Herald protocol design">
+<meta name="author" content="Herald Project Contributors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Our privacy preserving and secure protocol for slowing disease spread">
+<meta property="og:description" content="Our privacy preserving and secure protocol for slowing disease spread">
+<link rel="canonical" href="https://heraldprox.io/protocol/">
+<meta property="og:url" content="https://heraldprox.io/protocol/">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Herald Project Contributors"},"description":"Our privacy preserving and secure protocol for slowing disease spread","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://heraldprox.io/img/herald.png"},"name":"Herald Project Contributors"},"@type":"WebPage","headline":"Herald protocol design","url":"https://heraldprox.io/protocol/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Herald protocol design</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="logo">
+                    <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+                </div>
+            </div>
+            <div class="col-md-9 offset-md-1">
+                <ul class="nav-menu" id="header-nav">
+                
+                    <li class=""><a href="/">Home</a></li>
+                
+                    <li class=""><a href="/about">About</a></li>
+                
+                    <li class=""><a href="/community">Community</a></li>
+                
+                    <li class=""><a href="/blog">Blog</a></li>
+                
+                    <li class=""><a href="/download">Download</a></li>
+                
+                    <li class=""><a href="/docs">Documentation</a></li>
+                
+                    <li class=""><a href="/reference">Reference</a></li>
+                
+                    <li class=""><a href="/research">Research</a></li>
+                
+                </ul>
+                <div class="nav-mobile-link">
+                    <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Herald protocol design</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-2">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>Introduction</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/docs">Our documentation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Use Cases</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/uses">Introduction</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/uses/publichealth">Public Health</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/uses/hospitals">Hospitals</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Design Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/design/">Herald's Design</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/design/core">Core philosophy</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/design/data">Data used</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/design/protocol">Protocol lifecycle</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/design/summary">Design summary</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Development &amp; Integration Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/guide/">How to integrate</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/guide/code">About the code</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/guide/api">API docs</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/guide/add">Import Herald</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/guide/ios">iOS app guide</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/guide/android">Android app guide</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Protocol</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/protocol/">About our protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/protocol/custom">Non contact tracing uses</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Contributors Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/contribute">Introduction</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/repos">Our repositories</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/fork">Create a fork</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/branch">Feature Branches</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/style">Style guidelines</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/commit">Making a Commit</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/pullrequest">Pull Requests</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-9 offset-md-1">
+                
+
+  
+
+                <h1 id="the-herald-protocol">The Herald Protocol</h1>
+
+<p>There are many parts to communication amongst contact tracing apps. This can be thought of as layers, starting with the foundation and building up:-</p>
+
+<ul>
+  <li>Mobile Operating System (OS) provided communication layer (E.g. Core Bluetooth on iOS)</li>
+  <li>Low-level reliable information exchange and distance estimation protocol - aka a Bluetooth Proximity protocol - such as the Herald Protocol described here</li>
+  <li>The application payload - Such as information to allow contact tracing exposure tokens to be shared between devices. See <a href="/payload">payload</a> for details on payload options</li>
+  <li>The mobile application - That provides payload information, performance settings to the protocol layer</li>
+</ul>
+
+<p><img src="/images/ProtocolStack.png" alt="Protocol and Payload layers diagram"></p>
+
+<p>Our Herald payloads take on a variety of privacy and security issues whilst allowing epidemiologists and medical authorities appropriate levels of information to allow them to react to an epidemic and control it using mobile phones.</p>
+
+<p>Note that the Protocol is described here, but the Payload that we are recommending for COVID-19 control is specified in the <a href="/payload">Payload</a> section. The Bluetooth Protocol we describes is generally useful for any application that requires high fidelity, high density, small packet size, low frequency data exchange between mobile phones.</p>
+
+<h2 id="highlights">Highlights</h2>
+
+<ul>
+  <li>Supports 98% of UK phones in use. (98% of UK people have a smartphone with Bluetooth Low Energy support.) Source: OFCOM reports <a href="/efficacy/bibliography#a-9">[9]</a> <a href="/efficacy/bibliography#a-10">[10]</a>
+</li>
+  <li>Provides 100% detection
+    <ul>
+      <li>Works around the infamous ‘iOS cannot be detected in the background’ OS bug in iPhones</li>
+    </ul>
+  </li>
+  <li>Provides 93%+ continuity (i.e. takes a distance estimation at least once every 30 seconds)
+    <ul>
+      <li>Mean time in testing in a busy (10 phones nearby) environment was under 8 seconds. Mostly under 2 seconds per reading</li>
+    </ul>
+  </li>
+  <li>95.95% RSSI reading accuracy within 8 metres</li>
+  <li>Doesn’t require operating system updates in order to be used or improved</li>
+  <li>Low energy - Up to 2% battery use per hour</li>
+</ul>
+
+<p>See <a href="/efficacy/results">Results</a> for details.</p>
+
+<h2 id="key-features">Key Features</h2>
+
+<ul>
+  <li>Works on all Android and iPhones dating back to 2010 (Supports over 96% of UK mobile phone users)</li>
+  <li>Supports phones and Operating Systems with known Bluetooth performance issues
+    <ul>
+      <li>Especially those <a href="/efficacy/statistics">~14% of UK phones that do not support Advertising</a>, and so cannot be served by other protocols (E.g. GAEN) - via the write characteristic approach</li>
+    </ul>
+  </li>
+  <li>Provides a number of approaches to workaround the ‘iOS detection in the background’ bug in iOS to a point where detection and continuity is superior to existing protocols
+    <ul>
+      <li>Allows our protocol to accurately capture the ~50% of UK phones that are iPhones where other non-GAEN protocols do not</li>
+    </ul>
+  </li>
+  <li>Provide distance estimation (RSSI) data with a mean periodicity/windowing time of 4-8 seconds (easily beating the measure we describe in the <a href="/efficacy/paper">measurements paper</a> which requires 1 reading every 30 seconds) - more regular than protocols that today restrict readings to once every 3.5 - 5 minutes
+    <ul>
+      <li>Allows a much more accurate Risk Score to be calculated, preventing false positive and false negative COVID-19 exposure alerts</li>
+    </ul>
+  </li>
+  <li>Supports a pluggable Payload system, allowing the same protocol to be used for a variety of Bluetooth applications, including Contact Tracing
+    <ul>
+      <li>Supports large Identity and Distance Estimation payloads (such as those using Elliptic Curve encryption for added privacy and security)</li>
+      <li>We provide a sample <a href="/payload">payload</a> implementation that protects privacy, ensures security and trust, whilst providing useful epidemiological information</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="how-it-achieves-this">How it achieves this</h2>
+
+<ul>
+  <li>Hardware Approaches
+    <ul>
+      <li>Ephemeral ID in advert approach: Some phones also rotate mac address every few seconds rather than once every 15 minutes forcing the ID payload to be fetched, and increasing delay. We work around this using an ephemeral ID approach.</li>
+      <li>Uses a ‘write characteristic’ allowing phones that cannot advertise (<a href="/efficacy/statistics">~14% approx of UK phones</a>) to tell other phones they are neaby, and still provide regular distance estimation data</li>
+      <li>Android bluetooth stack randomly fails in some circumstances, so our protocol has been extensively tested and checked for these situations to prevent them.</li>
+    </ul>
+  </li>
+  <li>Low battery usage during the day (thanks to maximum interaction frequency)
+    <ul>
+      <li>Only 6% over 8 hours in testing (way better than even having WhatsApp running in the background!)</li>
+    </ul>
+  </li>
+  <li>Various iOS in the background techniques
+    <ul>
+      <li>Allow background iOS phone detection from Android in all conditions (the ‘scan, then interrogate’ approach)</li>
+      <li>Allow background iOS phone detection from iOS via a nearby Android phone (The ‘calling card’ characteristic), which can also support more accurate distance estimation via triangulation</li>
+      <li>Optional: Allow background iOS phone detection from iOS directly with location permission turned on (does NOT capture GPS location, just uses the permission to ‘awake on screen activation’ which happens on average every 10 minutes, and stays active for 5-10 minutes)</li>
+    </ul>
+  </li>
+  <li>Uses ‘connect back’ on incoming request to connect to phones that we cannot see, but who see and interact with us (avoiding ‘one way detection’)</li>
+  <li>Uses it’s own internal timer implementation on Android to avoid the ‘randomly long wait’ issue with Android native timers</li>
+</ul>
+
+<h2 id="non-contact-tracing-uses">Non contact tracing uses</h2>
+
+<p>There are a range of other uses for the low level Herald protocol. These are discussed on the <a href="/protocol/custom">custom uses</a> page.</p>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldProximity">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://slack.lfph.io/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/theheraldproject">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            The Herald Project is a series of the <a target="_new" href="https://www.lfph.io/join/projects/">Linux Foundation Public Health</a>.
+            © 2023 Herald Project Contributors.
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/js/jquery.matchHeight.js?1676884168425440110"></script>
+<script src="/js/scripts.js?1676884168425440110"></script>
+    </div>
+  </div>
+</body>
+
+</html>

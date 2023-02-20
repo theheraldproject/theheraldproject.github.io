@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css?1676884168425440110">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Simple Payload Specification">
+<meta name="author" content="Herald Project Contributors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Simple Payload Specification">
+<meta property="og:description" content="Simple Payload Specification">
+<link rel="canonical" href="https://heraldprox.io/specs/payload-simple">
+<meta property="og:url" content="https://heraldprox.io/specs/payload-simple">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Herald Project Contributors"},"description":"Simple Payload Specification","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://heraldprox.io/img/herald.png"},"name":"Herald Project Contributors"},"@type":"WebPage","headline":"Simple Payload Specification","url":"https://heraldprox.io/specs/payload-simple","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Simple Payload Specification</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="logo">
+                    <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+                </div>
+            </div>
+            <div class="col-md-9 offset-md-1">
+                <ul class="nav-menu" id="header-nav">
+                
+                    <li class=""><a href="/">Home</a></li>
+                
+                    <li class=""><a href="/about">About</a></li>
+                
+                    <li class=""><a href="/community">Community</a></li>
+                
+                    <li class=""><a href="/blog">Blog</a></li>
+                
+                    <li class=""><a href="/download">Download</a></li>
+                
+                    <li class=""><a href="/docs">Documentation</a></li>
+                
+                    <li class=""><a href="/reference">Reference</a></li>
+                
+                    <li class=""><a href="/research">Research</a></li>
+                
+                </ul>
+                <div class="nav-mobile-link">
+                    <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Simple Payload Specification</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-2">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>Reference</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/reference">Introduction</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/reference/arch">Architecture</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/reference/personae">Personae</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/efficacy/results">Efficacy Results</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Payloads</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/payload">About Payloads</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/envelope">Herald Envelope Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/interop">Interoperability</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/common">Herald Common CT Inner Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/simple">Herald Simple Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/secured">Herald Secured Inner Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/beacon">Herald Beacon Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/inner">Herald-compatible Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/outer">Custom outer &amp; inner payloads</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald MESH</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/mesh">About MESH</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/mesh/network">MESH Networking</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/mesh/models">MESH Data Models</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/mesh/api">Herald MESH API</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Formal Specifications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/specs">List and status</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/protocol">Herald Protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-beacon">Beacon Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-extended">Extended Data Area</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-simple">Simple Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-secured">Secured Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-interop">International Interoperability</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-9 offset-md-1">
+                
+
+  
+
+                <h1 id="simple-payload-formal-specification">Simple Payload Formal Specification</h1>
+
+<p>This page formally specifies the <a href="/payload/simple">Simple Payload</a>.</p>
+
+<p>This specification is a <strong>DRAFT</strong> with a sample reference implementation available in Herald v1.1 for iOS and Android.</p>
+
+<h2 id="modal-verbs-terminology">Modal verbs terminology</h2>
+
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL 
+NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”,  “MAY”, and
+“OPTIONAL” in this document are to be interpreted as described in
+<a href="https://tools.ietf.org/html/rfc2119">RFC 2119</a>.</p>
+
+<p>Note that these terms apply whether they are uppercase or lowercase
+and no matter what styles are applied to the phrases.</p>
+
+<h2 id="executive-summary">Executive summary</h2>
+
+<p>The Simple Data Payload is designed as a basic, minimum information transfer, decentralised
+contact tracing protocol akin to that specified by MIT’s PACT group.</p>
+
+<p>This data payload consists of a rotating ephemeral key which is calculated from a daily
+key. A contact tracing app can choose to upload their daily keys should the phone
+owner become ill (or any other medical state).</p>
+
+<p>This daily key can then be used to calculate ephemeral keys that each device may have
+seen. This allows other devices to calculate an estimation of their risk of contracting
+an infectious disease, and alerting the user so they can take appropriate action.</p>
+
+<p>This payload does not allow the central health service using the payload to perform
+any epidemiological analysis of data submitted by apps, graph analysis of transmissions,
+or detection of asymptomatic carriers or super spreaders. Please see the Secured Payload
+for a standard that attempts to meet both privacy and epidemiological needs.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>This specification follows the standard Herald data payload international interoperability header
+and provides a rotating ephemeral ID which changes as the Bluetooth MAC address changes.</p>
+
+<p>This prevents either the state providing the app or a casual observer scanning Bluetooth (such as
+an electronic advertisement board) from tracking the owner of the phone and their movements and
+associations.</p>
+
+<h2 id="scope">Scope</h2>
+
+<p>What is in scope</p>
+
+<ul>
+  <li>Simple payload that provides basic support for decentralised contact tracing</li>
+</ul>
+
+<p>What is out of scope</p>
+
+<ul>
+  <li>Extension data such as that to allow more accurate distance estimation. See the Extended Payload
+specification for this.</li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<h3 id="normative-references">Normative references</h3>
+
+<p>References are either specific (identified by date of publication and/or edition number or version number) or non specific. For specific references,only the cited version applies. For non-specific references, the latest version of the referenced document (including any amendments) applies.</p>
+
+<p>The following referenced documents are necessary for the application of the present document.</p>
+
+<p>MIT PACT Specification - see SP-5 below for a link.</p>
+
+<p>Luca Ferretti, Chris Wymant, Michelle Kendall, Lele Zhao, Anel Nurtay, Lucie Abeler-Dörner, Michael Parker, David Bonsall, Christophe Fraser. Quantifying SARS-CoV-2 transmission suggests epidemic control with digital contact tracing. Ferretti et al., Science 368, 619 (2020) (As per SP-8 below)</p>
+
+<h3 id="information-references">Information references</h3>
+
+<p>References are either specific (identified by date of publication and/or edition number or version number) or non specific. For specific references,only the cited version applies. For non-specific references, the latest version of the referenced document (including any amendments) applies.</p>
+
+<p>The following referenced documents are not necessary for the application of the present document but they assist the user with regard to a particular subject area.</p>
+
+<p>None</p>
+
+<h2 id="definition-of-terms-symbols-and-abbreviations">Definition of terms, symbols and abbreviations</h2>
+
+<h3 id="terms">Terms</h3>
+
+<p><strong>Beacon</strong> - A fixed device in a location that provides location-specific information. May be called a Bluetooth Beacon.</p>
+
+<p><strong>Big Endian</strong> - Also known as ‘Network Order’. A way of encoding numeric values for transport over data networks. Bluetooth (and most network protocols) are Big Endian.</p>
+
+<p><strong>Herald Project</strong> - The opensource contributors and maintainers of the Herald website, code, and standards documents.</p>
+
+<h3 id="symbols">Symbols</h3>
+
+<p>None</p>
+
+<h3 id="abbreviations">Abbreviations</h3>
+
+<p><strong>App</strong> - Short for Application. Usually a ‘mobile application’ on a phone or ‘wearable application’</p>
+
+<p><strong>BLe</strong> - Bluetooth Low Energy. Introduced as part of the Bluetooth standard in Bluetooth 4.0 in 2010. As of this writing the latest version was Bluetooth 5.2. Versions are backwards compatible. (I.e. a Bluetooth 5 device can communicate with a Bluetooth 4 device, and vice versa).</p>
+
+<p><strong>COVID-19</strong> - Common name referring to SARS-CoV-2.</p>
+
+<p><strong>ECIES</strong> - Elliptic Curve Integrated Encryption Scheme. A modern encryption scheme believed to be resistant to emerging quantum computing encryption brute forcing mechanisms.</p>
+
+<p><strong>GATT</strong> - Bluetooth Generic Attribute Profile.</p>
+
+<p><strong>iOS</strong> - Apple’s Operating System for mobile phones</p>
+
+<p><strong>MAC or MAC address</strong> - Media Access Control address. A short (6 byte in Bluetooth Low Energy) approximately unique identifier for a device on a network, such as Bluetooth Low Energy, before any high-level identity or security information can be ascertained. Typically rotates every 15 minutes on modern phones. May be static on beacons.</p>
+
+<p><strong>RSSI</strong> - Received Signal Strength Indicator. A signal strength approximation calculated on a device based on the power of a remote transmission. Calculated by the Bluetooth chipset on the local device, and not transmitted. The scale varies by manufacturer, some use 0 to 255, others 0 to 100. Normally expressed as a negative integer rather than a positive number.</p>
+
+<p><strong>OS</strong> - Operating System. Typically refers to a mobile phone or Bluetooth beacon operating system. The software on which a Herald based Bluetooth app operates. Operating Systems typically provide a unique API for communicating with that device’s Bluetooth capabilities. Some functionality in OS’ Bluetooth layers may be hidden from the app developer, or non-standard.</p>
+
+<p><strong>SIG</strong> - Typically Bluetooth SIG. Standards Interest Group. Group of technolists that decide on changes to the Bluetooth standards. See HP-3 below.</p>
+
+<p><strong>TxPower</strong> - Transmit power. Expressed in integer or floating point in dBm. Known to the transmitter only, unless ‘advertised’ in the Bluetooth GATT field for TxPower. As it is transmitted it must be presumed that it could be spoofed by the sender.</p>
+
+<p><strong>UUID</strong> - Universally Unique Identifier. Typically a ‘Version 4 UUID’. A 128-bit (16 byte) identifier that unique identifies a service or characteristic in Bluetooth. A shorter (4 byte) ‘short code’ identifier may instead be registered with the Bluetooth SIG.</p>
+
+<h2 id="design-constraints">Design Constraints</h2>
+
+<p>The below are the constraints placed on the design of the system that the rest of this standard is defined within.</p>
+
+<p>MUST provide options for a Write payload and a Read payload in order to support devices that do not provide Bluetooth Low Energy service advertising.</p>
+
+<p>MUST NOT rely on ECIES encryption or other API that are not present on iOS 9.3 or Android 5.0 or later.</p>
+
+<h2 id="lifecycle-summary">Lifecycle Summary</h2>
+
+<p>Once a device that supports the Herald Protocol (See SP-1 below) has been identified then newly introduced devices will
+need to exchange identity information. In this data payload the identity is provided by the ‘Ephemeral ID’. This
+is sometimes referred to as an ‘exposure token’.</p>
+
+<p>The device that discovers a new device MUST connect using the Herald Protocol and Read the mewly discovered device’s
+Data Payload. This format is described elsewhere in this standard.</p>
+
+<p>The ephemeral ID (Contact ID) MUST rotate at the same frequency as the BLe MAC address. The ephemeral ID SHOULD rotate 
+at the exact same time as the BLe MAC Address. This is mandatory for OS’ that provide a callback to indicate this to the Herald based app.</p>
+
+<h2 id="simple-payload-data-format">Simple Payload data format</h2>
+
+<p>Note all values are Big Endian (Network Order). All data types are C++17 data types.</p>
+
+<p><strong>Figure 1. Simple Payload Data Format</strong>
+<img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggTFJcbkEoSGVyYWxkIFBheWxvYWQ8YnI-YW5kIFZlcnNpb248YnI-MSBieXRlPGJyPjB4MTAtMHgxNzxicj5fKSAtLT4gQihDb3VudHJ5PGJyPkNvZGU8YnI-MiBieXRlczxicj51aW50MTY8YnI-XylcbkItLT5DKFN0YXRlPGJyPkNvZGU8YnI-MiBieXRlczxicj51aW50MTY8YnI-XylcbkMtLT5EKENvbnRhY3Q8YnI-SUQ8YnI-MTYgYnl0ZXM8YnI-YmluYXJ5PGJyPl8pXG5ELS0-RShFeHRlbmRlZDxicj5EYXRhPGJyPjAtNDg5IGJ5dGVzPGJyPm9wdGlvbmFsPGJyPl8pIiwibWVybWFpZCI6bnVsbH0"></p>
+
+<p>The Country Code is the ISO 3166 Numeric (NOT textual) country code. E.g. the UK is 826. State code is assigned by the Country health authority.
+See the international interoperability standard (SP-4) for details.</p>
+
+<p><strong>NOTE</strong>: There MUST be only one instance of the above per payload. An example is provided below:-</p>
+
+<p><strong>Figure 2. An example Simple Payload</strong>
+<img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggTFJcbkEoSGVyYWxkIFBheWxvYWQ8YnI-YW5kIFZlcnNpb248YnI-MSBieXRlPGJyPjB4MTA8YnI-XykgLS0-IEIoQ291bnRyeTxicj5Db2RlPGJyPjIgYnl0ZXM8YnI-ODI2PGJyPl8pXG5CLS0-QyhTdGF0ZTxicj5Db2RlPGJyPjIgYnl0ZXM8YnI-MTxicj5fKVxuQy0tPkQoQ29udGFjdDxicj5JRDxicj4xNiBieXRlczxicj5kMWU5MzEuLi48YnI-aGV4PGJyPl8pXG5ELS0-RShFeHRlbmRlZDxicj5EYXRhPGJyPjAgYnl0ZXM8YnI-ZW1wdHk8YnI-XykiLCJtZXJtYWlkIjpudWxsfQ"></p>
+
+<p>A valid Simple Payload MUST contain the Herald Protocol and version identifier followed by country code then state code then
+Ephemeral ID (aka Contact ID), with values specified as Big Endian (network order) where applicable.</p>
+
+<p>The Contact ID MUST be encoded as a big endian raw binary and not a hex UTF-8 string.</p>
+
+<p>A valid Simple Payload MAY contain Extended Data Payload data after the Contact ID. See its specification for details. (See SP-9 below for a link)</p>
+
+<h2 id="key-generation">Key generation</h2>
+
+<p>The below details the cryptographic processes use to generate Daily Keys and Ephemeral IDs (aka Contact IDs).</p>
+
+<p>See SP-6 and SP-7 for reference implementations.</p>
+
+<h3 id="cryptographic-seed">Cryptographic seed</h3>
+
+<p>The device MUST use its local cryptographic functions to generate a random seed value.</p>
+
+<p>This seed value MUST be kept on the device, and is only ever known to the device.</p>
+
+<p>The length of the cryptographic seed MUST be at least 2048 bits.</p>
+
+<p><strong>NOTE</strong>: In the code this is called the ‘secret key’.</p>
+
+<p><strong>NOTE</strong>: The reference implementation for the Simple Payload uses SHA1PRNG according to NIST SP800-90A
+to ensure both security (with this specific use of SHA1PRNG in the NIST standard) and support in software
+going back to iOS 9.3, Android 5, and is able to be calculated on low powered wearables and embedded devices
+such as bluetooth fixed beacons. See SP-10 for a link to the NIST standard.</p>
+
+<h3 id="daily-key-seed">Daily key seed</h3>
+
+<p>A daily key seed is generated from a reverse hash chain with truncation from the cryptographic seed.</p>
+
+<p>A set of 2000 daily key seeds MUST be generated from the cryptographic seed.</p>
+
+<p>The 2000th daily key seed MUST be the SHA-256 hash of the cryptographic seed.</p>
+
+<p>The 1999th daily key seed is the SHA-256 hash of the highest order 128 bits of the 2000th daily key seed.</p>
+
+<p>This MUST be repeated for each daily seed (1998th uses the 1999th data, and so on).</p>
+
+<p><strong>NOTE</strong>: Hashing the next days truncated data prevents reverse engineering</p>
+
+<p><strong>NOTE</strong>: In the code this is called a ‘matching key seed’.</p>
+
+<h3 id="daily-keys">Daily keys</h3>
+
+<p>The daily key is the key distributed by the health service for matching on phones. This means it MUST
+be separated from the seeds which MUST NOT be known by the health service.</p>
+
+<p>The Daily key for day i MUST be the SHA-256 hash of the XOR of the matching key seed for days i and i-1.</p>
+
+<p><strong>NOTE</strong>: The daily key for day 0 uses a seed for day 0 and day -1. The seed for day -1 is not stored.</p>
+
+<h3 id="ephemeral-key--contact-id">Ephemeral key / Contact ID</h3>
+
+<p>An ephemeral key, or generically in Herald a ‘Contact ID’, is the ‘identity’ used by the Herald protocol
+with an app configured for the Simple Payload. This key typically rotates every 15 minutes along with
+MAC address. In the reference implementation this could be every 6 minutes (240 IDs are generated per day).</p>
+
+<p>The ephemerical key is generated using the same forward chaining mechanism for an ephemeral seed as the
+daily key seed (SHA-256 with truncation), then using the same SHA-256 and XOR mechanism as the daily keys.</p>
+
+<p>This approach allows a Daily Key to be exchanged on its own whereby devices can generate their view
+of the ephemeral keys for matching with no knowledge of any daily key seed information.</p>
+
+<p>Truncation is again used to prevent a device intercepting Bluetooth to predict what the next value is,
+and thus help prevent tracking of an individuals’ phone in the wild.</p>
+
+<p><strong>NOTE</strong>: In the Herald API this is called the ‘contact key’.</p>
+
+<p>Formally this is specified as below:-</p>
+
+<p>A Ephemeral key seed is generated from a reverse hash chain with truncation from the daily key.</p>
+
+<p>As a minimum a set of 240 daily key seeds MUST be generated from the Ephemeral seed.</p>
+
+<p>The 240th period epehemeral key seed MUST be the SHA-256 hash of the Ephemeral seed.</p>
+
+<p>The 239th Ephemeral key seed is the SHA-256 hash of the highest order 128 bits of the 240th Ephemeral key seed.</p>
+
+<p>This MUST be repeated for each Ephemeral seed (238th uses the 239th data, and so on).</p>
+
+<p>The Ephemeral key for period i MUST be the SHA-256 hash of the XOR of the Ephemeral key seed for periods i and i-1.</p>
+
+<p><strong>NOTE</strong>: The Ephemeral key for period 0 uses a Ephemeral seed for period 0 and period -1. The Ephemeralseed for period -1 is not stored.</p>
+
+<h2 id="matching">Matching</h2>
+
+<p>When a phone user becomes ill the app MUST submit their Daily Keys for the appropriate epidemiological period to the health service systems.</p>
+
+<p>The health service system MUST promptly place these keys for download by health service apps and the day for which those keys are valid.</p>
+
+<p>The health service MAY have more options than just ‘confirmed case of COVID-19’ as the status for the daily key (E.g. ‘symptomatic, awaiting formal test’).</p>
+
+<p>The Herald Simple Payload based app MUST promptly download these keys and perform matching, and alert the user with the latest health service
+advice if an epidemiological risk threshold is reached.</p>
+
+<p>The total time for upload, make available for download, download, matching, and user notification MUST be less than 4 hours. See SP-8 below for rationale.</p>
+
+<p>The Herald Simple Payload based app downloads these daily keys and generated ephemeral keys (Contact IDs) from this information and matches for
+the days in question.</p>
+
+<h2 id="cia-analysis-summary">CIA analysis summary</h2>
+
+<p>This is a CIA analysis of this payload. This is an informative and not normative part of this specification document.</p>
+
+<p>Confidentiality - No. The Contact ID can be intercepted in the clear by any Bluetooth 
+device, allowing relay and replay attacks. Only the phone who generated the Contact ID
+will know who it belongs to. By rotating the Contact ID regularly (E.g. every 15 minutes)
+localised Bluetooth tracking can be reduced (E.g. adboard)</p>
+
+<p>Integrity - Yes. Only the sequence of codes for a particular phone can be known
+by that phone for that time point as only that phone has the daily key seeds. 
+Data could not be manipulated or predicted such
+that an individual phone could be targeted.</p>
+
+<p>Availability - Maybe. Could be compromised by a brute for attack DDoS-ing the healthcare 
+system using a fake network of pre-registered devices. Amplification attacks are 
+possible in this approach. This can be somewhat mitigated by using a max number 
+of notified contacts per ill person submission approach, but this doesn’t prevent 
+the creation of a fake network with, say, 5 notifications each.</p>
+
+<p>Non-repudiation - No. Neither the health authority nor receiving device are authenticated
+in this approach. The healthcare system and the transmitting phone also cannot verify
+that the person presenting the Contact ID is the one for whom it was initially transmitted
+to.</p>
+
+<h2 id="reference-implementations">Reference implementations</h2>
+
+<p>See K.java and F.java in the com.vmware.herald.sensor.payload.simple package for the Android reference implementation. See SP-6 below for a link.</p>
+
+<p>See SimplePayloadDataSupplier.swift in the herald/sensor/payload/simple folder for the iOS reference implementation. See SP-7 below for a link.</p>
+
+<p>A C++ reference implementation is pending.</p>
+
+<h2 id="annex-a-informative-bibliography">Annex A (Informative): Bibliography</h2>
+
+<p>Links to prior art and further reading</p>
+
+<ul>
+  <li>SP-1: <a href="/specs/protocol">Herald Protocol Formal Specification</a>
+</li>
+  <li>SP-2: <a href="https://en.cppreference.com/w/cpp/language/types">C++17 standard data types</a> [External]</li>
+  <li>SP-3: <a href="https://en.wikipedia.org/wiki/ISO_3166-1_numeric">ISO-3166 Numeric country codes</a> [External]</li>
+  <li>SP-4: <a href="/specs/payload-interop">Herald International Interoperability standard</a>
+</li>
+  <li>SP-5: <a href="https://pact.mit.edu/technical-reports/">MIT PACT protocol description</a> [External]</li>
+  <li>SP-6: <a href="https://github.com/theheraldproject/herald-for-android/tree/develop/herald/src/main/java/com/vmware/herald/sensor/payload/simple">Herald Android API implementation</a> [External]</li>
+  <li>SP-7: <a href="https://github.com/theheraldproject/herald-for-ios/tree/develop/herald/herald/Sensor/Payload/Simple">Herald iOS API implementation</a> [External]</li>
+  <li>SP-8: Luca Ferretti, Chris Wymant, Michelle Kendall, Lele Zhao, Anel Nurtay, Lucie Abeler-Dörner, Michael Parker, David Bonsall, Christophe Fraser. Quantifying SARS-CoV-2 transmission suggests epidemic control with digital contact tracing. Ferretti et al., Science 368, 619 (2020)</li>
+  <li>SP-9: <a href="/specs/payload-extended">Herald Extended Data Formal Specification</a>
+</li>
+  <li>SP-10: <a href="https://csrc.nist.gov/publications/detail/sp/800-90a/rev-1/final">NIST SP800-90A defining use of SHA1PRNG</a> [External]</li>
+</ul>
+
+<h2 id="annex-b-informative-figures">Annex B (Informative): Figures</h2>
+
+<p>The below figures are also shown inline within this standard document.</p>
+
+<p><strong>Figure 1. Simple Payload Data Format</strong>
+<img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggTFJcbkEoSGVyYWxkIFBheWxvYWQ8YnI-YW5kIFZlcnNpb248YnI-MSBieXRlPGJyPjB4MTAtMHgxNzxicj5fKSAtLT4gQihDb3VudHJ5PGJyPkNvZGU8YnI-MiBieXRlczxicj51aW50MTY8YnI-XylcbkItLT5DKFN0YXRlPGJyPkNvZGU8YnI-MiBieXRlczxicj51aW50MTY8YnI-XylcbkMtLT5EKENvbnRhY3Q8YnI-SUQ8YnI-MTYgYnl0ZXM8YnI-YmluYXJ5PGJyPl8pXG5ELS0-RShFeHRlbmRlZDxicj5EYXRhPGJyPjAtNDg5IGJ5dGVzPGJyPm9wdGlvbmFsPGJyPl8pIiwibWVybWFpZCI6bnVsbH0"></p>
+
+<p>The Country Code is the ISO 3166 Numeric (NOT textual) country code. E.g. the UK is 826. State code is assigned by the Country health authority.
+See the international interoperability standard (SP-4) for details.</p>
+
+<p><strong>NOTE</strong>: there is only one instance of the above. An example may be.</p>
+
+<p><strong>Figure 2. An example Simple Payload</strong>
+<img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggTFJcbkEoSGVyYWxkIFBheWxvYWQ8YnI-YW5kIFZlcnNpb248YnI-MSBieXRlPGJyPjB4MTA8YnI-XykgLS0-IEIoQ291bnRyeTxicj5Db2RlPGJyPjIgYnl0ZXM8YnI-ODI2PGJyPl8pXG5CLS0-QyhTdGF0ZTxicj5Db2RlPGJyPjIgYnl0ZXM8YnI-MTxicj5fKVxuQy0tPkQoQ29udGFjdDxicj5JRDxicj4xNiBieXRlczxicj5kMWU5MzEuLi48YnI-aGV4PGJyPl8pXG5ELS0-RShFeHRlbmRlZDxicj5EYXRhPGJyPjAgYnl0ZXM8YnI-ZW1wdHk8YnI-XykiLCJtZXJtYWlkIjpudWxsfQ"></p>
+
+<h2 id="annex-c-informative-change-history">Annex C (Informative): Change history</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Author</th>
+      <th>Change summary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2020-12-09</td>
+      <td><a href="https://github.com/adamfowleruk/">Adam Fowler</a></td>
+      <td>Existing payload fully documented (Valid for Herald v1.1)</td>
+    </tr>
+  </tbody>
+</table>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldProximity">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://slack.lfph.io/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/theheraldproject">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            The Herald Project is a series of the <a target="_new" href="https://www.lfph.io/join/projects/">Linux Foundation Public Health</a>.
+            © 2023 Herald Project Contributors.
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/js/jquery.matchHeight.js?1676884168425440110"></script>
+<script src="/js/scripts.js?1676884168425440110"></script>
+    </div>
+  </div>
+</body>
+
+</html>

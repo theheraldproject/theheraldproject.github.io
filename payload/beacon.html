@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css?1676884168425440110">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="DRAFT beacon payload">
+<meta name="author" content="Herald Project Contributors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="A DRAFT payload specification for fixed beacons in restaurants">
+<meta property="og:description" content="A DRAFT payload specification for fixed beacons in restaurants">
+<link rel="canonical" href="https://heraldprox.io/payload/beacon">
+<meta property="og:url" content="https://heraldprox.io/payload/beacon">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Herald Project Contributors"},"description":"A DRAFT payload specification for fixed beacons in restaurants","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://heraldprox.io/img/herald.png"},"name":"Herald Project Contributors"},"@type":"WebPage","headline":"DRAFT beacon payload","url":"https://heraldprox.io/payload/beacon","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - DRAFT beacon payload</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="logo">
+                    <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+                </div>
+            </div>
+            <div class="col-md-9 offset-md-1">
+                <ul class="nav-menu" id="header-nav">
+                
+                    <li class=""><a href="/">Home</a></li>
+                
+                    <li class=""><a href="/about">About</a></li>
+                
+                    <li class=""><a href="/community">Community</a></li>
+                
+                    <li class=""><a href="/blog">Blog</a></li>
+                
+                    <li class=""><a href="/download">Download</a></li>
+                
+                    <li class=""><a href="/docs">Documentation</a></li>
+                
+                    <li class=""><a href="/reference">Reference</a></li>
+                
+                    <li class=""><a href="/research">Research</a></li>
+                
+                </ul>
+                <div class="nav-mobile-link">
+                    <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>DRAFT beacon payload</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-2">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>Reference</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/reference">Introduction</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/reference/arch">Architecture</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/reference/personae">Personae</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/efficacy/results">Efficacy Results</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Payloads</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/payload">About Payloads</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/envelope">Herald Envelope Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/interop">Interoperability</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/common">Herald Common CT Inner Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/simple">Herald Simple Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/secured">Herald Secured Inner Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/beacon">Herald Beacon Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/inner">Herald-compatible Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/outer">Custom outer &amp; inner payloads</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald MESH</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/mesh">About MESH</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/mesh/network">MESH Networking</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/mesh/models">MESH Data Models</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/mesh/api">Herald MESH API</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Formal Specifications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/specs">List and status</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/protocol">Herald Protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-beacon">Beacon Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-extended">Extended Data Area</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-simple">Simple Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-secured">Secured Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-interop">International Interoperability</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-9 offset-md-1">
+                
+
+  
+
+                <h1 id="draft-beacon-payload">DRAFT Beacon payload</h1>
+
+<p>The intention of this payload is to allow fixed beacons in shops and restaurants
+that the mobile phone can use to build up a diary of movements.</p>
+
+<p>This payload provides ‘check in’ information about the current
+venue. E.g. “John’s Italian, Sheffield Road, Chesterfield - Seating section A - website url”</p>
+
+<p>Click here to <a href="/specs/payload-beacon">View the Formal Specification for the Beacon Payload</a></p>
+
+<p>Instead of signing in and filling out a contact tracing form (which many
+people do not bother to fill in) or require the scanning of a QR code at
+a venue (which many people do not do), this history would be built up
+automatically on each user’s phone if they had been present under the
+same beacon for a while.</p>
+
+<p>The Herald envelope payload ID range 0x30-0x37 is reserved for this Payload.</p>
+
+<p>This payload is identical to the Simple and Secured payloads
+except that it provides a different payload format.</p>
+
+<p>This approach also aids manual contact tracing for locations where people have not been
+using an app.</p>
+
+<p>This payload greatly reduces the workload on a venue and individual to manually ‘check in’
+to places they visit, increasing contact tracing ease and utility, and greatly
+reducing manual contact tracing time.</p>
+
+<h2 id="payload-content">Payload content</h2>
+
+<p>The payload contains the following fields. Note order is Big Endian (Network order). All types
+are C++ standard data types.</p>
+
+<p><img class="mermaid" src="https://mermaid.ink/svg/eyJjb2RlIjoiZ3JhcGggTFJcbkEoUHJvdG9jb2w8YnI-VmVyc2lvbjxicj4xIGJ5dGU8YnI-MHgzMC0weDM3PGJyPl8pIC0tPiBCKENvdW50cnk8YnI-IDxicj4yIGJ5dGVzPGJyPnVpbnQxNjxicj5fKSAtLT4gQyhTdGF0ZTxicj4gPGJyPjIgYnl0ZXM8YnI-dWludDE2PGJyPl8pIC0tPiBEKExvY2F0aW9uPGJyPkNvZGU8YnI-NCBieXRlczxicj51aW50MzI8YnI-XykgLS0-IEUoRXh0ZW5zaW9uPGJyPkRhdGE8YnI-MC01MDEgYnl0ZXM8YnI-YmluYXJ5PGJyPl8pIiwibWVybWFpZCI6bnVsbH0"></p>
+
+<p>Note that the <a href="/specs/payload-extended">Extended Data format</a> is the same as used by the Secured Payload. This allows the following
+data items that are of interest for a check in app:-</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+      <th>Size and format</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0x10</td>
+      <td>Textual short name description of premises (E.g. College, Restaurant)</td>
+      <td>1+ bytes UTF-8 String</td>
+    </tr>
+    <tr>
+      <td>0x11</td>
+      <td>Textual short name description of beacon location within premises (E.g. Seating area B)</td>
+      <td>1+ bytes UTF-8 String</td>
+    </tr>
+    <tr>
+      <td>0x12</td>
+      <td>Textual disambiguation (optional) for beacon area (E.g. Seating Area B - West wall, and Seating area B - East wall). Useful for large rooms such as sports halls, football stadiums, shopping centres/malls.</td>
+      <td>1+byte UTF-8 String</td>
+    </tr>
+    <tr>
+      <td>0x13</td>
+      <td>Location information URL (optional). MUST be https.</td>
+      <td>1+ byte UTF-8 URL</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="payload-distance-estimation">Payload distance estimation</h2>
+
+<p>It is likely that the same consumer device running Herald will receive multiple beacon payloads for the same
+location code, but different beacon locations within premises.</p>
+
+<p>Check-In apps supporting Herald MUST NOT provide multiple popups / notifications / registrations for these but
+treat them as the same premises if the mandatory Location Code field is the same value. This reduces the
+workload on the app user, and minimises the number of registrations required for multiple beacons
+on one premises.</p>
+
+<p>As the user moves within a location their device (phone or wearable) will take distance estimations to this
+Herald beacon. A map can be created of the location either via manual creation (more accurate, more difficult), or via distance estimations
+between devices with known performance characteristics in free space. (Less accurate, easier to do).</p>
+
+<h2 id="privacy-and-security">Privacy and Security</h2>
+
+<p>It should be noted that the beacon will record all nearby payloads sent to it by devices. If those devices
+use the <a href="/payload/secured">Secured Payload</a> then the ‘identity’ of the visitors is not known and so cannot be used as
+a tracking capability by the owner of the premises or the state apparatus.</p>
+
+<p>The Beacon’s payload is not encrypted. This is because the venue will presumably have a sign outside the door
+with the name of the premises anyway, and because this payload is intended as a public ‘check-in’ protocol, 
+where phones are not known to the owner of the premises a priori.</p>
+
+<p>This is useful for public venues and venues that allow external visitors - their Herald based apps
+will be able to interact with this payload easily with no code changes between venue owners, or
+complex registration requirements.</p>
+
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldProximity">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://slack.lfph.io/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/theheraldproject">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            The Herald Project is a series of the <a target="_new" href="https://www.lfph.io/join/projects/">Linux Foundation Public Health</a>.
+            © 2023 Herald Project Contributors.
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/js/jquery.matchHeight.js?1676884168425440110"></script>
+<script src="/js/scripts.js?1676884168425440110"></script>
+    </div>
+  </div>
+</body>
+
+</html>

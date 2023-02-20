@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css?1676884168425440110">
+  <title>Herald Project Bluetooth RSSI proximity self calibration enhancements</title>
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Bluetooth RSSI proximity self calibration enhancements | Herald Project</title>
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Bluetooth RSSI proximity self calibration enhancements">
+<meta name="author" content="Herald Project Contributors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Herald announces working approach to Bluetooth phone RSSI proximity self calibration">
+<meta property="og:description" content="Herald announces working approach to Bluetooth phone RSSI proximity self calibration">
+<link rel="canonical" href="https://heraldprox.io/blog/self-calibration">
+<meta property="og:url" content="https://heraldprox.io/blog/self-calibration">
+<meta property="og:site_name" content="Herald Project">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-03-11T06:00:00+00:00">
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Herald Project Contributors"},"description":"Herald announces working approach to Bluetooth phone RSSI proximity self calibration","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://heraldprox.io/img/herald.png"},"name":"Herald Project Contributors"},"@type":"BlogPosting","headline":"Bluetooth RSSI proximity self calibration enhancements","dateModified":"2022-03-11T06:00:00+00:00","datePublished":"2022-03-11T06:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://heraldprox.io/blog/self-calibration"},"url":"https://heraldprox.io/blog/self-calibration","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body id="blog">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="logo">
+                    <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+                </div>
+            </div>
+            <div class="col-md-9 offset-md-1">
+                <ul class="nav-menu" id="header-nav">
+                
+                    <li class=""><a href="/">Home</a></li>
+                
+                    <li class=""><a href="/about">About</a></li>
+                
+                    <li class=""><a href="/community">Community</a></li>
+                
+                    <li class=""><a href="/blog">Blog</a></li>
+                
+                    <li class=""><a href="/download">Download</a></li>
+                
+                    <li class=""><a href="/docs">Documentation</a></li>
+                
+                    <li class=""><a href="/reference">Reference</a></li>
+                
+                    <li class=""><a href="/research">Research</a></li>
+                
+                </ul>
+                <div class="nav-mobile-link">
+                    <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue"> 
+        <div class="section">
+          <div class="section-content">
+            <h1>Bluetooth RSSI proximity self calibration enhancements</h1>
+          </div>
+        </div>
+      </div>
+      <div class="post-single-body">
+        <div class="section section-card">
+          <div class="section-content pt-4 pb-0">
+            <div class="post-single-meta">
+              <div class="post-single-meta-author">
+                
+                <div class="post-single-meta-author-avatar">
+                  <img src="https://avatars2.githubusercontent.com/u/2700521?s=150&u=7998edeafa7e4a1bf65095b13c8a4fd49c240e84&v=4" alt="adamfowleruk">
+                </div>
+                
+
+                <div class="post-single-meta-author-name">
+                    
+                    <a href="https://github.com/adamfowleruk">adamfowleruk</a>
+                    
+                </div>
+              </div>
+
+              <div class="post-single-meta-date">
+                March 11, 2022
+              </div>
+            </div>
+          
+            <div class="post-single-content">
+              <h1 id="herald-announces-working-approach-to-bluetooth-phone-rssi-proximity-self-calibration">Herald announces working approach to Bluetooth phone RSSI proximity self calibration</h1>
+
+<p>Today The Herald Project, part of LFPH, announces a promising new approach to
+measuring phone-to-phone proximity accurately using Bluetooth Low Energy on
+consumer mobile phones.</p>
+
+<p>A problem since the start of the SARS-CoV-2 pandemic has been accurately measuring
+proximity using mobile phones. The most prevalent sensor available is your phones Bluetooth
+chip and antenna.</p>
+
+<p>The Herald Project has researched the variability of RSSI signal strength data and published
+millions of rows of datasets down to 1cm resolution between different phones to research the
+possibilities here.</p>
+
+<p>We have recently completed this research by creating a mechanism allowing for phones to self-calibrate</p>
+<ul>
+  <li>removing the variation from how different people store and use their phones by calibrating based
+on their behaviour - their close contacts with other people and how humans socialise with each other.</li>
+</ul>
+
+<p>When you talk to your close friends you adopt a particular distance. For acquaintences slightly further, and so on.
+Using this information for a subset of your most prolonged ‘contact events’ (where your phone detects others)
+has enabled us to devise a way for your phone to calibrate to a standard scale, allowing proximity to be calibrated
+to your behaviour over time.</p>
+
+<p>This works by correcting for Transmit Power from remote phones and filtering real interactions over a period of time (2.5 days should be sufficient) and then
+spotting peaks in corrected data to infer ‘close/personal space’ and ‘near/acquiantance space’ using Proxemics, and calibrating
+a proximity scale to those human behavioural zones.</p>
+
+<p>Once the data is calibrated, epidemiologists can create risk algorithms that use this standard
+proximity scale.</p>
+
+<p>Using two different phones on test subjects that live together and have very different jobs and working hours showed that 
+calibrating on all other Bluetooth contact events, then applying each phones own calibration results to their mutual contact events, 
+gave very similar risk scores - to within 7.5% of each other. (More accurate than your step counters when you go walking with a friend!)</p>
+
+<p>We have also provided a file - heraldrisk.R - under an Apache 2.0 license allowing others to use our Herald demo app
+or these functions independently to calibrate their own devices.</p>
+
+<p>More can be read about this on our GitHub site: https://github.com/theheraldproject/herald-analysis#phone-self-calibration-scripts</p>
+
+<p>The Herald Project will now work to incorporate this into our next release of the Herald Risk and Exposure API,
+allowing Public Health Authorities to build this new accurate risk model with 7 second resolution into their
+COVID-19 Digital Contact Tracing apps, and to provide for the first time a ‘Social Mixing Score’ feedback to 
+a user.</p>
+
+<p>Providing social mixing scores on apps will allow people to measure and track their own social mixing
+in much the same way as people monitor their daily step counts. They’ll be able to have a consistent
+points score per day for mixing with other people, and choose how to modify their own behaviour
+to minimise their risk of contracting disease.</p>
+
+<p>This crucially allows them to prevent themselves being notified of exposure rather than wait 
+to be told they may have received too much exposure over the past few days. This should
+reduce the spread of disease and do so by reducing the number of people we ask to self
+isolate via COVID-19 apps.</p>
+
+<h2 id="get-involved">Get Involved</h2>
+
+<p>The Herald Project thrives on community participation. If you want to get involved, or have a great idea for improving healthcare, please get in touch. Visit the <a href="/community">Herald Community Page</a>.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section pt-3">
+        <div class="section-content section-content-thin">
+          <h5 class="font-color-darker">Related Content</h5>
+<div class="row">
+  
+
+  
+    <div class="col-xs col-md-4">
+    <div class="card card-light mb-4 mb-md-0 blog-card">
+        <div class="card-body match-height">
+            <div class="post-thumbnail">
+                
+                <img src="/img/herald.png" alt="Version 2.2.0 Released">
+                
+            </div>
+            <article class="post">
+                <h5 class="text-center font-weight-medium">
+                    <a href="/blog/version-220" class="post-title">Version 2.2.0 Released</a>
+                </h5>
+                <div class="post-entry">
+                    Herald Version 2.2.0 Released
+
+
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+  
+    <div class="col-xs col-md-4">
+    <div class="card card-light mb-4 mb-md-0 blog-card">
+        <div class="card-body match-height">
+            <div class="post-thumbnail">
+                
+                <img src="/img/herald.png" alt="Introducing the Herald Bluetooth MESH API">
+                
+            </div>
+            <article class="post">
+                <h5 class="text-center font-weight-medium">
+                    <a href="/blog/mesh-api" class="post-title">Introducing the Herald Bluetooth MESH API</a>
+                </h5>
+                <div class="post-entry">
+                    Introducing the Herald Bluetooth MESH API
+
+
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+  
+    <div class="col-xs col-md-4">
+    <div class="card card-light mb-4 mb-md-0 blog-card">
+        <div class="card-body match-height">
+            <div class="post-thumbnail">
+                
+                <img src="/img/herald.png" alt="Bluetooth RSSI proximity self calibration enhancements">
+                
+            </div>
+            <article class="post">
+                <h5 class="text-center font-weight-medium">
+                    <a href="/blog/self-calibration" class="post-title">Bluetooth RSSI proximity self calibration enhancements</a>
+                </h5>
+                <div class="post-entry">
+                    Herald announces working approach to Bluetooth phone RSSI proximity self calibration
+
+
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+  
+    <div class="col-xs col-md-4">
+    <div class="card card-light mb-4 mb-md-0 blog-card">
+        <div class="card-body match-height">
+            <div class="post-thumbnail">
+                
+                <img src="/img/herald.png" alt="Singapore's GovTech donates OpenTrace to Linux Foundation Public Health's Herald Project">
+                
+            </div>
+            <article class="post">
+                <h5 class="text-center font-weight-medium">
+                    <a href="/blog/opentrace-donation" class="post-title">Singapore's GovTech donates OpenTrace to Linux Foundation Public Health's Herald Project</a>
+                </h5>
+                <div class="post-entry">
+                    Singapore’s GovTech donates OpenTrace to Linux Foundation Public Health’s Herald Project
+
+
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+  
+    <div class="col-xs col-md-4">
+    <div class="card card-light mb-4 mb-md-0 blog-card">
+        <div class="card-body match-height">
+            <div class="post-thumbnail">
+                
+                <img src="/img/herald.png" alt="Why Digital Contact Tracing is still needed">
+                
+            </div>
+            <article class="post">
+                <h5 class="text-center font-weight-medium">
+                    <a href="/blog/dct-still-needed" class="post-title">Why Digital Contact Tracing is still needed</a>
+                </h5>
+                <div class="post-entry">
+                    We’re now over a year since the first national lockdowns due to SARS-CoV-2 (COVID-19). In this post we look to the
+continued need for Digital Contact Tracing (DCT), and where the technology is going next.
+
+
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+  
+  
+</div>
+        </div>
+      </div>
+
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldProximity">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://slack.lfph.io/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/theheraldproject">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            The Herald Project is a series of the <a target="_new" href="https://www.lfph.io/join/projects/">Linux Foundation Public Health</a>.
+            © 2023 Herald Project Contributors.
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/js/jquery.matchHeight.js?1676884168425440110"></script>
+<script src="/js/scripts.js?1676884168425440110"></script>
+    </div>
+  </div>
+</body>
+
+</html>

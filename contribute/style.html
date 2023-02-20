@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css?1676884168425440110">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Coding Style Guide">
+<meta name="author" content="Herald Project Contributors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="What code style and syntax to use">
+<meta property="og:description" content="What code style and syntax to use">
+<link rel="canonical" href="https://heraldprox.io/contribute/style">
+<meta property="og:url" content="https://heraldprox.io/contribute/style">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Herald Project Contributors"},"description":"What code style and syntax to use","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://heraldprox.io/img/herald.png"},"name":"Herald Project Contributors"},"@type":"WebPage","headline":"Coding Style Guide","url":"https://heraldprox.io/contribute/style","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Coding Style Guide</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="logo">
+                    <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+                </div>
+            </div>
+            <div class="col-md-9 offset-md-1">
+                <ul class="nav-menu" id="header-nav">
+                
+                    <li class=""><a href="/">Home</a></li>
+                
+                    <li class=""><a href="/about">About</a></li>
+                
+                    <li class=""><a href="/community">Community</a></li>
+                
+                    <li class=""><a href="/blog">Blog</a></li>
+                
+                    <li class=""><a href="/download">Download</a></li>
+                
+                    <li class=""><a href="/docs">Documentation</a></li>
+                
+                    <li class=""><a href="/reference">Reference</a></li>
+                
+                    <li class=""><a href="/research">Research</a></li>
+                
+                </ul>
+                <div class="nav-mobile-link">
+                    <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Coding Style Guide</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-2">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>Introduction</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/docs">Our documentation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Use Cases</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/uses">Introduction</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/uses/publichealth">Public Health</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/uses/hospitals">Hospitals</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Design Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/design/">Herald's Design</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/design/core">Core philosophy</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/design/data">Data used</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/design/protocol">Protocol lifecycle</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/design/summary">Design summary</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Development &amp; Integration Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/guide/">How to integrate</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/guide/code">About the code</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/guide/api">API docs</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/guide/add">Import Herald</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/guide/ios">iOS app guide</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/guide/android">Android app guide</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Protocol</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/protocol/">About our protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/protocol/custom">Non contact tracing uses</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Contributors Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/contribute">Introduction</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/repos">Our repositories</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/fork">Create a fork</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/branch">Feature Branches</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/style">Style guidelines</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/commit">Making a Commit</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/pullrequest">Pull Requests</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-9 offset-md-1">
+                
+
+  
+
+                <h1 id="code-style">Code Style</h1>
+
+<p>We try and adopt the default styles used in each programming language
+but there are aspects which apply to all repos. These are described below.</p>
+
+<p><a href="https://www.mit.edu/~xela/tao.html">Thus spake the Master Programmer:</a></p>
+
+<h2 id="all-languages">All languages</h2>
+
+<p>The below rules apply to all programming languages. Check back regularly
+for changes and clarifications.</p>
+
+<h3 id="standard-style">Standard style</h3>
+
+<p>The folling rules always apply:-</p>
+
+<ul>
+  <li>A short copyright statement must be added at the top of every file, with the creation year and the current year of the latest change. E.g. <code class="language-plaintext highlighter-rouge">// Copyright 2020-2021 Herald Project Contributors</code>
+</li>
+  <li>The Short form opensource license reference must be included at the top of each source code file, commented out for the particular language. E.g. <code class="language-plaintext highlighter-rouge">//  SPDX-License-Identifier: Apache-2.0</code>
+</li>
+  <li>British English used for all names (E.g. classes, variables) and documentation.</li>
+  <li>Spaces instead of tabs</li>
+  <li>No trailing spaces at the end of lines</li>
+  <li>No empty lines at the end of files</li>
+  <li>For long if statements, <code class="language-plaintext highlighter-rouge">&amp;&amp;</code> or <code class="language-plaintext highlighter-rouge">||</code> at end of each line, not the start</li>
+  <li>80 character single line limit</li>
+  <li>Variable names must be descriptive unless obvious. E.g. i or idx in a loop around a single array (for index) is fine, but not a, b, c, d. Description must not be open to misinterpretation</li>
+  <li>Function names must be accurate. E.g. an init() function called multiple times probably isn’t an initialisation function</li>
+</ul>
+
+<h3 id="performance">Performance</h3>
+
+<p>There are som apparently trivial style changes we mandate for performance reasons:-</p>
+
+<ul>
+  <li>Loop variables must be declared outside of tight loops</li>
+  <li>Don’t do anything that rapidly allocates/deallocates temporary memory repeatedly</li>
+  <li>Don’t do anything that results in a copy of class or memory use</li>
+</ul>
+
+<h3 id="apply-test-driven-development-tdd">Apply Test Driven Development (TDD)</h3>
+
+<p>Write a test first, see it fail, write just enough until it passes. Repeat.</p>
+
+<p>Whilst not strictly a style, it ensures all new code has tests.</p>
+
+<p>The following are things you should think of when writing tests:-</p>
+
+<ul>
+  <li>Don’t just write sunny day tests - test for known / POSSIBLE input failures</li>
+  <li>Test for deliberately invalid data. E.g. negative sizes, null values, missing OS APIs</li>
+  <li>Be alive to asynchronous invocation and any needed synchronisation</li>
+</ul>
+
+<h3 id="boolean-equality--inequality-comparisons">Boolean equality / inequality comparisons</h3>
+
+<p>Where a static value or constant is compared against a variable’s value,
+the variable is always to the RIGHT of the (in)equality operator.</p>
+
+<p>CORRECT SYNTAX: <code class="language-plaintext highlighter-rouge">null == myVar</code></p>
+
+<p>INCORRECT SYNTAX: <code class="language-plaintext highlighter-rouge">myVar == null</code></p>
+
+<p>If you miss the final ‘=’ symbol as in the incorrect syntax, 
+you will set the value of the variable rather than compare it.
+In most languages this operation returns true, which means it still compiles.
+This leads to hard to find logic errors.
+Writing the comparison around this way prevents this error and throws
+a compilation error instead. This is much safer. It is a habit worth forming.</p>
+
+<h2 id="java-code">Java code</h2>
+
+<h3 id="java--android-version">Java / Android version</h3>
+
+<p>We compile against Java 8 as standard and Android SDK 21 as we have to support
+a very wide range of phones. SDK 21 allows us to support all Android phones
+that have Bluetooth Low Energy support, globally.</p>
+
+<p>Where version-specific functionality is required it MUST NOT reduce interoperability
+or epidemiological efficacy in older versions.</p>
+
+<p>You MUST support SDK 21 and above if you have if/else statements for OS versions.</p>
+
+<h3 id="standard-style-1">Standard style</h3>
+
+<p>The following rules apply in addition to the all languages rules:-</p>
+
+<ul>
+  <li>4 spaces to one tab</li>
+  <li>Opening braces at end of line for functions / if statements</li>
+</ul>
+
+<h2 id="swift-code">Swift code</h2>
+
+<h3 id="swift--ios-versions">Swift / iOS versions</h3>
+
+<p>We target Swift 5 but iOS 9.3+. This allows us to support all iOS phones
+that support Bluetooth Low Energy, globally.</p>
+
+<h3 id="standard-style-2">Standard style</h3>
+
+<p>Default as per XCode.</p>
+
+<h3 id="single-class-per-file">Single class per file</h3>
+
+<p>We try to keep the same file names
+as the Java and C++ equivalents, even though you can declare multiple
+classes in a single source file. This makes locating code easier.</p>
+
+<p>Exceptions are enumeration types, constants, and inner classes.</p>
+
+<h2 id="c">C++</h2>
+
+<h3 id="c-version">C++ version</h3>
+
+<p>We use C++17 with no compiler extensions as standard. We do not rely on API above
+this version. STL use is allowed if of the same version.</p>
+
+<h3 id="standard-style-3">Standard style</h3>
+
+<ul>
+  <li>Two spaces per tab</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">#define</code>’s rather than <code class="language-plaintext highlighter-rouge">#pragma once</code>, with <code class="language-plaintext highlighter-rouge">HERALD_</code> as the start of the define name</li>
+  <li>Namespaces and class declarations have trailing <code class="language-plaintext highlighter-rouge">{</code> at the end of the lines</li>
+  <li>Functions defined within a class declaration have trailing <code class="language-plaintext highlighter-rouge">{</code> at the end of the line</li>
+  <li>Function definitions have both <code class="language-plaintext highlighter-rouge">{</code> and <code class="language-plaintext highlighter-rouge">}</code> on their own lines, without indent.</li>
+  <li>A namespace declaration does not force the contained namespace/classes/functions to be indented <a href="https://github.com/theheraldproject/herald-for-cpp/blob/f86aed9289fe349028d7559ea4c562d70e988ef4/herald/src/zephyr_context.cpp#L24">Example</a>
+</li>
+  <li>Colon class constructor definitions are always on a new line, and always indented two spaces</li>
+  <li>If initialisers within a colon section of a class constructor go beyond one line, they line up together (i.e. line 2+ are indented 4 spaces) <a href="https://github.com/theheraldproject/herald-for-cpp/blob/f86aed9289fe349028d7559ea4c562d70e988ef4/herald/src/zephyr_context.cpp#L34">Example</a>
+</li>
+</ul>
+
+<h3 id="single-class-per-file-1">Single class per file</h3>
+
+<p>We try to keep the same file names
+as the Java equivalents, even though you can declare multiple
+classes in a single source file. This makes locating code easier.</p>
+
+<p>Exceptions are enumeration types, constants, and inner classes. (E.g. Impl idiom)</p>
+
+<p>Continue in this guide by visiting: <a href="/contribute/commit">Committing code</a>.</p>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldProximity">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://slack.lfph.io/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/theheraldproject">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            The Herald Project is a series of the <a target="_new" href="https://www.lfph.io/join/projects/">Linux Foundation Public Health</a>.
+            © 2023 Herald Project Contributors.
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/js/jquery.matchHeight.js?1676884168425440110"></script>
+<script src="/js/scripts.js?1676884168425440110"></script>
+    </div>
+  </div>
+</body>
+
+</html>

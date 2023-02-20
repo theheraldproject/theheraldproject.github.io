@@ -1,0 +1,15 @@
+var searchData=
+[
+  ['randomnessgenerator_171',['RandomnessGenerator',['../classherald_1_1datatype_1_1_randomness_generator.html',1,'herald::datatype']]],
+  ['relevantstate_172',['RelevantState',['../structherald_1_1ble_1_1_relevant_state.html',1,'herald::ble']]],
+  ['remove_173',['remove',['../classherald_1_1ble_1_1_concrete_b_l_e_database.html#a6e7b8e12f8e09095a2e0ec8ca3f415dd',1,'herald::ble::ConcreteBLEDatabase::remove()'],['../classherald_1_1ble_1_1_b_l_e_database.html#a9e0f9a2088d12e7ee4b02e29f019bdc6',1,'herald::ble::BLEDatabase::remove()'],['../classherald_1_1engine_1_1_coordinator.html#af2717ea0ebfbe95cbeb1edb6be741f91',1,'herald::engine::Coordinator::remove()']]],
+  ['requiredactivities_174',['requiredActivities',['../classherald_1_1ble_1_1_herald_protocol_b_l_e_coordination_provider.html#a005fd4a0acc4f40a233eb0166d5fa80a',1,'herald::ble::HeraldProtocolBLECoordinationProvider::requiredActivities()'],['../classherald_1_1engine_1_1_coordination_provider.html#abf7fb103c853cc9307827d236a15a538',1,'herald::engine::CoordinationProvider::requiredActivities()']]],
+  ['requiredconnections_175',['requiredConnections',['../classherald_1_1ble_1_1_herald_protocol_b_l_e_coordination_provider.html#a6316ead832a80a34be03f6fc4104a908',1,'herald::ble::HeraldProtocolBLECoordinationProvider::requiredConnections()'],['../classherald_1_1engine_1_1_coordination_provider.html#a52a9155acf0a5d1436a857a0036013cc',1,'herald::engine::CoordinationProvider::requiredConnections()']]],
+  ['reset_176',['reset',['../classherald_1_1ble_1_1_b_l_e_device.html#a789360e76a5e1fd87fed91321ef3d24f',1,'herald::ble::BLEDevice::reset()'],['../classherald_1_1datatype_1_1_distribution.html#a99672d0d205a9e4e05dcb45fe0503a2d',1,'herald::datatype::Distribution::reset()']]],
+  ['restartscanningandadvertising_177',['restartScanningAndAdvertising',['../classherald_1_1ble_1_1_herald_protocol_v1_provider.html#a9e569448ebca41fa55161abe2d7a97fb',1,'herald::ble::HeraldProtocolV1Provider::restartScanningAndAdvertising()'],['../classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#aa35ceeef9da3844c6737d320436d672c',1,'herald::ble::ConcreteBLEReceiver::restartScanningAndAdvertising() override'],['../classherald_1_1ble_1_1_concrete_b_l_e_receiver.html#aa35ceeef9da3844c6737d320436d672c',1,'herald::ble::ConcreteBLEReceiver::restartScanningAndAdvertising() override']]],
+  ['reversed_178',['reversed',['../classherald_1_1datatype_1_1_data_ref.html#a8e5727f1a1d7a5e1eb6beecde578053c',1,'herald::datatype::DataRef']]],
+  ['reverseendianness_179',['reverseEndianness',['../classherald_1_1datatype_1_1_data_ref.html#ab4f9c008fb742d406ce27781380949db',1,'herald::datatype::DataRef']]],
+  ['riskaggregationbasic_180',['RiskAggregationBasic',['../structherald_1_1analysis_1_1algorithms_1_1risk_1_1_risk_aggregation_basic.html',1,'herald::analysis::algorithms::risk']]],
+  ['rssi_181',['RSSI',['../classherald_1_1datatype_1_1_r_s_s_i.html',1,'herald::datatype']]],
+  ['run_182',['run',['../structherald_1_1analysis_1_1_analysis_runner.html#a2e679b4360b2aaee3e15671e0ec69c2a',1,'herald::analysis::AnalysisRunner']]]
+];

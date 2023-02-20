@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css?1676884168425440110">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Herald Bluetooth MESH API">
+<meta name="author" content="Herald Project Contributors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="How to use the Herald MESH API">
+<meta property="og:description" content="How to use the Herald MESH API">
+<link rel="canonical" href="https://heraldprox.io/mesh/api">
+<meta property="og:url" content="https://heraldprox.io/mesh/api">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Herald Project Contributors"},"description":"How to use the Herald MESH API","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://heraldprox.io/img/herald.png"},"name":"Herald Project Contributors"},"@type":"WebPage","headline":"Herald Bluetooth MESH API","url":"https://heraldprox.io/mesh/api","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Herald Bluetooth MESH API</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="logo">
+                    <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+                </div>
+            </div>
+            <div class="col-md-9 offset-md-1">
+                <ul class="nav-menu" id="header-nav">
+                
+                    <li class=""><a href="/">Home</a></li>
+                
+                    <li class=""><a href="/about">About</a></li>
+                
+                    <li class=""><a href="/community">Community</a></li>
+                
+                    <li class=""><a href="/blog">Blog</a></li>
+                
+                    <li class=""><a href="/download">Download</a></li>
+                
+                    <li class=""><a href="/docs">Documentation</a></li>
+                
+                    <li class=""><a href="/reference">Reference</a></li>
+                
+                    <li class=""><a href="/research">Research</a></li>
+                
+                </ul>
+                <div class="nav-mobile-link">
+                    <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Herald Bluetooth MESH API</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-2">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>Reference</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/reference">Introduction</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/reference/arch">Architecture</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/reference/personae">Personae</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/efficacy/results">Efficacy Results</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Payloads</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/payload">About Payloads</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/envelope">Herald Envelope Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/interop">Interoperability</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/common">Herald Common CT Inner Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/simple">Herald Simple Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/secured">Herald Secured Inner Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/beacon">Herald Beacon Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/inner">Herald-compatible Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/outer">Custom outer &amp; inner payloads</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald MESH</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/mesh">About MESH</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/mesh/network">MESH Networking</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/mesh/models">MESH Data Models</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/mesh/api">Herald MESH API</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Formal Specifications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/specs">List and status</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/protocol">Herald Protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-beacon">Beacon Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-extended">Extended Data Area</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-simple">Simple Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-secured">Secured Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-interop">International Interoperability</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-9 offset-md-1">
+                
+
+  
+
+                <h1 id="herald-bluetooth-mesh-api">Herald Bluetooth MESH API</h1>
+
+<p>The MESH API consists of several parts:-</p>
+
+<ul>
+  <li>General use MESH model and operation code definition constants and identifiers
+    <ul>
+      <li>To be used on any app in any platform</li>
+      <li>See herald-for-cpp/herald/include/herald/mesh/mesh.h for these definitions</li>
+      <li>This header file can be used in C++ or C applications on any platform
+        <ul>
+          <li>TODO MAKE THIS TRUE</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Zephyr Herald MESH reference implementation API
+    <ul>
+      <li>A Zephyr-only set of C files, usable in a Zephyr app, for client and server MESH model interaction</li>
+      <li>See herald-for-cpp/herald/include/herald/mesh/zephyr.h for Zephyr MACRO definitions</li>
+      <li>Each service has its own C server and client implementation:-
+        <ul>
+          <li>SERVICENAME.h defines platform-independent constants. E.g. presence.h, location.h and modem.h</li>
+          <li>SERVICENAME-client.h defines platform-independent C callbacks and C++ wrappers for platform specific client implementations</li>
+          <li>zephyr/SERVICENAME-server.h defines a Zephyr server for this model in C</li>
+          <li>zephyr/SERVICENAME-client.h defines a Zephyr client for this model in C</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Herald MESH Modem commands API
+    <ul>
+      <li>A mix of low level (Zephyr MESH Shell command like) and higher level (Herald MESH use specific) commands</li>
+      <li>Sent over a CMC ACM serial device using protobufv3 messages</li>
+      <li>Modem-side is a Zephyr only reference implementation
+        <ul>
+          <li>zephyr/modem_usb.h defines the CDC ACM protobufv3 message processor. This uses service client models to implement commands.</li>
+        </ul>
+      </li>
+      <li>App-side is a standalone C API with C++ wrapper objects
+        <ul>
+          <li>Default implementation is a containerisable app that links the Mesh Modem to RabbitMQ queues and exchanges</li>
+          <li>See modem.h and modem_client.h for multi-platform API to interact with a USB conencted Herald Bluetooth MESH Modem</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Provisioning
+    <ul>
+      <li>We had to implement some standard provisioning functionality</li>
+      <li>no_oob_prov.h - A no security provisioner. DO NOT USE IN PRODUCTION</li>
+      <li>(COMING SOON) nfc_prov.h - An NFC based OOB provisioner, intended for initial provisioning</li>
+      <li>After provisioning the GATT_PROXY is still running to allow application key setting using the nRF Mesh mobile app (or similar)</li>
+      <li>Once app keys are shared, and the relay is set to ‘configured’, the GATT_PROXY service is disabled for security</li>
+      <li>All provisioning / resetting / configuration is then done via the MESH itself</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="kconfig-defines">Kconfig defines</h2>
+
+<p>(TO BE COMPLETED) The API supports Kconfig. The following defines are available:-</p>
+
+<ul>
+  <li>CONFIG_BT_MESH_HERALD_MODEM_SRV (default: n) - Enable MESH Modem Server functionality</li>
+  <li>CONFIG_BT_MESH_HERALD_PRESENCE_SRV (default: n) - Enable MESH Presence Server functionality</li>
+  <li>CONFIG_BT_MESH_HERALD_LOCATION_SRV (default: n) - Enable MESH Location Server functionality (i.e. remote programming of LE Venue Beacon. Does not enable/disable LE Venue Beacon functionality)</li>
+</ul>
+
+<h2 id="herald-mesh-and-rabbitmq">Herald MESH and RabbitMQ</h2>
+
+<p>Why have we used RabbitMQ? You could set up an entire MESH using the Nordic mRF MESH mobile application… But it would be hellish to
+manage and debug, and so we thought we’d do it another way. It’s also more secure without having to have the GATT RELAY enabled after
+provisioning has been completed.</p>
+
+<p>To enable this we created the MESH Modem that has a full Bluetooth SIG MESH set of low-level commands,
+and some Herald MESH specific higher level commands which will use multiple orchestrated
+low-level MESH commands to achieve their goals.</p>
+
+<p>RabbitMQ is used as it’s a reliable messaging system and can be used for both individual modem
+command queues, but also for publishing data from the MESH, such as presence data, into
+RabbitMQ to allow it to be consumed by applications.</p>
+
+<p>This also allows a mechanism for interacting with Hospital clinical applications, or
+appointments applications, or building control applications (for standard MESH lighting uses perhaps).</p>
+
+<p>It is most likely in a large site that server-side IT controls will be required to secure and
+configure a large network and all the devices within it over time. It was therefore logical
+to abstract away the underlying command mechanism, facilitating a wide range of application developers,
+rather than just Embedded systems developers, to manage a Bluetooth MESH network.</p>
+
+<p>It should be noted that although there are likely pre-configured Herald specific message
+queues, any publish/subscribe/configure function in Bluetooth MESH can be achieved by using
+low level commands and binding to RabbitMQ queues. This allows third party vendors to
+integrate their own Bluetooth MESH systems to a Herald MESH, or to just lift the MESH Modem
+client and server code for use in their own systems.</p>
+
+<h2 id="where-to-go-next">Where to go next?</h2>
+
+<p>The applications and API are still in a state of flux. When they are released for Beta in
+May 2022 we’ll update this page with links to the full API documentation and application
+samples.</p>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldProximity">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://slack.lfph.io/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/theheraldproject">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            The Herald Project is a series of the <a target="_new" href="https://www.lfph.io/join/projects/">Linux Foundation Public Health</a>.
+            © 2023 Herald Project Contributors.
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/js/jquery.matchHeight.js?1676884168425440110"></script>
+<script src="/js/scripts.js?1676884168425440110"></script>
+    </div>
+  </div>
+</body>
+
+</html>

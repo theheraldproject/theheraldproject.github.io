@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css?1676884168425440110">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="OpenTrace">
+<meta name="author" content="Herald Project Contributors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Digital Contact Tracing and Exposure Notification with OpenTrace">
+<meta property="og:description" content="Digital Contact Tracing and Exposure Notification with OpenTrace">
+<link rel="canonical" href="https://heraldprox.io/opentrace">
+<meta property="og:url" content="https://heraldprox.io/opentrace">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Herald Project Contributors"},"description":"Digital Contact Tracing and Exposure Notification with OpenTrace","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://heraldprox.io/img/herald.png"},"name":"Herald Project Contributors"},"@type":"WebPage","headline":"OpenTrace","url":"https://heraldprox.io/opentrace","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - OpenTrace</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="logo">
+                    <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+                </div>
+            </div>
+            <div class="col-md-9 offset-md-1">
+                <ul class="nav-menu" id="header-nav">
+                
+                    <li class=""><a href="/">Home</a></li>
+                
+                    <li class=""><a href="/about">About</a></li>
+                
+                    <li class=""><a href="/community">Community</a></li>
+                
+                    <li class=""><a href="/blog">Blog</a></li>
+                
+                    <li class=""><a href="/download">Download</a></li>
+                
+                    <li class=""><a href="/docs">Documentation</a></li>
+                
+                    <li class=""><a href="/reference">Reference</a></li>
+                
+                    <li class=""><a href="/research">Research</a></li>
+                
+                </ul>
+                <div class="nav-mobile-link">
+                    <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>OpenTrace</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-2">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>About</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/about">Introduction</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/about/faq">FAQs</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Packages</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald">Herald API</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/opentrace">OpenTrace</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Applications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/applications">Overview</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/ct">Contact Tracing</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/wearable">eHealth Wearables</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/beacons">Beacons</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/p2p">Device to Device</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/mesh">Bluetooth Mesh Gateways</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-9 offset-md-1">
+                
+
+  
+
+                <h1 id="opentrace">OpenTrace</h1>
+
+<p>OpenTrace was created by <a href="https://tech.gov.sg">GovTech Singapore</a> in March 2020 and was the 
+first publicly available and open source Digital Contact Tracing system in the world based
+on Bluetooth Low Energy. OpenTrace supported the <a href="https://bluetrace.io">BlueTrace protocol</a>.</p>
+
+<p><img src="/img/opentrace.png" alt="OpenTrace Logo"></p>
+
+<p>GovTech Singapore <a href="/blog/opentrace-donation">donated OpenTrace</a> to LFPH and the Herald Project in August 2021. The original code
+has been kept for posterity and will be used as a base for future developments. 
+A new OpenTrace version is being worked on by the Herald Project
+to provide a long term open source system to help prevent the spread of future diseases.</p>
+
+<p>More details will be released soon. For now, the aims of OpenTrace v2 are:-</p>
+
+<ul>
+  <li>Provide an end-to-end, whitelabled system that PHAs can adopt and roll out within a week without large teams to maintain</li>
+  <li>Place the end user in control of how much, or how little, information is shared to their Public Health Authority or others</li>
+  <li>Provide a back-end for the system that gives useful epidemiological data on disease progression, whose efficacy can be proven in epidemiological studies</li>
+  <li>Allow the code to be treated as ‘upstream’, allowing PHAs to take new versions, additional modules and functionality, in future</li>
+  <li>Be a pluggable system, allow other projects in LFPH and third parties to provide additional modules to PHAs (E.g. a manual contact tracing case management system for those countries without one currently)</li>
+  <li>Provide whitelabeled mobile apps for Android and iOS (supporting more than just the most recent phones)</li>
+  <li>Provide an open source wearable hardware design and application to allow distribution at low cost, worldwide (around USD 15 per wearable)</li>
+  <li>Support multiple Bluetooth layer protocols for detection - Herald, Bluetrace, GAEN, and Singapore’s TraceTogether</li>
+</ul>
+
+<h2 id="code-repositories">Code repositories</h2>
+
+<p>The donated OpenTrace v1 repositories can be found below:-</p>
+
+<ul>
+  <li>OpenTrace iOS application - <a href="https://github.com/theheraldproject/opentrace-v1-ios">https://github.com/theheraldproject/opentrace-v1-ios</a>
+</li>
+  <li>OpenTrace Android application - <a href="https://github.com/theheraldproject/opentrace-v1-android">https://github.com/theheraldproject/opentrace-v1-android</a>
+</li>
+  <li>OpenTrace cloud functions (server side) - <a href="https://github.com/theheraldproject/opentrace-v1-cloud-functions">https://github.com/theheraldproject/opentrace-v1-cloud-functions</a>
+</li>
+  <li>OpenTrace calibration - <a href="https://github.com/theheraldproject/opentrace-v1-calibration">https://github.com/theheraldproject/opentrace-v1-calibration</a>
+</li>
+</ul>
+
+<p>The new OpenTrace v2 repositories will be made available soon.</p>
+
+<h2 id="faq">FAQ</h2>
+
+<p>Below are some frequently asked questions about OpenTrace.</p>
+
+<h3 id="what-is-the-difference-between-the-herald-api-and-opentrace-v2">What is the difference between the Herald API and OpenTrace v2?</h3>
+
+<p>Herald is a low-level API for end user devices to provide proximity detection,
+data exchange, and risk and exposure analysis. This is useful in many applications,
+from file sharing with friends on Bluetooth, to navigation inside a complex building,
+and of course as part of a Digital Contact Tracing and Exposure Notification application.</p>
+
+<p>OpenTrace is an end-to-end system that aims to control the spread of pandemic diseases.
+This includes mobile applications that contain the <a href="/herald">Herald API</a>, but also includes the full
+range of back end components for Public Health Authorities, and mobile applications that
+can be whitelabled and configured for each state or country deploying them. OpenTrace is
+both a Digital Contact Tracing and Exposure Notification system.</p>
+
+<p>The Herald Project is also the name for our group of open source volunteers 
+working on both code bases. When we say “Herald” we mean the API, when we say 
+“The Herald Project” we mean the overarching project and its contributors.</p>
+
+<h3 id="what-does-whitelabling-mean">What does Whitelabling mean?</h3>
+
+<p>Whitelabling is the practice of producing a single application or system with identical
+components whose user interface and configuration can be altered for each organisation.
+This allows Public Health Authorities to take the OpenTrace v2 code and simply configure
+it, drastically reducing the time and cost of deploying and maintaining the system.</p>
+
+<p>Whitelabling is a common practice in the software industry. Have you ever shopped online
+for car insurance and wondered why each companies quotation website is almost identical
+apart from the branding and a handful of questions? This is because many use the same
+quoting software which is whitelabled, and then customised for each insurance provider.</p>
+
+<h3 id="why-are-the-opentrace-v1-and-v2-repositories-separate">Why are the OpenTrace v1 and v2 repositories separate?</h3>
+
+<p>Partly as a practical step for maintainability, but also partly for nostalgia and to
+preserve OpenTrace v1. As one of the world’s first open source Digital Contact Tracing system,
+OpenTrace v1 marks humanities first attempt to use end-user digital technology to
+limit disease spread. It has been the basis of many countries’ Digital Contact Tracing
+systems. The team felt it right to preserve this first version for the future.</p>
+
+<p>OpenTrace v1 and v2 are designed for different consumers too. Whilst OpenTrace v1
+was published as open source so other countries could implement their own Digital
+Contact Tracing systems, it was never meant to be maintained long term with
+multiple countries contributing to a single code base.</p>
+
+<p>OpenTrace v2 is designed
+for international collaboration on a common, community led, and openly governed
+basis. Rather than take a copy of OpenTrace v2 and customise it, countries are
+encouraged to take each release of OpenTrace and run it as-is, with their own
+configuration and their own modules plugging into it. In this way they
+can take future updates and improvements, and any code they contribute back
+to OpenTrace within the Herald project will benefit all countries throughout
+the world.</p>
+
+<h3 id="how-will-opentrace-v2-be-different-from-other-systems">How will OpenTrace v2 be different from other systems?</h3>
+
+<p>Our focus is on helping as many countries in the world as possible to tackle
+the spread of diseases. Whilst COVID-19 has brought pandemic diseases to the 
+forefront of attention throughout the world, there are many diseases whose
+spread devastates the lives of many people. Ebola, SARS and TB are just some
+other examples from very recent history. OpenTrace v2 will be ready for future
+emerging strains and diseases.</p>
+
+<p>OpenTrace v2 will be designed in a way to allow its epidemiological 
+effectiveness to be observed and measured,
+providing vital information to countryies’ medical regulation authorities. Many
+COVID-19 apps with current approval have done so on an emergency exemption basis.
+It is important for ethical reasons to be able to prove the efficacy of these
+systems, and OpenTrace v2 will be designed in a way to allow this to be proven.</p>
+
+<p>OpenTrace v2 will be available on a wide range of devices - not just the latest
+(and expensive!) smartphones from the major manufacturers. Older phones will
+also be supported, as too will third party devices such as wearables. Third party
+manufacturers such as smartwatch creators will also be able to integrate with
+and use OpenTrace. This democratices access to this life saving technology, bringing it
+into the reach of every individual in every jurisdiction for the first time.</p>
+
+<p>OpenTrace v2 will aim to integrate to and work with existing health care
+systems and processes, such as manual contact tracing, rather than exist as a
+standalone and black-boxed Exposure Notification system for a single disease.</p>
+
+<p>As an example, imagine a manual contact tracing case management system that
+already exists in a country. Should users of a mobile device with an OpenTrace v2
+app on it choose to share their personal details, when a contact tracer
+is deciding who to call first on an ill person’s recent contact list they could
+potentially see the strength of exposure of that persons contacts, allowing them
+to prioritise who to call, and influencing their advice to that person. For a fleeting
+contact they may just let the person know to remain vigilant, whereas for a 
+large exposure they may advise a person to self isolate and get tested for a disease.
+This allows countries to adopt a data driven approach to isolation before having to
+resort to full regional or national lockdowns, whilst keeping end users in control
+of who has access to their information.</p>
+
+<p>OpenTrace v2 will be implemented in a way to put the user in control of how much or
+little information they share, but should they choose to share this information,
+it will allow a country’s Public Health Authority to provide more accurate and tailored
+advice to the individual, and allow them to track the spread of disease in their country.</p>
+
+<p>OpenTrace v2 will also support multi-protocol device interoperability from the outset.
+Bluetooth protocols such as BlueTrace (OpenTrace v1), Singapore TraceTogether, Herald and the Google
+Apple Exposure Notification (GAEN) protocols will all be supported, both at a device
+level and an exposure notification level on the OpenTrace v2 backend software.</p>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldProximity">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://slack.lfph.io/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/theheraldproject">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            The Herald Project is a series of the <a target="_new" href="https://www.lfph.io/join/projects/">Linux Foundation Public Health</a>.
+            © 2023 Herald Project Contributors.
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/js/jquery.matchHeight.js?1676884168425440110"></script>
+<script src="/js/scripts.js?1676884168425440110"></script>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css?1676884168425440110">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Herald payload design">
+<meta name="author" content="Herald Project Contributors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Our privacy preserving and secure payload for slowing disease spread">
+<meta property="og:description" content="Our privacy preserving and secure payload for slowing disease spread">
+<link rel="canonical" href="https://heraldprox.io/payload/">
+<meta property="og:url" content="https://heraldprox.io/payload/">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Herald Project Contributors"},"description":"Our privacy preserving and secure payload for slowing disease spread","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://heraldprox.io/img/herald.png"},"name":"Herald Project Contributors"},"@type":"WebPage","headline":"Herald payload design","url":"https://heraldprox.io/payload/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Herald payload design</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="logo">
+                    <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+                </div>
+            </div>
+            <div class="col-md-9 offset-md-1">
+                <ul class="nav-menu" id="header-nav">
+                
+                    <li class=""><a href="/">Home</a></li>
+                
+                    <li class=""><a href="/about">About</a></li>
+                
+                    <li class=""><a href="/community">Community</a></li>
+                
+                    <li class=""><a href="/blog">Blog</a></li>
+                
+                    <li class=""><a href="/download">Download</a></li>
+                
+                    <li class=""><a href="/docs">Documentation</a></li>
+                
+                    <li class=""><a href="/reference">Reference</a></li>
+                
+                    <li class=""><a href="/research">Research</a></li>
+                
+                </ul>
+                <div class="nav-mobile-link">
+                    <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Herald payload design</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-2">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>Reference</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/reference">Introduction</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/reference/arch">Architecture</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/reference/personae">Personae</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/efficacy/results">Efficacy Results</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Payloads</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/payload">About Payloads</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/envelope">Herald Envelope Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/interop">Interoperability</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/common">Herald Common CT Inner Header</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/simple">Herald Simple Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/secured">Herald Secured Inner Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/beacon">Herald Beacon Payload (Draft)</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/inner">Herald-compatible Inner Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/payload/outer">Custom outer &amp; inner payloads</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald MESH</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/mesh">About MESH</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/mesh/network">MESH Networking</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/mesh/models">MESH Data Models</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/mesh/api">Herald MESH API</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Formal Specifications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/specs">List and status</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/protocol">Herald Protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-beacon">Beacon Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-extended">Extended Data Area</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-simple">Simple Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-secured">Secured Payload</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/specs/payload-interop">International Interoperability</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-9 offset-md-1">
+                
+
+  
+
+                <h1 id="payloads-introduction">Payloads Introduction</h1>
+
+<p>The payload is what allows identity and distance estimation information to be shared.
+The payload can also include cryptographic information that allows detection and 
+prevention of Relay and Replay attacks, and prevent misuse of mobile contact
+tracing by mischievous individuals or hostile state actors.</p>
+
+<p>Whilst our <a href="/protocol">Protocol</a> allows you to use any payload you wish, we are
+suggesting the below envelope payload in order to maximise international
+interoperability and security.</p>
+
+<p>The Herald protocol allows any payload to be transported over it. We do
+also provide a recommended envelope header for all apps, and
+two contact tracing example payloads:-</p>
+
+<p><img src="/images/Payloads.png" alt="Herald Payload Contents"></p>
+
+<h2 id="payload-options">Payload options</h2>
+
+<p>We provide a recommended <a href="/payload/envelope">Herald Envelope header</a> that allows
+international interoperability between any app, centralised or decentralised,
+whether for contact tracing or other uses.</p>
+
+<p>We are working on a DRAFT <a href="/payload/secured">Herald Secured inner payload</a> as the inner payload
+as this provides maximum epidemiological information to the health authority whilst
+maintaining privacy by keeping the contact event ‘node’ identified from the contact
+graph on individuals’ mobile phones only.</p>
+
+<p>Benefits of our secure payload include:-</p>
+<ul>
+  <li>Pseudonymous and privacy preserving</li>
+  <li>Can be used for a centralised or decentralised app approach</li>
+  <li>Allows for international interoperability</li>
+  <li>Lightweight, and supports a range of phones, including older ones</li>
+</ul>
+
+<p>We also provide a simpler <a href="/payload/simple">Herald Simple inner payload</a> for basic
+decentralised contact tracing.</p>
+
+<p>You are, of course, free to use your own <a href="/payload/inner">Herald-compatible Custom inner payload</a>
+or roll your own <a href="/payload/outer">Custom payload</a> entirely 
+(especially if you are not writing a contact tracing app!)</p>
+
+<p>We are also working on a <a href="/payload/beacon">Beacon Payload</a> for use in Stores and Restaurants or areas of environmental exposure (E.g. gas, chemicals). Please 
+<a href="https://github.com/theheraldproject/theheraldproject.github.io/issues">log an issue on GitHub</a> if you are interested in this.</p>
+
+<h2 id="what-every-payload-must-support">What every payload must support</h2>
+
+<p>Every contact tracing app must allow the sharing of the below information</p>
+
+<ul>
+  <li>Identifying data - to ‘identify’ the nearby mobile phone owner (can be a pseudonymous identifier not linked to name/real ID)
+    <ul>
+      <li>Randomly assigned pseudonymous identifier, encrypted with rotating key for privacy</li>
+      <li>Allows a health authority to notify an individual if they are at risk</li>
+      <li>Not a real identity, just enough data to get in contact with the individual. E.g. random ID &amp; third-party messaging ID (think of it like having a PO Box)</li>
+    </ul>
+  </li>
+  <li>Distance estimation data
+    <ul>
+      <li>Distance analogue data (E.g. RSSI for Bluetooth - single or multiple)</li>
+      <li>Calibration / conversion assistance data (E.g. TX Power)</li>
+      <li>Optional: Triangulation / error minimisation data (E.g. three RSSIs from 3 nearby phones)</li>
+    </ul>
+  </li>
+  <li>Security relevant data
+    <ul>
+      <li>Prevent fake/unauthorised client devices</li>
+      <li>Prevent relay attacks</li>
+      <li>Prevent replay attacks</li>
+      <li>Prevent spoofing</li>
+      <li>Provide non-repudiation (i.e. ensuring a contact event is validated from both participants)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Every payload must also consider the following security and privacy issues.</p>
+
+<p>Security requirements:-</p>
+<ul>
+  <li>Ensure an identifier belongs to a real registered device/person (prevents ‘election tampering attack’ from hostile state actors) - protect democracy</li>
+  <li>Minimise the opportunity for relay/replay attacks, and generation of ‘fake contact networks’</li>
+  <li>Prevent denial of service attacks</li>
+  <li>Prevent loss of trust from users in the benefits of a contact tracing app - protect people</li>
+  <li>Prevent impersonation</li>
+  <li>Prevent/discourage malicious use
+    <ul>
+      <li>Child wanting to avoid school via self diagnosis</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Privacy requirements:-</p>
+<ul>
+  <li>Prevent tracking of users as they move about
+    <ul>
+      <li>Criminals, law enforcement, oppressive states</li>
+      <li>Commercial / ad tracking</li>
+      <li>To find and harm suspected ill people</li>
+      <li>Protect people from domestic abuse</li>
+    </ul>
+  </li>
+  <li>Prevent self incrimination with law enforcement
+    <ul>
+      <li>Not tracking location of citizenry</li>
+    </ul>
+  </li>
+  <li>Protect health data (i.e. which ‘id’ is ill/potentially ill)
+    <ul>
+      <li>Prevent mob attacks on individuals</li>
+    </ul>
+  </li>
+  <li>Don’t immediately notify
+    <ul>
+      <li>“I’m sat with you, I was notified, so you must be ill!”
+Small delay, but not enough to lead to harm</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="centralised-or-decentralised">Centralised or decentralised</h2>
+
+<p>The combined Herald inner and envelope payloads provide a hybrid model.
+A contact graph where only one side of the graph is identified is present
+on the health authority’s server, and all exact contact event pairwise information
+(but no identity information) is stored on each phone. The exchange method
+also prevents spoofing, relay, and replay attacks.</p>
+
+<p>In a pure decentralised protocol, just generate the ClientID (rotation key)
+using a symmetric master key that is only stored in the secure enclave
+of your phone, and not shared with anyone.</p>
+
+<p>In a pure centralised protocol we recommend a forward secure ClientID generated
+from a symmetric key which is agreed upon by both server (health authority
+providing the app) and client (the mobile app) using a Diffie-Hellman key
+agreement approach.</p>
+
+<p>Using our protocol and envelope payload allows apps from countries using
+both centralised and decentralised approaches to interoperate, maximising
+interoperability whilst assuring privacy and security.</p>
+
+<p>A pure decentralised approach has some drawbacks, both for epidemiology and
+security. These are described in our <a href="../background">Contact tracing introduction</a>.</p>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldProximity">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://slack.lfph.io/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/theheraldproject">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            The Herald Project is a series of the <a target="_new" href="https://www.lfph.io/join/projects/">Linux Foundation Public Health</a>.
+            © 2023 Herald Project Contributors.
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/js/jquery.matchHeight.js?1676884168425440110"></script>
+<script src="/js/scripts.js?1676884168425440110"></script>
+    </div>
+  </div>
+</body>
+
+</html>

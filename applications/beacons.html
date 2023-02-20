@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css?1676884168425440110">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Beacons">
+<meta name="author" content="Herald Project Contributors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Herald’s use for beacons">
+<meta property="og:description" content="Herald’s use for beacons">
+<link rel="canonical" href="https://heraldprox.io/applications/beacons">
+<meta property="og:url" content="https://heraldprox.io/applications/beacons">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Herald Project Contributors"},"description":"Herald’s use for beacons","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://heraldprox.io/img/herald.png"},"name":"Herald Project Contributors"},"@type":"WebPage","headline":"Beacons","url":"https://heraldprox.io/applications/beacons","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Beacons</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="logo">
+                    <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+                </div>
+            </div>
+            <div class="col-md-9 offset-md-1">
+                <ul class="nav-menu" id="header-nav">
+                
+                    <li class=""><a href="/">Home</a></li>
+                
+                    <li class=""><a href="/about">About</a></li>
+                
+                    <li class=""><a href="/community">Community</a></li>
+                
+                    <li class=""><a href="/blog">Blog</a></li>
+                
+                    <li class=""><a href="/download">Download</a></li>
+                
+                    <li class=""><a href="/docs">Documentation</a></li>
+                
+                    <li class=""><a href="/reference">Reference</a></li>
+                
+                    <li class=""><a href="/research">Research</a></li>
+                
+                </ul>
+                <div class="nav-mobile-link">
+                    <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Beacons</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-2">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>About</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/about">Introduction</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/about/faq">FAQs</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Packages</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald">Herald API</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/opentrace">OpenTrace</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Applications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/applications">Overview</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/ct">Contact Tracing</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/wearable">eHealth Wearables</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/beacons">Beacons</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/p2p">Device to Device</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/mesh">Bluetooth Mesh Gateways</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-9 offset-md-1">
+                
+
+  
+
+                <h1 id="herald-and-beacons">Herald and Beacons</h1>
+
+<p>The Herald API can be used effectively for producing beacons that let passers by know
+about a location. This was first used for COVID-19 Venue Beacons, allowing a phone
+to create a Venue Diary of where it has been. This is held on device and is thus
+privacy preserving. The person could choose to share this with contact tracing teams.</p>
+
+<p>You can see an early mock up of our hardware design below:-</p>
+
+<div class="row">
+<div class="md-4">
+<img src="../images/dct-wearable-prototype.png" alt="Herald early wearable design mock up" style="width: 25%;">
+<img src="../images/herald-prototype-hardware-assembly.jpg" alt="First Herald wearable prototyping being assembled" style="width: 40%;">
+<br>
+<b>Note:</b> An early mock-up of the main module of our DCT wearable, and the first prototype during assembly.
+<br>
+<br>
+</div>
+</div>
+
+<p>The beacon data is compatible with existing manual QR code poster scanning systems
+like the one invented by New Zealand and subsequently adopted by many countries,
+including the UK, for public check-in.</p>
+
+<p>The Herald Venue Beacon approach has significant benefits:-</p>
+<ul>
+  <li>No need to print and keep replacing posters</li>
+  <li>As well as public safety, the beacons can be used to facilitate navigation within a complex environment (E.g. Hospital or shopping centre)</li>
+  <li>Automatic logging, not requiring manual user QR code scanning</li>
+  <li>As well as check-in, the venue diary also logs check-out, and thus false positive notifications which are common with a QR code solution are avoided. This could happen when visiting a store at 0800 and then later at 1200 a person who is later found to have COVID-19 causes all people to be notified to self isolate and get tested. Clearly there is very little correlation between two visitors to a store hours apart, and so venue check-out has significant advantages.</li>
+</ul>
+
+<h2 id="onward-development">Onward development</h2>
+
+<p>The Herald team are currently linking the Venue Beacon concept to our
+<a href="/applications/mesh">Bluetooth MESH</a>
+capability. This will allow remote management and over-the-air software
+updates of a large number of beacons in a complex environment such as a large
+restaurant, football stadium, school, hospital or shopping centre.</p>
+
+<h2 id="how-to-get-started-with-beacons">How to get started with Beacons</h2>
+
+<p>Currently there is no standard application built for mobile phone users to interact
+with Herald beacons, but you can add Herald support to your existing mobile app
+quite easily. See the 
+<a href="/guide">Herald Development Guide</a> 
+for details.</p>
+
+<h2 id="base-model---bluetooth-tag-and-beacon">Base model - Bluetooth Tag and Beacon</h2>
+
+<p>The based model features just a main board. An estimated production cost of USD 20, or USD 25 with a basic case. Cost could be reduced by USD 5 if optional hardware is removed.</p>
+
+<p>This includes the following hardware:-</p>
+
+<ul>
+  <li>Fanstel BC833M module certified for Bluetooth and NFC, based on the Nordic Semiconductor nRF52833 module QDAA (Arm Cortex M4F) with 128 KB RAM</li>
+  <li>Bluetooth and NFC antennae
+    <ul>
+      <li>NFC is used as an ‘out of band’ authentication mechanism during provisioning, which could instead be done via USB</li>
+    </ul>
+  </li>
+  <li>RGB+IR light sensor - To detect daylight vs artificial light (I.e. indoors versus outdoors)
+    <ul>
+      <li>Could be removed to reduce production cost</li>
+    </ul>
+  </li>
+  <li>Accelerometer - To detect when the device is not moving not in use, to help save power. Could be used in future to determine how often tagged equipment is used.</li>
+  <li>Real Time Clock and Calendar chip - To maintain date and time, vital for security functions</li>
+  <li>2 MB of external storage - For storing updates or other equipment environment data such as vibration data (The nRF52833 has an onboard 512 KB Flash for application/Zephyr RTOS data)
+    <ul>
+      <li>Could be removed to reduce production cost</li>
+    </ul>
+  </li>
+  <li>USB-C connector (waterproof) for power and data transfer
+    <ul>
+      <li>Could be removed to reduce production cost, with all programming and updates done via Bluetooth Low Energy or Bluetooth MESH</li>
+    </ul>
+  </li>
+</ul>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldProximity">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://slack.lfph.io/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/theheraldproject">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            The Herald Project is a series of the <a target="_new" href="https://www.lfph.io/join/projects/">Linux Foundation Public Health</a>.
+            © 2023 Herald Project Contributors.
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/js/jquery.matchHeight.js?1676884168425440110"></script>
+<script src="/js/scripts.js?1676884168425440110"></script>
+    </div>
+  </div>
+</body>
+
+</html>

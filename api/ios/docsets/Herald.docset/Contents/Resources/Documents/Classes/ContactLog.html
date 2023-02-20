@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ContactLog Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/ContactLog" class="dashAnchor"></a>
+    <a title="ContactLog Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Herald 2.1.0-beta1 Docs</a> (36% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Herald Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ContactLog Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AES128.html">AES128</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:6Herald9AggregateC">Aggregate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AnalysisDelegate.html">AnalysisDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AnalysisDelegateManager.html">AnalysisDelegateManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AnalysisProvider.html">AnalysisProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AnalysisProviderManager.html">AnalysisProviderManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AnalysisRunner.html">AnalysisRunner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BLEDevice.html">BLEDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BatteryLog.html">BatteryLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CallableForNewSample.html">CallableForNewSample</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcreteBeaconPayloadDataSupplierV1.html">ConcreteBeaconPayloadDataSupplierV1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcreteExtendedDataSectionV1.html">ConcreteExtendedDataSectionV1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcreteExtendedDataV1.html">ConcreteExtendedDataV1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcreteSensorLogger.html">ConcreteSensorLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcreteSimplePayloadDataSupplier.html">ConcreteSimplePayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConcreteTestPayloadDataSupplier.html">ConcreteTestPayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ContactLog.html">ContactLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DetectionLog.html">DetectionLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Device.html">Device</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DiffieHellmanMerkle.html">DiffieHellmanMerkle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DiffieHellmanParameters.html">DiffieHellmanParameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Distance.html">Distance</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DoubleValue.html">DoubleValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:6Herald9EncounterC">Encounter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EventLog.html">EventLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EventTimeIntervalLog.html">EventTimeIntervalLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Filter.html">Filter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FowlerBasic.html">FowlerBasic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FowlerBasicAnalyser.html">FowlerBasicAnalyser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Gaussian.html">Gaussian</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GreaterThan.html">GreaterThan</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/InPeriod.html">InPeriod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/InRange.html">InRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Interactions.html">Interactions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LegacyPayloadData.html">LegacyPayloadData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LegacyPayloadData/ProtocolName.html">– ProtocolName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LessThan.html">LessThan</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ListManager.html">ListManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Mean.html">Mean</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Median.html">Median</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Mobility.html">Mobility</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MobilityEvent.html">MobilityEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Mode.html">Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoOp.html">NoOp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PayloadData.html">PayloadData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RSSI.html">RSSI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RingBuffer.html">RingBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RiskAggregationBasic.html">RiskAggregationBasic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RssiHistogram.html">RssiHistogram</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SHA256.html">SHA256</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sample.html">Sample</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SampleIterator.html">SampleIterator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SampleIteratorProxy.html">SampleIteratorProxy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SampleList.html">SampleList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SampleListIterator.html">SampleListIterator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SampleStatistics.html">SampleStatistics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SampledID.html">SampledID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SecureRandomFunction.html">SecureRandomFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SelfCalibratedModel.html">SelfCalibratedModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensorArray.html">SensorArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SensorDelegateLogger.html">SensorDelegateLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Since.html">Since</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SmoothedLinearModel.html">SmoothedLinearModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SmoothedLinearModelAnalyser.html">SmoothedLinearModelAnalyser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SocialDistance.html">SocialDistance</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StatisticsLog.html">StatisticsLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Summary.html">Summary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TestRandomFunction.html">TestRandomFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TextFile.html">TextFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UIntBig.html">UIntBig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UniqueVenue.html">UniqueVenue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Until.html">Until</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Variance.html">Variance</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VariantSet.html">VariantSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VenueDiary.html">VenueDiary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VenueDiaryEvent.html">VenueDiaryEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VenueEncounter.html">VenueEncounter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CalibrationMeasurementUnit.html">CalibrationMeasurementUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/EventTimeIntervalLogEventType.html">EventTimeIntervalLogEventType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ExtendedDataSegmentCodes.html">ExtendedDataSegmentCodes</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ExtendedDataSegmentCodesV1.html">ExtendedDataSegmentCodesV1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/HeraldBeaconPayloadVersions.html">HeraldBeaconPayloadVersions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ProximityMeasurementUnit.html">ProximityMeasurementUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SensorLoggerLevel.html">SensorLoggerLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SensorState.html">SensorState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SensorType.html">SensorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StringLengthEncodingOption.html">StringLengthEncodingOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/VenuePayloadParseError.html">VenuePayloadParseError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/CBCentralManagerState.html">CBCentralManagerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CBManagerState.html">CBManagerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CBPeripheralManagerState.html">CBPeripheralManagerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CBPeripheralState.html">CBPeripheralState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/TimeInterval.html">TimeInterval</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:6Herald25BeaconPayloadDataSupplierP">BeaconPayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Encryption.html">Encryption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Event.html">Event</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ExtendedData.html">ExtendedData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Integrity.html">Integrity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/KeyExchange.html">KeyExchange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/LocationReference.html">LocationReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PayloadDataFormatter.html">PayloadDataFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PayloadDataSupplier.html">PayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PseudoRandomFunction.html">PseudoRandomFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Resettable.html">Resettable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Sensor.html">Sensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SensorDelegate.html">SensorDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SensorLogger.html">SensorLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:6Herald25SimplePayloadDataSupplierP">SimplePayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:6Herald23TestPayloadDataSupplierP">TestPayloadDataSupplier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VenueDiaryDelegate.html">VenueDiaryDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/BLESensorConfiguration.html">BLESensorConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Calibration.html">Calibration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ConcretePayloadDataFormatter.html">ConcretePayloadDataFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HexEncodingOptions.html">HexEncodingOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/InertiaLocationReference.html">InertiaLocationReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Location.html">Location</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MobilityLocationReference.html">MobilityLocationReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PlacenameLocationReference.html">PlacenameLocationReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Proximity.html">Proximity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/WGS84CircularAreaLocationReference.html">WGS84CircularAreaLocationReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/WGS84PointLocationReference.html">WGS84PointLocationReference</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald8BLE_RSSIa">BLE_RSSI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald11BLE_TxPowera">BLE_TxPower</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald17ContactIdentifiera">ContactIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald13EncryptionKeya">EncryptionKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald23ExtendedDataSegmentCodea">ExtendedDataSegmentCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald018KeyExchangePrivateB0a">KeyExchangePrivateKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald017KeyExchangePublicB0a">KeyExchangePublicKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald017KeyExchangeSharedB0a">KeyExchangeSharedKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald11MatchingKeya">MatchingKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald16PayloadTimestampa">PayloadTimestamp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald9SecretKeya">SecretKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald16TargetIdentifiera">TargetIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:6Herald9ValueTypea">ValueType</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ContactLog</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ContactLog</span> <span class="p">:</span> <span class="kt"><a href="../Classes/SensorDelegateLogger.html">SensorDelegateLogger</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>CSV contact log for post event analysis and visualisation</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald10ContactLogC8filename20payloadDataFormatterACSS_AA07PayloadfG0_ptcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(filename:payloadDataFormatter:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald10ContactLogC8filename20payloadDataFormatterACSS_AA07PayloadfG0_ptcfc">init(filename:<wbr>payloadDataFormatter:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">filename</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">payloadDataFormatter</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PayloadDataFormatter.html">PayloadDataFormatter</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/ConcretePayloadDataFormatter.html">ConcretePayloadDataFormatter</a></span><span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald10ContactLogC6sensor_9didDetectyAA10SensorTypeO_SStF"></a>
+                    <a name="//apple_ref/swift/Method/sensor(_:didDetect:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald10ContactLogC6sensor_9didDetectyAA10SensorTypeO_SStF">sensor(_:<wbr>didDetect:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">sensor</span><span class="p">(</span><span class="n">_</span> <span class="nv">sensor</span><span class="p">:</span> <span class="kt"><a href="../Enums/SensorType.html">SensorType</a></span><span class="p">,</span> <span class="nv">didDetect</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:6Herald16TargetIdentifiera">TargetIdentifier</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald10ContactLogC6sensor_7didRead10fromTargetyAA10SensorTypeO_AA11PayloadDataCSStF"></a>
+                    <a name="//apple_ref/swift/Method/sensor(_:didRead:fromTarget:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald10ContactLogC6sensor_7didRead10fromTargetyAA10SensorTypeO_AA11PayloadDataCSStF">sensor(_:<wbr>didRead:<wbr>fromTarget:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">sensor</span><span class="p">(</span><span class="n">_</span> <span class="nv">sensor</span><span class="p">:</span> <span class="kt"><a href="../Enums/SensorType.html">SensorType</a></span><span class="p">,</span> <span class="nv">didRead</span><span class="p">:</span> <span class="kt"><a href="../Classes/PayloadData.html">PayloadData</a></span><span class="p">,</span> <span class="nv">fromTarget</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:6Herald16TargetIdentifiera">TargetIdentifier</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald10ContactLogC6sensor_10didMeasure10fromTargetyAA10SensorTypeO_AA9ProximityVSStF"></a>
+                    <a name="//apple_ref/swift/Method/sensor(_:didMeasure:fromTarget:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald10ContactLogC6sensor_10didMeasure10fromTargetyAA10SensorTypeO_AA9ProximityVSStF">sensor(_:<wbr>didMeasure:<wbr>fromTarget:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">sensor</span><span class="p">(</span><span class="n">_</span> <span class="nv">sensor</span><span class="p">:</span> <span class="kt"><a href="../Enums/SensorType.html">SensorType</a></span><span class="p">,</span> <span class="nv">didMeasure</span><span class="p">:</span> <span class="kt"><a href="../Structs/Proximity.html">Proximity</a></span><span class="p">,</span> <span class="nv">fromTarget</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:6Herald16TargetIdentifiera">TargetIdentifier</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald10ContactLogC6sensor_8didShare10fromTargetyAA10SensorTypeO_SayAA11PayloadDataCGSStF"></a>
+                    <a name="//apple_ref/swift/Method/sensor(_:didShare:fromTarget:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald10ContactLogC6sensor_8didShare10fromTargetyAA10SensorTypeO_SayAA11PayloadDataCGSStF">sensor(_:<wbr>didShare:<wbr>fromTarget:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">sensor</span><span class="p">(</span><span class="n">_</span> <span class="nv">sensor</span><span class="p">:</span> <span class="kt"><a href="../Enums/SensorType.html">SensorType</a></span><span class="p">,</span> <span class="nv">didShare</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/PayloadData.html">PayloadData</a></span><span class="p">],</span> <span class="nv">fromTarget</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:6Herald16TargetIdentifiera">TargetIdentifier</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Herald10ContactLogC6sensor_8didVisityAA10SensorTypeO_AA8LocationVSgtF"></a>
+                    <a name="//apple_ref/swift/Method/sensor(_:didVisit:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Herald10ContactLogC6sensor_8didVisityAA10SensorTypeO_AA8LocationVSgtF">sensor(_:<wbr>didVisit:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">sensor</span><span class="p">(</span><span class="n">_</span> <span class="nv">sensor</span><span class="p">:</span> <span class="kt"><a href="../Enums/SensorType.html">SensorType</a></span><span class="p">,</span> <span class="nv">didVisit</span><span class="p">:</span> <span class="kt"><a href="../Structs/Location.html">Location</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="https://heraldprox.io/" target="_blank" rel="external">adamfowleruk</a>. All rights reserved. (Last updated: 2021-06-23)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

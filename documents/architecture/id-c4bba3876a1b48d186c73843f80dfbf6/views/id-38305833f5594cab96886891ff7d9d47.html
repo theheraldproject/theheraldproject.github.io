@@ -1,0 +1,601 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>21. Bluetooth Data Flow</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-3.3.2.min.css">
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-theme-3.3.2.min.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>21. Bluetooth Data Flow</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-viewpoint-"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-viewpoint_" target="hint"></a>
+            <!-- Or if a model (i.e has Purpose method) -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+			   <img class="diagram" src="../images/id-38305833f5594cab96886891ff7d9d47.png" alt="21. Bluetooth Data Flow" usemap="#id-38305833f5594cab96886891ff7d9d47map"/>
+			   <map name="id-38305833f5594cab96886891ff7d9d47map">
+				  		<area shape="rect" coords="2003,607,2123,662" href="../elements/id-f8aebfdbdff1437586c7969fc81cfa60.html"  target="element">
+				  		<area shape="rect" coords="1666,355,1786,410" href="../elements/id-f4cc63370844456789435f7c0cf9b71c.html"  target="element">
+				  		<area shape="rect" coords="2003,483,2123,538" href="../elements/id-9a002b6a052448718f26d4ea35a814b3.html"  target="element">
+				  		<area shape="rect" coords="214,188,334,226" href="../elements/id-eca4fd2122454ec9b2212e3e5b1e0a5b.html"  target="element">
+				  		<area shape="rect" coords="406,188,526,226" href="../elements/id-ccf59bb284fb4455bd2b9a82d5ed0aa0.html"  target="element">
+				  		<area shape="rect" coords="358,262,478,317" href="../elements/id-4f273a17926e4e5d9c8bc3de3106c98f.html"  target="element">
+				  		<area shape="rect" coords="262,95,431,150" href="../elements/id-48837af447684078aa74a2e1bf331824.html"  target="element">
+				  		<area shape="rect" coords="10,93,179,152" href="../elements/id-c881a96a7f7946e09b42d55122b5e222.html"  target="element">
+				  		<area shape="rect" coords="22,179,142,234" href="../elements/id-3a330eff39a04753a47dcfbe5da57b4d.html"  target="element">
+				  		<area shape="rect" coords="982,715,1127,770" href="../elements/id-8385f6f5533c4e288812ce663f487fd3.html"  target="element">
+				  		<area shape="rect" coords="1018,607,1174,662" href="../elements/id-aa38ba8e66be4bd0b108e994bc66355c.html"  target="element">
+				  		<area shape="rect" coords="982,487,1247,535" href="../elements/id-dc6281d0b1fa49b19c789721bed9ddfc.html"  target="element">
+				  				<area shape="rect" coords="526,715,935,770" href="../elements/id-0f7c3bc31be74affb2993bd3dd694d66.html"  target="element">
+				  				<area shape="rect" coords="526,607,935,662" href="../elements/id-17886107d9514debacc812c888fb8854.html"  target="element">
+				  				<area shape="rect" coords="526,487,743,542" href="../elements/id-42786b006c44467f92adaeb6b8a146ec.html"  target="element">
+
+				  		<area shape="rect" coords="22,451,959,794" href="../elements/id-66d762f35e9e45e8b715f4b11252c819.html"  target="element">
+				  		<area shape="rect" coords="1453,715,1573,770" href="../elements/id-503577f136f340b9962c278c723ee99f.html"  target="element">
+				  		<area shape="rect" coords="1822,607,1942,662" href="../elements/id-b6ea3d06e4494e019c638ed2a1a3a12d.html"  target="element">
+				  		<area shape="rect" coords="1114,559,1234,596" href="../elements/id-2bcb1a55c2bd408d8125fb6222968c0d.html"  target="element">
+				  		<area shape="rect" coords="1822,494,1942,535" href="../elements/id-ea88220603e442ba94c5c2db58b6a047.html"  target="element">
+				  		<area shape="rect" coords="1239,607,1359,662" href="../elements/id-53b2f18f1e43411ebfe4d7fffb241276.html"  target="element">
+				  		<area shape="rect" coords="1453,607,1573,662" href="../elements/id-690e8514318e4b6d8e8d8253216232ed.html"  target="element">
+				  		<area shape="rect" coords="1642,607,1762,662" href="../elements/id-aab7b496072c45379dce920f0025f8bd.html"  target="element">
+				  		<area shape="rect" coords="1318,487,1707,542" href="../elements/id-b04dee19975d4d8698dca4afebfc947f.html"  target="element">
+				  		<area shape="rect" coords="1390,171,1510,226" href="../elements/id-0095aae41abf4cd6b3917832ef892102.html"  target="element">
+				  		<area shape="rect" coords="1198,171,1318,226" href="../elements/id-84e138ef36b44dca92e0feef774ef208.html"  target="element">
+				  		<area shape="rect" coords="562,91,1103,133" href="../elements/id-5f4dec01ee4e4337aa769d5fbcf53b1b.html"  target="element">
+				  		<area shape="rect" coords="970,10,1090,65" href="../elements/id-e45b575c3cc6455a9a0399c3a688c4ee.html"  target="element">
+				  		<area shape="rect" coords="754,180,1103,217" href="../elements/id-17852da6e05f49a392d7e22025745af1.html"  target="element">
+				  		<area shape="rect" coords="514,271,2123,308" href="../elements/id-e983f7bbd8c94cbdb73e1b740c9e153a.html"  target="element">
+				  		<area shape="rect" coords="766,10,886,65" href="../elements/id-d4493b1430ca4ec9be73e282f4e9832b.html"  target="element">
+				  		<area shape="rect" coords="569,10,689,65" href="../elements/id-526e23d0aa8944b4914e591abc04092f.html"  target="element">
+
+			   </map>
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+						<li role="presentation"><a href="#elements" aria-controls="elements" role="tab" data-toggle="tab" class="i18n-elements"></a></li>
+						<li role="presentation"><a href="#relationships" aria-controls="relationships" role="tab" data-toggle="tab" class="i18n-relationships"></a></li>
+                    <!-- Model, Query Tab -->
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="elements">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+									</tr>
+								</thead>
+								<tbody>
+											<tr>
+											    <td> <a href="../elements/id-526e23d0aa8944b4914e591abc04092f.html" target="element"> Bluetooth Device Detected </a> </td>
+											    <td> <a href="../elements/id-526e23d0aa8944b4914e591abc04092f.html" target="element" class="i18n-elementtype-ApplicationEvent"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-d4493b1430ca4ec9be73e282f4e9832b.html" target="element"> Bluetooth Advert </a> </td>
+											    <td> <a href="../elements/id-d4493b1430ca4ec9be73e282f4e9832b.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-e983f7bbd8c94cbdb73e1b740c9e153a.html" target="element"> Sensor Delegate </a> </td>
+											    <td> <a href="../elements/id-e983f7bbd8c94cbdb73e1b740c9e153a.html" target="element" class="i18n-elementtype-ApplicationInterface"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-17852da6e05f49a392d7e22025745af1.html" target="element"> BLEDatabase </a> </td>
+											    <td> <a href="../elements/id-17852da6e05f49a392d7e22025745af1.html" target="element" class="i18n-elementtype-ApplicationService"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-e45b575c3cc6455a9a0399c3a688c4ee.html" target="element"> BLEAdvertParser </a> </td>
+											    <td> <a href="../elements/id-e45b575c3cc6455a9a0399c3a688c4ee.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-5f4dec01ee4e4337aa769d5fbcf53b1b.html" target="element"> BLEReceiver </a> </td>
+											    <td> <a href="../elements/id-5f4dec01ee4e4337aa769d5fbcf53b1b.html" target="element" class="i18n-elementtype-ApplicationService"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-84e138ef36b44dca92e0feef774ef208.html" target="element"> BLEDevice </a> </td>
+											    <td> <a href="../elements/id-84e138ef36b44dca92e0feef774ef208.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-0095aae41abf4cd6b3917832ef892102.html" target="element"> Device </a> </td>
+											    <td> <a href="../elements/id-0095aae41abf4cd6b3917832ef892102.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-b04dee19975d4d8698dca4afebfc947f.html" target="element"> Data Analysis Runner </a> </td>
+											    <td> <a href="../elements/id-b04dee19975d4d8698dca4afebfc947f.html" target="element" class="i18n-elementtype-ApplicationService"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-aab7b496072c45379dce920f0025f8bd.html" target="element"> SampleList (Input) </a> </td>
+											    <td> <a href="../elements/id-aab7b496072c45379dce920f0025f8bd.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-690e8514318e4b6d8e8d8253216232ed.html" target="element"> aggregate </a> </td>
+											    <td> <a href="../elements/id-690e8514318e4b6d8e8d8253216232ed.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-53b2f18f1e43411ebfe4d7fffb241276.html" target="element"> SampleList (Output) </a> </td>
+											    <td> <a href="../elements/id-53b2f18f1e43411ebfe4d7fffb241276.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-ea88220603e442ba94c5c2db58b6a047.html" target="element"> Data Source </a> </td>
+											    <td> <a href="../elements/id-ea88220603e442ba94c5c2db58b6a047.html" target="element" class="i18n-elementtype-ApplicationInterface"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-2bcb1a55c2bd408d8125fb6222968c0d.html" target="element"> Data Sink </a> </td>
+											    <td> <a href="../elements/id-2bcb1a55c2bd408d8125fb6222968c0d.html" target="element" class="i18n-elementtype-ApplicationInterface"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-b6ea3d06e4494e019c638ed2a1a3a12d.html" target="element"> Sample </a> </td>
+											    <td> <a href="../elements/id-b6ea3d06e4494e019c638ed2a1a3a12d.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-503577f136f340b9962c278c723ee99f.html" target="element"> Filter </a> </td>
+											    <td> <a href="../elements/id-503577f136f340b9962c278c723ee99f.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-66d762f35e9e45e8b715f4b11252c819.html" target="element"> Your Application </a> </td>
+											    <td> <a href="../elements/id-66d762f35e9e45e8b715f4b11252c819.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-42786b006c44467f92adaeb6b8a146ec.html" target="element"> Application Sensor Delegate </a> </td>
+													    <td> <a href="../elements/id-42786b006c44467f92adaeb6b8a146ec.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-17886107d9514debacc812c888fb8854.html" target="element"> Application Contact Proximity Delegate </a> </td>
+													    <td> <a href="../elements/id-17886107d9514debacc812c888fb8854.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-0f7c3bc31be74affb2993bd3dd694d66.html" target="element"> Application Contact Risk Delegate </a> </td>
+													    <td> <a href="../elements/id-0f7c3bc31be74affb2993bd3dd694d66.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+													</tr>
+
+											
+											<tr>
+											    <td> <a href="../elements/id-dc6281d0b1fa49b19c789721bed9ddfc.html" target="element"> Data Analysis Delegate </a> </td>
+											    <td> <a href="../elements/id-dc6281d0b1fa49b19c789721bed9ddfc.html" target="element" class="i18n-elementtype-ApplicationInterface"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-aa38ba8e66be4bd0b108e994bc66355c.html" target="element"> Contact Proximity Delegate </a> </td>
+											    <td> <a href="../elements/id-aa38ba8e66be4bd0b108e994bc66355c.html" target="element" class="i18n-elementtype-ApplicationInterface"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-8385f6f5533c4e288812ce663f487fd3.html" target="element"> Contact Risk Delegate </a> </td>
+											    <td> <a href="../elements/id-8385f6f5533c4e288812ce663f487fd3.html" target="element" class="i18n-elementtype-ApplicationInterface"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-3a330eff39a04753a47dcfbe5da57b4d.html" target="element"> ZephyrContext </a> </td>
+											    <td> <a href="../elements/id-3a330eff39a04753a47dcfbe5da57b4d.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-c881a96a7f7946e09b42d55122b5e222.html" target="element"> ZephyrBLETransmitter </a> </td>
+											    <td> <a href="../elements/id-c881a96a7f7946e09b42d55122b5e222.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-48837af447684078aa74a2e1bf331824.html" target="element"> ZephyrBLEReceiver </a> </td>
+											    <td> <a href="../elements/id-48837af447684078aa74a2e1bf331824.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-4f273a17926e4e5d9c8bc3de3106c98f.html" target="element"> Coordinator </a> </td>
+											    <td> <a href="../elements/id-4f273a17926e4e5d9c8bc3de3106c98f.html" target="element" class="i18n-elementtype-ApplicationComponent"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-ccf59bb284fb4455bd2b9a82d5ed0aa0.html" target="element"> Activity </a> </td>
+											    <td> <a href="../elements/id-ccf59bb284fb4455bd2b9a82d5ed0aa0.html" target="element" class="i18n-elementtype-ApplicationInterface"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-eca4fd2122454ec9b2212e3e5b1e0a5b.html" target="element"> Sensor </a> </td>
+											    <td> <a href="../elements/id-eca4fd2122454ec9b2212e3e5b1e0a5b.html" target="element" class="i18n-elementtype-ApplicationInterface"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-9a002b6a052448718f26d4ea35a814b3.html" target="element"> RSSI </a> </td>
+											    <td> <a href="../elements/id-9a002b6a052448718f26d4ea35a814b3.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-f4cc63370844456789435f7c0cf9b71c.html" target="element"> Payload </a> </td>
+											    <td> <a href="../elements/id-f4cc63370844456789435f7c0cf9b71c.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-f8aebfdbdff1437586c7969fc81cfa60.html" target="element"> Date </a> </td>
+											    <td> <a href="../elements/id-f8aebfdbdff1437586c7969fc81cfa60.html" target="element" class="i18n-elementtype-DataObject"> </a> </td>
+											</tr>
+
+
+								</tbody>
+							</table>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="relationships">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+										<th class="i18n-source"></th>
+										<th class="i18n-target"></th>
+									</tr>
+								</thead>
+								<tbody>
+																	<tr>
+																		<td> <a href="../elements/id-9a9923b48e924e89a6cae7f1ab430683.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-9a9923b48e924e89a6cae7f1ab430683.html" target="element" class="i18n-elementtype-AssociationRelationship"></a> </td>
+																		<td> <a href="../elements/id-526e23d0aa8944b4914e591abc04092f.html" target="element"> Bluetooth Device Detected </a> </td>
+																		<td> <a href="../elements/id-d4493b1430ca4ec9be73e282f4e9832b.html" target="element"> Bluetooth Advert </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-131bc865678c4cc3bdae7cee43e9f926.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-131bc865678c4cc3bdae7cee43e9f926.html" target="element" class="i18n-elementtype-TriggeringRelationship"></a> </td>
+																		<td> <a href="../elements/id-526e23d0aa8944b4914e591abc04092f.html" target="element"> Bluetooth Device Detected </a> </td>
+																		<td> <a href="../elements/id-5f4dec01ee4e4337aa769d5fbcf53b1b.html" target="element"> BLEReceiver </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-3a48c1c2678b4fb7849e5bcfbd596dc8.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-3a48c1c2678b4fb7849e5bcfbd596dc8.html" target="element" class="i18n-elementtype-AssignmentRelationship"></a> </td>
+																		<td> <a href="../elements/id-e983f7bbd8c94cbdb73e1b740c9e153a.html" target="element"> Sensor Delegate </a> </td>
+																		<td> <a href="../elements/id-b04dee19975d4d8698dca4afebfc947f.html" target="element"> Data Analysis Runner </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-3529925d54d846acb0c5e33cfa4e0ad0.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-3529925d54d846acb0c5e33cfa4e0ad0.html" target="element" class="i18n-elementtype-SpecializationRelationship"></a> </td>
+																		<td> <a href="../elements/id-e983f7bbd8c94cbdb73e1b740c9e153a.html" target="element"> Sensor Delegate </a> </td>
+																		<td> <a href="../elements/id-ea88220603e442ba94c5c2db58b6a047.html" target="element"> Data Source </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-8a2c1e68be9945da84856cb38e823c60.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-8a2c1e68be9945da84856cb38e823c60.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																		<td> <a href="../elements/id-e983f7bbd8c94cbdb73e1b740c9e153a.html" target="element"> Sensor Delegate </a> </td>
+																		<td> <a href="../elements/id-9a002b6a052448718f26d4ea35a814b3.html" target="element"> RSSI </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-764575ab795d4c59ace4ab33434a84c8.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-764575ab795d4c59ace4ab33434a84c8.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																		<td> <a href="../elements/id-e983f7bbd8c94cbdb73e1b740c9e153a.html" target="element"> Sensor Delegate </a> </td>
+																		<td> <a href="../elements/id-f4cc63370844456789435f7c0cf9b71c.html" target="element"> Payload </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-03424674fb5a4b349add476fb38e965d.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-03424674fb5a4b349add476fb38e965d.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																		<td> <a href="../elements/id-e983f7bbd8c94cbdb73e1b740c9e153a.html" target="element"> Sensor Delegate </a> </td>
+																		<td> <a href="../elements/id-0095aae41abf4cd6b3917832ef892102.html" target="element"> Device </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-ff9775a697824959b32b2f34986e883d.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-ff9775a697824959b32b2f34986e883d.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																		<td> <a href="../elements/id-17852da6e05f49a392d7e22025745af1.html" target="element"> BLEDatabase </a> </td>
+																		<td> <a href="../elements/id-84e138ef36b44dca92e0feef774ef208.html" target="element"> BLEDevice </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-0cb2419af665436da98636636fde09e7.html" target="element"> Device, Event (Detected, Updated (RSSI, Payload), Deleted) </a> </td>
+																		<td> <a href="../elements/id-0cb2419af665436da98636636fde09e7.html" target="element" class="i18n-elementtype-FlowRelationship"></a> </td>
+																		<td> <a href="../elements/id-17852da6e05f49a392d7e22025745af1.html" target="element"> BLEDatabase </a> </td>
+																		<td> <a href="../elements/id-e983f7bbd8c94cbdb73e1b740c9e153a.html" target="element"> Sensor Delegate </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-73fa9796ccc141ab83b1f84e5316f7df.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-73fa9796ccc141ab83b1f84e5316f7df.html" target="element" class="i18n-elementtype-ServingRelationship"></a> </td>
+																		<td> <a href="../elements/id-e45b575c3cc6455a9a0399c3a688c4ee.html" target="element"> BLEAdvertParser </a> </td>
+																		<td> <a href="../elements/id-5f4dec01ee4e4337aa769d5fbcf53b1b.html" target="element"> BLEReceiver </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-53cf2f7ce988401fbf96d53f7d5eab34.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-53cf2f7ce988401fbf96d53f7d5eab34.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																		<td> <a href="../elements/id-5f4dec01ee4e4337aa769d5fbcf53b1b.html" target="element"> BLEReceiver </a> </td>
+																		<td> <a href="../elements/id-d4493b1430ca4ec9be73e282f4e9832b.html" target="element"> Bluetooth Advert </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-28887c1a84fb472db307e0d28b0cddde.html" target="element"> Device detected, payload read </a> </td>
+																		<td> <a href="../elements/id-28887c1a84fb472db307e0d28b0cddde.html" target="element" class="i18n-elementtype-FlowRelationship"></a> </td>
+																		<td> <a href="../elements/id-5f4dec01ee4e4337aa769d5fbcf53b1b.html" target="element"> BLEReceiver </a> </td>
+																		<td> <a href="../elements/id-17852da6e05f49a392d7e22025745af1.html" target="element"> BLEDatabase </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-e514eee0d8b64d62bdee6a4c28f4425f.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-e514eee0d8b64d62bdee6a4c28f4425f.html" target="element" class="i18n-elementtype-SpecializationRelationship"></a> </td>
+																		<td> <a href="../elements/id-84e138ef36b44dca92e0feef774ef208.html" target="element"> BLEDevice </a> </td>
+																		<td> <a href="../elements/id-0095aae41abf4cd6b3917832ef892102.html" target="element"> Device </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-52769c76fe7b453b8418cab7214f1f0e.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-52769c76fe7b453b8418cab7214f1f0e.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																		<td> <a href="../elements/id-b04dee19975d4d8698dca4afebfc947f.html" target="element"> Data Analysis Runner </a> </td>
+																		<td> <a href="../elements/id-aab7b496072c45379dce920f0025f8bd.html" target="element"> SampleList (Input) </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-bd56593e083f4d7b9f0ac3de6e9fa3dd.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-bd56593e083f4d7b9f0ac3de6e9fa3dd.html" target="element" class="i18n-elementtype-TriggeringRelationship"></a> </td>
+																		<td> <a href="../elements/id-b04dee19975d4d8698dca4afebfc947f.html" target="element"> Data Analysis Runner </a> </td>
+																		<td> <a href="../elements/id-690e8514318e4b6d8e8d8253216232ed.html" target="element"> aggregate </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-3c21e83bd3bb467ca29e966969ea902b.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-3c21e83bd3bb467ca29e966969ea902b.html" target="element" class="i18n-elementtype-TriggeringRelationship"></a> </td>
+																		<td> <a href="../elements/id-b04dee19975d4d8698dca4afebfc947f.html" target="element"> Data Analysis Runner </a> </td>
+																		<td> <a href="../elements/id-dc6281d0b1fa49b19c789721bed9ddfc.html" target="element"> Data Analysis Delegate </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-aae57c678f0b4566a0c373150ce8f839.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-aae57c678f0b4566a0c373150ce8f839.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/id-aab7b496072c45379dce920f0025f8bd.html" target="element"> SampleList (Input) </a> </td>
+																		<td> <a href="../elements/id-b6ea3d06e4494e019c638ed2a1a3a12d.html" target="element"> Sample </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-2ef9ae11202c4e559b7d923fe00a3462.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-2ef9ae11202c4e559b7d923fe00a3462.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																		<td> <a href="../elements/id-690e8514318e4b6d8e8d8253216232ed.html" target="element"> aggregate </a> </td>
+																		<td> <a href="../elements/id-aab7b496072c45379dce920f0025f8bd.html" target="element"> SampleList (Input) </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-90ffc65ee9db40f39e8a000836b7974f.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-90ffc65ee9db40f39e8a000836b7974f.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																		<td> <a href="../elements/id-690e8514318e4b6d8e8d8253216232ed.html" target="element"> aggregate </a> </td>
+																		<td> <a href="../elements/id-53b2f18f1e43411ebfe4d7fffb241276.html" target="element"> SampleList (Output) </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-e7f985edf0a048e78e214eb6195e7527.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-e7f985edf0a048e78e214eb6195e7527.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/id-690e8514318e4b6d8e8d8253216232ed.html" target="element"> aggregate </a> </td>
+																		<td> <a href="../elements/id-503577f136f340b9962c278c723ee99f.html" target="element"> Filter </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-69a6db610d954c08931d4e947bcbc70d.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-69a6db610d954c08931d4e947bcbc70d.html" target="element" class="i18n-elementtype-ServingRelationship"></a> </td>
+																		<td> <a href="../elements/id-ea88220603e442ba94c5c2db58b6a047.html" target="element"> Data Source </a> </td>
+																		<td> <a href="../elements/id-b04dee19975d4d8698dca4afebfc947f.html" target="element"> Data Analysis Runner </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-0592782342c54d99880807575a390ba3.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-0592782342c54d99880807575a390ba3.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																		<td> <a href="../elements/id-ea88220603e442ba94c5c2db58b6a047.html" target="element"> Data Source </a> </td>
+																		<td> <a href="../elements/id-b6ea3d06e4494e019c638ed2a1a3a12d.html" target="element"> Sample </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-de7a418dcde842dc9828ef5bec322135.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-de7a418dcde842dc9828ef5bec322135.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																		<td> <a href="../elements/id-2bcb1a55c2bd408d8125fb6222968c0d.html" target="element"> Data Sink </a> </td>
+																		<td> <a href="../elements/id-53b2f18f1e43411ebfe4d7fffb241276.html" target="element"> SampleList (Output) </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-365ceab8653b4995a5b2fe33f77a14ea.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-365ceab8653b4995a5b2fe33f77a14ea.html" target="element" class="i18n-elementtype-SpecializationRelationship"></a> </td>
+																		<td> <a href="../elements/id-2bcb1a55c2bd408d8125fb6222968c0d.html" target="element"> Data Sink </a> </td>
+																		<td> <a href="../elements/id-dc6281d0b1fa49b19c789721bed9ddfc.html" target="element"> Data Analysis Delegate </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-034846e3b19645bab302f47e7d727dcb.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-034846e3b19645bab302f47e7d727dcb.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/id-b6ea3d06e4494e019c638ed2a1a3a12d.html" target="element"> Sample </a> </td>
+																		<td> <a href="../elements/id-9a002b6a052448718f26d4ea35a814b3.html" target="element"> RSSI </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-68f69ef37c4148e086024ebd6a825b0f.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-68f69ef37c4148e086024ebd6a825b0f.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/id-b6ea3d06e4494e019c638ed2a1a3a12d.html" target="element"> Sample </a> </td>
+																		<td> <a href="../elements/id-f8aebfdbdff1437586c7969fc81cfa60.html" target="element"> Date </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-f9b20c4818bd41be9470970ad8a2484d.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-f9b20c4818bd41be9470970ad8a2484d.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/id-66d762f35e9e45e8b715f4b11252c819.html" target="element"> Your Application </a> </td>
+																		<td> <a href="../elements/id-42786b006c44467f92adaeb6b8a146ec.html" target="element"> Application Sensor Delegate </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-51b1d80c19104508aeadb03e3c3ff9a7.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-51b1d80c19104508aeadb03e3c3ff9a7.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/id-66d762f35e9e45e8b715f4b11252c819.html" target="element"> Your Application </a> </td>
+																		<td> <a href="../elements/id-17886107d9514debacc812c888fb8854.html" target="element"> Application Contact Proximity Delegate </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-79617a0a7626487ba8f7172d18014835.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-79617a0a7626487ba8f7172d18014835.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/id-66d762f35e9e45e8b715f4b11252c819.html" target="element"> Your Application </a> </td>
+																		<td> <a href="../elements/id-0f7c3bc31be74affb2993bd3dd694d66.html" target="element"> Application Contact Risk Delegate </a> </td>
+																	</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-f486d55ee3f9465db218e4ecb38fb1cb.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-f486d55ee3f9465db218e4ecb38fb1cb.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																				<td> <a href="../elements/id-42786b006c44467f92adaeb6b8a146ec.html" target="element"> Application Sensor Delegate </a> </td>
+																				<td> <a href="../elements/id-e983f7bbd8c94cbdb73e1b740c9e153a.html" target="element"> Sensor Delegate </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-f0e344320a3a48178390539727cacd3b.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-f0e344320a3a48178390539727cacd3b.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																				<td> <a href="../elements/id-17886107d9514debacc812c888fb8854.html" target="element"> Application Contact Proximity Delegate </a> </td>
+																				<td> <a href="../elements/id-aa38ba8e66be4bd0b108e994bc66355c.html" target="element"> Contact Proximity Delegate </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-95e615c646b7464f81739b575f8ca7e5.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-95e615c646b7464f81739b575f8ca7e5.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																				<td> <a href="../elements/id-0f7c3bc31be74affb2993bd3dd694d66.html" target="element"> Application Contact Risk Delegate </a> </td>
+																				<td> <a href="../elements/id-8385f6f5533c4e288812ce663f487fd3.html" target="element"> Contact Risk Delegate </a> </td>
+																			</tr>
+
+											
+																	<tr>
+																		<td> <a href="../elements/id-3d625a44f59b49a49eaa4cf6a471b131.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-3d625a44f59b49a49eaa4cf6a471b131.html" target="element" class="i18n-elementtype-AccessRelationship"></a> </td>
+																		<td> <a href="../elements/id-dc6281d0b1fa49b19c789721bed9ddfc.html" target="element"> Data Analysis Delegate </a> </td>
+																		<td> <a href="../elements/id-53b2f18f1e43411ebfe4d7fffb241276.html" target="element"> SampleList (Output) </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-42fa2e3bcf8a45d5bc0663cdc5837926.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-42fa2e3bcf8a45d5bc0663cdc5837926.html" target="element" class="i18n-elementtype-SpecializationRelationship"></a> </td>
+																		<td> <a href="../elements/id-aa38ba8e66be4bd0b108e994bc66355c.html" target="element"> Contact Proximity Delegate </a> </td>
+																		<td> <a href="../elements/id-dc6281d0b1fa49b19c789721bed9ddfc.html" target="element"> Data Analysis Delegate </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-bf3b43e329ab4c88b763b4a88949cc64.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-bf3b43e329ab4c88b763b4a88949cc64.html" target="element" class="i18n-elementtype-SpecializationRelationship"></a> </td>
+																		<td> <a href="../elements/id-8385f6f5533c4e288812ce663f487fd3.html" target="element"> Contact Risk Delegate </a> </td>
+																		<td> <a href="../elements/id-dc6281d0b1fa49b19c789721bed9ddfc.html" target="element"> Data Analysis Delegate </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-af6b1584724d480dbb11ae00a6bebeff.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-af6b1584724d480dbb11ae00a6bebeff.html" target="element" class="i18n-elementtype-ServingRelationship"></a> </td>
+																		<td> <a href="../elements/id-3a330eff39a04753a47dcfbe5da57b4d.html" target="element"> ZephyrContext </a> </td>
+																		<td> <a href="../elements/id-66d762f35e9e45e8b715f4b11252c819.html" target="element"> Your Application </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-21f9535e909c4311a072b9556749ec31.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-21f9535e909c4311a072b9556749ec31.html" target="element" class="i18n-elementtype-ServingRelationship"></a> </td>
+																		<td> <a href="../elements/id-3a330eff39a04753a47dcfbe5da57b4d.html" target="element"> ZephyrContext </a> </td>
+																		<td> <a href="../elements/id-48837af447684078aa74a2e1bf331824.html" target="element"> ZephyrBLEReceiver </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-b1cdc333321942e097903a5eb15d6cfa.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-b1cdc333321942e097903a5eb15d6cfa.html" target="element" class="i18n-elementtype-ServingRelationship"></a> </td>
+																		<td> <a href="../elements/id-3a330eff39a04753a47dcfbe5da57b4d.html" target="element"> ZephyrContext </a> </td>
+																		<td> <a href="../elements/id-c881a96a7f7946e09b42d55122b5e222.html" target="element"> ZephyrBLETransmitter </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-8784bf9f6be542c582f6a0bd12d0b4f9.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-8784bf9f6be542c582f6a0bd12d0b4f9.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																		<td> <a href="../elements/id-c881a96a7f7946e09b42d55122b5e222.html" target="element"> ZephyrBLETransmitter </a> </td>
+																		<td> <a href="../elements/id-eca4fd2122454ec9b2212e3e5b1e0a5b.html" target="element"> Sensor </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-65021236052642a78300dd3c76c5ada2.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-65021236052642a78300dd3c76c5ada2.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																		<td> <a href="../elements/id-48837af447684078aa74a2e1bf331824.html" target="element"> ZephyrBLEReceiver </a> </td>
+																		<td> <a href="../elements/id-5f4dec01ee4e4337aa769d5fbcf53b1b.html" target="element"> BLEReceiver </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-8191775baf374a2fa40e44f922afd6c1.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-8191775baf374a2fa40e44f922afd6c1.html" target="element" class="i18n-elementtype-RealizationRelationship"></a> </td>
+																		<td> <a href="../elements/id-48837af447684078aa74a2e1bf331824.html" target="element"> ZephyrBLEReceiver </a> </td>
+																		<td> <a href="../elements/id-eca4fd2122454ec9b2212e3e5b1e0a5b.html" target="element"> Sensor </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-022ee835a1174d81912606eaffca71b8.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-022ee835a1174d81912606eaffca71b8.html" target="element" class="i18n-elementtype-TriggeringRelationship"></a> </td>
+																		<td> <a href="../elements/id-4f273a17926e4e5d9c8bc3de3106c98f.html" target="element"> Coordinator </a> </td>
+																		<td> <a href="../elements/id-ccf59bb284fb4455bd2b9a82d5ed0aa0.html" target="element"> Activity </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-bec955ef0b3442918a1c360b601b40fa.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-bec955ef0b3442918a1c360b601b40fa.html" target="element" class="i18n-elementtype-ServingRelationship"></a> </td>
+																		<td> <a href="../elements/id-4f273a17926e4e5d9c8bc3de3106c98f.html" target="element"> Coordinator </a> </td>
+																		<td> <a href="../elements/id-66d762f35e9e45e8b715f4b11252c819.html" target="element"> Your Application </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-4a5469b768a74b979d479b8534043b04.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-4a5469b768a74b979d479b8534043b04.html" target="element" class="i18n-elementtype-ServingRelationship"></a> </td>
+																		<td> <a href="../elements/id-4f273a17926e4e5d9c8bc3de3106c98f.html" target="element"> Coordinator </a> </td>
+																		<td> <a href="../elements/id-eca4fd2122454ec9b2212e3e5b1e0a5b.html" target="element"> Sensor </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-c08fa86b552446408ae649790b568c52.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-c08fa86b552446408ae649790b568c52.html" target="element" class="i18n-elementtype-TriggeringRelationship"></a> </td>
+																		<td> <a href="../elements/id-ccf59bb284fb4455bd2b9a82d5ed0aa0.html" target="element"> Activity </a> </td>
+																		<td> <a href="../elements/id-48837af447684078aa74a2e1bf331824.html" target="element"> ZephyrBLEReceiver </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-abe687a555814f3ab697c85c1201b549.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-abe687a555814f3ab697c85c1201b549.html" target="element" class="i18n-elementtype-CompositionRelationship"></a> </td>
+																		<td> <a href="../elements/id-eca4fd2122454ec9b2212e3e5b1e0a5b.html" target="element"> Sensor </a> </td>
+																		<td> <a href="../elements/id-ccf59bb284fb4455bd2b9a82d5ed0aa0.html" target="element"> Activity </a> </td>
+																	</tr>
+
+
+								</tbody>
+							</table>
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

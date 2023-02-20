@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css?1676884168425440110">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Android application integration">
+<meta name="author" content="Herald Project Contributors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Android application integration">
+<meta property="og:description" content="Android application integration">
+<link rel="canonical" href="https://heraldprox.io/guide/android">
+<meta property="og:url" content="https://heraldprox.io/guide/android">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Herald Project Contributors"},"description":"Android application integration","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://heraldprox.io/img/herald.png"},"name":"Herald Project Contributors"},"@type":"WebPage","headline":"Android application integration","url":"https://heraldprox.io/guide/android","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Android application integration</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="logo">
+                    <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+                </div>
+            </div>
+            <div class="col-md-9 offset-md-1">
+                <ul class="nav-menu" id="header-nav">
+                
+                    <li class=""><a href="/">Home</a></li>
+                
+                    <li class=""><a href="/about">About</a></li>
+                
+                    <li class=""><a href="/community">Community</a></li>
+                
+                    <li class=""><a href="/blog">Blog</a></li>
+                
+                    <li class=""><a href="/download">Download</a></li>
+                
+                    <li class=""><a href="/docs">Documentation</a></li>
+                
+                    <li class=""><a href="/reference">Reference</a></li>
+                
+                    <li class=""><a href="/research">Research</a></li>
+                
+                </ul>
+                <div class="nav-mobile-link">
+                    <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Android application integration</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-2">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>Introduction</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/docs">Our documentation</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Use Cases</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/uses">Introduction</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/uses/publichealth">Public Health</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/uses/hospitals">Hospitals</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Design Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/design/">Herald's Design</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/design/core">Core philosophy</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/design/data">Data used</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/design/protocol">Protocol lifecycle</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/design/summary">Design summary</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Development &amp; Integration Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/guide/">How to integrate</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/guide/code">About the code</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/guide/api">API docs</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/guide/add">Import Herald</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/guide/ios">iOS app guide</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/guide/android">Android app guide</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Herald Protocol</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/protocol/">About our protocol</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/protocol/custom">Non contact tracing uses</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Contributors Guide</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/contribute">Introduction</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/repos">Our repositories</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/fork">Create a fork</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/branch">Feature Branches</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/style">Style guidelines</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/commit">Making a Commit</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/contribute/pullrequest">Pull Requests</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-9 offset-md-1">
+                
+
+  
+
+                <h1 id="android-application-integration">Android application integration</h1>
+
+<p>Android integration is practically identical to iOS as they share the same API. Please refer to the iOS integration guide for design details. For consistency, the description for Java methods will use the iOS function notation, e.g. <code class="language-plaintext highlighter-rouge">payload:data</code> refers to the payload(Data data) method.</p>
+
+<h2 id="1-implement-a-payloaddatasupplier">1. Implement a PayloadDataSupplier</h2>
+
+<p>For fixed length payloads, extend the <code class="language-plaintext highlighter-rouge">DefaultPayloadDataSupplier</code> class to wrap your payload data generator. This class implements the <code class="language-plaintext highlighter-rouge">PayloadDataSupplier</code> interface and offers a default implementation for <code class="language-plaintext highlighter-rouge">payload:data</code> method. The default method calls the payload:timestamp method to obtain an example payload for establishing the payload length for convenience. A production solution that uses a fixed length payload should override this method for efficiency.</p>
+
+<p>For variable length payloads, please implement the <code class="language-plaintext highlighter-rouge">PayloadDataSupplier</code> interface and provide your own parser to separating the raw data (byte array of concatenated payload data) into individual payloads.</p>
+
+<h2 id="2-instantiate-a-sensorarray">2. Instantiate a SensorArray</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">SensorArray</code> class constructor requires the application context and a <code class="language-plaintext highlighter-rouge">PayloadDataSupplier</code> as parameters. The former is necessary for access to the device file system (e.g. logging to plain text files) and Bluetooth functionalities. The latter provides the payloads for exchange with other devices. Like the iOS <code class="language-plaintext highlighter-rouge">SensorArray</code>, the constructor defines a collection of sensors for proximity detection. At this stage, only the BLE sensor is included in the Android <code class="language-plaintext highlighter-rouge">SensorArray</code> as location services are not required for background operation. A future version will include an optional GPS sensor like iOS for location monitoring if required.</p>
+
+<p>Logging functions are identical to iOS and the output CSV files are also identical in content and format, thus the data can be analysed using common analysis and visualisation scripts across the two platforms. Once again, the optional logging functions include contact, statistics, detection, and battery logs. Like iOS, the <code class="language-plaintext highlighter-rouge">ConcreteSensorLogger</code> class provide all the logging functions across Herald, thus log level is adjustable at <code class="language-plaintext highlighter-rouge">BLESensorConfiguration.logLevel</code>. The log files can be downloaded from the device using the Android File Transfer utility (see readme.md file on GitHub repository for details on log data download).</p>
+
+<p>The key differences in the Android constructor are the initialisation of <code class="language-plaintext highlighter-rouge">ConcreteSensorLogger</code> and <code class="language-plaintext highlighter-rouge">ForegroundService</code>. The former is required to set the reference to the application context, thus enabling access to the file system for writing log files. The latter is essential for enabling background operation of BLE functions. The foreground service does not perform any actual function, but is a requirement for background operation on Android. The <code class="language-plaintext highlighter-rouge">ForegroundService</code> class call the <code class="language-plaintext highlighter-rouge">NotificationService</code> class to create a visible notification, thus granting the app permission for continuous background operation. These are mandatory requirements on Android. If your app has a constantly visible notification, NotificationService can be disabled in <code class="language-plaintext highlighter-rouge">ForegroundService</code> to avoid showing two notifications for one app.</p>
+
+<h2 id="3-implement-a-sensordelegate">3. Implement a SensorDelegate</h2>
+
+<p>The SensorDelegate interface define exactly the same set of callback functions as the iOS <code class="language-plaintext highlighter-rouge">SensorDelegate</code>, offering the same logic and data. The <code class="language-plaintext highlighter-rouge">DefaultSensorDelegate</code> class implements all the callback functions in this interface, thus an application can extend this class and override a subset of the callback functions for simplicity. Once again, simple integration involves overriding the <code class="language-plaintext highlighter-rouge">didMeasure:withPayload</code> method to receive distance measurements along with target device payload data.</p>
+
+<p><code class="language-plaintext highlighter-rouge">void sensor(SensorType sensor, Proximity didMeasure, TargetIdentifier fromTarget, PayloadData withPayload);</code></p>
+
+<p>All other delegate functions are called under the same circumstances and sequence as the iOS functions. Please refer to the iOS <code class="language-plaintext highlighter-rouge">SensorDelegate</code> description for details.</p>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldProximity">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://slack.lfph.io/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/theheraldproject">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            The Herald Project is a series of the <a target="_new" href="https://www.lfph.io/join/projects/">Linux Foundation Public Health</a>.
+            © 2023 Herald Project Contributors.
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/js/jquery.matchHeight.js?1676884168425440110"></script>
+<script src="/js/scripts.js?1676884168425440110"></script>
+    </div>
+  </div>
+</body>
+
+</html>

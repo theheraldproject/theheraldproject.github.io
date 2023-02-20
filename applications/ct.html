@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css?1676884168425440110">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Herald and Contact Tracing">
+<meta name="author" content="Herald Project Contributors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Herald’s use for contact tracing">
+<meta property="og:description" content="Herald’s use for contact tracing">
+<link rel="canonical" href="https://heraldprox.io/applications/ct">
+<meta property="og:url" content="https://heraldprox.io/applications/ct">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Herald Project Contributors"},"description":"Herald’s use for contact tracing","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://heraldprox.io/img/herald.png"},"name":"Herald Project Contributors"},"@type":"WebPage","headline":"Herald and Contact Tracing","url":"https://heraldprox.io/applications/ct","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Herald and Contact Tracing</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="logo">
+                    <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+                </div>
+            </div>
+            <div class="col-md-9 offset-md-1">
+                <ul class="nav-menu" id="header-nav">
+                
+                    <li class=""><a href="/">Home</a></li>
+                
+                    <li class=""><a href="/about">About</a></li>
+                
+                    <li class=""><a href="/community">Community</a></li>
+                
+                    <li class=""><a href="/blog">Blog</a></li>
+                
+                    <li class=""><a href="/download">Download</a></li>
+                
+                    <li class=""><a href="/docs">Documentation</a></li>
+                
+                    <li class=""><a href="/reference">Reference</a></li>
+                
+                    <li class=""><a href="/research">Research</a></li>
+                
+                </ul>
+                <div class="nav-mobile-link">
+                    <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Herald and Contact Tracing</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-2">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>About</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/about">Introduction</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/about/faq">FAQs</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Packages</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald">Herald API</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/opentrace">OpenTrace</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Applications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/applications">Overview</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/ct">Contact Tracing</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/wearable">eHealth Wearables</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/beacons">Beacons</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/p2p">Device to Device</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/mesh">Bluetooth Mesh Gateways</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-9 offset-md-1">
+                
+
+  
+
+                <h1 id="herald-and-contact-tracing">Herald and Contact Tracing</h1>
+
+<p>Herald was originally created to solve the problem of very variable and unreliable
+Bluetooth mechanisms on Android and iOS devices. Over 40 techniques and workarounds
+are present in how Herald works.</p>
+
+<p>As it turns out these same problems are also applicable for a wide range of
+<a href="/applications">other applications</a>.</p>
+
+<p>An end-to-end Digital Contact Tracing (DCT) system is available from the Herald
+Project within <a href="/opentrace">OpenTrace</a>, which is built on Herald.
+You can also use the Herald API within your own, custom, DCT application.</p>
+
+<p>Herald supports over 98% of phones worldwide - this includes phones that do not
+support advertising their presence themselves. Many contact tracing protocols in
+use today fail to take this scenario in to account, meaning they miss around
+35% of all Android phone users.</p>
+
+<p>Reliability of the Bluetooth stacks within Android and iOS is also very questionable,
+requiring exact protocol use and testing to workaround. This takes application
+developers away from solving medical and epidemiological problems. By using Herald,
+these teams can again concentrate on their residents and patients and leave
+the reliable Bluetooth messaging and range finding to Herald.</p>
+
+<h2 id="herald-solves-risk-estimation-problems">Herald solves risk estimation problems</h2>
+
+<p>Other Digital Contact Tracing (DCT) protocols don’t often checked for nearby devices. When they do check, then
+often don’t make regular calculations using all available data for distance estimation. Even when they do,
+some then don’t provide this raw estimate to a DCT app - instead providing very rough buckets of exposure.</p>
+
+<p>For digital contact tracing this can lead to devices not being recorded at all, or under and over estimating
+risk by large amounts. If a DCT app is being used to advise people to self-isolate in case of exposure this
+high ‘false positive’ rate will lead to the loss of trust in, and compliance to, pandemic health advice.</p>
+
+<p>Thankfully with Herald there’s a much better way. Herald uses every single advertisement each device
+sends out. These range from 5 times a second to once every 5 seconds. Most other applications only scan
+for devices at best every two minutes! This means Herald picks up a lot more of detections allowing us
+to provide data sooner and more accurately.</p>
+
+<p>Herald also tunes which devices to talk to. If its a device it has exchanged the payload with before then it
+doesn’t do so again. It also filters out non-Herald devices, reducing the amount of battery used and
+preventing interference with your Apple TVs, smartwatches, or car stereo systems.</p>
+
+<div class="row">
+<div class="md-4">
+<img src="../images/EstimationBenefits.png" alt="Herald estimation benefits" style="width: 60%;">
+<br>
+<b>Note:</b> The above figure shows the effects of under and over estimating exposure risk.
+<br>
+<br>
+</div>
+</div>
+
+<h2 id="all-about-contact-tracing">All about contact tracing</h2>
+
+<p>Please see the <a href="/background">Contact tracing introduction</a> 
+for a discussion of the many issues with manual and mobile contact tracing.</p>
+
+<h2 id="what-does-herald-provide">What does Herald provide?</h2>
+
+<p>The API itself provides a reliable <a href="/protocol">Protocol</a>
+for exchanging information. You can either use your own or one of our suggested
+<a href="/payload">Payload specifications</a> on top of the Herald
+protocol.</p>
+
+<h2 id="international-interoperability-as-of-v11">International Interoperability (As of v1.1)</h2>
+
+<p>By adopting the <a href="/payload/envelope">Herald envelope</a>
+for your contact tracing app (supported by all our suggested payloads) you
+will ensure that wherever your country’s residents travel to, their application
+can be used as-is internationally. We recommend the 
+<a href="/payload/secured">Secured payload</a>
+in this instance.</p>
+
+<p><a name="venue"></a></p>
+
+<h2 id="automated-check-in-as-of-v12">Automated check-in (As of v1.2)</h2>
+
+<p>Using the new <a href="/payload/beacon">Herald Beacon Payload</a>
+a phone supporting the detection of Herald Beacons (but using ANY contact
+tracing protocol) can build up a diary of check-ins and check-outs from
+venues.</p>
+
+<p>This means people don’t have to remember to scan QR codes for locations which is
+error prone. Multiple beacons can be placed in big venues, hospitals, or company
+campusses with specific area names to provide more fine-grained exposure
+notifications.</p>
+
+<p>Herald Beacons also track the full time from check-in to check-out
+to minimise false exposure notifications to wrong people who happened to turn up
+on the same day, but at different times and areas within a venue, to people who
+were ill.</p>
+
+<p><a name="wearables"></a></p>
+
+<h2 id="wearables-as-of-v13">Wearables (As of v1.3)</h2>
+
+<p>For younger school children without phones, or for the elderly too, a contact
+tracing solution is needed. A cheap <a href="/applications/wearable">Bluetooth enabled wearable</a> is a good solution
+here. This may or may not be backed up by a local Bluetooth mesh network
+to reduce the cost of the end device.</p>
+
+<p>We are implementing Herald in C++ for Windows and Embedded use cases. Our first
+target platform will be Nordic Semiconductor nRF52840 usb dongles for our
+reference implementation. This uses the Zephyr open source real time operating
+system (RTOS). This is currently in Alpha development.</p>
+
+<h2 id="sample-applications">Sample applications</h2>
+
+<p>We currently have the following sample applications that can be used as inspiration
+for your own digital contact tracing applications:-</p>
+
+<ul>
+  <li>
+<a href="https://github.com/theheraldproject/herald-for-cpp/tree/develop/herald-venue-beacon">C++ Venue Beacon</a> - Tell nearby phones that they’re in a particular venue, and even which area within the venue</li>
+  <li>
+<a href="https://github.com/theheraldproject/herald-for-cpp/tree/develop/herald-wearable">C++ wearable DCT</a> - A basic design for a DCT app like those for iOS and Android, but on a dedicated hardware device</li>
+  <li>
+<a href="https://github.com/theheraldproject/herald-for-ios/tree/develop/Herald-for-iOS">iOS demo app</a> - Demonstrates low and mid level functionality useful for DCT, including Venue Diary support and social mixing score</li>
+  <li>
+<a href="https://github.com/theheraldproject/herald-for-android/tree/develop/app">Android demo app</a> - Demonstrates low and mid level functionality useful for DCT, including Venue Diary support and social mixing score</li>
+</ul>
+
+<p>Note: These are NOT production quality applications with full functionality as that would require an appropriate PHA-controlled backend set of services.</p>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldProximity">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://slack.lfph.io/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/theheraldproject">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            The Herald Project is a series of the <a target="_new" href="https://www.lfph.io/join/projects/">Linux Foundation Public Health</a>.
+            © 2023 Herald Project Contributors.
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/js/jquery.matchHeight.js?1676884168425440110"></script>
+<script src="/js/scripts.js?1676884168425440110"></script>
+    </div>
+  </div>
+</body>
+
+</html>

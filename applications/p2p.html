@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css?1676884168425440110">
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.9.0">
+<meta property="og:title" content="Point to Point applications">
+<meta name="author" content="Herald Project Contributors">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Point to Point applications">
+<meta property="og:description" content="Point to Point applications">
+<link rel="canonical" href="https://heraldprox.io/applications/p2p">
+<meta property="og:url" content="https://heraldprox.io/applications/p2p">
+<meta property="og:site_name" content="Herald Project">
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Herald Project Contributors"},"description":"Point to Point applications","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://heraldprox.io/img/herald.png"},"name":"Herald Project Contributors"},"@type":"WebPage","headline":"Point to Point applications","url":"https://heraldprox.io/applications/p2p","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <title>Herald Project Docs - Point to Point applications</title>
+
+
+
+<body id="docs">
+  <div class="container-fluid site-outer-container">
+    <div class="site-container">
+      <header class="site-header">
+    <div class="site-header-content">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="logo">
+                    <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+                </div>
+            </div>
+            <div class="col-md-9 offset-md-1">
+                <ul class="nav-menu" id="header-nav">
+                
+                    <li class=""><a href="/">Home</a></li>
+                
+                    <li class=""><a href="/about">About</a></li>
+                
+                    <li class=""><a href="/community">Community</a></li>
+                
+                    <li class=""><a href="/blog">Blog</a></li>
+                
+                    <li class=""><a href="/download">Download</a></li>
+                
+                    <li class=""><a href="/docs">Documentation</a></li>
+                
+                    <li class=""><a href="/reference">Reference</a></li>
+                
+                    <li class=""><a href="/research">Research</a></li>
+                
+                </ul>
+                <div class="nav-mobile-link">
+                    <a href="javascript:void(0);" id="nav-mobile-toggle"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+      <div class="post-single-hero bg-color-med-blue">
+        <div class="section">
+            <div class="section-content">
+              <h1>Point to Point applications</h1>
+            </div>
+        </div>
+      </div>
+        <div class="post-single-body">
+        <div class="section section-card">
+            <div class="section-content pt-4 pb-0">
+              <div class="row">
+                <div class="col-md-2">
+                 <div class="row">
+    <div class="dropdown mb-2">
+        
+            <span></span>
+        
+    </div>
+</div>
+                <nav class="navigation">
+  <!-- If new pages are added to the site and the TOC needs to be updated, it
+  can be overridden, using toc-mapping.yml -->
+  
+
+  
+  <h5>About</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/about">Introduction</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/about/faq">FAQs</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Packages</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/herald">Herald API</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/opentrace">OpenTrace</a>
+      
+    </li>
+    
+  </ul>
+  
+  <h5>Applications</h5>
+  <ul>
+    
+    <li>
+      
+        <a href="/applications">Overview</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/ct">Contact Tracing</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/wearable">eHealth Wearables</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/beacons">Beacons</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/p2p">Device to Device</a>
+      
+    </li>
+    
+    <li>
+      
+        <a href="/applications/mesh">Bluetooth Mesh Gateways</a>
+      
+    </li>
+    
+  </ul>
+  
+</nav>
+
+                </div>
+                <div class="col-md-9 offset-md-1">
+                
+
+  
+
+                <h1 id="point-to-point-applications-since-v10">Point to Point applications (Since v1.0)</h1>
+
+<p>The primary use case for Herald is for point to point (P2P) mobile Bluetooth communication.
+This is the capability used for Contact Tracing and other device-to-device use cases.</p>
+
+<p>Below is an example diagram of how Herald can help:-</p>
+
+<p><img src="/images/p2p.png" alt="Herald device-to-device communication"></p>
+
+<p>In this scenario Herald provides both direct and intermediary (calling card) payload
+exchange.</p>
+
+<h2 id="optional-features">Optional features</h2>
+
+<p>Herald also provides some optional features.</p>
+
+<h3 id="payload-exchange-frequency-since-v11">Payload exchange frequency (Since v1.1)</h3>
+
+<p>By default Herald presumes that the Payload exchange is an identifier only,
+persistent and so exchanged only once per Bluetooth MAC address rotation.</p>
+
+<p>It is possible to vary the frequency of exchange. We have tested this to
+once every 30 seconds too. This is useful where the exchange wire data changes
+due to wanting to prevent relay and replay attacks, encrypting the data 
+differently every 30 seconds.</p>
+
+<p>This is a mechanism used by our 
+<a href="/payload/secured">Secured Payload</a>.</p>
+
+<h3 id="immediate-send-since-v11">Immediate Send (Since v1.1)</h3>
+
+<p>For some applications an occasional pointed data send is required. This is
+useful for applications that need to send an immediate, quick as possible,
+timing signal once rather than regularly every so many seconds or minutes.</p>
+
+<p>Currently the SensorArray.immediateSend(Data, TargetIdentifier) function
+allows an application to safely bypass the Herald signal loop. It will
+connect to the device if not currently connected, send the signal, and
+disconnect.</p>
+
+<p>We also support a SensorArray.immediateSend(Data) function that will
+send to all devices, but only those already currently connected.</p>
+
+<p>Herald does not inspect the data to be sent, just wraps it and sends it safely
+in a way that does not introduce performance or reliability issues in other
+aspects of device to device communication.</p>
+
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      <div class="section section-background-darkest-blue">
+    <div class="section-content">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8">
+                <h5>Getting Started</h5>
+                <p>To help you get started, see the documentation.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3 offset-lg-1">
+                <p><strong></strong></p>
+                <a href="/docs" class="btn btn-sm btn-primary btn-no-border">Documentation</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="section site-footer">
+    <div class="section-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-12 col-md-5 mb-3 mb-md-0">
+                <ul class="social-links text-center text-md-left">
+                    
+                    <li>
+                      
+                      <i class="fab fa-twitter fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://twitter.com/HeraldProximity">Twitter</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-slack fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://slack.lfph.io/">Slack</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fa fa-rss fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="feed.xml">RSS</a>
+</li>
+                    
+                    <li>
+                      
+                      <i class="fab fa-github fa-lg fa-fw mr-1"></i>
+                      
+                      <a href="https://github.com/theheraldproject">GitHub</a>
+</li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-md-7 text-center text-md-right">
+              <a href="/" aria-label="Herald homepage"><img src="/img/herald.png" class="logo" alt="Homepage"></a>
+            </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col copyright text-center text-md-right mt-4">
+            The Herald Project is a series of the <a target="_new" href="https://www.lfph.io/join/projects/">Linux Foundation Public Health</a>.
+            © 2023 Herald Project Contributors.
+          </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<script src="/js/jquery.matchHeight.js?1676884168425440110"></script>
+<script src="/js/scripts.js?1676884168425440110"></script>
+    </div>
+  </div>
+</body>
+
+</html>
